@@ -31,4 +31,4 @@ jobs:
           git config user.email "bot@github.com"
           git add .
           git commit -m "update data" || echo "no change"
-          git push
+        continue-on-error: true
