@@ -1,11 +1,12 @@
 import runpy
 from datetime import datetime
 
-print("🚀 RUN FULL COLAB SYSTEM")
+print("🚀 RUN DAILY SYSTEM START")
 print("⏰", datetime.now())
 
-# chạy pipeline giống Colab
-
-runpy.run_path("runner.py")
-
-print("✅ DONE")
+try:
+    runpy.run_path("runner.py", run_name="__main__")
+    print("✅ DAILY SYSTEM DONE")
+except Exception as e:
+    print("❌ DAILY SYSTEM ERROR:", repr(e))
+    raise
