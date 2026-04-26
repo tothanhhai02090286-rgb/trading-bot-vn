@@ -1,4 +1,4 @@
-Stock,Signal,Score,Time
-VNM,BUY,85,2026-04-26 17:50:26.421061
-FPT,HOLD,60,2026-04-26 17:50:26.421061
-HPG,SELL,40,2026-04-26 17:50:26.421061
+﻿Ngày,Mã,Chiến lược,Winrate,Return,Drawdown,AI,Lý do
+2026-04-26,GMD,Bắt đáy,56.25,0.81,-1.75,✅ OK,"Edge tốt, risk chấp nhận"
+2026-04-26,PVD,Bắt đáy,55.42,1.08,-1.65,✅ OK,"Return tốt, drawdown vừa"
+2026-04-26,VHM,Momentum,55.88,0.91,-1.61,✅ OK,Momentum ổn
