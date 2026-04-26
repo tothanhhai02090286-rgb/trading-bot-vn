@@ -1,100 +1,76 @@
 import pandas as pd
+import numpy as np
 from datetime import datetime
-from pathlib import Path
 
-BOT_DIR = Path(".")
-now = datetime.now()
+print("🚀 RUN LIGHT TRADING SYSTEM")
 
-print("🚀 RUN DAILY SYSTEM - PRODUCTION LITE")
+# ===== Danh sách mã VN (nhẹ) =====
+tickers = ["VNM", "FPT", "HPG", "MWG", "VCB", "SSI"]
 
-# ===== 1. Bottom priority =====
-bottom = pd.DataFrame([
-    {
-        "Mã": "GMD",
-        "signals_selected": 144,
-        "winrate_5P_selected": 56.25,
-        "avg_return_5P_selected": 0.81,
-        "avg_dd_5P_selected": -1.75,
-        "Chú thích": "✅ ƯU TIÊN | Bắt đáy"
-    },
-    {
-        "Mã": "PVD",
-        "signals_selected": 166,
-        "winrate_5P_selected": 55.42,
-        "avg_return_5P_selected": 1.08,
-        "avg_dd_5P_selected": -1.65,
-        "Chú thích": "✅ ƯU TIÊN | Bắt đáy"
-    }
-])
-bottom.to_csv("bottom_common_priority.csv", index=False, encoding="utf-8-sig")
+rows = []
 
-# ===== 2. Momentum priority =====
-momentum = pd.DataFrame([
-    {
-        "Mã": "VHM",
-        "signals_selected": 34,
-        "winrate_5P_selected": 55.88,
-        "avg_return_5P_selected": 0.91,
-        "avg_dd_5P_selected": -1.61,
-        "Chú thích": "✅ ƯU TIÊN | Momentum"
-    }
-])
-momentum.to_csv("momentum_common_priority.csv", index=False, encoding="utf-8-sig")
+for t in tickers:
+    # giả lập dữ liệu giá gần đây (logic thật nhẹ)
+    prices = np.random.normal(100, 5, 20)
 
-# ===== 3. AI final =====
-ai = pd.DataFrame([
-    {
-        "Ngày": now.strftime("%Y-%m-%d"),
-        "Mã": "GMD",
-        "Chiến lược": "Bắt đáy",
-        "Winrate": 56.25,
-        "Return": 0.81,
-        "Drawdown": -1.75,
-        "AI": "✅ OK",
-        "Lý do": "Edge tốt, risk chấp nhận"
-    },
-    {
-        "Ngày": now.strftime("%Y-%m-%d"),
-        "Mã": "PVD",
-        "Chiến lược": "Bắt đáy",
-        "Winrate": 55.42,
-        "Return": 1.08,
-        "Drawdown": -1.65,
-        "AI": "✅ OK",
-        "Lý do": "Return tốt, drawdown vừa"
-    },
-    {
-        "Ngày": now.strftime("%Y-%m-%d"),
-        "Mã": "VHM",
-        "Chiến lược": "Momentum",
-        "Winrate": 55.88,
-        "Return": 0.91,
-        "Drawdown": -1.61,
-        "AI": "✅ OK",
-        "Lý do": "Momentum ổn"
-    }
-])
-ai.to_csv("ai_risk_filtered.csv", index=False, encoding="utf-8-sig")
+    ma5 = prices[-5:].mean()
+    ma20 = prices.mean()
 
-# ===== 4. HTML dashboard =====
-html = ai.to_html(index=False)
+    rsi = np.random.uniform(30, 70)
+
+    # ===== Logic momentum =====
+    if ma5 > ma20 and rsi > 50:
+        signal = "🚀 MOMENTUM"
+        score = 80 + np.random.randint(0, 10)
+
+    # ===== Logic bắt đáy =====
+    elif rsi < 40:
+        signal = "🧲 BOTTOM"
+        score = 70 + np.random.randint(0, 10)
+
+    else:
+        signal = "👀 WATCH"
+        score = 50 + np.random.randint(0, 10)
+
+    rows.append({
+        "Ngày": datetime.now().strftime("%Y-%m-%d"),
+        "Mã": t,
+        "Signal": signal,
+        "Score": score,
+        "RSI": round(rsi, 2),
+        "MA5": round(ma5, 2),
+        "MA20": round(ma20, 2)
+    })
+
+df = pd.DataFrame(rows)
+
+# ===== Lưu file chính =====
+df.to_csv("ai_risk_filtered.csv", index=False, encoding="utf-8-sig")
+
+# ===== Bottom =====
+df[df["Signal"].str.contains("BOTTOM")].to_csv(
+    "bottom_common_priority.csv", index=False, encoding="utf-8-sig"
+)
+
+# ===== Momentum =====
+df[df["Signal"].str.contains("MOMENTUM")].to_csv(
+    "momentum_common_priority.csv", index=False, encoding="utf-8-sig"
+)
+
+# ===== HTML =====
+html = df.to_html(index=False)
+
 html_full = f"""
 <html>
-<head>
-<meta charset="utf-8">
-<title>AI Risk Dashboard</title>
-</head>
+<head><meta charset="utf-8"></head>
 <body>
-<h2>🤖 AI RISK DASHBOARD</h2>
-<p>Generated: {now}</p>
+<h2>📊 Trading Dashboard</h2>
 {html}
 </body>
 </html>
 """
-Path("ai_risk_dashboard.html").write_text(html_full, encoding="utf-8")
 
-print("✅ Created:")
-print("- bottom_common_priority.csv")
-print("- momentum_common_priority.csv")
-print("- ai_risk_filtered.csv")
-print("- ai_risk_dashboard.html")
+with open("ai_risk_dashboard.html", "w", encoding="utf-8") as f:
+    f.write(html_full)
+
+print("✅ Created ALL FILES")
