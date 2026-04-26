@@ -1,4 +1,7 @@
-﻿Ngày,Mã,Chiến lược,Winrate,Return,Drawdown,AI,Lý do
-2026-04-26,GMD,Bắt đáy,56.25,0.81,-1.75,✅ OK,"Edge tốt, risk chấp nhận"
-2026-04-26,PVD,Bắt đáy,55.42,1.08,-1.65,✅ OK,"Return tốt, drawdown vừa"
-2026-04-26,VHM,Momentum,55.88,0.91,-1.61,✅ OK,Momentum ổn
+﻿Ngày,Mã,Signal,Score,RSI,MA5,MA20
+2026-04-26,VNM,👀 WATCH,54,66.16,95.03,97.76
+2026-04-26,FPT,👀 WATCH,53,43.01,100.45,99.23
+2026-04-26,HPG,🚀 MOMENTUM,83,68.0,100.06,100.04
+2026-04-26,MWG,👀 WATCH,55,52.88,99.86,100.22
+2026-04-26,VCB,👀 WATCH,58,57.07,97.85,100.42
+2026-04-26,SSI,🧲 BOTTOM,75,30.33,97.63,99.28
