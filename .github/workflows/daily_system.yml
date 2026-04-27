@@ -3,7 +3,7 @@ name: Daily Trading System
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0,30 10-13 * * 1-5"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
@@ -13,26 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+      - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Run batch trading system
-        run: python run_daily_system.py
+      - run: python run_daily_system.py
 
-      - name: Commit and push outputs
-        run: |
+      - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add *.csv *.html || true
-          git commit -m "auto update trading outputs" || echo "No changes to commit"
+          git commit -m "auto update" || echo "no change"
           git push
