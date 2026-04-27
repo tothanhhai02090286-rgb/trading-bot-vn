@@ -1,6 +1,1 @@
-﻿Ngày,Mã,winrate_5P_selected,avg_return_5P_selected,avg_dd_5P_selected,Chú thích,Signal,Score
-2026-04-27,GMD,58.33,0.92,-0.52,✅ ƯU TIÊN | Bắt đáy,BOTTOM,59.25
-2026-04-27,PVD,56.25,0.81,-1.75,✅ ƯU TIÊN | Bắt đáy,BOTTOM,57.06
-2026-04-27,MBB,55.42,1.08,-1.65,✅ ƯU TIÊN | Bắt đáy,BOTTOM,56.5
-2026-04-27,ACB,54.8,0.73,-1.2,👀 THEO DÕI | Bắt đáy,BOTTOM,55.529999999999994
-2026-04-27,PNJ,57.1,0.88,-1.4,✅ ƯU TIÊN | Bắt đáy,BOTTOM,57.980000000000004
+﻿Ngày,Mã,Close,Signal,Chiến lược,Score,RSI,MA5,MA20,Ret5 %,Dist MA20 %
