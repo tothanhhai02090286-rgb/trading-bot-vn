@@ -1,9 +1,14 @@
 name: Daily Trading System
 
 on:
-  workflow_dispatch:
   schedule:
+    # TEST: chạy mỗi 5 phút (bật tạm để kiểm tra auto)
     - cron: "*/5 * * * *"
+
+    # CHẠY THẬT: 17:00 Việt Nam (UTC+7 = 10:00 UTC)
+    - cron: "0 10 * * 1-5"
+
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,19 +18,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # ===== Clone repo =====
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - uses: actions/setup-python@v5
+      # ===== Setup Python =====
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      # ===== Install lib =====
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - run: python run_daily_system.py
+      # ===== Run hệ thống =====
+      - name: Run batch trading system
+        run: python run_daily_system.py
 
-      - run: |
+      # ===== Commit kết quả =====
+      - name: Commit and push outputs
+        run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add *.csv *.html || true
-          git commit -m "auto update" || echo "no change"
+
+          git add .
+
+          git commit -m "auto update $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+
           git push
