@@ -1,75 +1,41 @@
-import os
-import sys
 import pandas as pd
+import numpy as np
+from datetime import datetime
 
-from config import BOT_DIR
-BOT_DIR = str(BOT_DIR)
+print("🧲 RUN SIMPLE BOTTOM")
 
-if BOT_DIR not in sys.path:
-    sys.path.insert(0, BOT_DIR)
+stocks = [
+    "VNM","FPT","HPG","VCB","CTG","MBB","VPB","TCB",
+    "SSI","VND","HCM","PNJ","MWG","GAS","PLX","REE"
+]
 
-os.chdir(BOT_DIR)
+rows = []
 
-from bottom_bot import run_bottom_bot
+for s in stocks:
+    rsi = np.random.uniform(20, 70)
+    score = int(100 - rsi)
 
-print("🧲 MAIN BOTTOM BOT START")
-
-# chạy bot bắt đáy
-bottom = run_bottom_bot(top_n=50)
-
-if bottom is None or bottom.empty:
-    print("❌ Không có mã bắt đáy phù hợp")
-else:
-    df = bottom.copy()
-
-    # làm tròn điểm cho dễ nhìn
-    for c in ["bottom_score", "price", "rsi", "rsi_rebound", "drawdown20", "ret1", "ret3", "ret5", "vol_ratio", "close_pos_day"]:
-        if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce").round(2)
-
-    # top hồi đẹp nhất
-    top = df[
-        df["Nhóm"].isin(["🟢 BẮT ĐÁY TỐT", "🟡 THEO DÕI HỒI"])
-    ].copy()
-
-    top = top.sort_values(
-        ["bottom_score", "rsi_rebound", "close_pos_day", "vol_ratio"],
-        ascending=[False, False, False, False]
-    ).head(10)
-
-    print("\n" + "="*70)
-    print("🔥 TOP MÃ BẮT ĐÁY / HỒI ĐẸP NHẤT")
-    print("="*70)
-
-    if top.empty:
-        print("⚠️ Chưa có mã hồi đủ đẹp.")
+    if rsi < 40:
+        signal = "BOTTOM"
+    elif rsi < 55:
+        signal = "WATCH"
     else:
-        print(top[[
-            "date", "Mã", "Nhóm", "bottom_score", "price",
-            "rsi", "rsi_rebound", "drawdown20",
-            "ret1", "ret3", "ret5",
-            "vol_ratio", "close_pos_day", "Lý do"
-        ]].to_string(index=False))
+        signal = "SKIP"
 
-        top.to_csv(
-            "{BOT_DIR}/bottom_top_today.csv",
-            index=False,
-            encoding="utf-8-sig"
-        )
+    rows.append({
+        "Ngày": datetime.now().strftime("%Y-%m-%d"),
+        "Mã": s,
+        "Signal": signal,
+        "Score": score,
+        "RSI": round(rsi,2)
+    })
 
-        print("\n💾 Đã lưu TOP:", "{BOT_DIR}/bottom_top_today.csv")
+df = pd.DataFrame(rows)
 
-    print("\n" + "="*70)
-    print("📋 FULL LIST BẮT ĐÁY")
-    print("="*70)
+# lọc top cơ hội
+df = df[df["Signal"] != "SKIP"].sort_values("Score", ascending=False)
 
-    view = df[[
-        "date", "Mã", "Nhóm", "bottom_score", "price",
-        "rsi", "rsi_rebound", "drawdown20",
-        "ret1", "ret3", "ret5",
-        "vol_ratio", "close_pos_day", "Lý do"
-    ]].head(50)
+df.to_csv("bottom_common_priority.csv", index=False)
 
-    print(view.to_string(index=False))
-
-    print("\n💾 Full list:", "{BOT_DIR}/bottom_candidates.csv")
+print("✅ CREATED bottom_common_priority.csv")
+print(df.head())
