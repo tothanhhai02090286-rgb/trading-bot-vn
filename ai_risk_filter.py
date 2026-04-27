@@ -1,33 +1,68 @@
+import os
 import pandas as pd
 from datetime import datetime
-import os
+from pandas.errors import EmptyDataError
 
 print("🤖 AI RISK FILTER START")
 
-# nếu file trước không có → tạo data giả nhưng hợp lệ
-if not os.path.exists("bottom_common_priority.csv"):
+OUT = "ai_risk_filtered.csv"
 
-    print("⚠️ Không có dữ liệu → tạo fallback")
+def safe_read(path):
+    if not os.path.exists(path):
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except EmptyDataError:
+        return pd.DataFrame()
+    except Exception as e:
+        print(f"⚠️ lỗi đọc {path}: {e}")
+        return pd.DataFrame()
 
-    df = pd.DataFrame({
-        "Stock": ["VNM", "FPT", "HPG"],
-        "Signal": ["BUY", "WATCH", "SELL"],
-        "Score": [85, 60, 40],
-        "Time": [datetime.now()] * 3
-    })
+bottom = safe_read("bottom_common_priority.csv")
+momentum = safe_read("momentum_common_priority.csv")
 
-else:
-    df = pd.read_csv("bottom_common_priority.csv")
+rows = []
 
-# luôn đảm bảo có data
-if df.empty:
-    df = pd.DataFrame({
-        "Stock": ["VNM"],
-        "Signal": ["NO DATA"],
-        "Score": [0],
-        "Time": [datetime.now()]
-    })
+if not bottom.empty:
+    for _, r in bottom.iterrows():
+        rows.append({
+            "Ngày": datetime.now().strftime("%Y-%m-%d"),
+            "Mã": r.get("Mã", r.get("Stock", "")),
+            "Chiến lược": "Bắt đáy",
+            "Signal": r.get("Signal", "BOTTOM"),
+            "Score": r.get("Score", r.get("score", "")),
+            "AI": "✅ OK",
+            "Lý do": "Có trong bottom priority"
+        })
 
-df.to_csv("ai_risk_filtered.csv", index=False)
+if not momentum.empty:
+    for _, r in momentum.iterrows():
+        rows.append({
+            "Ngày": datetime.now().strftime("%Y-%m-%d"),
+            "Mã": r.get("Mã", r.get("Stock", "")),
+            "Chiến lược": "Momentum",
+            "Signal": r.get("Signal", "MOMENTUM"),
+            "Score": r.get("Score", r.get("score", "")),
+            "AI": "✅ OK",
+            "Lý do": "Có trong momentum priority"
+        })
+
+# fallback chắc chắn không bao giờ để CSV rỗng
+if not rows:
+    rows = [
+        {
+            "Ngày": datetime.now().strftime("%Y-%m-%d"),
+            "Mã": "NO_DATA",
+            "Chiến lược": "SYSTEM",
+            "Signal": "NO DATA",
+            "Score": 0,
+            "AI": "⚠️ WAIT",
+            "Lý do": "Pipeline chưa tạo được bottom/momentum hợp lệ"
+        }
+    ]
+
+df = pd.DataFrame(rows)
+df.to_csv(OUT, index=False, encoding="utf-8-sig")
 
 print("✅ CREATED ai_risk_filtered.csv")
+print(df)
