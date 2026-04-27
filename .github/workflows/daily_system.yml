@@ -2,7 +2,7 @@ name: Daily Trading System
 
 on:
   schedule:
-    # Giờ UTC. Tương đương 17:00 → 20:30 giờ Việt Nam, thứ 2–6
+    # 17:00 → 20:30 giờ Việt Nam, thứ 2–6
     - cron: "0,30 10-13 * * 1-5"
   workflow_dispatch:
 
@@ -12,9 +12,6 @@ permissions:
 jobs:
   run-daily:
     runs-on: ubuntu-latest
-
-    env:
-      BOT_DIR: .
 
     steps:
       - name: Checkout repo
@@ -33,11 +30,6 @@ jobs:
       - name: Run batch trading system
         run: python run_daily_system.py
 
-      - name: Show generated files
-        run: |
-          echo "📁 Files after run:"
-          ls -la
-
       - name: Commit and push outputs
         run: |
           git config user.name "github-actions"
@@ -45,12 +37,6 @@ jobs:
 
           git add *.csv || true
           git add *.html || true
-          git add progress_state.csv || true
-          git add all_signal_results.csv || true
-          git add ai_risk_filtered.csv || true
-          git add bottom_common_priority.csv || true
-          git add momentum_common_priority.csv || true
-          git add entry_plan_next_session.csv || true
 
           git commit -m "auto update trading outputs" || echo "No changes to commit"
           git push
