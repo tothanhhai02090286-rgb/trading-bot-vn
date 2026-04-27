@@ -7,11 +7,11 @@ from pandas.errors import EmptyDataError
 
 from universe import UNIVERSE
 
-print("🚀 RUN BATCH TRADING ENGINE")
+print("🚀 RUN BATCH TRADING ENGINE - KBS")
 print("⏰", datetime.now())
 
-BATCH_SIZE = 25
-SLEEP_SEC = 1.5
+BATCH_SIZE = 10
+SLEEP_SEC = 5
 
 STATE_PATH = "progress_state.csv"
 ALL_RESULT_PATH = "all_signal_results.csv"
@@ -55,7 +55,7 @@ def fetch_history(symbol):
     end = datetime.now()
     start = end - timedelta(days=160)
 
-    stock = Vnstock().stock(symbol=symbol, source="VCI")
+    stock = Vnstock().stock(symbol=symbol, source="KBS")
     df = stock.quote.history(
         start=start.strftime("%Y-%m-%d"),
         end=end.strftime("%Y-%m-%d"),
@@ -79,6 +79,7 @@ def analyze_symbol(symbol):
         return None
 
     close = pd.to_numeric(df["close"], errors="coerce").dropna()
+
     if len(close) < 30:
         return None
 
@@ -86,6 +87,7 @@ def analyze_symbol(symbol):
     ma5 = float(close.tail(5).mean())
     ma20 = float(close.tail(20).mean())
     rsi = float(calc_rsi(close, 14).iloc[-1])
+
     ret5 = (last_close / close.iloc[-6] - 1) * 100 if len(close) >= 6 else 0
     dist_ma20 = (last_close / ma20 - 1) * 100
 
@@ -93,10 +95,12 @@ def analyze_symbol(symbol):
         signal = "🚀 MOMENTUM"
         strategy = "MOMENTUM"
         score = 70 + min(20, max(0, ret5 * 2)) + min(10, max(0, rsi - 50) / 2)
+
     elif rsi <= 45 and dist_ma20 <= 0:
         signal = "🧲 BOTTOM"
         strategy = "BOTTOM"
         score = 65 + min(20, max(0, 45 - rsi)) + min(10, abs(min(dist_ma20, 0)))
+
     else:
         signal = "👀 WATCH"
         strategy = "WATCH"
@@ -118,6 +122,7 @@ def analyze_symbol(symbol):
     }
 
 start_idx = load_state()
+
 if start_idx >= len(UNIVERSE):
     start_idx = 0
 
@@ -140,6 +145,7 @@ for i, symbol in enumerate(batch, 1):
             print("⚠️", symbol, "không đủ dữ liệu")
     except Exception as e:
         print("❌", symbol, repr(e))
+
     time.sleep(SLEEP_SEC)
 
 new_df = pd.DataFrame(rows)
@@ -201,7 +207,7 @@ html_full = f"""
 <html>
 <head><meta charset="utf-8"></head>
 <body>
-<h2>📊 Batch Trading Dashboard</h2>
+<h2>📊 Batch Trading Dashboard - KBS</h2>
 <p>Generated: {datetime.now()}</p>
 <p>Batch: {start_idx} → {end_idx} / {len(UNIVERSE)}</p>
 {html}
@@ -213,6 +219,7 @@ with open("ai_risk_dashboard.html", "w", encoding="utf-8") as f:
     f.write(html_full)
 
 next_start = end_idx
+
 if next_start >= len(UNIVERSE):
     next_start = 0
 
