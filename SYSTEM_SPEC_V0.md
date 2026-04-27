@@ -1,3 +1,6 @@
+## VERSION
+- PRO_V0 (original)
+- Archived: 2026-04-28
 # 🚀 TRADING SYSTEM SPEC
 
 ## ENGINE
