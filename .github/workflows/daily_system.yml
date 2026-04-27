@@ -12,14 +12,9 @@ jobs:
   run-daily:
     runs-on: ubuntu-latest
 
-    env:
-      BOT_DIR: .
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,19 +27,15 @@ jobs:
       - name: Run daily system
         run: python run_daily_system.py
 
-      - name: Show generated files
-        run: |
-          echo "📁 Files after run:"
-          ls -la
-
       - name: Commit and push results
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add ai_risk_filtered.csv || true
           git add *.csv || true
           git add *.html || true
+          git add progress_state.csv || true
+          git add all_signal_results.csv || true
 
-          git commit -m "update trading outputs" || echo "No changes to commit"
+          git commit -m "update trading outputs" || echo "No changes"
           git push
