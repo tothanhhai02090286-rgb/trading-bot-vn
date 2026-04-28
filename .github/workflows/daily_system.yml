@@ -2,11 +2,8 @@ name: Daily Trading System
 
 on:
   schedule:
-    # TEST: chạy mỗi 5 phút để kích hoạt/kiểm tra Scheduled
-    - cron: "*/5 * * * *"
-
-    # CHẠY THẬT: 17:00 → 20:30 giờ Việt Nam
-    - cron: "0,30 10-13 * * 1-5"
+    # TEST: chạy mỗi 1 phút
+    - cron: "* * * * *"
 
   workflow_dispatch:
 
@@ -38,14 +35,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run batch engine
+      - name: Run batch trading system
         run: python run_daily_system.py
 
-      - name: Commit results
+      - name: Commit and push outputs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
           git add .
-          git commit -m "auto update $(TZ='Asia/Ho_Chi_Minh' date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+          git commit -m "auto update $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
           git push
