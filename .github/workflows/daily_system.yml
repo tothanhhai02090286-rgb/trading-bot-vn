@@ -2,8 +2,8 @@ name: Daily Trading System
 
 on:
   schedule:
-    # TEST: chạy mỗi 1 phút
-    - cron: "* * * * *"
+    # 17:00 → 20:30 VN
+    - cron: "0,30 10-13 * * 1-5"
 
   workflow_dispatch:
 
@@ -17,20 +17,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Debug time
-        run: |
-          echo "UTC time:"
-          date
-          echo "Vietnam time:"
-          TZ='Asia/Ho_Chi_Minh' date
 
       - name: Install dependencies
         run: pip install -r requirements.txt
