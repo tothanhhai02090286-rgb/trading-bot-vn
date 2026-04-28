@@ -10,7 +10,8 @@ from universe import UNIVERSE
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
 BATCH_SIZE = 10
-SLEEP_SEC = 5
+SLEEP_SEC = 1
+CACHE_DIR = "cache_stock"
 
 STATE_PATH = "progress_state.csv"
 ALL_RESULT_PATH = "all_signal_results.csv"
@@ -64,6 +65,28 @@ def save_state(next_start):
 def fetch_history(symbol):
     from vnstock import Vnstock
 
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
+
+    # ================================
+    # 1. Nếu có cache thì dùng luôn
+    # ================================
+    if os.path.exists(cache_path):
+        try:
+            df = pd.read_csv(cache_path)
+
+            if df is not None and not df.empty and "close" in df.columns:
+                print(f"⚡ Cache hit: {symbol}")
+                return df
+
+        except Exception as e:
+            print(f"⚠️ Cache lỗi {symbol}: {e}")
+
+    # ================================
+    # 2. Nếu chưa có cache thì gọi API
+    # ================================
+    print(f"🌐 API fetch: {symbol}")
+
     end = datetime.now()
     start = end - timedelta(days=260)
 
@@ -87,6 +110,13 @@ def fetch_history(symbol):
             df[col] = pd.to_numeric(df[col], errors="coerce")
 
     df = df.dropna(subset=["close"]).reset_index(drop=True)
+
+    # ================================
+    # 3. Lưu cache để lần sau dùng
+    # ================================
+    df.to_csv(cache_path, index=False, encoding="utf-8-sig")
+    print(f"💾 Saved cache: {cache_path}")
+
     return df
 
 
