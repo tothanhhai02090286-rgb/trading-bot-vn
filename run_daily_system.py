@@ -15,16 +15,13 @@ SLEEP_SEC = 5
 STATE_PATH = "progress_state.csv"
 ALL_RESULT_PATH = "all_signal_results.csv"
 
-OUTPUT_AI_RISK = "ai_risk_filtered.csv"
-OUTPUT_BOTTOM = "bottom_common_priority.csv"
-OUTPUT_MOMENTUM = "momentum_common_priority.csv"
-OUTPUT_ENTRY = "entry_plan_next_session.csv"
-OUTPUT_DASHBOARD = "ai_risk_dashboard.html"
+RAW_SIGNAL_PATH = "raw_signal_candidates.csv"
+AI_RISK_PATH = "ai_risk_filtered.csv"
+BOTTOM_PATH = "bottom_common_priority.csv"
+MOMENTUM_PATH = "momentum_common_priority.csv"
+ENTRY_PATH = "entry_plan_next_session.csv"
+DASHBOARD_PATH = "ai_risk_dashboard.html"
 
-
-# ================================
-# SAFE UTILS
-# ================================
 
 def safe_read_csv(path):
     if not os.path.exists(path):
@@ -64,10 +61,6 @@ def save_state(next_start):
     }]).to_csv(STATE_PATH, index=False, encoding="utf-8-sig")
 
 
-# ================================
-# DATA FETCH
-# ================================
-
 def fetch_history(symbol):
     from vnstock import Vnstock
 
@@ -96,10 +89,6 @@ def fetch_history(symbol):
     df = df.dropna(subset=["close"]).reset_index(drop=True)
     return df
 
-
-# ================================
-# INDICATORS
-# ================================
 
 def calc_rsi(close, period=14):
     close = pd.Series(close).astype(float)
@@ -140,6 +129,7 @@ def add_indicators(df):
 
     df["High20"] = high.rolling(20).max()
     df["Low20"] = low.rolling(20).min()
+
     df["Drawdown20 %"] = (close / df["High20"] - 1) * 100
     df["Rebound Low20 %"] = (close / df["Low20"] - 1) * 100
     df["Dist MA20 %"] = (close / df["MA20"] - 1) * 100
@@ -167,10 +157,6 @@ def add_indicators(df):
     return df
 
 
-# ================================
-# MARKET BENCHMARK
-# ================================
-
 def get_market_ret20():
     for benchmark in ["VNINDEX", "VN30"]:
         try:
@@ -187,10 +173,6 @@ def get_market_ret20():
     print("⚠️ Không lấy được benchmark, RS20 tạm tính = Ret20")
     return 0
 
-
-# ================================
-# SCORE LOGIC
-# ================================
 
 def score_momentum(row):
     score = 0
@@ -324,10 +306,6 @@ def make_signal(row):
     return "👀 WATCH"
 
 
-# ================================
-# ANALYZE SYMBOL
-# ================================
-
 def analyze_symbol(symbol, market_ret20):
     df = fetch_history(symbol)
 
@@ -335,30 +313,19 @@ def analyze_symbol(symbol, market_ret20):
         return None
 
     df = add_indicators(df)
-
     last = df.iloc[-1]
 
     close = safe_float(last.get("close"))
     ma5 = safe_float(last.get("MA5"))
     ma20 = safe_float(last.get("MA20"))
     rsi = safe_float(last.get("RSI"))
-    ret5 = safe_float(last.get("Ret5 %"))
-    ret10 = safe_float(last.get("Ret10 %"))
-    ret20 = safe_float(last.get("Ret20 %"))
-    volume_ratio = safe_float(last.get("Volume Ratio"), 0)
-    atr = safe_float(last.get("ATR %"), 999)
-    adx = safe_float(last.get("ADX"), 0)
-    dist_ma20 = safe_float(last.get("Dist MA20 %"))
-    drawdown20 = safe_float(last.get("Drawdown20 %"))
-    rebound_low20 = safe_float(last.get("Rebound Low20 %"))
-    low20 = safe_float(last.get("Low20"))
-    high20 = safe_float(last.get("High20"))
-    macd_hist = safe_float(last.get("MACD Hist"), 0)
-    macd_up = bool(last.get("MACD Hist Up"))
 
     if pd.isna(close) or pd.isna(ma5) or pd.isna(ma20) or pd.isna(rsi):
         return None
 
+    ret5 = safe_float(last.get("Ret5 %"), 0)
+    ret10 = safe_float(last.get("Ret10 %"), 0)
+    ret20 = safe_float(last.get("Ret20 %"), 0)
     rs20 = ret20 - market_ret20
 
     row = {
@@ -372,16 +339,16 @@ def analyze_symbol(symbol, market_ret20):
         "Ret10 %": round(ret10, 2),
         "Ret20 %": round(ret20, 2),
         "RS20": round(rs20, 2),
-        "Volume Ratio": round(volume_ratio, 2),
-        "ADX": round(adx, 2),
-        "ATR %": round(atr, 2),
-        "MACD Hist": round(macd_hist, 4),
-        "MACD Hist Up": macd_up,
-        "Dist MA20 %": round(dist_ma20, 2),
-        "Drawdown20 %": round(drawdown20, 2),
-        "Rebound Low20 %": round(rebound_low20, 2),
-        "Low20": round(low20, 2),
-        "High20": round(high20, 2),
+        "Volume Ratio": round(safe_float(last.get("Volume Ratio"), 0), 2),
+        "ADX": round(safe_float(last.get("ADX"), 0), 2),
+        "ATR %": round(safe_float(last.get("ATR %"), 999), 2),
+        "MACD Hist": round(safe_float(last.get("MACD Hist"), 0), 4),
+        "MACD Hist Up": bool(last.get("MACD Hist Up")),
+        "Dist MA20 %": round(safe_float(last.get("Dist MA20 %"), 0), 2),
+        "Drawdown20 %": round(safe_float(last.get("Drawdown20 %"), 0), 2),
+        "Rebound Low20 %": round(safe_float(last.get("Rebound Low20 %"), 0), 2),
+        "Low20": round(safe_float(last.get("Low20"), 0), 2),
+        "High20": round(safe_float(last.get("High20"), 0), 2),
         "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Version": SYSTEM_VERSION
     }
@@ -463,17 +430,43 @@ if combined.empty:
         "Version": SYSTEM_VERSION
     }])
 
+needed_cols = ["Risk Status", "Action", "Chiến lược", "Score", "Mã"]
+for col in needed_cols:
+    if col not in combined.columns:
+        combined[col] = ""
+
+combined["Score"] = pd.to_numeric(combined["Score"], errors="coerce").fillna(0)
 combined = combined.sort_values("Score", ascending=False)
 
+# Toàn bộ kết quả
 combined.to_csv(ALL_RESULT_PATH, index=False, encoding="utf-8-sig")
 
+# ================================
+# 🔎 RAW SIGNAL - LỌC THÔ
+# ================================
+raw_signals = combined[
+    combined["Chiến lược"].isin([
+        "MOMENTUM",
+        "BOTTOM",
+        "MOMENTUM_WATCH",
+        "BOTTOM_WATCH",
+        "WATCH"
+    ])
+].copy()
+
+raw_signals = raw_signals.sort_values("Score", ascending=False)
+raw_signals.to_csv(RAW_SIGNAL_PATH, index=False, encoding="utf-8-sig")
+
+# ================================
+# 🔥 AI FINAL - LỌC TINH
+# ================================
 ai_risk = combined[
     (combined["Risk Status"] == "PASS") &
     (combined["Action"].isin(["BUY NOW", "WAIT", "WATCHLIST"]))
 ].copy()
 
 ai_risk = ai_risk.sort_values("Score", ascending=False)
-ai_risk.to_csv(OUTPUT_AI_RISK, index=False, encoding="utf-8-sig")
+ai_risk.to_csv(AI_RISK_PATH, index=False, encoding="utf-8-sig")
 
 bottom = ai_risk[
     ai_risk["Chiến lược"].isin(["BOTTOM", "BOTTOM_WATCH"])
@@ -483,8 +476,8 @@ momentum = ai_risk[
     ai_risk["Chiến lược"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
 ].copy()
 
-bottom.to_csv(OUTPUT_BOTTOM, index=False, encoding="utf-8-sig")
-momentum.to_csv(OUTPUT_MOMENTUM, index=False, encoding="utf-8-sig")
+bottom.to_csv(BOTTOM_PATH, index=False, encoding="utf-8-sig")
+momentum.to_csv(MOMENTUM_PATH, index=False, encoding="utf-8-sig")
 
 entry = ai_risk[
     ai_risk["Action"].isin(["BUY NOW", "WAIT", "WATCHLIST"])
@@ -510,9 +503,8 @@ else:
     ]
     entry = entry[[c for c in keep if c in entry.columns]]
 
-entry.to_csv(OUTPUT_ENTRY, index=False, encoding="utf-8-sig")
+entry.to_csv(ENTRY_PATH, index=False, encoding="utf-8-sig")
 
-html = combined.to_html(index=False)
 html_full = f"""
 <html>
 <head>
@@ -524,13 +516,20 @@ html_full = f"""
 <p><b>Generated:</b> {datetime.now()}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} → {end_idx} / {len(UNIVERSE)}</p>
-<p><b>BUY NOW:</b> {len(entry[entry["Action"] == "BUY NOW"]) if "Action" in entry.columns else 0}</p>
-{html}
+
+<h3>🔎 RAW SIGNAL - Lọc thô</h3>
+{raw_signals.to_html(index=False)}
+
+<h3>🔥 AI FINAL - Lọc tinh</h3>
+{ai_risk.to_html(index=False)}
+
+<h3>📋 ENTRY</h3>
+{entry.to_html(index=False)}
 </body>
 </html>
 """
 
-with open(OUTPUT_DASHBOARD, "w", encoding="utf-8") as f:
+with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
     f.write(html_full)
 
 next_start = end_idx
@@ -542,6 +541,7 @@ save_state(next_start)
 
 print("✅ CREATED OUTPUT FILES")
 print("Rows combined:", len(combined))
+print("Raw signals:", len(raw_signals))
 print("AI risk rows:", len(ai_risk))
 print("Bottom rows:", len(bottom))
 print("Momentum rows:", len(momentum))
