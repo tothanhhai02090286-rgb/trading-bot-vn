@@ -414,19 +414,40 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
         tracker["Hành động"] = tracker.apply(holding_action, axis=1)
 
+        def risk_flag(row):
+            pnl = safe_float(row.get("Lãi/Lỗ %"), 0)
+            rsi = safe_float(row.get("RSI"), 0)
+            risk = str(row.get("Risk Status", ""))
+
+            if risk == "FAIL":
+                return "❌ RISK FAIL"
+            if pnl <= -4:
+                return "🔴 NGUY HIỂM"
+            if pnl <= -2:
+                return "🟡 CẢNH BÁO"
+            if rsi >= 80:
+                return "⚠️ QUÁ MUA"
+            if pnl > 0:
+                return "🟢 ĐANG LÃI"
+            return "🟢 ỔN"
+
+        tracker["Cảnh báo"] = tracker.apply(risk_flag, axis=1)
+
         keep_tracker = [
             "Mã", "Giá vốn", "Close", "Số lượng",
             "Giá trị vốn", "Giá trị hiện tại",
             "Lãi/Lỗ %", "Lãi/Lỗ tiền",
             "Signal", "Chiến lược", "Score", "RSI",
-            "Risk Status", "Risk Reason", "Action", "Hành động"
+            "Risk Status", "Risk Reason", "Action",
+            "Hành động", "Cảnh báo"
         ]
         tracker = tracker[[c for c in keep_tracker if c in tracker.columns]]
 
     else:
         tracker = pd.DataFrame([{
             "Mã": "NO_PORTFOLIO",
-            "Hành động": "Chưa có portfolio_current.csv"
+            "Hành động": "Chưa có portfolio_current.csv",
+            "Cảnh báo": "⚠️ CHƯA CÓ DANH MỤC"
         }])
 
     tracker.to_csv(PORTFOLIO_TRACKER_PATH, index=False, encoding="utf-8-sig")
@@ -447,12 +468,13 @@ def build_portfolio_and_action_plan(combined, ai_risk):
         buy_plan = pd.DataFrame()
 
     hold_plan = tracker.copy()
+
     if not hold_plan.empty and "Mã" in hold_plan.columns:
         hold_plan["Ngày"] = datetime.now().strftime("%Y-%m-%d")
         hold_plan["Lý do"] = "Theo dõi danh mục hiện có"
 
         keep_hold = [
-            "Ngày", "Mã", "Hành động", "Lý do",
+            "Ngày", "Mã", "Hành động", "Cảnh báo", "Lý do",
             "Lãi/Lỗ %", "Lãi/Lỗ tiền",
             "Signal", "Chiến lược", "Score",
             "RSI", "Close", "Risk Status", "Risk Reason"
@@ -474,6 +496,48 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
 
     return tracker, action_plan
+
+
+def html_style():
+    return """
+<style>
+body {
+    background-color: #0f1117;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+h2 {
+    font-size: 34px;
+}
+h3 {
+    margin-top: 35px;
+    color: #ff4d4f;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+th {
+    background-color: #1f2430;
+    color: #ffffff;
+    padding: 8px;
+    border: 1px solid #333;
+}
+td {
+    padding: 8px;
+    border: 1px solid #333;
+}
+tr:nth-child(even) {
+    background-color: #171b24;
+}
+tr:nth-child(odd) {
+    background-color: #11151d;
+}
+</style>
+"""
 
 
 # ================================
@@ -598,32 +662,41 @@ entry.to_csv(ENTRY_PATH, index=False, encoding="utf-8-sig")
 
 tracker, action_plan = build_portfolio_and_action_plan(combined, ai_risk)
 
+raw_html = raw_signals.to_html(index=False)
+ai_html = ai_risk.to_html(index=False)
+entry_html = entry.to_html(index=False)
+tracker_html = tracker.to_html(index=False)
+action_html = action_plan.to_html(index=False)
+
 html_full = f"""
 <html>
 <head>
 <meta charset="utf-8">
-<title>Batch Trading Dashboard - KBS</title>
+<title>Trading Dashboard</title>
+{html_style()}
 </head>
 <body>
-<h2>📊 Batch Trading Dashboard - KBS</h2>
+
+<h2>📊 TRADING BOT CONTROL CENTER</h2>
 <p><b>Generated:</b> {datetime.now()}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} → {end_idx} / {len(UNIVERSE)}</p>
 
 <h3>🔎 RAW SIGNAL - Lọc thô</h3>
-{raw_signals.to_html(index=False)}
+{raw_html}
 
 <h3>🔥 AI FINAL - Lọc tinh</h3>
-{ai_risk.to_html(index=False)}
+{ai_html}
 
 <h3>📋 ENTRY</h3>
-{entry.to_html(index=False)}
+{entry_html}
 
 <h3>📦 PORTFOLIO TRACKER</h3>
-{tracker.to_html(index=False)}
+{tracker_html}
 
 <h3>🎯 ACTION PLAN</h3>
-{action_plan.to_html(index=False)}
+{action_html}
+
 </body>
 </html>
 """
