@@ -3,7 +3,7 @@ name: Daily Trading System
 on:
   schedule:
     # TEST: chạy mỗi 5 phút
-    - cron: "*/5 * * * *"
+    - cron: "*/50 * * * *"
 
     # CHẠY THẬT: 17:00 → 20:30 giờ Việt Nam
     - cron: "0,30 10-13 * * 1-5"
