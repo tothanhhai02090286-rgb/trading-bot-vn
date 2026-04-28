@@ -23,6 +23,10 @@ MOMENTUM_PATH = "momentum_common_priority.csv"
 ENTRY_PATH = "entry_plan_next_session.csv"
 DASHBOARD_PATH = "ai_risk_dashboard.html"
 
+PORTFOLIO_PATH = "portfolio_current.csv"
+PORTFOLIO_TRACKER_PATH = "portfolio_tracker.csv"
+ACTION_PLAN_PATH = "action_plan.csv"
+
 
 def safe_read_csv(path):
     if not os.path.exists(path):
@@ -68,23 +72,15 @@ def fetch_history(symbol):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
 
-    # ================================
-    # 1. Nếu có cache thì dùng luôn
-    # ================================
     if os.path.exists(cache_path):
         try:
             df = pd.read_csv(cache_path)
-
             if df is not None and not df.empty and "close" in df.columns:
                 print(f"⚡ Cache hit: {symbol}")
                 return df
-
         except Exception as e:
             print(f"⚠️ Cache lỗi {symbol}: {e}")
 
-    # ================================
-    # 2. Nếu chưa có cache thì gọi API
-    # ================================
     print(f"🌐 API fetch: {symbol}")
 
     end = datetime.now()
@@ -111,9 +107,6 @@ def fetch_history(symbol):
 
     df = df.dropna(subset=["close"]).reset_index(drop=True)
 
-    # ================================
-    # 3. Lưu cache để lần sau dùng
-    # ================================
     df.to_csv(cache_path, index=False, encoding="utf-8-sig")
     print(f"💾 Saved cache: {cache_path}")
 
@@ -139,7 +132,6 @@ def add_indicators(df):
 
     df["MA5"] = close.rolling(5).mean()
     df["MA20"] = close.rolling(20).mean()
-
     df["RSI"] = calc_rsi(close, 14)
 
     df["Ret5 %"] = close.pct_change(5) * 100
@@ -206,7 +198,6 @@ def get_market_ret20():
 
 def score_momentum(row):
     score = 0
-
     if row["MA5"] > row["MA20"]:
         score += 15
     if 55 <= row["RSI"] <= 75:
@@ -227,13 +218,11 @@ def score_momentum(row):
         score += 5
     if 0 <= row["Dist MA20 %"] <= 12:
         score += 5
-
     return score
 
 
 def score_bottom(row):
     score = 0
-
     if 30 <= row["RSI"] <= 48:
         score += 15
     if row["Drawdown20 %"] <= -5:
@@ -252,23 +241,18 @@ def score_bottom(row):
         score += 10
     if row["MACD Hist Up"]:
         score += 10
-
     return score
 
 
 def classify_strategy(row):
     if row["Momentum Score"] >= 75 and row["Momentum Score"] >= row["Bottom Score"]:
         return "MOMENTUM"
-
     if row["Bottom Score"] >= 70 and row["Bottom Score"] > row["Momentum Score"]:
         return "BOTTOM"
-
     if row["Momentum Score"] >= 60:
         return "MOMENTUM_WATCH"
-
     if row["Bottom Score"] >= 55:
         return "BOTTOM_WATCH"
-
     return "WATCH"
 
 
@@ -277,50 +261,37 @@ def risk_filter(row):
 
     if row["RSI"] >= 90:
         reasons.append("RSI quá nóng")
-
     if row["ATR %"] > 10:
         reasons.append("ATR quá cao")
-
     if row["Volume Ratio"] < 0.7:
         reasons.append("Volume yếu")
-
     if row["RS20"] < -10:
         reasons.append("RS20 yếu")
-
     if row["Chiến lược"] == "MOMENTUM" and row["Close"] < row["MA20"]:
         reasons.append("Momentum nhưng giá dưới MA20")
 
     if len(reasons) == 0:
         return "PASS", ""
-
     return "FAIL", "; ".join(reasons)
 
 
 def classify_action(row):
     if row["Risk Status"] == "FAIL":
         return "SKIP"
-
     if row["RSI"] >= 90:
         return "SKIP"
-
     if 85 <= row["RSI"] < 90:
         return "WATCHLIST"
-
     if 75 <= row["RSI"] < 85:
         return "WAIT"
-
     if row["Chiến lược"] == "MOMENTUM" and row["Momentum Score"] >= 80:
         return "BUY NOW"
-
     if row["Chiến lược"] == "BOTTOM" and row["Bottom Score"] >= 75:
         return "BUY NOW"
-
     if row["Chiến lược"] in ["MOMENTUM", "BOTTOM"]:
         return "WAIT"
-
     if row["Chiến lược"] in ["MOMENTUM_WATCH", "BOTTOM_WATCH"]:
         return "WATCHLIST"
-
     return "SKIP"
 
 
@@ -386,7 +357,6 @@ def analyze_symbol(symbol, market_ret20):
     row["Momentum Score"] = score_momentum(row)
     row["Bottom Score"] = score_bottom(row)
     row["Score"] = max(row["Momentum Score"], row["Bottom Score"])
-
     row["Chiến lược"] = classify_strategy(row)
 
     risk_status, risk_reason = risk_filter(row)
@@ -399,6 +369,113 @@ def analyze_symbol(symbol, market_ret20):
     return row
 
 
+def build_portfolio_and_action_plan(combined, ai_risk):
+    portfolio = safe_read_csv(PORTFOLIO_PATH)
+
+    if not portfolio.empty and "Mã" in portfolio.columns:
+        tracker = portfolio.merge(
+            combined,
+            on="Mã",
+            how="left",
+            suffixes=("", "_signal")
+        )
+
+        tracker["Giá vốn"] = pd.to_numeric(tracker.get("Giá vốn"), errors="coerce")
+        tracker["Số lượng"] = pd.to_numeric(tracker.get("Số lượng"), errors="coerce")
+        tracker["Close"] = pd.to_numeric(tracker.get("Close"), errors="coerce")
+
+        tracker["Giá trị vốn"] = tracker["Giá vốn"] * tracker["Số lượng"]
+        tracker["Giá trị hiện tại"] = tracker["Close"] * tracker["Số lượng"]
+        tracker["Lãi/Lỗ %"] = (tracker["Close"] / tracker["Giá vốn"] - 1) * 100
+        tracker["Lãi/Lỗ tiền"] = tracker["Giá trị hiện tại"] - tracker["Giá trị vốn"]
+
+        def holding_action(row):
+            pnl = safe_float(row.get("Lãi/Lỗ %"), 0)
+            action = str(row.get("Action", ""))
+            risk = str(row.get("Risk Status", ""))
+            rsi = safe_float(row.get("RSI"), 0)
+            strategy = str(row.get("Chiến lược", ""))
+
+            if pd.isna(row.get("Close")):
+                return "CHƯA CÓ DATA"
+            if risk == "FAIL":
+                return "GIẢM / BÁN"
+            if pnl <= -5:
+                return "CẮT LỖ"
+            if pnl >= 10 and rsi >= 75:
+                return "CHỐT LỜI MỘT PHẦN"
+            if pnl >= 7:
+                return "GIỮ / CANH CHỐT"
+            if action == "BUY NOW":
+                return "GIỮ MẠNH"
+            if strategy in ["MOMENTUM", "BOTTOM", "MOMENTUM_WATCH", "BOTTOM_WATCH"]:
+                return "GIỮ"
+            return "THEO DÕI"
+
+        tracker["Hành động"] = tracker.apply(holding_action, axis=1)
+
+        keep_tracker = [
+            "Mã", "Giá vốn", "Close", "Số lượng",
+            "Giá trị vốn", "Giá trị hiện tại",
+            "Lãi/Lỗ %", "Lãi/Lỗ tiền",
+            "Signal", "Chiến lược", "Score", "RSI",
+            "Risk Status", "Risk Reason", "Action", "Hành động"
+        ]
+        tracker = tracker[[c for c in keep_tracker if c in tracker.columns]]
+
+    else:
+        tracker = pd.DataFrame([{
+            "Mã": "NO_PORTFOLIO",
+            "Hành động": "Chưa có portfolio_current.csv"
+        }])
+
+    tracker.to_csv(PORTFOLIO_TRACKER_PATH, index=False, encoding="utf-8-sig")
+
+    buy_plan = ai_risk[ai_risk["Action"] == "BUY NOW"].copy()
+
+    if not buy_plan.empty:
+        buy_plan["Hành động"] = "MUA MỚI"
+        buy_plan["Lý do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
+        keep_buy = [
+            "Ngày", "Mã", "Hành động", "Lý do",
+            "Signal", "Chiến lược", "Score",
+            "RSI", "Close", "RS20", "Volume Ratio",
+            "ADX", "ATR %", "Risk Status"
+        ]
+        buy_plan = buy_plan[[c for c in keep_buy if c in buy_plan.columns]]
+    else:
+        buy_plan = pd.DataFrame()
+
+    hold_plan = tracker.copy()
+    if not hold_plan.empty and "Mã" in hold_plan.columns:
+        hold_plan["Ngày"] = datetime.now().strftime("%Y-%m-%d")
+        hold_plan["Lý do"] = "Theo dõi danh mục hiện có"
+
+        keep_hold = [
+            "Ngày", "Mã", "Hành động", "Lý do",
+            "Lãi/Lỗ %", "Lãi/Lỗ tiền",
+            "Signal", "Chiến lược", "Score",
+            "RSI", "Close", "Risk Status", "Risk Reason"
+        ]
+        hold_plan = hold_plan[[c for c in keep_hold if c in hold_plan.columns]]
+    else:
+        hold_plan = pd.DataFrame()
+
+    action_plan = pd.concat([buy_plan, hold_plan], ignore_index=True)
+
+    if action_plan.empty:
+        action_plan = pd.DataFrame([{
+            "Ngày": datetime.now().strftime("%Y-%m-%d"),
+            "Mã": "NO_ACTION",
+            "Hành động": "KHÔNG LÀM GÌ",
+            "Lý do": "Không có tín hiệu mua và chưa có danh mục"
+        }])
+
+    action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
+
+    return tracker, action_plan
+
+
 # ================================
 # MAIN
 # ================================
@@ -408,7 +485,6 @@ print(f"📌 SYSTEM VERSION: {SYSTEM_VERSION}")
 print("⏰", datetime.now())
 
 start_idx = load_state()
-
 if start_idx >= len(UNIVERSE):
     start_idx = 0
 
@@ -468,40 +544,26 @@ for col in needed_cols:
 combined["Score"] = pd.to_numeric(combined["Score"], errors="coerce").fillna(0)
 combined = combined.sort_values("Score", ascending=False)
 
-# Toàn bộ kết quả
 combined.to_csv(ALL_RESULT_PATH, index=False, encoding="utf-8-sig")
 
-# ================================
-# 🔎 RAW SIGNAL - LỌC THÔ
-# ================================
 raw_signals = combined[
     combined["Chiến lược"].isin([
-        "MOMENTUM",
-        "BOTTOM",
-        "MOMENTUM_WATCH",
-        "BOTTOM_WATCH",
-        "WATCH"
+        "MOMENTUM", "BOTTOM", "MOMENTUM_WATCH", "BOTTOM_WATCH", "WATCH"
     ])
 ].copy()
-
 raw_signals = raw_signals.sort_values("Score", ascending=False)
 raw_signals.to_csv(RAW_SIGNAL_PATH, index=False, encoding="utf-8-sig")
 
-# ================================
-# 🔥 AI FINAL - LỌC TINH
-# ================================
 ai_risk = combined[
     (combined["Risk Status"] == "PASS") &
     (combined["Action"].isin(["BUY NOW", "WAIT", "WATCHLIST"]))
 ].copy()
-
 ai_risk = ai_risk.sort_values("Score", ascending=False)
 ai_risk.to_csv(AI_RISK_PATH, index=False, encoding="utf-8-sig")
 
 bottom = ai_risk[
     ai_risk["Chiến lược"].isin(["BOTTOM", "BOTTOM_WATCH"])
 ].copy()
-
 momentum = ai_risk[
     ai_risk["Chiến lược"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
 ].copy()
@@ -512,7 +574,6 @@ momentum.to_csv(MOMENTUM_PATH, index=False, encoding="utf-8-sig")
 entry = ai_risk[
     ai_risk["Action"].isin(["BUY NOW", "WAIT", "WATCHLIST"])
 ].copy()
-
 entry = entry.sort_values("Score", ascending=False).head(10)
 
 if entry.empty:
@@ -535,6 +596,8 @@ else:
 
 entry.to_csv(ENTRY_PATH, index=False, encoding="utf-8-sig")
 
+tracker, action_plan = build_portfolio_and_action_plan(combined, ai_risk)
+
 html_full = f"""
 <html>
 <head>
@@ -555,6 +618,12 @@ html_full = f"""
 
 <h3>📋 ENTRY</h3>
 {entry.to_html(index=False)}
+
+<h3>📦 PORTFOLIO TRACKER</h3>
+{tracker.to_html(index=False)}
+
+<h3>🎯 ACTION PLAN</h3>
+{action_plan.to_html(index=False)}
 </body>
 </html>
 """
@@ -563,7 +632,6 @@ with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
     f.write(html_full)
 
 next_start = end_idx
-
 if next_start >= len(UNIVERSE):
     next_start = 0
 
@@ -576,4 +644,6 @@ print("AI risk rows:", len(ai_risk))
 print("Bottom rows:", len(bottom))
 print("Momentum rows:", len(momentum))
 print("Entry rows:", len(entry))
+print("Portfolio rows:", len(tracker))
+print("Action plan rows:", len(action_plan))
 print("Next batch start:", next_start)
