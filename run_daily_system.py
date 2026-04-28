@@ -9,7 +9,7 @@ from universe import UNIVERSE
 
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
-BATCH_SIZE = 10
+BATCH_SIZE = 50
 SLEEP_SEC = 1
 CACHE_DIR = "cache_stock"
 
