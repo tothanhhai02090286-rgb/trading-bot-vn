@@ -6,8 +6,10 @@ from datetime import datetime, timedelta
 from pandas.errors import EmptyDataError
 
 from universe import UNIVERSE
+SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
 print("🚀 RUN BATCH TRADING ENGINE - KBS")
+print(f"📌 SYSTEM VERSION: {SYSTEM_VERSION}")
 print("⏰", datetime.now())
 
 BATCH_SIZE = 10
