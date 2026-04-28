@@ -2,13 +2,20 @@ name: Daily Trading System
 
 on:
   schedule:
-    # 17:00 → 20:30 VN
+    # TEST: chạy mỗi 5 phút
+    - cron: "*/5 * * * *"
+
+    # CHẠY THẬT: 17:00 → 20:30 giờ Việt Nam
     - cron: "0,30 10-13 * * 1-5"
 
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: trading-bot
+  cancel-in-progress: true
 
 jobs:
   run-daily:
@@ -17,11 +24,21 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Debug time
+        run: |
+          echo "UTC time:"
+          date
+          echo "Vietnam time:"
+          TZ='Asia/Ho_Chi_Minh' date
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -33,6 +50,9 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add .
-          git commit -m "auto update $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+          git commit -m "auto update $(TZ='Asia/Ho_Chi_Minh' date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+
+          git pull --rebase origin main || true
           git push
