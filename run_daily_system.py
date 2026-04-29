@@ -134,11 +134,11 @@ def fetch_history(symbol):
 
     vn = Vnstock()
 
-if API_KEY:
-    vn.set_token(API_KEY)
+    if API_KEY:
+        vn.set_token(API_KEY)
 
-stock = vn.stock(symbol=symbol, source="KBS")
-df = stock.quote.history(
+    stock = vn.stock(symbol=symbol, source="KBS")
+    df = stock.quote.history(
         start=start.strftime("%Y-%m-%d"),
         end=end.strftime("%Y-%m-%d"),
         interval="1D"
