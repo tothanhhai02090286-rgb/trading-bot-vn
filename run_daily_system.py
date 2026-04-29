@@ -72,16 +72,61 @@ def fetch_history(symbol):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
 
+    # Giờ Việt Nam
+    now_vn = datetime.utcnow() + timedelta(hours=7)
+    today = now_vn.strftime("%Y-%m-%d")
+    close_hour = 16  # sau 16h mới tin dữ liệu ngày hôm nay
+
     if os.path.exists(cache_path):
         try:
             df = pd.read_csv(cache_path)
+
             if df is not None and not df.empty and "close" in df.columns:
-                print(f"⚡ Cache hit: {symbol}")
-                return df
+                last_date = None
+
+                if "time" in df.columns:
+                    last_date = str(df["time"].iloc[-1])[:10]
+                elif "date" in df.columns:
+                    last_date = str(df["date"].iloc[-1])[:10]
+
+                # Lấy giờ file cache được lưu
+                cache_mtime = datetime.fromtimestamp(os.path.getmtime(cache_path))
+                cache_mtime_vn = cache_mtime
+                cache_hour = cache_mtime_vn.hour
+
+                # ================================
+                # 1. Nếu đang trước 16h → dùng cache, không gọi API
+                # ================================
+                if now_vn.hour < close_hour:
+                    print(f"⏳ Trước 16h VN → dùng cache: {symbol}")
+                    return df
+
+                # ================================
+                # 2. Nếu cache là ngày hôm nay và được lưu sau 16h → dùng cache
+                # ================================
+                if last_date == today and cache_hour >= close_hour:
+                    print(f"⚡ Cache OK sau phiên: {symbol}")
+                    return df
+
+                # ================================
+                # 3. Nếu cache ngày hôm nay nhưng lưu trước 16h → fetch lại
+                # ================================
+                if last_date == today and cache_hour < close_hour:
+                    print(f"🔄 Cache ngày {today} nhưng lưu trước 16h → update lại: {symbol}")
+
+                # ================================
+                # 4. Nếu cache ngày cũ → fetch lại
+                # ================================
+                elif last_date != today:
+                    print(f"🔄 Cache cũ {symbol}: {last_date} → update ngày {today}")
+
+                else:
+                    print(f"🔄 Cache cần update: {symbol}")
+
         except Exception as e:
             print(f"⚠️ Cache lỗi {symbol}: {e}")
 
-    print(f"🌐 API fetch: {symbol}")
+    print(f"🌐 API fetch/update: {symbol}")
 
     end = datetime.now()
     start = end - timedelta(days=260)
@@ -108,7 +153,7 @@ def fetch_history(symbol):
     df = df.dropna(subset=["close"]).reset_index(drop=True)
 
     df.to_csv(cache_path, index=False, encoding="utf-8-sig")
-    print(f"💾 Saved cache: {cache_path}")
+    print(f"💾 Updated cache: {cache_path}")
 
     return df
 
