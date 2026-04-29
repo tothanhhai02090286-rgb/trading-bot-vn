@@ -9,8 +9,8 @@ from universe import UNIVERSE
 
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
-BATCH_SIZE = 30
-SLEEP_SEC = 1
+BATCH_SIZE = 20
+SLEEP_SEC = 5
 CACHE_DIR = "cache_stock"
 
 STATE_PATH = "progress_state.csv"
