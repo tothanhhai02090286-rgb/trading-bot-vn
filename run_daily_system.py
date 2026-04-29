@@ -92,7 +92,7 @@ def fetch_history(symbol):
                     last_date = str(df["date"].iloc[-1])[:10]
 
                 # Lấy giờ file cache được lưu
-               cache_mtime_vn = datetime.utcfromtimestamp(os.path.getmtime(cache_path)) + timedelta(hours=7)
+                cache_mtime_vn = datetime.utcfromtimestamp(os.path.getmtime(cache_path)) + timedelta(hours=7)
                 cache_hour = cache_mtime_vn.hour
 
                 # ================================
