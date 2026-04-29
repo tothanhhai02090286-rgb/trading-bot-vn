@@ -7,6 +7,8 @@ from pandas.errors import EmptyDataError
 
 from universe import UNIVERSE
 
+API_KEY = os.getenv("VNSTOCK_API_KEY")
+
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
 BATCH_SIZE = 20
