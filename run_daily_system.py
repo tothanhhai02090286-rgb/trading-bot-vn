@@ -132,7 +132,12 @@ def fetch_history(symbol):
     end = datetime.now()
     start = end - timedelta(days=260)
 
-    stock = Vnstock().stock(symbol=symbol, source="KBS")
+    vn = Vnstock()
+
+if API_KEY:
+    vn.set_token(API_KEY)
+
+stock = vn.stock(symbol=symbol, source="KBS")
     df = stock.quote.history(
         start=start.strftime("%Y-%m-%d"),
         end=end.strftime("%Y-%m-%d"),
