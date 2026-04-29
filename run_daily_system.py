@@ -11,8 +11,8 @@ API_KEY = os.getenv("VNSTOCK_API_KEY")
 
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
-BATCH_SIZE = 20
-SLEEP_SEC = 5
+BATCH_SIZE = 50
+SLEEP_SEC = 3
 CACHE_DIR = "cache_stock"
 
 STATE_PATH = "progress_state.csv"
