@@ -48,6 +48,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run batch trading system
+        env:
+          VNSTOCK_API_KEY: ${{ secrets.VNSTOCK_API_KEY }}
         run: python run_daily_system.py
 
       - name: Commit and push outputs
