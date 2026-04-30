@@ -1013,6 +1013,9 @@ html_full = f"""
 with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
     f.write(html_full)
 
+# 🔥 GỬI TELEGRAM (THÊM DÒNG NÀY)
+send_telegram_alert(entry, action_plan, combined, tracker)
+
 next_start = end_idx
 if next_start >= len(UNIVERSE):
     next_start = 0
