@@ -2,6 +2,7 @@ import os
 import time
 import pandas as pd
 import numpy as np
+import requests
 from datetime import datetime, timedelta
 from pandas.errors import EmptyDataError
 
@@ -9,7 +10,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V2_VNSTOCK_QUOTE_2026_04_30"
+SYSTEM_VERSION = "PRO_V3_TELEGRAM_PRO_2026_04_30"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -29,6 +30,9 @@ DASHBOARD_PATH = "ai_risk_dashboard.html"
 PORTFOLIO_PATH = "portfolio_current.csv"
 PORTFOLIO_TRACKER_PATH = "portfolio_tracker.csv"
 ACTION_PLAN_PATH = "action_plan.csv"
+
+TELEGRAM_ENABLED = True
+TELEGRAM_MAX_ITEMS = 10
 
 
 def fix_vietnamese_columns(df):
@@ -617,6 +621,173 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
 
     return tracker, action_plan
+
+
+
+def get_env_secret(*names):
+    for name in names:
+        value = os.getenv(name)
+        if value:
+            return value
+    return None
+
+
+def build_telegram_message(entry, action_plan, combined, tracker):
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+        total_codes = len(set(combined["Mã"].dropna().astype(str)) & set(UNIVERSE))
+        missing_codes = sorted(set(UNIVERSE) - set(combined["Mã"].dropna().astype(str)))
+    except Exception:
+        total_codes = 0
+        missing_codes = []
+
+    source_df = entry.copy() if entry is not None and not entry.empty else pd.DataFrame()
+
+    if source_df.empty and action_plan is not None and not action_plan.empty:
+        source_df = action_plan.copy()
+
+    if source_df.empty and combined is not None and not combined.empty:
+        source_df = combined.copy()
+
+    if "Score" in source_df.columns:
+        source_df["Score"] = pd.to_numeric(source_df["Score"], errors="coerce").fillna(0)
+        source_df = source_df.sort_values("Score", ascending=False)
+
+    if "Action" in source_df.columns:
+        focus = source_df[
+            source_df["Action"].astype(str).isin(["BUY NOW", "WAIT", "WATCHLIST", "MUA MỚI"])
+        ].copy()
+        if focus.empty:
+            focus = source_df.copy()
+    elif "Hành động" in source_df.columns:
+        focus = source_df.copy()
+        focus["Action"] = focus["Hành động"]
+    else:
+        focus = source_df.copy()
+
+    focus = focus.head(TELEGRAM_MAX_ITEMS)
+
+    def count_action(df, names):
+        if df is None or df.empty:
+            return 0
+        if "Action" in df.columns:
+            return int(df["Action"].astype(str).isin(names).sum())
+        if "Hành động" in df.columns:
+            return int(df["Hành động"].astype(str).isin(names).sum())
+        return 0
+
+    buy_now = count_action(entry, ["BUY NOW", "MUA MỚI"])
+    wait = count_action(entry, ["WAIT"])
+    watch = count_action(entry, ["WATCHLIST"])
+
+    lines = []
+    lines.append("🤖 TRADING BOT PRO ALERT")
+    lines.append(f"⏰ {now}")
+    lines.append(f"📌 Version: {SYSTEM_VERSION}")
+    lines.append(f"📊 Coverage: {total_codes} / {len(UNIVERSE)} mã")
+
+    if missing_codes:
+        lines.append(f"⚠️ Thiếu mã: {', '.join(missing_codes[:20])}")
+    else:
+        lines.append("✅ Đủ mã trong all_signal_results.csv")
+
+    lines.append("")
+    lines.append(f"🔥 BUY NOW/MUA MỚI: {buy_now}")
+    lines.append(f"🟡 WAIT: {wait}")
+    lines.append(f"👀 WATCHLIST: {watch}")
+
+    if tracker is not None and not tracker.empty:
+        lines.append(f"📦 Portfolio rows: {len(tracker)}")
+
+    lines.append("")
+    lines.append("📌 TOP SIGNALS:")
+
+    if focus.empty:
+        lines.append("Không có tín hiệu nổi bật.")
+        return "\\n".join(lines)
+
+    for _, r in focus.iterrows():
+        code = str(r.get("Mã", r.get("Ma", "")))
+        action = str(r.get("Action", r.get("Hành động", "")))
+        signal = str(r.get("Signal", ""))
+        strategy = str(r.get("Chiến lược", ""))
+        risk = str(r.get("Risk Status", ""))
+
+        try:
+            score = f"{float(r.get('Score')):.0f}"
+        except Exception:
+            score = ""
+
+        try:
+            close = f"{float(r.get('Close')):.2f}"
+        except Exception:
+            close = ""
+
+        try:
+            rsi = f"{float(r.get('RSI')):.2f}"
+        except Exception:
+            rsi = ""
+
+        try:
+            rs20 = f"{float(r.get('RS20')):.2f}"
+        except Exception:
+            rs20 = ""
+
+        line = f"- {code} | {action}"
+        if score:
+            line += f" | Score {score}"
+        if signal and signal != "nan":
+            line += f" | {signal}"
+        if strategy and strategy != "nan":
+            line += f" | {strategy}"
+        if close:
+            line += f" | Close {close}"
+        if rsi:
+            line += f" | RSI {rsi}"
+        if rs20:
+            line += f" | RS20 {rs20}"
+        if risk and risk != "nan":
+            line += f" | Risk {risk}"
+
+        lines.append(line)
+
+    return "\\n".join(lines)
+
+
+def send_telegram_alert(entry, action_plan, combined, tracker):
+    if not TELEGRAM_ENABLED:
+        print("Telegram alert disabled")
+        return
+
+    token = get_env_secret("TELEGRAM_TOKEN", "TELEGRAM_BOT_TOKEN", "BOT_TOKEN")
+    chat_id = get_env_secret("TELEGRAM_CHAT_ID", "CHAT_ID", "TELEGRAM_CHAT")
+
+    if not token or not chat_id:
+        print("⚠️ Thiếu TELEGRAM_TOKEN hoặc TELEGRAM_CHAT_ID → bỏ qua Telegram")
+        return
+
+    msg = build_telegram_message(entry, action_plan, combined, tracker)
+
+    try:
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        r = requests.post(
+            url,
+            data={
+                "chat_id": chat_id,
+                "text": msg,
+                "disable_web_page_preview": True
+            },
+            timeout=30
+        )
+
+        if r.status_code == 200:
+            print("✅ Telegram alert sent")
+        else:
+            print(f"⚠️ Telegram send failed: {r.status_code} - {r.text}")
+
+    except Exception as e:
+        print("⚠️ Telegram error:", repr(e))
 
 
 def html_style():
