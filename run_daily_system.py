@@ -9,7 +9,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V1_2026_04_28"
+SYSTEM_VERSION = "PRO_V2_VNSTOCK_QUOTE_2026_04_30"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -69,9 +69,60 @@ def save_state(next_start):
     }]).to_csv(STATE_PATH, index=False, encoding="utf-8-sig")
 
 
-def fetch_history(symbol):
+
+def load_quote_history(symbol, start, end):
+    """
+    V2: Æ°u tiÃªn API má»i Quote Äá» trÃ¡nh VNSTOCK DEPRECATION NOTICE.
+    Fallback vá» Vnstock cÅ© náº¿u mÃ´i trÆ°á»ng chÆ°a há» trá»£ Quote.
+    """
+    start_str = start.strftime("%Y-%m-%d")
+    end_str = end.strftime("%Y-%m-%d")
+
+    # API má»i
+    try:
+        from vnstock.api.quote import Quote
+
+        last_error = None
+        for source in ["KBS", "VCI"]:
+            try:
+                q = Quote(symbol=symbol, source=source)
+                df = q.history(
+                    start=start_str,
+                    end=end_str,
+                    interval="1D"
+                )
+                if df is not None and not df.empty:
+                    print(f"â Quote API source={source}: {symbol}")
+                    return df
+            except Exception as e:
+                last_error = e
+                continue
+
+        if last_error:
+            raise last_error
+
+    except Exception as e:
+        print(f"â ï¸ Quote API lá»i {symbol}: {repr(e)} â fallback Vnstock cÅ©")
+
+    # Fallback API cÅ©
     from vnstock import Vnstock
 
+    vn = Vnstock()
+    if API_KEY:
+        try:
+            vn.set_token(API_KEY)
+        except Exception as e:
+            print(f"â ï¸ KhÃ´ng set ÄÆ°á»£c token báº±ng Vnstock cÅ©: {repr(e)}")
+
+    stock = vn.stock(symbol=symbol, source="KBS")
+    return stock.quote.history(
+        start=start_str,
+        end=end_str,
+        interval="1D"
+    )
+
+
+def fetch_history(symbol):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
 
@@ -125,17 +176,7 @@ def fetch_history(symbol):
     end = datetime.now()
     start = end - timedelta(days=260)
 
-    vn = Vnstock()
-
-    if API_KEY:
-        vn.set_token(API_KEY)
-
-    stock = vn.stock(symbol=symbol, source="KBS")
-    df = stock.quote.history(
-        start=start.strftime("%Y-%m-%d"),
-        end=end.strftime("%Y-%m-%d"),
-        interval="1D"
-    )
+    df = load_quote_history(symbol, start, end)
 
     if df is None or df.empty:
         return pd.DataFrame(), "EMPTY"
