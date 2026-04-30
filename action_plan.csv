@@ -1,14 +1,2 @@
-﻿Ngày,Mã,Hành động,Lý do,Signal,Chiến lược,Score,RSI,Close,RS20,Volume Ratio,ADX,ATR %,Risk Status,Cảnh báo,Lãi/Lỗ %,Lãi/Lỗ tiền,Risk Reason
-2026-04-30,SAB,MUA MỚI,🚀 MOMENTUM | Score 90.0,🚀 MOMENTUM,MOMENTUM,90.0,70.32,48.5,-0.87,2.06,35.8,2.47,PASS,,,,
-2026-04-30,TCH,MUA MỚI,🚀 MOMENTUM | Score 90.0,🚀 MOMENTUM,MOMENTUM,90.0,69.23,17.9,-1.25,1.25,24.49,4.25,PASS,,,,
-2026-04-30,STB,MUA MỚI,🚀 MOMENTUM | Score 90.0,🚀 MOMENTUM,MOMENTUM,90.0,66.84,68.1,0.55,1.29,36.52,3.75,PASS,,,,
-2026-04-30,VHM,MUA MỚI,🚀 MOMENTUM | Score 90.0,🚀 MOMENTUM,MOMENTUM,90.0,74.73,151.0,35.88,1.55,55.68,5.69,PASS,,,,
-2026-04-30,VCB,MUA MỚI,🧲 BOTTOM | Score 75.0,🧲 BOTTOM,BOTTOM,75.0,56.92,59.8,-7.62,0.95,45.72,2.34,PASS,,,,
-2026-04-30,GVR,CHƯA CÓ DATA,Theo dõi danh mục hiện có,,,,,,,,,,,🟢 ỔN,,,
-2026-04-30,VRE,GIỮ,Theo dõi danh mục hiện có,🚀 MOMENTUM,MOMENTUM,85.0,75.51,30.8,,,,,PASS,🟢 ĐANG LÃI,2.1897810218978186,396.0,
-2026-04-30,EVF,CHƯA CÓ DATA,Theo dõi danh mục hiện có,,,,,,,,,,,🟢 ỔN,,,
-2026-04-30,PAN,GIẢM / BÁN,Theo dõi danh mục hiện có,👀 BOTTOM WATCH,BOTTOM_WATCH,55.0,52.87,31.6,,,,,FAIL,❌ RISK FAIL,-2.7692307692307683,-360.0,Volume yếu; RS20 yếu
-2026-04-30,KBC,GIẢM / BÁN,Theo dõi danh mục hiện có,👀 BOTTOM WATCH,BOTTOM_WATCH,65.0,68.29,34.0,,,,,FAIL,❌ RISK FAIL,-1.0189228529839944,-105.0,Volume yếu
-2026-04-30,NT2,GIẢM / BÁN,Theo dõi danh mục hiện có,🧲 BOTTOM,BOTTOM,70.0,40.83,24.1,,,,,FAIL,❌ RISK FAIL,-0.5775577557755707,-41.99999999999909,RS20 yếu
-2026-04-30,VCI,GIẢM / BÁN,Theo dõi danh mục hiện có,👀 BOTTOM WATCH,BOTTOM_WATCH,60.0,42.52,26.25,,,,,FAIL,❌ RISK FAIL,-2.921597633136097,-237.0,Volume yếu; RS20 yếu
-2026-04-30,BFC,CHƯA CÓ DATA,Theo dõi danh mục hiện có,,,,,,,,,,,🟢 ỔN,,,
+﻿NgÃ y,MÃ£,HÃ nh Äá»ng,Cáº£nh bÃ¡o,LÃ½ do
+2026-04-30,NO_PORTFOLIO,ChÆ°a cÃ³ portfolio_current.csv,â ï¸ CHÆ¯A CÃ DANH Má»¤C,Theo dÃµi danh má»¥c hiá»n cÃ³
