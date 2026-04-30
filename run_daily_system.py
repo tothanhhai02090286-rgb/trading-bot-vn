@@ -12,7 +12,8 @@ API_KEY = os.getenv("VNSTOCK_API_KEY")
 SYSTEM_VERSION = "PRO_V1_2026_04_28"
 
 BATCH_SIZE = 50
-SLEEP_SEC = 3
+CACHE_SLEEP_SEC = 0.3
+API_SLEEP_SEC = 5
 CACHE_DIR = "cache_stock"
 
 STATE_PATH = "progress_state.csv"
@@ -625,7 +626,7 @@ for i, symbol in enumerate(batch, 1):
     except Exception as e:
         print("❌", symbol, repr(e))
 
-    time.sleep(SLEEP_SEC)
+    time.sleep(CACHE_SLEEP_SEC)
 
 new_df = pd.DataFrame(rows)
 old_df = safe_read_csv(ALL_RESULT_PATH)
