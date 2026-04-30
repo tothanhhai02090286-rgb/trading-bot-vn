@@ -1,2 +1,7 @@
-﻿NgÃ y,MÃ£,HÃ nh Äá»ng,Cáº£nh bÃ¡o,LÃ½ do
-2026-04-30,NO_PORTFOLIO,ChÆ°a cÃ³ portfolio_current.csv,â ï¸ CHÆ¯A CÃ DANH Má»¤C,Theo dÃµi danh má»¥c hiá»n cÃ³
+﻿NgÃ y,MÃ£,HÃ nh Äá»ng,LÃ½ do,Signal,Chiáº¿n lÆ°á»£c,Score,RSI,Close,RS20,Volume Ratio,ADX,ATR %,Risk Status,Cáº£nh bÃ¡o
+2026-04-30,VRE,MUA Má»I,ð MOMENTUM | Score 95,ð MOMENTUM,MOMENTUM,95.0,74.74,32.3,8.36,1.94,40.19,4.39,PASS,
+2026-04-30,TCH,MUA Má»I,ð MOMENTUM | Score 90,ð MOMENTUM,MOMENTUM,90.0,63.89,18.15,-5.16,1.24,23.66,3.92,PASS,
+2026-04-30,TVS,MUA Má»I,ð§² BOTTOM | Score 85,ð§² BOTTOM,BOTTOM,85.0,46.34,13.7,-7.4,0.97,43.08,2.53,PASS,
+2026-04-30,VPB,MUA Má»I,ð§² BOTTOM | Score 80,ð§² BOTTOM,BOTTOM,80.0,41.89,26.5,-10.0,1.29,28.57,2.35,PASS,
+2026-04-30,VCB,MUA Má»I,ð§² BOTTOM | Score 75,ð§² BOTTOM,BOTTOM,75.0,52.0,59.8,-7.52,0.81,50.89,2.2,PASS,
+2026-04-30,NO_PORTFOLIO,ChÆ°a cÃ³ portfolio_current.csv,Theo dÃµi danh má»¥c hiá»n cÃ³,,,,,,,,,,,â ï¸ CHÆ¯A CÃ DANH Má»¤C
