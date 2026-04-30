@@ -75,10 +75,10 @@ def fetch_history(symbol):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
 
-    # Giờ Việt Nam
+    # Giá» Viá»t Nam
     now_vn = datetime.utcnow() + timedelta(hours=7)
     today = now_vn.strftime("%Y-%m-%d")
-    close_hour = 16  # sau 16h mới tin dữ liệu ngày hôm nay
+    close_hour = 16  # sau 16h má»i tin dá»¯ liá»u ngÃ y hÃ´m nay
 
     if os.path.exists(cache_path):
         try:
@@ -92,43 +92,35 @@ def fetch_history(symbol):
                 elif "date" in df.columns:
                     last_date = str(df["date"].iloc[-1])[:10]
 
-                # Lấy giờ file cache được lưu
+                # Láº¥y giá» file cache ÄÆ°á»£c lÆ°u
                 cache_mtime_vn = datetime.utcfromtimestamp(os.path.getmtime(cache_path)) + timedelta(hours=7)
                 cache_hour = cache_mtime_vn.hour
 
-                # ================================
-                # 1. Nếu đang trước 16h → dùng cache, không gọi API
-                # ================================
+                # 1. Náº¿u Äang trÆ°á»c 16h â dÃ¹ng cache, khÃ´ng gá»i API
                 if now_vn.hour < close_hour:
-                    print(f"⏳ Trước 16h VN → dùng cache: {symbol}")
-                    return df
+                    print(f"â³ TrÆ°á»c 16h VN â dÃ¹ng cache: {symbol}")
+                    return df, "CACHE"
 
-                # ================================
-                # 2. Nếu cache là ngày hôm nay và được lưu sau 16h → dùng cache
-                # ================================
+                # 2. Náº¿u cache lÃ  ngÃ y hÃ´m nay vÃ  ÄÆ°á»£c lÆ°u sau 16h â dÃ¹ng cache
                 if last_date == today and cache_hour >= close_hour:
-                    print(f"⚡ Cache OK sau phiên: {symbol}")
-                    return df
+                    print(f"â¡ Cache OK sau phiÃªn: {symbol}")
+                    return df, "CACHE"
 
-                # ================================
-                # 3. Nếu cache ngày hôm nay nhưng lưu trước 16h → fetch lại
-                # ================================
+                # 3. Náº¿u cache ngÃ y hÃ´m nay nhÆ°ng lÆ°u trÆ°á»c 16h â fetch láº¡i
                 if last_date == today and cache_hour < close_hour:
-                    print(f"🔄 Cache ngày {today} nhưng lưu trước 16h → update lại: {symbol}")
+                    print(f"ð Cache ngÃ y {today} nhÆ°ng lÆ°u trÆ°á»c 16h â update láº¡i: {symbol}")
 
-                # ================================
-                # 4. Nếu cache ngày cũ → fetch lại
-                # ================================
+                # 4. Náº¿u cache ngÃ y cÅ© â fetch láº¡i
                 elif last_date != today:
-                    print(f"🔄 Cache cũ {symbol}: {last_date} → update ngày {today}")
+                    print(f"ð Cache cÅ© {symbol}: {last_date} â update ngÃ y {today}")
 
                 else:
-                    print(f"🔄 Cache cần update: {symbol}")
+                    print(f"ð Cache cáº§n update: {symbol}")
 
         except Exception as e:
-            print(f"⚠️ Cache lỗi {symbol}: {e}")
+            print(f"â ï¸ Cache lá»i {symbol}: {e}")
 
-    print(f"🌐 API fetch/update: {symbol}")
+    print(f"ð API fetch/update: {symbol}")
 
     end = datetime.now()
     start = end - timedelta(days=260)
@@ -146,12 +138,12 @@ def fetch_history(symbol):
     )
 
     if df is None or df.empty:
-        return pd.DataFrame()
+        return pd.DataFrame(), "EMPTY"
 
     df.columns = [str(c).lower() for c in df.columns]
 
     if "close" not in df.columns:
-        return pd.DataFrame()
+        return pd.DataFrame(), "EMPTY"
 
     for col in ["open", "high", "low", "close", "volume"]:
         if col in df.columns:
@@ -160,9 +152,9 @@ def fetch_history(symbol):
     df = df.dropna(subset=["close"]).reset_index(drop=True)
 
     df.to_csv(cache_path, index=False, encoding="utf-8-sig")
-    print(f"💾 Updated cache: {cache_path}")
+    print(f"ð¾ Updated cache: {cache_path}")
 
-    return df
+    return df, "API"
 
 
 def calc_rsi(close, period=14):
@@ -234,17 +226,17 @@ def add_indicators(df):
 def get_market_ret20():
     for benchmark in ["VNINDEX", "VN30"]:
         try:
-            df = fetch_history(benchmark)
+            df, _ = fetch_history(benchmark)
             if df.empty or len(df) < 30:
                 continue
             df = add_indicators(df)
             ret20 = safe_float(df["Ret20 %"].iloc[-1], 0)
-            print(f"📊 Market benchmark {benchmark} Ret20: {ret20:.2f}%")
+            print(f"ð Market benchmark {benchmark} Ret20: {ret20:.2f}%")
             return ret20
         except Exception:
             continue
 
-    print("⚠️ Không lấy được benchmark, RS20 tạm tính = Ret20")
+    print("â ï¸ KhÃ´ng láº¥y ÄÆ°á»£c benchmark, RS20 táº¡m tÃ­nh = Ret20")
     return 0
 
 
@@ -312,15 +304,15 @@ def risk_filter(row):
     reasons = []
 
     if row["RSI"] >= 90:
-        reasons.append("RSI quá nóng")
+        reasons.append("RSI quÃ¡ nÃ³ng")
     if row["ATR %"] > 10:
-        reasons.append("ATR quá cao")
+        reasons.append("ATR quÃ¡ cao")
     if row["Volume Ratio"] < 0.7:
-        reasons.append("Volume yếu")
+        reasons.append("Volume yáº¿u")
     if row["RS20"] < -10:
-        reasons.append("RS20 yếu")
-    if row["Chiến lược"] == "MOMENTUM" and row["Close"] < row["MA20"]:
-        reasons.append("Momentum nhưng giá dưới MA20")
+        reasons.append("RS20 yáº¿u")
+    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM" and row["Close"] < row["MA20"]:
+        reasons.append("Momentum nhÆ°ng giÃ¡ dÆ°á»i MA20")
 
     if len(reasons) == 0:
         return "PASS", ""
@@ -336,31 +328,31 @@ def classify_action(row):
         return "WATCHLIST"
     if 75 <= row["RSI"] < 85:
         return "WAIT"
-    if row["Chiến lược"] == "MOMENTUM" and row["Momentum Score"] >= 80:
+    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM" and row["Momentum Score"] >= 80:
         return "BUY NOW"
-    if row["Chiến lược"] == "BOTTOM" and row["Bottom Score"] >= 75:
+    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM" and row["Bottom Score"] >= 75:
         return "BUY NOW"
-    if row["Chiến lược"] in ["MOMENTUM", "BOTTOM"]:
+    if row["Chiáº¿n lÆ°á»£c"] in ["MOMENTUM", "BOTTOM"]:
         return "WAIT"
-    if row["Chiến lược"] in ["MOMENTUM_WATCH", "BOTTOM_WATCH"]:
+    if row["Chiáº¿n lÆ°á»£c"] in ["MOMENTUM_WATCH", "BOTTOM_WATCH"]:
         return "WATCHLIST"
     return "SKIP"
 
 
 def make_signal(row):
-    if row["Chiến lược"] == "MOMENTUM":
-        return "🚀 MOMENTUM"
-    if row["Chiến lược"] == "BOTTOM":
-        return "🧲 BOTTOM"
-    if row["Chiến lược"] == "MOMENTUM_WATCH":
-        return "👀 MOMENTUM WATCH"
-    if row["Chiến lược"] == "BOTTOM_WATCH":
-        return "👀 BOTTOM WATCH"
-    return "👀 WATCH"
+    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM":
+        return "ð MOMENTUM"
+    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM":
+        return "ð§² BOTTOM"
+    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM_WATCH":
+        return "ð MOMENTUM WATCH"
+    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM_WATCH":
+        return "ð BOTTOM WATCH"
+    return "ð WATCH"
 
 
 def analyze_symbol(symbol, market_ret20):
-    df = fetch_history(symbol)
+    df, fetch_mode = fetch_history(symbol)
 
     if df.empty or len(df) < 60:
         return None
@@ -382,8 +374,8 @@ def analyze_symbol(symbol, market_ret20):
     rs20 = ret20 - market_ret20
 
     row = {
-        "Ngày": datetime.now().strftime("%Y-%m-%d"),
-        "Mã": symbol,
+        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "MÃ£": symbol,
         "Close": round(close, 2),
         "MA5": round(ma5, 2),
         "MA20": round(ma20, 2),
@@ -402,6 +394,7 @@ def analyze_symbol(symbol, market_ret20):
         "Rebound Low20 %": round(safe_float(last.get("Rebound Low20 %"), 0), 2),
         "Low20": round(safe_float(last.get("Low20"), 0), 2),
         "High20": round(safe_float(last.get("High20"), 0), 2),
+        "Fetch Mode": fetch_mode,
         "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Version": SYSTEM_VERSION
     }
@@ -409,7 +402,7 @@ def analyze_symbol(symbol, market_ret20):
     row["Momentum Score"] = score_momentum(row)
     row["Bottom Score"] = score_bottom(row)
     row["Score"] = max(row["Momentum Score"], row["Bottom Score"])
-    row["Chiến lược"] = classify_strategy(row)
+    row["Chiáº¿n lÆ°á»£c"] = classify_strategy(row)
 
     risk_status, risk_reason = risk_filter(row)
     row["Risk Status"] = risk_status
@@ -424,82 +417,82 @@ def analyze_symbol(symbol, market_ret20):
 def build_portfolio_and_action_plan(combined, ai_risk):
     portfolio = safe_read_csv(PORTFOLIO_PATH)
 
-    if not portfolio.empty and "Mã" in portfolio.columns:
+    if not portfolio.empty and "MÃ£" in portfolio.columns:
         tracker = portfolio.merge(
             combined,
-            on="Mã",
+            on="MÃ£",
             how="left",
             suffixes=("", "_signal")
         )
 
-        tracker["Giá vốn"] = pd.to_numeric(tracker.get("Giá vốn"), errors="coerce")
-        tracker["Số lượng"] = pd.to_numeric(tracker.get("Số lượng"), errors="coerce")
+        tracker["GiÃ¡ vá»n"] = pd.to_numeric(tracker.get("GiÃ¡ vá»n"), errors="coerce")
+        tracker["Sá» lÆ°á»£ng"] = pd.to_numeric(tracker.get("Sá» lÆ°á»£ng"), errors="coerce")
         tracker["Close"] = pd.to_numeric(tracker.get("Close"), errors="coerce")
 
-        tracker["Giá trị vốn"] = tracker["Giá vốn"] * tracker["Số lượng"]
-        tracker["Giá trị hiện tại"] = tracker["Close"] * tracker["Số lượng"]
-        tracker["Lãi/Lỗ %"] = (tracker["Close"] / tracker["Giá vốn"] - 1) * 100
-        tracker["Lãi/Lỗ tiền"] = tracker["Giá trị hiện tại"] - tracker["Giá trị vốn"]
+        tracker["GiÃ¡ trá» vá»n"] = tracker["GiÃ¡ vá»n"] * tracker["Sá» lÆ°á»£ng"]
+        tracker["GiÃ¡ trá» hiá»n táº¡i"] = tracker["Close"] * tracker["Sá» lÆ°á»£ng"]
+        tracker["LÃ£i/Lá» %"] = (tracker["Close"] / tracker["GiÃ¡ vá»n"] - 1) * 100
+        tracker["LÃ£i/Lá» tiá»n"] = tracker["GiÃ¡ trá» hiá»n táº¡i"] - tracker["GiÃ¡ trá» vá»n"]
 
         def holding_action(row):
-            pnl = safe_float(row.get("Lãi/Lỗ %"), 0)
+            pnl = safe_float(row.get("LÃ£i/Lá» %"), 0)
             action = str(row.get("Action", ""))
             risk = str(row.get("Risk Status", ""))
             rsi = safe_float(row.get("RSI"), 0)
-            strategy = str(row.get("Chiến lược", ""))
+            strategy = str(row.get("Chiáº¿n lÆ°á»£c", ""))
 
             if pd.isna(row.get("Close")):
-                return "CHƯA CÓ DATA"
+                return "CHÆ¯A CÃ DATA"
             if risk == "FAIL":
-                return "GIẢM / BÁN"
+                return "GIáº¢M / BÃN"
             if pnl <= -5:
-                return "CẮT LỖ"
+                return "Cáº®T Lá»"
             if pnl >= 10 and rsi >= 75:
-                return "CHỐT LỜI MỘT PHẦN"
+                return "CHá»T Lá»I Má»T PHáº¦N"
             if pnl >= 7:
-                return "GIỮ / CANH CHỐT"
+                return "GIá»® / CANH CHá»T"
             if action == "BUY NOW":
-                return "GIỮ MẠNH"
+                return "GIá»® Máº NH"
             if strategy in ["MOMENTUM", "BOTTOM", "MOMENTUM_WATCH", "BOTTOM_WATCH"]:
-                return "GIỮ"
-            return "THEO DÕI"
+                return "GIá»®"
+            return "THEO DÃI"
 
-        tracker["Hành động"] = tracker.apply(holding_action, axis=1)
+        tracker["HÃ nh Äá»ng"] = tracker.apply(holding_action, axis=1)
 
         def risk_flag(row):
-            pnl = safe_float(row.get("Lãi/Lỗ %"), 0)
+            pnl = safe_float(row.get("LÃ£i/Lá» %"), 0)
             rsi = safe_float(row.get("RSI"), 0)
             risk = str(row.get("Risk Status", ""))
 
             if risk == "FAIL":
-                return "❌ RISK FAIL"
+                return "â RISK FAIL"
             if pnl <= -4:
-                return "🔴 NGUY HIỂM"
+                return "ð´ NGUY HIá»M"
             if pnl <= -2:
-                return "🟡 CẢNH BÁO"
+                return "ð¡ Cáº¢NH BÃO"
             if rsi >= 80:
-                return "⚠️ QUÁ MUA"
+                return "â ï¸ QUÃ MUA"
             if pnl > 0:
-                return "🟢 ĐANG LÃI"
-            return "🟢 ỔN"
+                return "ð¢ ÄANG LÃI"
+            return "ð¢ á»N"
 
-        tracker["Cảnh báo"] = tracker.apply(risk_flag, axis=1)
+        tracker["Cáº£nh bÃ¡o"] = tracker.apply(risk_flag, axis=1)
 
         keep_tracker = [
-            "Mã", "Giá vốn", "Close", "Số lượng",
-            "Giá trị vốn", "Giá trị hiện tại",
-            "Lãi/Lỗ %", "Lãi/Lỗ tiền",
-            "Signal", "Chiến lược", "Score", "RSI",
+            "MÃ£", "GiÃ¡ vá»n", "Close", "Sá» lÆ°á»£ng",
+            "GiÃ¡ trá» vá»n", "GiÃ¡ trá» hiá»n táº¡i",
+            "LÃ£i/Lá» %", "LÃ£i/Lá» tiá»n",
+            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "RSI",
             "Risk Status", "Risk Reason", "Action",
-            "Hành động", "Cảnh báo"
+            "HÃ nh Äá»ng", "Cáº£nh bÃ¡o"
         ]
         tracker = tracker[[c for c in keep_tracker if c in tracker.columns]]
 
     else:
         tracker = pd.DataFrame([{
-            "Mã": "NO_PORTFOLIO",
-            "Hành động": "Chưa có portfolio_current.csv",
-            "Cảnh báo": "⚠️ CHƯA CÓ DANH MỤC"
+            "MÃ£": "NO_PORTFOLIO",
+            "HÃ nh Äá»ng": "ChÆ°a cÃ³ portfolio_current.csv",
+            "Cáº£nh bÃ¡o": "â ï¸ CHÆ¯A CÃ DANH Má»¤C"
         }])
 
     tracker.to_csv(PORTFOLIO_TRACKER_PATH, index=False, encoding="utf-8-sig")
@@ -507,11 +500,11 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     buy_plan = ai_risk[ai_risk["Action"] == "BUY NOW"].copy()
 
     if not buy_plan.empty:
-        buy_plan["Hành động"] = "MUA MỚI"
-        buy_plan["Lý do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
+        buy_plan["HÃ nh Äá»ng"] = "MUA Má»I"
+        buy_plan["LÃ½ do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
         keep_buy = [
-            "Ngày", "Mã", "Hành động", "Lý do",
-            "Signal", "Chiến lược", "Score",
+            "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "LÃ½ do",
+            "Signal", "Chiáº¿n lÆ°á»£c", "Score",
             "RSI", "Close", "RS20", "Volume Ratio",
             "ADX", "ATR %", "Risk Status"
         ]
@@ -521,14 +514,14 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     hold_plan = tracker.copy()
 
-    if not hold_plan.empty and "Mã" in hold_plan.columns:
-        hold_plan["Ngày"] = datetime.now().strftime("%Y-%m-%d")
-        hold_plan["Lý do"] = "Theo dõi danh mục hiện có"
+    if not hold_plan.empty and "MÃ£" in hold_plan.columns:
+        hold_plan["NgÃ y"] = datetime.now().strftime("%Y-%m-%d")
+        hold_plan["LÃ½ do"] = "Theo dÃµi danh má»¥c hiá»n cÃ³"
 
         keep_hold = [
-            "Ngày", "Mã", "Hành động", "Cảnh báo", "Lý do",
-            "Lãi/Lỗ %", "Lãi/Lỗ tiền",
-            "Signal", "Chiến lược", "Score",
+            "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "Cáº£nh bÃ¡o", "LÃ½ do",
+            "LÃ£i/Lá» %", "LÃ£i/Lá» tiá»n",
+            "Signal", "Chiáº¿n lÆ°á»£c", "Score",
             "RSI", "Close", "Risk Status", "Risk Reason"
         ]
         hold_plan = hold_plan[[c for c in keep_hold if c in hold_plan.columns]]
@@ -539,10 +532,10 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     if action_plan.empty:
         action_plan = pd.DataFrame([{
-            "Ngày": datetime.now().strftime("%Y-%m-%d"),
-            "Mã": "NO_ACTION",
-            "Hành động": "KHÔNG LÀM GÌ",
-            "Lý do": "Không có tín hiệu mua và chưa có danh mục"
+            "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+            "MÃ£": "NO_ACTION",
+            "HÃ nh Äá»ng": "KHÃNG LÃM GÃ",
+            "LÃ½ do": "KhÃ´ng cÃ³ tÃ­n hiá»u mua vÃ  chÆ°a cÃ³ danh má»¥c"
         }])
 
     action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
@@ -596,9 +589,9 @@ tr:nth-child(odd) {
 # MAIN
 # ================================
 
-print("🚀 RUN BATCH TRADING ENGINE - KBS")
-print(f"📌 SYSTEM VERSION: {SYSTEM_VERSION}")
-print("⏰", datetime.now())
+print("ð RUN BATCH TRADING ENGINE - KBS")
+print(f"ð SYSTEM VERSION: {SYSTEM_VERSION}")
+print("â°", datetime.now())
 
 start_idx = load_state()
 if start_idx >= len(UNIVERSE):
@@ -607,43 +600,48 @@ if start_idx >= len(UNIVERSE):
 end_idx = min(start_idx + BATCH_SIZE, len(UNIVERSE))
 batch = UNIVERSE[start_idx:end_idx]
 
-print(f"📌 Batch: {start_idx} → {end_idx} / {len(UNIVERSE)}")
-print("📋 Mã:", batch)
+print(f"ð Batch: {start_idx} â {end_idx} / {len(UNIVERSE)}")
+print("ð MÃ£:", batch)
 
 market_ret20 = get_market_ret20()
 
 rows = []
 
 for i, symbol in enumerate(batch, 1):
-    print(f"📡 {i}/{len(batch)} Fetch {symbol}")
+    print(f"ð¡ {i}/{len(batch)} Fetch {symbol}")
+    result = None
+
     try:
         result = analyze_symbol(symbol, market_ret20)
         if result:
             rows.append(result)
-            print("✅", symbol, result["Signal"], result["Action"], result["Score"])
+            print("â", symbol, result["Signal"], result["Action"], result["Score"])
         else:
-            print("⚠️", symbol, "không đủ dữ liệu")
+            print("â ï¸", symbol, "khÃ´ng Äá»§ dá»¯ liá»u")
     except Exception as e:
-        print("❌", symbol, repr(e))
+        print("â", symbol, repr(e))
 
-    time.sleep(CACHE_SLEEP_SEC)
+    if result and result.get("Fetch Mode") == "API":
+        time.sleep(API_SLEEP_SEC)
+    else:
+        time.sleep(CACHE_SLEEP_SEC)
 
 new_df = pd.DataFrame(rows)
 old_df = safe_read_csv(ALL_RESULT_PATH)
 
-if not old_df.empty and "Mã" in old_df.columns:
-    old_df = old_df[~old_df["Mã"].isin(batch)]
+if not old_df.empty and "MÃ£" in old_df.columns:
+    old_df = old_df[~old_df["MÃ£"].isin(batch)]
     combined = pd.concat([old_df, new_df], ignore_index=True)
 else:
     combined = new_df.copy()
 
 if combined.empty:
     combined = pd.DataFrame([{
-        "Ngày": datetime.now().strftime("%Y-%m-%d"),
-        "Mã": "NO_SIGNAL",
+        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "MÃ£": "NO_SIGNAL",
         "Close": np.nan,
         "Signal": "NO SIGNAL",
-        "Chiến lược": "SYSTEM",
+        "Chiáº¿n lÆ°á»£c": "SYSTEM",
         "Score": 0,
         "Action": "WAIT",
         "Risk Status": "SYSTEM",
@@ -652,7 +650,7 @@ if combined.empty:
         "Version": SYSTEM_VERSION
     }])
 
-needed_cols = ["Risk Status", "Action", "Chiến lược", "Score", "Mã"]
+needed_cols = ["Risk Status", "Action", "Chiáº¿n lÆ°á»£c", "Score", "MÃ£"]
 for col in needed_cols:
     if col not in combined.columns:
         combined[col] = ""
@@ -663,7 +661,7 @@ combined = combined.sort_values("Score", ascending=False)
 combined.to_csv(ALL_RESULT_PATH, index=False, encoding="utf-8-sig")
 
 raw_signals = combined[
-    combined["Chiến lược"].isin([
+    combined["Chiáº¿n lÆ°á»£c"].isin([
         "MOMENTUM", "BOTTOM", "MOMENTUM_WATCH", "BOTTOM_WATCH", "WATCH"
     ])
 ].copy()
@@ -678,10 +676,10 @@ ai_risk = ai_risk.sort_values("Score", ascending=False)
 ai_risk.to_csv(AI_RISK_PATH, index=False, encoding="utf-8-sig")
 
 bottom = ai_risk[
-    ai_risk["Chiến lược"].isin(["BOTTOM", "BOTTOM_WATCH"])
+    ai_risk["Chiáº¿n lÆ°á»£c"].isin(["BOTTOM", "BOTTOM_WATCH"])
 ].copy()
 momentum = ai_risk[
-    ai_risk["Chiến lược"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
+    ai_risk["Chiáº¿n lÆ°á»£c"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
 ].copy()
 
 bottom.to_csv(BOTTOM_PATH, index=False, encoding="utf-8-sig")
@@ -694,16 +692,16 @@ entry = entry.sort_values("Score", ascending=False).head(10)
 
 if entry.empty:
     entry = pd.DataFrame([{
-        "Ngày": datetime.now().strftime("%Y-%m-%d"),
-        "Mã": "NO_SIGNAL",
+        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "MÃ£": "NO_SIGNAL",
         "Action": "WAIT",
-        "Chiến lược": "SYSTEM",
+        "Chiáº¿n lÆ°á»£c": "SYSTEM",
         "Score": 0,
-        "Risk Reason": "Không có tín hiệu đạt chuẩn"
+        "Risk Reason": "KhÃ´ng cÃ³ tÃ­n hiá»u Äáº¡t chuáº©n"
     }])
 else:
     keep = [
-        "Ngày", "Mã", "Action", "Signal", "Chiến lược", "Score",
+        "NgÃ y", "MÃ£", "Action", "Signal", "Chiáº¿n lÆ°á»£c", "Score",
         "Momentum Score", "Bottom Score", "Risk Status", "Risk Reason",
         "RSI", "Close", "MA5", "MA20", "Ret5 %", "Ret10 %",
         "RS20", "Volume Ratio", "ADX", "ATR %", "Dist MA20 %"
@@ -729,24 +727,24 @@ html_full = f"""
 </head>
 <body>
 
-<h2>📊 TRADING BOT CONTROL CENTER</h2>
+<h2>ð TRADING BOT CONTROL CENTER</h2>
 <p><b>Generated:</b> {datetime.now()}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
-<p><b>Batch:</b> {start_idx} → {end_idx} / {len(UNIVERSE)}</p>
+<p><b>Batch:</b> {start_idx} â {end_idx} / {len(UNIVERSE)}</p>
 
-<h3>🔎 RAW SIGNAL - Lọc thô</h3>
+<h3>ð RAW SIGNAL - Lá»c thÃ´</h3>
 {raw_html}
 
-<h3>🔥 AI FINAL - Lọc tinh</h3>
+<h3>ð¥ AI FINAL - Lá»c tinh</h3>
 {ai_html}
 
-<h3>📋 ENTRY</h3>
+<h3>ð ENTRY</h3>
 {entry_html}
 
-<h3>📦 PORTFOLIO TRACKER</h3>
+<h3>ð¦ PORTFOLIO TRACKER</h3>
 {tracker_html}
 
-<h3>🎯 ACTION PLAN</h3>
+<h3>ð¯ ACTION PLAN</h3>
 {action_html}
 
 </body>
@@ -762,7 +760,7 @@ if next_start >= len(UNIVERSE):
 
 save_state(next_start)
 
-print("✅ CREATED OUTPUT FILES")
+print("â CREATED OUTPUT FILES")
 print("Rows combined:", len(combined))
 print("Raw signals:", len(raw_signals))
 print("AI risk rows:", len(ai_risk))
