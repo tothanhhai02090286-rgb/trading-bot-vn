@@ -32,7 +32,7 @@ PORTFOLIO_TRACKER_PATH = "portfolio_tracker.csv"
 ACTION_PLAN_PATH = "action_plan.csv"
 
 TELEGRAM_ENABLED = True
-TELEGRAM_MAX_ITEMS = 10
+TELEGRAM_MAX_ITEMS = 7
 
 
 def fix_vietnamese_columns(df):
@@ -705,7 +705,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     if focus.empty:
         lines.append("Không có tín hiệu nổi bật.")
-        return "\\n".join(lines)
+        return "\n".join(lines)
 
     for _, r in focus.iterrows():
         code = str(r.get("Mã", r.get("Ma", "")))
@@ -752,7 +752,38 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
         lines.append(line)
 
-    return "\\n".join(lines)
+    return "\n".join(lines)
+
+
+
+def send_telegram_document(token, chat_id, file_path, caption=""):
+    if not os.path.exists(file_path):
+        print(f"⚠️ Không thấy file đính kèm: {file_path}")
+        return
+
+    try:
+        url = f"https://api.telegram.org/bot{token}/sendDocument"
+        with open(file_path, "rb") as f:
+            r = requests.post(
+                url,
+                data={
+                    "chat_id": chat_id,
+                    "caption": caption,
+                    "disable_web_page_preview": True
+                },
+                files={
+                    "document": (os.path.basename(file_path), f, "text/html")
+                },
+                timeout=60
+            )
+
+        if r.status_code == 200:
+            print("✅ Telegram dashboard file sent")
+        else:
+            print(f"⚠️ Telegram dashboard send failed: {r.status_code} - {r.text}")
+
+    except Exception as e:
+        print("⚠️ Telegram dashboard error:", repr(e))
 
 
 def send_telegram_alert(entry, action_plan, combined, tracker):
@@ -770,6 +801,7 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
     msg = build_telegram_message(entry, action_plan, combined, tracker)
 
     try:
+        # 1) Gửi tin nhắn tóm tắt ngắn
         url = f"https://api.telegram.org/bot{token}/sendMessage"
         r = requests.post(
             url,
@@ -785,6 +817,14 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
             print("✅ Telegram alert sent")
         else:
             print(f"⚠️ Telegram send failed: {r.status_code} - {r.text}")
+
+        # 2) Gửi kèm file dashboard HTML
+        send_telegram_document(
+            token,
+            chat_id,
+            DASHBOARD_PATH,
+            caption="📊 Dashboard HTML - mở file để xem chi tiết"
+        )
 
     except Exception as e:
         print("⚠️ Telegram error:", repr(e))
@@ -1012,9 +1052,6 @@ html_full = f"""
 
 with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
     f.write(html_full)
-
-# 🔥 GỬI TELEGRAM (THÊM DÒNG NÀY)
-send_telegram_alert(entry, action_plan, combined, tracker)
 
 next_start = end_idx
 if next_start >= len(UNIVERSE):
