@@ -11,7 +11,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V9_STABLE_CLEAN_DISPLAY_2026_05_01"
+SYSTEM_VERSION = "PRO_V9_STABLE_CLEAN_DISPLAY_FIX2_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -1680,6 +1680,18 @@ def ascii_regime_label(regime):
         "HIGH_VOL_DOWN": "BIEN DONG CAO - GIAM / HIGH VOL DOWN",
     }
     return mapping.get(s, s)
+
+
+def clean_display_na(x):
+    return clean_ascii_text(x, 120)
+
+
+def display_action_ascii(action):
+    return ascii_action_label(action)
+
+
+def display_regime_ascii(regime):
+    return ascii_regime_label(regime)
 
 
 def make_dashboard_view(df, kind=""):
