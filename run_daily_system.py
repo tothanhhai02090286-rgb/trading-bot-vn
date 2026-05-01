@@ -11,7 +11,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V9_STABLE_ASCII_DISPLAY_2026_05_01"
+SYSTEM_VERSION = "PRO_V9_STABLE_CLEAN_DISPLAY_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -1684,65 +1684,67 @@ def ascii_regime_label(regime):
 
 def make_dashboard_view(df, kind=""):
     """
-    Create compact readable dashboard tables for phone.
+    Phone-friendly dashboard:
+    - only important columns
+    - no long notes
+    - no mojibake text columns
     """
     if df is None or df.empty:
         return pd.DataFrame()
 
     view = df.copy()
 
-    # Rename columns to ASCII readable
     rename = {
         "NgÃ y": "Date",
         "MÃ£": "Code",
         "Chiáº¿n lÆ°á»£c": "Strategy",
-        "HÃ nh Äá»ng": "Action VN",
-        "LÃ½ do": "Reason",
-        "Chá»áº¿n lÆ°á»£c": "Strategy",
         "AI Confidence": "AI",
         "Win Probability": "Win%",
         "OOS Win Probability": "OOS%",
         "Regime Win Probability": "Reg%",
         "Market Regime Now": "Regime",
         "Final Action": "Final Action",
-        "History Samples": "Hist N",
-        "OOS Samples": "OOS N",
-        "Regime Samples": "Reg N",
-        "Walk Forward Note": "WF Note",
-        "Regime Note": "Regime Note",
+        "History Samples": "HistN",
+        "OOS Samples": "OOSN",
+        "Regime Samples": "RegN",
     }
     view = view.rename(columns={k: v for k, v in rename.items() if k in view.columns})
 
-    # Clean text columns
-    for col in view.columns:
-        if view[col].dtype == "object":
-            view[col] = view[col].apply(lambda x: clean_ascii_text(x, 90))
-
-    # Convert important action labels
-    for col in ["Final Action", "AI Action", "Action", "Action VN"]:
+    for col in ["Action", "Final Action", "AI Action"]:
         if col in view.columns:
-            view[col] = view[col].apply(ascii_action_label)
+            view[col] = view[col].apply(display_action_ascii)
 
     if "Regime" in view.columns:
-        view["Regime"] = view["Regime"].apply(ascii_regime_label)
+        view["Regime"] = view["Regime"].apply(display_regime_ascii)
 
-    # Select compact columns by kind
+    if "Strategy" in view.columns:
+        view["Strategy"] = view["Strategy"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
+
+    if "Risk Status" in view.columns:
+        view["Risk Status"] = view["Risk Status"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
+
+    # Do not show these columns because old CSV may contain mojibake text.
+    drop_cols = [
+        "Risk Reason", "AI Reason", "AI Warning", "History Note",
+        "WF Note", "Walk Forward Note", "Regime Note", "Pattern Key",
+        "Signal"
+    ]
+    view = view.drop(columns=[c for c in drop_cols if c in view.columns], errors="ignore")
+
     preferred = [
         "Date", "Code", "Close", "Action", "Final Action", "Strategy",
-        "Score", "AI", "AI Grade", "Win%", "OOS%", "Reg%", "Regime",
-        "RSI", "RS20", "Volume Ratio", "ATR %",
-        "Risk Status", "Risk Reason", "Hist N", "OOS N", "OOS Status", "Reg N"
+        "Score", "AI", "AI Grade", "Win%", "OOS%", "Reg%",
+        "Regime", "RSI", "RS20", "Volume Ratio", "ATR %",
+        "Risk Status", "HistN", "OOSN", "OOS Status", "RegN"
     ]
     cols = [c for c in preferred if c in view.columns]
-
-    if kind in ["entry", "action"]:
-        extra = [c for c in ["WF Note", "Regime Note"] if c in view.columns]
-        cols = cols + extra
-
     if cols:
         view = view[cols]
 
-    return view.head(25)
+    # Replace NaN for display
+    view = view.replace({np.nan: ""})
+    return view.head(20)
+
 
 def build_telegram_message(entry, action_plan, combined, tracker):
     run_time = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
@@ -1763,7 +1765,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     if source_df is None or source_df.empty:
         return (
-            "BOT GIAO DICH V9 STABLE\n"
+            "TRADING BOT V9 STABLE\n"
             f"Run time: {run_time}\n"
             f"Data date: {data_date}\n"
             "No signal data.\n"
@@ -1779,19 +1781,19 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     action_col = "Final Action" if "Final Action" in source_df.columns else "AI Action" if "AI Action" in source_df.columns else "Action" if "Action" in source_df.columns else None
 
-    def count_action_contains(keywords):
+    def count_action_contains(words):
         if not action_col:
             return 0
         s = source_df[action_col].astype(str).str.upper()
         mask = False
-        for kw in keywords:
-            mask = mask | s.str.contains(kw.upper(), na=False)
+        for w in words:
+            mask = mask | s.str.contains(w.upper(), na=False)
         return int(mask.sum())
 
-    buy_count = count_action_contains(["MUA", "BUY"])
-    wait_count = count_action_contains(["CH", "CHO", "WAIT"])
-    watch_count = count_action_contains(["THEO", "WATCH"])
-    skip_count = count_action_contains(["BO QUA", "SKIP"])
+    buy_count = count_action_contains(["BUY", "MUA"])
+    wait_count = count_action_contains(["WAIT", "CHO", "CH"])
+    watch_count = count_action_contains(["WATCH", "THEO"])
+    skip_count = count_action_contains(["SKIP", "BO QUA"])
 
     focus = source_df.copy()
     sort_cols = [c for c in ["Regime Win Probability", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in focus.columns]
@@ -1801,13 +1803,16 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         focus = focus.sort_values("Score", ascending=False)
     focus = focus.head(5)
 
-    lines = []
-    lines.append("BOT GIAO DICH V9 STABLE")
-    lines.append(f"Run time: {run_time}")
-    lines.append(f"Data date: {data_date}")
-    lines.append(f"Version: {SYSTEM_VERSION}")
+    lines = [
+        "TRADING BOT V9 STABLE",
+        f"Run time: {run_time}",
+        f"Data date: {data_date}",
+        f"Version: {SYSTEM_VERSION}",
+    ]
+
     if current_regime:
-        lines.append(f"Market regime: {ascii_regime_label(current_regime)}")
+        lines.append(f"Market regime: {display_regime_ascii(current_regime)}")
+
     lines.append(f"Coverage: {total_codes}/{len(UNIVERSE)} codes")
     if missing_codes:
         lines.append(f"Missing: {len(missing_codes)} codes")
@@ -1831,9 +1836,9 @@ def build_telegram_message(entry, action_plan, combined, tracker):
             return ""
 
     for _, r in focus.iterrows():
-        code = str(r.get("MÃ£", r.get("Ma", ""))).strip()
-        final_action = ascii_action_label(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
-        grade = clean_ascii_text(r.get("AI Grade", ""), 10)
+        code = clean_display_na(r.get("MÃ£", r.get("Ma", "")))
+        final_action = display_action_ascii(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
+        grade = clean_display_na(r.get("AI Grade", ""))
 
         ai = fnum(r, "AI Confidence", 0)
         win = fnum(r, "Win Probability", 0)
@@ -1871,13 +1876,6 @@ def build_telegram_message(entry, action_plan, combined, tracker):
             market.append(f"RS20 {rs20}")
         if market:
             lines.append("  " + " | ".join(market))
-
-        wf_note = clean_ascii_text(r.get("Walk Forward Note", ""), 80)
-        regime_note = clean_ascii_text(r.get("Regime Note", ""), 80)
-        if wf_note:
-            lines.append(f"  WF: {wf_note}")
-        if regime_note:
-            lines.append(f"  Regime: {regime_note}")
 
     lines.append("")
     lines.append("Dashboard HTML attached below.")
@@ -1978,16 +1976,16 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 24px;
-    font-size: 13px;
+    font-size: 12px;
 }
 th {
     background-color: #1f2430;
     color: #ffffff;
-    padding: 6px;
+    padding: 5px;
     border: 1px solid #333;
 }
 td {
-    padding: 6px;
+    padding: 5px;
     border: 1px solid #333;
 }
 tr:nth-child(even) {
@@ -2407,7 +2405,7 @@ def build_backfill_history_from_cache(market_ret20=0):
     end_idx = min(start_idx + BACKFILL_MAX_SYMBOLS_PER_RUN, len(UNIVERSE))
     symbols = UNIVERSE[start_idx:end_idx]
 
-    print(f"ð§  Backfill V7: {start_idx} â {end_idx} / {len(UNIVERSE)}")
+    print(f"ð§  Backfill V7: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
 
     rows = []
     market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
@@ -2652,7 +2650,7 @@ if start_idx >= len(UNIVERSE):
 end_idx = min(start_idx + BATCH_SIZE, len(UNIVERSE))
 batch = UNIVERSE[start_idx:end_idx]
 
-print(f"ð Batch: {start_idx} â {end_idx} / {len(UNIVERSE)}")
+print(f"ð Batch: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
 print("ð MÃ£:", batch)
 
 market_ret20 = get_market_ret20()
@@ -2830,21 +2828,21 @@ html_full = f"""
 <p><b>Generated:</b> {now_vietnam()}</p>
 <p><b>Data date:</b> {get_report_data_date(combined, entry, action_plan)}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
-<p><b>Batch:</b> {start_idx} â {end_idx} / {len(UNIVERSE)}</p>
+<p><b>Batch:</b> {start_idx} -> {end_idx} / {len(UNIVERSE)}</p>
 
-<h3>TIN HIEU THO (RAW SIGNAL)</h3>
+<h3>RAW SIGNAL - TOP 20</h3>
 {raw_html}
 
-<h3>AI FINAL - LOC TINH</h3>
+<h3>AI FINAL - TOP 20</h3>
 {ai_html}
 
-<h3>DIEM VAO LENH (ENTRY)</h3>
+<h3>ENTRY PLAN</h3>
 {entry_html}
 
-<h3>THEO DOI DANH MUC (PORTFOLIO)</h3>
+<h3>PORTFOLIO</h3>
 {tracker_html}
 
-<h3>KE HOACH HANH DONG (ACTION PLAN)</h3>
+<h3>ACTION PLAN</h3>
 {action_html}
 
 </body>
