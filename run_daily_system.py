@@ -11,7 +11,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V9_STABLE_CLEAN_DISPLAY_FIX2_2026_05_01"
+SYSTEM_VERSION = "PRO_V10_EXPLAINABLE_AI_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -1694,12 +1694,307 @@ def display_regime_ascii(regime):
     return ascii_regime_label(regime)
 
 
+
+def build_simple_recommendation(row):
+    action = display_action_ascii(row.get("Final Action", row.get("AI Action", row.get("Action", ""))))
+    score = safe_float(row.get("Score"), 0)
+    ai = safe_float(row.get("AI Confidence"), score)
+    rsi = safe_float(row.get("RSI"), 0)
+    rs20 = safe_float(row.get("RS20"), 0)
+    vol = safe_float(row.get("Volume Ratio"), 0)
+    risk = str(row.get("Risk Status", "")).upper()
+
+    if risk == "FAIL":
+        return "BO QUA / SKIP"
+
+    if "PRIORITY BUY" in action or (score >= 90 and ai >= 85 and rsi < 75):
+        return "MUA UU TIEN / PRIORITY BUY"
+
+    if "PROBE BUY" in action or "BUY NOW" in action:
+        return "MUA THAM DO / PROBE BUY"
+
+    if "PULLBACK" in action:
+        return "CHO PULLBACK / WAIT PULLBACK"
+
+    if "WAIT" in action:
+        return "CHO XAC NHAN / WAIT CONFIRM"
+
+    if "WATCH" in action:
+        return "THEO DOI / WATCH"
+
+    return action or "THEO DOI / WATCH"
+
+
+def build_simple_reason(row):
+    parts = []
+    score = safe_float(row.get("Score"), 0)
+    ai = safe_float(row.get("AI Confidence"), score)
+    rsi = safe_float(row.get("RSI"), 0)
+    rs20 = safe_float(row.get("RS20"), 0)
+    vol = safe_float(row.get("Volume Ratio"), 0)
+    atr = safe_float(row.get("ATR %"), 0)
+    risk = str(row.get("Risk Status", "")).upper()
+    strategy = str(row.get("Strategy", row.get("Chiáº¿n lÆ°á»£c", ""))).upper()
+
+    if risk == "FAIL":
+        parts.append("Risk FAIL")
+    if score >= 85:
+        parts.append("Score cao")
+    elif score >= 70:
+        parts.append("Score kha")
+    else:
+        parts.append("Score thap")
+
+    if ai >= 85:
+        parts.append("AI manh")
+    elif ai >= 70:
+        parts.append("AI kha")
+
+    if rs20 > 0:
+        parts.append("RS20 tot")
+    elif rs20 <= -8:
+        parts.append("RS20 yeu")
+
+    if vol >= 1.2:
+        parts.append("Volume tot")
+    elif vol < 0.8:
+        parts.append("Volume yeu")
+
+    if rsi >= 75:
+        parts.append("RSI nong")
+    elif 45 <= rsi <= 70:
+        parts.append("RSI on")
+
+    if atr > 8:
+        parts.append("ATR cao")
+
+    if "MOMENTUM" in strategy:
+        parts.append("Momentum")
+    elif "BOTTOM" in strategy:
+        parts.append("Bottom")
+
+    return "; ".join(parts[:5])
+
+
+def build_buy_zone(row):
+    close = safe_float(row.get("Close"), np.nan)
+    atr = safe_float(row.get("ATR %"), 0)
+    if pd.isna(close) or close <= 0:
+        return ""
+    # simple zone: +/- 0.5 ATR percent from close, capped for readability
+    band = max(0.8, min(2.5, atr * 0.35))
+    low = close * (1 - band/100)
+    high = close * (1 + band/100)
+    return f"{low:.2f}-{high:.2f}"
+
+
+def build_stop_loss(row):
+    close = safe_float(row.get("Close"), np.nan)
+    atr = safe_float(row.get("ATR %"), 0)
+    if pd.isna(close) or close <= 0:
+        return ""
+    risk_pct = max(3.0, min(6.0, atr * 0.9))
+    sl = close * (1 - risk_pct/100)
+    return f"{sl:.2f}"
+
+
+def load_ai_evidence_tables():
+    """
+    Load AI evidence files if available.
+    These prove whether learning / OOS testing has real data.
+    """
+    wf = safe_read_csv(WALK_FORWARD_STATS_PATH)
+    back_wf = safe_read_csv(BACKFILL_WALK_FORWARD_PATH) if "BACKFILL_WALK_FORWARD_PATH" in globals() else pd.DataFrame()
+    reg = safe_read_csv(REGIME_STATS_PATH) if "REGIME_STATS_PATH" in globals() else pd.DataFrame()
+    pat = safe_read_csv(PATTERN_STATS_PATH) if "PATTERN_STATS_PATH" in globals() else pd.DataFrame()
+    return wf, back_wf, reg, pat
+
+
+def ai_trust_label(oos_prob, oos_n, reg_prob=None, reg_n=0):
+    oos_prob = safe_float(oos_prob, np.nan)
+    oos_n = safe_float(oos_n, 0)
+    reg_prob = safe_float(reg_prob, np.nan)
+    reg_n = safe_float(reg_n, 0)
+
+    if pd.isna(oos_prob) or oos_n < 5:
+        return "LOW - chua du OOS"
+
+    if oos_prob >= 60 and oos_n >= 10:
+        if not pd.isna(reg_prob) and reg_prob >= 55 and reg_n >= 5:
+            return "HIGH"
+        return "MEDIUM-HIGH"
+
+    if oos_prob >= 52 and oos_n >= 5:
+        return "MEDIUM"
+
+    if oos_prob < 45 and oos_n >= 5:
+        return "LOW - OOS yeu"
+
+    return "LOW-MEDIUM"
+
+
+def build_row_evidence(row):
+    oos = safe_float(row.get("OOS Win Probability"), np.nan)
+    oos_n = safe_float(row.get("OOS Samples"), 0)
+    reg = safe_float(row.get("Regime Win Probability"), np.nan)
+    reg_n = safe_float(row.get("Regime Samples"), 0)
+    win = safe_float(row.get("Win Probability"), np.nan)
+
+    parts = []
+    if not pd.isna(oos) and oos_n > 0:
+        parts.append(f"OOS {oos:.0f}%/{int(oos_n)} mau")
+    else:
+        parts.append("OOS chua du")
+
+    if not pd.isna(reg) and reg_n > 0:
+        parts.append(f"Reg {reg:.0f}%/{int(reg_n)} mau")
+
+    if not pd.isna(win):
+        parts.append(f"Win {win:.0f}%")
+
+    return " | ".join(parts)
+
+
+def build_ai_summary_table(wf_stats, back_wf_stats, regime_stats, pattern_stats):
+    rows = []
+
+    def summarize(name, df, prob_col="OOS Win Probability", sample_col="OOS Samples"):
+        if df is None or df.empty:
+            rows.append({
+                "Module": name,
+                "Rows": 0,
+                "With Data": 0,
+                "Avg Win%": "",
+                "Strong": 0,
+                "Weak": 0,
+                "Note": "No data yet"
+            })
+            return
+
+        d = df.copy()
+        if prob_col in d.columns:
+            d[prob_col] = pd.to_numeric(d[prob_col], errors="coerce")
+        if sample_col in d.columns:
+            d[sample_col] = pd.to_numeric(d[sample_col], errors="coerce").fillna(0)
+
+        if prob_col in d.columns:
+            valid = d[d[prob_col].notna()]
+            strong = int((valid[prob_col] >= 60).sum())
+            weak = int((valid[prob_col] < 45).sum())
+            avg = valid[prob_col].mean() if not valid.empty else np.nan
+            with_data = len(valid)
+        else:
+            strong = weak = with_data = 0
+            avg = np.nan
+
+        rows.append({
+            "Module": name,
+            "Rows": len(d),
+            "With Data": with_data,
+            "Avg Win%": round(avg, 1) if not pd.isna(avg) else "",
+            "Strong": strong,
+            "Weak": weak,
+            "Note": "OK" if with_data > 0 else "Chua co mau test"
+        })
+
+    summarize("Walk-forward live", wf_stats)
+    summarize("Backfill OOS 3M", back_wf_stats)
+    summarize("Pattern history", pattern_stats, "Win Probability", "Samples")
+    summarize("Regime stats", regime_stats, "Regime Win Probability", "Regime Samples")
+
+    return pd.DataFrame(rows)
+
+
+def build_top_proven_patterns(wf_stats, back_wf_stats, regime_stats):
+    """
+    Top proven patterns from OOS evidence.
+    """
+    frames = []
+    for name, df in [("LIVE_WF", wf_stats), ("BACKFILL_WF", back_wf_stats)]:
+        if df is None or df.empty:
+            continue
+        d = df.copy()
+        if "OOS Win Probability" not in d.columns or "OOS Samples" not in d.columns:
+            continue
+        d["Source"] = name
+        d["OOS Win Probability"] = pd.to_numeric(d["OOS Win Probability"], errors="coerce")
+        d["OOS Samples"] = pd.to_numeric(d["OOS Samples"], errors="coerce").fillna(0)
+        frames.append(d)
+
+    if not frames:
+        return pd.DataFrame([{
+            "Pattern": "NO_OOS_DATA",
+            "Source": "",
+            "OOS%": "",
+            "OOS N": "",
+            "Avg+5D": "",
+            "Avg+10D": "",
+            "Trust": "LOW",
+            "Note": "Chua co du lieu OOS"
+        }])
+
+    all_wf = pd.concat(frames, ignore_index=True)
+    all_wf = all_wf.dropna(subset=["OOS Win Probability"])
+    all_wf = all_wf[all_wf["OOS Samples"] >= 5]
+
+    if all_wf.empty:
+        return pd.DataFrame([{
+            "Pattern": "LOW_SAMPLE",
+            "Source": "",
+            "OOS%": "",
+            "OOS N": "",
+            "Avg+5D": "",
+            "Avg+10D": "",
+            "Trust": "LOW",
+            "Note": "Co OOS nhung chua du 5 mau"
+        }])
+
+    # Deduplicate by pattern, keep best sample/prob combo
+    all_wf["RankScore"] = all_wf["OOS Win Probability"] + np.minimum(all_wf["OOS Samples"], 50) * 0.2
+    all_wf = all_wf.sort_values("RankScore", ascending=False)
+    all_wf = all_wf.drop_duplicates(subset=["Pattern Key"], keep="first")
+
+    rows = []
+    for _, r in all_wf.head(15).iterrows():
+        oos = safe_float(r.get("OOS Win Probability"), np.nan)
+        n = safe_float(r.get("OOS Samples"), 0)
+        trust = ai_trust_label(oos, n)
+
+        rows.append({
+            "Pattern": clean_ascii_text(r.get("Pattern Key", ""), 80),
+            "Source": clean_ascii_text(r.get("Source", ""), 20),
+            "OOS%": round(oos, 1) if not pd.isna(oos) else "",
+            "OOS N": int(n),
+            "Avg+5D": safe_float(r.get("OOS Avg Ret+5D %"), np.nan),
+            "Avg+10D": safe_float(r.get("OOS Avg Ret+10D %"), np.nan),
+            "Trust": trust,
+            "Note": clean_ascii_text(r.get("OOS Status", ""), 40)
+        })
+
+    return pd.DataFrame(rows)
+
+
+def add_explainable_columns(df):
+    if df is None or df.empty:
+        return df
+    out = df.copy()
+    out["Evidence"] = out.apply(build_row_evidence, axis=1)
+    out["Trust"] = out.apply(
+        lambda r: ai_trust_label(
+            r.get("OOS Win Probability"),
+            r.get("OOS Samples"),
+            r.get("Regime Win Probability"),
+            r.get("Regime Samples")
+        ),
+        axis=1
+    )
+    return out
+
 def make_dashboard_view(df, kind=""):
     """
-    Phone-friendly dashboard:
-    - only important columns
-    - no long notes
-    - no mojibake text columns
+    Actionable dashboard for phone:
+    - hide useless empty OOS/regime columns when not available
+    - add Rec / Why / Buy Zone / SL
     """
     if df is None or df.empty:
         return pd.DataFrame()
@@ -1735,17 +2030,36 @@ def make_dashboard_view(df, kind=""):
     if "Risk Status" in view.columns:
         view["Risk Status"] = view["Risk Status"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
 
-    # Do not show these columns because old CSV may contain mojibake text.
+    # Actionable columns
+    view = add_explainable_columns(view)
+    view["Rec"] = view.apply(build_simple_recommendation, axis=1)
+    view["Why"] = view.apply(build_simple_reason, axis=1)
+    view["Buy Zone"] = view.apply(build_buy_zone, axis=1)
+    view["Stop Loss"] = view.apply(build_stop_loss, axis=1)
+
+    # Do not show long/broken notes
     drop_cols = [
         "Risk Reason", "AI Reason", "AI Warning", "History Note",
         "WF Note", "Walk Forward Note", "Regime Note", "Pattern Key",
-        "Signal"
+        "Signal", "AI Action", "Final Action"
     ]
     view = view.drop(columns=[c for c in drop_cols if c in view.columns], errors="ignore")
 
+    # Hide OOS/Reg columns if all empty/zero
+    for col in ["OOS%", "OOSN", "OOS Status", "Reg%", "RegN", "HistN"]:
+        if col in view.columns:
+            s = view[col]
+            try:
+                numeric = pd.to_numeric(s, errors="coerce").fillna(0)
+                if numeric.sum() == 0:
+                    view = view.drop(columns=[col])
+            except Exception:
+                if s.astype(str).replace(["", "nan", "NaN", "NO_WF_DATA"], "").eq("").all():
+                    view = view.drop(columns=[col])
+
     preferred = [
-        "Date", "Code", "Close", "Action", "Final Action", "Strategy",
-        "Score", "AI", "AI Grade", "Win%", "OOS%", "Reg%",
+        "Date", "Code", "Close", "Rec", "Trust", "Evidence", "Why", "Buy Zone", "Stop Loss",
+        "Strategy", "Score", "AI", "AI Grade", "Win%", "OOS%", "Reg%",
         "Regime", "RSI", "RS20", "Volume Ratio", "ATR %",
         "Risk Status", "HistN", "OOSN", "OOS Status", "RegN"
     ]
@@ -1753,7 +2067,6 @@ def make_dashboard_view(df, kind=""):
     if cols:
         view = view[cols]
 
-    # Replace NaN for display
     view = view.replace({np.nan: ""})
     return view.head(20)
 
@@ -1777,7 +2090,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     if source_df is None or source_df.empty:
         return (
-            "TRADING BOT V9 STABLE\n"
+            "TRADING BOT V9 ACTIONABLE\n"
             f"Run time: {run_time}\n"
             f"Data date: {data_date}\n"
             "No signal data.\n"
@@ -1816,7 +2129,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
     focus = focus.head(5)
 
     lines = [
-        "TRADING BOT V9 STABLE",
+        "TRADING BOT V9 ACTIONABLE",
         f"Run time: {run_time}",
         f"Data date: {data_date}",
         f"Version: {SYSTEM_VERSION}",
@@ -1836,7 +2149,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         lines.append(f"Portfolio rows: {len(tracker)}")
 
     lines.append("")
-    lines.append("TOP SIGNALS:")
+    lines.append("TOP RECOMMENDATIONS:")
 
     def fnum(row, col, digits=0):
         try:
@@ -1849,8 +2162,10 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     for _, r in focus.iterrows():
         code = clean_display_na(r.get("MÃ£", r.get("Ma", "")))
-        final_action = display_action_ascii(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
-        grade = clean_display_na(r.get("AI Grade", ""))
+        rec = build_simple_recommendation(r)
+        why = build_simple_reason(r)
+        zone = build_buy_zone(r)
+        sl = build_stop_loss(r)
 
         ai = fnum(r, "AI Confidence", 0)
         win = fnum(r, "Win Probability", 0)
@@ -1861,33 +2176,30 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         rsi = fnum(r, "RSI", 0)
         rs20 = fnum(r, "RS20", 1)
 
-        lines.append(f"- {code} | {final_action}")
+        trust = ai_trust_label(r.get("OOS Win Probability"), r.get("OOS Samples"), r.get("Regime Win Probability"), r.get("Regime Samples"))
+        evidence = build_row_evidence(r)
 
+        lines.append(f"- {code} | {rec} | Trust: {trust}")
+        lines.append(f"  Evidence: {evidence}")
         detail = []
-        if grade:
-            detail.append(f"Grade {grade}")
-        if ai:
-            detail.append(f"AI {ai}")
         if score:
             detail.append(f"Score {score}")
+        if ai:
+            detail.append(f"AI {ai}")
         if win:
             detail.append(f"Win {win}%")
-        if oos:
+        if oos and oos != "nan":
             detail.append(f"OOS {oos}%")
-        if reg:
+        if reg and reg != "nan":
             detail.append(f"Reg {reg}%")
         if detail:
             lines.append("  " + " | ".join(detail))
 
-        market = []
-        if close:
-            market.append(f"Price {close}")
-        if rsi:
-            market.append(f"RSI {rsi}")
-        if rs20:
-            market.append(f"RS20 {rs20}")
-        if market:
-            lines.append("  " + " | ".join(market))
+        lines.append(f"  Price {close} | RSI {rsi} | RS20 {rs20}")
+        if zone:
+            lines.append(f"  Buy zone: {zone} | SL: {sl}")
+        if why:
+            lines.append(f"  Why: {why}")
 
     lines.append("")
     lines.append("Dashboard HTML attached below.")
@@ -1988,16 +2300,16 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 24px;
-    font-size: 12px;
+    font-size: 13px;
 }
 th {
     background-color: #1f2430;
     color: #ffffff;
-    padding: 5px;
+    padding: 6px;
     border: 1px solid #333;
 }
 td {
-    padding: 5px;
+    padding: 6px;
     border: 1px solid #333;
 }
 tr:nth-child(even) {
@@ -2815,12 +3127,18 @@ entry.to_csv(ENTRY_PATH, index=False, encoding="utf-8-sig")
 
 tracker, action_plan = build_portfolio_and_action_plan(combined, ai_risk)
 
+wf_stats_disp, back_wf_stats_disp, regime_stats_disp, pattern_stats_disp = load_ai_evidence_tables()
+ai_summary_view = build_ai_summary_table(wf_stats_disp, back_wf_stats_disp, regime_stats_disp, pattern_stats_disp)
+top_patterns_view = build_top_proven_patterns(wf_stats_disp, back_wf_stats_disp, regime_stats_disp)
+
 raw_view = make_dashboard_view(raw_signals, "raw")
 ai_view = make_dashboard_view(ai_risk, "ai")
 entry_view = make_dashboard_view(entry, "entry")
 tracker_view = make_dashboard_view(tracker, "tracker")
 action_view = make_dashboard_view(action_plan, "action")
 
+ai_summary_html = ai_summary_view.to_html(index=False, escape=True)
+top_patterns_html = top_patterns_view.to_html(index=False, escape=True)
 raw_html = raw_view.to_html(index=False, escape=True)
 ai_html = ai_view.to_html(index=False, escape=True)
 entry_html = entry_view.to_html(index=False, escape=True)
@@ -2836,16 +3154,22 @@ html_full = f"""
 </head>
 <body>
 
-<h2>TRADING BOT CONTROL CENTER</h2>
+<h2>TRADING BOT ACTION CENTER</h2>
 <p><b>Generated:</b> {now_vietnam()}</p>
 <p><b>Data date:</b> {get_report_data_date(combined, entry, action_plan)}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} -> {end_idx} / {len(UNIVERSE)}</p>
 
-<h3>RAW SIGNAL - TOP 20</h3>
+<h3>AI TEST SUMMARY</h3>
+{ai_summary_html}
+
+<h3>TOP PROVEN PATTERNS</h3>
+{top_patterns_html}
+
+<h3>RAW SIGNAL - ACTION VIEW</h3>
 {raw_html}
 
-<h3>AI FINAL - TOP 20</h3>
+<h3>AI FINAL - ACTION VIEW</h3>
 {ai_html}
 
 <h3>ENTRY PLAN</h3>
