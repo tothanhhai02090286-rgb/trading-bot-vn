@@ -11,7 +11,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V12_PRO_FINAL_FIX_FONT_2026_05_01"
+SYSTEM_VERSION = "PRO_V12_PRO_FINAL_NO_FONT_ERROR_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -83,24 +83,24 @@ TELEGRAM_MAX_ITEMS = 7
 def fix_vietnamese_columns(df):
     """
     Chuáº©n hÃ³a tÃªn cá»t bá» lá»i encoding phá» biáº¿n khi Äá»c CSV trÃªn Colab/GitHub.
-    VÃ­ dá»¥: MÃÂ£ -> MÃ£, NgÃ y -> NgÃ y.
+    VÃ­ dá»¥: MÃÂ£ -> Ma, NgÃ y -> Ngay.
     """
     if df is None or df.empty:
         return df
 
     rename_map = {
-        "MÃÂ£": "MÃ£",
-        "Ma": "MÃ£",
-        "NgÃ y": "NgÃ y",
-        "Ngay": "NgÃ y",
-        "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chiáº¿n lÆ°á»£c",
+        "MÃÂ£": "Ma",
+        "Ma": "Ma",
+        "NgÃ y": "Ngay",
+        "Ngay": "Ngay",
+        "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chien luoc",
         "HÃ nh ÃâÃ¡Â»â¢ng": "HÃ nh Äá»ng",
         "CÃ¡ÂºÂ£nh bÃÂ¡o": "Cáº£nh bÃ¡o",
-        "LÃÂ½ do": "LÃ½ do",
+        "LÃÂ½ do": "Ly do",
         "GiÃÂ¡ vÃ¡Â»ân": "GiÃ¡ vá»n",
         "SÃ¡Â»â lÃÂ°Ã¡Â»Â£ng": "Sá» lÆ°á»£ng",
         "GiÃÂ¡ trÃ¡Â»â¹ vÃ¡Â»ân": "GiÃ¡ trá» vá»n",
-        "GiÃÂ¡ trÃ¡Â»â¹ hiÃ¡Â»â¡n tÃ¡ÂºÂ¡i": "GiÃ¡ trá» hiá»n táº¡i",
+        "GiÃÂ¡ trÃ¡Â»â¹ hiÃ¡Â»â¡n tÃ¡ÂºÂ¡i": "GiÃ¡ trá» hien tai",
         "LÃÂ£i/LÃ¡Â»â %": "LÃ£i/Lá» %",
         "LÃÂ£i/LÃ¡Â»â tiÃ¡Â»Ân": "LÃ£i/Lá» tiá»n",
     }
@@ -109,6 +109,45 @@ def fix_vietnamese_columns(df):
     df.columns = [rename_map.get(str(c), str(c).replace("\ufeff", "").strip()) for c in df.columns]
     return df
 
+
+
+# ================================
+# FONT SAFE UI HELPERS
+# ================================
+VN_ASCII_MAP = str.maketrans({
+    "Ã ":"a","Ã¡":"a","áº¡":"a","áº£":"a","Ã£":"a","Ã¢":"a","áº§":"a","áº¥":"a","áº­":"a","áº©":"a","áº«":"a","Ä":"a","áº±":"a","áº¯":"a","áº·":"a","áº³":"a","áºµ":"a",
+    "Ã¨":"e","Ã©":"e","áº¹":"e","áº»":"e","áº½":"e","Ãª":"e","á»":"e","áº¿":"e","á»":"e","á»":"e","á»":"e",
+    "Ã¬":"i","Ã­":"i","á»":"i","á»":"i","Ä©":"i",
+    "Ã²":"o","Ã³":"o","á»":"o","á»":"o","Ãµ":"o","Ã´":"o","á»":"o","á»":"o","á»":"o","á»":"o","á»":"o","Æ¡":"o","á»":"o","á»":"o","á»£":"o","á»":"o","á»¡":"o",
+    "Ã¹":"u","Ãº":"u","á»¥":"u","á»§":"u","Å©":"u","Æ°":"u","á»«":"u","á»©":"u","á»±":"u","á»­":"u","á»¯":"u",
+    "á»³":"y","Ã½":"y","á»µ":"y","á»·":"y","á»¹":"y","Ä":"d",
+    "Ã":"A","Ã":"A","áº ":"A","áº¢":"A","Ã":"A","Ã":"A","áº¦":"A","áº¤":"A","áº¬":"A","áº¨":"A","áºª":"A","Ä":"A","áº°":"A","áº®":"A","áº¶":"A","áº²":"A","áº´":"A",
+    "Ã":"E","Ã":"E","áº¸":"E","áºº":"E","áº¼":"E","Ã":"E","á»":"E","áº¾":"E","á»":"E","á»":"E","á»":"E",
+    "Ã":"I","Ã":"I","á»":"I","á»":"I","Ä¨":"I",
+    "Ã":"O","Ã":"O","á»":"O","á»":"O","Ã":"O","Ã":"O","á»":"O","á»":"O","á»":"O","á»":"O","á»":"O","Æ ":"O","á»":"O","á»":"O","á»¢":"O","á»":"O","á» ":"O",
+    "Ã":"U","Ã":"U","á»¤":"U","á»¦":"U","Å¨":"U","Æ¯":"U","á»ª":"U","á»¨":"U","á»°":"U","á»¬":"U","á»®":"U",
+    "á»²":"Y","Ã":"Y","á»´":"Y","á»¶":"Y","á»¸":"Y","Ä":"D",
+})
+
+def vn_no_accent(x):
+    if x is None:
+        return ""
+    try:
+        if pd.isna(x):
+            return ""
+    except Exception:
+        pass
+    s = str(x)
+    try:
+        s = fix_mojibake_text(s)
+    except Exception:
+        pass
+    s = s.translate(VN_ASCII_MAP)
+    s = s.encode("ascii", "ignore").decode("ascii")
+    s = re.sub(r"\s+", " ", s.replace("\n", " ").replace("\r", " ")).strip()
+    if s.lower() in ["nan", "none"]:
+        return ""
+    return s
 
 def fix_mojibake_text(value):
     """
@@ -257,7 +296,7 @@ def fetch_history(symbol):
     # Giá» Viá»t Nam
     now_vn = datetime.utcnow() + timedelta(hours=7)
     today = now_vn.strftime("%Y-%m-%d")
-    close_hour = 16  # sau 16h má»i tin dá»¯ liá»u ngÃ y hÃ´m nay
+    close_hour = 16  # sau 16h má»i tin dá»¯ liá»u ngay hÃ´m nay
 
     if os.path.exists(cache_path):
         try:
@@ -280,18 +319,18 @@ def fetch_history(symbol):
                     print(f"â³ TrÆ°á»c 16h VN â dÃ¹ng cache: {symbol}")
                     return df, "CACHE"
 
-                # 2. Náº¿u cache lÃ  ngÃ y hÃ´m nay vÃ  ÄÆ°á»£c lÆ°u sau 16h â dÃ¹ng cache
+                # 2. Náº¿u cache lÃ  ngay hÃ´m nay vÃ  ÄÆ°á»£c lÆ°u sau 16h â dÃ¹ng cache
                 if last_date == today and cache_hour >= close_hour:
-                    print(f"â¡ Cache OK sau phiÃªn: {symbol}")
+                    print(f"â¡ Cache OK sau phien: {symbol}")
                     return df, "CACHE"
 
-                # 3. Náº¿u cache ngÃ y hÃ´m nay nhÆ°ng lÆ°u trÆ°á»c 16h â fetch láº¡i
+                # 3. Náº¿u cache ngay hÃ´m nay nhÆ°ng lÆ°u trÆ°á»c 16h â fetch láº¡i
                 if last_date == today and cache_hour < close_hour:
-                    print(f"ð Cache ngÃ y {today} nhÆ°ng lÆ°u trÆ°á»c 16h â update láº¡i: {symbol}")
+                    print(f"ð Cache ngay {today} nhÆ°ng lÆ°u trÆ°á»c 16h â update láº¡i: {symbol}")
 
-                # 4. Náº¿u cache ngÃ y cÅ© â fetch láº¡i
+                # 4. Náº¿u cache ngay cÅ© â fetch láº¡i
                 elif last_date != today:
-                    print(f"ð Cache cÅ© {symbol}: {last_date} â update ngÃ y {today}")
+                    print(f"ð Cache cÅ© {symbol}: {last_date} â update ngay {today}")
 
                 else:
                     print(f"ð Cache cáº§n update: {symbol}")
@@ -479,8 +518,8 @@ def risk_filter(row):
     if row["Volume Ratio"] < 0.7:
         reasons.append("Volume yáº¿u")
     if row["RS20"] < -10:
-        reasons.append("RS20 yáº¿u")
-    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM" and row["Close"] < row["MA20"]:
+        reasons.append("RS20 yeu")
+    if row["Chien luoc"] == "MOMENTUM" and row["Close"] < row["MA20"]:
         reasons.append("Momentum nhÆ°ng giÃ¡ dÆ°á»i MA20")
 
     if len(reasons) == 0:
@@ -497,25 +536,25 @@ def classify_action(row):
         return "WATCHLIST"
     if 75 <= row["RSI"] < 85:
         return "WAIT"
-    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM" and row["Momentum Score"] >= 80:
+    if row["Chien luoc"] == "MOMENTUM" and row["Momentum Score"] >= 80:
         return "BUY NOW"
-    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM" and row["Bottom Score"] >= 75:
+    if row["Chien luoc"] == "BOTTOM" and row["Bottom Score"] >= 75:
         return "BUY NOW"
-    if row["Chiáº¿n lÆ°á»£c"] in ["MOMENTUM", "BOTTOM"]:
+    if row["Chien luoc"] in ["MOMENTUM", "BOTTOM"]:
         return "WAIT"
-    if row["Chiáº¿n lÆ°á»£c"] in ["MOMENTUM_WATCH", "BOTTOM_WATCH"]:
+    if row["Chien luoc"] in ["MOMENTUM_WATCH", "BOTTOM_WATCH"]:
         return "WATCHLIST"
     return "SKIP"
 
 
 def make_signal(row):
-    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM":
+    if row["Chien luoc"] == "MOMENTUM":
         return "ð MOMENTUM"
-    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM":
+    if row["Chien luoc"] == "BOTTOM":
         return "ð§² BOTTOM"
-    if row["Chiáº¿n lÆ°á»£c"] == "MOMENTUM_WATCH":
+    if row["Chien luoc"] == "MOMENTUM_WATCH":
         return "ð MOMENTUM WATCH"
-    if row["Chiáº¿n lÆ°á»£c"] == "BOTTOM_WATCH":
+    if row["Chien luoc"] == "BOTTOM_WATCH":
         return "ð BOTTOM WATCH"
     return "ð WATCH"
 
@@ -543,8 +582,8 @@ def analyze_symbol(symbol, market_ret20):
     rs20 = ret20 - market_ret20
 
     row = {
-        "NgÃ y": get_price_data_date(df),
-        "MÃ£": symbol,
+        "Ngay": get_price_data_date(df),
+        "Ma": symbol,
         "Close": round(close, 2),
         "MA5": round(ma5, 2),
         "MA20": round(ma20, 2),
@@ -571,7 +610,7 @@ def analyze_symbol(symbol, market_ret20):
     row["Momentum Score"] = score_momentum(row)
     row["Bottom Score"] = score_bottom(row)
     row["Score"] = max(row["Momentum Score"], row["Bottom Score"])
-    row["Chiáº¿n lÆ°á»£c"] = classify_strategy(row)
+    row["Chien luoc"] = classify_strategy(row)
 
     risk_status, risk_reason = risk_filter(row)
     row["Risk Status"] = risk_status
@@ -585,7 +624,7 @@ def analyze_symbol(symbol, market_ret20):
 
 
 
-def normalize_date_col(df, col="NgÃ y"):
+def normalize_date_col(df, col="Ngay"):
     if df is None or df.empty or col not in df.columns:
         return df
 
@@ -610,7 +649,7 @@ def classify_market_regime(market_ret20):
 
 
 def make_pattern_key(row, market_regime="SIDEWAY"):
-    strategy = str(row.get("Chiáº¿n lÆ°á»£c", "WATCH"))
+    strategy = str(row.get("Chien luoc", "WATCH"))
     action = str(row.get("Action", "SKIP"))
 
     rsi = safe_float(row.get("RSI"), 0)
@@ -677,13 +716,13 @@ def append_signal_history(combined, market_ret20):
     LÆ°u lá»ch sá»­ tÃ­n hiá»u má»i láº§n cháº¡y.
     KhÃ´ng há»c váº¹t: chá» lÆ°u pattern + bá»i cáº£nh thá» trÆ°á»ng + features cáº§n thiáº¿t.
     """
-    if combined is None or combined.empty or "MÃ£" not in combined.columns:
+    if combined is None or combined.empty or "Ma" not in combined.columns:
         return pd.DataFrame()
 
     market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
 
     keep_cols = [
-        "NgÃ y", "MÃ£", "Close", "Signal", "Chiáº¿n lÆ°á»£c", "Action", "Score",
+        "Ngay", "Ma", "Close", "Signal", "Chien luoc", "Action", "Score",
         "AI Confidence", "AI Grade", "AI Action",
         "RSI", "Ret5 %", "Ret10 %", "Ret20 %", "RS20",
         "Volume Ratio", "ADX", "ATR %", "Dist MA20 %",
@@ -696,8 +735,8 @@ def append_signal_history(combined, market_ret20):
     hist_new["Market Regime"] = market_regime
     hist_new["Pattern Key"] = hist_new.apply(lambda r: make_pattern_key(r, market_regime), axis=1)
 
-    if "NgÃ y" not in hist_new.columns:
-        hist_new["NgÃ y"] = now_vietnam().strftime("%Y-%m-%d")
+    if "Ngay" not in hist_new.columns:
+        hist_new["Ngay"] = now_vietnam().strftime("%Y-%m-%d")
 
     old = safe_read_csv(SIGNAL_HISTORY_PATH)
 
@@ -706,13 +745,13 @@ def append_signal_history(combined, market_ret20):
     else:
         hist = hist_new
 
-    # chá»ng trÃ¹ng: cÃ¹ng ngÃ y + mÃ£ giá»¯ dÃ²ng má»i nháº¥t
-    if "NgÃ y" in hist.columns and "MÃ£" in hist.columns:
-        hist["NgÃ y"] = pd.to_datetime(hist["NgÃ y"], errors="coerce").dt.strftime("%Y-%m-%d")
-        hist = hist.drop_duplicates(subset=["NgÃ y", "MÃ£"], keep="last")
+    # chá»ng trÃ¹ng: cÃ¹ng ngay + mÃ£ giá»¯ dÃ²ng má»i nháº¥t
+    if "Ngay" in hist.columns and "Ma" in hist.columns:
+        hist["Ngay"] = pd.to_datetime(hist["Ngay"], errors="coerce").dt.strftime("%Y-%m-%d")
+        hist = hist.drop_duplicates(subset=["Ngay", "Ma"], keep="last")
 
-    # chá» giá»¯ 180 ngÃ y gáº§n nháº¥t cho nháº¹
-    hist_dt = pd.to_datetime(hist.get("NgÃ y"), errors="coerce")
+    # chá» giá»¯ 180 ngay gáº§n nháº¥t cho nháº¹
+    hist_dt = pd.to_datetime(hist.get("Ngay"), errors="coerce")
     cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=180)
     hist = hist[(hist_dt.isna()) | (hist_dt >= cutoff)].copy()
 
@@ -725,11 +764,11 @@ def append_signal_history(combined, market_ret20):
 
 def compute_forward_outcome_for_signal(row):
     """
-    TÃ­nh outcome sau 3/5/10 phiÃªn tá»« cache_stock.
+    TÃ­nh outcome sau 3/5/10 phien tá»« cache_stock.
     Chá» dÃ¹ng dá»¯ liá»u ÄÃ£ cÃ³, khÃ´ng gá»i API thÃªm.
     """
-    symbol = str(row.get("MÃ£", ""))
-    signal_date = pd.to_datetime(row.get("NgÃ y"), errors="coerce")
+    symbol = str(row.get("Ma", ""))
+    signal_date = pd.to_datetime(row.get("Ngay"), errors="coerce")
     entry_price = safe_float(row.get("Close"), np.nan)
 
     if not symbol or pd.isna(signal_date) or pd.isna(entry_price):
@@ -769,7 +808,7 @@ def compute_forward_outcome_for_signal(row):
         else:
             out[f"Ret+{hold}D %"] = np.nan
 
-    # max favorable / adverse trong 10 phiÃªn náº¿u cÃ³ high/low
+    # max favorable / adverse trong 10 phien náº¿u cÃ³ high/low
     end_idx = min(entry_idx + 10, len(dfp) - 1)
     window = dfp.iloc[entry_idx:end_idx + 1]
 
@@ -842,11 +881,11 @@ def build_pattern_stats(hist):
 
     h = hist.copy()
     h = normalize_outcome_dtype(h)
-    h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
-    h = h.dropna(subset=["NgÃ y", "Pattern Key"])
+    h["Ngay"] = pd.to_datetime(h["Ngay"], errors="coerce")
+    h = h.dropna(subset=["Ngay", "Pattern Key"])
 
     cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=HISTORY_LOOKBACK_DAYS)
-    h = h[h["NgÃ y"] >= cutoff].copy()
+    h = h[h["Ngay"] >= cutoff].copy()
 
     if h.empty:
         return pd.DataFrame()
@@ -858,7 +897,7 @@ def build_pattern_stats(hist):
         return pd.DataFrame()
 
     today = pd.Timestamp(now_vietnam().date())
-    age_days = (today - h["NgÃ y"]).dt.days.clip(lower=0)
+    age_days = (today - h["Ngay"]).dt.days.clip(lower=0)
 
     # exponential decay: dá»¯ liá»u cÃ ng cÅ© cÃ ng nháº¹
     h["Decay Weight"] = np.exp(-np.log(2) * age_days / DECAY_HALFLIFE_DAYS)
@@ -872,7 +911,7 @@ def build_pattern_stats(hist):
         weighted_n = g["Decay Weight"].sum()
         weighted_win = (g["Win Flag"] * g["Decay Weight"]).sum()
 
-        # Bayesian smoothing: trÃ¡nh Ã­t máº«u mÃ  tá»± tin quÃ¡
+        # Bayesian smoothing: trÃ¡nh Ã­t mau mÃ  tá»± tin quÃ¡
         prior_n = 10
         prior_p = BASE_WIN_PROB / 100
         win_prob = ((weighted_win + prior_p * prior_n) / (weighted_n + prior_n)) * 100
@@ -906,15 +945,15 @@ def build_pattern_stats(hist):
 def build_walk_forward_stats(hist):
     """
     Walk-forward validation:
-    há»c Äoáº¡n trÆ°á»c -> test Äoáº¡n sau, dÃ¹ng káº¿t quáº£ ngoÃ i máº«u Äá» trÃ¡nh há»c váº¹t.
+    hoc doan truoc -> test doan sau, dÃ¹ng káº¿t quáº£ ngoÃ i mau Äá» trÃ¡nh há»c váº¹t.
     """
     if hist is None or hist.empty or "Pattern Key" not in hist.columns:
         return pd.DataFrame()
 
     h = hist.copy()
     h = normalize_outcome_dtype(h)
-    h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
-    h = h.dropna(subset=["NgÃ y", "Pattern Key"])
+    h["Ngay"] = pd.to_datetime(h["Ngay"], errors="coerce")
+    h = h.dropna(subset=["Ngay", "Pattern Key"])
     h["Outcome"] = h.get("Outcome", "PENDING").astype(str)
     h = h[~h["Outcome"].isin(["PENDING", "", "nan"])].copy()
 
@@ -923,8 +962,8 @@ def build_walk_forward_stats(hist):
 
     h["Win Flag"] = h["Outcome"].isin(["WIN", "WIN_TP"]).astype(int)
 
-    min_date = h["NgÃ y"].min()
-    max_date = h["NgÃ y"].max()
+    min_date = h["Ngay"].min()
+    max_date = h["Ngay"].max()
 
     if pd.isna(min_date) or pd.isna(max_date):
         return pd.DataFrame()
@@ -941,8 +980,8 @@ def build_walk_forward_stats(hist):
         if test_start > max_date:
             break
 
-        train = h[(h["NgÃ y"] >= train_start) & (h["NgÃ y"] < train_end)].copy()
-        test = h[(h["NgÃ y"] >= test_start) & (h["NgÃ y"] < test_end)].copy()
+        train = h[(h["Ngay"] >= train_start) & (h["Ngay"] < train_end)].copy()
+        test = h[(h["Ngay"] >= test_start) & (h["Ngay"] < test_end)].copy()
 
         if not train.empty and not test.empty:
             train_patterns = set(train["Pattern Key"].dropna().astype(str))
@@ -1079,7 +1118,7 @@ def apply_walk_forward_filter(combined, wf_stats):
             sample = int(safe_float(stat.get("OOS Samples"), 0))
             status = str(stat.get("OOS Status", "NO_WF_DATA"))
             reliability = safe_float(stat.get("OOS Reliability"), 0)
-            note = f"OOS {sample} máº«u, win ~{oos_prob:.1f}%, reliability {reliability:.2f}"
+            note = f"OOS {sample} mau, win ~{oos_prob:.1f}%, reliability {reliability:.2f}"
 
             if status in ["OOS_BAD", "OOS_WEAK"] and final_action in ["MUA Æ¯U TIÃN", "MUA THÄM DÃ"]:
                 final_action = "CHá» XÃC NHáº¬N"
@@ -1093,11 +1132,11 @@ def apply_walk_forward_filter(combined, wf_stats):
                     note += " | OOS á»§ng há»"
                 if status == "OOS_STRONG" and ai_conf >= 85:
                     final_action = "MUA Æ¯U TIÃN"
-                    note += " | OOS máº¡nh + AI máº¡nh"
+                    note += " | OOS máº¡nh + AI manh"
             elif status == "LOW_SAMPLE":
                 if final_action == "MUA Æ¯U TIÃN":
                     final_action = "MUA THÄM DÃ"
-                note += " | Ã­t máº«u OOS, trÃ¡nh há»c váº¹t"
+                note += " | Ã­t mau OOS, trÃ¡nh há»c váº¹t"
 
         oos_probs.append(round(oos_prob, 2) if not pd.isna(oos_prob) else np.nan)
         oos_samples.append(sample)
@@ -1155,12 +1194,12 @@ def apply_history_learning(combined, pattern_stats, market_ret20):
         else:
             win_p = safe_float(stat.get("Win Probability"), BASE_WIN_PROB)
             sample = int(safe_float(stat.get("Samples"), 0))
-            note = f"Pattern {sample} máº«u, win ~{win_p:.1f}%"
+            note = f"Pattern {sample} mau, win ~{win_p:.1f}%"
 
-        # báº£o vá» chá»ng há»c váº¹t: Ã­t máº«u thÃ¬ áº£nh hÆ°á»ng nháº¹
+        # báº£o vá» chá»ng há»c váº¹t: Ã­t mau thÃ¬ áº£nh hÆ°á»ng nháº¹
         if sample < MIN_PATTERN_SAMPLES:
             adjusted_p = BASE_WIN_PROB * 0.7 + win_p * 0.3
-            note += " (Ã­t máº«u, giáº£m trá»ng sá»)"
+            note += " (Ã­t mau, giáº£m trá»ng sá»)"
         else:
             adjusted_p = win_p
 
@@ -1203,7 +1242,7 @@ def advanced_ai_filter(row, market_ret20=0):
     warnings = []
     confidence = safe_float(row.get("Score"), 0)
 
-    strategy = str(row.get("Chiáº¿n lÆ°á»£c", ""))
+    strategy = str(row.get("Chien luoc", ""))
     action = str(row.get("Action", ""))
     risk_status = str(row.get("Risk Status", ""))
 
@@ -1241,7 +1280,7 @@ def advanced_ai_filter(row, market_ret20=0):
         reasons.append("RS20 tá»t")
     elif rs20 < -8:
         confidence -= 15
-        warnings.append("RS20 yáº¿u")
+        warnings.append("RS20 yeu")
     elif rs20 < -3:
         confidence -= 7
         warnings.append("RS20 chÆ°a khá»e")
@@ -1399,10 +1438,10 @@ def apply_advanced_ai_filter(df, market_ret20=0):
 def build_portfolio_and_action_plan(combined, ai_risk):
     portfolio = safe_read_csv(PORTFOLIO_PATH)
 
-    if not portfolio.empty and "MÃ£" in portfolio.columns:
+    if not portfolio.empty and "Ma" in portfolio.columns:
         tracker = portfolio.merge(
             combined,
-            on="MÃ£",
+            on="Ma",
             how="left",
             suffixes=("", "_signal")
         )
@@ -1412,16 +1451,16 @@ def build_portfolio_and_action_plan(combined, ai_risk):
         tracker["Close"] = pd.to_numeric(tracker.get("Close"), errors="coerce")
 
         tracker["GiÃ¡ trá» vá»n"] = tracker["GiÃ¡ vá»n"] * tracker["Sá» lÆ°á»£ng"]
-        tracker["GiÃ¡ trá» hiá»n táº¡i"] = tracker["Close"] * tracker["Sá» lÆ°á»£ng"]
+        tracker["GiÃ¡ trá» hien tai"] = tracker["Close"] * tracker["Sá» lÆ°á»£ng"]
         tracker["LÃ£i/Lá» %"] = (tracker["Close"] / tracker["GiÃ¡ vá»n"] - 1) * 100
-        tracker["LÃ£i/Lá» tiá»n"] = tracker["GiÃ¡ trá» hiá»n táº¡i"] - tracker["GiÃ¡ trá» vá»n"]
+        tracker["LÃ£i/Lá» tiá»n"] = tracker["GiÃ¡ trá» hien tai"] - tracker["GiÃ¡ trá» vá»n"]
 
         def holding_action(row):
             pnl = safe_float(row.get("LÃ£i/Lá» %"), 0)
             action = str(row.get("Action", ""))
             risk = str(row.get("Risk Status", ""))
             rsi = safe_float(row.get("RSI"), 0)
-            strategy = str(row.get("Chiáº¿n lÆ°á»£c", ""))
+            strategy = str(row.get("Chien luoc", ""))
 
             if pd.isna(row.get("Close")):
                 return "CHÆ¯A CÃ DATA"
@@ -1461,10 +1500,10 @@ def build_portfolio_and_action_plan(combined, ai_risk):
         tracker["Cáº£nh bÃ¡o"] = tracker.apply(risk_flag, axis=1)
 
         keep_tracker = [
-            "MÃ£", "GiÃ¡ vá»n", "Close", "Sá» lÆ°á»£ng",
-            "GiÃ¡ trá» vá»n", "GiÃ¡ trá» hiá»n táº¡i",
+            "Ma", "GiÃ¡ vá»n", "Close", "Sá» lÆ°á»£ng",
+            "GiÃ¡ trá» vá»n", "GiÃ¡ trá» hien tai",
             "LÃ£i/Lá» %", "LÃ£i/Lá» tiá»n",
-            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "RSI",
+            "Signal", "Chien luoc", "Score", "RSI",
             "Risk Status", "Risk Reason", "Action",
             "HÃ nh Äá»ng", "Cáº£nh bÃ¡o"
         ]
@@ -1472,7 +1511,7 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     else:
         tracker = pd.DataFrame([{
-            "MÃ£": "NO_PORTFOLIO",
+            "Ma": "NO_PORTFOLIO",
             "HÃ nh Äá»ng": "ChÆ°a cÃ³ portfolio_current.csv",
             "Cáº£nh bÃ¡o": "â ï¸ CHÆ¯A CÃ DANH Má»¤C"
         }])
@@ -1483,10 +1522,10 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     if not buy_plan.empty:
         buy_plan["HÃ nh Äá»ng"] = "MUA Má»I"
-        buy_plan["LÃ½ do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
+        buy_plan["Ly do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
         keep_buy = [
-            "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "LÃ½ do",
-            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
+            "Ngay", "Ma", "HÃ nh Äá»ng", "Ly do",
+            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
             "RSI", "Close", "RS20", "Volume Ratio",
             "ADX", "ATR %", "Risk Status"
         ]
@@ -1496,14 +1535,14 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     hold_plan = tracker.copy()
 
-    if not hold_plan.empty and "MÃ£" in hold_plan.columns:
-        hold_plan["NgÃ y"] = now_vietnam().strftime("%Y-%m-%d")
-        hold_plan["LÃ½ do"] = "Theo dÃµi danh má»¥c hiá»n cÃ³"
+    if not hold_plan.empty and "Ma" in hold_plan.columns:
+        hold_plan["Ngay"] = now_vietnam().strftime("%Y-%m-%d")
+        hold_plan["Ly do"] = "Theo dÃµi danh má»¥c hiá»n cÃ³"
 
         keep_hold = [
-            "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "Cáº£nh bÃ¡o", "LÃ½ do",
+            "Ngay", "Ma", "HÃ nh Äá»ng", "Cáº£nh bÃ¡o", "Ly do",
             "LÃ£i/Lá» %", "LÃ£i/Lá» tiá»n",
-            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
+            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
             "RSI", "Close", "Risk Status", "Risk Reason"
         ]
         hold_plan = hold_plan[[c for c in keep_hold if c in hold_plan.columns]]
@@ -1514,10 +1553,10 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     if action_plan.empty:
         action_plan = pd.DataFrame([{
-            "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
-            "MÃ£": "NO_ACTION",
+            "Ngay": now_vietnam().strftime("%Y-%m-%d"),
+            "Ma": "NO_ACTION",
             "HÃ nh Äá»ng": "KHÃNG LÃM GÃ",
-            "LÃ½ do": "KhÃ´ng cÃ³ tÃ­n hiá»u mua vÃ  chÆ°a cÃ³ danh má»¥c"
+            "Ly do": "KhÃ´ng cÃ³ tÃ­n hiá»u mua vÃ  chÆ°a cÃ³ danh má»¥c"
         }])
 
     action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
@@ -1628,7 +1667,7 @@ def get_price_data_date(df):
             return now_vietnam().strftime("%Y-%m-%d")
 
         last = df.iloc[-1]
-        for col in ["time", "date", "ngay", "NgÃ y"]:
+        for col in ["time", "date", "ngay", "Ngay"]:
             if col in df.columns:
                 val = last.get(col)
                 if pd.notna(val):
@@ -1646,8 +1685,8 @@ def get_report_data_date(*dfs):
     dates = []
     for df in dfs:
         try:
-            if df is not None and not df.empty and "NgÃ y" in df.columns:
-                s = pd.to_datetime(df["NgÃ y"], errors="coerce").dropna()
+            if df is not None and not df.empty and "Ngay" in df.columns:
+                s = pd.to_datetime(df["Ngay"], errors="coerce").dropna()
                 if not s.empty:
                     dates.append(s.max())
         except Exception:
@@ -1777,7 +1816,7 @@ def build_simple_reason(row):
     vol = safe_float(row.get("Volume Ratio"), 0)
     atr = safe_float(row.get("ATR %"), 0)
     risk = str(row.get("Risk Status", "")).upper()
-    strategy = str(row.get("Strategy", row.get("Chiáº¿n lÆ°á»£c", ""))).upper()
+    strategy = str(row.get("Strategy", row.get("Chien luoc", ""))).upper()
 
     if risk == "FAIL":
         parts.append("Risk FAIL")
@@ -2045,9 +2084,9 @@ def make_dashboard_view(df, kind=""):
     view = df.copy()
 
     rename = {
-        "NgÃ y": "Date",
-        "MÃ£": "Code",
-        "Chiáº¿n lÆ°á»£c": "Strategy",
+        "Ngay": "Date",
+        "Ma": "Code",
+        "Chien luoc": "Strategy",
         "AI Confidence": "AI",
         "Win Probability": "Win%",
         "OOS Win Probability": "OOS%",
@@ -2120,60 +2159,52 @@ def make_dashboard_view(df, kind=""):
 # ================================
 
 def v12_clean(x, limit=160):
-    if x is None:
-        return ""
-    try:
-        if pd.isna(x):
-            return ""
-    except Exception:
-        pass
-    s = fix_mojibake_text(str(x)).replace("\n", " ").replace("\r", " ").strip()
-    if s.lower() in ["nan", "none", ""]:
-        return ""
-    s = re.sub(r"\s+", " ", s).strip()
+    s = vn_no_accent(x)
     return s[:limit]
 
 
 
 def v12_action_label(row):
-    raw = str(row.get("Final Action", row.get("AI Action", row.get("Action", ""))).upper())
+    raw = vn_no_accent(row.get("Final Action", row.get("AI Action", row.get("Action", "")))).upper()
     risk = str(row.get("Risk Status", "")).upper()
     score = safe_float(row.get("Score"), 0)
     ai = safe_float(row.get("AI Confidence"), score)
     rsi = safe_float(row.get("RSI"), 0)
 
     if risk == "FAIL" or "SKIP" in raw or "BO QUA" in raw:
-        return "Bá» QUA / SKIP"
+        return "BO QUA / SKIP"
     if "PRIORITY" in raw or "UU TIEN" in raw or (score >= 90 and ai >= 85 and rsi < 78):
-        return "MUA Æ¯U TIÃN / PRIORITY BUY"
+        return "MUA UU TIEN / PRIORITY BUY"
     if "PROBE" in raw or "BUY NOW" in raw or "MUA" in raw:
-        return "MUA THÄM DÃ / PROBE BUY"
+        return "MUA THAM DO / PROBE BUY"
     if "PULLBACK" in raw:
-        return "CHá» PULLBACK / WAIT PULLBACK"
+        return "CHO PULLBACK / WAIT PULLBACK"
     if "WAIT" in raw or "CHO" in raw:
-        return "CHá» XÃC NHáº¬N / WAIT CONFIRM"
+        return "CHO XAC NHAN / WAIT CONFIRM"
     if "WATCH" in raw or "THEO" in raw:
-        return "THEO DÃI / WATCH"
-    return v12_clean(raw, 60) or "THEO DÃI / WATCH"
+        return "THEO DOI / WATCH"
+    return raw[:60] or "THEO DOI / WATCH"
+
 
 
 def v12_regime_label(regime):
-    s = v12_clean(regime, 80).upper()
+    s = vn_no_accent(regime).upper()
     if "UPTREND" in s:
-        return "TÄNG Máº NH / UPTREND"
+        return "TANG MANH / UPTREND"
     if "POSITIVE" in s:
-        return "TÃCH Cá»°C / POSITIVE"
+        return "TICH CUC / POSITIVE"
     if "SIDEWAY" in s:
-        return "ÄI NGANG / SIDEWAY"
+        return "DI NGANG / SIDEWAY"
     if "DOWNTREND" in s:
-        return "GIáº¢M / DOWNTREND"
+        return "GIAM / DOWNTREND"
     if "HIGH_VOL_UP" in s:
-        return "BIáº¾N Äá»NG CAO - TÄNG / HIGH VOL UP"
+        return "BIEN DONG CAO - TANG / HIGH VOL UP"
     if "HIGH_VOL_DOWN" in s:
-        return "BIáº¾N Äá»NG CAO - GIáº¢M / HIGH VOL DOWN"
+        return "BIEN DONG CAO - GIAM / HIGH VOL DOWN"
     if "WEAK" in s:
-        return "Yáº¾U / WEAK"
+        return "YEU / WEAK"
     return s
+
 
 
 def v12_main_reason(row):
@@ -2185,50 +2216,50 @@ def v12_main_reason(row):
     vol = safe_float(row.get("Volume Ratio"), 0)
     atr = safe_float(row.get("ATR %"), 0)
     risk = str(row.get("Risk Status", "")).upper()
-    strategy = str(row.get("Chiáº¿n lÆ°á»£c", row.get("Strategy", ""))).upper()
+    strategy = str(row.get("Chien luoc", row.get("Strategy", ""))).upper()
 
     if risk == "FAIL":
         parts.append("Risk FAIL")
     if score >= 85:
-        parts.append("Äiá»m ká»¹ thuáº­t cao")
+        parts.append("diem ky thuat cao")
     elif score >= 70:
-        parts.append("Äiá»m ká»¹ thuáº­t khÃ¡")
+        parts.append("diem ky thuat kha")
     else:
-        parts.append("Äiá»m ká»¹ thuáº­t tháº¥p")
+        parts.append("diem ky thuat thap")
 
     if ai >= 85:
-        parts.append("AI máº¡nh")
+        parts.append("AI manh")
     elif ai >= 70:
-        parts.append("AI khÃ¡")
+        parts.append("AI kha")
 
     if rs20 > 5:
-        parts.append("RS20 máº¡nh")
+        parts.append("RS20 manh")
     elif rs20 > 0:
-        parts.append("RS20 dÆ°Æ¡ng")
+        parts.append("RS20 duong")
     elif rs20 <= -8:
-        parts.append("RS20 yáº¿u")
+        parts.append("RS20 yeu")
 
     if vol >= 1.5:
-        parts.append("volume xÃ¡c nháº­n máº¡nh")
+        parts.append("volume xac nhan manh")
     elif vol >= 1.1:
-        parts.append("volume tá»t")
+        parts.append("volume tot")
     elif vol < 0.8:
-        parts.append("volume yáº¿u")
+        parts.append("volume yeu")
 
     if rsi >= 78:
-        parts.append("RSI nÃ³ng")
+        parts.append("RSI nong")
     elif 45 <= rsi <= 72:
-        parts.append("RSI há»£p lÃ½")
+        parts.append("RSI hop ly")
 
     if atr > 8:
         parts.append("ATR cao")
     elif atr <= 5:
-        parts.append("biáº¿n Äá»ng tháº¥p")
+        parts.append("bien dong thap")
 
     if "MOMENTUM" in strategy:
         parts.append("momentum")
     elif "BOTTOM" in strategy:
-        parts.append("báº¯t ÄÃ¡y/há»i phá»¥c")
+        parts.append("bat day/hoi phuc")
 
     return "; ".join(parts[:5])
 
@@ -2270,7 +2301,7 @@ def v12_position_size(row):
 
 
 def v12_risk_profile(row):
-    strategy = str(row.get("Chiáº¿n lÆ°á»£c", row.get("Strategy", ""))).upper()
+    strategy = str(row.get("Chien luoc", row.get("Strategy", ""))).upper()
     rsi = safe_float(row.get("RSI"), 0)
     atr = safe_float(row.get("ATR %"), 0)
     rs20 = safe_float(row.get("RS20"), 0)
@@ -2291,16 +2322,16 @@ def v12_trust_label(row):
     reg = safe_float(row.get("Regime Win Probability"), np.nan)
     reg_n = safe_float(row.get("Regime Samples"), 0)
     if pd.isna(oos) or oos_n < 5:
-        return "THáº¤P - chÆ°a Äá»§ OOS"
+        return "THAP - chua du OOS"
     if oos >= 60 and oos_n >= 10:
         if not pd.isna(reg) and reg >= 55 and reg_n >= 5:
             return "CAO / HIGH"
-        return "KHÃ CAO / MED-HIGH"
+        return "KHA CAO / MED-HIGH"
     if oos >= 52 and oos_n >= 5:
-        return "TRUNG BÃNH / MEDIUM"
+        return "TRUNG BINH / MEDIUM"
     if oos < 45 and oos_n >= 5:
-        return "THáº¤P - OOS yáº¿u"
-    return "THáº¤P Vá»ªA / LOW-MED"
+        return "THAP - OOS yeu"
+    return "THAP VUA / LOW-MED"
 
 
 def v12_evidence(row):
@@ -2311,11 +2342,11 @@ def v12_evidence(row):
     win = safe_float(row.get("Win Probability"), np.nan)
     parts = []
     if not pd.isna(oos) and oos_n > 0:
-        parts.append(f"OOS {oos:.0f}% ({int(oos_n)} máº«u)")
+        parts.append(f"OOS {oos:.0f}% ({int(oos_n)} mau)")
     else:
-        parts.append("OOS chÆ°a Äá»§")
+        parts.append("OOS chua du")
     if not pd.isna(reg) and reg_n > 0:
-        parts.append(f"Regime {reg:.0f}% ({int(reg_n)} máº«u)")
+        parts.append(f"Regime {reg:.0f}% ({int(reg_n)} mau)")
     if not pd.isna(win):
         parts.append(f"History {win:.0f}%")
     return " | ".join(parts)
@@ -2334,7 +2365,7 @@ def v12_expected_return(row):
         p5 = round(base * 1.0, 2)
     if pd.isna(p10):
         p10 = round(base * 1.4, 2)
-    return f"+3 phiÃªn: {p3:.1f}% | +5 phiÃªn: {p5:.1f}% | +10 phiÃªn: {p10:.1f}%"
+    return f"+3 phien: {p3:.1f}% | +5 phien: {p5:.1f}% | +10 phien: {p10:.1f}%"
 
 
 def v12_expected_drawdown(row):
@@ -2349,16 +2380,16 @@ def v12_add_columns(df):
     if df is None or df.empty:
         return df
     out = df.copy()
-    out["Khuyáº¿n nghá»"] = out.apply(v12_action_label, axis=1)
-    out["LÃ½ do chÃ­nh"] = out.apply(v12_main_reason, axis=1)
-    out["VÃ¹ng mua"] = out.apply(v12_buy_zone, axis=1)
-    out["Cáº¯t lá»"] = out.apply(v12_stop_loss, axis=1)
-    out["Tá»· trá»ng gá»£i Ã½"] = out.apply(v12_position_size, axis=1)
-    out["Há» sÆ¡ rá»§i ro"] = out.apply(v12_risk_profile, axis=1)
-    out["Äá» tin cáº­y"] = out.apply(v12_trust_label, axis=1)
-    out["Báº±ng chá»©ng AI"] = out.apply(v12_evidence, axis=1)
-    out["Dá»± bÃ¡o LN"] = out.apply(v12_expected_return, axis=1)
-    out["Rá»§i ro giáº£m"] = out.apply(v12_expected_drawdown, axis=1)
+    out["Khuyen nghi"] = out.apply(v12_action_label, axis=1)
+    out["Ly do chinh"] = out.apply(v12_main_reason, axis=1)
+    out["Vung mua"] = out.apply(v12_buy_zone, axis=1)
+    out["Cat lo"] = out.apply(v12_stop_loss, axis=1)
+    out["Ty trong goi y"] = out.apply(v12_position_size, axis=1)
+    out["Ho so rui ro"] = out.apply(v12_risk_profile, axis=1)
+    out["Do tin cay"] = out.apply(v12_trust_label, axis=1)
+    out["Bang chung AI"] = out.apply(v12_evidence, axis=1)
+    out["Du bao LN"] = out.apply(v12_expected_return, axis=1)
+    out["Rui ro giam"] = out.apply(v12_expected_drawdown, axis=1)
     return out
 
 
@@ -2371,13 +2402,13 @@ def v12_table(df, cols, top=20):
         "Win Probability": "Win%",
         "OOS Win Probability": "OOS%",
         "Regime Win Probability": "Regime%",
-        "Market Regime Now": "Tráº¡ng thÃ¡i TT",
+        "Market Regime Now": "Trang thai TT",
         "Volume Ratio": "Vol Ratio",
         "Risk Status": "Risk",
     }
     view = view.rename(columns={k: v for k, v in rename.items() if k in view.columns})
-    if "Tráº¡ng thÃ¡i TT" in view.columns:
-        view["Tráº¡ng thÃ¡i TT"] = view["Tráº¡ng thÃ¡i TT"].apply(v12_regime_label)
+    if "Trang thai TT" in view.columns:
+        view["Trang thai TT"] = view["Trang thai TT"].apply(v12_regime_label)
     selected = [c for c in cols if c in view.columns]
     if selected:
         view = view[selected]
@@ -2392,22 +2423,22 @@ def v12_market_context(combined, market_ret20=0):
     regime_label = v12_regime_label(regime)
     ret20 = safe_float(market_ret20, 0)
     if "UPTREND" in str(regime).upper() or ret20 > 3:
-        risk = "TÃ­ch cá»±c, cÃ³ thá» mua thÄm dÃ²"
-        cash = "Giá»¯ tiá»n máº·t 30-50%"
+        risk = "Tich cuc, co the mua tham do"
+        cash = "Giu tien mat 30-50%"
     elif "SIDEWAY" in str(regime).upper():
-        risk = "Äi ngang, trÃ¡nh mua Äuá»i"
-        cash = "Giá»¯ tiá»n máº·t 50-70%"
+        risk = "Di ngang, tranh mua duoi"
+        cash = "Giu tien mat 50-70%"
     elif "DOWN" in str(regime).upper() or ret20 < -3:
-        risk = "Rá»§i ro cao, Æ°u tiÃªn phÃ²ng thá»§"
-        cash = "Giá»¯ tiá»n máº·t 70-90%"
+        risk = "Rui ro cao, uu tien phong thu"
+        cash = "Giu tien mat 70-90%"
     else:
-        risk = "Trung tÃ­nh"
-        cash = "Giá»¯ tiá»n máº·t 50-60%"
+        risk = "Trung tinh"
+        cash = "Giu tien mat 50-60%"
     return pd.DataFrame([{
-        "Tráº¡ng thÃ¡i thá» trÆ°á»ng": regime_label,
+        "Trang thai thi truong": regime_label,
         "VNINDEX Ret20": round(ret20, 2),
-        "Nháº­n Äá»nh": risk,
-        "Gá»£i Ã½ tiá»n máº·t": cash
+        "Nhan dinh": risk,
+        "Goi y tien mat": cash
     }])
 
 
@@ -2417,9 +2448,9 @@ def v12_ai_summary_table(wf_stats, back_wf_stats, regime_stats, pattern_stats):
     live_hist = safe_read_csv(SIGNAL_HISTORY_PATH) if "SIGNAL_HISTORY_PATH" in globals() else pd.DataFrame()
 
     def date_range(df):
-        if df is None or df.empty or "NgÃ y" not in df.columns:
+        if df is None or df.empty or "Ngay" not in df.columns:
             return "", ""
-        s = pd.to_datetime(df["NgÃ y"], errors="coerce").dropna()
+        s = pd.to_datetime(df["Ngay"], errors="coerce").dropna()
         if s.empty:
             return "", ""
         return s.min().strftime("%Y-%m-%d"), s.max().strftime("%Y-%m-%d")
@@ -2434,10 +2465,10 @@ def v12_ai_summary_table(wf_stats, back_wf_stats, regime_stats, pattern_stats):
     def summarize(name, df, prob_col, logic, data_from="", data_to="", test_from="", test_to="", train_window="", test_window=""):
         if df is None or df.empty or prob_col not in df.columns:
             rows.append({
-                "Module": name, "CÃ¡ch test": logic, "Dá»¯ liá»u tá»«": data_from, "Dá»¯ liá»u Äáº¿n": data_to,
+                "Module": name, "Cach test": logic, "Du lieu tu": data_from, "Du lieu den": data_to,
                 "Test tá»«": test_from, "Test Äáº¿n": test_to, "Train": train_window, "Test": test_window,
-                "Rows": 0, "CÃ³ dá»¯ liá»u": 0, "Win TB%": "", "Pattern máº¡nh": 0, "Pattern yáº¿u": 0,
-                "Ã nghÄ©a": "ChÆ°a cÃ³ dá»¯ liá»u"
+                "Rows": 0, "Co du lieu": 0, "Win TB%": "", "Pattern manh": 0, "Pattern yeu": 0,
+                "Y nghia": "ChÆ°a cÃ³ dá»¯ liá»u"
             })
             return
         d = df.copy()
@@ -2445,19 +2476,19 @@ def v12_ai_summary_table(wf_stats, back_wf_stats, regime_stats, pattern_stats):
         valid = d[d[prob_col].notna()]
         avg = valid[prob_col].mean() if not valid.empty else np.nan
         rows.append({
-            "Module": name, "CÃ¡ch test": logic, "Dá»¯ liá»u tá»«": data_from, "Dá»¯ liá»u Äáº¿n": data_to,
+            "Module": name, "Cach test": logic, "Du lieu tu": data_from, "Du lieu den": data_to,
             "Test tá»«": test_from, "Test Äáº¿n": test_to, "Train": train_window, "Test": test_window,
-            "Rows": len(d), "CÃ³ dá»¯ liá»u": len(valid),
+            "Rows": len(d), "Co du lieu": len(valid),
             "Win TB%": round(avg, 1) if not pd.isna(avg) else "",
-            "Pattern máº¡nh": int((valid[prob_col] >= 60).sum()) if not valid.empty else 0,
-            "Pattern yáº¿u": int((valid[prob_col] < 45).sum()) if not valid.empty else 0,
-            "Ã nghÄ©a": "CÃ³ thá» tham kháº£o" if len(valid) else "ChÆ°a Äá»§ máº«u"
+            "Pattern manh": int((valid[prob_col] >= 60).sum()) if not valid.empty else 0,
+            "Pattern yeu": int((valid[prob_col] < 45).sum()) if not valid.empty else 0,
+            "Y nghia": "Co the tham khao" if len(valid) else "ChÆ°a Äá»§ mau"
         })
 
-    summarize("Walk-forward live", wf_stats, "OOS Win Probability", "Live: há»c Äoáº¡n trÆ°á»c, test Äoáº¡n sau", live_from, live_to, live_from, live_to, f"{WF_TRAIN_DAYS} ngÃ y", f"{WF_TEST_DAYS} ngÃ y")
-    summarize("Backfill OOS 3M", back_wf_stats, "OOS Win Probability", "Má»i block 3 thÃ¡ng: 80% Äáº§u há»c, 20% cuá»i test", back_from, back_to, test_from, test_to, "80% Äáº§u block", "20% cuá»i block")
-    summarize("Pattern history", pattern_stats, "Win Probability", "Thá»ng kÃª win/loss theo pattern", live_from, live_to, "", "", "history cÃ³ outcome", "-")
-    summarize("Regime stats", regime_stats, "Regime Win Probability", "Pattern theo tráº¡ng thÃ¡i thá» trÆ°á»ng, cÃ³ time-decay", back_from or live_from, back_to or live_to, "", "", f"decay {DECAY_HALFLIFE_DAYS} ngÃ y", "regime hiá»n táº¡i")
+    summarize("Walk-forward live", wf_stats, "OOS Win Probability", "Live: hoc doan truoc, test doan sau", live_from, live_to, live_from, live_to, f"{WF_TRAIN_DAYS} ngay", f"{WF_TEST_DAYS} ngay")
+    summarize("Backfill OOS 3M", back_wf_stats, "OOS Win Probability", "Moi block 3 thang: 80% Äáº§u há»c, 20% cuá»i test", back_from, back_to, test_from, test_to, "80% dau block", "20% cuoi block")
+    summarize("Pattern history", pattern_stats, "Win Probability", "Thong ke win/loss theo pattern", live_from, live_to, "", "", "history cÃ³ outcome", "-")
+    summarize("Regime stats", regime_stats, "Regime Win Probability", "Pattern theo trang thai thi truong, co time-decay", back_from or live_from, back_to or live_to, "", "", f"decay {DECAY_HALFLIFE_DAYS} ngay", "regime hien tai")
     return pd.DataFrame(rows)
 
 
@@ -2467,25 +2498,25 @@ def v12_top_patterns(wf_stats, back_wf_stats):
         if df is None or df.empty or "OOS Win Probability" not in df.columns or "OOS Samples" not in df.columns:
             continue
         d = df.copy()
-        d["Nguá»n"] = source
+        d["Nguon"] = source
         d["OOS Win Probability"] = pd.to_numeric(d["OOS Win Probability"], errors="coerce")
         d["OOS Samples"] = pd.to_numeric(d["OOS Samples"], errors="coerce").fillna(0)
         frames.append(d)
     if not frames:
-        return pd.DataFrame([{"Pattern": "ChÆ°a cÃ³ OOS data", "Äá» tin cáº­y": "Tháº¥p"}])
+        return pd.DataFrame([{"Pattern": "ChÆ°a cÃ³ OOS data", "Do tin cay": "Tháº¥p"}])
     x = pd.concat(frames, ignore_index=True).dropna(subset=["OOS Win Probability"])
     x = x[x["OOS Samples"] >= 5]
     if x.empty:
-        return pd.DataFrame([{"Pattern": "CÃ³ OOS nhÆ°ng chÆ°a Äá»§ 5 máº«u", "Äá» tin cáº­y": "Tháº¥p"}])
+        return pd.DataFrame([{"Pattern": "CÃ³ OOS nhÆ°ng chÆ°a Äá»§ 5 mau", "Do tin cay": "Tháº¥p"}])
     x["Rank"] = x["OOS Win Probability"] + np.minimum(x["OOS Samples"], 50) * 0.2
     x = x.sort_values("Rank", ascending=False).drop_duplicates("Pattern Key", keep="first").head(15)
     rows = []
     for _, r in x.iterrows():
         rows.append({
             "Pattern": v12_clean(r.get("Pattern Key", ""), 80),
-            "Nguá»n": r.get("Nguá»n", ""),
+            "Nguon": r.get("Nguon", ""),
             "OOS Win%": round(safe_float(r.get("OOS Win Probability"), np.nan), 1),
-            "OOS máº«u": int(safe_float(r.get("OOS Samples"), 0)),
+            "OOS mau": int(safe_float(r.get("OOS Samples"), 0)),
             "Avg +5D": round(safe_float(r.get("OOS Avg Ret+5D %"), np.nan), 2) if not pd.isna(safe_float(r.get("OOS Avg Ret+5D %"), np.nan)) else "",
             "Avg +10D": round(safe_float(r.get("OOS Avg Ret+10D %"), np.nan), 2) if not pd.isna(safe_float(r.get("OOS Avg Ret+10D %"), np.nan)) else ""
         })
@@ -2502,7 +2533,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         source_df = combined.copy()
 
     try:
-        total_codes = len(set(combined["MÃ£"].dropna().astype(str)) & set(UNIVERSE))
+        total_codes = len(set(combined["Ma"].dropna().astype(str)) & set(UNIVERSE))
     except Exception:
         total_codes = 0
 
@@ -2512,16 +2543,16 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         current_regime = ""
 
     lines = [
-        "BÃO CÃO GIAO Dá»CH V12 PRO FINAL",
-        f"Thá»i gian cháº¡y: {run_time}",
-        f"NgÃ y dá»¯ liá»u: {data_date}",
-        f"PhiÃªn báº£n: {SYSTEM_VERSION}",
+        "BAO CAO GIAO DICH V12 PRO FINAL",
+        f"Thoi gian chay: {run_time}",
+        f"Ngay dá»¯ liá»u: {data_date}",
+        f"Phien ban: {SYSTEM_VERSION}",
     ]
     if current_regime:
-        lines.append(f"Tráº¡ng thÃ¡i thá» trÆ°á»ng: {v12_regime_label(current_regime)}")
+        lines.append(f"Trang thai thi truong: {v12_regime_label(current_regime)}")
     lines.append(f"Coverage: {total_codes}/{len(UNIVERSE)} mÃ£")
     lines.append("")
-    lines.append("Ghi chÃº: OOS = kiá»m Äá»nh ngoÃ i máº«u, pháº§n test khÃ´ng dÃ¹ng Äá» há»c.")
+    lines.append("Ghi chu: OOS = kiem dinh ngoai mau, pháº§n test khÃ´ng dÃ¹ng Äá» há»c.")
 
     if source_df is None or source_df.empty:
         lines.append("KhÃ´ng cÃ³ tÃ­n hiá»u hÃ´m nay.")
@@ -2535,20 +2566,20 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         source_df = source_df.sort_values("Score", ascending=False)
 
     lines.append("")
-    lines.append("KHUYáº¾N NGHá» CHI TIáº¾T:")
+    lines.append("KHUYEN NGHI CHI TIET:")
 
     for _, r in source_df.head(7).iterrows():
-        code = str(r.get("MÃ£", r.get("Ma", ""))).strip()
+        code = str(r.get("Ma", r.get("Ma", ""))).strip()
         lines.append("")
         lines.append(f"{code} | {v12_action_label(r)}")
-        lines.append(f"- LÃ½ do: {v12_main_reason(r)}")
-        lines.append(f"- VÃ¹ng mua: {v12_buy_zone(r)} | Cáº¯t lá»: {v12_stop_loss(r)} | Tá»· trá»ng: {v12_position_size(r)}")
+        lines.append(f"- Ly do: {v12_main_reason(r)}")
+        lines.append(f"- Vung mua: {v12_buy_zone(r)} | Cat lo: {v12_stop_loss(r)} | Ty trong: {v12_position_size(r)}")
         lines.append(f"- AI/Trust: AI {safe_float(r.get('AI Confidence'), safe_float(r.get('Score'), 0)):.0f} | {v12_trust_label(r)}")
-        lines.append(f"- Báº±ng chá»©ng: {v12_evidence(r)}")
-        lines.append(f"- Dá»± bÃ¡o: {v12_expected_return(r)} | Rá»§i ro giáº£m: {v12_expected_drawdown(r)}")
+        lines.append(f"- Bang chung: {v12_evidence(r)}")
+        lines.append(f"- Du bao: {v12_expected_return(r)} | Rui ro giam: {v12_expected_drawdown(r)}")
 
     lines.append("")
-    lines.append("File dashboard.html ÄÃ£ gá»­i kÃ¨m Äá» xem Äáº§y Äá»§ 8 pháº§n.")
+    lines.append("File dashboard.html da gui kem de xem day du 8 phan.")
     return "\n".join(lines)
 
 
@@ -2689,7 +2720,7 @@ def save_backfill_state(next_start):
 
 def classify_backfill_row(row, market_ret20=0):
     """
-    Táº¡o láº¡i tÃ­n hiá»u quÃ¡ khá»© báº±ng chÃ­nh logic hiá»n táº¡i.
+    Táº¡o láº¡i tÃ­n hiá»u quÃ¡ khá»© báº±ng chÃ­nh logic hien tai.
     ÄÃ¢y lÃ  backfill giáº£ láº­p, khÃ´ng dÃ¹ng tÆ°Æ¡ng lai Äá» táº¡o tÃ­n hiá»u.
     """
     close = safe_float(row.get("close"))
@@ -2727,7 +2758,7 @@ def classify_backfill_row(row, market_ret20=0):
     r["Momentum Score"] = score_momentum(r)
     r["Bottom Score"] = score_bottom(r)
     r["Score"] = max(r["Momentum Score"], r["Bottom Score"])
-    r["Chiáº¿n lÆ°á»£c"] = classify_strategy(r)
+    r["Chien luoc"] = classify_strategy(r)
 
     risk_status, risk_reason = risk_filter(r)
     r["Risk Status"] = risk_status
@@ -2920,7 +2951,7 @@ def compute_recent_decay_weight(date_value):
 
 def build_regime_stats(hist):
     """
-    Thá»ng kÃª hiá»u quáº£ pattern theo regime, cÃ³ time-decay.
+    Thong ke hiá»u quáº£ pattern theo regime, co time-decay.
     """
     if hist is None or hist.empty:
         return pd.DataFrame()
@@ -2930,8 +2961,8 @@ def build_regime_stats(hist):
     if "Pattern Key" not in h.columns or "Market Regime" not in h.columns:
         return pd.DataFrame()
 
-    h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
-    h = h.dropna(subset=["NgÃ y", "Pattern Key", "Market Regime"])
+    h["Ngay"] = pd.to_datetime(h["Ngay"], errors="coerce")
+    h = h.dropna(subset=["Ngay", "Pattern Key", "Market Regime"])
     h["Outcome"] = h.get("Outcome", "PENDING").astype(str)
     h = h[~h["Outcome"].isin(["PENDING", "", "nan"])].copy()
 
@@ -2939,7 +2970,7 @@ def build_regime_stats(hist):
         return pd.DataFrame()
 
     h["Win Flag"] = h["Outcome"].isin(["WIN", "WIN_TP"]).astype(int)
-    h["Decay Weight"] = h["NgÃ y"].apply(compute_recent_decay_weight)
+    h["Decay Weight"] = h["Ngay"].apply(compute_recent_decay_weight)
 
     rows = []
     for (regime, key), g in h.groupby(["Market Regime", "Pattern Key"]):
@@ -2971,7 +3002,7 @@ def build_regime_stats(hist):
 
 def apply_regime_decay_filter(combined, regime_stats, current_regime):
     """
-    Final filter V9: Äiá»u chá»nh Final Action theo regime hiá»n táº¡i + time-decay stats.
+    Final filter V9: Äiá»u chá»nh Final Action theo regime hien tai + time-decay stats.
     """
     if combined is None or combined.empty:
         return combined
@@ -3017,7 +3048,7 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
 
         p = safe_float(stat.get("Regime Win Probability"), BASE_WIN_PROB)
         n = int(safe_float(stat.get("Regime Samples"), 0))
-        note = f"{current_regime}: {n} máº«u, win decay ~{p:.1f}%"
+        note = f"{current_regime}: {n} mau, win decay ~{p:.1f}%"
 
         if n >= MIN_PATTERN_SAMPLES and p >= 62:
             conf += REGIME_BONUS_STRONG
@@ -3036,7 +3067,7 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
                 final_action = "Bá» QUA"
 
         elif n < MIN_PATTERN_SAMPLES:
-            note += " | Ã­t máº«u regime, khÃ´ng nÃ¢ng máº¡nh"
+            note += " | Ã­t mau regime, khÃ´ng nÃ¢ng máº¡nh"
             if final_action == "MUA Æ¯U TIÃN":
                 final_action = "MUA THÄM DÃ"
 
@@ -3060,7 +3091,7 @@ def build_backfill_history_from_cache(market_ret20=0):
     Backfill lá»ch sá»­ tá»« cache_stock:
     - Chia tá»«ng block thá»i gian.
     - Trong má»i ná»­a nÄm: 80% Äáº§u TRAIN, 20% cuá»i TEST.
-    - TEST ÄÆ°á»£c dÃ¹ng Äá» ÄÃ¡nh giÃ¡ ngoÃ i máº«u, trÃ¡nh há»c váº¹t.
+    - TEST ÄÆ°á»£c dÃ¹ng Äá» ÄÃ¡nh giÃ¡ ngoÃ i mau, trÃ¡nh há»c váº¹t.
     """
     if not BACKFILL_ENABLED:
         print("Backfill disabled")
@@ -3136,8 +3167,8 @@ def build_backfill_history_from_cache(market_ret20=0):
             split_tag = get_train_test_tag(d, block_start, block_end)
 
             rec = {
-                "NgÃ y": d.strftime("%Y-%m-%d"),
-                "MÃ£": symbol,
+                "Ngay": d.strftime("%Y-%m-%d"),
+                "Ma": symbol,
                 "Run At": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
                 "Market Ret20": round(safe_float(market_ret20, 0), 2),
                 "Market Regime": market_regime,
@@ -3163,9 +3194,9 @@ def build_backfill_history_from_cache(market_ret20=0):
     else:
         hist = new_hist
 
-    if not hist.empty and "NgÃ y" in hist.columns and "MÃ£" in hist.columns:
-        hist = hist.drop_duplicates(subset=["NgÃ y", "MÃ£", "Pattern Key"], keep="last")
-        hist = hist.sort_values(["NgÃ y", "MÃ£"])
+    if not hist.empty and "Ngay" in hist.columns and "Ma" in hist.columns:
+        hist = hist.drop_duplicates(subset=["Ngay", "Ma", "Pattern Key"], keep="last")
+        hist = hist.sort_values(["Ngay", "Ma"])
 
     hist = normalize_outcome_dtype(hist)
     hist.to_csv(BACKFILL_SIGNAL_HISTORY_PATH, index=False, encoding="utf-8-sig")
@@ -3321,7 +3352,7 @@ end_idx = min(start_idx + BATCH_SIZE, len(UNIVERSE))
 batch = UNIVERSE[start_idx:end_idx]
 
 print(f"ð Batch: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
-print("ð MÃ£:", batch)
+print("ð Ma:", batch)
 
 market_ret20 = get_market_ret20()
 current_market_regime = get_market_regime_from_cache(market_ret20)
@@ -3350,19 +3381,19 @@ for i, symbol in enumerate(batch, 1):
 new_df = pd.DataFrame(rows)
 old_df = safe_read_csv(ALL_RESULT_PATH)
 
-if not old_df.empty and "MÃ£" in old_df.columns:
-    old_df = old_df[~old_df["MÃ£"].isin(batch)]
+if not old_df.empty and "Ma" in old_df.columns:
+    old_df = old_df[~old_df["Ma"].isin(batch)]
     combined = pd.concat([old_df, new_df], ignore_index=True)
 else:
     combined = new_df.copy()
 
 if combined.empty:
     combined = pd.DataFrame([{
-        "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
-        "MÃ£": "NO_SIGNAL",
+        "Ngay": now_vietnam().strftime("%Y-%m-%d"),
+        "Ma": "NO_SIGNAL",
         "Close": np.nan,
         "Signal": "NO SIGNAL",
-        "Chiáº¿n lÆ°á»£c": "SYSTEM",
+        "Chien luoc": "SYSTEM",
         "Score": 0,
         "Action": "WAIT",
         "Risk Status": "SYSTEM",
@@ -3371,7 +3402,7 @@ if combined.empty:
         "Version": SYSTEM_VERSION
     }])
 
-needed_cols = ["Risk Status", "Action", "Chiáº¿n lÆ°á»£c", "Score", "MÃ£"]
+needed_cols = ["Risk Status", "Action", "Chien luoc", "Score", "Ma"]
 for col in needed_cols:
     if col not in combined.columns:
         combined[col] = ""
@@ -3411,7 +3442,7 @@ combined.to_csv(ALL_RESULT_PATH, index=False, encoding="utf-8-sig")
 
 # Kiá»m tra nhanh dá»¯ liá»u ÄÃ£ Äá»§ mÃ£ chÆ°a
 try:
-    valid_codes = set(combined["MÃ£"].dropna().astype(str)) & set(UNIVERSE)
+    valid_codes = set(combined["Ma"].dropna().astype(str)) & set(UNIVERSE)
     missing_codes = sorted(set(UNIVERSE) - valid_codes)
     print(f"Coverage: {len(valid_codes)} / {len(UNIVERSE)} mÃ£")
     if missing_codes:
@@ -3422,7 +3453,7 @@ except Exception as e:
     print("â ï¸ KhÃ´ng kiá»m tra ÄÆ°á»£c coverage:", repr(e))
 
 raw_signals = combined[
-    combined["Chiáº¿n lÆ°á»£c"].isin([
+    combined["Chien luoc"].isin([
         "MOMENTUM", "BOTTOM", "MOMENTUM_WATCH", "BOTTOM_WATCH", "WATCH"
     ])
 ].copy()
@@ -3437,10 +3468,10 @@ ai_risk = ai_risk.sort_values("AI Confidence" if "AI Confidence" in ai_risk.colu
 ai_risk.to_csv(AI_RISK_PATH, index=False, encoding="utf-8-sig")
 
 bottom = ai_risk[
-    ai_risk["Chiáº¿n lÆ°á»£c"].isin(["BOTTOM", "BOTTOM_WATCH"])
+    ai_risk["Chien luoc"].isin(["BOTTOM", "BOTTOM_WATCH"])
 ].copy()
 momentum = ai_risk[
-    ai_risk["Chiáº¿n lÆ°á»£c"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
+    ai_risk["Chien luoc"].isin(["MOMENTUM", "MOMENTUM_WATCH"])
 ].copy()
 
 bottom.to_csv(BOTTOM_PATH, index=False, encoding="utf-8-sig")
@@ -3453,16 +3484,16 @@ entry = entry.sort_values("AI Confidence" if "AI Confidence" in entry.columns el
 
 if entry.empty:
     entry = pd.DataFrame([{
-        "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
-        "MÃ£": "NO_SIGNAL",
+        "Ngay": now_vietnam().strftime("%Y-%m-%d"),
+        "Ma": "NO_SIGNAL",
         "Action": "WAIT",
-        "Chiáº¿n lÆ°á»£c": "SYSTEM",
+        "Chien luoc": "SYSTEM",
         "Score": 0,
         "Risk Reason": "KhÃ´ng cÃ³ tÃ­n hiá»u Äáº¡t chuáº©n"
     }])
 else:
     keep = [
-        "NgÃ y", "MÃ£", "Action", "Signal", "Chiáº¿n lÆ°á»£c", "Score",
+        "Ngay", "Ma", "Action", "Signal", "Chien luoc", "Score",
         "Momentum Score", "Bottom Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning", "Risk Status", "Risk Reason",
         "RSI", "Close", "MA5", "MA20", "Ret5 %", "Ret10 %",
         "RS20", "Volume Ratio", "ADX", "ATR %", "Dist MA20 %"
@@ -3479,24 +3510,24 @@ ai_summary_view = v12_ai_summary_table(wf_stats_disp, back_wf_stats_disp, regime
 top_patterns_view = v12_top_patterns(wf_stats_disp, back_wf_stats_disp)
 
 decision_df = v12_add_columns(ai_risk if ai_risk is not None and not ai_risk.empty else entry)
-decision_cols = ["NgÃ y", "MÃ£", "Khuyáº¿n nghá»", "LÃ½ do chÃ­nh", "VÃ¹ng mua", "Cáº¯t lá»", "Tá»· trá»ng gá»£i Ã½", "Há» sÆ¡ rá»§i ro", "Score", "AI Confidence", "RSI", "RS20", "Volume Ratio", "ATR %"]
+decision_cols = ["Ngay", "Ma", "Khuyen nghi", "Ly do chinh", "Vung mua", "Cat lo", "Ty trong goi y", "Ho so rui ro", "Score", "AI Confidence", "RSI", "RS20", "Volume Ratio", "ATR %"]
 decision_view = v12_table(decision_df, decision_cols, top=20)
 
-explain_cols = ["NgÃ y", "MÃ£", "Khuyáº¿n nghá»", "Äá» tin cáº­y", "Báº±ng chá»©ng AI", "LÃ½ do chÃ­nh", "Score", "AI Confidence", "Win Probability", "OOS Win Probability", "Regime Win Probability", "Market Regime Now"]
+explain_cols = ["Ngay", "Ma", "Khuyen nghi", "Do tin cay", "Bang chung AI", "Ly do chinh", "Score", "AI Confidence", "Win Probability", "OOS Win Probability", "Regime Win Probability", "Market Regime Now"]
 explain_view = v12_table(decision_df, explain_cols, top=20)
 
 market_view = v12_market_context(combined, market_ret20)
 
-risk_cols = ["NgÃ y", "MÃ£", "Khuyáº¿n nghá»", "Há» sÆ¡ rá»§i ro", "Cáº¯t lá»", "Tá»· trá»ng gá»£i Ã½", "ATR %", "RSI", "Risk Status"]
+risk_cols = ["Ngay", "Ma", "Khuyen nghi", "Ho so rui ro", "Cat lo", "Ty trong goi y", "ATR %", "RSI", "Risk Status"]
 risk_view = v12_table(decision_df, risk_cols, top=20)
 
-portfolio_view = tracker.head(20).replace({np.nan: ""}) if tracker is not None and not tracker.empty else pd.DataFrame([{"ThÃ´ng tin": "ChÆ°a cÃ³ portfolio_current.csv hoáº·c chÆ°a cÃ³ danh má»¥c"}])
+portfolio_view = tracker.head(20).replace({np.nan: ""}) if tracker is not None and not tracker.empty else pd.DataFrame([{"Thong tin": "Chua co portfolio_current.csv hoac chua co danh muc"}])
 
-forecast_cols = ["NgÃ y", "MÃ£", "Khuyáº¿n nghá»", "Dá»± bÃ¡o LN", "Rá»§i ro giáº£m", "Báº±ng chá»©ng AI", "Äá» tin cáº­y"]
+forecast_cols = ["Ngay", "Ma", "Khuyen nghi", "Du bao LN", "Rui ro giam", "Bang chung AI", "Do tin cay"]
 forecast_view = v12_table(decision_df, forecast_cols, top=20)
 
 telegram_summary_view = pd.DataFrame([{
-    "Ná»i dung": "Telegram gá»­i nháº­n Äá»nh chi tiáº¿t tá»«ng mÃ£: khuyáº¿n nghá», lÃ½ do, vÃ¹ng mua, cáº¯t lá», tá»· trá»ng, báº±ng chá»©ng AI, dá»± bÃ¡o +3/+5/+10 phiÃªn."
+    "Noi dung": "Telegram gui nhan dinh chi tiet tung ma: khuyen nghi, ly do, vung mua, cat lo, ty trong, bang chung AI, du bao +3/+5/+10 phien."
 }])
 
 decision_html = decision_view.to_html(index=False, escape=True)
@@ -3523,48 +3554,48 @@ th, td {{ white-space:normal; vertical-align:top; }}
 </head>
 <body>
 
-<h2>TRUNG TÃM RA QUYáº¾T Äá»NH GIAO Dá»CH V12 PRO</h2>
-<p><b>Thá»i gian cháº¡y:</b> {now_vietnam()}</p>
-<p><b>NgÃ y dá»¯ liá»u:</b> {get_report_data_date(combined, entry, action_plan)}</p>
-<p><b>PhiÃªn báº£n:</b> {SYSTEM_VERSION}</p>
+<h2>TRUNG TAM RA QUYET DINH GIAO DICH V12 PRO</h2>
+<p><b>Thoi gian chay:</b> {now_vietnam()}</p>
+<p><b>Ngay dá»¯ liá»u:</b> {get_report_data_date(combined, entry, action_plan)}</p>
+<p><b>Phien ban:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} -> {end_idx} / {len(UNIVERSE)}</p>
 
 <div class="section-note">
-<b>Ghi chÃº Äá»c nhanh:</b><br>
-- <b>OOS</b> = kiá»m Äá»nh ngoÃ i máº«u, tá»©c pháº§n test khÃ´ng ÄÆ°á»£c dÃ¹ng Äá» há»c.<br>
-- <b>Trust</b> = Äá» tin cáº­y dá»±a trÃªn OOS, sá» máº«u vÃ  regime.<br>
-- <b>VÃ¹ng mua / Cáº¯t lá»</b> lÃ  vÃ¹ng tham kháº£o theo ATR vÃ  giÃ¡ hiá»n táº¡i.
+<b>Ghi chu doc nhanh:</b><br>
+- <b>OOS</b> = kiem dinh ngoai mau, tuc phan test khong duoc dung de hoc.<br>
+- <b>Trust</b> = do tin cay dua tren OOS, so mau va regime.<br>
+- <b>Vung mua / Cat lo</b> la vung tham khao theo ATR va gia hien tai.
 </div>
 
-<h3>1. Báº¢NG RA QUYáº¾T Äá»NH</h3>
-<div class="section-note">Má» pháº§n nÃ y Äáº§u tiÃªn Äá» biáº¿t hÃ´m nay Æ°u tiÃªn mÃ£ nÃ o, mua vÃ¹ng nÃ o, cáº¯t lá» á» ÄÃ¢u.</div>
+<h3>1. BANG RA QUYET DINH</h3>
+<div class="section-note">Mo phan nay dau tien de biet hom nay uu tien ma nao, mua vung nao, cat lo o dau.</div>
 {decision_html}
 
-<h3>2. GIáº¢I THÃCH AI</h3>
-<div class="section-note">Cho biáº¿t vÃ¬ sao AI chá»n/háº¡ mÃ£: Äá» tin cáº­y, báº±ng chá»©ng OOS, regime vÃ  lÃ½ do chÃ­nh.</div>
+<h3>2. GIAI THICH AI</h3>
+<div class="section-note">Cho biet vi sao AI chon/ha ma: do tin cay, bang chung OOS, regime va ly do chinh.</div>
 {explain_html}
 
-<h3>3. KIá»M Äá»NH AI</h3>
-<div class="section-note">Backfill OOS 3M: má»i block 3 thÃ¡ng, 80% Äáº§u dÃ¹ng Äá» há»c, 20% cuá»i dÃ¹ng Äá» test giáº£ láº­p nhÆ° chÆ°a biáº¿t káº¿t quáº£.</div>
+<h3>3. KIEM DINH AI</h3>
+<div class="section-note">Backfill OOS 3M: má»i block 3 thÃ¡ng, 80% dau dung de hoc, 20% cuoi dung de test gia lap nhu chua biet ket qua.</div>
 {test_html}
 
-<h3>3B. TOP PATTERN ÄÃ KIá»M Äá»NH</h3>
+<h3>3B. TOP PATTERN DA KIEM DINH</h3>
 {patterns_html}
 
-<h3>4. Bá»I Cáº¢NH THá» TRÆ¯á»NG</h3>
+<h3>4. BOI CANH THI TRUONG</h3>
 {market_html}
 
-<h3>5. QUáº¢N TRá» Rá»¦I RO</h3>
+<h3>5. QUAN TRI RUI RO</h3>
 {risk_html}
 
-<h3>6. THEO DÃI DANH Má»¤C</h3>
+<h3>6. THEO DOI DANH MUC</h3>
 {portfolio_html}
 
-<h3>7. Dá»° BÃO Lá»¢I NHUáº¬N Ká»² Vá»NG</h3>
-<div class="section-note">Dá»± bÃ¡o +3/+5/+10 phiÃªn dá»±a trÃªn pattern, OOS náº¿u cÃ³; náº¿u chÆ°a cÃ³ OOS thÃ¬ dÃ¹ng Æ°á»c lÆ°á»£ng báº£o thá»§ tá»« Score vÃ  AI.</div>
+<h3>7. DU BAO LOI NHUAN KY VONG</h3>
+<div class="section-note">Du bao +3/+5/+10 phien dua tren pattern, OOS neu co; neu chua co OOS thi dung uoc luong bao thu tu Score va AI.</div>
 {forecast_html}
 
-<h3>8. BÃO CÃO TELEGRAM / TÃM Táº®T HÃM NAY</h3>
+<h3>8. BAO CAO TELEGRAM / TOM TAT HOM NAY</h3>
 {telegram_html}
 
 </body>
