@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Trading Dashboard</title>
+<title>V12 Pro Trading Dashboard</title>
 
 <style>
 body {
@@ -42,1852 +42,1217 @@ tr:nth-child(odd) {
 }
 </style>
 
+<style>
+.section-note { background:#151a24; border:1px solid #30384a; padding:12px; margin:12px 0 20px 0; line-height:1.55; }
+table { font-size:13px; }
+th, td { white-space:normal; vertical-align:top; }
+</style>
 </head>
 <body>
 
-<h2>TRADING BOT ACTION CENTER</h2>
-<p><b>Generated:</b> 2026-05-01 18:47:29.073892</p>
-<p><b>Data date:</b> 2026-05-01</p>
-<p><b>Version:</b> PRO_V10_EXPLAINABLE_AI_2026_05_01</p>
-<p><b>Batch:</b> 0 -> 50 / 136</p>
+<h2>TRUNG TÃM RA QUYáº¾T Äá»NH GIAO Dá»CH V12 PRO</h2>
+<p><b>Thá»i gian cháº¡y:</b> 2026-05-01 20:00:24.825996</p>
+<p><b>NgÃ y dá»¯ liá»u:</b> 2026-05-01</p>
+<p><b>PhiÃªn báº£n:</b> PRO_V12_PRO_FINAL_VI_2026_05_01</p>
+<p><b>Batch:</b> 50 -> 100 / 136</p>
 
-<h3>AI TEST SUMMARY</h3>
+<div class="section-note">
+<b>Ghi chÃº Äá»c nhanh:</b><br>
+- <b>OOS</b> = kiá»m Äá»nh ngoÃ i máº«u, tá»©c pháº§n test khÃ´ng ÄÆ°á»£c dÃ¹ng Äá» há»c.<br>
+- <b>Trust</b> = Äá» tin cáº­y dá»±a trÃªn OOS, sá» máº«u vÃ  regime.<br>
+- <b>VÃ¹ng mua / Cáº¯t lá»</b> lÃ  vÃ¹ng tham kháº£o theo ATR vÃ  giÃ¡ hiá»n táº¡i.
+</div>
+
+<h3>1. Báº¢NG RA QUYáº¾T Äá»NH</h3>
+<div class="section-note">Má» pháº§n nÃ y Äáº§u tiÃªn Äá» biáº¿t hÃ´m nay Æ°u tiÃªn mÃ£ nÃ o, mua vÃ¹ng nÃ o, cáº¯t lá» á» ÄÃ¢u.</div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>NgÃ y</th>
+      <th>MÃ£</th>
+      <th>Khuyáº¿n nghá»</th>
+      <th>LÃ½ do chÃ­nh</th>
+      <th>VÃ¹ng mua</th>
+      <th>Cáº¯t lá»</th>
+      <th>Tá»· trá»ng gá»£i Ã½</th>
+      <th>Há» sÆ¡ rá»§i ro</th>
+      <th>Score</th>
+      <th>RSI</th>
+      <th>RS20</th>
+      <th>ATR %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-04-29</td>
+      <td>BFC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 máº¡nh; volume xÃ¡c nháº­n máº¡nh; momentum</td>
+      <td>66.40 - 68.80</td>
+      <td>64.50</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
+      <td>100</td>
+      <td>74.10</td>
+      <td>12.92</td>
+      <td>5.09</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>LPB</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 dÆ°Æ¡ng; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>46.71 - 47.89</td>
+      <td>45.78</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>100</td>
+      <td>46.07</td>
+      <td>2.68</td>
+      <td>3.58</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VRE</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 máº¡nh; volume xÃ¡c nháº­n máº¡nh; biáº¿n Äá»ng tháº¥p</td>
+      <td>31.80 - 32.80</td>
+      <td>31.02</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
+      <td>95</td>
+      <td>74.74</td>
+      <td>8.36</td>
+      <td>4.39</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TCH</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>17.90 - 18.40</td>
+      <td>17.51</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>90</td>
+      <td>63.89</td>
+      <td>-5.16</td>
+      <td>3.92</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>APH</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>5.78 - 5.88</td>
+      <td>5.66</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>90</td>
+      <td>68.66</td>
+      <td>-4.58</td>
+      <td>1.89</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TVS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>13.58 - 13.82</td>
+      <td>13.29</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>85</td>
+      <td>46.34</td>
+      <td>-7.40</td>
+      <td>2.53</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CII</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>19.00 - 19.60</td>
+      <td>18.54</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>85</td>
+      <td>54.76</td>
+      <td>-3.70</td>
+      <td>4.39</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>PDR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume tá»t; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>16.28 - 16.62</td>
+      <td>15.96</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>85</td>
+      <td>40.00</td>
+      <td>-7.65</td>
+      <td>3.02</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>AAA</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>7.25 - 7.37</td>
+      <td>7.09</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>80</td>
+      <td>64.29</td>
+      <td>-5.63</td>
+      <td>2.03</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CEO</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>17.49 - 18.11</td>
+      <td>17.02</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>80</td>
+      <td>60.00</td>
+      <td>-2.29</td>
+      <td>4.90</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>GVR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>33.28 - 34.12</td>
+      <td>32.61</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>80</td>
+      <td>56.16</td>
+      <td>-5.18</td>
+      <td>3.59</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHM</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RS20 máº¡nh; RSI há»£p lÃ½; momentum</td>
+      <td>142.84 - 149.16</td>
+      <td>137.87</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
+      <td>75</td>
+      <td>67.44</td>
+      <td>23.61</td>
+      <td>6.19</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CTD</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; momentum</td>
+      <td>85.91 - 87.69</td>
+      <td>84.20</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>75</td>
+      <td>70.04</td>
+      <td>-0.63</td>
+      <td>2.92</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DXG</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>15.18 - 15.52</td>
+      <td>14.89</td>
+      <td>0%, chá» theo dÃµi</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>65</td>
+      <td>53.33</td>
+      <td>-2.65</td>
+      <td>3.14</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DHC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>35.51 - 36.09</td>
+      <td>34.73</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>90</td>
+      <td>41.43</td>
+      <td>-7.46</td>
+      <td>2.27</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DIG</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>14.53 - 14.87</td>
+      <td>14.26</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>70</td>
+      <td>53.85</td>
+      <td>-6.08</td>
+      <td>3.30</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TCB</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RS20 dÆ°Æ¡ng; volume tá»t; biáº¿n Äá»ng tháº¥p</td>
+      <td>33.57 - 34.13</td>
+      <td>32.83</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
+      <td>MOMENTUM NÃNG / HOT MOMENTUM</td>
+      <td>70</td>
+      <td>76.58</td>
+      <td>1.03</td>
+      <td>2.38</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHC</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>60.71 - 61.69</td>
+      <td>59.36</td>
+      <td>0%, chá» theo dÃµi</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>65</td>
+      <td>57.14</td>
+      <td>-4.97</td>
+      <td>2.14</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>ABB</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>14.78 - 15.02</td>
+      <td>14.45</td>
+      <td>0%, chá» theo dÃµi</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
+      <td>65</td>
+      <td>61.54</td>
+      <td>-7.52</td>
+      <td>1.92</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VPB</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI khÃ¡; RS20 yáº¿u; volume tá»t; biáº¿n Äá»ng tháº¥p</td>
+      <td>26.28 - 26.72</td>
+      <td>25.70</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>80</td>
+      <td>41.89</td>
+      <td>-10.00</td>
+      <td>2.35</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. GIáº¢I THÃCH AI</h3>
+<div class="section-note">Cho biáº¿t vÃ¬ sao AI chá»n/háº¡ mÃ£: Äá» tin cáº­y, báº±ng chá»©ng OOS, regime vÃ  lÃ½ do chÃ­nh.</div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>NgÃ y</th>
+      <th>MÃ£</th>
+      <th>Khuyáº¿n nghá»</th>
+      <th>Äá» tin cáº­y</th>
+      <th>Báº±ng chá»©ng AI</th>
+      <th>LÃ½ do chÃ­nh</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-04-29</td>
+      <td>BFC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 máº¡nh; volume xÃ¡c nháº­n máº¡nh; momentum</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>LPB</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 dÆ°Æ¡ng; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VRE</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RS20 máº¡nh; volume xÃ¡c nháº­n máº¡nh; biáº¿n Äá»ng tháº¥p</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TCH</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>APH</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TVS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CII</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>PDR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; volume tá»t; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>AAA</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CEO</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>GVR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHM</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RS20 máº¡nh; RSI há»£p lÃ½; momentum</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CTD</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p; momentum</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DXG</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DHC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t cao; AI máº¡nh; biáº¿n Äá»ng tháº¥p; báº¯t ÄÃ¡y/há»i phá»¥c</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DIG</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; volume xÃ¡c nháº­n máº¡nh; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TCB</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI máº¡nh; RS20 dÆ°Æ¡ng; volume tá»t; biáº¿n Äá»ng tháº¥p</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHC</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>ABB</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t tháº¥p; AI máº¡nh; volume tá»t; RSI há»£p lÃ½; biáº¿n Äá»ng tháº¥p</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VPB</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>Äiá»m ká»¹ thuáº­t khÃ¡; AI khÃ¡; RS20 yáº¿u; volume tá»t; biáº¿n Äá»ng tháº¥p</td>
+      <td>80</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3. KIá»M Äá»NH AI</h3>
+<div class="section-note">Backfill OOS 3M: má»i block 3 thÃ¡ng, 80% Äáº§u dÃ¹ng Äá» há»c, 20% cuá»i dÃ¹ng Äá» test giáº£ láº­p nhÆ° chÆ°a biáº¿t káº¿t quáº£.</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Module</th>
+      <th>CÃ¡ch test</th>
+      <th>Dá»¯ liá»u tá»«</th>
+      <th>Dá»¯ liá»u Äáº¿n</th>
+      <th>Test tá»«</th>
+      <th>Test Äáº¿n</th>
+      <th>Train</th>
+      <th>Test</th>
       <th>Rows</th>
-      <th>With Data</th>
-      <th>Avg Win%</th>
-      <th>Strong</th>
-      <th>Weak</th>
-      <th>Note</th>
+      <th>CÃ³ dá»¯ liá»u</th>
+      <th>Win TB%</th>
+      <th>Pattern máº¡nh</th>
+      <th>Pattern yáº¿u</th>
+      <th>Ã nghÄ©a</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Walk-forward live</td>
+      <td>Live: há»c Äoáº¡n trÆ°á»c, test Äoáº¡n sau</td>
+      <td>2026-04-28</td>
+      <td>2026-05-01</td>
+      <td>2026-04-28</td>
+      <td>2026-05-01</td>
+      <td>45 ngÃ y</td>
+      <td>10 ngÃ y</td>
       <td>0</td>
       <td>0</td>
       <td></td>
       <td>0</td>
       <td>0</td>
-      <td>No data yet</td>
+      <td>ChÆ°a cÃ³ dá»¯ liá»u</td>
     </tr>
     <tr>
       <td>Backfill OOS 3M</td>
+      <td>Má»i block 3 thÃ¡ng: 80% Äáº§u há»c, 20% cuá»i test</td>
+      <td>2025-11-05</td>
+      <td>2026-04-14</td>
+      <td>2025-12-15</td>
+      <td>2026-03-31</td>
+      <td>80% Äáº§u block</td>
+      <td>20% cuá»i block</td>
       <td>238</td>
       <td>238</td>
       <td>63.9</td>
       <td>139</td>
       <td>57</td>
-      <td>OK</td>
+      <td>CÃ³ thá» tham kháº£o</td>
     </tr>
     <tr>
       <td>Pattern history</td>
-      <td>19</td>
-      <td>19</td>
-      <td>52.9</td>
+      <td>Thá»ng kÃª win/loss theo pattern</td>
+      <td>2026-04-28</td>
+      <td>2026-05-01</td>
+      <td></td>
+      <td></td>
+      <td>history cÃ³ outcome</td>
+      <td>-</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52.5</td>
       <td>1</td>
       <td>1</td>
-      <td>OK</td>
+      <td>CÃ³ thá» tham kháº£o</td>
     </tr>
     <tr>
       <td>Regime stats</td>
+      <td>Pattern theo tráº¡ng thÃ¡i thá» trÆ°á»ng, cÃ³ time-decay</td>
+      <td>2025-11-05</td>
+      <td>2026-04-14</td>
+      <td></td>
+      <td></td>
+      <td>decay 30 ngÃ y</td>
+      <td>regime hiá»n táº¡i</td>
       <td>540</td>
       <td>540</td>
       <td>56.5</td>
       <td>81</td>
       <td>2</td>
-      <td>OK</td>
+      <td>CÃ³ thá» tham kháº£o</td>
     </tr>
   </tbody>
 </table>
 
-<h3>TOP PROVEN PATTERNS</h3>
+<h3>3B. TOP PATTERN ÄÃ KIá»M Äá»NH</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Pattern</th>
-      <th>Source</th>
-      <th>OOS%</th>
-      <th>OOS N</th>
-      <th>Avg+5D</th>
-      <th>Avg+10D</th>
-      <th>Trust</th>
-      <th>Note</th>
+      <th>Nguá»n</th>
+      <th>OOS Win%</th>
+      <th>OOS máº«u</th>
+      <th>Avg +5D</th>
+      <th>Avg +10D</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>UPTREND|WATCH|SKIP|RSI_MID_HIGH|RS_BAD|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>7</td>
       <td>3.05</td>
       <td>6.08</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|BUY NOW|RSI_MID_HIGH|RS_WEAK|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>6</td>
       <td>-2.06</td>
       <td>2.64</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|BUY NOW|RSI_MID_HIGH|RS_WEAK|VOL_OK|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>6</td>
       <td>2.90</td>
       <td>-1.32</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>6</td>
       <td>2.97</td>
       <td>3.55</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|MOMENTUM_WATCH|WATCHLIST|RSI_MID|RS_WEAK|VOL_OK|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>6</td>
       <td>3.92</td>
       <td>1.23</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|SKIP|RSI_MID_HIGH|RS_WEAK|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>5</td>
       <td>-0.03</td>
       <td>1.57</td>
-      <td>MEDIUM</td>
-      <td>LOW_SAMPLE</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>5</td>
       <td>-4.86</td>
       <td>0.41</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|MOMENTUM_WATCH|SKIP|RSI_MID_HIGH|RS_BAD|VOL_OK|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>100.0</td>
       <td>5</td>
       <td>2.31</td>
       <td>5.60</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM_WATCH|SKIP|RSI_WEAK|RS_BAD|VOL_STRONG|ATR_OK|BELOW_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>88.9</td>
       <td>9</td>
       <td>0.01</td>
       <td>-0.84</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM|WAIT|RSI_MID|RS_WEAK|VOL_OK|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>88.9</td>
       <td>9</td>
       <td>3.62</td>
       <td>12.39</td>
-      <td>MEDIUM</td>
-      <td>LOW_SAMPLE</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM_WATCH|SKIP|RSI_MID|RS_BAD|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>84.6</td>
       <td>26</td>
       <td>0.76</td>
       <td>3.06</td>
-      <td>MEDIUM-HIGH</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|MOMENTUM|SKIP|RSI_MID_HIGH|RS_OK|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>87.5</td>
       <td>8</td>
       <td>-0.50</td>
       <td>0.92</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM_WATCH|SKIP|RSI_MID_HIGH|RS_BAD|VOL_LOW|ATR_LOW|BELOW_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>81.5</td>
       <td>27</td>
       <td>3.38</td>
       <td>4.87</td>
-      <td>MEDIUM-HIGH</td>
-      <td>OOS_STRONG</td>
     </tr>
     <tr>
       <td>UPTREND|BOTTOM_WATCH|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>78.0</td>
       <td>41</td>
       <td>1.99</td>
       <td>1.97</td>
-      <td>MEDIUM-HIGH</td>
-      <td>LOW_SAMPLE</td>
     </tr>
     <tr>
       <td>UPTREND|MOMENTUM|BUY NOW|RSI_MID_HIGH|RS_OK|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td>BACKFILL_WF</td>
+      <td>BACKFILL</td>
       <td>83.3</td>
       <td>6</td>
       <td>0.43</td>
       <td>-0.58</td>
-      <td>MEDIUM</td>
-      <td>OOS_STRONG</td>
     </tr>
   </tbody>
 </table>
 
-<h3>RAW SIGNAL - ACTION VIEW</h3>
+<h3>4. Bá»I Cáº¢NH THá» TRÆ¯á»NG</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Date</th>
-      <th>Code</th>
-      <th>Close</th>
-      <th>Rec</th>
-      <th>Trust</th>
-      <th>Evidence</th>
-      <th>Why</th>
-      <th>Buy Zone</th>
-      <th>Stop Loss</th>
-      <th>Strategy</th>
-      <th>Score</th>
-      <th>AI</th>
-      <th>AI Grade</th>
-      <th>Win%</th>
-      <th>Regime</th>
-      <th>RSI</th>
-      <th>RS20</th>
-      <th>Volume Ratio</th>
-      <th>ATR %</th>
-      <th>Risk Status</th>
+      <th>Tráº¡ng thÃ¡i thá» trÆ°á»ng</th>
+      <th>VNINDEX Ret20</th>
+      <th>Nháº­n Äá»nh</th>
+      <th>Gá»£i Ã½ tiá»n máº·t</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>2026-04-28</td>
-      <td>SAB</td>
-      <td>48.50</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>48.08-48.92</td>
-      <td>47.05</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.32</td>
-      <td>0.98</td>
-      <td>2.06</td>
-      <td>2.47</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>BFC</td>
-      <td>67.60</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>66.40-68.80</td>
-      <td>64.50</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.10</td>
-      <td>12.92</td>
-      <td>3.06</td>
-      <td>5.09</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>VRE</td>
-      <td>32.30</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>31.80-32.80</td>
-      <td>31.02</td>
-      <td>MOMENTUM</td>
-      <td>95</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.74</td>
-      <td>8.36</td>
-      <td>1.94</td>
-      <td>4.39</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>TCH</td>
-      <td>18.15</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>17.90-18.40</td>
-      <td>17.51</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>63.89</td>
-      <td>-5.16</td>
-      <td>1.24</td>
-      <td>3.92</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>APH</td>
-      <td>5.83</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>5.78-5.88</td>
-      <td>5.66</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.66</td>
-      <td>-4.58</td>
-      <td>3.97</td>
-      <td>1.89</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>TVS</td>
-      <td>13.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>13.58-13.82</td>
-      <td>13.29</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>46.34</td>
-      <td>-7.40</td>
-      <td>0.97</td>
-      <td>2.53</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>CII</td>
-      <td>19.30</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>19.00-19.60</td>
-      <td>18.54</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>54.76</td>
-      <td>-3.70</td>
-      <td>1.05</td>
-      <td>4.39</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>AAA</td>
-      <td>7.31</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>7.25-7.37</td>
-      <td>7.09</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>64.29</td>
-      <td>-5.63</td>
-      <td>2.61</td>
-      <td>2.03</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>CEO</td>
-      <td>17.80</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>17.49-18.11</td>
-      <td>17.02</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>60.00</td>
-      <td>-2.29</td>
-      <td>1.63</td>
-      <td>4.90</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>GVR</td>
-      <td>33.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>33.28-34.12</td>
-      <td>32.61</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>56.16</td>
-      <td>-5.18</td>
-      <td>1.30</td>
-      <td>3.59</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>VHM</td>
-      <td>146.00</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; RSI on; Momentum</td>
-      <td>142.84-149.16</td>
-      <td>137.87</td>
-      <td>MOMENTUM</td>
-      <td>75</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>67.44</td>
-      <td>23.61</td>
-      <td>1.07</td>
-      <td>6.19</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>CTD</td>
-      <td>86.80</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Momentum</td>
-      <td>85.91-87.69</td>
-      <td>84.20</td>
-      <td>MOMENTUM</td>
-      <td>75</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.04</td>
-      <td>-0.63</td>
-      <td>1.08</td>
-      <td>2.92</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>DXG</td>
-      <td>15.35</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>15.18-15.52</td>
-      <td>14.89</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>53.33</td>
-      <td>-2.65</td>
-      <td>1.50</td>
-      <td>3.14</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>DHC</td>
-      <td>35.80</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Bottom</td>
-      <td>35.51-36.09</td>
-      <td>34.73</td>
-      <td>BOTTOM</td>
-      <td>90</td>
-      <td>96.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>41.43</td>
-      <td>-7.46</td>
-      <td>0.82</td>
-      <td>2.27</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>DIG</td>
-      <td>14.70</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Bottom</td>
-      <td>14.53-14.87</td>
-      <td>14.26</td>
-      <td>BOTTOM</td>
-      <td>70</td>
-      <td>92.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>53.85</td>
-      <td>-6.08</td>
-      <td>1.50</td>
-      <td>3.30</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>TCB</td>
-      <td>33.85</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; RSI nong; Momentum</td>
-      <td>33.57-34.13</td>
-      <td>32.83</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>70</td>
-      <td>89.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>76.58</td>
-      <td>1.03</td>
-      <td>1.12</td>
-      <td>2.38</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>VHC</td>
-      <td>61.20</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>60.71-61.69</td>
-      <td>59.36</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>86.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>57.14</td>
-      <td>-4.97</td>
-      <td>1.22</td>
-      <td>2.14</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>ABB</td>
-      <td>14.90</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>14.78-15.02</td>
-      <td>14.45</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>86.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>61.54</td>
-      <td>-7.52</td>
-      <td>1.42</td>
-      <td>1.92</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-28</td>
-      <td>HNG</td>
-      <td>7.10</td>
-      <td>BO QUA / SKIP</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Risk FAIL; Score cao; AI manh; RS20 tot; Volume tot</td>
-      <td>7.01-7.19</td>
-      <td>6.86</td>
-      <td>MOMENTUM</td>
-      <td>85</td>
-      <td>84.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>91.67</td>
-      <td>7.52</td>
-      <td>2.47</td>
-      <td>3.82</td>
-      <td>FAIL</td>
-    </tr>
-    <tr>
-      <td>2026-04-28</td>
-      <td>MWG</td>
-      <td>85.60</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; RSI on; Momentum</td>
-      <td>84.81-86.39</td>
-      <td>83.03</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>84.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>66.67</td>
-      <td>-2.94</td>
-      <td>0.83</td>
-      <td>2.64</td>
-      <td>PASS</td>
+      <td>TÄNG Máº NH / UPTREND</td>
+      <td>8.88</td>
+      <td>TÃ­ch cá»±c, cÃ³ thá» mua thÄm dÃ²</td>
+      <td>Giá»¯ tiá»n máº·t 30-50%</td>
     </tr>
   </tbody>
 </table>
 
-<h3>AI FINAL - ACTION VIEW</h3>
+<h3>5. QUáº¢N TRá» Rá»¦I RO</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Date</th>
-      <th>Code</th>
-      <th>Close</th>
-      <th>Rec</th>
-      <th>Trust</th>
-      <th>Evidence</th>
-      <th>Why</th>
-      <th>Buy Zone</th>
-      <th>Stop Loss</th>
-      <th>Strategy</th>
-      <th>Score</th>
-      <th>AI</th>
-      <th>AI Grade</th>
-      <th>Win%</th>
-      <th>Regime</th>
-      <th>RSI</th>
-      <th>RS20</th>
-      <th>Volume Ratio</th>
+      <th>NgÃ y</th>
+      <th>MÃ£</th>
+      <th>Khuyáº¿n nghá»</th>
+      <th>Há» sÆ¡ rá»§i ro</th>
+      <th>Cáº¯t lá»</th>
+      <th>Tá»· trá»ng gá»£i Ã½</th>
       <th>ATR %</th>
-      <th>Risk Status</th>
+      <th>RSI</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>2026-04-28</td>
-      <td>SAB</td>
-      <td>48.50</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>48.08-48.92</td>
-      <td>47.05</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.32</td>
-      <td>0.98</td>
-      <td>2.06</td>
-      <td>2.47</td>
-      <td>PASS</td>
+      <td>2026-04-29</td>
+      <td>BFC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
+      <td>64.50</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>5.09</td>
+      <td>74.10</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
-      <td>BFC</td>
-      <td>67.60</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>66.40-68.80</td>
-      <td>64.50</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.10</td>
-      <td>12.92</td>
-      <td>3.06</td>
-      <td>5.09</td>
-      <td>PASS</td>
+      <td>LPB</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>45.78</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
+      <td>3.58</td>
+      <td>46.07</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VRE</td>
-      <td>32.30</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>31.80-32.80</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
       <td>31.02</td>
-      <td>MOMENTUM</td>
-      <td>95</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.74</td>
-      <td>8.36</td>
-      <td>1.94</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
       <td>4.39</td>
-      <td>PASS</td>
+      <td>74.74</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>TCH</td>
-      <td>18.15</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>17.90-18.40</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>17.51</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>63.89</td>
-      <td>-5.16</td>
-      <td>1.24</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
       <td>3.92</td>
-      <td>PASS</td>
+      <td>63.89</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>APH</td>
-      <td>5.83</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>5.78-5.88</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>5.66</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.66</td>
-      <td>-4.58</td>
-      <td>3.97</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
       <td>1.89</td>
-      <td>PASS</td>
+      <td>68.66</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>TVS</td>
-      <td>13.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>13.58-13.82</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
       <td>13.29</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>46.34</td>
-      <td>-7.40</td>
-      <td>0.97</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>2.53</td>
-      <td>PASS</td>
+      <td>46.34</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>CII</td>
-      <td>19.30</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>19.00-19.60</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
       <td>18.54</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>54.76</td>
-      <td>-3.70</td>
-      <td>1.05</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>4.39</td>
-      <td>PASS</td>
+      <td>54.76</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>PDR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
+      <td>15.96</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
+      <td>3.02</td>
+      <td>40.00</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>AAA</td>
-      <td>7.31</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>7.25-7.37</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>7.09</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>64.29</td>
-      <td>-5.63</td>
-      <td>2.61</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>2.03</td>
-      <td>PASS</td>
+      <td>64.29</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>CEO</td>
-      <td>17.80</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>17.49-18.11</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>17.02</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>60.00</td>
-      <td>-2.29</td>
-      <td>1.63</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>4.90</td>
-      <td>PASS</td>
+      <td>60.00</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>GVR</td>
-      <td>33.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>33.28-34.12</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>32.61</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>56.16</td>
-      <td>-5.18</td>
-      <td>1.30</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>3.59</td>
-      <td>PASS</td>
+      <td>56.16</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VHM</td>
-      <td>146.00</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; RSI on; Momentum</td>
-      <td>142.84-149.16</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>XU HÆ¯á»NG KHá»E / SAFE TREND</td>
       <td>137.87</td>
-      <td>MOMENTUM</td>
-      <td>75</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>67.44</td>
-      <td>23.61</td>
-      <td>1.07</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
       <td>6.19</td>
-      <td>PASS</td>
+      <td>67.44</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>CTD</td>
-      <td>86.80</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Momentum</td>
-      <td>85.91-87.69</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>84.20</td>
-      <td>MOMENTUM</td>
-      <td>75</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.04</td>
-      <td>-0.63</td>
-      <td>1.08</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
       <td>2.92</td>
-      <td>PASS</td>
+      <td>70.04</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>DXG</td>
-      <td>15.35</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>15.18-15.52</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>14.89</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>53.33</td>
-      <td>-2.65</td>
-      <td>1.50</td>
+      <td>0%, chá» theo dÃµi</td>
       <td>3.14</td>
-      <td>PASS</td>
+      <td>53.33</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>DHC</td>
-      <td>35.80</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Bottom</td>
-      <td>35.51-36.09</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
       <td>34.73</td>
-      <td>BOTTOM</td>
-      <td>90</td>
-      <td>96.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>41.43</td>
-      <td>-7.46</td>
-      <td>0.82</td>
+      <td>40-60% lá»nh thÆ°á»ng</td>
       <td>2.27</td>
-      <td>PASS</td>
+      <td>41.43</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>DIG</td>
-      <td>14.70</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Bottom</td>
-      <td>14.53-14.87</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
       <td>14.26</td>
-      <td>BOTTOM</td>
-      <td>70</td>
-      <td>92.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>53.85</td>
-      <td>-6.08</td>
-      <td>1.50</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
       <td>3.30</td>
-      <td>PASS</td>
+      <td>53.85</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>TCB</td>
-      <td>33.85</td>
-      <td>CHO PULLBACK / WAIT PULLBACK</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; RSI nong; Momentum</td>
-      <td>33.57-34.13</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>MOMENTUM NÃNG / HOT MOMENTUM</td>
       <td>32.83</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>70</td>
-      <td>89.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>76.58</td>
-      <td>1.03</td>
-      <td>1.12</td>
+      <td>0-20%, chá» xÃ¡c nháº­n</td>
       <td>2.38</td>
-      <td>PASS</td>
+      <td>76.58</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VHC</td>
-      <td>61.20</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>60.71-61.69</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>59.36</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>86.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>57.14</td>
-      <td>-4.97</td>
-      <td>1.22</td>
+      <td>0%, chá» theo dÃµi</td>
       <td>2.14</td>
-      <td>PASS</td>
+      <td>57.14</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>ABB</td>
-      <td>14.90</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume tot; RSI on; Momentum</td>
-      <td>14.78-15.02</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>TRUNG TÃNH / NEUTRAL</td>
       <td>14.45</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>86.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>61.54</td>
-      <td>-7.52</td>
-      <td>1.42</td>
+      <td>0%, chá» theo dÃµi</td>
       <td>1.92</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-28</td>
-      <td>MWG</td>
-      <td>85.60</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; RSI on; Momentum</td>
-      <td>84.81-86.39</td>
-      <td>83.03</td>
-      <td>MOMENTUM_WATCH</td>
-      <td>65</td>
-      <td>84.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>66.67</td>
-      <td>-2.94</td>
-      <td>0.83</td>
-      <td>2.64</td>
-      <td>PASS</td>
+      <td>61.54</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VPB</td>
-      <td>26.50</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 yeu; Volume tot; Bottom</td>
-      <td>26.28-26.72</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>Há»I PHá»¤C / MEAN REVERSION</td>
       <td>25.70</td>
-      <td>BOTTOM</td>
-      <td>80</td>
-      <td>83.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>41.89</td>
-      <td>-10.00</td>
-      <td>1.29</td>
+      <td>20-35% lá»nh thÆ°á»ng</td>
       <td>2.35</td>
-      <td>PASS</td>
+      <td>41.89</td>
     </tr>
   </tbody>
 </table>
 
-<h3>ENTRY PLAN</h3>
+<h3>6. THEO DÃI DANH Má»¤C</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Date</th>
-      <th>Code</th>
-      <th>Close</th>
-      <th>Rec</th>
-      <th>Trust</th>
-      <th>Evidence</th>
-      <th>Why</th>
-      <th>Buy Zone</th>
-      <th>Stop Loss</th>
-      <th>Strategy</th>
-      <th>Score</th>
-      <th>AI</th>
-      <th>AI Grade</th>
-      <th>Win%</th>
-      <th>Regime</th>
-      <th>RSI</th>
-      <th>RS20</th>
-      <th>Volume Ratio</th>
-      <th>ATR %</th>
-      <th>Risk Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2026-04-28</td>
-      <td>SAB</td>
-      <td>48.50</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>48.08-48.92</td>
-      <td>47.05</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.32</td>
-      <td>0.98</td>
-      <td>2.06</td>
-      <td>2.47</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>BFC</td>
-      <td>67.60</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>66.40-68.80</td>
-      <td>64.50</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.10</td>
-      <td>12.92</td>
-      <td>3.06</td>
-      <td>5.09</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>VRE</td>
-      <td>32.30</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>31.80-32.80</td>
-      <td>31.02</td>
-      <td>MOMENTUM</td>
-      <td>95</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.74</td>
-      <td>8.36</td>
-      <td>1.94</td>
-      <td>4.39</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>TCH</td>
-      <td>18.15</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>17.90-18.40</td>
-      <td>17.51</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>63.89</td>
-      <td>-5.16</td>
-      <td>1.24</td>
-      <td>3.92</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>APH</td>
-      <td>5.83</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>5.78-5.88</td>
-      <td>5.66</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.66</td>
-      <td>-4.58</td>
-      <td>3.97</td>
-      <td>1.89</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>TVS</td>
-      <td>13.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>13.58-13.82</td>
-      <td>13.29</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>46.34</td>
-      <td>-7.40</td>
-      <td>0.97</td>
-      <td>2.53</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>CII</td>
-      <td>19.30</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>19.00-19.60</td>
-      <td>18.54</td>
-      <td>BOTTOM</td>
-      <td>85</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>54.76</td>
-      <td>-3.70</td>
-      <td>1.05</td>
-      <td>4.39</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>AAA</td>
-      <td>7.31</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>7.25-7.37</td>
-      <td>7.09</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>64.29</td>
-      <td>-5.63</td>
-      <td>2.61</td>
-      <td>2.03</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>CEO</td>
-      <td>17.80</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>17.49-18.11</td>
-      <td>17.02</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>60.00</td>
-      <td>-2.29</td>
-      <td>1.63</td>
-      <td>4.90</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>GVR</td>
-      <td>33.70</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>33.28-34.12</td>
-      <td>32.61</td>
-      <td>MOMENTUM</td>
-      <td>80</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>56.16</td>
-      <td>-5.18</td>
-      <td>1.30</td>
-      <td>3.59</td>
-      <td>PASS</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>PORTFOLIO</h3>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Code</th>
-      <th>Rec</th>
-      <th>Trust</th>
-      <th>Evidence</th>
-      <th>Why</th>
-      <th>Buy Zone</th>
-      <th>Stop Loss</th>
+      <th>MÃ£</th>
+      <th>HÃ nh Äá»ng</th>
+      <th>Cáº£nh bÃ¡o</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>NO_PORTFOLIO</td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume yeu</td>
-      <td></td>
-      <td></td>
+      <td>ChÆ°a cÃ³ portfolio_current.csv</td>
+      <td>â ï¸ CHÆ¯A CÃ DANH Má»¤C</td>
     </tr>
   </tbody>
 </table>
 
-<h3>ACTION PLAN</h3>
+<h3>7. Dá»° BÃO Lá»¢I NHUáº¬N Ká»² Vá»NG</h3>
+<div class="section-note">Dá»± bÃ¡o +3/+5/+10 phiÃªn dá»±a trÃªn pattern, OOS náº¿u cÃ³; náº¿u chÆ°a cÃ³ OOS thÃ¬ dÃ¹ng Æ°á»c lÆ°á»£ng báº£o thá»§ tá»« Score vÃ  AI.</div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Date</th>
-      <th>Code</th>
-      <th>Close</th>
-      <th>Rec</th>
-      <th>Trust</th>
-      <th>Evidence</th>
-      <th>Why</th>
-      <th>Buy Zone</th>
-      <th>Stop Loss</th>
-      <th>Strategy</th>
-      <th>Score</th>
-      <th>AI</th>
-      <th>AI Grade</th>
-      <th>Win%</th>
-      <th>Regime</th>
-      <th>RSI</th>
-      <th>RS20</th>
-      <th>Volume Ratio</th>
-      <th>ATR %</th>
-      <th>Risk Status</th>
+      <th>NgÃ y</th>
+      <th>MÃ£</th>
+      <th>Khuyáº¿n nghá»</th>
+      <th>Dá»± bÃ¡o LN</th>
+      <th>Rá»§i ro giáº£m</th>
+      <th>Báº±ng chá»©ng AI</th>
+      <th>Äá» tin cáº­y</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>2026-04-28</td>
-      <td>SAB</td>
-      <td>48.5</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>48.08-48.92</td>
-      <td>47.05</td>
-      <td>MOMENTUM</td>
-      <td>100.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>70.32</td>
-      <td>0.98</td>
-      <td>2.06</td>
-      <td>2.47</td>
-      <td>PASS</td>
+      <td>2026-04-29</td>
+      <td>BFC</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.8% | +5 phiÃªn: 3.0% | +10 phiÃªn: 4.2%</td>
+      <td>-4.6%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
-      <td>BFC</td>
-      <td>67.6</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>66.40-68.80</td>
-      <td>64.50</td>
-      <td>MOMENTUM</td>
-      <td>100.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.1</td>
-      <td>12.92</td>
-      <td>3.06</td>
-      <td>5.09</td>
-      <td>PASS</td>
+      <td>LPB</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.8% | +5 phiÃªn: 3.0% | +10 phiÃªn: 4.2%</td>
+      <td>-3.2%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VRE</td>
-      <td>32.3</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>31.80-32.80</td>
-      <td>31.02</td>
-      <td>MOMENTUM</td>
-      <td>95.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>74.74</td>
-      <td>8.36</td>
-      <td>1.94</td>
-      <td>4.39</td>
-      <td>PASS</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.6% | +5 phiÃªn: 2.8% | +10 phiÃªn: 3.9%</td>
+      <td>-4.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>TCH</td>
-      <td>18.15</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>17.90-18.40</td>
-      <td>17.51</td>
-      <td>MOMENTUM</td>
-      <td>90.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>63.89</td>
-      <td>-5.16</td>
-      <td>1.24</td>
-      <td>3.92</td>
-      <td>PASS</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.5% | +5 phiÃªn: 2.5% | +10 phiÃªn: 3.5%</td>
+      <td>-3.5%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>APH</td>
-      <td>5.83</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Volume tot; RSI on; Momentum</td>
-      <td>5.78-5.88</td>
-      <td>5.66</td>
-      <td>MOMENTUM</td>
-      <td>90.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.66</td>
-      <td>-4.58</td>
-      <td>3.97</td>
-      <td>1.89</td>
-      <td>PASS</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.5% | +5 phiÃªn: 2.5% | +10 phiÃªn: 3.5%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>TVS</td>
-      <td>13.7</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>13.58-13.82</td>
-      <td>13.29</td>
-      <td>BOTTOM</td>
-      <td>85.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>46.34</td>
-      <td>-7.4</td>
-      <td>0.97</td>
-      <td>2.53</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.4% | +5 phiÃªn: 2.2% | +10 phiÃªn: 3.1%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>CII</td>
-      <td>19.3</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RSI on; Bottom</td>
-      <td>19.00-19.60</td>
-      <td>18.54</td>
-      <td>BOTTOM</td>
-      <td>85.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>54.76</td>
-      <td>-3.7</td>
-      <td>1.05</td>
-      <td>4.39</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.4% | +5 phiÃªn: 2.2% | +10 phiÃªn: 3.1%</td>
+      <td>-4.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>PDR</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.4% | +5 phiÃªn: 2.2% | +10 phiÃªn: 3.1%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>AAA</td>
-      <td>7.31</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>7.25-7.37</td>
-      <td>7.09</td>
-      <td>MOMENTUM</td>
-      <td>80.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>64.29</td>
-      <td>-5.63</td>
-      <td>2.61</td>
-      <td>2.03</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.2% | +5 phiÃªn: 2.0% | +10 phiÃªn: 2.8%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>CEO</td>
-      <td>17.8</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>17.49-18.11</td>
-      <td>17.02</td>
-      <td>MOMENTUM</td>
-      <td>80.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>60.0</td>
-      <td>-2.29</td>
-      <td>1.63</td>
-      <td>4.9</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.2% | +5 phiÃªn: 2.0% | +10 phiÃªn: 2.8%</td>
+      <td>-4.4%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>GVR</td>
-      <td>33.7</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; Volume tot; RSI on; Momentum</td>
-      <td>33.28-34.12</td>
-      <td>32.61</td>
-      <td>MOMENTUM</td>
-      <td>80.0</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>56.16</td>
-      <td>-5.18</td>
-      <td>1.3</td>
-      <td>3.59</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 1.2% | +5 phiÃªn: 2.0% | +10 phiÃªn: 2.8%</td>
+      <td>-3.2%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHM</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>+3 phiÃªn: 1.1% | +5 phiÃªn: 1.8% | +10 phiÃªn: 2.5%</td>
+      <td>-5.6%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>CTD</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>+3 phiÃªn: 1.1% | +5 phiÃªn: 1.8% | +10 phiÃªn: 2.5%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DXG</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>+3 phiÃªn: 0.8% | +5 phiÃªn: 1.2% | +10 phiÃªn: 1.8%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>DHC</td>
-      <td>35.8</td>
-      <td>MUA UU TIEN / PRIORITY BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; Bottom</td>
-      <td>35.51-36.09</td>
-      <td>34.73</td>
-      <td>BOTTOM</td>
-      <td>90.0</td>
-      <td>96.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>41.43</td>
-      <td>-7.46</td>
-      <td>0.82</td>
-      <td>2.27</td>
-      <td>PASS</td>
+      <td>MUA Æ¯U TIÃN / PRIORITY BUY</td>
+      <td>+3 phiÃªn: 1.4% | +5 phiÃªn: 2.4% | +10 phiÃªn: 3.4%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>DIG</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>+3 phiÃªn: 0.8% | +5 phiÃªn: 1.3% | +10 phiÃªn: 1.8%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>TCB</td>
+      <td>CHá» PULLBACK / WAIT PULLBACK</td>
+      <td>+3 phiÃªn: 0.7% | +5 phiÃªn: 1.2% | +10 phiÃªn: 1.7%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>VHC</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>+3 phiÃªn: 0.5% | +5 phiÃªn: 0.9% | +10 phiÃªn: 1.3%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
+    </tr>
+    <tr>
+      <td>2026-04-29</td>
+      <td>ABB</td>
+      <td>THEO DÃI / WATCH</td>
+      <td>+3 phiÃªn: 0.5% | +5 phiÃªn: 0.9% | +10 phiÃªn: 1.3%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
     <tr>
       <td>2026-04-29</td>
       <td>VPB</td>
-      <td>26.5</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 yeu; Volume tot; Bottom</td>
-      <td>26.28-26.72</td>
-      <td>25.70</td>
-      <td>BOTTOM</td>
-      <td>80.0</td>
-      <td>83.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>41.89</td>
-      <td>-10.0</td>
-      <td>1.29</td>
-      <td>2.35</td>
-      <td>PASS</td>
+      <td>MUA THÄM DÃ / PROBE BUY</td>
+      <td>+3 phiÃªn: 0.9% | +5 phiÃªn: 1.6% | +10 phiÃªn: 2.2%</td>
+      <td>-3.0%</td>
+      <td>OOS chÆ°a Äá»§ | History 55%</td>
+      <td>THáº¤P - chÆ°a Äá»§ OOS</td>
     </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>FPT</td>
-      <td>75.5</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 yeu; Bottom</td>
-      <td>74.86-76.14</td>
-      <td>73.23</td>
-      <td>BOTTOM</td>
-      <td>75.0</td>
-      <td>80.0</td>
-      <td>A</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>39.23</td>
-      <td>-8.61</td>
-      <td>1.1</td>
-      <td>2.42</td>
-      <td>PASS</td>
+  </tbody>
+</table>
+
+<h3>8. BÃO CÃO TELEGRAM / TÃM Táº®T HÃM NAY</h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ná»i dung</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <td>2026-04-29</td>
-      <td>VCB</td>
-      <td>59.8</td>
-      <td>CHO XAC NHAN / WAIT CONFIRM</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RSI on; Bottom</td>
-      <td>59.32-60.28</td>
-      <td>58.01</td>
-      <td>BOTTOM</td>
-      <td>75.0</td>
-      <td>74.0</td>
-      <td>B+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>52.0</td>
-      <td>-7.52</td>
-      <td>0.81</td>
-      <td>2.2</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>ANV</td>
-      <td>23.9</td>
-      <td>CHO XAC NHAN / WAIT CONFIRM</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 yeu; Bottom</td>
-      <td>23.66-24.14</td>
-      <td>23.18</td>
-      <td>BOTTOM</td>
-      <td>80.0</td>
-      <td>66.0</td>
-      <td>B</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>37.5</td>
-      <td>-8.67</td>
-      <td>0.85</td>
-      <td>2.81</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-04-29</td>
-      <td>BID</td>
-      <td>40.1</td>
-      <td>CHO XAC NHAN / WAIT CONFIRM</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 yeu; Bottom</td>
-      <td>39.78-40.42</td>
-      <td>38.90</td>
-      <td>BOTTOM</td>
-      <td>80.0</td>
-      <td>66.0</td>
-      <td>B</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>44.32</td>
-      <td>-9.25</td>
-      <td>0.89</td>
-      <td>2.16</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-01</td>
-      <td>NO_PORTFOLIO</td>
-      <td></td>
-      <td>THEO DOI / WATCH</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score thap; Volume yeu</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Telegram gá»­i nháº­n Äá»nh chi tiáº¿t tá»«ng mÃ£: khuyáº¿n nghá», lÃ½ do, vÃ¹ng mua, cáº¯t lá», tá»· trá»ng, báº±ng chá»©ng AI, dá»± bÃ¡o +3/+5/+10 phiÃªn.</td>
     </tr>
   </tbody>
 </table>
