@@ -2,10 +2,8 @@ name: Daily Trading System
 
 on:
   schedule:
-    # TEST: chạy mỗi 50 phút
-    - cron: "*/50 * * * *"
-
     # CHẠY THẬT: 17:00 → 20:30 giờ Việt Nam
+    # UTC = 10:00 → 13:30, thứ 2-6
     - cron: "0,30 10-13 * * 1-5"
 
   workflow_dispatch:
@@ -28,10 +26,6 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Sync latest repo
-        run: |
-          git pull --rebase origin main || true
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -47,7 +41,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # ✅ ĐÃ FIX TELEGRAM Ở ĐÂY
       - name: Run batch trading system
         env:
           VNSTOCK_API_KEY: ${{ secrets.VNSTOCK_API_KEY }}
@@ -62,7 +55,8 @@ jobs:
 
           git pull --rebase origin main || true
 
-          git add .
+          git add all_signal_results.csv raw_signal_candidates.csv ai_risk_filtered.csv bottom_common_priority.csv momentum_common_priority.csv entry_plan_next_session.csv action_plan.csv portfolio_tracker.csv ai_risk_dashboard.html progress_state.csv signal_history.csv pattern_stats.csv walk_forward_stats.csv backfill_signal_history.csv backfill_walk_forward_stats.csv backfill_state.csv regime_stats.csv
+
           git commit -m "auto update $(TZ='Asia/Ho_Chi_Minh' date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
 
           git pull --rebase origin main || true
