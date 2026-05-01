@@ -1,11 +1,3 @@
-# =========================================================
-# V12 CORE STABLE - CLEAN FROM V10 (GITHUB READY)
-# - GitHub Actions ready
-# - No Colab path
-# - Safe Telegram debug
-# - CSV output
-# =========================================================
-
 import os
 import pandas as pd
 import numpy as np
