@@ -10,7 +10,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V9_DECAY_REGIME_AI_2026_05_01"
+SYSTEM_VERSION = "PRO_V9_STABLE_FINAL_VI_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -671,6 +671,7 @@ def append_signal_history(combined, market_ret20):
     cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=180)
     hist = hist[(hist_dt.isna()) | (hist_dt >= cutoff)].copy()
 
+    hist = normalize_outcome_dtype(hist)
     hist.to_csv(SIGNAL_HISTORY_PATH, index=False, encoding="utf-8-sig")
     print(f"â Updated signal history: {len(hist)} rows")
 
@@ -759,6 +760,7 @@ def update_history_outcomes(hist):
         return pd.DataFrame()
 
     hist = hist.copy()
+    hist = normalize_outcome_dtype(hist)
 
     outcome_cols = ["Ret+3D %", "Ret+5D %", "Ret+10D %", "Max+10D %", "Min+10D %", "Outcome"]
     for col in outcome_cols:
@@ -794,6 +796,7 @@ def build_pattern_stats(hist):
         return pd.DataFrame()
 
     h = hist.copy()
+    h = normalize_outcome_dtype(h)
     h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
     h = h.dropna(subset=["NgÃ y", "Pattern Key"])
 
@@ -864,6 +867,7 @@ def build_walk_forward_stats(hist):
         return pd.DataFrame()
 
     h = hist.copy()
+    h = normalize_outcome_dtype(h)
     h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
     h = h.dropna(subset=["NgÃ y", "Pattern Key"])
     h["Outcome"] = h.get("Outcome", "PENDING").astype(str)
@@ -1486,6 +1490,81 @@ def get_env_secret(*names):
 
 
 
+
+def normalize_outcome_dtype(df):
+    """
+    Fix lá»i dtype: cá»t Outcome luÃ´n lÃ  text/object Äá» gÃ¡n PENDING/WIN/LOSS khÃ´ng crash.
+    """
+    if df is None:
+        return df
+    try:
+        if "Outcome" not in df.columns:
+            df["Outcome"] = "PENDING"
+        df["Outcome"] = df["Outcome"].astype("object")
+        df["Outcome"] = df["Outcome"].fillna("PENDING").astype(str)
+    except Exception:
+        pass
+    return df
+
+
+def safe_numeric_columns(df, cols=None):
+    if df is None or df.empty:
+        return df
+    if cols is None:
+        cols = [
+            "Score", "AI Confidence", "Win Probability", "OOS Win Probability",
+            "Regime Win Probability", "RSI", "RS20", "Close", "ATR %",
+            "Volume Ratio", "History Samples", "OOS Samples", "Regime Samples"
+        ]
+    for col in cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+    return df
+
+
+def vi_action_label(action):
+    s = str(action or "").upper()
+    if "MUA Æ¯U TIÃN" in s or "UU TIEN" in s:
+        return "MUA Æ¯U TIÃN (PRIORITY BUY)"
+    if "MUA THÄM DÃ" in s or "THAM DO" in s:
+        return "MUA THÄM DÃ (PROBE BUY)"
+    if "BUY NOW" in s:
+        return "MUA NGAY (BUY NOW)"
+    if "CHá» XÃC NHáº¬N" in s or "CHO XAC NHAN" in s:
+        return "CHá» XÃC NHáº¬N (WAIT CONFIRM)"
+    if "CHá» PULLBACK" in s or "PULLBACK" in s:
+        return "CHá» PULLBACK (WAIT PULLBACK)"
+    if "THEO DÃI Máº NH" in s or "THEO DOI MANH" in s:
+        return "THEO DÃI Máº NH (STRONG WATCH)"
+    if "THEO DÃI" in s or "WATCH" in s or "WATCHLIST" in s:
+        return "THEO DÃI (WATCH)"
+    if "Bá» QUA" in s or "BO QUA" in s or "SKIP" in s:
+        return "Bá» QUA (SKIP)"
+    if "WAIT" in s:
+        return "CHá» (WAIT)"
+    return str(action or "")
+
+
+def vi_regime_label(regime):
+    s = str(regime or "").upper()
+    mapping = {
+        "UPTREND": "TÄNG Máº NH (UPTREND)",
+        "POSITIVE": "TÃCH Cá»°C (POSITIVE)",
+        "SIDEWAY": "ÄI NGANG (SIDEWAY)",
+        "WEAK": "Yáº¾U (WEAK)",
+        "DOWNTREND": "GIáº¢M (DOWNTREND)",
+        "HIGH_VOL_UP": "BIáº¾N Äá»NG CAO - TÄNG (HIGH VOL UP)",
+        "HIGH_VOL_DOWN": "BIáº¾N Äá»NG CAO - GIáº¢M (HIGH VOL DOWN)",
+    }
+    return mapping.get(s, str(regime or ""))
+
+
+def short_note(text_value, limit=90):
+    s = str(text_value or "").replace("\n", " ").replace("\r", " ").strip()
+    if s.lower() in ["nan", "none", ""]:
+        return ""
+    return s[:limit]
+
 def now_vietnam():
     return datetime.utcnow() + timedelta(hours=7)
 
@@ -1536,11 +1615,13 @@ def get_report_data_date(*dfs):
 
 def build_telegram_message(entry, action_plan, combined, tracker):
     """
-    Telegram compact display.
-    Dung ASCII khong dau de tranh loi font/mojibake tren iPhone/GitHub.
-    Dashboard HTML van gui kem de xem chi tiet.
+    Telegram V9 Stable Final:
+    - Tiáº¿ng Viá»t + English label
+    - Gá»n, dá» Äá»c
+    - UTF-8 chuáº©n
+    - KhÃ´ng spam quÃ¡ dÃ i
     """
-    now = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
+    run_time = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
     data_date = get_report_data_date(entry, action_plan, combined)
 
     try:
@@ -1558,135 +1639,141 @@ def build_telegram_message(entry, action_plan, combined, tracker):
     if source_df.empty and combined is not None and not combined.empty:
         source_df = combined.copy()
 
-    if source_df.empty:
+    if source_df is None or source_df.empty:
         return (
-            "TRADING BOT ALERT\n"
-            f"Run time: {now}\nData date: {data_date}\n"
-            f"Version: {SYSTEM_VERSION}\n"
-            "No signal data found.\n"
-            "Dashboard HTML attached if available."
+            "ð¤ BOT GIAO Dá»CH V9 STABLE\n"
+            f"â° Thá»i gian cháº¡y (Run time): {run_time}\n"
+            f"ð NgÃ y dá»¯ liá»u (Data date): {data_date}\n"
+            "KhÃ´ng cÃ³ dá»¯ liá»u tÃ­n hiá»u.\n"
+            "Dashboard HTML ÄÆ°á»£c gá»­i kÃ¨m náº¿u cÃ³."
         )
 
-    # Sort by AI/Win/Score
-    for col in ["OOS Win Probability", "Win Probability", "AI Confidence", "Score"]:
-        if col in source_df.columns:
-            source_df[col] = pd.to_numeric(source_df[col], errors="coerce")
+    source_df = safe_numeric_columns(source_df)
 
-    sort_cols = [c for c in ["Final Action", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in source_df.columns]
-    if "Score" in source_df.columns:
-        source_df = source_df.sort_values("Score", ascending=False)
+    # Current regime
+    try:
+        current_regime = str(combined.get("Market Regime Now").dropna().iloc[0]) if "Market Regime Now" in combined.columns else ""
+    except Exception:
+        current_regime = ""
 
-    # Count actions
+    # Count final actions
     action_col = "Final Action" if "Final Action" in source_df.columns else "AI Action" if "AI Action" in source_df.columns else "Action" if "Action" in source_df.columns else None
 
-    def count_contains(words):
+    def count_action_contains(keywords):
         if not action_col:
             return 0
-        s = source_df[action_col].astype(str)
+        s = source_df[action_col].astype(str).str.upper()
         mask = False
-        for w in words:
-            mask = mask | s.str.contains(w, case=False, na=False)
+        for kw in keywords:
+            mask = mask | s.str.contains(kw.upper(), na=False)
         return int(mask.sum())
 
-    buy_count = count_contains(["MUA", "BUY"])
-    wait_count = count_contains(["CHO", "WAIT"])
-    watch_count = count_contains(["THEO DOI", "WATCH"])
+    buy_count = count_action_contains(["MUA", "BUY"])
+    wait_count = count_action_contains(["CHá»", "CHO", "WAIT"])
+    watch_count = count_action_contains(["THEO DÃI", "THEO DOI", "WATCH"])
+    skip_count = count_action_contains(["Bá» QUA", "BO QUA", "SKIP"])
 
-    # Focus: top useful rows
+    # Focus top rows
     focus = source_df.copy()
     if action_col:
-        s = focus[action_col].astype(str)
-        preferred = s.str.contains("MUA|BUY|THAM DO|UU TIEN|CHO|WATCH|THEO DOI", case=False, na=False)
+        s = focus[action_col].astype(str).str.upper()
+        preferred = s.str.contains("MUA|BUY|CHá»|CHO|WAIT|WATCH|THEO", na=False)
         if preferred.any():
             focus = focus[preferred].copy()
 
-    if "AI Confidence" in focus.columns:
-        focus = focus.sort_values("AI Confidence", ascending=False)
+    sort_cols = [c for c in ["Regime Win Probability", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in focus.columns]
+    if sort_cols:
+        focus = focus.sort_values(sort_cols, ascending=False)
     elif "Score" in focus.columns:
         focus = focus.sort_values("Score", ascending=False)
 
     focus = focus.head(5)
 
     lines = []
-    lines.append("TRADING BOT PRO ALERT")
-    lines.append(f"Run time: {now}")
-    lines.append(f"Data date: {data_date}")
-    lines.append(f"Version: {SYSTEM_VERSION}")
-    lines.append(f"Coverage: {total_codes}/{len(UNIVERSE)}")
-    try:
-        current_regime = str(combined.get("Market Regime Now").dropna().iloc[0]) if "Market Regime Now" in combined.columns else ""
-    except Exception:
-        current_regime = ""
+    lines.append("ð¤ BOT GIAO Dá»CH V9 STABLE")
+    lines.append(f"â° Thá»i gian cháº¡y (Run): {run_time}")
+    lines.append(f"ð NgÃ y dá»¯ liá»u (Data): {data_date}")
+    lines.append(f"ð Version: {SYSTEM_VERSION}")
     if current_regime:
-        lines.append(f"Regime: {current_regime}")
+        lines.append(f"ð Thá» trÆ°á»ng (Regime): {vi_regime_label(current_regime)}")
+    lines.append(f"â Coverage: {total_codes}/{len(UNIVERSE)} mÃ£")
 
     if missing_codes:
-        lines.append(f"Missing: {len(missing_codes)} codes")
-        lines.append("First missing: " + ", ".join(missing_codes[:12]))
-    else:
-        lines.append("Coverage OK: full universe")
+        lines.append(f"â ï¸ Thiáº¿u {len(missing_codes)} mÃ£")
+        lines.append("MÃ£ thiáº¿u Äáº§u tiÃªn: " + ", ".join(missing_codes[:10]))
 
     lines.append("")
-    lines.append(f"Buy/Mua: {buy_count} | Wait/Cho: {wait_count} | Watch: {watch_count}")
+    lines.append(f"ð¥ Mua (Buy): {buy_count} | ð¡ Chá» (Wait): {wait_count} | ð Theo dÃµi (Watch): {watch_count} | â Bá» qua: {skip_count}")
     if tracker is not None and not tracker.empty:
-        lines.append(f"Portfolio rows: {len(tracker)}")
+        lines.append(f"ð¦ Danh má»¥c (Portfolio rows): {len(tracker)}")
 
     lines.append("")
-    lines.append("TOP SIGNALS:")
+    lines.append("ð TÃN HIá»U Ná»I Báº¬T (TOP SIGNALS):")
+
+    def fnum(row, col, digits=0):
+        try:
+            v = row.get(col)
+            if pd.isna(v):
+                return ""
+            return f"{float(v):.{digits}f}"
+        except Exception:
+            return ""
 
     for _, r in focus.iterrows():
         code = str(r.get("MÃ£", r.get("Ma", ""))).strip()
-        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "")))).strip()
+        final_action = vi_action_label(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
         grade = str(r.get("AI Grade", "")).strip()
 
-        def fnum(col, digits=0):
-            try:
-                v = r.get(col)
-                if pd.isna(v):
-                    return ""
-                return f"{float(v):.{digits}f}"
-            except Exception:
-                return ""
+        ai = fnum(r, "AI Confidence", 0)
+        win = fnum(r, "Win Probability", 0)
+        oos = fnum(r, "OOS Win Probability", 0)
+        reg = fnum(r, "Regime Win Probability", 0)
+        score = fnum(r, "Score", 0)
+        close = fnum(r, "Close", 2)
+        rsi = fnum(r, "RSI", 0)
+        rs20 = fnum(r, "RS20", 1)
 
-        ai = fnum("AI Confidence", 0)
-        win = fnum("Win Probability", 0)
-        oos = fnum("OOS Win Probability", 0)
-        score = fnum("Score", 0)
-        rsi = fnum("RSI", 0)
-        rs20 = fnum("RS20", 1)
-        close = fnum("Close", 2)
-
-        line = f"- {code}"
-        if grade and grade != "nan":
-            line += f" | Grade {grade}"
-        if final_action and final_action != "nan":
-            line += f" | {final_action}"
+        lines.append(f"- {code} | {final_action}")
+        detail = []
+        if grade and grade.lower() != "nan":
+            detail.append(f"Grade {grade}")
         if ai:
-            line += f" | AI {ai}"
-        if win:
-            line += f" | Win {win}%"
-        if oos:
-            line += f" | OOS {oos}%"
+            detail.append(f"AI {ai}")
         if score:
-            line += f" | Score {score}"
+            detail.append(f"Score {score}")
+        if win:
+            detail.append(f"Win {win}%")
+        if oos:
+            detail.append(f"OOS {oos}%")
+        if reg:
+            detail.append(f"Reg {reg}%")
+
+        if detail:
+            lines.append("  " + " | ".join(detail))
+
+        market = []
         if close:
-            line += f" | Close {close}"
+            market.append(f"GiÃ¡ {close}")
         if rsi:
-            line += f" | RSI {rsi}"
+            market.append(f"RSI {rsi}")
         if rs20:
-            line += f" | RS20 {rs20}"
+            market.append(f"RS20 {rs20}")
+        if market:
+            lines.append("  " + " | ".join(market))
 
-        lines.append(line)
+        wf_note = short_note(r.get("Walk Forward Note", ""), 85)
+        regime_note = short_note(r.get("Regime Note", ""), 85)
+        hist_note = short_note(r.get("History Note", ""), 75)
 
-        # chi them 1 dong note ngan gon, khong dau
-        note = str(r.get("Walk Forward Note", r.get("History Note", ""))).strip()
-        if note and note != "nan":
-            # Bo ky tu xuong dong va cat ngan
-            note = note.replace("\n", " ").replace("\r", " ")
-            lines.append(f"  Note: {note[:90]}")
+        if wf_note:
+            lines.append(f"  ð§ª WF: {wf_note}")
+        if regime_note:
+            lines.append(f"  ð Regime: {regime_note}")
+        elif hist_note:
+            lines.append(f"  ð History: {hist_note}")
 
     lines.append("")
-    lines.append("Dashboard HTML attached below.")
+    lines.append("ð Dashboard HTML ÄÃ£ gá»­i kÃ¨m Äá» xem chi tiáº¿t.")
     return "\n".join(lines)
 
 
@@ -1757,7 +1844,7 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
             token,
             chat_id,
             DASHBOARD_PATH,
-            caption="Dashboard HTML - open file to view details"
+            caption="ð Dashboard HTML - má» file Äá» xem chi tiáº¿t"
         )
 
     except Exception as e:
@@ -2064,6 +2151,7 @@ def build_regime_stats(hist):
         return pd.DataFrame()
 
     h = hist.copy()
+    h = normalize_outcome_dtype(h)
     if "Pattern Key" not in h.columns or "Market Regime" not in h.columns:
         return pd.DataFrame()
 
@@ -2304,6 +2392,7 @@ def build_backfill_history_from_cache(market_ret20=0):
         hist = hist.drop_duplicates(subset=["NgÃ y", "MÃ£", "Pattern Key"], keep="last")
         hist = hist.sort_values(["NgÃ y", "MÃ£"])
 
+    hist = normalize_outcome_dtype(hist)
     hist.to_csv(BACKFILL_SIGNAL_HISTORY_PATH, index=False, encoding="utf-8-sig")
 
     next_start = end_idx
@@ -2326,6 +2415,7 @@ def build_backfill_walk_forward_stats(backfill_hist):
         return pd.DataFrame()
 
     h = backfill_hist.copy()
+    h = normalize_outcome_dtype(h)
 
     if "Train/Test" not in h.columns or "Pattern Key" not in h.columns:
         return pd.DataFrame()
@@ -2534,6 +2624,7 @@ combined = apply_walk_forward_filter(combined, walk_forward_stats)
 learning_hist_for_regime = backfill_history if 'backfill_history' in globals() and backfill_history is not None and not backfill_history.empty else signal_history
 regime_stats = build_regime_stats(learning_hist_for_regime)
 combined = apply_regime_decay_filter(combined, regime_stats, current_market_regime)
+combined = safe_numeric_columns(combined)
 
 sort_cols = [c for c in ["Final Action", "Win Probability", "AI Confidence", "Score"] if c in combined.columns]
 if "Win Probability" in combined.columns:
@@ -2628,19 +2719,19 @@ html_full = f"""
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} â {end_idx} / {len(UNIVERSE)}</p>
 
-<h3>ð RAW SIGNAL - Lá»c thÃ´</h3>
+<h3>ð TÃN HIá»U THÃ (RAW SIGNAL)</h3>
 {raw_html}
 
-<h3>ð¥ AI FINAL - Lá»c tinh</h3>
+<h3>ð¥ AI FINAL - Lá»C TINH</h3>
 {ai_html}
 
-<h3>ð ENTRY</h3>
+<h3>ð ÄIá»M VÃO Lá»NH (ENTRY)</h3>
 {entry_html}
 
-<h3>ð¦ PORTFOLIO TRACKER</h3>
+<h3>ð¦ THEO DÃI DANH Má»¤C (PORTFOLIO TRACKER)</h3>
 {tracker_html}
 
-<h3>ð¯ ACTION PLAN</h3>
+<h3>ð¯ Káº¾ HOáº CH HÃNH Äá»NG (ACTION PLAN)</h3>
 {action_html}
 
 </body>
