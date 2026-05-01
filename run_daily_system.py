@@ -11,7 +11,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V12_PRO_FINAL_VI_2026_05_01"
+SYSTEM_VERSION = "PRO_V12_PRO_FINAL_FIX_FONT_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -110,20 +110,64 @@ def fix_vietnamese_columns(df):
     return df
 
 
+def fix_mojibake_text(value):
+    """
+    Sá»­a lá»i chá»¯ kiá»u: chÃÂ°a, dÃ¡Â»Â¯ liÃ¡Â»â¡u, TÃÆng...
+    Náº¿u text ÄÃ£ ÄÃºng UTF-8 thÃ¬ giá»¯ nguyÃªn.
+    """
+    if value is None:
+        return value
+    try:
+        if pd.isna(value):
+            return value
+    except Exception:
+        pass
+
+    s = str(value)
+    bad_marks = ["Ã", "Ã", "Ã", "Ã", "Ã¡Â»", "Ã¡Âº", "Ã¢â¬", "Ã¢â "]
+    if not any(bad in s for bad in bad_marks):
+        return s
+
+    for enc in ["latin1", "cp1252"]:
+        try:
+            fixed = s.encode(enc, errors="ignore").decode("utf-8", errors="ignore")
+            bad_before = sum(s.count(x) for x in bad_marks)
+            bad_after = sum(fixed.count(x) for x in bad_marks)
+            if fixed and bad_after < bad_before:
+                return fixed
+        except Exception:
+            pass
+
+    return s
+
+
+def fix_mojibake_df(df):
+    if df is None or df.empty:
+        return df
+    out = df.copy()
+    for col in out.columns:
+        if out[col].dtype == "object":
+            out[col] = out[col].apply(fix_mojibake_text)
+    return out
+
+
 def safe_read_csv(path):
+    """
+    Äá»c CSV an toÃ n, Æ°u tiÃªn UTF-8 Äá» khÃ´ng lá»i tiáº¿ng Viá»t.
+    CÃ³ fallback cho file cÅ© tá»«ng bá» sai encoding.
+    """
     if not os.path.exists(path):
         return pd.DataFrame()
 
-    for enc in ["utf-8-sig", "utf-8", "cp1258", "latin1"]:
+    for enc in ["utf-8-sig", "utf-8", "cp1252", "latin1"]:
         try:
             df = pd.read_csv(path, encoding=enc)
-            return fix_vietnamese_columns(df)
-        except EmptyDataError:
-            return pd.DataFrame()
+            return fix_mojibake_df(df)
         except Exception:
             continue
 
     return pd.DataFrame()
+
 
 
 def safe_float(x, default=np.nan):
@@ -1639,8 +1683,7 @@ def clean_ascii_text(x, limit=120):
         s = s.replace(k, v)
 
     # Remove non-ascii chars
-    s = s.encode("ascii", "ignore").decode("ascii")
-    s = s.replace("\n", " ").replace("\r", " ")
+        s = s.replace("\n", " ").replace("\r", " ")
     s = re.sub(r"\s+", " ", s).strip()
     return s[:limit]
 
@@ -2025,10 +2068,10 @@ def make_dashboard_view(df, kind=""):
         view["Regime"] = view["Regime"].apply(display_regime_ascii)
 
     if "Strategy" in view.columns:
-        view["Strategy"] = view["Strategy"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
+        view["Strategy"] = view["Strategy"].astype(str)
 
     if "Risk Status" in view.columns:
-        view["Risk Status"] = view["Risk Status"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
+        view["Risk Status"] = view["Risk Status"].astype(str)
 
     # Actionable columns
     view = add_explainable_columns(view)
@@ -2084,12 +2127,12 @@ def v12_clean(x, limit=160):
             return ""
     except Exception:
         pass
-    s = str(x).replace("\n", " ").replace("\r", " ").strip()
+    s = fix_mojibake_text(str(x)).replace("\n", " ").replace("\r", " ").strip()
     if s.lower() in ["nan", "none", ""]:
         return ""
-    s = s.encode("ascii", "ignore").decode("ascii")
     s = re.sub(r"\s+", " ", s).strip()
     return s[:limit]
+
 
 
 def v12_action_label(row):
