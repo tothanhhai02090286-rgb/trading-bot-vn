@@ -10,7 +10,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V8_BACKFILL_3M_WF_2026_05_01"
+SYSTEM_VERSION = "PRO_V9_DECAY_REGIME_AI_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -46,6 +46,19 @@ BACKFILL_BLOCK_MONTHS = 3
 BACKFILL_TRAIN_RATIO = 0.80
 BACKFILL_MAX_SYMBOLS_PER_RUN = 40
 BACKFILL_STATE_PATH = "backfill_state.csv"
+
+REGIME_STATS_PATH = "regime_stats.csv"
+
+REGIME_SHORT_MA = 20
+REGIME_LONG_MA = 50
+REGIME_STRONG_RET20 = 5.0
+REGIME_WEAK_RET20 = -5.0
+REGIME_SIDEWAY_ABS_RET20 = 2.0
+REGIME_HIGH_VOL_ATR = 8.0
+
+RECENT_WEIGHT_MIN = 0.20
+REGIME_BONUS_STRONG = 6
+REGIME_PENALTY_BAD = 10
 
 WF_TRAIN_DAYS = 45
 WF_TEST_DAYS = 10
@@ -133,7 +146,7 @@ def load_state():
 
 def save_state(next_start):
     pd.DataFrame([{
-        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
         "next_start": next_start,
         "version": SYSTEM_VERSION
     }]).to_csv(STATE_PATH, index=False, encoding="utf-8-sig")
@@ -243,7 +256,7 @@ def fetch_history(symbol):
 
     print(f"ð API fetch/update: {symbol}")
 
-    end = datetime.now()
+    end = now_vietnam()
     start = end - timedelta(days=260)
 
     df = load_quote_history(symbol, start, end)
@@ -485,7 +498,7 @@ def analyze_symbol(symbol, market_ret20):
     rs20 = ret20 - market_ret20
 
     row = {
-        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "NgÃ y": get_price_data_date(df),
         "MÃ£": symbol,
         "Close": round(close, 2),
         "MA5": round(ma5, 2),
@@ -506,7 +519,7 @@ def analyze_symbol(symbol, market_ret20):
         "Low20": round(safe_float(last.get("Low20"), 0), 2),
         "High20": round(safe_float(last.get("High20"), 0), 2),
         "Fetch Mode": fetch_mode,
-        "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
         "Version": SYSTEM_VERSION
     }
 
@@ -622,7 +635,7 @@ def append_signal_history(combined, market_ret20):
     if combined is None or combined.empty or "MÃ£" not in combined.columns:
         return pd.DataFrame()
 
-    market_regime = classify_market_regime(market_ret20)
+    market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
 
     keep_cols = [
         "NgÃ y", "MÃ£", "Close", "Signal", "Chiáº¿n lÆ°á»£c", "Action", "Score",
@@ -633,13 +646,13 @@ def append_signal_history(combined, market_ret20):
     ]
 
     hist_new = combined[[c for c in keep_cols if c in combined.columns]].copy()
-    hist_new["Run At"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    hist_new["Run At"] = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
     hist_new["Market Ret20"] = round(safe_float(market_ret20, 0), 2)
     hist_new["Market Regime"] = market_regime
     hist_new["Pattern Key"] = hist_new.apply(lambda r: make_pattern_key(r, market_regime), axis=1)
 
     if "NgÃ y" not in hist_new.columns:
-        hist_new["NgÃ y"] = datetime.now().strftime("%Y-%m-%d")
+        hist_new["NgÃ y"] = now_vietnam().strftime("%Y-%m-%d")
 
     old = safe_read_csv(SIGNAL_HISTORY_PATH)
 
@@ -655,7 +668,7 @@ def append_signal_history(combined, market_ret20):
 
     # chá» giá»¯ 180 ngÃ y gáº§n nháº¥t cho nháº¹
     hist_dt = pd.to_datetime(hist.get("NgÃ y"), errors="coerce")
-    cutoff = pd.Timestamp(datetime.now().date()) - pd.Timedelta(days=180)
+    cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=180)
     hist = hist[(hist_dt.isna()) | (hist_dt >= cutoff)].copy()
 
     hist.to_csv(SIGNAL_HISTORY_PATH, index=False, encoding="utf-8-sig")
@@ -784,7 +797,7 @@ def build_pattern_stats(hist):
     h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
     h = h.dropna(subset=["NgÃ y", "Pattern Key"])
 
-    cutoff = pd.Timestamp(datetime.now().date()) - pd.Timedelta(days=HISTORY_LOOKBACK_DAYS)
+    cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=HISTORY_LOOKBACK_DAYS)
     h = h[h["NgÃ y"] >= cutoff].copy()
 
     if h.empty:
@@ -796,7 +809,7 @@ def build_pattern_stats(hist):
     if h.empty:
         return pd.DataFrame()
 
-    today = pd.Timestamp(datetime.now().date())
+    today = pd.Timestamp(now_vietnam().date())
     age_days = (today - h["NgÃ y"]).dt.days.clip(lower=0)
 
     # exponential decay: dá»¯ liá»u cÃ ng cÅ© cÃ ng nháº¹
@@ -828,7 +841,7 @@ def build_pattern_stats(hist):
             "Loss Count": int(g["Loss Flag"].sum()),
             "Avg Ret+5D %": round(avg_ret5, 2) if not pd.isna(avg_ret5) else np.nan,
             "Avg Ret+10D %": round(avg_ret10, 2) if not pd.isna(avg_ret10) else np.nan,
-            "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
         })
 
     stats = pd.DataFrame(rows)
@@ -955,7 +968,7 @@ def build_walk_forward_stats(hist):
             "OOS Avg Ret+10D %": round(avg_ret10, 2) if not pd.isna(avg_ret10) else np.nan,
             "OOS Reliability": round(reliability, 2),
             "OOS Status": status,
-            "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
         })
 
     wf_stats = pd.DataFrame(agg_rows)
@@ -1061,7 +1074,7 @@ def apply_history_learning(combined, pattern_stats, market_ret20):
         return combined
 
     df = combined.copy()
-    market_regime = classify_market_regime(market_ret20)
+    market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
 
     if "Pattern Key" not in df.columns:
         df["Pattern Key"] = df.apply(lambda r: make_pattern_key(r, market_regime), axis=1)
@@ -1424,7 +1437,7 @@ def build_portfolio_and_action_plan(combined, ai_risk):
         buy_plan["LÃ½ do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
         keep_buy = [
             "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "LÃ½ do",
-            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Final Action", "History Note", "Walk Forward Note", "AI Reason", "AI Warning",
+            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
             "RSI", "Close", "RS20", "Volume Ratio",
             "ADX", "ATR %", "Risk Status"
         ]
@@ -1435,13 +1448,13 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     hold_plan = tracker.copy()
 
     if not hold_plan.empty and "MÃ£" in hold_plan.columns:
-        hold_plan["NgÃ y"] = datetime.now().strftime("%Y-%m-%d")
+        hold_plan["NgÃ y"] = now_vietnam().strftime("%Y-%m-%d")
         hold_plan["LÃ½ do"] = "Theo dÃµi danh má»¥c hiá»n cÃ³"
 
         keep_hold = [
             "NgÃ y", "MÃ£", "HÃ nh Äá»ng", "Cáº£nh bÃ¡o", "LÃ½ do",
             "LÃ£i/Lá» %", "LÃ£i/Lá» tiá»n",
-            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Final Action", "History Note", "Walk Forward Note", "AI Reason", "AI Warning",
+            "Signal", "Chiáº¿n lÆ°á»£c", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
             "RSI", "Close", "Risk Status", "Risk Reason"
         ]
         hold_plan = hold_plan[[c for c in keep_hold if c in hold_plan.columns]]
@@ -1452,7 +1465,7 @@ def build_portfolio_and_action_plan(combined, ai_risk):
 
     if action_plan.empty:
         action_plan = pd.DataFrame([{
-            "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+            "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
             "MÃ£": "NO_ACTION",
             "HÃ nh Äá»ng": "KHÃNG LÃM GÃ",
             "LÃ½ do": "KhÃ´ng cÃ³ tÃ­n hiá»u mua vÃ  chÆ°a cÃ³ danh má»¥c"
@@ -1472,8 +1485,63 @@ def get_env_secret(*names):
     return None
 
 
+
+def now_vietnam():
+    return datetime.utcnow() + timedelta(hours=7)
+
+
+def now_vietnam():
+    return datetime.utcnow() + timedelta(hours=7)
+
+
+def get_price_data_date(df):
+    """
+    Lay ngay du lieu gia cuoi cung trong dataframe.
+    Khong dung ngay run bot, vi GitHub co the chay sang 01/05 nhung data van la phien 30/04.
+    """
+    try:
+        if df is None or df.empty:
+            return now_vietnam().strftime("%Y-%m-%d")
+
+        last = df.iloc[-1]
+        for col in ["time", "date", "ngay", "NgÃ y"]:
+            if col in df.columns:
+                val = last.get(col)
+                if pd.notna(val):
+                    return str(val)[:10]
+
+        return now_vietnam().strftime("%Y-%m-%d")
+    except Exception:
+        return now_vietnam().strftime("%Y-%m-%d")
+
+
+def get_report_data_date(*dfs):
+    """
+    Lay ngay du lieu lon nhat tu cac file output de hien thi tren Telegram/dashboard.
+    """
+    dates = []
+    for df in dfs:
+        try:
+            if df is not None and not df.empty and "NgÃ y" in df.columns:
+                s = pd.to_datetime(df["NgÃ y"], errors="coerce").dropna()
+                if not s.empty:
+                    dates.append(s.max())
+        except Exception:
+            pass
+
+    if dates:
+        return max(dates).strftime("%Y-%m-%d")
+
+    return now_vietnam().strftime("%Y-%m-%d")
+
 def build_telegram_message(entry, action_plan, combined, tracker):
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    """
+    Telegram compact display.
+    Dung ASCII khong dau de tranh loi font/mojibake tren iPhone/GitHub.
+    Dashboard HTML van gui kem de xem chi tiet.
+    """
+    now = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
+    data_date = get_report_data_date(entry, action_plan, combined)
 
     try:
         total_codes = len(set(combined["MÃ£"].dropna().astype(str)) & set(UNIVERSE))
@@ -1490,155 +1558,136 @@ def build_telegram_message(entry, action_plan, combined, tracker):
     if source_df.empty and combined is not None and not combined.empty:
         source_df = combined.copy()
 
+    if source_df.empty:
+        return (
+            "TRADING BOT ALERT\n"
+            f"Run time: {now}\nData date: {data_date}\n"
+            f"Version: {SYSTEM_VERSION}\n"
+            "No signal data found.\n"
+            "Dashboard HTML attached if available."
+        )
+
+    # Sort by AI/Win/Score
+    for col in ["OOS Win Probability", "Win Probability", "AI Confidence", "Score"]:
+        if col in source_df.columns:
+            source_df[col] = pd.to_numeric(source_df[col], errors="coerce")
+
+    sort_cols = [c for c in ["Final Action", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in source_df.columns]
     if "Score" in source_df.columns:
-        source_df["Score"] = pd.to_numeric(source_df["Score"], errors="coerce").fillna(0)
         source_df = source_df.sort_values("Score", ascending=False)
 
-    if "Action" in source_df.columns:
-        focus = source_df[
-            source_df["Action"].astype(str).isin(["BUY NOW", "WAIT", "WATCHLIST", "MUA Má»I"])
-        ].copy()
-        if focus.empty:
-            focus = source_df.copy()
-    elif "HÃ nh Äá»ng" in source_df.columns:
-        focus = source_df.copy()
-        focus["Action"] = focus["HÃ nh Äá»ng"]
-    else:
-        focus = source_df.copy()
+    # Count actions
+    action_col = "Final Action" if "Final Action" in source_df.columns else "AI Action" if "AI Action" in source_df.columns else "Action" if "Action" in source_df.columns else None
 
-    focus = focus.head(TELEGRAM_MAX_ITEMS)
-
-    def count_action(df, names):
-        if df is None or df.empty:
+    def count_contains(words):
+        if not action_col:
             return 0
-        if "Action" in df.columns:
-            return int(df["Action"].astype(str).isin(names).sum())
-        if "HÃ nh Äá»ng" in df.columns:
-            return int(df["HÃ nh Äá»ng"].astype(str).isin(names).sum())
-        return 0
+        s = source_df[action_col].astype(str)
+        mask = False
+        for w in words:
+            mask = mask | s.str.contains(w, case=False, na=False)
+        return int(mask.sum())
 
-    buy_now = count_action(entry, ["BUY NOW", "MUA Má»I"])
-    wait = count_action(entry, ["WAIT"])
-    watch = count_action(entry, ["WATCHLIST"])
+    buy_count = count_contains(["MUA", "BUY"])
+    wait_count = count_contains(["CHO", "WAIT"])
+    watch_count = count_contains(["THEO DOI", "WATCH"])
+
+    # Focus: top useful rows
+    focus = source_df.copy()
+    if action_col:
+        s = focus[action_col].astype(str)
+        preferred = s.str.contains("MUA|BUY|THAM DO|UU TIEN|CHO|WATCH|THEO DOI", case=False, na=False)
+        if preferred.any():
+            focus = focus[preferred].copy()
+
+    if "AI Confidence" in focus.columns:
+        focus = focus.sort_values("AI Confidence", ascending=False)
+    elif "Score" in focus.columns:
+        focus = focus.sort_values("Score", ascending=False)
+
+    focus = focus.head(5)
 
     lines = []
-    lines.append("ð¤ TRADING BOT PRO ALERT")
-    lines.append(f"â° {now}")
-    lines.append(f"ð Version: {SYSTEM_VERSION}")
-    lines.append(f"ð Coverage: {total_codes} / {len(UNIVERSE)} mÃ£")
+    lines.append("TRADING BOT PRO ALERT")
+    lines.append(f"Run time: {now}")
+    lines.append(f"Data date: {data_date}")
+    lines.append(f"Version: {SYSTEM_VERSION}")
+    lines.append(f"Coverage: {total_codes}/{len(UNIVERSE)}")
+    try:
+        current_regime = str(combined.get("Market Regime Now").dropna().iloc[0]) if "Market Regime Now" in combined.columns else ""
+    except Exception:
+        current_regime = ""
+    if current_regime:
+        lines.append(f"Regime: {current_regime}")
 
     if missing_codes:
-        lines.append(f"â ï¸ Thiáº¿u mÃ£: {', '.join(missing_codes[:20])}")
+        lines.append(f"Missing: {len(missing_codes)} codes")
+        lines.append("First missing: " + ", ".join(missing_codes[:12]))
     else:
-        lines.append("â Äá»§ mÃ£ trong all_signal_results.csv")
+        lines.append("Coverage OK: full universe")
 
     lines.append("")
-    lines.append(f"ð¥ BUY NOW/MUA Má»I: {buy_now}")
-    lines.append(f"ð¡ WAIT: {wait}")
-    lines.append(f"ð WATCHLIST: {watch}")
-
+    lines.append(f"Buy/Mua: {buy_count} | Wait/Cho: {wait_count} | Watch: {watch_count}")
     if tracker is not None and not tracker.empty:
-        lines.append(f"ð¦ Portfolio rows: {len(tracker)}")
+        lines.append(f"Portfolio rows: {len(tracker)}")
 
     lines.append("")
-    lines.append("ð TOP SIGNALS:")
-
-    if focus.empty:
-        lines.append("KhÃ´ng cÃ³ tÃ­n hiá»u ná»i báº­t.")
-        return "\n".join(lines)
+    lines.append("TOP SIGNALS:")
 
     for _, r in focus.iterrows():
-        code = str(r.get("MÃ£", r.get("Ma", "")))
-        action = str(r.get("Action", r.get("HÃ nh Äá»ng", "")))
-        signal = str(r.get("Signal", ""))
-        strategy = str(r.get("Chiáº¿n lÆ°á»£c", ""))
-        risk = str(r.get("Risk Status", ""))
+        code = str(r.get("MÃ£", r.get("Ma", ""))).strip()
+        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "")))).strip()
+        grade = str(r.get("AI Grade", "")).strip()
 
-        try:
-            score = f"{float(r.get('Score')):.0f}"
-        except Exception:
-            score = ""
+        def fnum(col, digits=0):
+            try:
+                v = r.get(col)
+                if pd.isna(v):
+                    return ""
+                return f"{float(v):.{digits}f}"
+            except Exception:
+                return ""
 
-        try:
-            close = f"{float(r.get('Close')):.2f}"
-        except Exception:
-            close = ""
-
-        try:
-            rsi = f"{float(r.get('RSI')):.2f}"
-        except Exception:
-            rsi = ""
-
-        try:
-            rs20 = f"{float(r.get('RS20')):.2f}"
-        except Exception:
-            rs20 = ""
-
-        ai_action = str(r.get("Final Action", r.get("AI Action", "")))
-        ai_grade = str(r.get("AI Grade", ""))
-        try:
-            ai_conf = f"{float(r.get('AI Confidence')):.0f}"
-        except Exception:
-            ai_conf = ""
-
-        try:
-            win_prob = f"{float(r.get('Win Probability')):.0f}"
-        except Exception:
-            win_prob = ""
-
-        try:
-            oos_prob = f"{float(r.get('OOS Win Probability')):.0f}"
-        except Exception:
-            oos_prob = ""
+        ai = fnum("AI Confidence", 0)
+        win = fnum("Win Probability", 0)
+        oos = fnum("OOS Win Probability", 0)
+        score = fnum("Score", 0)
+        rsi = fnum("RSI", 0)
+        rs20 = fnum("RS20", 1)
+        close = fnum("Close", 2)
 
         line = f"- {code}"
-        if ai_grade and ai_grade != "nan":
-            line += f" | {ai_grade}"
-        if ai_action and ai_action != "nan":
-            line += f" | {ai_action}"
-        else:
-            line += f" | {action}"
-        if ai_conf:
-            line += f" | AI {ai_conf}"
-        if win_prob:
-            line += f" | Win {win_prob}%"
-        if oos_prob:
-            line += f" | OOS {oos_prob}%"
+        if grade and grade != "nan":
+            line += f" | Grade {grade}"
+        if final_action and final_action != "nan":
+            line += f" | {final_action}"
+        if ai:
+            line += f" | AI {ai}"
+        if win:
+            line += f" | Win {win}%"
+        if oos:
+            line += f" | OOS {oos}%"
         if score:
             line += f" | Score {score}"
-        if signal and signal != "nan":
-            line += f" | {signal}"
-        if strategy and strategy != "nan":
-            line += f" | {strategy}"
         if close:
             line += f" | Close {close}"
         if rsi:
             line += f" | RSI {rsi}"
         if rs20:
             line += f" | RS20 {rs20}"
-        if risk and risk != "nan":
-            line += f" | Risk {risk}"
-
-        ai_reason = str(r.get("AI Reason", ""))
-        if ai_reason and ai_reason != "nan":
-            line += f"\n  â {ai_reason[:120]}"
-
-        ai_warning = str(r.get("AI Warning", ""))
-        if ai_warning and ai_warning != "nan" and ai_warning != "KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n":
-            line += f"\n  â ï¸ {ai_warning[:120]}"
-
-        hist_note = str(r.get("History Note", ""))
-        if hist_note and hist_note != "nan":
-            line += f"\n  ð {hist_note[:100]}"
-
-        wf_note = str(r.get("Walk Forward Note", ""))
-        if wf_note and wf_note != "nan":
-            line += f"\n  ð§ª {wf_note[:110]}"
 
         lines.append(line)
 
-    return "\n".join(lines)
+        # chi them 1 dong note ngan gon, khong dau
+        note = str(r.get("Walk Forward Note", r.get("History Note", ""))).strip()
+        if note and note != "nan":
+            # Bo ky tu xuong dong va cat ngan
+            note = note.replace("\n", " ").replace("\r", " ")
+            lines.append(f"  Note: {note[:90]}")
 
+    lines.append("")
+    lines.append("Dashboard HTML attached below.")
+    return "\n".join(lines)
 
 
 def send_telegram_document(token, chat_id, file_path, caption=""):
@@ -1708,7 +1757,7 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
             token,
             chat_id,
             DASHBOARD_PATH,
-            caption="ð Dashboard HTML - má» file Äá» xem chi tiáº¿t"
+            caption="Dashboard HTML - open file to view details"
         )
 
     except Exception as e:
@@ -1770,7 +1819,7 @@ def get_backfill_state():
 
 def save_backfill_state(next_start):
     pd.DataFrame([{
-        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
         "next_start": next_start,
         "version": SYSTEM_VERSION
     }]).to_csv(BACKFILL_STATE_PATH, index=False, encoding="utf-8-sig")
@@ -1927,6 +1976,222 @@ def get_train_test_tag(date_value, block_start, block_end):
     return "TRAIN" if d < split_day else "TEST"
 
 
+
+def detect_market_regime_detail(market_df=None, market_ret20=0):
+    """
+    Regime detection:
+    UPTREND / POSITIVE / SIDEWAY / WEAK / DOWNTREND / HIGH_VOL_UP / HIGH_VOL_DOWN.
+    """
+    fallback = classify_market_regime(market_ret20)
+
+    try:
+        if market_df is None or market_df.empty or len(market_df) < REGIME_LONG_MA + 5:
+            return fallback
+
+        df = add_indicators(market_df.copy())
+        last = df.iloc[-1]
+
+        ret20 = safe_float(last.get("Ret20 %"), market_ret20)
+        atr = safe_float(last.get("ATR %"), 0)
+
+        if "close" in df.columns:
+            close = pd.to_numeric(df["close"], errors="coerce")
+            ma20 = close.rolling(REGIME_SHORT_MA).mean().iloc[-1]
+            ma50 = close.rolling(REGIME_LONG_MA).mean().iloc[-1]
+        else:
+            ma20 = np.nan
+            ma50 = np.nan
+
+        if atr >= REGIME_HIGH_VOL_ATR:
+            return "HIGH_VOL_UP" if ret20 >= 0 else "HIGH_VOL_DOWN"
+
+        if not pd.isna(ma20) and not pd.isna(ma50):
+            if ma20 > ma50 and ret20 >= REGIME_STRONG_RET20:
+                return "UPTREND"
+            if ma20 < ma50 and ret20 <= REGIME_WEAK_RET20:
+                return "DOWNTREND"
+
+        if abs(ret20) <= REGIME_SIDEWAY_ABS_RET20:
+            return "SIDEWAY"
+
+        return "POSITIVE" if ret20 > 0 else "WEAK"
+
+    except Exception:
+        return fallback
+
+
+def get_market_regime_from_cache(market_ret20=0):
+    for benchmark in ["VNINDEX", "VN30"]:
+        try:
+            cache_path = os.path.join(CACHE_DIR, f"{benchmark}.csv")
+            if not os.path.exists(cache_path):
+                continue
+
+            df = safe_read_csv(cache_path)
+            if df.empty:
+                continue
+
+            regime = detect_market_regime_detail(df, market_ret20)
+            print(f"ð Market regime: {regime}")
+            return regime
+        except Exception:
+            continue
+
+    regime = classify_market_regime(market_ret20)
+    print(f"ð Market regime fallback: {regime}")
+    return regime
+
+
+def compute_recent_decay_weight(date_value):
+    d = pd.to_datetime(date_value, errors="coerce")
+    if pd.isna(d):
+        return RECENT_WEIGHT_MIN
+
+    try:
+        age_days = max((pd.Timestamp(now_vietnam().date()) - d).days, 0)
+    except Exception:
+        age_days = 0
+
+    w = np.exp(-np.log(2) * age_days / max(DECAY_HALFLIFE_DAYS, 1))
+    return max(RECENT_WEIGHT_MIN, float(w))
+
+
+def build_regime_stats(hist):
+    """
+    Thá»ng kÃª hiá»u quáº£ pattern theo regime, cÃ³ time-decay.
+    """
+    if hist is None or hist.empty:
+        return pd.DataFrame()
+
+    h = hist.copy()
+    if "Pattern Key" not in h.columns or "Market Regime" not in h.columns:
+        return pd.DataFrame()
+
+    h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
+    h = h.dropna(subset=["NgÃ y", "Pattern Key", "Market Regime"])
+    h["Outcome"] = h.get("Outcome", "PENDING").astype(str)
+    h = h[~h["Outcome"].isin(["PENDING", "", "nan"])].copy()
+
+    if h.empty:
+        return pd.DataFrame()
+
+    h["Win Flag"] = h["Outcome"].isin(["WIN", "WIN_TP"]).astype(int)
+    h["Decay Weight"] = h["NgÃ y"].apply(compute_recent_decay_weight)
+
+    rows = []
+    for (regime, key), g in h.groupby(["Market Regime", "Pattern Key"]):
+        sample = len(g)
+        weighted_n = g["Decay Weight"].sum()
+        weighted_win = (g["Win Flag"] * g["Decay Weight"]).sum()
+
+        prior_n = 8
+        prior_p = BASE_WIN_PROB / 100
+        win_p = ((weighted_win + prior_p * prior_n) / (weighted_n + prior_n)) * 100
+
+        rows.append({
+            "Market Regime": regime,
+            "Pattern Key": key,
+            "Regime Samples": sample,
+            "Regime Weighted Samples": round(weighted_n, 2),
+            "Regime Win Probability": round(win_p, 2),
+            "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
+        })
+
+    stats = pd.DataFrame(rows)
+    if not stats.empty:
+        stats = stats.sort_values(["Regime Win Probability", "Regime Weighted Samples"], ascending=False)
+        stats.to_csv(REGIME_STATS_PATH, index=False, encoding="utf-8-sig")
+        print(f"â Regime stats updated: {len(stats)} rows")
+
+    return stats
+
+
+def apply_regime_decay_filter(combined, regime_stats, current_regime):
+    """
+    Final filter V9: Äiá»u chá»nh Final Action theo regime hiá»n táº¡i + time-decay stats.
+    """
+    if combined is None or combined.empty:
+        return combined
+
+    df = combined.copy()
+    df["Market Regime Now"] = current_regime
+
+    if "Final Action" not in df.columns:
+        df["Final Action"] = df.get("AI Action", df.get("Action", "THEO DÃI"))
+
+    if regime_stats is None or regime_stats.empty or "Pattern Key" not in df.columns:
+        df["Regime Win Probability"] = np.nan
+        df["Regime Samples"] = 0
+        df["Regime Note"] = "ChÆ°a Äá»§ regime stats"
+        return df
+
+    rs = regime_stats[regime_stats["Market Regime"].astype(str) == str(current_regime)].copy()
+
+    if rs.empty:
+        df["Regime Win Probability"] = np.nan
+        df["Regime Samples"] = 0
+        df["Regime Note"] = f"ChÆ°a cÃ³ stats cho regime {current_regime}"
+        return df
+
+    rmap = rs.set_index("Pattern Key").to_dict(orient="index")
+
+    probs, samples, notes, final_actions, adjusted_conf = [], [], [], [], []
+
+    for _, r in df.iterrows():
+        key = r.get("Pattern Key")
+        stat = rmap.get(key)
+
+        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "THEO DÃI"))))
+        conf = safe_float(r.get("AI Confidence"), safe_float(r.get("Score"), 50))
+
+        if not stat:
+            probs.append(np.nan)
+            samples.append(0)
+            notes.append(f"Pattern chÆ°a cÃ³ dá»¯ liá»u trong regime {current_regime}")
+            final_actions.append(final_action)
+            adjusted_conf.append(round(conf, 0))
+            continue
+
+        p = safe_float(stat.get("Regime Win Probability"), BASE_WIN_PROB)
+        n = int(safe_float(stat.get("Regime Samples"), 0))
+        note = f"{current_regime}: {n} máº«u, win decay ~{p:.1f}%"
+
+        if n >= MIN_PATTERN_SAMPLES and p >= 62:
+            conf += REGIME_BONUS_STRONG
+            note += " | regime á»§ng há»"
+            if final_action in ["MUA THÄM DÃ", "THEO DÃI Máº NH", "CHá» XÃC NHáº¬N"] and conf >= 78:
+                final_action = "MUA THÄM DÃ"
+            if final_action == "MUA THÄM DÃ" and conf >= 88:
+                final_action = "MUA Æ¯U TIÃN"
+
+        elif n >= MIN_PATTERN_SAMPLES and p < 48:
+            conf -= REGIME_PENALTY_BAD
+            note += " | regime yáº¿u, háº¡ tÃ­n hiá»u"
+            if final_action in ["MUA Æ¯U TIÃN", "MUA THÄM DÃ"]:
+                final_action = "CHá» XÃC NHáº¬N"
+            elif final_action in ["CHá» XÃC NHáº¬N", "THEO DÃI Máº NH"] and p < 42:
+                final_action = "Bá» QUA"
+
+        elif n < MIN_PATTERN_SAMPLES:
+            note += " | Ã­t máº«u regime, khÃ´ng nÃ¢ng máº¡nh"
+            if final_action == "MUA Æ¯U TIÃN":
+                final_action = "MUA THÄM DÃ"
+
+        probs.append(round(p, 2))
+        samples.append(n)
+        notes.append(note)
+        final_actions.append(final_action)
+        adjusted_conf.append(round(max(0, min(100, conf)), 0))
+
+    df["Regime Win Probability"] = probs
+    df["Regime Samples"] = samples
+    df["Regime Note"] = notes
+    df["Final Action"] = final_actions
+    df["AI Confidence"] = adjusted_conf
+
+    return df
+
+
 def build_backfill_history_from_cache(market_ret20=0):
     """
     Backfill lá»ch sá»­ tá»« cache_stock:
@@ -1950,9 +2215,9 @@ def build_backfill_history_from_cache(market_ret20=0):
     print(f"ð§  Backfill V7: {start_idx} â {end_idx} / {len(UNIVERSE)}")
 
     rows = []
-    market_regime = classify_market_regime(market_ret20)
+    market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
 
-    cutoff = pd.Timestamp(datetime.now().date()) - pd.Timedelta(days=BACKFILL_LOOKBACK_DAYS)
+    cutoff = pd.Timestamp(now_vietnam().date()) - pd.Timedelta(days=BACKFILL_LOOKBACK_DAYS)
 
     for symbol in symbols:
         cache_path = os.path.join(CACHE_DIR, f"{symbol}.csv")
@@ -2010,7 +2275,7 @@ def build_backfill_history_from_cache(market_ret20=0):
             rec = {
                 "NgÃ y": d.strftime("%Y-%m-%d"),
                 "MÃ£": symbol,
-                "Run At": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "Run At": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
                 "Market Ret20": round(safe_float(market_ret20, 0), 2),
                 "Market Regime": market_regime,
                 "Backfill Block": block,
@@ -2138,7 +2403,7 @@ def build_backfill_walk_forward_stats(backfill_hist):
             "OOS Avg Ret+10D %": round(avg_ret10, 2) if not pd.isna(avg_ret10) else np.nan,
             "OOS Reliability": round(reliability, 2),
             "OOS Status": status,
-            "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
         })
 
     stats = pd.DataFrame(agg)
@@ -2181,7 +2446,7 @@ def merge_walk_forward_sources(live_wf, backfill_wf):
 
 print("ð RUN BATCH TRADING ENGINE - KBS")
 print(f"ð SYSTEM VERSION: {SYSTEM_VERSION}")
-print("â°", datetime.now())
+print("â°", now_vietnam())
 
 start_idx = load_state()
 if start_idx >= len(UNIVERSE):
@@ -2194,6 +2459,7 @@ print(f"ð Batch: {start_idx} â {end_idx} / {len(UNIVERSE)}")
 print("ð MÃ£:", batch)
 
 market_ret20 = get_market_ret20()
+current_market_regime = get_market_regime_from_cache(market_ret20)
 
 rows = []
 
@@ -2227,7 +2493,7 @@ else:
 
 if combined.empty:
     combined = pd.DataFrame([{
-        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
         "MÃ£": "NO_SIGNAL",
         "Close": np.nan,
         "Signal": "NO SIGNAL",
@@ -2236,7 +2502,7 @@ if combined.empty:
         "Action": "WAIT",
         "Risk Status": "SYSTEM",
         "Risk Reason": "",
-        "Updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
         "Version": SYSTEM_VERSION
     }])
 
@@ -2264,10 +2530,15 @@ walk_forward_stats = merge_walk_forward_sources(walk_forward_stats, backfill_wf_
 combined = apply_history_learning(combined, pattern_stats, market_ret20)
 combined = apply_walk_forward_filter(combined, walk_forward_stats)
 
+# V9: time-decay + regime detection filter
+learning_hist_for_regime = backfill_history if 'backfill_history' in globals() and backfill_history is not None and not backfill_history.empty else signal_history
+regime_stats = build_regime_stats(learning_hist_for_regime)
+combined = apply_regime_decay_filter(combined, regime_stats, current_market_regime)
+
 sort_cols = [c for c in ["Final Action", "Win Probability", "AI Confidence", "Score"] if c in combined.columns]
 if "Win Probability" in combined.columns:
     combined["Win Probability"] = pd.to_numeric(combined["Win Probability"], errors="coerce").fillna(BASE_WIN_PROB)
-sort_by = [c for c in ["OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in combined.columns]
+sort_by = [c for c in ["Regime Win Probability", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in combined.columns]
 combined = combined.sort_values(sort_by, ascending=False)
 
 combined.to_csv(ALL_RESULT_PATH, index=False, encoding="utf-8-sig")
@@ -2316,7 +2587,7 @@ entry = entry.sort_values("AI Confidence" if "AI Confidence" in entry.columns el
 
 if entry.empty:
     entry = pd.DataFrame([{
-        "NgÃ y": datetime.now().strftime("%Y-%m-%d"),
+        "NgÃ y": now_vietnam().strftime("%Y-%m-%d"),
         "MÃ£": "NO_SIGNAL",
         "Action": "WAIT",
         "Chiáº¿n lÆ°á»£c": "SYSTEM",
@@ -2326,7 +2597,7 @@ if entry.empty:
 else:
     keep = [
         "NgÃ y", "MÃ£", "Action", "Signal", "Chiáº¿n lÆ°á»£c", "Score",
-        "Momentum Score", "Bottom Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Final Action", "History Note", "Walk Forward Note", "AI Reason", "AI Warning", "Risk Status", "Risk Reason",
+        "Momentum Score", "Bottom Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning", "Risk Status", "Risk Reason",
         "RSI", "Close", "MA5", "MA20", "Ret5 %", "Ret10 %",
         "RS20", "Volume Ratio", "ADX", "ATR %", "Dist MA20 %"
     ]
@@ -2352,7 +2623,8 @@ html_full = f"""
 <body>
 
 <h2>ð TRADING BOT CONTROL CENTER</h2>
-<p><b>Generated:</b> {datetime.now()}</p>
+<p><b>Generated:</b> {now_vietnam()}</p>
+<p><b>Data date:</b> {get_report_data_date(combined, entry, action_plan)}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} â {end_idx} / {len(UNIVERSE)}</p>
 
