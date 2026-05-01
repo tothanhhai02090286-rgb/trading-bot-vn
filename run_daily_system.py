@@ -10,7 +10,7 @@ from universe import UNIVERSE
 
 API_KEY = os.getenv("VNSTOCK_API_KEY")
 
-SYSTEM_VERSION = "PRO_V9_STABLE_FINAL_VI_2026_05_01"
+SYSTEM_VERSION = "PRO_V9_STABLE_ASCII_DISPLAY_2026_05_01"
 
 BATCH_SIZE = 50
 CACHE_SLEEP_SEC = 0.3
@@ -1613,14 +1613,137 @@ def get_report_data_date(*dfs):
 
     return now_vietnam().strftime("%Y-%m-%d")
 
+
+def clean_ascii_text(x, limit=120):
+    """
+    Clean display text for Telegram/iPhone HTML.
+    Avoid mojibake by using ASCII-only labels.
+    """
+    if x is None:
+        return ""
+    s = str(x)
+    if s.lower() in ["nan", "none"]:
+        return ""
+    # Replace common Vietnamese action labels with ASCII
+    repl = {
+        "MUA Æ¯U TIÃN": "PRIORITY BUY",
+        "MUA THÄM DÃ": "PROBE BUY",
+        "CHá» XÃC NHáº¬N": "WAIT CONFIRM",
+        "CHá» PULLBACK": "WAIT PULLBACK",
+        "THEO DÃI Máº NH": "STRONG WATCH",
+        "THEO DÃI": "WATCH",
+        "Bá» QUA": "SKIP",
+    }
+    for k, v in repl.items():
+        s = s.replace(k, v)
+
+    # Remove non-ascii chars
+    s = s.encode("ascii", "ignore").decode("ascii")
+    s = s.replace("\n", " ").replace("\r", " ")
+    s = re.sub(r"\s+", " ", s).strip()
+    return s[:limit]
+
+
+def ascii_action_label(action):
+    s = clean_ascii_text(action, 80).upper()
+    if "PRIORITY" in s or "UU TIEN" in s:
+        return "MUA UU TIEN / PRIORITY BUY"
+    if "PROBE" in s or "THAM" in s:
+        return "MUA THAM DO / PROBE BUY"
+    if "BUY NOW" in s:
+        return "MUA NGAY / BUY NOW"
+    if "WAIT CONFIRM" in s or "XAC NHAN" in s:
+        return "CHO XAC NHAN / WAIT CONFIRM"
+    if "PULLBACK" in s:
+        return "CHO PULLBACK / WAIT PULLBACK"
+    if "STRONG WATCH" in s:
+        return "THEO DOI MANH / STRONG WATCH"
+    if "WATCH" in s:
+        return "THEO DOI / WATCH"
+    if "SKIP" in s:
+        return "BO QUA / SKIP"
+    if "WAIT" in s:
+        return "CHO / WAIT"
+    return clean_ascii_text(action, 80)
+
+
+def ascii_regime_label(regime):
+    s = clean_ascii_text(regime, 50).upper()
+    mapping = {
+        "UPTREND": "TANG MANH / UPTREND",
+        "POSITIVE": "TICH CUC / POSITIVE",
+        "SIDEWAY": "DI NGANG / SIDEWAY",
+        "WEAK": "YEU / WEAK",
+        "DOWNTREND": "GIAM / DOWNTREND",
+        "HIGH_VOL_UP": "BIEN DONG CAO - TANG / HIGH VOL UP",
+        "HIGH_VOL_DOWN": "BIEN DONG CAO - GIAM / HIGH VOL DOWN",
+    }
+    return mapping.get(s, s)
+
+
+def make_dashboard_view(df, kind=""):
+    """
+    Create compact readable dashboard tables for phone.
+    """
+    if df is None or df.empty:
+        return pd.DataFrame()
+
+    view = df.copy()
+
+    # Rename columns to ASCII readable
+    rename = {
+        "NgÃ y": "Date",
+        "MÃ£": "Code",
+        "Chiáº¿n lÆ°á»£c": "Strategy",
+        "HÃ nh Äá»ng": "Action VN",
+        "LÃ½ do": "Reason",
+        "Chá»áº¿n lÆ°á»£c": "Strategy",
+        "AI Confidence": "AI",
+        "Win Probability": "Win%",
+        "OOS Win Probability": "OOS%",
+        "Regime Win Probability": "Reg%",
+        "Market Regime Now": "Regime",
+        "Final Action": "Final Action",
+        "History Samples": "Hist N",
+        "OOS Samples": "OOS N",
+        "Regime Samples": "Reg N",
+        "Walk Forward Note": "WF Note",
+        "Regime Note": "Regime Note",
+    }
+    view = view.rename(columns={k: v for k, v in rename.items() if k in view.columns})
+
+    # Clean text columns
+    for col in view.columns:
+        if view[col].dtype == "object":
+            view[col] = view[col].apply(lambda x: clean_ascii_text(x, 90))
+
+    # Convert important action labels
+    for col in ["Final Action", "AI Action", "Action", "Action VN"]:
+        if col in view.columns:
+            view[col] = view[col].apply(ascii_action_label)
+
+    if "Regime" in view.columns:
+        view["Regime"] = view["Regime"].apply(ascii_regime_label)
+
+    # Select compact columns by kind
+    preferred = [
+        "Date", "Code", "Close", "Action", "Final Action", "Strategy",
+        "Score", "AI", "AI Grade", "Win%", "OOS%", "Reg%", "Regime",
+        "RSI", "RS20", "Volume Ratio", "ATR %",
+        "Risk Status", "Risk Reason", "Hist N", "OOS N", "OOS Status", "Reg N"
+    ]
+    cols = [c for c in preferred if c in view.columns]
+
+    if kind in ["entry", "action"]:
+        extra = [c for c in ["WF Note", "Regime Note"] if c in view.columns]
+        cols = cols + extra
+
+    if cols:
+        view = view[cols]
+
+    return view.head(25)
+
 def build_telegram_message(entry, action_plan, combined, tracker):
-    """
-    Telegram V9 Stable Final:
-    - Tiáº¿ng Viá»t + English label
-    - Gá»n, dá» Äá»c
-    - UTF-8 chuáº©n
-    - KhÃ´ng spam quÃ¡ dÃ i
-    """
     run_time = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
     data_date = get_report_data_date(entry, action_plan, combined)
 
@@ -1632,31 +1755,27 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         missing_codes = []
 
     source_df = entry.copy() if entry is not None and not entry.empty else pd.DataFrame()
-
     if source_df.empty and action_plan is not None and not action_plan.empty:
         source_df = action_plan.copy()
-
     if source_df.empty and combined is not None and not combined.empty:
         source_df = combined.copy()
 
     if source_df is None or source_df.empty:
         return (
-            "ð¤ BOT GIAO Dá»CH V9 STABLE\n"
-            f"â° Thá»i gian cháº¡y (Run time): {run_time}\n"
-            f"ð NgÃ y dá»¯ liá»u (Data date): {data_date}\n"
-            "KhÃ´ng cÃ³ dá»¯ liá»u tÃ­n hiá»u.\n"
-            "Dashboard HTML ÄÆ°á»£c gá»­i kÃ¨m náº¿u cÃ³."
+            "BOT GIAO DICH V9 STABLE\n"
+            f"Run time: {run_time}\n"
+            f"Data date: {data_date}\n"
+            "No signal data.\n"
+            "Dashboard HTML attached."
         )
 
     source_df = safe_numeric_columns(source_df)
 
-    # Current regime
     try:
         current_regime = str(combined.get("Market Regime Now").dropna().iloc[0]) if "Market Regime Now" in combined.columns else ""
     except Exception:
         current_regime = ""
 
-    # Count final actions
     action_col = "Final Action" if "Final Action" in source_df.columns else "AI Action" if "AI Action" in source_df.columns else "Action" if "Action" in source_df.columns else None
 
     def count_action_contains(keywords):
@@ -1669,46 +1788,37 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         return int(mask.sum())
 
     buy_count = count_action_contains(["MUA", "BUY"])
-    wait_count = count_action_contains(["CHá»", "CHO", "WAIT"])
-    watch_count = count_action_contains(["THEO DÃI", "THEO DOI", "WATCH"])
-    skip_count = count_action_contains(["Bá» QUA", "BO QUA", "SKIP"])
+    wait_count = count_action_contains(["CH", "CHO", "WAIT"])
+    watch_count = count_action_contains(["THEO", "WATCH"])
+    skip_count = count_action_contains(["BO QUA", "SKIP"])
 
-    # Focus top rows
     focus = source_df.copy()
-    if action_col:
-        s = focus[action_col].astype(str).str.upper()
-        preferred = s.str.contains("MUA|BUY|CHá»|CHO|WAIT|WATCH|THEO", na=False)
-        if preferred.any():
-            focus = focus[preferred].copy()
-
     sort_cols = [c for c in ["Regime Win Probability", "OOS Win Probability", "Win Probability", "AI Confidence", "Score"] if c in focus.columns]
     if sort_cols:
         focus = focus.sort_values(sort_cols, ascending=False)
     elif "Score" in focus.columns:
         focus = focus.sort_values("Score", ascending=False)
-
     focus = focus.head(5)
 
     lines = []
-    lines.append("ð¤ BOT GIAO Dá»CH V9 STABLE")
-    lines.append(f"â° Thá»i gian cháº¡y (Run): {run_time}")
-    lines.append(f"ð NgÃ y dá»¯ liá»u (Data): {data_date}")
-    lines.append(f"ð Version: {SYSTEM_VERSION}")
+    lines.append("BOT GIAO DICH V9 STABLE")
+    lines.append(f"Run time: {run_time}")
+    lines.append(f"Data date: {data_date}")
+    lines.append(f"Version: {SYSTEM_VERSION}")
     if current_regime:
-        lines.append(f"ð Thá» trÆ°á»ng (Regime): {vi_regime_label(current_regime)}")
-    lines.append(f"â Coverage: {total_codes}/{len(UNIVERSE)} mÃ£")
-
+        lines.append(f"Market regime: {ascii_regime_label(current_regime)}")
+    lines.append(f"Coverage: {total_codes}/{len(UNIVERSE)} codes")
     if missing_codes:
-        lines.append(f"â ï¸ Thiáº¿u {len(missing_codes)} mÃ£")
-        lines.append("MÃ£ thiáº¿u Äáº§u tiÃªn: " + ", ".join(missing_codes[:10]))
+        lines.append(f"Missing: {len(missing_codes)} codes")
+        lines.append("First missing: " + ", ".join(missing_codes[:10]))
 
     lines.append("")
-    lines.append(f"ð¥ Mua (Buy): {buy_count} | ð¡ Chá» (Wait): {wait_count} | ð Theo dÃµi (Watch): {watch_count} | â Bá» qua: {skip_count}")
+    lines.append(f"Buy: {buy_count} | Wait: {wait_count} | Watch: {watch_count} | Skip: {skip_count}")
     if tracker is not None and not tracker.empty:
-        lines.append(f"ð¦ Danh má»¥c (Portfolio rows): {len(tracker)}")
+        lines.append(f"Portfolio rows: {len(tracker)}")
 
     lines.append("")
-    lines.append("ð TÃN HIá»U Ná»I Báº¬T (TOP SIGNALS):")
+    lines.append("TOP SIGNALS:")
 
     def fnum(row, col, digits=0):
         try:
@@ -1721,8 +1831,8 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     for _, r in focus.iterrows():
         code = str(r.get("MÃ£", r.get("Ma", ""))).strip()
-        final_action = vi_action_label(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
-        grade = str(r.get("AI Grade", "")).strip()
+        final_action = ascii_action_label(r.get("Final Action", r.get("AI Action", r.get("Action", ""))))
+        grade = clean_ascii_text(r.get("AI Grade", ""), 10)
 
         ai = fnum(r, "AI Confidence", 0)
         win = fnum(r, "Win Probability", 0)
@@ -1734,8 +1844,9 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         rs20 = fnum(r, "RS20", 1)
 
         lines.append(f"- {code} | {final_action}")
+
         detail = []
-        if grade and grade.lower() != "nan":
+        if grade:
             detail.append(f"Grade {grade}")
         if ai:
             detail.append(f"AI {ai}")
@@ -1747,13 +1858,12 @@ def build_telegram_message(entry, action_plan, combined, tracker):
             detail.append(f"OOS {oos}%")
         if reg:
             detail.append(f"Reg {reg}%")
-
         if detail:
             lines.append("  " + " | ".join(detail))
 
         market = []
         if close:
-            market.append(f"GiÃ¡ {close}")
+            market.append(f"Price {close}")
         if rsi:
             market.append(f"RSI {rsi}")
         if rs20:
@@ -1761,19 +1871,15 @@ def build_telegram_message(entry, action_plan, combined, tracker):
         if market:
             lines.append("  " + " | ".join(market))
 
-        wf_note = short_note(r.get("Walk Forward Note", ""), 85)
-        regime_note = short_note(r.get("Regime Note", ""), 85)
-        hist_note = short_note(r.get("History Note", ""), 75)
-
+        wf_note = clean_ascii_text(r.get("Walk Forward Note", ""), 80)
+        regime_note = clean_ascii_text(r.get("Regime Note", ""), 80)
         if wf_note:
-            lines.append(f"  ð§ª WF: {wf_note}")
+            lines.append(f"  WF: {wf_note}")
         if regime_note:
-            lines.append(f"  ð Regime: {regime_note}")
-        elif hist_note:
-            lines.append(f"  ð History: {hist_note}")
+            lines.append(f"  Regime: {regime_note}")
 
     lines.append("")
-    lines.append("ð Dashboard HTML ÄÃ£ gá»­i kÃ¨m Äá» xem chi tiáº¿t.")
+    lines.append("Dashboard HTML attached below.")
     return "\n".join(lines)
 
 
@@ -1844,7 +1950,7 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
             token,
             chat_id,
             DASHBOARD_PATH,
-            caption="ð Dashboard HTML - má» file Äá» xem chi tiáº¿t"
+            caption="Dashboard HTML - open file to view details"
         )
 
     except Exception as e:
@@ -1871,16 +1977,16 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 24px;
-    font-size: 14px;
+    font-size: 13px;
 }
 th {
     background-color: #1f2430;
     color: #ffffff;
-    padding: 8px;
+    padding: 6px;
     border: 1px solid #333;
 }
 td {
-    padding: 8px;
+    padding: 6px;
     border: 1px solid #333;
 }
 tr:nth-child(even) {
@@ -2698,11 +2804,17 @@ entry.to_csv(ENTRY_PATH, index=False, encoding="utf-8-sig")
 
 tracker, action_plan = build_portfolio_and_action_plan(combined, ai_risk)
 
-raw_html = raw_signals.to_html(index=False)
-ai_html = ai_risk.to_html(index=False)
-entry_html = entry.to_html(index=False)
-tracker_html = tracker.to_html(index=False)
-action_html = action_plan.to_html(index=False)
+raw_view = make_dashboard_view(raw_signals, "raw")
+ai_view = make_dashboard_view(ai_risk, "ai")
+entry_view = make_dashboard_view(entry, "entry")
+tracker_view = make_dashboard_view(tracker, "tracker")
+action_view = make_dashboard_view(action_plan, "action")
+
+raw_html = raw_view.to_html(index=False, escape=True)
+ai_html = ai_view.to_html(index=False, escape=True)
+entry_html = entry_view.to_html(index=False, escape=True)
+tracker_html = tracker_view.to_html(index=False, escape=True)
+action_html = action_view.to_html(index=False, escape=True)
 
 html_full = f"""
 <html>
@@ -2713,25 +2825,25 @@ html_full = f"""
 </head>
 <body>
 
-<h2>ð TRADING BOT CONTROL CENTER</h2>
+<h2>TRADING BOT CONTROL CENTER</h2>
 <p><b>Generated:</b> {now_vietnam()}</p>
 <p><b>Data date:</b> {get_report_data_date(combined, entry, action_plan)}</p>
 <p><b>Version:</b> {SYSTEM_VERSION}</p>
 <p><b>Batch:</b> {start_idx} â {end_idx} / {len(UNIVERSE)}</p>
 
-<h3>ð TÃN HIá»U THÃ (RAW SIGNAL)</h3>
+<h3>TIN HIEU THO (RAW SIGNAL)</h3>
 {raw_html}
 
-<h3>ð¥ AI FINAL - Lá»C TINH</h3>
+<h3>AI FINAL - LOC TINH</h3>
 {ai_html}
 
-<h3>ð ÄIá»M VÃO Lá»NH (ENTRY)</h3>
+<h3>DIEM VAO LENH (ENTRY)</h3>
 {entry_html}
 
-<h3>ð¦ THEO DÃI DANH Má»¤C (PORTFOLIO TRACKER)</h3>
+<h3>THEO DOI DANH MUC (PORTFOLIO)</h3>
 {tracker_html}
 
-<h3>ð¯ Káº¾ HOáº CH HÃNH Äá»NG (ACTION PLAN)</h3>
+<h3>KE HOACH HANH DONG (ACTION PLAN)</h3>
 {action_html}
 
 </body>
