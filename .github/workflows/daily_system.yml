@@ -1,9 +1,6 @@
 name: Daily Trading System
 
 on:
-  schedule:
-    # CHẠY THẬT: 17:00 → 20:30 giờ Việt Nam
-    - cron: "0,30 10-13 * * 1-5"
 
   workflow_dispatch:
 
