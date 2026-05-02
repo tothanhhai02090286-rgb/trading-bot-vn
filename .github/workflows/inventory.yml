@@ -1,0 +1,26 @@
+name: Repo Inventory
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: List repo files
+        run: |
+          echo "=== PYTHON FILES ==="
+          find . -name "*.py" -not -path "./.git/*" | sort
+
+          echo ""
+          echo "=== WORKFLOW FILES ==="
+          find .github/workflows -type f | sort
+
+          echo ""
+          echo "=== IMPORTANT CHECK ==="
+          for f in config.py utils.py data_loader.py strategy_core.py telegram_alert.py dashboard.py portfolio.py run_daily_system.py; do
+            echo "--- $f"
+            find . -name "$f" -not -path "./.git/*"
+          done
