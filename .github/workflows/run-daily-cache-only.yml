@@ -1,0 +1,40 @@
+name: Run Trading Bot (Cache Only)
+
+on:
+  schedule:
+    - cron: '0 11 * * 1-5'  # 18:00 VN (UTC+7)
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install vnstock pandas numpy python-dotenv
+
+      - name: Run bot (cache only)
+        env:
+          VNSTOCK_API_KEY: ${{ secrets.VNSTOCK_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python run_daily_system.py
+
+      - name: Commit outputs
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add *.csv *.html || true
+          git commit -m "Update daily outputs" || echo "No changes"
+          git push
