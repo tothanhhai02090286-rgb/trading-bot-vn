@@ -2,27 +2,61 @@ from v10_config import *
 
 def fix_vietnamese_columns(df):
     """
-    Chuáº©n hÃ³a tÃªn cá»t bá» lá»i encoding phá» biáº¿n khi Äá»c CSV trÃªn Colab/GitHub.
-    VÃ­ dá»¥: MÃÂ£ -> MÃ£, NgÃ y -> NgÃ y.
+    Normalize broken Vietnamese column names into ASCII-safe names.
+    This avoids mojibake issues like: MÃ£, GiÃ¡, LÃ£i/Lá».
     """
     if df is None or df.empty:
         return df
 
     rename_map = {
-        "MÃÂ£": "MÃ£",
-        "Ma": "MÃ£",
-        "NgÃ y": "NgÃ y",
-        "Ngay": "NgÃ y",
-        "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chiáº¿n lÆ°á»£c",
-        "HÃ nh ÃâÃ¡Â»â¢ng": "HÃ nh Äá»ng",
-        "CÃ¡ÂºÂ£nh bÃÂ¡o": "Cáº£nh bÃ¡o",
-        "LÃÂ½ do": "LÃ½ do",
-        "GiÃÂ¡ vÃ¡Â»ân": "GiÃ¡ vá»n",
-        "SÃ¡Â»â lÃÂ°Ã¡Â»Â£ng": "Sá» lÆ°á»£ng",
-        "GiÃÂ¡ trÃ¡Â»â¹ vÃ¡Â»ân": "GiÃ¡ trá» vá»n",
-        "GiÃÂ¡ trÃ¡Â»â¹ hiÃ¡Â»â¡n tÃ¡ÂºÂ¡i": "GiÃ¡ trá» hiá»n táº¡i",
-        "LÃÂ£i/LÃ¡Â»â %": "LÃ£i/Lá» %",
-        "LÃÂ£i/LÃ¡Â»â tiÃ¡Â»Ân": "LÃ£i/Lá» tiá»n",
+        "MÃÂ£": "Ma",
+        "MÃ£": "Ma",
+        "Ma": "Ma",
+
+        "NgÃ y": "Ngay",
+        "NgÃ y": "Ngay",
+        "NgÃ y": "Ngay",
+        "Ngay": "Ngay",
+
+        "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chien luoc",
+        "Chiáº¿n lÆ°á»£c": "Chien luoc",
+        "ChiÃ¡ÂºÂ¿n lÆ°á»£c": "Chien luoc",
+
+        "HÃ nh ÃâÃ¡Â»â¢ng": "Hanh dong",
+        "HÃ nh Äá»ng": "Hanh dong",
+        "Hanh dong": "Hanh dong",
+
+        "CÃ¡ÂºÂ£nh bÃÂ¡o": "Canh bao",
+        "Cáº£nh bÃ¡o": "Canh bao",
+        "Canh bao": "Canh bao",
+
+        "LÃÂ½ do": "Ly do",
+        "LÃ½ do": "Ly do",
+        "Ly do": "Ly do",
+
+        "GiÃÂ¡ vÃ¡Â»ân": "Gia von",
+        "GiÃ¡ vá»n": "Gia von",
+        "Gia von": "Gia von",
+
+        "SÃ¡Â»â lÃÂ°Ã¡Â»Â£ng": "So luong",
+        "Sá» lÆ°á»£ng": "So luong",
+        "So luong": "So luong",
+
+        "GiÃÂ¡ trÃ¡Â»â¹ vÃ¡Â»ân": "Gia tri von",
+        "GiÃ¡ trá» vá»n": "Gia tri von",
+        "Gia tri von": "Gia tri von",
+
+        "GiÃÂ¡ trÃ¡Â»â¹ hiÃ¡Â»â¡n tÃ¡ÂºÂ¡i": "Gia tri hien tai",
+        "GiÃ¡ trá» hiá»n táº¡i": "Gia tri hien tai",
+        "Gia tri hien tai": "Gia tri hien tai",
+
+        "LÃÂ£i/LÃ¡Â»â %": "Lai/Lo %",
+        "LÃ£i/Lá» %": "Lai/Lo %",
+        "Lai/Lo %": "Lai/Lo %",
+
+        "LÃÂ£i/LÃ¡Â»â tiÃ¡Â»Ân": "Lai/Lo tien",
+        "LÃ£i/Lá» tiá»n": "Lai/Lo tien",
+        "Lai/Lo tien": "Lai/Lo tien",
     }
 
     df = df.copy()
@@ -77,7 +111,7 @@ def get_env_secret(*names):
 
 def normalize_outcome_dtype(df):
     """
-    Fix lá»i dtype: cá»t Outcome luÃ´n lÃ  text/object Äá» gÃ¡n PENDING/WIN/LOSS khÃ´ng crash.
+    Keep Outcome as text/object so PENDING/WIN/LOSS assignment will not crash.
     """
     if df is None:
         return df
@@ -106,36 +140,36 @@ def safe_numeric_columns(df, cols=None):
 
 def vi_action_label(action):
     s = str(action or "").upper()
-    if "MUA Æ¯U TIÃN" in s or "UU TIEN" in s:
-        return "MUA Æ¯U TIÃN (PRIORITY BUY)"
-    if "MUA THÄM DÃ" in s or "THAM DO" in s:
-        return "MUA THÄM DÃ (PROBE BUY)"
+    if "MUA UU TIEN" in s or "PRIORITY" in s:
+        return "MUA UU TIEN (PRIORITY BUY)"
+    if "MUA THAM DO" in s or "PROBE" in s:
+        return "MUA THAM DO (PROBE BUY)"
     if "BUY NOW" in s:
         return "MUA NGAY (BUY NOW)"
-    if "CHá» XÃC NHáº¬N" in s or "CHO XAC NHAN" in s:
-        return "CHá» XÃC NHáº¬N (WAIT CONFIRM)"
-    if "CHá» PULLBACK" in s or "PULLBACK" in s:
-        return "CHá» PULLBACK (WAIT PULLBACK)"
-    if "THEO DÃI Máº NH" in s or "THEO DOI MANH" in s:
-        return "THEO DÃI Máº NH (STRONG WATCH)"
-    if "THEO DÃI" in s or "WATCH" in s or "WATCHLIST" in s:
-        return "THEO DÃI (WATCH)"
-    if "Bá» QUA" in s or "BO QUA" in s or "SKIP" in s:
-        return "Bá» QUA (SKIP)"
+    if "CHO XAC NHAN" in s or "WAIT CONFIRM" in s:
+        return "CHO XAC NHAN (WAIT CONFIRM)"
+    if "CHO PULLBACK" in s or "PULLBACK" in s:
+        return "CHO PULLBACK (WAIT PULLBACK)"
+    if "THEO DOI MANH" in s or "STRONG WATCH" in s:
+        return "THEO DOI MANH (STRONG WATCH)"
+    if "THEO DOI" in s or "WATCH" in s or "WATCHLIST" in s:
+        return "THEO DOI (WATCH)"
+    if "BO QUA" in s or "SKIP" in s:
+        return "BO QUA (SKIP)"
     if "WAIT" in s:
-        return "CHá» (WAIT)"
+        return "CHO (WAIT)"
     return str(action or "")
 
 def vi_regime_label(regime):
     s = str(regime or "").upper()
     mapping = {
-        "UPTREND": "TÄNG Máº NH (UPTREND)",
-        "POSITIVE": "TÃCH Cá»°C (POSITIVE)",
-        "SIDEWAY": "ÄI NGANG (SIDEWAY)",
-        "WEAK": "Yáº¾U (WEAK)",
-        "DOWNTREND": "GIáº¢M (DOWNTREND)",
-        "HIGH_VOL_UP": "BIáº¾N Äá»NG CAO - TÄNG (HIGH VOL UP)",
-        "HIGH_VOL_DOWN": "BIáº¾N Äá»NG CAO - GIáº¢M (HIGH VOL DOWN)",
+        "UPTREND": "TANG MANH (UPTREND)",
+        "POSITIVE": "TICH CUC (POSITIVE)",
+        "SIDEWAY": "DI NGANG (SIDEWAY)",
+        "WEAK": "YEU (WEAK)",
+        "DOWNTREND": "GIAM (DOWNTREND)",
+        "HIGH_VOL_UP": "BIEN DONG CAO - TANG (HIGH VOL UP)",
+        "HIGH_VOL_DOWN": "BIEN DONG CAO - GIAM (HIGH VOL DOWN)",
     }
     return mapping.get(s, str(regime or ""))
 
@@ -148,20 +182,17 @@ def short_note(text_value, limit=90):
 def now_vietnam():
     return datetime.utcnow() + timedelta(hours=7)
 
-def now_vietnam():
-    return datetime.utcnow() + timedelta(hours=7)
-
 def get_price_data_date(df):
     """
-    Lay ngay du lieu gia cuoi cung trong dataframe.
-    Khong dung ngay run bot, vi GitHub co the chay sang 01/05 nhung data van la phien 30/04.
+    Get the latest price-data date from dataframe.
+    Do not use bot run date because GitHub can run after midnight while market data is older.
     """
     try:
         if df is None or df.empty:
             return now_vietnam().strftime("%Y-%m-%d")
 
         last = df.iloc[-1]
-        for col in ["time", "date", "ngay", "NgÃ y"]:
+        for col in ["time", "date", "ngay", "Ngay", "NgÃ y"]:
             if col in df.columns:
                 val = last.get(col)
                 if pd.notna(val):
@@ -173,13 +204,18 @@ def get_price_data_date(df):
 
 def get_report_data_date(*dfs):
     """
-    Lay ngay du lieu lon nhat tu cac file output de hien thi tren Telegram/dashboard.
+    Get max data date from output files for Telegram/dashboard.
     """
     dates = []
     for df in dfs:
         try:
-            if df is not None and not df.empty and "NgÃ y" in df.columns:
-                s = pd.to_datetime(df["NgÃ y"], errors="coerce").dropna()
+            date_col = None
+            for c in ["Ngay", "NgÃ y", "NgÃ y"]:
+                if df is not None and not df.empty and c in df.columns:
+                    date_col = c
+                    break
+            if date_col:
+                s = pd.to_datetime(df[date_col], errors="coerce").dropna()
                 if not s.empty:
                     dates.append(s.max())
         except Exception:
@@ -200,7 +236,7 @@ def clean_ascii_text(x, limit=120):
     s = str(x)
     if s.lower() in ["nan", "none"]:
         return ""
-    # Replace common Vietnamese action labels with ASCII
+
     repl = {
         "MUA Æ¯U TIÃN": "PRIORITY BUY",
         "MUA THÄM DÃ": "PROBE BUY",
@@ -209,11 +245,16 @@ def clean_ascii_text(x, limit=120):
         "THEO DÃI Máº NH": "STRONG WATCH",
         "THEO DÃI": "WATCH",
         "Bá» QUA": "SKIP",
+        "MUA UU TIEN": "PRIORITY BUY",
+        "MUA THAM DO": "PROBE BUY",
+        "CHO XAC NHAN": "WAIT CONFIRM",
+        "THEO DOI MANH": "STRONG WATCH",
+        "THEO DOI": "WATCH",
+        "BO QUA": "SKIP",
     }
     for k, v in repl.items():
         s = s.replace(k, v)
 
-    # Remove non-ascii chars
     s = s.encode("ascii", "ignore").decode("ascii")
     s = s.replace("\n", " ").replace("\r", " ")
     s = re.sub(r"\s+", " ", s).strip()
