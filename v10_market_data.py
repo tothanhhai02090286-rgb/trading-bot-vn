@@ -105,7 +105,7 @@ def fetch_history(symbol):
     print(f"ð API fetch/update: {symbol}")
 
     end = now_vietnam()
-    start = end - timedelta(days=260)
+    start = end - timedelta(days=800)
 
     df = load_quote_history(symbol, start, end)
 
