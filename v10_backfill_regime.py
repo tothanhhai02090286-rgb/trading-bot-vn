@@ -5,6 +5,29 @@ from v10_strategy import *
 
 
 # ============================================================
+# MARKET REGIME FALLBACK
+# ============================================================
+
+def classify_market_regime(market_ret20):
+    """
+    Safe local fallback.
+    This prevents NameError when get_market_regime_from_cache calls this function.
+    """
+    market_ret20 = safe_float(market_ret20, 0)
+
+    if market_ret20 >= 5:
+        return "UPTREND"
+    if market_ret20 >= 1:
+        return "POSITIVE"
+    if market_ret20 <= -5:
+        return "DOWNTREND"
+    if market_ret20 <= -1:
+        return "WEAK"
+
+    return "SIDEWAY"
+
+
+# ============================================================
 # BACKFILL SAFETY HELPERS
 # ============================================================
 
@@ -18,19 +41,19 @@ def bf_normalize_columns(df):
         rename_map = {
             "M": "Ma",
             "Ma": "Ma",
-            "M": "Ma",
-            "Ma": "Ma",
+            "MÃ£": "Ma",
+            "MÃÂ£": "Ma",
 
             "Ng y": "Ngay",
-            "Ng y": "Ngay",
-            "Ngay": "Ngay",
             "Ngy": "Ngay",
             "Ngay": "Ngay",
+            "NgÃ y": "Ngay",
+            "NgÃÂ y": "Ngay",
 
             "Chin lc": "Chien luoc",
             "Chien luoc": "Chien luoc",
-            "Chin lc": "Chien luoc",
-            "Chien luoc": "Chien luoc",
+            "Chiáº¿n lÆ°á»£c": "Chien luoc",
+            "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chien luoc",
         }
 
         out = df.copy()
@@ -82,6 +105,7 @@ def get_backfill_state():
     except Exception:
         return 0
 
+
 def save_backfill_state(next_start):
     pd.DataFrame([{
         "updated_at": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
@@ -89,11 +113,8 @@ def save_backfill_state(next_start):
         "version": SYSTEM_VERSION
     }]).to_csv(BACKFILL_STATE_PATH, index=False, encoding="utf-8-sig")
 
+
 def classify_backfill_row(row, market_ret20=0):
-    """
-    To li tn hiu qu kh bng chnh logic hin ti.
-    y l backfill gi lp, khng dng tng lai  to tn hiu.
-    """
     close = safe_float(row.get("close"))
     ma5 = safe_float(row.get("MA5"))
     ma20 = safe_float(row.get("MA20"))
@@ -139,12 +160,14 @@ def classify_backfill_row(row, market_ret20=0):
 
     return r
 
+
 def get_price_date_col(df):
     if "time" in df.columns:
         return "time"
     if "date" in df.columns:
         return "date"
     return None
+
 
 def compute_outcome_from_price_df(price_df, entry_idx, entry_price):
     out = {}
@@ -187,23 +210,16 @@ def compute_outcome_from_price_df(price_df, entry_idx, entry_price):
 
     return out
 
+
 def add_months(ts, months):
-    """
-    Cng thng khng cn dateutil,  dng cho block 3/4/6 thng.
-    """
     ts = pd.Timestamp(ts)
     month = ts.month - 1 + int(months)
     year = ts.year + month // 12
     month = month % 12 + 1
     return pd.Timestamp(year=year, month=month, day=1)
 
+
 def get_backfill_block_info(date_value):
-    """
-    Chia lch s theo block ng.
-    Mc nh V8 dng 3 thng:
-    Q1: Jan-Mar, Q2: Apr-Jun, Q3: Jul-Sep, Q4: Oct-Dec.
-    Nu i BACKFILL_BLOCK_MONTHS = 4/6 th t chia tng ng.
-    """
     d = pd.to_datetime(date_value, errors="coerce")
     if pd.isna(d):
         return "", pd.NaT, pd.NaT
@@ -219,12 +235,8 @@ def get_backfill_block_info(date_value):
 
     return block, block_start, block_end
 
+
 def get_train_test_tag(date_value, block_start, block_end):
-    """
-    Trong mi block:
-    80% thi gian u = TRAIN
-    20% thi gian cui = TEST gi lp cha bit.
-    """
     d = pd.to_datetime(date_value, errors="coerce")
     if pd.isna(d) or pd.isna(block_start) or pd.isna(block_end):
         return "UNKNOWN"
@@ -234,11 +246,8 @@ def get_train_test_tag(date_value, block_start, block_end):
 
     return "TRAIN" if d < split_day else "TEST"
 
+
 def detect_market_regime_detail(market_df=None, market_ret20=0):
-    """
-    Regime detection:
-    UPTREND / POSITIVE / SIDEWAY / WEAK / DOWNTREND / HIGH_VOL_UP / HIGH_VOL_DOWN.
-    """
     fallback = classify_market_regime(market_ret20)
 
     try:
@@ -276,6 +285,7 @@ def detect_market_regime_detail(market_df=None, market_ret20=0):
     except Exception:
         return fallback
 
+
 def get_market_regime_from_cache(market_ret20=0):
     for benchmark in ["VNINDEX", "VN30"]:
         try:
@@ -288,14 +298,15 @@ def get_market_regime_from_cache(market_ret20=0):
                 continue
 
             regime = detect_market_regime_detail(df, market_ret20)
-            print(f" Market regime: {regime}")
+            print(f"Market regime: {regime}")
             return regime
         except Exception:
             continue
 
     regime = classify_market_regime(market_ret20)
-    print(f" Market regime fallback: {regime}")
+    print(f"Market regime fallback: {regime}")
     return regime
+
 
 def compute_recent_decay_weight(date_value):
     d = pd.to_datetime(date_value, errors="coerce")
@@ -310,10 +321,8 @@ def compute_recent_decay_weight(date_value):
     w = np.exp(-np.log(2) * age_days / max(DECAY_HALFLIFE_DAYS, 1))
     return max(RECENT_WEIGHT_MIN, float(w))
 
+
 def build_regime_stats(hist):
-    """
-    Thng k hiu qu pattern theo regime, c time-decay.
-    """
     if hist is None or hist.empty:
         return pd.DataFrame()
 
@@ -357,14 +366,12 @@ def build_regime_stats(hist):
     if not stats.empty:
         stats = stats.sort_values(["Regime Win Probability", "Regime Weighted Samples"], ascending=False)
         stats.to_csv(REGIME_STATS_PATH, index=False, encoding="utf-8-sig")
-        print(f" Regime stats updated: {len(stats)} rows")
+        print(f"Regime stats updated: {len(stats)} rows")
 
     return stats
 
+
 def apply_regime_decay_filter(combined, regime_stats, current_regime):
-    """
-    Final filter V9: iu chnh Final Action theo regime hin ti + time-decay stats.
-    """
     if combined is None or combined.empty:
         return combined
 
@@ -372,12 +379,12 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
     df["Market Regime Now"] = current_regime
 
     if "Final Action" not in df.columns:
-        df["Final Action"] = df.get("AI Action", df.get("Action", "THEO DI"))
+        df["Final Action"] = df.get("AI Action", df.get("Action", "THEO DOI"))
 
     if regime_stats is None or regime_stats.empty or "Pattern Key" not in df.columns:
         df["Regime Win Probability"] = np.nan
         df["Regime Samples"] = 0
-        df["Regime Note"] = "Cha  regime stats"
+        df["Regime Note"] = "No regime stats"
         return df
 
     rs = regime_stats[regime_stats["Market Regime"].astype(str) == str(current_regime)].copy()
@@ -385,7 +392,7 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
     if rs.empty:
         df["Regime Win Probability"] = np.nan
         df["Regime Samples"] = 0
-        df["Regime Note"] = f"Cha c stats cho regime {current_regime}"
+        df["Regime Note"] = f"No stats for regime {current_regime}"
         return df
 
     rmap = rs.set_index("Pattern Key").to_dict(orient="index")
@@ -396,41 +403,41 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
         key = r.get("Pattern Key")
         stat = rmap.get(key)
 
-        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "THEO DI"))))
+        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "THEO DOI"))))
         conf = safe_float(r.get("AI Confidence"), safe_float(r.get("Score"), 50))
 
         if not stat:
             probs.append(np.nan)
             samples.append(0)
-            notes.append(f"Pattern cha c d liu trong regime {current_regime}")
+            notes.append(f"Pattern has no data in regime {current_regime}")
             final_actions.append(final_action)
             adjusted_conf.append(round(conf, 0))
             continue
 
         p = safe_float(stat.get("Regime Win Probability"), BASE_WIN_PROB)
         n = int(safe_float(stat.get("Regime Samples"), 0))
-        note = f"{current_regime}: {n} mu, win decay ~{p:.1f}%"
+        note = f"{current_regime}: {n} samples, win decay ~{p:.1f}%"
 
         if n >= MIN_PATTERN_SAMPLES and p >= 62:
             conf += REGIME_BONUS_STRONG
-            note += " | regime ng h"
-            if final_action in ["MUA THM D", "THEO DI MNH", "CH XC NHN"] and conf >= 78:
-                final_action = "MUA THM D"
-            if final_action == "MUA THM D" and conf >= 88:
-                final_action = "MUA U TIN"
+            note += " | regime supports signal"
+            if final_action in ["MUA THAM DO", "THEO DOI MANH", "CHO XAC NHAN"] and conf >= 78:
+                final_action = "MUA THAM DO"
+            if final_action == "MUA THAM DO" and conf >= 88:
+                final_action = "MUA UU TIEN"
 
         elif n >= MIN_PATTERN_SAMPLES and p < 48:
             conf -= REGIME_PENALTY_BAD
-            note += " | regime yu, h tn hiu"
-            if final_action in ["MUA U TIN", "MUA THM D"]:
-                final_action = "CH XC NHN"
-            elif final_action in ["CH XC NHN", "THEO DI MNH"] and p < 42:
-                final_action = "B QUA"
+            note += " | weak regime signal"
+            if final_action in ["MUA UU TIEN", "MUA THAM DO"]:
+                final_action = "CHO XAC NHAN"
+            elif final_action in ["CHO XAC NHAN", "THEO DOI MANH"] and p < 42:
+                final_action = "BO QUA"
 
         elif n < MIN_PATTERN_SAMPLES:
-            note += " | t mu regime, khng nng mnh"
-            if final_action == "MUA U TIN":
-                final_action = "MUA THM D"
+            note += " | low regime sample"
+            if final_action == "MUA UU TIEN":
+                final_action = "MUA THAM DO"
 
         probs.append(round(p, 2))
         samples.append(n)
@@ -446,13 +453,8 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
 
     return df
 
+
 def build_backfill_history_from_cache(market_ret20=0):
-    """
-    Backfill lch s t cache_stock:
-    - Chia tng block thi gian.
-    - Trong mi na nm: 80% u TRAIN, 20% cui TEST.
-    - TEST c dng  nh gi ngoi mu, trnh hc vt.
-    """
     if not BACKFILL_ENABLED:
         print("Backfill disabled")
         return safe_read_csv(BACKFILL_SIGNAL_HISTORY_PATH)
@@ -466,7 +468,7 @@ def build_backfill_history_from_cache(market_ret20=0):
     end_idx = min(start_idx + BACKFILL_MAX_SYMBOLS_PER_RUN, len(UNIVERSE))
     symbols = UNIVERSE[start_idx:end_idx]
 
-    print(f" Backfill V7: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
+    print(f"Backfill V7: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
 
     rows = []
     market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
@@ -509,7 +511,6 @@ def build_backfill_history_from_cache(market_ret20=0):
             if not signal_row:
                 continue
 
-            # ch lu cc tn hiu c  ngha, b WATCH rt yu  nh file
             if signal_row["Score"] < 55:
                 continue
 
@@ -563,16 +564,12 @@ def build_backfill_history_from_cache(market_ret20=0):
         next_start = 0
     save_backfill_state(next_start)
 
-    print(f" Backfill history rows: {len(hist)} | new rows: {len(new_hist)} | next: {next_start}")
+    print(f"Backfill history rows: {len(hist)} | new rows: {len(new_hist)} | next: {next_start}")
 
     return hist
 
+
 def build_backfill_walk_forward_stats(backfill_hist):
-    """
-    nh gi theo block thi gian:
-    TRAIN 80% u ch  xc nh pattern  xut hin.
-    TEST 20% sau dng  o OOS winrate.
-    """
     if backfill_hist is None or backfill_hist.empty:
         return pd.DataFrame()
 
@@ -633,7 +630,11 @@ def build_backfill_walk_forward_stats(backfill_hist):
         avg_ret5 = pd.to_numeric(g.get("OOS Avg Ret+5D %"), errors="coerce").mean()
         avg_ret10 = pd.to_numeric(g.get("OOS Avg Ret+10D %"), errors="coerce").mean()
 
-        reliability = min(1.0, (windows / max(WF_MIN_WINDOWS, 1)) * 0.5 + (total_samples / max(WF_MIN_TEST_SAMPLES * 3, 1)) * 0.5)
+        reliability = min(
+            1.0,
+            (windows / max(WF_MIN_WINDOWS, 1)) * 0.5 +
+            (total_samples / max(WF_MIN_TEST_SAMPLES * 3, 1)) * 0.5
+        )
 
         if windows < WF_MIN_WINDOWS or total_samples < WF_MIN_TEST_SAMPLES:
             status = "LOW_SAMPLE"
@@ -662,15 +663,12 @@ def build_backfill_walk_forward_stats(backfill_hist):
     if not stats.empty:
         stats = stats.sort_values(["OOS Win Probability", "OOS Samples"], ascending=False)
         stats.to_csv(BACKFILL_WALK_FORWARD_PATH, index=False, encoding="utf-8-sig")
-        print(f" Backfill walk-forward stats: {len(stats)} patterns")
+        print(f"Backfill walk-forward stats: {len(stats)} patterns")
 
     return stats
 
+
 def merge_walk_forward_sources(live_wf, backfill_wf):
-    """
-    u tin live walk-forward nu c.
-    Nu live cha , b sung bng backfill walk-forward.
-    """
     if live_wf is None or live_wf.empty:
         return backfill_wf if backfill_wf is not None else pd.DataFrame()
 
