@@ -27,6 +27,75 @@ def classify_market_regime(market_ret20):
     return "SIDEWAY"
 
 
+
+
+def make_pattern_key(row, market_regime="SIDEWAY"):
+    """
+    Safe local fallback for pattern key.
+    This prevents NameError if v10_learning.make_pattern_key is not imported.
+    """
+    strategy = str(row.get("Chien luoc", row.get("Strategy", "WATCH")))
+    action = str(row.get("Action", "SKIP"))
+
+    rsi = safe_float(row.get("RSI"), 0)
+    rs20 = safe_float(row.get("RS20"), 0)
+    vol = safe_float(row.get("Volume Ratio"), 0)
+    atr = safe_float(row.get("ATR %"), 999)
+    dist = safe_float(row.get("Dist MA20 %"), 0)
+
+    if rsi >= 75:
+        rsi_bucket = "RSI_HIGH"
+    elif rsi >= 55:
+        rsi_bucket = "RSI_MID_HIGH"
+    elif rsi >= 45:
+        rsi_bucket = "RSI_MID"
+    elif rsi >= 30:
+        rsi_bucket = "RSI_LOW"
+    else:
+        rsi_bucket = "RSI_WEAK"
+
+    if rs20 >= 8:
+        rs_bucket = "RS_STRONG"
+    elif rs20 >= 0:
+        rs_bucket = "RS_OK"
+    elif rs20 >= -8:
+        rs_bucket = "RS_WEAK"
+    else:
+        rs_bucket = "RS_BAD"
+
+    if vol >= 1.5:
+        vol_bucket = "VOL_STRONG"
+    elif vol >= 1.0:
+        vol_bucket = "VOL_OK"
+    else:
+        vol_bucket = "VOL_LOW"
+
+    if atr <= 6:
+        atr_bucket = "ATR_LOW"
+    elif atr <= 9:
+        atr_bucket = "ATR_OK"
+    else:
+        atr_bucket = "ATR_HIGH"
+
+    if dist >= 12:
+        dist_bucket = "FAR_MA20"
+    elif dist >= 0:
+        dist_bucket = "ABOVE_MA20"
+    else:
+        dist_bucket = "BELOW_MA20"
+
+    return "|".join([
+        str(market_regime),
+        strategy,
+        action,
+        rsi_bucket,
+        rs_bucket,
+        vol_bucket,
+        atr_bucket,
+        dist_bucket,
+    ])
+
+
 # ============================================================
 # BACKFILL SAFETY HELPERS
 # ============================================================
