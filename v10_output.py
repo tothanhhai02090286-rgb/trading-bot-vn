@@ -2,36 +2,89 @@ from v10_config import *
 from v10_utils import *
 from v10_learning import ai_trust_label, build_row_evidence, add_explainable_columns
 
-
-def _norm_df(df):
-    """Normalize dataframe columns to ASCII-safe names when possible."""
+# ============================================================
+# Output safety helpers
+# - Normalize column names to ASCII
+# - Drop duplicated columns/index to avoid pandas InvalidIndexError
+# ============================================================
+def normalize_output_columns(df):
+    if df is None:
+        return df
     try:
-        return fix_vietnamese_columns(df)
+        if df.empty:
+            return df
+
+        rename_map = {
+            "MÃÂ£": "Ma",
+            "MÃ£": "Ma",
+            "Mã": "Ma",
+            "Ma": "Ma",
+            "NgÃ y": "Ngay",
+            "NgÃ y": "Ngay",
+            "NgÃ y": "Ngay",
+            "Ngày": "Ngay",
+            "Ngay": "Ngay",
+            "ChiÃ¡ÂºÂ¿n lÃÂ°Ã¡Â»Â£c": "Chien luoc",
+            "Chiáº¿n lÆ°á»£c": "Chien luoc",
+            "Chiến lược": "Chien luoc",
+            "Chien luoc": "Chien luoc",
+            "HÃ nh Äá»ng": "Hanh dong",
+            "Hành động": "Hanh dong",
+            "Hanh dong": "Hanh dong",
+            "Cáº£nh bÃ¡o": "Canh bao",
+            "Cảnh báo": "Canh bao",
+            "Canh bao": "Canh bao",
+            "LÃ½ do": "Ly do",
+            "Lý do": "Ly do",
+            "Ly do": "Ly do",
+            "GiÃ¡ vá»n": "Gia von",
+            "Giá vốn": "Gia von",
+            "Gia von": "Gia von",
+            "Sá» lÆ°á»£ng": "So luong",
+            "Số lượng": "So luong",
+            "So luong": "So luong",
+            "GiÃ¡ trá» vá»n": "Gia tri von",
+            "Giá trị vốn": "Gia tri von",
+            "Gia tri von": "Gia tri von",
+            "GiÃ¡ trá» hiá»n táº¡i": "Gia tri hien tai",
+            "Giá trị hiện tại": "Gia tri hien tai",
+            "Gia tri hien tai": "Gia tri hien tai",
+            "LÃ£i/Lá» %": "Lai/Lo %",
+            "Lãi/Lỗ %": "Lai/Lo %",
+            "Lai/Lo %": "Lai/Lo %",
+            "LÃ£i/Lá» tiá»n": "Lai/Lo tien",
+            "Lãi/Lỗ tiền": "Lai/Lo tien",
+            "Lai/Lo tien": "Lai/Lo tien",
+        }
+
+        out = df.copy()
+        out.columns = [rename_map.get(str(c), str(c).replace("\ufeff", "").strip()) for c in out.columns]
+        out = out.loc[:, ~out.columns.duplicated()].reset_index(drop=True)
+        return out
     except Exception:
         return df
 
-
-def _first_col(df, names):
-    for name in names:
-        if df is not None and not df.empty and name in df.columns:
-            return name
-    return None
+def safe_concat_frames(frames):
+    clean_frames = []
+    for df in frames:
+        if df is None:
+            continue
+        df = normalize_output_columns(df)
+        if df is not None and not df.empty:
+            clean_frames.append(df.loc[:, ~df.columns.duplicated()].reset_index(drop=True))
+    if not clean_frames:
+        return pd.DataFrame()
+    return pd.concat(clean_frames, ignore_index=True, sort=False)
 
 
 def build_portfolio_and_action_plan(combined, ai_risk):
-    combined = _norm_df(combined)
-    ai_risk = _norm_df(ai_risk)
-    portfolio = _norm_df(safe_read_csv(PORTFOLIO_PATH))
+    combined = normalize_output_columns(combined)
+    ai_risk = normalize_output_columns(ai_risk)
+    if combined is not None and not combined.empty and "Ma" in combined.columns:
+        combined = combined.drop_duplicates(subset=["Ma"], keep="last").reset_index(drop=True)
+    portfolio = normalize_output_columns(safe_read_csv(PORTFOLIO_PATH))
 
-    code_col = _first_col(portfolio, ["Ma", "MÃ£", "Code"])
-    combined_code_col = _first_col(combined, ["Ma", "MÃ£", "Code"])
-
-    if not portfolio.empty and code_col and combined_code_col:
-        if code_col != "Ma":
-            portfolio = portfolio.rename(columns={code_col: "Ma"})
-        if combined_code_col != "Ma":
-            combined = combined.rename(columns={combined_code_col: "Ma"})
-
+    if portfolio is not None and not portfolio.empty and "Ma" in portfolio.columns:
         tracker = portfolio.merge(
             combined,
             on="Ma",
@@ -53,7 +106,7 @@ def build_portfolio_and_action_plan(combined, ai_risk):
             action = str(row.get("Action", ""))
             risk = str(row.get("Risk Status", ""))
             rsi = safe_float(row.get("RSI"), 0)
-            strategy = str(row.get("Chien luoc", row.get("Strategy", "")))
+            strategy = str(row.get("Chien luoc", ""))
 
             if pd.isna(row.get("Close")):
                 return "CHUA CO DATA"
@@ -79,16 +132,16 @@ def build_portfolio_and_action_plan(combined, ai_risk):
             risk = str(row.get("Risk Status", ""))
 
             if risk == "FAIL":
-                return "RISK FAIL"
+                return "â RISK FAIL"
             if pnl <= -4:
-                return "NGUY HIEM"
+                return "RISK HIGH"
             if pnl <= -2:
-                return "CANH BAO"
+                return "WARNING"
             if rsi >= 80:
-                return "QUA MUA"
+                return "OVERBOUGHT"
             if pnl > 0:
-                return "DANG LAI"
-            return "ON"
+                return "PROFIT"
+            return "OK"
 
         tracker["Canh bao"] = tracker.apply(risk_flag, axis=1)
 
@@ -105,31 +158,22 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     else:
         tracker = pd.DataFrame([{
             "Ma": "NO_PORTFOLIO",
-            "Hanh dong": "Chua co portfolio_current.csv",
-            "Canh bao": "CHUA CO DANH MUC"
+            "Hanh dong": "ChÆ°a cÃ³ portfolio_current.csv",
+            "Canh bao": "â ï¸ CHÆ¯A CÃ DANH Má»¤C"
         }])
 
     tracker.to_csv(PORTFOLIO_TRACKER_PATH, index=False, encoding="utf-8-sig")
 
-    if ai_risk is None or ai_risk.empty:
-        buy_plan = pd.DataFrame()
-    else:
-        buy_plan = ai_risk[ai_risk.get("Action", "") == "BUY NOW"].copy()
+    buy_plan = ai_risk[ai_risk["Action"] == "BUY NOW"].copy()
 
     if not buy_plan.empty:
         buy_plan["Hanh dong"] = "MUA MOI"
-        if "Signal" in buy_plan.columns and "Score" in buy_plan.columns:
-            buy_plan["Ly do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
-        else:
-            buy_plan["Ly do"] = "Tin hieu mua"
-
+        buy_plan["Ly do"] = buy_plan["Signal"].astype(str) + " | Score " + buy_plan["Score"].astype(str)
         keep_buy = [
             "Ngay", "Ma", "Hanh dong", "Ly do",
-            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action",
-            "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status",
-            "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action",
-            "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
-            "RSI", "Close", "RS20", "Volume Ratio", "ADX", "ATR %", "Risk Status"
+            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
+            "RSI", "Close", "RS20", "Volume Ratio",
+            "ADX", "ATR %", "Risk Status"
         ]
         buy_plan = buy_plan[[c for c in keep_buy if c in buy_plan.columns]]
     else:
@@ -144,17 +188,14 @@ def build_portfolio_and_action_plan(combined, ai_risk):
         keep_hold = [
             "Ngay", "Ma", "Hanh dong", "Canh bao", "Ly do",
             "Lai/Lo %", "Lai/Lo tien",
-            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action",
-            "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status",
-            "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action",
-            "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
+            "Signal", "Chien luoc", "Score", "AI Confidence", "AI Grade", "AI Action", "Win Probability", "History Samples", "OOS Win Probability", "OOS Samples", "OOS Status", "Regime Win Probability", "Regime Samples", "Market Regime Now", "Final Action", "History Note", "Walk Forward Note", "Regime Note", "AI Reason", "AI Warning",
             "RSI", "Close", "Risk Status", "Risk Reason"
         ]
         hold_plan = hold_plan[[c for c in keep_hold if c in hold_plan.columns]]
     else:
         hold_plan = pd.DataFrame()
 
-    action_plan = pd.concat([buy_plan, hold_plan], ignore_index=True)
+    action_plan = safe_concat_frames([buy_plan, hold_plan])
 
     if action_plan.empty:
         action_plan = pd.DataFrame([{
@@ -167,7 +208,6 @@ def build_portfolio_and_action_plan(combined, ai_risk):
     action_plan.to_csv(ACTION_PLAN_PATH, index=False, encoding="utf-8-sig")
 
     return tracker, action_plan
-
 
 def build_simple_recommendation(row):
     action = display_action_ascii(row.get("Final Action", row.get("AI Action", row.get("Action", ""))))
@@ -182,13 +222,13 @@ def build_simple_recommendation(row):
         row.get("Regime Win Probability"),
         row.get("Regime Samples")
     )
-    trust_upper = str(trust).upper()
 
     if risk == "FAIL":
         return "BO QUA / SKIP"
 
-    # ANTI OVERFIT: Trust LOW is not allowed to become Priority Buy.
-    if trust_upper.startswith("LOW"):
+    # ANTI OVERFIT:
+    # Trust LOW must never become PRIORITY BUY.
+    if str(trust).startswith("LOW"):
         if score >= 85 and ai >= 80:
             return "MUA THAM DO / PROBE BUY"
         return "THEO DOI / WATCH"
@@ -209,7 +249,6 @@ def build_simple_recommendation(row):
         return "THEO DOI / WATCH"
 
     return action or "THEO DOI / WATCH"
-
 
 def build_simple_reason(row):
     parts = []
@@ -261,17 +300,16 @@ def build_simple_reason(row):
 
     return "; ".join(parts[:5])
 
-
 def build_buy_zone(row):
     close = safe_float(row.get("Close"), np.nan)
     atr = safe_float(row.get("ATR %"), 0)
     if pd.isna(close) or close <= 0:
         return ""
+    # simple zone: +/- 0.5 ATR percent from close, capped for readability
     band = max(0.8, min(2.5, atr * 0.35))
     low = close * (1 - band/100)
     high = close * (1 + band/100)
     return f"{low:.2f}-{high:.2f}"
-
 
 def build_stop_loss(row):
     close = safe_float(row.get("Close"), np.nan)
@@ -282,7 +320,6 @@ def build_stop_loss(row):
     sl = close * (1 - risk_pct/100)
     return f"{sl:.2f}"
 
-
 def make_dashboard_view(df, kind=""):
     """
     Actionable dashboard for phone:
@@ -292,15 +329,13 @@ def make_dashboard_view(df, kind=""):
     if df is None or df.empty:
         return pd.DataFrame()
 
-    view = _norm_df(df.copy())
+    df = normalize_output_columns(df)
+    view = df.copy()
 
     rename = {
         "Ngay": "Date",
         "Ma": "Code",
         "Chien luoc": "Strategy",
-        "NgÃ y": "Date",
-        "MÃ£": "Code",
-        "Chiáº¿n lÆ°á»£c": "Strategy",
         "AI Confidence": "AI",
         "Win Probability": "Win%",
         "OOS Win Probability": "OOS%",
@@ -326,12 +361,14 @@ def make_dashboard_view(df, kind=""):
     if "Risk Status" in view.columns:
         view["Risk Status"] = view["Risk Status"].astype(str).str.encode("ascii", "ignore").str.decode("ascii")
 
+    # Actionable columns
     view = add_explainable_columns(view)
     view["Rec"] = view.apply(build_simple_recommendation, axis=1)
     view["Why"] = view.apply(build_simple_reason, axis=1)
     view["Buy Zone"] = view.apply(build_buy_zone, axis=1)
     view["Stop Loss"] = view.apply(build_stop_loss, axis=1)
 
+    # Do not show long/broken notes
     drop_cols = [
         "Risk Reason", "AI Reason", "AI Warning", "History Note",
         "WF Note", "Walk Forward Note", "Regime Note", "Pattern Key",
@@ -339,6 +376,7 @@ def make_dashboard_view(df, kind=""):
     ]
     view = view.drop(columns=[c for c in drop_cols if c in view.columns], errors="ignore")
 
+    # Hide OOS/Reg columns if all empty/zero
     for col in ["OOS%", "OOSN", "OOS Status", "Reg%", "RegN", "HistN"]:
         if col in view.columns:
             s = view[col]
@@ -363,20 +401,17 @@ def make_dashboard_view(df, kind=""):
     view = view.replace({np.nan: ""})
     return view.head(20)
 
-
 def build_telegram_message(entry, action_plan, combined, tracker):
-    entry = _norm_df(entry)
-    action_plan = _norm_df(action_plan)
-    combined = _norm_df(combined)
-    tracker = _norm_df(tracker)
-
+    entry = normalize_output_columns(entry)
+    action_plan = normalize_output_columns(action_plan)
+    combined = normalize_output_columns(combined)
+    tracker = normalize_output_columns(tracker)
     run_time = now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
     data_date = get_report_data_date(entry, action_plan, combined)
 
     try:
-        code_col = _first_col(combined, ["Ma", "MÃ£", "Code"])
-        total_codes = len(set(combined[code_col].dropna().astype(str)) & set(UNIVERSE)) if code_col else 0
-        missing_codes = sorted(set(UNIVERSE) - set(combined[code_col].dropna().astype(str))) if code_col else []
+        total_codes = len(set(combined["Ma"].dropna().astype(str)) & set(UNIVERSE))
+        missing_codes = sorted(set(UNIVERSE) - set(combined["Ma"].dropna().astype(str)))
     except Exception:
         total_codes = 0
         missing_codes = []
@@ -389,14 +424,14 @@ def build_telegram_message(entry, action_plan, combined, tracker):
 
     if source_df is None or source_df.empty:
         return (
-            f"TRADING BOT {SYSTEM_VERSION}\n"
+            "TRADING BOT V9 ACTIONABLE\n"
             f"Run time: {run_time}\n"
             f"Data date: {data_date}\n"
             "No signal data.\n"
             "Dashboard HTML attached."
         )
 
-    source_df = _norm_df(safe_numeric_columns(source_df))
+    source_df = safe_numeric_columns(source_df)
 
     try:
         current_regime = str(combined.get("Market Regime Now").dropna().iloc[0]) if "Market Regime Now" in combined.columns else ""
@@ -428,7 +463,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
     focus = focus.head(5)
 
     lines = [
-        f"TRADING BOT {SYSTEM_VERSION}",
+        "TRADING BOT V9 ACTIONABLE",
         f"Run time: {run_time}",
         f"Data date: {data_date}",
         f"Version: {SYSTEM_VERSION}",
@@ -460,7 +495,7 @@ def build_telegram_message(entry, action_plan, combined, tracker):
             return ""
 
     for _, r in focus.iterrows():
-        code = clean_display_na(r.get("Ma", r.get("MÃ£", r.get("Code", ""))))
+        code = clean_display_na(r.get("Ma", ""))
         rec = build_simple_recommendation(r)
         why = build_simple_reason(r)
         zone = build_buy_zone(r)
@@ -504,7 +539,6 @@ def build_telegram_message(entry, action_plan, combined, tracker):
     lines.append("Dashboard HTML attached below.")
     return "\n".join(lines)
 
-
 def send_telegram_document(token, chat_id, file_path, caption=""):
     if not os.path.exists(file_path):
         print(f"Khong thay file dinh kem: {file_path}")
@@ -534,7 +568,6 @@ def send_telegram_document(token, chat_id, file_path, caption=""):
     except Exception as e:
         print("Telegram dashboard error:", repr(e))
 
-
 def send_telegram_alert(entry, action_plan, combined, tracker):
     if not TELEGRAM_ENABLED:
         print("Telegram alert disabled")
@@ -544,12 +577,13 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
     chat_id = get_env_secret("TELEGRAM_CHAT_ID", "CHAT_ID", "TELEGRAM_CHAT")
 
     if not token or not chat_id:
-        print("Thieu TELEGRAM_TOKEN hoac TELEGRAM_CHAT_ID -> bo qua Telegram")
+        print("Missing TELEGRAM_TOKEN or TELEGRAM_CHAT_ID, skip Telegram")
         return
 
     msg = build_telegram_message(entry, action_plan, combined, tracker)
 
     try:
+        # 1) Send short summary message
         url = f"https://api.telegram.org/bot{token}/sendMessage"
         r = requests.post(
             url,
@@ -566,6 +600,7 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
         else:
             print(f"Telegram send failed: {r.status_code} - {r.text}")
 
+        # 2) Send dashboard HTML file
         send_telegram_document(
             token,
             chat_id,
@@ -575,7 +610,6 @@ def send_telegram_alert(entry, action_plan, combined, tracker):
 
     except Exception as e:
         print("Telegram error:", repr(e))
-
 
 def html_style():
     return """
