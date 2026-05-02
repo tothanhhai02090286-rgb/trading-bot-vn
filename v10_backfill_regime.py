@@ -3,8 +3,78 @@ from v10_utils import *
 from v10_indicators import *
 from v10_strategy import *
 
+
+# ============================================================
+# BACKFILL SAFETY HELPERS
+# ============================================================
+
+def bf_normalize_columns(df):
+    if df is None:
+        return df
+    try:
+        if df.empty:
+            return df
+
+        rename_map = {
+            "M": "Ma",
+            "Ma": "Ma",
+            "M": "Ma",
+            "Ma": "Ma",
+
+            "Ng y": "Ngay",
+            "Ng y": "Ngay",
+            "Ngay": "Ngay",
+            "Ngy": "Ngay",
+            "Ngay": "Ngay",
+
+            "Chin lc": "Chien luoc",
+            "Chien luoc": "Chien luoc",
+            "Chin lc": "Chien luoc",
+            "Chien luoc": "Chien luoc",
+        }
+
+        out = df.copy()
+        out.columns = [rename_map.get(str(c), str(c).replace("\ufeff", "").strip()) for c in out.columns]
+        out = out.loc[:, ~out.columns.duplicated()]
+        out = out.reset_index(drop=True)
+        return out
+    except Exception:
+        return df
+
+
+def bf_safe_concat(frames):
+    clean = []
+    for df in frames:
+        if df is None:
+            continue
+        df = bf_normalize_columns(df)
+        if df is not None and not df.empty:
+            clean.append(df.loc[:, ~df.columns.duplicated()].reset_index(drop=True))
+
+    if not clean:
+        return pd.DataFrame()
+
+    return pd.concat(clean, ignore_index=True, sort=False)
+
+
+def bf_deduplicate_history(hist):
+    hist = bf_normalize_columns(hist)
+    if hist is None or hist.empty:
+        return hist
+
+    subset = []
+    for c in ["Ngay", "Ma", "Pattern Key"]:
+        if c in hist.columns:
+            subset.append(c)
+
+    if subset:
+        hist = hist.drop_duplicates(subset=subset, keep="last")
+
+    return hist.reset_index(drop=True)
+
+
 def get_backfill_state():
-    df = safe_read_csv(BACKFILL_STATE_PATH)
+    df = bf_normalize_columns(safe_read_csv(BACKFILL_STATE_PATH))
     if df.empty or "next_start" not in df.columns:
         return 0
     try:
@@ -21,8 +91,8 @@ def save_backfill_state(next_start):
 
 def classify_backfill_row(row, market_ret20=0):
     """
-    Táº¡o láº¡i tÃ­n hiá»u quÃ¡ khá»© báº±ng chÃ­nh logic hiá»n táº¡i.
-    ÄÃ¢y lÃ  backfill giáº£ láº­p, khÃ´ng dÃ¹ng tÆ°Æ¡ng lai Äá» táº¡o tÃ­n hiá»u.
+    To li tn hiu qu kh bng chnh logic hin ti.
+    y l backfill gi lp, khng dng tng lai  to tn hiu.
     """
     close = safe_float(row.get("close"))
     ma5 = safe_float(row.get("MA5"))
@@ -59,7 +129,7 @@ def classify_backfill_row(row, market_ret20=0):
     r["Momentum Score"] = score_momentum(r)
     r["Bottom Score"] = score_bottom(r)
     r["Score"] = max(r["Momentum Score"], r["Bottom Score"])
-    r["Chiáº¿n lÆ°á»£c"] = classify_strategy(r)
+    r["Chien luoc"] = classify_strategy(r)
 
     risk_status, risk_reason = risk_filter(r)
     r["Risk Status"] = risk_status
@@ -119,7 +189,7 @@ def compute_outcome_from_price_df(price_df, entry_idx, entry_price):
 
 def add_months(ts, months):
     """
-    Cá»ng thÃ¡ng khÃ´ng cáº§n dateutil, Äá»§ dÃ¹ng cho block 3/4/6 thÃ¡ng.
+    Cng thng khng cn dateutil,  dng cho block 3/4/6 thng.
     """
     ts = pd.Timestamp(ts)
     month = ts.month - 1 + int(months)
@@ -129,10 +199,10 @@ def add_months(ts, months):
 
 def get_backfill_block_info(date_value):
     """
-    Chia lá»ch sá»­ theo block Äá»ng.
-    Máº·c Äá»nh V8 dÃ¹ng 3 thÃ¡ng:
+    Chia lch s theo block ng.
+    Mc nh V8 dng 3 thng:
     Q1: Jan-Mar, Q2: Apr-Jun, Q3: Jul-Sep, Q4: Oct-Dec.
-    Náº¿u Äá»i BACKFILL_BLOCK_MONTHS = 4/6 thÃ¬ tá»± chia tÆ°Æ¡ng á»©ng.
+    Nu i BACKFILL_BLOCK_MONTHS = 4/6 th t chia tng ng.
     """
     d = pd.to_datetime(date_value, errors="coerce")
     if pd.isna(d):
@@ -151,9 +221,9 @@ def get_backfill_block_info(date_value):
 
 def get_train_test_tag(date_value, block_start, block_end):
     """
-    Trong má»i block:
-    80% thá»i gian Äáº§u = TRAIN
-    20% thá»i gian cuá»i = TEST giáº£ láº­p chÆ°a biáº¿t.
+    Trong mi block:
+    80% thi gian u = TRAIN
+    20% thi gian cui = TEST gi lp cha bit.
     """
     d = pd.to_datetime(date_value, errors="coerce")
     if pd.isna(d) or pd.isna(block_start) or pd.isna(block_end):
@@ -213,18 +283,18 @@ def get_market_regime_from_cache(market_ret20=0):
             if not os.path.exists(cache_path):
                 continue
 
-            df = safe_read_csv(cache_path)
+            df = bf_normalize_columns(safe_read_csv(cache_path))
             if df.empty:
                 continue
 
             regime = detect_market_regime_detail(df, market_ret20)
-            print(f"ð Market regime: {regime}")
+            print(f" Market regime: {regime}")
             return regime
         except Exception:
             continue
 
     regime = classify_market_regime(market_ret20)
-    print(f"ð Market regime fallback: {regime}")
+    print(f" Market regime fallback: {regime}")
     return regime
 
 def compute_recent_decay_weight(date_value):
@@ -242,7 +312,7 @@ def compute_recent_decay_weight(date_value):
 
 def build_regime_stats(hist):
     """
-    Thá»ng kÃª hiá»u quáº£ pattern theo regime, cÃ³ time-decay.
+    Thng k hiu qu pattern theo regime, c time-decay.
     """
     if hist is None or hist.empty:
         return pd.DataFrame()
@@ -252,8 +322,9 @@ def build_regime_stats(hist):
     if "Pattern Key" not in h.columns or "Market Regime" not in h.columns:
         return pd.DataFrame()
 
-    h["NgÃ y"] = pd.to_datetime(h["NgÃ y"], errors="coerce")
-    h = h.dropna(subset=["NgÃ y", "Pattern Key", "Market Regime"])
+    h = bf_normalize_columns(h)
+    h["Ngay"] = pd.to_datetime(h["Ngay"], errors="coerce")
+    h = h.dropna(subset=["Ngay", "Pattern Key", "Market Regime"])
     h["Outcome"] = h.get("Outcome", "PENDING").astype(str)
     h = h[~h["Outcome"].isin(["PENDING", "", "nan"])].copy()
 
@@ -261,7 +332,7 @@ def build_regime_stats(hist):
         return pd.DataFrame()
 
     h["Win Flag"] = h["Outcome"].isin(["WIN", "WIN_TP"]).astype(int)
-    h["Decay Weight"] = h["NgÃ y"].apply(compute_recent_decay_weight)
+    h["Decay Weight"] = h["Ngay"].apply(compute_recent_decay_weight)
 
     rows = []
     for (regime, key), g in h.groupby(["Market Regime", "Pattern Key"]):
@@ -286,13 +357,13 @@ def build_regime_stats(hist):
     if not stats.empty:
         stats = stats.sort_values(["Regime Win Probability", "Regime Weighted Samples"], ascending=False)
         stats.to_csv(REGIME_STATS_PATH, index=False, encoding="utf-8-sig")
-        print(f"â Regime stats updated: {len(stats)} rows")
+        print(f" Regime stats updated: {len(stats)} rows")
 
     return stats
 
 def apply_regime_decay_filter(combined, regime_stats, current_regime):
     """
-    Final filter V9: Äiá»u chá»nh Final Action theo regime hiá»n táº¡i + time-decay stats.
+    Final filter V9: iu chnh Final Action theo regime hin ti + time-decay stats.
     """
     if combined is None or combined.empty:
         return combined
@@ -301,12 +372,12 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
     df["Market Regime Now"] = current_regime
 
     if "Final Action" not in df.columns:
-        df["Final Action"] = df.get("AI Action", df.get("Action", "THEO DÃI"))
+        df["Final Action"] = df.get("AI Action", df.get("Action", "THEO DI"))
 
     if regime_stats is None or regime_stats.empty or "Pattern Key" not in df.columns:
         df["Regime Win Probability"] = np.nan
         df["Regime Samples"] = 0
-        df["Regime Note"] = "ChÆ°a Äá»§ regime stats"
+        df["Regime Note"] = "Cha  regime stats"
         return df
 
     rs = regime_stats[regime_stats["Market Regime"].astype(str) == str(current_regime)].copy()
@@ -314,7 +385,7 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
     if rs.empty:
         df["Regime Win Probability"] = np.nan
         df["Regime Samples"] = 0
-        df["Regime Note"] = f"ChÆ°a cÃ³ stats cho regime {current_regime}"
+        df["Regime Note"] = f"Cha c stats cho regime {current_regime}"
         return df
 
     rmap = rs.set_index("Pattern Key").to_dict(orient="index")
@@ -325,41 +396,41 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
         key = r.get("Pattern Key")
         stat = rmap.get(key)
 
-        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "THEO DÃI"))))
+        final_action = str(r.get("Final Action", r.get("AI Action", r.get("Action", "THEO DI"))))
         conf = safe_float(r.get("AI Confidence"), safe_float(r.get("Score"), 50))
 
         if not stat:
             probs.append(np.nan)
             samples.append(0)
-            notes.append(f"Pattern chÆ°a cÃ³ dá»¯ liá»u trong regime {current_regime}")
+            notes.append(f"Pattern cha c d liu trong regime {current_regime}")
             final_actions.append(final_action)
             adjusted_conf.append(round(conf, 0))
             continue
 
         p = safe_float(stat.get("Regime Win Probability"), BASE_WIN_PROB)
         n = int(safe_float(stat.get("Regime Samples"), 0))
-        note = f"{current_regime}: {n} máº«u, win decay ~{p:.1f}%"
+        note = f"{current_regime}: {n} mu, win decay ~{p:.1f}%"
 
         if n >= MIN_PATTERN_SAMPLES and p >= 62:
             conf += REGIME_BONUS_STRONG
-            note += " | regime á»§ng há»"
-            if final_action in ["MUA THÄM DÃ", "THEO DÃI Máº NH", "CHá» XÃC NHáº¬N"] and conf >= 78:
-                final_action = "MUA THÄM DÃ"
-            if final_action == "MUA THÄM DÃ" and conf >= 88:
-                final_action = "MUA Æ¯U TIÃN"
+            note += " | regime ng h"
+            if final_action in ["MUA THM D", "THEO DI MNH", "CH XC NHN"] and conf >= 78:
+                final_action = "MUA THM D"
+            if final_action == "MUA THM D" and conf >= 88:
+                final_action = "MUA U TIN"
 
         elif n >= MIN_PATTERN_SAMPLES and p < 48:
             conf -= REGIME_PENALTY_BAD
-            note += " | regime yáº¿u, háº¡ tÃ­n hiá»u"
-            if final_action in ["MUA Æ¯U TIÃN", "MUA THÄM DÃ"]:
-                final_action = "CHá» XÃC NHáº¬N"
-            elif final_action in ["CHá» XÃC NHáº¬N", "THEO DÃI Máº NH"] and p < 42:
-                final_action = "Bá» QUA"
+            note += " | regime yu, h tn hiu"
+            if final_action in ["MUA U TIN", "MUA THM D"]:
+                final_action = "CH XC NHN"
+            elif final_action in ["CH XC NHN", "THEO DI MNH"] and p < 42:
+                final_action = "B QUA"
 
         elif n < MIN_PATTERN_SAMPLES:
-            note += " | Ã­t máº«u regime, khÃ´ng nÃ¢ng máº¡nh"
-            if final_action == "MUA Æ¯U TIÃN":
-                final_action = "MUA THÄM DÃ"
+            note += " | t mu regime, khng nng mnh"
+            if final_action == "MUA U TIN":
+                final_action = "MUA THM D"
 
         probs.append(round(p, 2))
         samples.append(n)
@@ -377,10 +448,10 @@ def apply_regime_decay_filter(combined, regime_stats, current_regime):
 
 def build_backfill_history_from_cache(market_ret20=0):
     """
-    Backfill lá»ch sá»­ tá»« cache_stock:
-    - Chia tá»«ng block thá»i gian.
-    - Trong má»i ná»­a nÄm: 80% Äáº§u TRAIN, 20% cuá»i TEST.
-    - TEST ÄÆ°á»£c dÃ¹ng Äá» ÄÃ¡nh giÃ¡ ngoÃ i máº«u, trÃ¡nh há»c váº¹t.
+    Backfill lch s t cache_stock:
+    - Chia tng block thi gian.
+    - Trong mi na nm: 80% u TRAIN, 20% cui TEST.
+    - TEST c dng  nh gi ngoi mu, trnh hc vt.
     """
     if not BACKFILL_ENABLED:
         print("Backfill disabled")
@@ -395,7 +466,7 @@ def build_backfill_history_from_cache(market_ret20=0):
     end_idx = min(start_idx + BACKFILL_MAX_SYMBOLS_PER_RUN, len(UNIVERSE))
     symbols = UNIVERSE[start_idx:end_idx]
 
-    print(f"ð§  Backfill V7: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
+    print(f" Backfill V7: {start_idx} -> {end_idx} / {len(UNIVERSE)}")
 
     rows = []
     market_regime = current_market_regime if 'current_market_regime' in globals() else classify_market_regime(market_ret20)
@@ -407,7 +478,7 @@ def build_backfill_history_from_cache(market_ret20=0):
         if not os.path.exists(cache_path):
             continue
 
-        dfp = safe_read_csv(cache_path)
+        dfp = bf_normalize_columns(safe_read_csv(cache_path))
         if dfp.empty or "close" not in dfp.columns:
             continue
 
@@ -438,7 +509,7 @@ def build_backfill_history_from_cache(market_ret20=0):
             if not signal_row:
                 continue
 
-            # chá» lÆ°u cÃ¡c tÃ­n hiá»u cÃ³ Ã½ nghÄ©a, bá» WATCH ráº¥t yáº¿u Äá» nháº¹ file
+            # ch lu cc tn hiu c  ngha, b WATCH rt yu  nh file
             if signal_row["Score"] < 55:
                 continue
 
@@ -456,8 +527,8 @@ def build_backfill_history_from_cache(market_ret20=0):
             split_tag = get_train_test_tag(d, block_start, block_end)
 
             rec = {
-                "NgÃ y": d.strftime("%Y-%m-%d"),
-                "MÃ£": symbol,
+                "Ngay": d.strftime("%Y-%m-%d"),
+                "Ma": symbol,
                 "Run At": now_vietnam().strftime("%Y-%m-%d %H:%M:%S"),
                 "Market Ret20": round(safe_float(market_ret20, 0), 2),
                 "Market Regime": market_regime,
@@ -473,19 +544,16 @@ def build_backfill_history_from_cache(market_ret20=0):
 
             rows.append(rec)
 
-    new_hist = pd.DataFrame(rows)
+    new_hist = bf_normalize_columns(pd.DataFrame(rows))
 
-    old = safe_read_csv(BACKFILL_SIGNAL_HISTORY_PATH)
-    if not old.empty and not new_hist.empty:
-        hist = pd.concat([old, new_hist], ignore_index=True)
-    elif not old.empty:
-        hist = old
-    else:
-        hist = new_hist
+    old = bf_normalize_columns(safe_read_csv(BACKFILL_SIGNAL_HISTORY_PATH))
+    hist = bf_safe_concat([old, new_hist])
+    hist = bf_deduplicate_history(hist)
 
-    if not hist.empty and "NgÃ y" in hist.columns and "MÃ£" in hist.columns:
-        hist = hist.drop_duplicates(subset=["NgÃ y", "MÃ£", "Pattern Key"], keep="last")
-        hist = hist.sort_values(["NgÃ y", "MÃ£"])
+    if not hist.empty:
+        sort_cols = [c for c in ["Ngay", "Ma"] if c in hist.columns]
+        if sort_cols:
+            hist = hist.sort_values(sort_cols).reset_index(drop=True)
 
     hist = normalize_outcome_dtype(hist)
     hist.to_csv(BACKFILL_SIGNAL_HISTORY_PATH, index=False, encoding="utf-8-sig")
@@ -495,20 +563,20 @@ def build_backfill_history_from_cache(market_ret20=0):
         next_start = 0
     save_backfill_state(next_start)
 
-    print(f"â Backfill history rows: {len(hist)} | new rows: {len(new_hist)} | next: {next_start}")
+    print(f" Backfill history rows: {len(hist)} | new rows: {len(new_hist)} | next: {next_start}")
 
     return hist
 
 def build_backfill_walk_forward_stats(backfill_hist):
     """
-    ÄÃ¡nh giÃ¡ theo block thá»i gian:
-    TRAIN 80% Äáº§u chá» Äá» xÃ¡c Äá»nh pattern ÄÃ£ xuáº¥t hiá»n.
-    TEST 20% sau dÃ¹ng Äá» Äo OOS winrate.
+    nh gi theo block thi gian:
+    TRAIN 80% u ch  xc nh pattern  xut hin.
+    TEST 20% sau dng  o OOS winrate.
     """
     if backfill_hist is None or backfill_hist.empty:
         return pd.DataFrame()
 
-    h = backfill_hist.copy()
+    h = bf_normalize_columns(backfill_hist.copy())
     h = normalize_outcome_dtype(h)
 
     if "Train/Test" not in h.columns or "Pattern Key" not in h.columns:
@@ -552,7 +620,7 @@ def build_backfill_walk_forward_stats(backfill_hist):
                 "OOS Avg Ret+10D %": round(avg_ret10, 2) if not pd.isna(avg_ret10) else np.nan,
             })
 
-    raw = pd.DataFrame(rows)
+    raw = bf_normalize_columns(pd.DataFrame(rows))
 
     if raw.empty:
         return pd.DataFrame()
@@ -590,18 +658,18 @@ def build_backfill_walk_forward_stats(backfill_hist):
             "Updated": now_vietnam().strftime("%Y-%m-%d %H:%M:%S")
         })
 
-    stats = pd.DataFrame(agg)
+    stats = bf_normalize_columns(pd.DataFrame(agg))
     if not stats.empty:
         stats = stats.sort_values(["OOS Win Probability", "OOS Samples"], ascending=False)
         stats.to_csv(BACKFILL_WALK_FORWARD_PATH, index=False, encoding="utf-8-sig")
-        print(f"â Backfill walk-forward stats: {len(stats)} patterns")
+        print(f" Backfill walk-forward stats: {len(stats)} patterns")
 
     return stats
 
 def merge_walk_forward_sources(live_wf, backfill_wf):
     """
-    Æ¯u tiÃªn live walk-forward náº¿u cÃ³.
-    Náº¿u live chÆ°a Äá»§, bá» sung báº±ng backfill walk-forward.
+    u tin live walk-forward nu c.
+    Nu live cha , b sung bng backfill walk-forward.
     """
     if live_wf is None or live_wf.empty:
         return backfill_wf if backfill_wf is not None else pd.DataFrame()
@@ -615,9 +683,9 @@ def merge_walk_forward_sources(live_wf, backfill_wf):
     back = backfill_wf.copy()
     back["WF Source"] = "BACKFILL"
 
-    combined = pd.concat([live, back], ignore_index=True)
+    combined = bf_safe_concat([live, back])
     combined = combined.sort_values(["WF Source", "OOS Samples"], ascending=[False, False])
-    combined = combined.drop_duplicates(subset=["Pattern Key"], keep="first")
+    combined = combined.drop_duplicates(subset=["Pattern Key"], keep="first").reset_index(drop=True)
 
     combined.to_csv(WALK_FORWARD_STATS_PATH, index=False, encoding="utf-8-sig")
     return combined
