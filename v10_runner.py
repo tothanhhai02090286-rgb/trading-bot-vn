@@ -497,9 +497,10 @@ def main():
     fail_by_strategy_html = fail_by_strategy_view.to_html(index=False, escape=True)
     # ===== UI HIGHLIGHT V13.4 =====
     try:
+        v134_ui_view = build_v134_decision_ui_vi(v133_feature_view, limit=30)
         v134_ui_html = dataframe_to_highlight_html(v134_ui_view)
-    except:
-        v134_ui_html = ""
+    except Exception as e:
+        v134_ui_html = f"<p>LOI V13.4 UI: {repr(e)}</p>"
     html_full = f"""
 <html>
 <head>
