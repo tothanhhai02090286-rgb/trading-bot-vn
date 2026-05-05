@@ -495,7 +495,11 @@ def main():
     fail_summary_html = fail_summary_view.to_html(index=False, escape=True)
     fail_by_code_html = fail_by_code_view.to_html(index=False, escape=True)
     fail_by_strategy_html = fail_by_strategy_view.to_html(index=False, escape=True)
-
+    # ===== UI HIGHLIGHT V13.4 =====
+    try:
+        v134_ui_html = dataframe_to_highlight_html(v134_ui_view)
+    except:
+        v134_ui_html = ""
     html_full = f"""
 <html>
 <head>
