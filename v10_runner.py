@@ -611,27 +611,27 @@ html_full = f"""
 </html>
 """
 
-    with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
-        f.write(html_full)
+with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
+    f.write(html_full)
 
-    send_telegram_alert(entry, action_plan, combined, tracker)
+send_telegram_alert(entry, action_plan, combined, tracker)
 
-    next_start = end_idx
-    if next_start >= len(UNIVERSE):
-        next_start = 0
+next_start = end_idx
+if next_start >= len(UNIVERSE):
+    next_start = 0
 
-    save_state(next_start)
+save_state(next_start)
 
-    print("CREATED OUTPUT FILES")
-    print("Rows combined:", len(combined))
-    print("Raw signals:", len(raw_signals))
-    print("AI risk rows:", len(ai_risk))
-    print("Bottom rows:", len(bottom))
-    print("Momentum rows:", len(momentum))
-    print("Entry rows:", len(entry))
-    print("Portfolio rows:", len(tracker))
-    print("Action plan rows:", len(action_plan))
-    print("Next batch start:", next_start)
+print("CREATED OUTPUT FILES")
+print("Rows combined:", len(combined))
+print("Raw signals:", len(raw_signals))
+print("AI risk rows:", len(ai_risk))
+print("Bottom rows:", len(bottom))
+print("Momentum rows:", len(momentum))
+print("Entry rows:", len(entry))
+print("Portfolio rows:", len(tracker))
+print("Action plan rows:", len(action_plan))
+print("Next batch start:", next_start)
 
 
 if __name__ == "__main__":
