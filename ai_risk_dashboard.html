@@ -103,10 +103,10 @@ body { font-size: 13px; }
 <body>
 
 <h2>TRADING BOT ACTION CENTER</h2>
-<p><b>Generated:</b> 2026-05-07 12:26:34.932651</p>
+<p><b>Generated:</b> 2026-05-07 12:36:25.432387</p>
 <p><b>Data date:</b> 2026-05-07</p>
 <p><b>Version:</b> PRO_V10_EXPLAINABLE_AI_2026_05_01</p>
-<p><b>Batch:</b> 0 -> 50 / 136</p>
+<p><b>Batch:</b> 50 -> 100 / 136</p>
 
 <div class="ui-note">Bản này tích hợp GLOBAL MACRO MODE ở đầu dashboard. Macro chỉ hạ cấp rủi ro khi Risk Off/Panic, không tự nâng WATCH lên BUY. Core logic lọc gốc, workflow và file output không đổi.</div>
 
@@ -158,13 +158,13 @@ body { font-size: 13px; }
 
     <div class="global-macro-card">
         <div class="global-macro-title">GLOBAL MACRO MODE</div>
-        <div><b>Generated:</b> 2026-05-07 05:26:32</div>
-        <div><b>Data status:</b> NO_YFINANCE</div>
+        <div><b>Generated:</b> 2026-05-07 05:36:21</div>
+        <div><b>Data status:</b> OK</div>
         <div class="global-macro-score">
             TRUNG TÍNH | SCORE: 0.0
         </div>
         <div><b>Risk action:</b> CHỈ MUA THĂM DÒ - ƯU TIÊN MÃ RISK PASS</div>
-        <div><b>Note:</b> Không import được yfinance, fallback TRUNG TÍNH.</div>
+        <div><b>Note:</b> Macro chỉ hạ cấp rủi ro, không tự nâng WATCH lên BUY.</div>
 
         <table class="global-macro-table">
             <thead>
@@ -183,7 +183,111 @@ body { font-size: 13px; }
             <tbody>
                 
         <tr>
-            <td colspan="9">Không có dữ liệu macro. Fallback TRUNG TÍNH.</td>
+            <td><b>SP500</b></td>
+            <td>^GSPC</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>NASDAQ</b></td>
+            <td>^IXIC</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>VIX</b></td>
+            <td>^VIX</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>US10Y</b></td>
+            <td>^TNX</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>DXY</b></td>
+            <td>DX-Y.NYB</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>NIKKEI</b></td>
+            <td>^N225</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>KOSPI</b></td>
+            <td>^KS11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>SHANGHAI</b></td>
+            <td>000001.SS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
+        </tr>
+        
+        <tr>
+            <td><b>OIL</b></td>
+            <td>CL=F</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>0.00</b></td>
+            <td>TRUNG TÍNH</td>
+            <td>Không đủ tín hiệu mạnh</td>
         </tr>
         
             </tbody>
@@ -532,22 +636,22 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
+      <td>SHS</td>
+      <td>17.50</td>
       <td>BUY NOW</td>
       <td>THEO DOI / WATCH (RS20 chua dat V11)</td>
-      <td>-8.74</td>
+      <td>-8.75</td>
       <td>0</td>
       <td>PASS</td>
       <td>Thi truong: CAN THAN TRONG; Nguong RS20 V11: 0; RS20 chua dat nguong V11</td>
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>SHS</td>
-      <td>17.50</td>
+      <td>HPG</td>
+      <td>27.60</td>
       <td>BUY NOW</td>
       <td>THEO DOI / WATCH (RS20 chua dat V11)</td>
-      <td>-8.75</td>
+      <td>-8.74</td>
       <td>0</td>
       <td>PASS</td>
       <td>Thi truong: CAN THAN TRONG; Nguong RS20 V11: 0; RS20 chua dat nguong V11</td>
@@ -1088,8 +1192,8 @@ body { font-size: 13px; }
       <td>YẾU</td>
     </tr>
     <tr>
-      <td>HHS</td>
-      <td>13.15</td>
+      <td>BVB</td>
+      <td>12.40</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
       <td>BỎ QUA - RISK FAIL</td>
@@ -1105,8 +1209,8 @@ body { font-size: 13px; }
       <td>YẾU</td>
     </tr>
     <tr>
-      <td>OIL</td>
-      <td>14.60</td>
+      <td>EVF</td>
+      <td>13.25</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
       <td>BỎ QUA - RISK FAIL</td>
@@ -1341,66 +1445,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HHS</td>
-      <td>13.15</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>DÙNG ĐƯỢC</td>
-      <td>97.8</td>
-      <td>100.00</td>
-      <td>8</td>
-      <td>8</td>
-      <td>0</td>
-      <td>100.00</td>
-      <td>2.11</td>
-      <td>1.75</td>
-      <td>6.96</td>
-      <td>80.0</td>
-      <td>46.0</td>
-      <td>FAIL</td>
-      <td>36.21</td>
-      <td>-13.80</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS20_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử DÙNG ĐƯỢC; test 8; win 100.0%; T+5 1.75%</td>
-      <td>YẾU</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>OIL</td>
-      <td>14.60</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>DÙNG ĐƯỢC</td>
-      <td>97.8</td>
-      <td>100.00</td>
-      <td>8</td>
-      <td>8</td>
-      <td>0</td>
-      <td>100.00</td>
-      <td>2.11</td>
-      <td>1.75</td>
-      <td>6.96</td>
-      <td>80.0</td>
-      <td>46.0</td>
-      <td>FAIL</td>
-      <td>43.33</td>
-      <td>-15.61</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS20_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử DÙNG ĐƯỢC; test 8; win 100.0%; T+5 1.75%</td>
-      <td>YẾU</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>BVB</td>
       <td>12.40</td>
       <td>SKIP</td>
@@ -1450,6 +1494,66 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>40.82</td>
       <td>-12.68</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS20_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử DÙNG ĐƯỢC; test 8; win 100.0%; T+5 1.75%</td>
+      <td>YẾU</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HHS</td>
+      <td>13.15</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>DÙNG ĐƯỢC</td>
+      <td>97.8</td>
+      <td>100.00</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>100.00</td>
+      <td>2.11</td>
+      <td>1.75</td>
+      <td>6.96</td>
+      <td>80.0</td>
+      <td>46.0</td>
+      <td>FAIL</td>
+      <td>36.21</td>
+      <td>-13.80</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS20_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_WEAK|RS_BAD|VOL_LOW|ATR_OK|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử DÙNG ĐƯỢC; test 8; win 100.0%; T+5 1.75%</td>
+      <td>YẾU</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>OIL</td>
+      <td>14.60</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>DÙNG ĐƯỢC</td>
+      <td>97.8</td>
+      <td>100.00</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>100.00</td>
+      <td>2.11</td>
+      <td>1.75</td>
+      <td>6.96</td>
+      <td>80.0</td>
+      <td>46.0</td>
+      <td>FAIL</td>
+      <td>43.33</td>
+      <td>-15.61</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI yếu | RS20 yếu | Thanh khoản thấp | Biến động ổn | Giá dưới MA20</td>
       <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
@@ -2451,6 +2555,36 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>DGW</td>
+      <td>43.50</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
+      <td>60.0</td>
+      <td>100.00</td>
+      <td>12</td>
+      <td>9</td>
+      <td>3</td>
+      <td>75.00</td>
+      <td>-0.50</td>
+      <td>-2.31</td>
+      <td>-0.60</td>
+      <td>90.0</td>
+      <td>66.0</td>
+      <td>FAIL</td>
+      <td>32.50</td>
+      <td>-13.21</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 12; win 75.0%; T+5 -2.31%</td>
+      <td>DÙNG ĐƯỢC</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>PET</td>
       <td>46.15</td>
       <td>SKIP</td>
@@ -2511,7 +2645,7 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>DGW</td>
+      <td>VGC</td>
       <td>43.50</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
@@ -2525,11 +2659,11 @@ body { font-size: 13px; }
       <td>-0.50</td>
       <td>-2.31</td>
       <td>-0.60</td>
-      <td>90.0</td>
-      <td>66.0</td>
+      <td>75.0</td>
+      <td>51.0</td>
       <td>FAIL</td>
-      <td>32.50</td>
-      <td>-13.21</td>
+      <td>20.16</td>
+      <td>-15.31</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
       <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
@@ -2560,36 +2694,6 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>10.47</td>
       <td>-38.14</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 12; win 75.0%; T+5 -2.31%</td>
-      <td>DÙNG ĐƯỢC</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>VGC</td>
-      <td>43.50</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
-      <td>60.0</td>
-      <td>100.00</td>
-      <td>12</td>
-      <td>9</td>
-      <td>3</td>
-      <td>75.00</td>
-      <td>-0.50</td>
-      <td>-2.31</td>
-      <td>-0.60</td>
-      <td>75.0</td>
-      <td>51.0</td>
-      <td>FAIL</td>
-      <td>20.16</td>
-      <td>-15.31</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
       <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
@@ -2751,36 +2855,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>IDI</td>
-      <td>6.45</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
-      <td>58.9</td>
-      <td>100.00</td>
-      <td>425</td>
-      <td>216</td>
-      <td>209</td>
-      <td>50.82</td>
-      <td>0.29</td>
-      <td>0.18</td>
-      <td>0.38</td>
-      <td>90.0</td>
-      <td>70.0</td>
-      <td>FAIL</td>
-      <td>32.31</td>
-      <td>-14.72</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
-      <td>MẠNH</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>FTS</td>
       <td>26.85</td>
       <td>SKIP</td>
@@ -2800,6 +2874,36 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>34.92</td>
       <td>-14.84</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
+      <td>MẠNH</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>IDI</td>
+      <td>6.45</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
+      <td>58.9</td>
+      <td>100.00</td>
+      <td>425</td>
+      <td>216</td>
+      <td>209</td>
+      <td>50.82</td>
+      <td>0.29</td>
+      <td>0.18</td>
+      <td>0.38</td>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>FAIL</td>
+      <td>32.31</td>
+      <td>-14.72</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
       <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
@@ -2841,36 +2945,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>MBS</td>
-      <td>19.70</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
-      <td>58.9</td>
-      <td>100.00</td>
-      <td>425</td>
-      <td>216</td>
-      <td>209</td>
-      <td>50.82</td>
-      <td>0.29</td>
-      <td>0.18</td>
-      <td>0.38</td>
-      <td>75.0</td>
-      <td>55.0</td>
-      <td>FAIL</td>
-      <td>28.57</td>
-      <td>-13.80</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
-      <td>MẠNH</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>CNG</td>
       <td>23.25</td>
       <td>SKIP</td>
@@ -2901,6 +2975,66 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>MBS</td>
+      <td>19.70</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
+      <td>58.9</td>
+      <td>100.00</td>
+      <td>425</td>
+      <td>216</td>
+      <td>209</td>
+      <td>50.82</td>
+      <td>0.29</td>
+      <td>0.18</td>
+      <td>0.38</td>
+      <td>75.0</td>
+      <td>55.0</td>
+      <td>FAIL</td>
+      <td>28.57</td>
+      <td>-13.80</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
+      <td>MẠNH</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>DRC</td>
+      <td>12.75</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
+      <td>58.9</td>
+      <td>100.00</td>
+      <td>425</td>
+      <td>216</td>
+      <td>209</td>
+      <td>50.82</td>
+      <td>0.29</td>
+      <td>0.18</td>
+      <td>0.38</td>
+      <td>75.0</td>
+      <td>51.0</td>
+      <td>FAIL</td>
+      <td>24.00</td>
+      <td>-16.44</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
+      <td>MẠNH</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>NLG</td>
       <td>27.25</td>
       <td>SKIP</td>
@@ -2920,36 +3054,6 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>21.92</td>
       <td>-15.33</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>UPTREND|BOTTOM|SKIP|RSI_LOW|RS_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>mẫu gần nhất khớp 100.0%; lịch sử MATCH YẾU - CHỈ THAM KHẢO; test 425; win 50.8%; T+5 0.18%</td>
-      <td>MẠNH</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>NT2</td>
-      <td>24.60</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>MATCH YẾU - CHỈ THAM KHẢO</td>
-      <td>58.9</td>
-      <td>100.00</td>
-      <td>425</td>
-      <td>216</td>
-      <td>209</td>
-      <td>50.82</td>
-      <td>0.29</td>
-      <td>0.18</td>
-      <td>0.38</td>
-      <td>75.0</td>
-      <td>51.0</td>
-      <td>FAIL</td>
-      <td>26.51</td>
-      <td>-17.69</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
       <td>Thị trường tăng | Bắt đáy | Bỏ qua | RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
       <td>Regime: 10.0/10; Strategy: 20.0/20; RSI: 25.0/25; Volume: 15.0/15; ATR: 10.0/10; MA20: 10.0/10; RS20: 10.0/10; Action: 10.0/10</td>
@@ -2990,8 +3094,8 @@ body { font-size: 13px; }
   </thead>
   <tbody>
     <tr>
-      <td>HPG</td>
-      <td>27.60</td>
+      <td>SHS</td>
+      <td>17.50</td>
       <td>BUY NOW</td>
       <td>BOTTOM</td>
       <td>PASS</td>
@@ -3008,8 +3112,8 @@ body { font-size: 13px; }
       <td>UPTREND</td>
     </tr>
     <tr>
-      <td>SHS</td>
-      <td>17.50</td>
+      <td>HPG</td>
+      <td>27.60</td>
       <td>BUY NOW</td>
       <td>BOTTOM</td>
       <td>PASS</td>
@@ -3441,8 +3545,8 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>HPG</td>
-      <td>27.60</td>
+      <td>SHS</td>
+      <td>17.50</td>
       <td>BUY NOW</td>
       <td>BOTTOM</td>
       <td>PASS</td>
@@ -3460,8 +3564,8 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>SHS</td>
-      <td>17.50</td>
+      <td>HPG</td>
+      <td>27.60</td>
       <td>BUY NOW</td>
       <td>BOTTOM</td>
       <td>PASS</td>
@@ -3536,44 +3640,6 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>PET</td>
-      <td>46.15</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>FAIL</td>
-      <td>RSI_LOW</td>
-      <td>RS20_BAD_LT_-10</td>
-      <td>VOL_OK_0.8_1.2</td>
-      <td>UPTREND</td>
-      <td>9637</td>
-      <td>RẤT MẠNH</td>
-      <td>47.34</td>
-      <td>49.58</td>
-      <td>0.06</td>
-      <td>0.10</td>
-      <td>0.38</td>
-      <td>MẪU ĐỦ DÙNG</td>
-    </tr>
-    <tr>
-      <td>PNJ</td>
-      <td>68.00</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>FAIL</td>
-      <td>RSI_LOW</td>
-      <td>RS20_BAD_LT_-10</td>
-      <td>VOL_OK_0.8_1.2</td>
-      <td>UPTREND</td>
-      <td>9637</td>
-      <td>RẤT MẠNH</td>
-      <td>47.34</td>
-      <td>49.58</td>
-      <td>0.06</td>
-      <td>0.10</td>
-      <td>0.38</td>
-      <td>MẪU ĐỦ DÙNG</td>
-    </tr>
-    <tr>
       <td>SCR</td>
       <td>6.00</td>
       <td>SKIP</td>
@@ -3612,6 +3678,44 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
+      <td>PET</td>
+      <td>46.15</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>FAIL</td>
+      <td>RSI_LOW</td>
+      <td>RS20_BAD_LT_-10</td>
+      <td>VOL_OK_0.8_1.2</td>
+      <td>UPTREND</td>
+      <td>9637</td>
+      <td>RẤT MẠNH</td>
+      <td>47.34</td>
+      <td>49.58</td>
+      <td>0.06</td>
+      <td>0.10</td>
+      <td>0.38</td>
+      <td>MẪU ĐỦ DÙNG</td>
+    </tr>
+    <tr>
+      <td>PNJ</td>
+      <td>68.00</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>FAIL</td>
+      <td>RSI_LOW</td>
+      <td>RS20_BAD_LT_-10</td>
+      <td>VOL_OK_0.8_1.2</td>
+      <td>UPTREND</td>
+      <td>9637</td>
+      <td>RẤT MẠNH</td>
+      <td>47.34</td>
+      <td>49.58</td>
+      <td>0.06</td>
+      <td>0.10</td>
+      <td>0.38</td>
+      <td>MẪU ĐỦ DÙNG</td>
+    </tr>
+    <tr>
       <td>VCG</td>
       <td>23.20</td>
       <td>WATCHLIST</td>
@@ -3631,8 +3735,8 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>MSN</td>
-      <td>78.40</td>
+      <td>DIG</td>
+      <td>14.75</td>
       <td>WATCHLIST</td>
       <td>BOTTOM_WATCH</td>
       <td>PASS</td>
@@ -3650,8 +3754,8 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>DIG</td>
-      <td>14.75</td>
+      <td>MSN</td>
+      <td>78.40</td>
       <td>WATCHLIST</td>
       <td>BOTTOM_WATCH</td>
       <td>PASS</td>
@@ -3916,25 +4020,6 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>IDI</td>
-      <td>6.45</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>FAIL</td>
-      <td>RSI_LOW</td>
-      <td>RS20_BAD_LT_-10</td>
-      <td>VOL_STRONG_GT_1.2</td>
-      <td>UPTREND</td>
-      <td>8084</td>
-      <td>RẤT MẠNH</td>
-      <td>47.65</td>
-      <td>50.53</td>
-      <td>0.00</td>
-      <td>0.22</td>
-      <td>0.60</td>
-      <td>MẪU ĐỦ DÙNG</td>
-    </tr>
-    <tr>
       <td>FTS</td>
       <td>26.85</td>
       <td>SKIP</td>
@@ -3954,8 +4039,8 @@ body { font-size: 13px; }
       <td>MẪU ĐỦ DÙNG</td>
     </tr>
     <tr>
-      <td>MBS</td>
-      <td>19.70</td>
+      <td>IDI</td>
+      <td>6.45</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
       <td>FAIL</td>
@@ -3975,6 +4060,25 @@ body { font-size: 13px; }
     <tr>
       <td>CNG</td>
       <td>23.25</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>FAIL</td>
+      <td>RSI_LOW</td>
+      <td>RS20_BAD_LT_-10</td>
+      <td>VOL_STRONG_GT_1.2</td>
+      <td>UPTREND</td>
+      <td>8084</td>
+      <td>RẤT MẠNH</td>
+      <td>47.65</td>
+      <td>50.53</td>
+      <td>0.00</td>
+      <td>0.22</td>
+      <td>0.60</td>
+      <td>MẪU ĐỦ DÙNG</td>
+    </tr>
+    <tr>
+      <td>MBS</td>
+      <td>19.70</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
       <td>FAIL</td>
@@ -4559,38 +4663,38 @@ body { font-size: 13px; }
       <td>75.0</td>
     </tr>
     <tr>
-      <td>HHS</td>
-      <td>13.15</td>
-      <td>BỎ QUA</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>FAIL</td>
-      <td>NaN</td>
-      <td>100.00</td>
-      <td>100.00</td>
-      <td>2.11</td>
-      <td>1.75</td>
-      <td>46.0</td>
-      <td>80.0</td>
-    </tr>
-    <tr>
-      <td>OIL</td>
-      <td>14.60</td>
-      <td>BỎ QUA</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>FAIL</td>
-      <td>NaN</td>
-      <td>100.00</td>
-      <td>100.00</td>
-      <td>2.11</td>
-      <td>1.75</td>
-      <td>46.0</td>
-      <td>80.0</td>
-    </tr>
-    <tr>
       <td>BVB</td>
       <td>12.40</td>
+      <td>BỎ QUA</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>FAIL</td>
+      <td>NaN</td>
+      <td>100.00</td>
+      <td>100.00</td>
+      <td>2.11</td>
+      <td>1.75</td>
+      <td>46.0</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <td>EVF</td>
+      <td>13.25</td>
+      <td>BỎ QUA</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>FAIL</td>
+      <td>NaN</td>
+      <td>100.00</td>
+      <td>100.00</td>
+      <td>2.11</td>
+      <td>1.75</td>
+      <td>46.0</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <td>HHS</td>
+      <td>13.15</td>
       <td>BỎ QUA</td>
       <td>SKIP</td>
       <td>BOTTOM</td>
@@ -4610,7 +4714,7 @@ body { font-size: 13px; }
 <h3>BẢNG ĐẦY ĐỦ ĐỂ ĐỐI CHIẾU TRƯỚC KHI QUYẾT ĐỊNH</h3>
 
 <h3>V13.4 - BANG QUYET DINH TU DONG</h3>
-<div class="v134-scroll"><table class="v134-full-table"><thead><tr><th>Mã</th><th>Giá</th><th>QUYẾT ĐỊNH TỰ ĐỘNG</th><th>NGUỒN HÌNH THÀNH</th><th>Hành động hiện tại</th><th>Strategy</th><th>Risk</th><th>Độ tin cậy lịch sử</th><th>Mức khớp mẫu %</th><th>Số lần test</th><th>Tỷ lệ thắng %</th><th>Lợi TB T+2 %</th><th>Lợi TB T+5 %</th><th>Điểm lịch sử</th><th>AI</th><th>Score</th><th>LÝ DO CHI TIẾT</th><th>Tín hiệu gốc</th><th>Global Macro Mode</th><th>Global Macro Note</th></tr></thead><tbody><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">APH</span></td><td>5.89</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>151</td><td>53.64</td><td>0.15</td><td>0.61</td><td>62.2</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 151 lần; win 53.6%; T+2 0.15%; T+5 0.61%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">AAA</span></td><td>7.45</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>243</td><td>52.68</td><td>0.14</td><td>0.25</td><td>59.9</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 243 lần; win 52.7%; T+2 0.14%; T+5 0.25%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">GVR</span></td><td>35.8</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>243</td><td>52.68</td><td>0.14</td><td>0.25</td><td>59.5</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 243 lần; win 52.7%; T+2 0.14%; T+5 0.25%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">LPB</span></td><td>49.4</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>90.45</td><td>5</td><td>100.0</td><td>7.58</td><td>14.44</td><td>100.0</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 90.5%; test 5 lần; win 100.0%; T+2 7.58%; T+5 14.44%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HNG</span></td><td>7.7</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM</td><td>PASS</td><td></td><td>94.55</td><td>20</td><td>85.0</td><td>2.6</td><td>3.48</td><td>100.0</td><td>100.0</td><td>80.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 94.5%; test 20 lần; win 85.0%; T+2 2.6%; T+5 3.48%; AI 100.0; Score 80.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HBC</span></td><td>5.3</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>151</td><td>53.64</td><td>0.15</td><td>0.61</td><td>61.7</td><td>99.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 151 lần; win 53.6%; T+2 0.15%; T+5 0.61%; AI 99.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VHM</span></td><td>151.0</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>5</td><td>100.0</td><td>7.58</td><td>14.44</td><td>100.0</td><td>99.0</td><td>85.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 100.0%; test 5 lần; win 100.0%; T+2 7.58%; T+5 14.44%; AI 99.0; Score 85.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VIC</span></td><td>219.5</td><td>MUA GIỮ T+5</td><td>V13.3 PATTERN + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>93.18</td><td>16</td><td>75.0</td><td>1.59</td><td>2.58</td><td>82.5</td><td>69.0</td><td>65.0</td><td>Risk PASS; lịch sử DÙNG ĐƯỢC; khớp mẫu 93.2%; test 16 lần; win 75.0%; T+2 1.59%; T+5 2.58%; AI 69.0; Score 65.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HCM</span></td><td>28.45</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>48</td><td>66.67</td><td>0.1</td><td>-1.91</td><td>62.9</td><td>100.0</td><td>100.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 48 lần; win 66.7%; T+2 0.1%; T+5 -1.91%; AI 100.0; Score 100.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VIX</span></td><td>17.6</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM</td><td>PASS</td><td></td><td>90.45</td><td>30</td><td>73.33</td><td>-0.2</td><td>-2.59</td><td>62.7</td><td>100.0</td><td>100.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.5%; test 30 lần; win 73.3%; T+2 -0.2%; T+5 -2.59%; AI 100.0; Score 100.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">MWG</span></td><td>86.0</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>66.4</td><td>79.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 79.0; Score 70.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">PVT</span></td><td>23.5</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>98.64</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>65.9</td><td>76.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 76.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VHC</span></td><td>61.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>31</td><td>61.29</td><td>-0.51</td><td>-0.44</td><td>64.6</td><td>72.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 31 lần; win 61.3%; T+2 -0.51%; T+5 -0.44%; AI 72.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VCG</span></td><td>23.2</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>97.27</td><td>43</td><td>51.16</td><td>0.44</td><td>0.24</td><td>59.0</td><td>69.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 97.3%; test 43 lần; win 51.2%; T+2 0.44%; T+5 0.24%; AI 69.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SAB</span></td><td>47.8</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>66.4</td><td>64.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 64.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">MSN</span></td><td>78.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>76</td><td>55.26</td><td>-0.18</td><td>0.27</td><td>61.5</td><td>61.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 76 lần; win 55.3%; T+2 -0.18%; T+5 0.27%; AI 61.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">DIG</span></td><td>14.75</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>97.27</td><td>76</td><td>55.26</td><td>-0.18</td><td>0.27</td><td>60.6</td><td>61.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 97.3%; test 76 lần; win 55.3%; T+2 -0.18%; T+5 0.27%; AI 61.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HHV</span></td><td>12.9</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>69</td><td>56.52</td><td>0.97</td><td>1.66</td><td>69.1</td><td>59.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 69 lần; win 56.5%; T+2 0.97%; T+5 1.66%; AI 59.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SKG</span></td><td>9.68</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>27</td><td>55.56</td><td>0.1</td><td>0.63</td><td>63.8</td><td>59.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 27 lần; win 55.6%; T+2 0.1%; T+5 0.63%; AI 59.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">DHC</span></td><td>36.0</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>93.18</td><td>82</td><td>57.32</td><td>0.62</td><td>-0.2</td><td>59.4</td><td>56.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 93.2%; test 82 lần; win 57.3%; T+2 0.62%; T+5 -0.2%; AI 56.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">VRE</span></td><td>36.6</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>94.55</td><td>3</td><td>100.0</td><td>1.25</td><td>5.56</td><td>86.9</td><td>100.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 94.5%; test 3 lần; win 100.0%; T+2 1.25%; T+5 5.56%; AI 100.0; Score 70.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BFC</span></td><td>66.9</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WAIT</td><td>MOMENTUM</td><td>PASS</td><td></td><td>95.91</td><td>4</td><td>100.0</td><td>1.83</td><td>6.12</td><td>99.9</td><td>89.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 95.9%; test 4 lần; win 100.0%; T+2 1.83%; T+5 6.12%; AI 89.0; Score 75.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">GMD</span></td><td>78.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>95.91</td><td>41</td><td>63.41</td><td>0.61</td><td>2.02</td><td>76.6</td><td>81.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 95.9%; test 41 lần; win 63.4%; T+2 0.61%; T+5 2.02%; AI 81.0; Score 65.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">PVD</span></td><td>32.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>70.0</td><td>90.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 70.0; Score 90.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">PLX</span></td><td>39.0</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>66.0</td><td>90.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 100.0%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 66.0; Score 90.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">GAS</span></td><td>79.2</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>1</td><td>100.0</td><td>10.44</td><td>10.76</td><td>100.0</td><td>59.0</td><td>75.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 1 lần; win 100.0%; T+2 10.44%; T+5 10.76%; AI 59.0; Score 75.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">KDC</span></td><td>47.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>51.0</td><td>75.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 51.0; Score 75.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">HHS</span></td><td>13.15</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">OIL</span></td><td>14.6</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BVB</span></td><td>12.4</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr></tbody></table></div>
+<div class="v134-scroll"><table class="v134-full-table"><thead><tr><th>Mã</th><th>Giá</th><th>QUYẾT ĐỊNH TỰ ĐỘNG</th><th>NGUỒN HÌNH THÀNH</th><th>Hành động hiện tại</th><th>Strategy</th><th>Risk</th><th>Độ tin cậy lịch sử</th><th>Mức khớp mẫu %</th><th>Số lần test</th><th>Tỷ lệ thắng %</th><th>Lợi TB T+2 %</th><th>Lợi TB T+5 %</th><th>Điểm lịch sử</th><th>AI</th><th>Score</th><th>LÝ DO CHI TIẾT</th><th>Tín hiệu gốc</th><th>Global Macro Mode</th><th>Global Macro Note</th></tr></thead><tbody><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">APH</span></td><td>5.89</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>151</td><td>53.64</td><td>0.15</td><td>0.61</td><td>62.2</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 151 lần; win 53.6%; T+2 0.15%; T+5 0.61%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">AAA</span></td><td>7.45</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>243</td><td>52.68</td><td>0.14</td><td>0.25</td><td>59.9</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 243 lần; win 52.7%; T+2 0.14%; T+5 0.25%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">GVR</span></td><td>35.8</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>243</td><td>52.68</td><td>0.14</td><td>0.25</td><td>59.5</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 243 lần; win 52.7%; T+2 0.14%; T+5 0.25%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">LPB</span></td><td>49.4</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>90.45</td><td>5</td><td>100.0</td><td>7.58</td><td>14.44</td><td>100.0</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 90.5%; test 5 lần; win 100.0%; T+2 7.58%; T+5 14.44%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HNG</span></td><td>7.7</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM</td><td>PASS</td><td></td><td>94.55</td><td>20</td><td>85.0</td><td>2.6</td><td>3.48</td><td>100.0</td><td>100.0</td><td>80.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 94.5%; test 20 lần; win 85.0%; T+2 2.6%; T+5 3.48%; AI 100.0; Score 80.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HBC</span></td><td>5.3</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>151</td><td>53.64</td><td>0.15</td><td>0.61</td><td>61.7</td><td>99.0</td><td>90.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 151 lần; win 53.6%; T+2 0.15%; T+5 0.61%; AI 99.0; Score 90.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VHM</span></td><td>151.0</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>100.0</td><td>5</td><td>100.0</td><td>7.58</td><td>14.44</td><td>100.0</td><td>99.0</td><td>85.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 100.0%; test 5 lần; win 100.0%; T+2 7.58%; T+5 14.44%; AI 99.0; Score 85.0</td><td>BUY NOW</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VIC</span></td><td>219.5</td><td>MUA GIỮ T+5</td><td>V13.3 PATTERN + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>93.18</td><td>16</td><td>75.0</td><td>1.59</td><td>2.58</td><td>82.5</td><td>69.0</td><td>65.0</td><td>Risk PASS; lịch sử DÙNG ĐƯỢC; khớp mẫu 93.2%; test 16 lần; win 75.0%; T+2 1.59%; T+5 2.58%; AI 69.0; Score 65.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HCM</span></td><td>28.45</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM</td><td>PASS</td><td></td><td>98.64</td><td>48</td><td>66.67</td><td>0.1</td><td>-1.91</td><td>62.9</td><td>100.0</td><td>100.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 48 lần; win 66.7%; T+2 0.1%; T+5 -1.91%; AI 100.0; Score 100.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VIX</span></td><td>17.6</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM</td><td>PASS</td><td></td><td>90.45</td><td>30</td><td>73.33</td><td>-0.2</td><td>-2.59</td><td>62.7</td><td>100.0</td><td>100.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.5%; test 30 lần; win 73.3%; T+2 -0.2%; T+5 -2.59%; AI 100.0; Score 100.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">MWG</span></td><td>86.0</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>66.4</td><td>79.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 79.0; Score 70.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">PVT</span></td><td>23.5</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>98.64</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>65.9</td><td>76.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 98.6%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 76.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VHC</span></td><td>61.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>31</td><td>61.29</td><td>-0.51</td><td>-0.44</td><td>64.6</td><td>72.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 31 lần; win 61.3%; T+2 -0.51%; T+5 -0.44%; AI 72.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VCG</span></td><td>23.2</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>97.27</td><td>43</td><td>51.16</td><td>0.44</td><td>0.24</td><td>59.0</td><td>69.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 97.3%; test 43 lần; win 51.2%; T+2 0.44%; T+5 0.24%; AI 69.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SAB</span></td><td>47.8</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>20</td><td>65.0</td><td>-0.4</td><td>-0.48</td><td>66.4</td><td>64.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 20 lần; win 65.0%; T+2 -0.4%; T+5 -0.48%; AI 64.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">MSN</span></td><td>78.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>76</td><td>55.26</td><td>-0.18</td><td>0.27</td><td>61.5</td><td>61.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 76 lần; win 55.3%; T+2 -0.18%; T+5 0.27%; AI 61.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">DIG</span></td><td>14.75</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>97.27</td><td>76</td><td>55.26</td><td>-0.18</td><td>0.27</td><td>60.6</td><td>61.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 97.3%; test 76 lần; win 55.3%; T+2 -0.18%; T+5 0.27%; AI 61.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HHV</span></td><td>12.9</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>69</td><td>56.52</td><td>0.97</td><td>1.66</td><td>69.1</td><td>59.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 69 lần; win 56.5%; T+2 0.97%; T+5 1.66%; AI 59.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SKG</span></td><td>9.68</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>100.0</td><td>27</td><td>55.56</td><td>0.1</td><td>0.63</td><td>63.8</td><td>59.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 100.0%; test 27 lần; win 55.6%; T+2 0.1%; T+5 0.63%; AI 59.0; Score 60.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">DHC</span></td><td>36.0</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>93.18</td><td>82</td><td>57.32</td><td>0.62</td><td>-0.2</td><td>59.4</td><td>56.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 93.2%; test 82 lần; win 57.3%; T+2 0.62%; T+5 -0.2%; AI 56.0; Score 65.0</td><td>WATCHLIST</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">VRE</span></td><td>36.6</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>94.55</td><td>3</td><td>100.0</td><td>1.25</td><td>5.56</td><td>86.9</td><td>100.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 94.5%; test 3 lần; win 100.0%; T+2 1.25%; T+5 5.56%; AI 100.0; Score 70.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BFC</span></td><td>66.9</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WAIT</td><td>MOMENTUM</td><td>PASS</td><td></td><td>95.91</td><td>4</td><td>100.0</td><td>1.83</td><td>6.12</td><td>99.9</td><td>89.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 95.9%; test 4 lần; win 100.0%; T+2 1.83%; T+5 6.12%; AI 89.0; Score 75.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">GMD</span></td><td>78.4</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + RISK PASS</td><td>WAIT</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>95.91</td><td>41</td><td>63.41</td><td>0.61</td><td>2.02</td><td>76.6</td><td>81.0</td><td>65.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 95.9%; test 41 lần; win 63.4%; T+2 0.61%; T+5 2.02%; AI 81.0; Score 65.0</td><td>WAIT</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">PVD</span></td><td>32.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>70.0</td><td>90.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 70.0; Score 90.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">PLX</span></td><td>39.0</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>66.0</td><td>90.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 100.0%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 66.0; Score 90.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">GAS</span></td><td>79.2</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>1</td><td>100.0</td><td>10.44</td><td>10.76</td><td>100.0</td><td>59.0</td><td>75.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 1 lần; win 100.0%; T+2 10.44%; T+5 10.76%; AI 59.0; Score 75.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">KDC</span></td><td>47.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>11</td><td>100.0</td><td>1.0</td><td>4.04</td><td>100.0</td><td>51.0</td><td>75.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 11 lần; win 100.0%; T+2 1.0%; T+5 4.04%; AI 51.0; Score 75.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BVB</span></td><td>12.4</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">EVF</span></td><td>13.25</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">HHS</span></td><td>13.15</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>100.0</td><td>8</td><td>100.0</td><td>2.11</td><td>1.75</td><td>97.8</td><td>46.0</td><td>80.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 100.0%; test 8 lần; win 100.0%; T+2 2.11%; T+5 1.75%; AI 46.0; Score 80.0</td><td>SKIP</td><td>TRUNG TÍNH</td><td></td></tr></tbody></table></div>
 
 <h3>AI TEST SUMMARY</h3>
 <table border="1" class="dataframe">
@@ -4898,34 +5002,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>BUY NOW</td>
-      <td>MOMENTUM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>100.0</td>
-      <td>100.0</td>
-      <td>PASS</td>
-      <td>68.61</td>
-      <td>5.50</td>
-      <td>RSI khá cao | RS20 mạnh | Thanh khoản mạnh | Biến động ổn | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_MID_HIGH|RS20_STRONG|VOL_STRONG|ATR_OK|ABOVE_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>BUY NOW</td>
@@ -4954,8 +5030,8 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>BUY NOW</td>
       <td>MOMENTUM</td>
       <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
@@ -4968,43 +5044,15 @@ body { font-size: 13px; }
       <td></td>
       <td></td>
       <td></td>
-      <td>90.0</td>
+      <td>100.0</td>
       <td>100.0</td>
       <td>PASS</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>RSI trung bình | RS20 ổn | Thanh khoản ổn | Biến động ổn | Giá trên MA20</td>
+      <td>68.61</td>
+      <td>5.50</td>
+      <td>RSI khá cao | RS20 mạnh | Thanh khoản mạnh | Biến động ổn | Giá trên MA20</td>
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
-      <td>RSI_MID|RS20_OK|VOL_OK|ATR_OK|ABOVE_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>BUY NOW</td>
-      <td>MOMENTUM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>100.0</td>
-      <td>PASS</td>
-      <td>71.19</td>
-      <td>1.14</td>
-      <td>RSI khá cao | RS20 ổn | Thanh khoản mạnh | Biến động thấp | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_MID_HIGH|RS20_OK|VOL_STRONG|ATR_LOW|ABOVE_MA20</td>
+      <td>RSI_MID_HIGH|RS20_STRONG|VOL_STRONG|ATR_OK|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -5094,9 +5142,9 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HNG</td>
-      <td>7.70</td>
-      <td>WATCHLIST</td>
+      <td>LPB</td>
+      <td>49.40</td>
+      <td>BUY NOW</td>
       <td>MOMENTUM</td>
       <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
       <td>0</td>
@@ -5108,15 +5156,43 @@ body { font-size: 13px; }
       <td></td>
       <td></td>
       <td></td>
-      <td>80.0</td>
+      <td>90.0</td>
       <td>100.0</td>
       <td>PASS</td>
-      <td>88.89</td>
-      <td>13.93</td>
-      <td>RSI quá nóng | RS20 mạnh | Thanh khoản mạnh | Biến động ổn | Giá xa MA20</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>RSI trung bình | RS20 ổn | Thanh khoản ổn | Biến động ổn | Giá trên MA20</td>
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
-      <td>RSI_OVERHEAT|RS20_STRONG|VOL_STRONG|ATR_OK|FAR_MA20</td>
+      <td>RSI_MID|RS20_OK|VOL_OK|ATR_OK|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>BUY NOW</td>
+      <td>MOMENTUM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>100.0</td>
+      <td>PASS</td>
+      <td>71.19</td>
+      <td>1.14</td>
+      <td>RSI khá cao | RS20 ổn | Thanh khoản mạnh | Biến động thấp | Giá trên MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_MID_HIGH|RS20_OK|VOL_STRONG|ATR_LOW|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -5173,6 +5249,34 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_MID|RS20_SOFT|VOL_OK|ATR_OK|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HNG</td>
+      <td>7.70</td>
+      <td>WATCHLIST</td>
+      <td>MOMENTUM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>80.0</td>
+      <td>100.0</td>
+      <td>PASS</td>
+      <td>88.89</td>
+      <td>13.93</td>
+      <td>RSI quá nóng | RS20 mạnh | Thanh khoản mạnh | Biến động ổn | Giá xa MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_OVERHEAT|RS20_STRONG|VOL_STRONG|ATR_OK|FAR_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -5346,34 +5450,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
-      <td>BUY NOW</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>91.0</td>
-      <td>PASS</td>
-      <td>47.30</td>
-      <td>-8.74</td>
-      <td>RSI yếu | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_WEAK|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SHS</td>
       <td>17.50</td>
       <td>BUY NOW</td>
@@ -5397,6 +5473,34 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_WEAK|RS20_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HPG</td>
+      <td>27.60</td>
+      <td>BUY NOW</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>91.0</td>
+      <td>PASS</td>
+      <td>47.30</td>
+      <td>-8.74</td>
+      <td>RSI yếu | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_WEAK|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -5822,62 +5926,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>IDI</td>
-      <td>6.45</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>70.0</td>
-      <td>FAIL</td>
-      <td>32.31</td>
-      <td>-14.72</td>
-      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>PVD</td>
-      <td>32.50</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>70.0</td>
-      <td>FAIL</td>
-      <td>39.33</td>
-      <td>-15.58</td>
-      <td>RSI yếu | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_WEAK|RS20_BAD|VOL_OK|ATR_OK|ABOVE_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>BVS</td>
       <td>26.90</td>
       <td>SKIP</td>
@@ -5934,6 +5982,62 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>IDI</td>
+      <td>6.45</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>FAIL</td>
+      <td>32.31</td>
+      <td>-14.72</td>
+      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>PVD</td>
+      <td>32.50</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>FAIL</td>
+      <td>39.33</td>
+      <td>-15.58</td>
+      <td>RSI yếu | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá trên MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_WEAK|RS20_BAD|VOL_OK|ATR_OK|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>VIC</td>
       <td>219.50</td>
       <td>WAIT</td>
@@ -5957,34 +6061,6 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_HIGH|RS20_LEADER|VOL_LOW|ATR_OK|FAR_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>PAN</td>
-      <td>32.25</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>69.0</td>
-      <td>PASS</td>
-      <td>56.10</td>
-      <td>-9.76</td>
-      <td>RSI trung bình | RS20 yếu | Thanh khoản mạnh | Biến động thấp | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_MID|RS20_BAD|VOL_STRONG|ATR_LOW|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -6041,6 +6117,90 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_MID|RS20_BAD|VOL_OK|ATR_LOW|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>PAN</td>
+      <td>32.25</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>PASS</td>
+      <td>56.10</td>
+      <td>-9.76</td>
+      <td>RSI trung bình | RS20 yếu | Thanh khoản mạnh | Biến động thấp | Giá trên MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_MID|RS20_BAD|VOL_STRONG|ATR_LOW|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>SCR</td>
+      <td>6.00</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>66.0</td>
+      <td>FAIL</td>
+      <td>32.56</td>
+      <td>-15.84</td>
+      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>DGW</td>
+      <td>43.50</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>66.0</td>
+      <td>FAIL</td>
+      <td>32.50</td>
+      <td>-13.21</td>
+      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -6130,62 +6290,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>SCR</td>
-      <td>6.00</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>66.0</td>
-      <td>FAIL</td>
-      <td>32.56</td>
-      <td>-15.84</td>
-      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>DGW</td>
-      <td>43.50</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>66.0</td>
-      <td>FAIL</td>
-      <td>32.50</td>
-      <td>-13.21</td>
-      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động ổn | Giá dưới MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_OK|BELOW_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SAB</td>
       <td>47.80</td>
       <td>WATCHLIST</td>
@@ -6209,34 +6313,6 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_MID|RS20_SOFT|VOL_OK|ATR_LOW|ABOVE_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>MSN</td>
-      <td>78.40</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>61.0</td>
-      <td>PASS</td>
-      <td>57.78</td>
-      <td>-8.18</td>
-      <td>RSI trung bình | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_MID|RS20_BAD|VOL_OK|ATR_LOW|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -6293,6 +6369,34 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_MID|RS20_BAD|VOL_OK|ATR_OK|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>MSN</td>
+      <td>78.40</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>61.0</td>
+      <td>PASS</td>
+      <td>57.78</td>
+      <td>-8.18</td>
+      <td>RSI trung bình | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá trên MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_MID|RS20_BAD|VOL_OK|ATR_LOW|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -6382,34 +6486,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HHV</td>
-      <td>12.90</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>59.0</td>
-      <td>PASS</td>
-      <td>50.00</td>
-      <td>-3.44</td>
-      <td>RSI trung bình | RS20 hơi yếu | Thanh khoản thấp | Biến động thấp | Giá trên MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_MID|RS20_SOFT|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SKG</td>
       <td>9.68</td>
       <td>WATCHLIST</td>
@@ -6433,6 +6509,34 @@ body { font-size: 13px; }
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
       <td>RSI_MID_HIGH|RS20_BAD|VOL_OK|ATR_LOW|ABOVE_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HHV</td>
+      <td>12.90</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>59.0</td>
+      <td>PASS</td>
+      <td>50.00</td>
+      <td>-3.44</td>
+      <td>RSI trung bình | RS20 hơi yếu | Thanh khoản thấp | Biến động thấp | Giá trên MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_MID|RS20_SOFT|VOL_LOW|ATR_LOW|ABOVE_MA20</td>
       <td></td>
       <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
@@ -6494,6 +6598,34 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>CNG</td>
+      <td>23.25</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>75.0</td>
+      <td>55.0</td>
+      <td>FAIL</td>
+      <td>14.58</td>
+      <td>-12.30</td>
+      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
+      <td>None | None | None | None | None | None | None | None</td>
+      <td></td>
+      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
+      <td></td>
+      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>MBB</td>
       <td>26.05</td>
       <td>SKIP</td>
@@ -6541,34 +6673,6 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>28.57</td>
       <td>-13.80</td>
-      <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
-      <td>None | None | None | None | None | None | None | None</td>
-      <td></td>
-      <td>RSI_LOW|RS20_BAD|VOL_OK|ATR_LOW|BELOW_MA20</td>
-      <td></td>
-      <td>khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>CNG</td>
-      <td>23.25</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>75.0</td>
-      <td>55.0</td>
-      <td>FAIL</td>
-      <td>14.58</td>
-      <td>-12.30</td>
       <td>RSI thấp | RS20 yếu | Thanh khoản ổn | Biến động thấp | Giá dưới MA20</td>
       <td>None | None | None | None | None | None | None | None</td>
       <td></td>
@@ -6631,37 +6735,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>BUY NOW</td>
-      <td>MOMENTUM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>100.0</td>
-      <td>100.0</td>
-      <td>PASS</td>
-      <td>68.61</td>
-      <td>5.50</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -6693,8 +6766,8 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
       <td>69.63</td>
       <td>BUY NOW</td>
@@ -6709,42 +6782,11 @@ body { font-size: 13px; }
       <td></td>
       <td></td>
       <td></td>
-      <td>90.0</td>
+      <td>100.0</td>
       <td>100.0</td>
       <td>PASS</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>BUY NOW</td>
-      <td>MOMENTUM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>100.0</td>
-      <td>PASS</td>
-      <td>71.19</td>
-      <td>1.14</td>
+      <td>68.61</td>
+      <td>5.50</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -6848,11 +6890,11 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HNG</td>
-      <td>7.70</td>
+      <td>LPB</td>
+      <td>49.40</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
       <td>69.63</td>
-      <td>WATCHLIST</td>
+      <td>BUY NOW</td>
       <td>MOMENTUM</td>
       <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
       <td>0</td>
@@ -6864,11 +6906,42 @@ body { font-size: 13px; }
       <td></td>
       <td></td>
       <td></td>
-      <td>80.0</td>
+      <td>90.0</td>
       <td>100.0</td>
       <td>PASS</td>
-      <td>88.89</td>
-      <td>13.93</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>BUY NOW</td>
+      <td>MOMENTUM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>100.0</td>
+      <td>PASS</td>
+      <td>71.19</td>
+      <td>1.14</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -6931,6 +7004,37 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>56.36</td>
       <td>-2.58</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HNG</td>
+      <td>7.70</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>WATCHLIST</td>
+      <td>MOMENTUM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>80.0</td>
+      <td>100.0</td>
+      <td>PASS</td>
+      <td>88.89</td>
+      <td>13.93</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -7127,37 +7231,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>BUY NOW</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>91.0</td>
-      <td>PASS</td>
-      <td>47.30</td>
-      <td>-8.74</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SHS</td>
       <td>17.50</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -7179,6 +7252,37 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>44.12</td>
       <td>-8.75</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HPG</td>
+      <td>27.60</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>BUY NOW</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>91.0</td>
+      <td>PASS</td>
+      <td>47.30</td>
+      <td>-8.74</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -7654,68 +7758,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>IDI</td>
-      <td>6.45</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>70.0</td>
-      <td>FAIL</td>
-      <td>32.31</td>
-      <td>-14.72</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>PVD</td>
-      <td>32.50</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>70.0</td>
-      <td>FAIL</td>
-      <td>39.33</td>
-      <td>-15.58</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>BVS</td>
       <td>26.90</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -7778,6 +7820,68 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>IDI</td>
+      <td>6.45</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>FAIL</td>
+      <td>32.31</td>
+      <td>-14.72</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>PVD</td>
+      <td>32.50</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>70.0</td>
+      <td>FAIL</td>
+      <td>39.33</td>
+      <td>-15.58</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>VIC</td>
       <td>219.50</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -7799,37 +7903,6 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>81.62</td>
       <td>43.37</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>PAN</td>
-      <td>32.25</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>69.0</td>
-      <td>PASS</td>
-      <td>56.10</td>
-      <td>-9.76</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -7898,6 +7971,99 @@ body { font-size: 13px; }
       <td>nan</td>
       <td></td>
       <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>PAN</td>
+      <td>32.25</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>69.0</td>
+      <td>PASS</td>
+      <td>56.10</td>
+      <td>-9.76</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>SCR</td>
+      <td>6.00</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>66.0</td>
+      <td>FAIL</td>
+      <td>32.56</td>
+      <td>-15.84</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>DGW</td>
+      <td>43.50</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>90.0</td>
+      <td>66.0</td>
+      <td>FAIL</td>
+      <td>32.50</td>
+      <td>-13.21</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>BỎ QUA - RISK FAIL</td>
       <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
     </tr>
     <tr>
@@ -7995,68 +8161,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>SCR</td>
-      <td>6.00</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>66.0</td>
-      <td>FAIL</td>
-      <td>32.56</td>
-      <td>-15.84</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>DGW</td>
-      <td>43.50</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>90.0</td>
-      <td>66.0</td>
-      <td>FAIL</td>
-      <td>32.50</td>
-      <td>-13.21</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SAB</td>
       <td>47.80</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -8078,37 +8182,6 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>61.24</td>
       <td>-3.91</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>MSN</td>
-      <td>78.40</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>61.0</td>
-      <td>PASS</td>
-      <td>57.78</td>
-      <td>-8.18</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -8171,6 +8244,37 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>51.85</td>
       <td>-8.06</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>MSN</td>
+      <td>78.40</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>61.0</td>
+      <td>PASS</td>
+      <td>57.78</td>
+      <td>-8.18</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -8274,37 +8378,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HHV</td>
-      <td>12.90</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>WATCHLIST</td>
-      <td>BOTTOM_WATCH</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>60.0</td>
-      <td>59.0</td>
-      <td>PASS</td>
-      <td>50.00</td>
-      <td>-3.44</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>KHÔNG ƯU TIÊN</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SKG</td>
       <td>9.68</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -8326,6 +8399,37 @@ body { font-size: 13px; }
       <td>PASS</td>
       <td>71.79</td>
       <td>-6.51</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>KHÔNG ƯU TIÊN</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HHV</td>
+      <td>12.90</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>WATCHLIST</td>
+      <td>BOTTOM_WATCH</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>60.0</td>
+      <td>59.0</td>
+      <td>PASS</td>
+      <td>50.00</td>
+      <td>-3.44</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -8398,6 +8502,37 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
+      <td>CNG</td>
+      <td>23.25</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ</td>
+      <td>69.63</td>
+      <td>SKIP</td>
+      <td>BOTTOM</td>
+      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>75.0</td>
+      <td>55.0</td>
+      <td>FAIL</td>
+      <td>14.58</td>
+      <td>-12.30</td>
+      <td>NAN</td>
+      <td></td>
+      <td></td>
+      <td>nan</td>
+      <td></td>
+      <td>BỎ QUA - RISK FAIL</td>
+      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
       <td>MBB</td>
       <td>26.05</td>
       <td>GIẢM ẢO / TRỤ ĐÈ</td>
@@ -8450,37 +8585,6 @@ body { font-size: 13px; }
       <td>FAIL</td>
       <td>28.57</td>
       <td>-13.80</td>
-      <td>NAN</td>
-      <td></td>
-      <td></td>
-      <td>nan</td>
-      <td></td>
-      <td>BỎ QUA - RISK FAIL</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ; khớp 0%; lịch sử CHƯA CÓ MẪU GẦN GIỐNG; test 0; win %; T+5 %</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>CNG</td>
-      <td>23.25</td>
-      <td>GIẢM ẢO / TRỤ ĐÈ</td>
-      <td>69.63</td>
-      <td>SKIP</td>
-      <td>BOTTOM</td>
-      <td>CHƯA CÓ MẪU GẦN GIỐNG</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>75.0</td>
-      <td>55.0</td>
-      <td>FAIL</td>
-      <td>14.58</td>
-      <td>-12.30</td>
       <td>NAN</td>
       <td></td>
       <td></td>
@@ -9760,28 +9864,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
-      <td>28.09-28.81</td>
-      <td>27.53</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.61</td>
-      <td>5.50</td>
-      <td>1.69</td>
-      <td>3.60</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -9804,46 +9886,24 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
-      <td>48.85-49.95</td>
-      <td>47.92</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
+      <td>28.09-28.81</td>
+      <td>27.53</td>
       <td>MOMENTUM</td>
-      <td>90</td>
+      <td>100</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>0.90</td>
-      <td>3.17</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>14.22-14.48</td>
-      <td>13.92</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>71.19</td>
-      <td>1.14</td>
-      <td>3.01</td>
-      <td>2.51</td>
+      <td>68.61</td>
+      <td>5.50</td>
+      <td>1.69</td>
+      <td>3.60</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -9914,24 +9974,46 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HNG</td>
-      <td>7.70</td>
-      <td>THEO DOI / WATCH</td>
+      <td>LPB</td>
+      <td>49.40</td>
+      <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
-      <td>7.58-7.82</td>
-      <td>7.38</td>
+      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
+      <td>48.85-49.95</td>
+      <td>47.92</td>
       <td>MOMENTUM</td>
-      <td>80</td>
+      <td>90</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>88.89</td>
-      <td>13.93</td>
-      <td>3.13</td>
-      <td>4.55</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>0.90</td>
+      <td>3.17</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
+      <td>14.22-14.48</td>
+      <td>13.92</td>
+      <td>MOMENTUM</td>
+      <td>90</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>71.19</td>
+      <td>1.14</td>
+      <td>3.01</td>
+      <td>2.51</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -9976,6 +10058,28 @@ body { font-size: 13px; }
       <td>-2.58</td>
       <td>1.13</td>
       <td>3.10</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HNG</td>
+      <td>7.70</td>
+      <td>THEO DOI / WATCH</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
+      <td>7.58-7.82</td>
+      <td>7.38</td>
+      <td>MOMENTUM</td>
+      <td>80</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>88.89</td>
+      <td>13.93</td>
+      <td>3.13</td>
+      <td>4.55</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10112,28 +10216,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
-      <td>27.38-27.82</td>
-      <td>26.77</td>
-      <td>BOTTOM</td>
-      <td>90</td>
-      <td>91.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>47.30</td>
-      <td>-8.74</td>
-      <td>0.80</td>
-      <td>2.06</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SHS</td>
       <td>17.50</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -10152,6 +10234,28 @@ body { font-size: 13px; }
       <td>-8.75</td>
       <td>1.09</td>
       <td>3.55</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HPG</td>
+      <td>27.60</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
+      <td>27.38-27.82</td>
+      <td>26.77</td>
+      <td>BOTTOM</td>
+      <td>90</td>
+      <td>91.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>47.30</td>
+      <td>-8.74</td>
+      <td>0.80</td>
+      <td>2.06</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10230,28 +10334,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
-      <td>28.09-28.81</td>
-      <td>27.53</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.61</td>
-      <td>5.50</td>
-      <td>1.69</td>
-      <td>3.60</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -10274,46 +10356,24 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
-      <td>48.85-49.95</td>
-      <td>47.92</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
+      <td>28.09-28.81</td>
+      <td>27.53</td>
       <td>MOMENTUM</td>
-      <td>90</td>
+      <td>100</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>0.90</td>
-      <td>3.17</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>14.22-14.48</td>
-      <td>13.92</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>71.19</td>
-      <td>1.14</td>
-      <td>3.01</td>
-      <td>2.51</td>
+      <td>68.61</td>
+      <td>5.50</td>
+      <td>1.69</td>
+      <td>3.60</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10384,24 +10444,46 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HNG</td>
-      <td>7.70</td>
-      <td>THEO DOI / WATCH</td>
+      <td>LPB</td>
+      <td>49.40</td>
+      <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
-      <td>7.58-7.82</td>
-      <td>7.38</td>
+      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
+      <td>48.85-49.95</td>
+      <td>47.92</td>
       <td>MOMENTUM</td>
-      <td>80</td>
+      <td>90</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>88.89</td>
-      <td>13.93</td>
-      <td>3.13</td>
-      <td>4.55</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>0.90</td>
+      <td>3.17</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
+      <td>14.22-14.48</td>
+      <td>13.92</td>
+      <td>MOMENTUM</td>
+      <td>90</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>71.19</td>
+      <td>1.14</td>
+      <td>3.01</td>
+      <td>2.51</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10446,6 +10528,28 @@ body { font-size: 13px; }
       <td>-2.58</td>
       <td>1.13</td>
       <td>3.10</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HNG</td>
+      <td>7.70</td>
+      <td>THEO DOI / WATCH</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
+      <td>7.58-7.82</td>
+      <td>7.38</td>
+      <td>MOMENTUM</td>
+      <td>80</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>88.89</td>
+      <td>13.93</td>
+      <td>3.13</td>
+      <td>4.55</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10582,28 +10686,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
-      <td>27.38-27.82</td>
-      <td>26.77</td>
-      <td>BOTTOM</td>
-      <td>90</td>
-      <td>91.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>47.30</td>
-      <td>-8.74</td>
-      <td>0.80</td>
-      <td>2.06</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SHS</td>
       <td>17.50</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -10622,6 +10704,28 @@ body { font-size: 13px; }
       <td>-8.75</td>
       <td>1.09</td>
       <td>3.55</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HPG</td>
+      <td>27.60</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
+      <td>27.38-27.82</td>
+      <td>26.77</td>
+      <td>BOTTOM</td>
+      <td>90</td>
+      <td>91.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>47.30</td>
+      <td>-8.74</td>
+      <td>0.80</td>
+      <td>2.06</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10700,28 +10804,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
-      <td>28.09-28.81</td>
-      <td>27.53</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.61</td>
-      <td>5.50</td>
-      <td>1.69</td>
-      <td>3.60</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -10744,46 +10826,24 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
-      <td>48.85-49.95</td>
-      <td>47.92</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
+      <td>28.09-28.81</td>
+      <td>27.53</td>
       <td>MOMENTUM</td>
-      <td>90</td>
+      <td>100</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>0.90</td>
-      <td>3.17</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>14.22-14.48</td>
-      <td>13.92</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>71.19</td>
-      <td>1.14</td>
-      <td>3.01</td>
-      <td>2.51</td>
+      <td>68.61</td>
+      <td>5.50</td>
+      <td>1.69</td>
+      <td>3.60</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10854,24 +10914,46 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HNG</td>
-      <td>7.70</td>
-      <td>THEO DOI / WATCH</td>
+      <td>LPB</td>
+      <td>49.40</td>
+      <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
-      <td>7.58-7.82</td>
-      <td>7.38</td>
+      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
+      <td>48.85-49.95</td>
+      <td>47.92</td>
       <td>MOMENTUM</td>
-      <td>80</td>
+      <td>90</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>88.89</td>
-      <td>13.93</td>
-      <td>3.13</td>
-      <td>4.55</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>0.90</td>
+      <td>3.17</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
+      <td>14.22-14.48</td>
+      <td>13.92</td>
+      <td>MOMENTUM</td>
+      <td>90</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>71.19</td>
+      <td>1.14</td>
+      <td>3.01</td>
+      <td>2.51</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -10916,6 +10998,28 @@ body { font-size: 13px; }
       <td>-2.58</td>
       <td>1.13</td>
       <td>3.10</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HNG</td>
+      <td>7.70</td>
+      <td>THEO DOI / WATCH</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score kha; AI kha; RS20 tot; Volume tot; RSI nong</td>
+      <td>7.58-7.82</td>
+      <td>7.38</td>
+      <td>MOMENTUM</td>
+      <td>80</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>88.89</td>
+      <td>13.93</td>
+      <td>3.13</td>
+      <td>4.55</td>
       <td>PASS</td>
     </tr>
   </tbody>
@@ -11202,20 +11306,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>NBB</td>
-      <td>SKIP</td>
-      <td>WATCH</td>
-      <td>50</td>
-      <td>16.0</td>
-      <td>FAIL</td>
-      <td>29.17</td>
-      <td>-13.42</td>
-      <td>1.02</td>
-      <td>2.31</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>CRE</td>
       <td>SKIP</td>
       <td>WATCH</td>
@@ -11226,6 +11316,20 @@ body { font-size: 13px; }
       <td>-10.99</td>
       <td>0.59</td>
       <td>2.84</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>NBB</td>
+      <td>SKIP</td>
+      <td>WATCH</td>
+      <td>50</td>
+      <td>16.0</td>
+      <td>FAIL</td>
+      <td>29.17</td>
+      <td>-13.42</td>
+      <td>1.02</td>
+      <td>2.31</td>
       <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
     </tr>
     <tr>
@@ -11384,76 +11488,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HDG</td>
-      <td>SKIP</td>
-      <td>BOTTOM_WATCH</td>
-      <td>65</td>
-      <td>31.0</td>
-      <td>FAIL</td>
-      <td>23.23</td>
-      <td>-24.03</td>
-      <td>0.73</td>
-      <td>2.87</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>IDC</td>
-      <td>SKIP</td>
-      <td>BOTTOM_WATCH</td>
-      <td>65</td>
-      <td>31.0</td>
-      <td>FAIL</td>
-      <td>27.14</td>
-      <td>-16.15</td>
-      <td>0.52</td>
-      <td>3.21</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>IVS</td>
-      <td>SKIP</td>
-      <td>BOTTOM_WATCH</td>
-      <td>65</td>
-      <td>31.0</td>
-      <td>FAIL</td>
-      <td>54.55</td>
-      <td>-16.65</td>
-      <td>0.74</td>
-      <td>2.49</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>LAS</td>
-      <td>SKIP</td>
-      <td>BOTTOM_WATCH</td>
-      <td>65</td>
-      <td>31.0</td>
-      <td>FAIL</td>
-      <td>20.00</td>
-      <td>-18.25</td>
-      <td>0.49</td>
-      <td>3.30</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>REE</td>
-      <td>SKIP</td>
-      <td>BOTTOM_WATCH</td>
-      <td>65</td>
-      <td>31.0</td>
-      <td>FAIL</td>
-      <td>26.85</td>
-      <td>-16.80</td>
-      <td>0.42</td>
-      <td>2.42</td>
-      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SCS</td>
       <td>SKIP</td>
       <td>BOTTOM_WATCH</td>
@@ -11562,6 +11596,76 @@ body { font-size: 13px; }
       <td>-20.11</td>
       <td>0.49</td>
       <td>3.38</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HDG</td>
+      <td>SKIP</td>
+      <td>BOTTOM_WATCH</td>
+      <td>65</td>
+      <td>31.0</td>
+      <td>FAIL</td>
+      <td>23.23</td>
+      <td>-24.03</td>
+      <td>0.73</td>
+      <td>2.87</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>IDC</td>
+      <td>SKIP</td>
+      <td>BOTTOM_WATCH</td>
+      <td>65</td>
+      <td>31.0</td>
+      <td>FAIL</td>
+      <td>27.14</td>
+      <td>-16.15</td>
+      <td>0.52</td>
+      <td>3.21</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>IVS</td>
+      <td>SKIP</td>
+      <td>BOTTOM_WATCH</td>
+      <td>65</td>
+      <td>31.0</td>
+      <td>FAIL</td>
+      <td>54.55</td>
+      <td>-16.65</td>
+      <td>0.74</td>
+      <td>2.49</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>LAS</td>
+      <td>SKIP</td>
+      <td>BOTTOM_WATCH</td>
+      <td>65</td>
+      <td>31.0</td>
+      <td>FAIL</td>
+      <td>20.00</td>
+      <td>-18.25</td>
+      <td>0.49</td>
+      <td>3.30</td>
+      <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>REE</td>
+      <td>SKIP</td>
+      <td>BOTTOM_WATCH</td>
+      <td>65</td>
+      <td>31.0</td>
+      <td>FAIL</td>
+      <td>26.85</td>
+      <td>-16.80</td>
+      <td>0.42</td>
+      <td>2.42</td>
       <td>Risk FAIL; Action BO QUA/SKIP; Score thap; AI thap</td>
     </tr>
     <tr>
@@ -11892,28 +11996,6 @@ body { font-size: 13px; }
   <tbody>
     <tr>
       <td>2026-05-06</td>
-      <td>HCM</td>
-      <td>28.45</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
-      <td>28.09-28.81</td>
-      <td>27.53</td>
-      <td>MOMENTUM</td>
-      <td>100</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>68.61</td>
-      <td>5.5</td>
-      <td>1.69</td>
-      <td>3.6</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>VIX</td>
       <td>17.60</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -11936,46 +12018,24 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>LPB</td>
-      <td>49.40</td>
+      <td>HCM</td>
+      <td>28.45</td>
       <td>MUA THAM DO / PROBE BUY</td>
       <td>LOW - chua du OOS</td>
       <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
-      <td>48.85-49.95</td>
-      <td>47.92</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; RSI on</td>
+      <td>28.09-28.81</td>
+      <td>27.53</td>
       <td>MOMENTUM</td>
-      <td>90</td>
+      <td>100</td>
       <td>100.0</td>
       <td>A+</td>
       <td>55.0</td>
       <td>TANG MANH / UPTREND</td>
-      <td>58.10</td>
-      <td>2.32</td>
-      <td>0.9</td>
-      <td>3.17</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
-      <td>POW</td>
-      <td>14.35</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
-      <td>14.22-14.48</td>
-      <td>13.92</td>
-      <td>MOMENTUM</td>
-      <td>90</td>
-      <td>100.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>71.19</td>
-      <td>1.14</td>
-      <td>3.01</td>
-      <td>2.51</td>
+      <td>68.61</td>
+      <td>5.5</td>
+      <td>1.69</td>
+      <td>3.6</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -12042,6 +12102,50 @@ body { font-size: 13px; }
       <td>-0.6</td>
       <td>1.25</td>
       <td>3.46</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>LPB</td>
+      <td>49.40</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 tot; RSI on; Momentum</td>
+      <td>48.85-49.95</td>
+      <td>47.92</td>
+      <td>MOMENTUM</td>
+      <td>90</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>58.10</td>
+      <td>2.32</td>
+      <td>0.9</td>
+      <td>3.17</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>POW</td>
+      <td>14.35</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 tot; Volume tot; Momentum</td>
+      <td>14.22-14.48</td>
+      <td>13.92</td>
+      <td>MOMENTUM</td>
+      <td>90</td>
+      <td>100.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>71.19</td>
+      <td>1.14</td>
+      <td>3.01</td>
+      <td>2.51</td>
       <td>PASS</td>
     </tr>
     <tr>
@@ -12178,28 +12282,6 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>2026-05-06</td>
-      <td>HPG</td>
-      <td>27.60</td>
-      <td>MUA THAM DO / PROBE BUY</td>
-      <td>LOW - chua du OOS</td>
-      <td>OOS chua du</td>
-      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
-      <td>27.38-27.82</td>
-      <td>26.77</td>
-      <td>BOTTOM</td>
-      <td>90</td>
-      <td>91.0</td>
-      <td>A+</td>
-      <td>55.0</td>
-      <td>TANG MANH / UPTREND</td>
-      <td>47.30</td>
-      <td>-8.74</td>
-      <td>0.8</td>
-      <td>2.06</td>
-      <td>PASS</td>
-    </tr>
-    <tr>
-      <td>2026-05-06</td>
       <td>SHS</td>
       <td>17.50</td>
       <td>MUA THAM DO / PROBE BUY</td>
@@ -12218,6 +12300,28 @@ body { font-size: 13px; }
       <td>-8.75</td>
       <td>1.09</td>
       <td>3.55</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>2026-05-06</td>
+      <td>HPG</td>
+      <td>27.60</td>
+      <td>MUA THAM DO / PROBE BUY</td>
+      <td>LOW - chua du OOS</td>
+      <td>OOS chua du</td>
+      <td>Score cao; AI manh; RS20 yeu; RSI on; Bottom</td>
+      <td>27.38-27.82</td>
+      <td>26.77</td>
+      <td>BOTTOM</td>
+      <td>90</td>
+      <td>91.0</td>
+      <td>A+</td>
+      <td>55.0</td>
+      <td>TANG MANH / UPTREND</td>
+      <td>47.30</td>
+      <td>-8.74</td>
+      <td>0.8</td>
+      <td>2.06</td>
       <td>PASS</td>
     </tr>
     <tr>
