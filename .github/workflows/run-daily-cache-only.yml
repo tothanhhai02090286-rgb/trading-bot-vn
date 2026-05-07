@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -U pip
-          pip install vnstock pandas numpy python-dotenv
+          pip install vnstock pandas numpy python-dotenv yfinance
 
       - name: Run bot (cache only)
         env:
