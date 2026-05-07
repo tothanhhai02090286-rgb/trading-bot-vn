@@ -380,7 +380,14 @@ def run_global_macro_layer(
 
     for name, ticker in tickers.items():
         try:
-            data = yf.download(ticker, start=start, end=end, progress=False, auto_adjust=True)
+            data = yf.download(
+                ticker,
+                period="6mo",
+                interval="1d",
+                progress=False,
+                auto_adjust=False,
+                threads=False
+            )
             if data is None or data.empty or "Close" not in data.columns:
                 continue
 
