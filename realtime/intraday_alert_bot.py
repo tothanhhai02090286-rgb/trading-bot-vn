@@ -274,7 +274,9 @@ def check_once(sent: Set[str]) -> Set[str]:
 
 
 def main():
+    print("INTRADAY BOT MAIN STARTED", flush=True)
     send_telegram("✅ <b>Intraday Alert Bot started</b>\nRender worker đang chạy và sẽ đọc intraday_watchlist.csv.")
+    print("TELEGRAM START MESSAGE SENT", flush=True)
     sent = load_state()
     while True:
         try:
