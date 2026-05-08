@@ -437,6 +437,7 @@ def main():
     sent = load_state()
 
     while True:
+        print(f"SCANNER ALIVE {datetime.now()}")
         try:
             if in_market_time():
                 print("Inside market time - scanning", flush=True)
