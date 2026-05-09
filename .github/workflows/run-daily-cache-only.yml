@@ -31,6 +31,7 @@ jobs:
         run: |
           python run_daily_system.py
           python system_health_check.py
+          python v14_ai_pattern_quality_layer_vi.py
 
       - name: Commit outputs
         run: |
