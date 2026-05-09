@@ -10,11 +10,11 @@
 2026-05-08,PNJ,MUA MOI,BOTTOM | Score 90,BOTTOM,BOTTOM,90,91.0,A+,MUA Æ¯U TIÃN,55.0,0.0,,0.0,NO_WF_DATA,,0.0,UPTREND,MUA THÄM DÃ,ChÆ°a Äá»§ lá»ch sá»­,Pattern chÆ°a cÃ³ walk-forward | chÆ°a Äá»§ OOS nÃªn giáº£m 1 báº­c,No regime stats,Thá» trÆ°á»ng chung thuáº­n lá»£i; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng,RS20 yáº¿u,42.9,70.1,-8.99,0.82,11.15,3.48,PASS,,,,
 2026-05-08,HHV,MUA MOI,BOTTOM | Score 80,BOTTOM,BOTTOM,80,75.0,B+,MUA THÄM DÃ,55.0,0.0,,0.0,NO_WF_DATA,,0.0,UPTREND,MUA THÄM DÃ,ChÆ°a Äá»§ lá»ch sá»­,Pattern chÆ°a cÃ³ walk-forward,No regime stats,Thá» trÆ°á»ng chung thuáº­n lá»£i; Volume á»n; Biáº¿n Äá»ng tháº¥p,RS20 yáº¿u; MACD chÆ°a xÃ¡c nháº­n,38.3,12.35,-9.52,1.47,28.79,3.01,PASS,,,,
 2026-05-08,DIG,MUA MOI,BOTTOM | Score 75,BOTTOM,BOTTOM,75,74.0,B+,CHá» XÃC NHáº¬N,55.0,0.0,,0.0,NO_WF_DATA,,0.0,UPTREND,CHá» XÃC NHáº¬N,ChÆ°a Äá»§ lá»ch sá»­,Pattern chÆ°a cÃ³ walk-forward,No regime stats,Thá» trÆ°á»ng chung thuáº­n lá»£i; Biáº¿n Äá»ng tháº¥p,RS20 chÆ°a khá»e; MACD chÆ°a xÃ¡c nháº­n,46.43,14.45,-7.93,0.83,10.77,3.19,PASS,,,,
-2026-05-09,GVR,GIU / CANH CHOT,Theo doi danh muc hien co,MOMENTUM,MOMENTUM,75,,,,,,,,,,,,,,,,,,65.0,35.7,,,,,PASS,PROFIT,7.85498489425982,1560.0,
-2026-05-09,VRE,CHOT LOI MOT PHAN,Theo doi danh muc hien co,MOMENTUM WATCH,MOMENTUM_WATCH,65,,,,,,,,,,,,,,,,,,76.19,35.9,,,,,PASS,PROFIT,19.11081619110815,3456.0,
-2026-05-09,EVF,GIAM / BAN,Theo doi danh muc hien co,BOTTOM,BOTTOM,80,,,,,,,,,,,,,,,,,,35.56,13.35,,,,,FAIL,â RISK FAIL,2.9298380878951313,152.0,VOLUME WEAK; RS20 WEAK
-2026-05-09,PAN,GIAM / BAN,Theo doi danh muc hien co,MOMENTUM WATCH,MOMENTUM_WATCH,60,,,,,,,,,,,,,,,,,,66.67,32.75,,,,,FAIL,â RISK FAIL,0.7692307692307665,100.0,VOLUME WEAK
-2026-05-09,KBC,GIU,Theo doi danh muc hien co,BOTTOM WATCH,BOTTOM_WATCH,55,,,,,,,,,,,,,,,,,,52.68,33.6,,,,,PASS,WARNING,-2.183406113537123,-225.0,
-2026-05-09,NT2,GIAM / BAN,Theo doi danh muc hien co,BOTTOM WATCH,BOTTOM_WATCH,55,,,,,,,,,,,,,,,,,,20.75,23.0,,,,,FAIL,â RISK FAIL,-5.115511551155105,-371.9999999999991,RS20 WEAK
-2026-05-09,VCI,GIAM / BAN,Theo doi danh muc hien co,BOTTOM,BOTTOM,80,,,,,,,,,,,,,,,,,,32.67,25.95,,,,,FAIL,â RISK FAIL,-4.031065088757391,-327.0,RS20 WEAK
-2026-05-09,BFC,GIU,Theo doi danh muc hien co,MOMENTUM,MOMENTUM,75,,,,,,,,,,,,,,,,,,60.12,65.2,,,,,PASS,PROFIT,0.7727975270479082,100.0,
+2026-05-10,GVR,GIU / CANH CHOT,Theo doi danh muc hien co,MOMENTUM,MOMENTUM,75,,,,,,,,,,,,,,,,,,65.0,35.7,,,,,PASS,PROFIT,7.85498489425982,1560.0,
+2026-05-10,VRE,CHOT LOI MOT PHAN,Theo doi danh muc hien co,MOMENTUM WATCH,MOMENTUM_WATCH,65,,,,,,,,,,,,,,,,,,76.19,35.9,,,,,PASS,PROFIT,19.11081619110815,3456.0,
+2026-05-10,EVF,GIAM / BAN,Theo doi danh muc hien co,BOTTOM,BOTTOM,80,,,,,,,,,,,,,,,,,,35.56,13.35,,,,,FAIL,â RISK FAIL,2.9298380878951313,152.0,VOLUME WEAK; RS20 WEAK
+2026-05-10,PAN,GIAM / BAN,Theo doi danh muc hien co,MOMENTUM WATCH,MOMENTUM_WATCH,60,,,,,,,,,,,,,,,,,,66.67,32.75,,,,,FAIL,â RISK FAIL,0.7692307692307665,100.0,VOLUME WEAK
+2026-05-10,KBC,GIU,Theo doi danh muc hien co,BOTTOM WATCH,BOTTOM_WATCH,55,,,,,,,,,,,,,,,,,,52.68,33.6,,,,,PASS,WARNING,-2.183406113537123,-225.0,
+2026-05-10,NT2,GIAM / BAN,Theo doi danh muc hien co,BOTTOM WATCH,BOTTOM_WATCH,55,,,,,,,,,,,,,,,,,,20.75,23.0,,,,,FAIL,â RISK FAIL,-5.115511551155105,-371.9999999999991,RS20 WEAK
+2026-05-10,VCI,GIAM / BAN,Theo doi danh muc hien co,BOTTOM,BOTTOM,80,,,,,,,,,,,,,,,,,,32.67,25.95,,,,,FAIL,â RISK FAIL,-4.031065088757391,-327.0,RS20 WEAK
+2026-05-10,BFC,GIU,Theo doi danh muc hien co,MOMENTUM,MOMENTUM,75,,,,,,,,,,,,,,,,,,60.12,65.2,,,,,PASS,PROFIT,0.7727975270479082,100.0,
