@@ -1,7 +1,13 @@
 from v10_config import *
 from v10_utils import *
 from v10_strategy import *
-
+def make_pattern_key(row, market_regime="NORMAL"):
+    try:
+        strategy = str(row.get("Chien luoc", "UNKNOWN"))
+        signal = str(row.get("Signal", "UNKNOWN"))
+        return f"{strategy}_{signal}_{market_regime}"
+    except Exception:
+        return "UNKNOWN_PATTERN"
 def append_signal_history(combined, market_ret20):
     """
     LÆ°u lá»ch sá»­ tÃ­n hiá»u má»i láº§n cháº¡y.
