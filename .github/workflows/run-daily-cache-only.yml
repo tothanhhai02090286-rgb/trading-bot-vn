@@ -30,6 +30,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python run_daily_system.py
+          python system_health_check.py
 
       - name: Commit outputs
         run: |
