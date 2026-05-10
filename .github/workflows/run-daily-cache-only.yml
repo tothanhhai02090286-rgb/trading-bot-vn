@@ -39,6 +39,7 @@ jobs:
           python v152_momentum_walkforward_vi.py
           python v16_final_decision_engine_vi.py
           python v17_regime_breadth_final_engine_vi.py
+          python v17_export_intraday_watchlist_vi.py
 
       - name: Commit outputs
         run: |
