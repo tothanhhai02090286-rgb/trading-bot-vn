@@ -32,6 +32,7 @@ jobs:
           python run_daily_system.py
           python system_health_check.py
           python v141_ai_pattern_quality_strict_vi.py
+          python v142_ma20_heat_backtest_vi.py
 
       - name: Commit outputs
         run: |
