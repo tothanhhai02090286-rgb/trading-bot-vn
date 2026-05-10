@@ -37,6 +37,7 @@ jobs:
           python v151_bottom_quality_engine_modular_vi.py
           python v152_bottom_walkforward_vi.py
           python v152_momentum_walkforward_vi.py
+          python v16_final_decision_engine_vi.py
 
       - name: Commit outputs
         run: |
