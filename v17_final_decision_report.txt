@@ -1,0 +1,33 @@
+✅ <b>V17 REGIME + BREADTH FINAL HOÀN TẤT</b>
+
+Nguồn nền: <b>ai_risk_filtered.csv</b>
+Số mã tổng hợp: <b>30</b>
+Market: <b>THỊ TRƯỜNG YẾU</b> | Score: <b>33.95</b>
+Above MA20: <b>36.96%</b> | MA5>MA20: <b>36.23%</b>
+
+<b>TOP QUYẾT ĐỊNH V17</b>
+
+🔹 <b>PNJ</b> | 🟡 THEO DÕI | Điểm 76.09
+Strategy: BOTTOM | Risk: PASS | Action: BUY NOW
+WF: Mom  | Bottom ỔN ĐỊNH VỪA
+Lý do: risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA | Market THỊ TRƯỜNG YẾU
+
+🔹 <b>QNS</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 65.19
+Strategy: MOMENTUM | Risk: PASS | Action: BUY NOW
+WF: Mom ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
+Lý do: risk pass | buy now | đáy chất lượng | Market yếu giảm momentum | WF momentum ỔN ĐỊNH MẠNH | WF bottom ỔN ĐỊNH VỪA | Market THỊ TRƯỜNG YẾU
+
+🔹 <b>VCB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 60.69
+Strategy: BOTTOM | Risk: PASS | Action: WATCHLIST
+WF: Mom  | Bottom TRUNG TÍNH
+Lý do: risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom trung tính | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU
+
+🔹 <b>POW</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.94
+Strategy: MOMENTUM | Risk: PASS | Action: BUY NOW
+WF: Mom ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
+Lý do: risk pass | buy now | đáy chất lượng | Market yếu giảm momentum | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Market THỊ TRƯỜNG YẾU
+
+🔹 <b>HCM</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.49
+Strategy: MOMENTUM | Risk: PASS | Action: WAIT
+WF: Mom ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
+Lý do: risk pass | watch/wait | heat khỏe | đáy chất lượng | Action WATCH/WAIT | Market yếu giảm momentum | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Market THỊ TRƯỜNG YẾU
