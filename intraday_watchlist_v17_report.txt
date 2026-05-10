@@ -1,0 +1,12 @@
+✅ <b>V17 EXPORT WATCHLIST CHO RENDER HOÀN TẤT</b>
+
+Nguồn: <b>v17_final_decision.csv</b>
+Output: <b>intraday_watchlist_v17.csv</b>
+Số mã theo dõi: <b>5</b>
+
+<b>TOP WATCHLIST RENDER</b>
+🔹 <b>PNJ</b> | 🟡 THEO DÕI | Điểm 76.09 | WATCH
+🔹 <b>QNS</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 65.19 | WAIT
+🔹 <b>VCB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 60.69 | WAIT
+🔹 <b>POW</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.94 | WAIT
+🔹 <b>HCM</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.49 | WAIT
