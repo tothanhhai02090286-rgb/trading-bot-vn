@@ -50,7 +50,10 @@ except Exception:
 
 
 WATCHLIST_PATH = os.getenv("INTRADAY_WATCHLIST_PATH", "../intraday_watchlist.csv")
-RAW_URL = os.getenv("GITHUB_RAW_WATCHLIST_URL", "").strip()
+RAW_URL = (
+    os.getenv("GITHUB_RAW_WATCHLIST_URL", "").strip()
+    or os.getenv("RAW_URL", "").strip()
+)
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 
 CHECK_INTERVAL_SEC = int(os.getenv("CHECK_INTERVAL_SEC", "120"))
@@ -428,10 +431,20 @@ def main():
     print(f"CHECK_INTERVAL_SEC={CHECK_INTERVAL_SEC}", flush=True)
     print(f"MARKET_START={MARKET_START} MARKET_END={MARKET_END}", flush=True)
 
-    ok = send_telegram(
-        "✅ <b>Intraday Raw URL Scanner started</b>\n"
-        "Render sẽ tải lại intraday_watchlist.csv từ GitHub mỗi vòng quét nếu có RAW_URL."
-    )
+    startup_df = load_watchlist()
+
+if not startup_df.empty and "Mã" in startup_df.columns:
+    startup_symbols = startup_df["Mã"].astype(str).str.upper().str.strip().tolist()
+else:
+    startup_symbols = []
+
+ok = send_telegram(
+    "✅ <b>V17 Intraday Scanner STARTED</b>\n"
+    f"RAW_URL: <code>{RAW_URL[:80]}...</code>\n"
+    f"ROWS: <b>{len(startup_df)}</b>\n"
+    f"TICKERS: <b>{', '.join(startup_symbols)}</b>\n"
+    f"TIME: {_now().strftime('%Y-%m-%d %H:%M:%S')}"
+)
     print(f"TELEGRAM START MESSAGE SENT={ok}", flush=True)
 
     sent = load_state()
