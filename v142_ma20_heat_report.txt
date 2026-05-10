@@ -1,0 +1,46 @@
+✅ <b>V14.2 MA20 HEAT BACKTEST HOÀN TẤT</b>
+
+Nguồn mã: <b>v141_top_quality_picks.csv</b>
+Số mã kiểm tra: <b>15</b>
+
+<b>KẾT QUẢ MA20</b>
+🔹 <b>QNS</b> | Dist MA20: <b>4.04%</b> | Phân vị nóng: <b>98.14%</b>
+   Max lịch sử: 7.12% (2024-05-23)
+   Win T+5 vùng tương tự: 46.08% | Lợi TB T+5: 0.01%
+   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
+   Mức này nằm trong top 5% nóng nhất lịch sử.
+🔹 <b>VHM</b> | Dist MA20: <b>15.83%</b> | Phân vị nóng: <b>94.59%</b>
+   Max lịch sử: 33.63% (2026-01-07)
+   Win T+5 vùng tương tự: 56.00% | Lợi TB T+5: 2.72%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>MSB</b> | Dist MA20: <b>6.82%</b> | Phân vị nóng: <b>92.05%</b>
+   Max lịch sử: 18.12% (2025-08-22)
+   Win T+5 vùng tương tự: 60.00% | Lợi TB T+5: 1.19%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>POW</b> | Dist MA20: <b>5.80%</b> | Phân vị nóng: <b>89.00%</b>
+   Max lịch sử: 18.99% (2024-06-04)
+   Win T+5 vùng tương tự: 50.00% | Lợi TB T+5: 0.57%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>LPB</b> | Dist MA20: <b>8.48%</b> | Phân vị nóng: <b>87.14%</b>
+   Max lịch sử: 28.11% (2025-08-21)
+   Win T+5 vùng tương tự: 55.00% | Lợi TB T+5: 2.22%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>BID</b> | Dist MA20: <b>4.21%</b> | Phân vị nóng: <b>87.14%</b>
+   Max lịch sử: 32.48% (2026-01-14)
+   Win T+5 vùng tương tự: 47.87% | Lợi TB T+5: 0.32%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>VIX</b> | Dist MA20: <b>6.57%</b> | Phân vị nóng: <b>85.28%</b>
+   Max lịch sử: 46.28% (2025-07-28)
+   Win T+5 vùng tương tự: 46.38% | Lợi TB T+5: -0.45%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>HCM</b> | Dist MA20: <b>4.49%</b> | Phân vị nóng: <b>77.66%</b>
+   Max lịch sử: 15.71% (2026-04-15)
+   Win T+5 vùng tương tự: 59.86% | Lợi TB T+5: 1.14%
+   ✅ CHƯA NÓNG
+   Giá chưa cách MA20 quá xa.

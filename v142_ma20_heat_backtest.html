@@ -1,0 +1,382 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>V14.2 MA20 Heat Backtest</title><style>
+body{font-family:Arial,sans-serif;background:#0f172a;color:#e5e7eb;padding:18px}
+h2,h3{color:#fff}.note{background:#111827;border:1px solid #334155;border-radius:10px;padding:12px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:12px;background:#111827}
+th{background:#1f2937;color:#fff;position:sticky;top:0}
+td,th{border:1px solid #334155;padding:7px;white-space:nowrap;vertical-align:top}
+tr:nth-child(even){background:#0b1220}
+</style></head>
+<body><h2>V14.2 - MA20 HEAT BACKTEST</h2><div class="note"><b>Generated:</b> 2026-05-10 01:54:18<br><b>Nguồn danh sách mã:</b> v141_top_quality_picks.csv<br><b>Ý nghĩa:</b> So mức xa MA20 hiện tại với lịch sử riêng từng mã. Không thay đổi tín hiệu gốc.</div><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mã</th>
+      <th>Trạng thái dữ liệu</th>
+      <th>Ngày hiện tại</th>
+      <th>Giá hiện tại</th>
+      <th>MA20 hiện tại</th>
+      <th>Dist MA20 hiện tại %</th>
+      <th>Dist MA20 cao nhất lịch sử %</th>
+      <th>Ngày nóng nhất</th>
+      <th>Phân vị nóng hiện tại %</th>
+      <th>Vùng so sánh lịch sử</th>
+      <th>Số mẫu vùng tương tự</th>
+      <th>Win T+2 vùng tương tự %</th>
+      <th>Win T+5 vùng tương tự %</th>
+      <th>Win T+10 vùng tương tự %</th>
+      <th>Lợi TB T+2 vùng tương tự %</th>
+      <th>Lợi TB T+5 vùng tương tự %</th>
+      <th>Lợi TB T+10 vùng tương tự %</th>
+      <th>Drawdown TB T+5 vùng tương tự %</th>
+      <th>Khuyến nghị MA20</th>
+      <th>Lý do MA20</th>
+      <th>Số dòng lịch sử</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>QNS</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>47.40</td>
+      <td>45.56</td>
+      <td>4.04</td>
+      <td>7.12</td>
+      <td>2024-05-23</td>
+      <td>98.14</td>
+      <td>2.0% đến 6.0%</td>
+      <td>102</td>
+      <td>39.22</td>
+      <td>46.08</td>
+      <td>58.82</td>
+      <td>-0.01</td>
+      <td>0.01</td>
+      <td>0.59</td>
+      <td>-1.87</td>
+      <td>⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI</td>
+      <td>Mức này nằm trong top 5% nóng nhất lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>VHM</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>164.00</td>
+      <td>141.59</td>
+      <td>15.83</td>
+      <td>33.63</td>
+      <td>2026-01-07</td>
+      <td>94.59</td>
+      <td>13.5% đến 18.2%</td>
+      <td>25</td>
+      <td>40.00</td>
+      <td>56.00</td>
+      <td>58.33</td>
+      <td>-0.01</td>
+      <td>2.72</td>
+      <td>3.18</td>
+      <td>-5.22</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>MSB</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>13.50</td>
+      <td>12.64</td>
+      <td>6.82</td>
+      <td>18.12</td>
+      <td>2025-08-22</td>
+      <td>92.05</td>
+      <td>4.8% đến 8.8%</td>
+      <td>55</td>
+      <td>58.18</td>
+      <td>60.00</td>
+      <td>55.56</td>
+      <td>0.88</td>
+      <td>1.19</td>
+      <td>2.13</td>
+      <td>-2.07</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>POW</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>14.00</td>
+      <td>13.23</td>
+      <td>5.80</td>
+      <td>18.99</td>
+      <td>2024-06-04</td>
+      <td>89.00</td>
+      <td>3.8% đến 7.8%</td>
+      <td>84</td>
+      <td>48.81</td>
+      <td>50.00</td>
+      <td>50.00</td>
+      <td>0.42</td>
+      <td>0.57</td>
+      <td>0.20</td>
+      <td>-2.82</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>LPB</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>51.80</td>
+      <td>47.75</td>
+      <td>8.48</td>
+      <td>28.11</td>
+      <td>2025-08-21</td>
+      <td>87.14</td>
+      <td>6.5% đến 10.5%</td>
+      <td>60</td>
+      <td>46.67</td>
+      <td>55.00</td>
+      <td>55.00</td>
+      <td>0.83</td>
+      <td>2.22</td>
+      <td>3.60</td>
+      <td>-2.69</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>BID</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>42.40</td>
+      <td>40.69</td>
+      <td>4.21</td>
+      <td>32.48</td>
+      <td>2026-01-14</td>
+      <td>87.14</td>
+      <td>2.2% đến 6.2%</td>
+      <td>94</td>
+      <td>46.81</td>
+      <td>47.87</td>
+      <td>58.06</td>
+      <td>0.08</td>
+      <td>0.32</td>
+      <td>2.86</td>
+      <td>-2.77</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>VIX</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>18.60</td>
+      <td>17.45</td>
+      <td>6.57</td>
+      <td>46.28</td>
+      <td>2025-07-28</td>
+      <td>85.28</td>
+      <td>4.6% đến 8.6%</td>
+      <td>69</td>
+      <td>44.93</td>
+      <td>46.38</td>
+      <td>42.03</td>
+      <td>-0.24</td>
+      <td>-0.45</td>
+      <td>-1.45</td>
+      <td>-4.67</td>
+      <td>⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG</td>
+      <td>Mức hiện tại nằm trong nhóm nóng cao của lịch sử.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>HCM</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>27.95</td>
+      <td>26.75</td>
+      <td>4.49</td>
+      <td>15.71</td>
+      <td>2026-04-15</td>
+      <td>77.66</td>
+      <td>2.5% đến 6.5%</td>
+      <td>142</td>
+      <td>51.41</td>
+      <td>59.86</td>
+      <td>59.42</td>
+      <td>0.31</td>
+      <td>1.14</td>
+      <td>1.81</td>
+      <td>-2.56</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>MSN</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>80.20</td>
+      <td>78.17</td>
+      <td>2.60</td>
+      <td>17.16</td>
+      <td>2024-03-07</td>
+      <td>72.08</td>
+      <td>0.6% đến 4.6%</td>
+      <td>202</td>
+      <td>45.05</td>
+      <td>51.49</td>
+      <td>52.50</td>
+      <td>-0.01</td>
+      <td>0.56</td>
+      <td>0.86</td>
+      <td>-2.40</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>CTG</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>36.20</td>
+      <td>35.15</td>
+      <td>2.99</td>
+      <td>15.40</td>
+      <td>2026-01-12</td>
+      <td>71.57</td>
+      <td>1.0% đến 5.0%</td>
+      <td>185</td>
+      <td>51.35</td>
+      <td>54.05</td>
+      <td>59.24</td>
+      <td>0.23</td>
+      <td>0.88</td>
+      <td>1.53</td>
+      <td>-2.35</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>BFC</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>65.20</td>
+      <td>63.08</td>
+      <td>3.36</td>
+      <td>32.56</td>
+      <td>2026-02-27</td>
+      <td>67.17</td>
+      <td>1.4% đến 5.4%</td>
+      <td>176</td>
+      <td>56.25</td>
+      <td>59.09</td>
+      <td>55.43</td>
+      <td>0.85</td>
+      <td>1.64</td>
+      <td>2.39</td>
+      <td>-3.47</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>HDB</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>27.35</td>
+      <td>26.52</td>
+      <td>3.13</td>
+      <td>16.50</td>
+      <td>2025-07-25</td>
+      <td>66.84</td>
+      <td>1.1% đến 5.1%</td>
+      <td>191</td>
+      <td>49.74</td>
+      <td>54.97</td>
+      <td>53.76</td>
+      <td>0.32</td>
+      <td>0.72</td>
+      <td>0.90</td>
+      <td>-2.61</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>VPB</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>27.95</td>
+      <td>27.49</td>
+      <td>1.67</td>
+      <td>33.41</td>
+      <td>2025-08-21</td>
+      <td>65.99</td>
+      <td>-0.3% đến 3.7%</td>
+      <td>241</td>
+      <td>42.74</td>
+      <td>48.13</td>
+      <td>46.84</td>
+      <td>-0.03</td>
+      <td>-0.04</td>
+      <td>-0.34</td>
+      <td>-2.34</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>HAG</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>16.55</td>
+      <td>16.39</td>
+      <td>0.98</td>
+      <td>14.42</td>
+      <td>2025-11-17</td>
+      <td>55.16</td>
+      <td>-1.0% đến 3.0%</td>
+      <td>175</td>
+      <td>47.43</td>
+      <td>49.14</td>
+      <td>50.00</td>
+      <td>0.14</td>
+      <td>0.36</td>
+      <td>0.37</td>
+      <td>-3.56</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+    <tr>
+      <td>DIG</td>
+      <td>OK</td>
+      <td>2026-05-08</td>
+      <td>14.45</td>
+      <td>14.45</td>
+      <td>0.02</td>
+      <td>20.62</td>
+      <td>2025-07-28</td>
+      <td>54.31</td>
+      <td>-2.0% đến 2.0%</td>
+      <td>190</td>
+      <td>46.84</td>
+      <td>51.05</td>
+      <td>46.77</td>
+      <td>0.06</td>
+      <td>-0.33</td>
+      <td>-1.49</td>
+      <td>-3.74</td>
+      <td>✅ CHƯA NÓNG</td>
+      <td>Giá chưa cách MA20 quá xa.</td>
+      <td>591</td>
+    </tr>
+  </tbody>
+</table></body></html>
