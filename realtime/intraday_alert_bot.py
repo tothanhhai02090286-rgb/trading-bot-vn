@@ -433,18 +433,18 @@ def main():
 
     startup_df = load_watchlist()
 
-if not startup_df.empty and "Mã" in startup_df.columns:
+    if not startup_df.empty and "Mã" in startup_df.columns:
     startup_symbols = startup_df["Mã"].astype(str).str.upper().str.strip().tolist()
-else:
+    else:
     startup_symbols = []
 
-ok = send_telegram(
+    ok = send_telegram(
     "✅ <b>V17 Intraday Scanner STARTED</b>\n"
     f"RAW_URL: <code>{RAW_URL[:80]}...</code>\n"
     f"ROWS: <b>{len(startup_df)}</b>\n"
     f"TICKERS: <b>{', '.join(startup_symbols)}</b>\n"
     f"TIME: {_now().strftime('%Y-%m-%d %H:%M:%S')}"
-)
+    )
     print(f"TELEGRAM START MESSAGE SENT={ok}", flush=True)
 
     sent = load_state()
