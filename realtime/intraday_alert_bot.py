@@ -434,9 +434,9 @@ def main():
     startup_df = load_watchlist()
 
     if not startup_df.empty and "Mã" in startup_df.columns:
-    startup_symbols = startup_df["Mã"].astype(str).str.upper().str.strip().tolist()
+        startup_symbols = startup_df["Mã"].astype(str).str.upper().str.strip().tolist()
     else:
-    startup_symbols = []
+        startup_symbols = []
 
     ok = send_telegram(
     "✅ <b>V17 Intraday Scanner STARTED</b>\n"
