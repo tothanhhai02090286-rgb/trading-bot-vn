@@ -1,54 +1,48 @@
 ✅ <b>V15.2 MOMENTUM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v143_heat_combo.csv</b>
-Số mã kiểm tra: <b>15</b>
+Số mã kiểm tra: <b>7</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>QNS</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 26 | Đoạn dương: 19 | Tỷ lệ dương: 73.08%
-Win TB: 60.57% | Lợi TB: 0.60%
-RSI: 44.95 | Dist MA20: -0.11% | Volume: 2.21
+🔹 <b>BFC</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 4 | Đoạn dương: 3 | Tỷ lệ dương: 75.00%
+Win TB: 66.67% | Lợi TB: 1.58%
+RSI: 77.66 | Dist MA20: 17.38% | Volume: 2.79
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>VIX</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 7 | Đoạn dương: 5 | Tỷ lệ dương: 71.43%
-Win TB: 55.48% | Lợi TB: 0.43%
-RSI: 22.00 | Dist MA20: -3.03% | Volume: 0.42
-Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>POW</b> | ỔN ĐỊNH VỪA
-Đoạn test: 22 | Đoạn dương: 13 | Tỷ lệ dương: 59.09%
-Win TB: 44.89% | Lợi TB: 0.48%
-RSI: 37.04 | Dist MA20: -2.11% | Volume: 0.49
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>HCM</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 14 | Tỷ lệ dương: 58.33%
-Win TB: 53.28% | Lợi TB: 0.86%
-RSI: 62.86 | Dist MA20: 3.49% | Volume: 0.20
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>MSN</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 14 | Tỷ lệ dương: 58.33%
-Win TB: 57.98% | Lợi TB: 0.69%
-RSI: 44.58 | Dist MA20: -0.85% | Volume: 0.67
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>HAG</b> | ỔN ĐỊNH VỪA
-Đoạn test: 27 | Đoạn dương: 15 | Tỷ lệ dương: 55.56%
-Win TB: 48.31% | Lợi TB: 0.41%
-RSI: 51.28 | Dist MA20: 0.09% | Volume: 0.81
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>CTG</b> | TRUNG TÍNH
-Đoạn test: 22 | Đoạn dương: 13 | Tỷ lệ dương: 59.09%
-Win TB: 55.55% | Lợi TB: -0.12%
-RSI: 42.47 | Dist MA20: 0.57% | Volume: 0.93
+🔹 <b>QNS</b> | TRUNG TÍNH
+Đoạn test: 24 | Đoạn dương: 13 | Tỷ lệ dương: 54.17%
+Win TB: 46.84% | Lợi TB: 0.07%
+RSI: 55.85 | Dist MA20: 1.83% | Volume: 1.75
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
-🔹 <b>HDB</b> | TRUNG TÍNH
-Đoạn test: 26 | Đoạn dương: 15 | Tỷ lệ dương: 57.69%
-Win TB: 48.93% | Lợi TB: -0.07%
-RSI: 53.97 | Dist MA20: 1.61% | Volume: 0.82
+🔹 <b>VIX</b> | TRUNG TÍNH
+Đoạn test: 10 | Đoạn dương: 5 | Tỷ lệ dương: 50.00%
+Win TB: 50.67% | Lợi TB: -0.03%
+RSI: 27.45 | Dist MA20: -2.12% | Volume: 0.43
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>BVB</b> | TRUNG TÍNH
+Đoạn test: 26 | Đoạn dương: 13 | Tỷ lệ dương: 50.00%
+Win TB: 41.84% | Lợi TB: -0.50%
+RSI: 50.00 | Dist MA20: -0.64% | Volume: 0.36
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>OCB</b> | TRUNG TÍNH
+Đoạn test: 23 | Đoạn dương: 11 | Tỷ lệ dương: 47.83%
+Win TB: 48.52% | Lợi TB: 0.16%
+RSI: 44.44 | Dist MA20: -1.21% | Volume: 0.81
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>BMP</b> | YẾU / DỄ HỌC VẸT
+Đoạn test: 17 | Đoạn dương: 7 | Tỷ lệ dương: 41.18%
+Win TB: 36.12% | Lợi TB: -0.30%
+RSI: 72.17 | Dist MA20: 6.66% | Volume: 0.92
+Lý do: Mẫu không ổn định qua các đoạn thời gian.
+
+🔹 <b>ASM</b> | YẾU / DỄ HỌC VẸT
+Đoạn test: 20 | Đoạn dương: 8 | Tỷ lệ dương: 40.00%
+Win TB: 45.97% | Lợi TB: -0.24%
+RSI: 56.84 | Dist MA20: 4.80% | Volume: 4.47
+Lý do: Mẫu không ổn định qua các đoạn thời gian.

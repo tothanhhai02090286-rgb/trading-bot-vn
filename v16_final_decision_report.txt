@@ -1,56 +1,31 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>30</b>
+Số mã tổng hợp: <b>10</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>CTG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>QNS</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>POW</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>PNJ</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>HCM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
-WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum TRUNG TÍNH | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>BID</b> | 🟢 ƯU TIÊN CAO | Điểm 95.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>VIC</b> | 🟢 ƯU TIÊN CAO | Điểm 88.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>VCB</b> | 🟢 ƯU TIÊN CAO | Điểm 87.00
+🔹 <b>EIB</b> | 🟢 ƯU TIÊN CAO | Điểm 87.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>MSN</b> | 🟢 ƯU TIÊN CAO | Điểm 85.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
+🔹 <b>BFC</b> | 🟡 THEO DÕI | Điểm 82.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
+Lý do: Setup ổn nhưng đang nóng, không mua đuổi.
+
+🔹 <b>VIX</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
+WF: Momentum TRUNG TÍNH | Bottom ỔN ĐỊNH VỪA
+Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
+
+🔹 <b>BVB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 53.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
+WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
+
+🔹 <b>OCB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 53.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
+WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
