@@ -2,7 +2,15 @@
 
 Nguồn: <b>v17_final_decision.csv</b>
 Output: <b>intraday_watchlist_v17.csv</b>
-Số mã theo dõi: <b>1</b>
+Số mã theo dõi: <b>9</b>
 
 <b>TOP WATCHLIST RENDER</b>
-🔹 <b>EIB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 62.62 | WAIT
+🔹 <b>PHP</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 68.84 | WAIT
+🔹 <b>VGC</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 67.84 | WAIT
+🔹 <b>CTG</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 67.64 | WAIT
+🔹 <b>HDB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 67.64 | WAIT
+🔹 <b>KSB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 66.44 | WAIT
+🔹 <b>VHC</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 65.14 | WAIT
+🔹 <b>CII</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 62.34 | WAIT
+🔹 <b>EIB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 61.54 | WAIT
+🔹 <b>LPB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.44 | WAIT

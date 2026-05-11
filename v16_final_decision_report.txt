@@ -1,31 +1,56 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>10</b>
+Số mã tổng hợp: <b>52</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>EIB</b> | 🟢 ƯU TIÊN CAO | Điểm 87.00
+🔹 <b>LPB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>CII</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>PHP</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>CTG</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>KSB</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VGC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>BFC</b> | 🟡 THEO DÕI | Điểm 82.00
+🔹 <b>EIB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
-Lý do: Setup ổn nhưng đang nóng, không mua đuổi.
+WF: Momentum  | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VIX</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
-WF: Momentum TRUNG TÍNH | Bottom ỔN ĐỊNH VỪA
-Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
-
-🔹 <b>BVB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 53.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
-
-🔹 <b>OCB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 53.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
+🔹 <b>VHC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
