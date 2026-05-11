@@ -23,7 +23,7 @@ from v10_utils import *
 
 
 CACHE_UPDATE_STATE_PATH = "cache_update_state.csv"
-CACHE_UPDATE_BATCH_SIZE = int(os.getenv("CACHE_UPDATE_BATCH_SIZE", "50"))
+CACHE_UPDATE_BATCH_SIZE = int(os.getenv("CACHE_UPDATE_BATCH_SIZE", "140"))
 
 
 def load_quote_history_api(symbol, start, end):
@@ -133,9 +133,9 @@ def update_one_symbol(symbol, lookback_days=900):
     today = now_vn.strftime("%Y-%m-%d")
     last_date = get_last_cache_date(cache_path)
 
-    if last_date == today:
-        print(f"SKIP {symbol}: cache already today")
-        return "SKIP"
+    # if last_date == today:
+    #     print(f"SKIP {symbol}: cache already today")
+    #     return "SKIP"
 
     end = now_vn
     start = end - timedelta(days=lookback_days)
