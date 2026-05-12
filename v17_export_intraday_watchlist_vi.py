@@ -2,212 +2,166 @@
 """
 v17_export_intraday_watchlist_vi.py
 
-Xuất watchlist cuối ngày từ V17 để Render theo dõi trong phiên ngày hôm sau.
+FIX ONLY ONE ISSUE:
+- Nguồn export watchlist cho Render KHÔNG lấy từ v17_final_decision.csv nữa.
+- Thay bằng 2 bảng cuối đã lọc trong ai_risk_dashboard.html:
+  1) TOP MUA THẬT - ƯU TIÊN CAO
+  2) TOP THEO DÕI - CHƯA MUA VỘI
 
-Input:
-- v17_final_decision.csv
-
-Output:
+Output giữ tên cũ để Render không cần đổi RAW_URL:
 - intraday_watchlist_v17.csv
-- intraday_watchlist_v17_report.txt
 
-Logic:
-- Giữ các mã:
-  + 🟢 ƯU TIÊN CAO
-  + 🟡 THEO DÕI
-  + 🟠 CHỜ ĐIỂM ĐẸP
-- Loại:
-  + ❌ LOẠI
-  + Risk FAIL
-- Sắp xếp theo Điểm V17 giảm dần.
+Không sửa logic Render / V18.
 """
 
 from __future__ import annotations
 
 import os
 from pathlib import Path
-from datetime import datetime
+from typing import List, Optional
+
 import pandas as pd
-import requests
+
+DASHBOARD_PATH = os.getenv("AI_RISK_DASHBOARD_PATH", "ai_risk_dashboard.html")
+OUTPUT_PATH = os.getenv("INTRADAY_WATCHLIST_OUTPUT", "intraday_watchlist_v17.csv")
+MAX_WATCHLIST_ROWS = int(os.getenv("MAX_WATCHLIST_ROWS", "10"))
+
+TOP_MUA_TITLE = "TOP MUA THẬT"
+TOP_THEO_DOI_TITLE = "TOP THEO DÕI"
 
 
-INPUT_FILE = os.getenv("V17_FINAL_CSV", "v17_final_decision.csv")
-OUT_CSV = os.getenv("V17_INTRADAY_WATCHLIST", "intraday_watchlist_v17.csv")
-OUT_TXT = os.getenv("V17_INTRADAY_REPORT", "intraday_watchlist_v17_report.txt")
+def _safe_num(series: pd.Series, default: float = 0.0) -> pd.Series:
+    return pd.to_numeric(series, errors="coerce").fillna(default)
 
 
-def now_str():
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def _normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    out.columns = [str(c).strip() for c in out.columns]
+    return out
 
 
-def read_csv(path):
-    try:
-        if not os.path.exists(path):
-            return pd.DataFrame()
-        return pd.read_csv(path)
-    except Exception as e:
-        print(f"WARN: không đọc được {path}: {repr(e)}", flush=True)
-        return pd.DataFrame()
-
-
-def find_col(df, names):
-    if df is None or df.empty:
+def _find_table_after_heading(html: str, heading_keyword: str) -> Optional[pd.DataFrame]:
+    """Tìm table đầu tiên sau heading có chứa heading_keyword."""
+    idx = html.find(heading_keyword)
+    if idx < 0:
         return None
 
-    lower = {str(c).strip().lower(): c for c in df.columns}
-
-    for n in names:
-        k = str(n).strip().lower()
-        if k in lower:
-            return lower[k]
-
-    for c in df.columns:
-        text = str(c).strip().lower()
-        for n in names:
-            if str(n).strip().lower() in text:
-                return c
-
-    return None
-
-
-def send_telegram(text):
-    token = os.getenv("TELEGRAM_TOKEN", "").strip()
-    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
-
-    if not token or not chat_id:
-        print("WARN: thiếu Telegram token/chat_id, bỏ qua export report", flush=True)
-        return False
-
+    sub_html = html[idx:]
     try:
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        resp = requests.post(
-            url,
-            data={
-                "chat_id": chat_id,
-                "text": text,
-                "parse_mode": "HTML",
-                "disable_web_page_preview": True,
-            },
-            timeout=20,
-        )
-        print("TELEGRAM V17 EXPORT STATUS:", resp.status_code, resp.text[:160], flush=True)
-        return resp.status_code == 200
-    except Exception as e:
-        print("WARN: gửi Telegram V17 export lỗi:", repr(e), flush=True)
-        return False
+        tables = pd.read_html(sub_html)
+    except Exception:
+        return None
+
+    if not tables:
+        return None
+
+    return _normalize_columns(tables[0])
 
 
-def build_watchlist():
-    df = read_csv(INPUT_FILE)
+def _standardize_for_render(df: pd.DataFrame, source_group: str) -> pd.DataFrame:
+    """Chuẩn hóa cột để V18 Render đọc được."""
+    out = df.copy()
 
-    if df.empty:
-        out = pd.DataFrame([{"Trạng thái": "Không tìm thấy v17_final_decision.csv"}])
-        return out
+    # Chuẩn hóa tên mã
+    if "Mã" not in out.columns:
+        for c in ["Ma", "Ticker", "Symbol", "Mã CP"]:
+            if c in out.columns:
+                out["Mã"] = out[c]
+                break
 
-    ma_col = find_col(df, ["Mã", "Ma", "Symbol", "Ticker"])
-    decision_col = find_col(df, ["Quyết định V17", "Quyet dinh V17"])
-    risk_col = find_col(df, ["Risk", "Risk Status"])
-    score_col = find_col(df, ["Điểm V17", "Diem V17"])
-    price_col = find_col(df, ["Giá", "Gia", "Close"])
+    if "Mã" not in out.columns:
+        return pd.DataFrame()
 
-    if ma_col is None or decision_col is None:
-        out = pd.DataFrame([{"Trạng thái": "Thiếu cột Mã hoặc Quyết định V17"}])
-        return out
+    out["Mã"] = out["Mã"].astype(str).str.upper().str.strip()
+    out = out[(out["Mã"] != "") & (out["Mã"] != "NAN")].copy()
 
-    temp = df.copy()
-    temp["Mã"] = temp[ma_col].astype(str).str.upper().str.strip()
-    temp["Quyết định V17"] = temp[decision_col].astype(str)
+    # Render v18 đang dùng các cột này nếu có
+    if "Hành động hiện tại" in out.columns and "Hành động" not in out.columns:
+        out["Hành động"] = out["Hành động hiện tại"]
 
-    if risk_col:
-        temp["Risk"] = temp[risk_col].astype(str)
+    if "Giá" in out.columns and "Giá tham chiếu" not in out.columns:
+        out["Giá tham chiếu"] = out["Giá"]
+
+    # Nhóm realtime cho V18 nhận diện MUA/THEO DÕI
+    if source_group == "TOP_MUA_THAT":
+        out["Nhóm realtime"] = "MUA - TOP MUA THẬT"
     else:
-        temp["Risk"] = ""
+        out["Nhóm realtime"] = "THEO DÕI - TOP THEO DÕI"
 
-    temp["__decision_upper"] = temp["Quyết định V17"].str.upper()
-    temp["__risk_upper"] = temp["Risk"].str.upper()
+    # Nếu HTML không có buy zone/stoploss thì để trống, V18 vẫn fallback bằng giá/ref/VWAP
+    for col in ["Buy zone thấp", "Buy zone cao", "Stoploss tham khảo"]:
+        if col not in out.columns:
+            out[col] = ""
 
-    keep_mask = (
-        temp["__decision_upper"].str.contains("ƯU TIÊN|THEO DÕI|CHỜ", na=False)
-        & ~temp["__decision_upper"].str.contains("LOẠI", na=False)
-        & ~temp["__risk_upper"].str.contains("FAIL", na=False)
-    )
+    # Cột nguồn để dễ kiểm tra
+    out["Nguồn watchlist"] = source_group
 
-    out = temp[keep_mask].copy()
+    return out
 
-    if out.empty:
-        out = pd.DataFrame([{"Trạng thái": "Không có mã phù hợp cho Render theo dõi"}])
-        return out
 
-    if score_col:
-        out["Điểm V17"] = pd.to_numeric(out[score_col], errors="coerce")
+def build_watchlist_from_dashboard(html_path: str = DASHBOARD_PATH) -> pd.DataFrame:
+    p = Path(html_path)
+    if not p.exists():
+        raise FileNotFoundError(f"Không thấy file dashboard: {html_path}")
+
+    html = p.read_text(encoding="utf-8", errors="ignore")
+
+    top_mua = _find_table_after_heading(html, TOP_MUA_TITLE)
+    top_theo_doi = _find_table_after_heading(html, TOP_THEO_DOI_TITLE)
+
+    frames: List[pd.DataFrame] = []
+
+    if top_mua is not None and not top_mua.empty:
+        frames.append(_standardize_for_render(top_mua, "TOP_MUA_THAT"))
+
+    if top_theo_doi is not None and not top_theo_doi.empty:
+        frames.append(_standardize_for_render(top_theo_doi, "TOP_THEO_DOI"))
+
+    if not frames:
+        raise RuntimeError("Không đọc được bảng TOP MUA THẬT / TOP THEO DÕI từ ai_risk_dashboard.html")
+
+    out = pd.concat(frames, ignore_index=True)
+
+    # Chỉ lấy PASS nếu cột Risk có tồn tại trong HTML top tables
+    if "Risk" in out.columns:
+        out = out[out["Risk"].astype(str).str.upper().str.strip().eq("PASS")].copy()
+
+    # Bỏ trùng mã: ưu tiên TOP MUA THẬT trước TOP THEO DÕI
+    out["_priority_source"] = out["Nguồn watchlist"].map({"TOP_MUA_THAT": 0, "TOP_THEO_DOI": 1}).fillna(9)
+
+    # Sort nhẹ theo nhóm + Score/AI nếu có, không thêm tiêu chí mới ngoài việc lấy từ top HTML
+    if "Score" in out.columns:
+        out["_score_sort"] = _safe_num(out["Score"])
     else:
-        out["Điểm V17"] = 0
+        out["_score_sort"] = 0
 
-    if price_col:
-        out["Giá tham chiếu V17"] = out[price_col]
+    if "AI" in out.columns:
+        out["_ai_sort"] = _safe_num(out["AI"])
     else:
-        out["Giá tham chiếu V17"] = ""
+        out["_ai_sort"] = 0
 
-    strategy_col = find_col(out, ["Strategy V17"])
-    market_col = find_col(out, ["Market mode"])
-    reason_col = find_col(out, ["Lý do V17", "Ly do V17"])
+    out = out.sort_values(["_priority_source", "_score_sort", "_ai_sort"], ascending=[True, False, False])
+    out = out.drop_duplicates(subset=["Mã"], keep="first")
 
-    final = pd.DataFrame()
-    final["Mã"] = out["Mã"]
-    final["Giá tham chiếu V17"] = out["Giá tham chiếu V17"]
-    final["Quyết định V17"] = out["Quyết định V17"]
-    final["Điểm V17"] = out["Điểm V17"]
-    final["Strategy V17"] = out[strategy_col] if strategy_col else ""
-    final["Risk"] = out["Risk"]
-    final["Market mode"] = out[market_col] if market_col else ""
-    final["Lý do V17"] = out[reason_col] if reason_col else ""
-    final["Ngày xuất watchlist"] = now_str()
+    if MAX_WATCHLIST_ROWS > 0:
+        out = out.head(MAX_WATCHLIST_ROWS).copy()
 
-    # Nhãn dùng cho Render đọc dễ hơn
-    final["Render Action"] = final["Quyết định V17"].apply(
-        lambda x: "PRIORITY" if "ƯU TIÊN" in str(x).upper()
-        else ("WATCH" if "THEO DÕI" in str(x).upper() else "WAIT")
-    )
+    out = out.drop(columns=[c for c in ["_priority_source", "_score_sort", "_ai_sort"] if c in out.columns])
+    out = out.reset_index(drop=True)
 
-    final = final.sort_values("Điểm V17", ascending=False, na_position="last")
-    final = final.drop_duplicates("Mã", keep="first").reset_index(drop=True)
-
-    return final
+    return out
 
 
 def main():
-    print("V17 EXPORT INTRADAY WATCHLIST STARTED", flush=True)
+    watchlist = build_watchlist_from_dashboard(DASHBOARD_PATH)
+    watchlist.to_csv(OUTPUT_PATH, index=False, encoding="utf-8-sig")
 
-    out = build_watchlist()
-    out.to_csv(OUT_CSV, index=False, encoding="utf-8-sig")
-
-    count = len(out) if "Mã" in out.columns else 0
-
-    lines = [
-        "✅ <b>V17 EXPORT WATCHLIST CHO RENDER HOÀN TẤT</b>",
-        "",
-        f"Nguồn: <b>{INPUT_FILE}</b>",
-        f"Output: <b>{OUT_CSV}</b>",
-        f"Số mã theo dõi: <b>{count}</b>",
-    ]
-
-    if "Mã" in out.columns and count > 0:
-        lines.append("")
-        lines.append("<b>TOP WATCHLIST RENDER</b>")
-        for _, r in out.head(10).iterrows():
-            lines.append(
-                f"🔹 <b>{r.get('Mã','')}</b> | {r.get('Quyết định V17','')} | "
-                f"Điểm {r.get('Điểm V17','')} | {r.get('Render Action','')}"
-            )
-
-    report = "\n".join(lines)
-    Path(OUT_TXT).write_text(report, encoding="utf-8")
-
-    print(report.replace("<b>", "").replace("</b>", ""), flush=True)
-    print(f"OK: wrote {OUT_CSV}", flush=True)
-    print(f"OK: wrote {OUT_TXT}", flush=True)
-
-    send_telegram(report)
+    tickers = watchlist["Mã"].astype(str).tolist() if "Mã" in watchlist.columns else []
+    print("EXPORT INTRADAY WATCHLIST FROM HTML TOP TABLES DONE")
+    print(f"SOURCE HTML: {DASHBOARD_PATH}")
+    print(f"OUTPUT: {OUTPUT_PATH}")
+    print(f"ROWS: {len(watchlist)}")
+    print(f"TICKERS: {', '.join(tickers)}")
 
 
 if __name__ == "__main__":
