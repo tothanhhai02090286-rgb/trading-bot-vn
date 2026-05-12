@@ -614,24 +614,24 @@ def _safe_export_intraday_watchlist(buy_df=None, watch_df=None):
             slim['Buy zone cao'] = (ref * 1.015).round(2)
             slim['Stoploss tham khảo'] = (ref * 0.970).round(2)
 
-        # FILE NGUỒN CHUẨN CHO RENDER
-slim.to_csv(
-    "top_render_candidates.csv",
-    index=False,
-    encoding='utf-8-sig'
-)
+                # FILE NGUỒN CHUẨN CHO RENDER
+        slim.to_csv(
+            "top_render_candidates.csv",
+            index=False,
+            encoding='utf-8-sig'
+        )
 
-# FILE WATCHLIST REALTIME
-path = os.getenv('INTRADAY_WATCHLIST_PATH', 'intraday_watchlist.csv')
+        # FILE WATCHLIST REALTIME
+        path = os.getenv('INTRADAY_WATCHLIST_PATH', 'intraday_watchlist.csv')
 
-slim.to_csv(
-    path,
-    index=False,
-    encoding='utf-8-sig'
-)
+        slim.to_csv(
+            path,
+            index=False,
+            encoding='utf-8-sig'
+        )
 
-print(f'OK: exported top_render_candidates.csv rows={len(slim)}')
-print(f'OK: exported intraday watchlist -> {path} rows={len(slim)}')
+        print(f'OK: exported top_render_candidates.csv rows={len(slim)}')
+        print(f'OK: exported intraday watchlist -> {path} rows={len(slim)}')
         return slim
     except Exception as e:
         print('WARN: export intraday_watchlist.csv failed:', repr(e))
