@@ -10,7 +10,7 @@ tr:nth-child(even){background:#0b1220}
 </style>
 </head><body>
 <h2>V17 - REGIME + BREADTH FINAL ENGINE</h2>
-<div class='note'><b>Generated:</b> 2026-05-12 04:53:24<br><b>Nguồn nền:</b> ai_risk_filtered.csv<br><b>Ý nghĩa:</b> V16 + Market Regime + Breadth + Dynamic Weight + Hard Gate + Quota.</div>
+<div class='note'><b>Generated:</b> 2026-05-12 10:47:08<br><b>Nguồn nền:</b> ai_risk_filtered.csv<br><b>Ý nghĩa:</b> V16 + Market Regime + Breadth + Dynamic Weight + Hard Gate + Quota.</div>
 <div class='card'><h3>0. MARKET REGIME / BREADTH</h3><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -26,19 +26,150 @@ tr:nth-child(even){background:#0b1220}
   </thead>
   <tbody>
     <tr>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>35.51</td>
-      <td>41.3</td>
-      <td>30.43</td>
-      <td>6.52</td>
-      <td>23.91</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>36.96</td>
+      <td>42.03</td>
+      <td>51.45</td>
+      <td>8.7</td>
+      <td>23.19</td>
       <td>138</td>
     </tr>
   </tbody>
 </table></div>
 <div class='card'><h3>1. TOP ƯU TIÊN CAO</h3><p>Không có mã ưu tiên cao.</p></div>
-<div class='card'><h3>2. THEO DÕI / CHỜ ĐIỂM ĐẸP</h3><p>Không có mã theo dõi.</p></div>
+<div class='card'><h3>2. THEO DÕI / CHỜ ĐIỂM ĐẸP</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Mã</th>
+      <th>Giá</th>
+      <th>Strategy V17</th>
+      <th>Action gốc</th>
+      <th>Risk</th>
+      <th>Điểm thô</th>
+      <th>Điểm V17</th>
+      <th>Cap</th>
+      <th>Quyết định V17</th>
+      <th>Market mode</th>
+      <th>Market score</th>
+      <th>Heat label</th>
+      <th>Bottom label</th>
+      <th>WF Momentum</th>
+      <th>WF Bottom</th>
+      <th>Lý do V17</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MWG</td>
+      <td>83.80</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>74.49</td>
+      <td>74.49</td>
+      <td>100</td>
+      <td>🟡 THEO DÕI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>MSN</td>
+      <td>77.70</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>69.74</td>
+      <td>69.74</td>
+      <td>100</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>OIL</td>
+      <td>14.40</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>64.99</td>
+      <td>64.99</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HDB</td>
+      <td>27.35</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>64.38</td>
+      <td>64.38</td>
+      <td>85</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | đáy chất lượng | Action WATCH/WAIT | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DHC</td>
+      <td>36.25</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>60.74</td>
+      <td>60.74</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HAH</td>
+      <td>57.70</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>57.38</td>
+      <td>57.38</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>TRUNG TÍNH</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | đáy chất lượng | Action WATCH/WAIT | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+  </tbody>
+</table></div>
 <div class='card'><h3>3. LOẠI / KHÔNG ƯU TIÊN</h3><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -62,76 +193,328 @@ tr:nth-child(even){background:#0b1220}
   </thead>
   <tbody>
     <tr>
-      <td>DXG</td>
-      <td>16.20</td>
-      <td>MOMENTUM</td>
-      <td>BUY NOW</td>
-      <td>PASS</td>
-      <td>48.28</td>
-      <td>45.00</td>
-      <td>45</td>
-      <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
-      <td>🔴 BULL TRAP</td>
-      <td>TRUNG TÍNH</td>
-      <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | bull trap | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
-    </tr>
-    <tr>
-      <td>QNS</td>
-      <td>48.90</td>
-      <td>MOMENTUM</td>
-      <td>WAIT</td>
-      <td>PASS</td>
-      <td>44.58</td>
-      <td>44.58</td>
-      <td>45</td>
-      <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
-      <td>🔴 BULL TRAP</td>
-      <td>TRUNG TÍNH</td>
-      <td>YẾU / DỄ HỌC VẸT</td>
-      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market THỊ TRƯỜNG YẾU</td>
-    </tr>
-    <tr>
-      <td>DIG</td>
-      <td>14.80</td>
+      <td>BID</td>
+      <td>41.75</td>
       <td>MOMENTUM</td>
       <td>WATCHLIST</td>
       <td>PASS</td>
-      <td>44.48</td>
-      <td>44.48</td>
+      <td>54.53</td>
+      <td>54.53</td>
+      <td>85</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>LPB</td>
+      <td>54.50</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>54.38</td>
+      <td>54.38</td>
+      <td>85</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VPB</td>
+      <td>27.85</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>52.74</td>
+      <td>52.74</td>
+      <td>55</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | quá nóng | đáy chất lượng | Quá nóng không mua đuổi | WF bottom yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VHM</td>
+      <td>160.20</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>49.13</td>
+      <td>49.13</td>
+      <td>55</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | đáy chất lượng | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>BSR</td>
+      <td>29.10</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>45.03</td>
+      <td>45.00</td>
       <td>45</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | bull trap | Bull trap | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HNG</td>
+      <td>7.60</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>53.63</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>MẪU ÍT</td>
+      <td>ỔN ĐỊNH MẠNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum MẪU ÍT | WF bottom ỔN ĐỊNH MẠNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>CII</td>
+      <td>19.60</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>49.24</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>TRUNG TÍNH</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF bottom trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>STB</td>
+      <td>76.80</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>52.68</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>ỔN ĐỊNH MẠNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom ỔN ĐỊNH MẠNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DIG</td>
+      <td>14.65</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>54.88</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
       <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
       <td>🔴 BULL TRAP</td>
       <td>TRUNG TÍNH</td>
       <td>YẾU / DỄ HỌC VẸT</td>
-      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market THỊ TRƯỜNG YẾU</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
-      <td>BSR</td>
-      <td>28.05</td>
+      <td>VIC</td>
+      <td>222.00</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>50.68</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VRE</td>
+      <td>35.45</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>51.08</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>KHÔNG ĐỦ DỮ LIỆU</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum KHÔNG ĐỦ DỮ LIỆU | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>PVS</td>
+      <td>40.00</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>59.48</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | bull trap | Action WATCH/WAIT | Bull trap | WF momentum ỔN ĐỊNH VỪA | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>ABB</td>
+      <td>15.20</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>56.99</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>TRUNG TÍNH</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF momentum TRUNG TÍNH | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>POW</td>
+      <td>14.05</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>50.33</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>SKG</td>
+      <td>9.40</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>51.24</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VCB</td>
+      <td>59.90</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>47.49</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>BMP</td>
+      <td>161.50</td>
       <td>MOMENTUM</td>
       <td>BUY NOW</td>
       <td>PASS</td>
-      <td>42.63</td>
-      <td>42.63</td>
-      <td>55</td>
+      <td>43.83</td>
+      <td>35.00</td>
+      <td>35</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT</td>
-      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>⚫ DAO RƠI</td>
       <td>YẾU / DỄ HỌC VẸT</td>
-      <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | heat khỏe | đáy chất lượng | WF momentum yếu | Market yếu giảm momentum | WF momentum YẾU / DỄ HỌC VẸT | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>GVR</td>
+      <td>36.30</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>42.58</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>⚫ DAO RƠI</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | dao rơi | Dao rơi | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
       <td>IVS</td>
@@ -139,17 +522,161 @@ tr:nth-child(even){background:#0b1220}
       <td>MOMENTUM</td>
       <td>BUY NOW</td>
       <td>PASS</td>
-      <td>47.63</td>
+      <td>56.08</td>
       <td>35.00</td>
       <td>35</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
       <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
       <td>⚫ DAO RƠI</td>
       <td>TRUNG TÍNH</td>
       <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>GMD</td>
+      <td>81.60</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>49.83</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DXG</td>
+      <td>16.20</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>56.08</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>⚫ DAO RƠI</td>
+      <td>TRUNG TÍNH</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>QNS</td>
+      <td>48.70</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>48.08</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VIX</td>
+      <td>19.05</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>50.83</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>CEO</td>
+      <td>17.40</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>33.49</td>
+      <td>33.49</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>TCL</td>
+      <td>34.65</td>
+      <td>BOTTOM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>SRC</td>
+      <td>53.00</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>AAA</td>
+      <td>7.14</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
   </tbody>
 </table></div>
@@ -176,76 +703,436 @@ tr:nth-child(even){background:#0b1220}
   </thead>
   <tbody>
     <tr>
-      <td>DXG</td>
-      <td>16.20</td>
-      <td>MOMENTUM</td>
+      <td>MWG</td>
+      <td>83.80</td>
+      <td>BOTTOM</td>
       <td>BUY NOW</td>
       <td>PASS</td>
-      <td>48.28</td>
-      <td>45.00</td>
-      <td>45</td>
-      <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
-      <td>🔴 BULL TRAP</td>
-      <td>TRUNG TÍNH</td>
-      <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | bull trap | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
+      <td>74.49</td>
+      <td>74.49</td>
+      <td>100</td>
+      <td>🟡 THEO DÕI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
-      <td>QNS</td>
-      <td>48.90</td>
-      <td>MOMENTUM</td>
-      <td>WAIT</td>
+      <td>MSN</td>
+      <td>77.70</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
       <td>PASS</td>
-      <td>44.58</td>
-      <td>44.58</td>
-      <td>45</td>
-      <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
-      <td>🔴 BULL TRAP</td>
-      <td>TRUNG TÍNH</td>
-      <td>YẾU / DỄ HỌC VẸT</td>
-      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market THỊ TRƯỜNG YẾU</td>
+      <td>69.74</td>
+      <td>69.74</td>
+      <td>100</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
-      <td>DIG</td>
-      <td>14.80</td>
+      <td>OIL</td>
+      <td>14.40</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>64.99</td>
+      <td>64.99</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | đáy chất lượng | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HDB</td>
+      <td>27.35</td>
       <td>MOMENTUM</td>
       <td>WATCHLIST</td>
       <td>PASS</td>
-      <td>44.48</td>
-      <td>44.48</td>
+      <td>64.38</td>
+      <td>64.38</td>
+      <td>85</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | đáy chất lượng | Action WATCH/WAIT | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DHC</td>
+      <td>36.25</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>60.74</td>
+      <td>60.74</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HAH</td>
+      <td>57.70</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>57.38</td>
+      <td>57.38</td>
+      <td>82</td>
+      <td>🟠 CHỜ ĐIỂM ĐẸP</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>TRUNG TÍNH</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | đáy chất lượng | Action WATCH/WAIT | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>BID</td>
+      <td>41.75</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>54.53</td>
+      <td>54.53</td>
+      <td>85</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>LPB</td>
+      <td>54.50</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>54.38</td>
+      <td>54.38</td>
+      <td>85</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VPB</td>
+      <td>27.85</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>52.74</td>
+      <td>52.74</td>
+      <td>55</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🟢 ĐÁY CHẤT LƯỢNG</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | quá nóng | đáy chất lượng | Quá nóng không mua đuổi | WF bottom yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VHM</td>
+      <td>160.20</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>49.13</td>
+      <td>49.13</td>
+      <td>55</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | đáy chất lượng | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>BSR</td>
+      <td>29.10</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>45.03</td>
+      <td>45.00</td>
       <td>45</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | bull trap | Bull trap | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>HNG</td>
+      <td>7.60</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>53.63</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>MẪU ÍT</td>
+      <td>ỔN ĐỊNH MẠNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum MẪU ÍT | WF bottom ỔN ĐỊNH MẠNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>CII</td>
+      <td>19.60</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>49.24</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>TRUNG TÍNH</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF bottom trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>STB</td>
+      <td>76.80</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>52.68</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>ỔN ĐỊNH MẠNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom ỔN ĐỊNH MẠNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DIG</td>
+      <td>14.65</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>54.88</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
       <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
       <td>🔴 BULL TRAP</td>
       <td>TRUNG TÍNH</td>
       <td>YẾU / DỄ HỌC VẸT</td>
-      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market THỊ TRƯỜNG YẾU</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
-      <td>BSR</td>
-      <td>28.05</td>
+      <td>VIC</td>
+      <td>222.00</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>50.68</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VRE</td>
+      <td>35.45</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>51.08</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>KHÔNG ĐỦ DỮ LIỆU</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF momentum KHÔNG ĐỦ DỮ LIỆU | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>PVS</td>
+      <td>40.00</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>59.48</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>🔴 BULL TRAP</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | heat ổn nhưng không mua đuổi | bull trap | Action WATCH/WAIT | Bull trap | WF momentum ỔN ĐỊNH VỪA | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>ABB</td>
+      <td>15.20</td>
+      <td>BOTTOM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>56.99</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>🔴 BULL TRAP</td>
+      <td>TRUNG TÍNH</td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | buy now | bull trap | Bull trap | WF momentum TRUNG TÍNH | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>POW</td>
+      <td>14.05</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>50.33</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>SKG</td>
+      <td>9.40</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>51.24</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VCB</td>
+      <td>59.90</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>47.49</td>
+      <td>45.00</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom trung tính | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>BMP</td>
+      <td>161.50</td>
       <td>MOMENTUM</td>
       <td>BUY NOW</td>
       <td>PASS</td>
-      <td>42.63</td>
-      <td>42.63</td>
-      <td>55</td>
+      <td>43.83</td>
+      <td>35.00</td>
+      <td>35</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
-      <td>✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT</td>
-      <td>🟡 HỒI KỸ THUẬT</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>⚫ DAO RƠI</td>
       <td>YẾU / DỄ HỌC VẸT</td>
-      <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | heat khỏe | đáy chất lượng | WF momentum yếu | Market yếu giảm momentum | WF momentum YẾU / DỄ HỌC VẸT | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>GVR</td>
+      <td>36.30</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>42.58</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI</td>
+      <td>⚫ DAO RƠI</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | buy now | heat ổn nhưng không mua đuổi | dao rơi | Dao rơi | WF momentum yếu | WF momentum YẾU / DỄ HỌC VẸT | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
     <tr>
       <td>IVS</td>
@@ -253,17 +1140,161 @@ tr:nth-child(even){background:#0b1220}
       <td>MOMENTUM</td>
       <td>BUY NOW</td>
       <td>PASS</td>
-      <td>47.63</td>
+      <td>56.08</td>
       <td>35.00</td>
       <td>35</td>
       <td>❌ LOẠI</td>
-      <td>THỊ TRƯỜNG YẾU</td>
-      <td>36.52</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
       <td>⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI</td>
       <td>⚫ DAO RƠI</td>
       <td>TRUNG TÍNH</td>
       <td>TRUNG TÍNH</td>
-      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | Market yếu giảm momentum | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market THỊ TRƯỜNG YẾU</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>GMD</td>
+      <td>81.60</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>49.83</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>DXG</td>
+      <td>16.20</td>
+      <td>MOMENTUM</td>
+      <td>BUY NOW</td>
+      <td>PASS</td>
+      <td>56.08</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td>⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH</td>
+      <td>⚫ DAO RƠI</td>
+      <td>TRUNG TÍNH</td>
+      <td>TRUNG TÍNH</td>
+      <td>risk pass | buy now | dao rơi | Dao rơi | WF momentum trung tính | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>QNS</td>
+      <td>48.70</td>
+      <td>MOMENTUM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>48.08</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>VIX</td>
+      <td>19.05</td>
+      <td>MOMENTUM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>50.83</td>
+      <td>35.00</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>ỔN ĐỊNH VỪA</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom ỔN ĐỊNH VỪA | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>CEO</td>
+      <td>17.40</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>33.49</td>
+      <td>33.49</td>
+      <td>45</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>🔴 BULL TRAP</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | bull trap | Action WATCH/WAIT | Bull trap | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>TCL</td>
+      <td>34.65</td>
+      <td>BOTTOM</td>
+      <td>WAIT</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>SRC</td>
+      <td>53.00</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
+    </tr>
+    <tr>
+      <td>AAA</td>
+      <td>7.14</td>
+      <td>BOTTOM</td>
+      <td>WATCHLIST</td>
+      <td>PASS</td>
+      <td>30.99</td>
+      <td>30.99</td>
+      <td>35</td>
+      <td>❌ LOẠI</td>
+      <td>SIDEWAY / TRUNG TÍNH</td>
+      <td>41.63</td>
+      <td></td>
+      <td>⚫ DAO RƠI</td>
+      <td></td>
+      <td>YẾU / DỄ HỌC VẸT</td>
+      <td>risk pass | watch/wait | dao rơi | Action WATCH/WAIT | Dao rơi | WF bottom yếu | WF bottom YẾU / DỄ HỌC VẸT | Market SIDEWAY / TRUNG TÍNH</td>
     </tr>
   </tbody>
 </table></div>

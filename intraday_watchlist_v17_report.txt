@@ -2,4 +2,12 @@
 
 Nguồn: <b>v17_final_decision.csv</b>
 Output: <b>intraday_watchlist_v17.csv</b>
-Số mã theo dõi: <b>0</b>
+Số mã theo dõi: <b>6</b>
+
+<b>TOP WATCHLIST RENDER</b>
+🔹 <b>MWG</b> | 🟡 THEO DÕI | Điểm 74.49 | WATCH
+🔹 <b>MSN</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 69.74 | WAIT
+🔹 <b>OIL</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 64.99 | WAIT
+🔹 <b>HDB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 64.38 | WAIT
+🔹 <b>DHC</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 60.74 | WAIT
+🔹 <b>HAH</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 57.38 | WAIT

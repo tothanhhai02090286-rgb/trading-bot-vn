@@ -1,6 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
+HDB,OK,2026-05-05,54.24,0.52,0.86,-0.75,1.15,26,16,61.54,52.94,0.16,6.35,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PVS,OK,2026-05-05,53.85,5.11,1.37,8.02,5.48,18,10,55.56,54.7,1.53,6.39,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+ABB,OK,2026-05-05,57.14,0.98,1.25,0.0,2.05,24,13,54.17,44.77,0.69,5.58,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HAH,OK,2026-05-05,55.05,2.77,1.9,-0.18,4.81,26,14,53.85,44.84,0.59,8.15,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+CII,OK,2026-05-05,48.94,-2.12,0.99,-2.12,-5.38,23,12,52.17,50.33,0.64,5.35,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 IVS,OK,2026-05-05,36.36,-2.88,1.59,-1.54,0.0,26,13,50.0,41.3,0.5,7.88,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-DIG,OK,2026-05-05,44.68,-0.21,0.87,1.78,-1.72,23,11,47.83,45.08,-0.78,6.87,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+DIG,OK,2026-05-05,44.68,-0.21,0.87,1.78,-1.72,23,11,47.83,45.08,-0.79,6.87,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 DXG,OK,2026-05-05,52.0,2.86,0.77,5.86,1.32,23,11,47.83,47.67,-0.36,5.35,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-QNS,OK,2026-05-05,58.93,1.94,2.06,4.52,1.32,23,11,47.83,45.88,0.04,11.48,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HNG,OK,2026-05-05,81.82,6.71,1.54,1.45,9.38,3,3,100.0,69.44,2.69,6.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+BMP,OK,2026-05-05,70.78,6.22,0.43,1.28,-0.66,19,8,42.11,41.52,-0.13,5.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
 BSR,OK,2026-05-05,50.0,4.18,2.0,7.0,3.68,17,7,41.18,40.02,-0.94,6.59,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VHM,OK,2026-05-05,68.56,11.73,1.12,1.48,5.66,8,3,37.5,43.75,1.09,3.25,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VPB,OK,2026-05-05,57.0,3.1,1.54,2.19,1.45,24,9,37.5,41.98,-0.68,6.25,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+GVR,OK,2026-05-05,58.03,6.51,1.16,7.98,9.32,19,6,31.58,39.39,-0.94,5.63,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VRE,OK,2026-05-05,81.3,20.91,1.8,21.17,18.92,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.

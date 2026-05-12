@@ -1,9 +1,39 @@
 ✅ <b>V15.2 MOMENTUM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v143_heat_combo.csv</b>
-Số mã kiểm tra: <b>5</b>
+Số mã kiểm tra: <b>15</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
+
+🔹 <b>HDB</b> | ỔN ĐỊNH VỪA
+Đoạn test: 26 | Đoạn dương: 16 | Tỷ lệ dương: 61.54%
+Win TB: 52.94% | Lợi TB: 0.16%
+RSI: 54.24 | Dist MA20: 0.52% | Volume: 0.86
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 18 | Đoạn dương: 10 | Tỷ lệ dương: 55.56%
+Win TB: 54.70% | Lợi TB: 1.53%
+RSI: 53.85 | Dist MA20: 5.11% | Volume: 1.37
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>ABB</b> | TRUNG TÍNH
+Đoạn test: 24 | Đoạn dương: 13 | Tỷ lệ dương: 54.17%
+Win TB: 44.77% | Lợi TB: 0.69%
+RSI: 57.14 | Dist MA20: 0.98% | Volume: 1.25
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>HAH</b> | TRUNG TÍNH
+Đoạn test: 26 | Đoạn dương: 14 | Tỷ lệ dương: 53.85%
+Win TB: 44.84% | Lợi TB: 0.59%
+RSI: 55.05 | Dist MA20: 2.77% | Volume: 1.90
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>CII</b> | TRUNG TÍNH
+Đoạn test: 23 | Đoạn dương: 12 | Tỷ lệ dương: 52.17%
+Win TB: 50.33% | Lợi TB: 0.64%
+RSI: 48.94 | Dist MA20: -2.12% | Volume: 0.99
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
 🔹 <b>IVS</b> | TRUNG TÍNH
 Đoạn test: 26 | Đoạn dương: 13 | Tỷ lệ dương: 50.00%
@@ -13,7 +43,7 @@ Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
 🔹 <b>DIG</b> | TRUNG TÍNH
 Đoạn test: 23 | Đoạn dương: 11 | Tỷ lệ dương: 47.83%
-Win TB: 45.08% | Lợi TB: -0.78%
+Win TB: 45.08% | Lợi TB: -0.79%
 RSI: 44.68 | Dist MA20: -0.21% | Volume: 0.87
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
@@ -22,15 +52,3 @@ Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 Win TB: 47.67% | Lợi TB: -0.36%
 RSI: 52.00 | Dist MA20: 2.86% | Volume: 0.77
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-
-🔹 <b>QNS</b> | TRUNG TÍNH
-Đoạn test: 23 | Đoạn dương: 11 | Tỷ lệ dương: 47.83%
-Win TB: 45.88% | Lợi TB: 0.04%
-RSI: 58.93 | Dist MA20: 1.94% | Volume: 2.06
-Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-
-🔹 <b>BSR</b> | YẾU / DỄ HỌC VẸT
-Đoạn test: 17 | Đoạn dương: 7 | Tỷ lệ dương: 41.18%
-Win TB: 40.02% | Lợi TB: -0.94%
-RSI: 50.00 | Dist MA20: 4.18% | Volume: 2.00
-Lý do: Mẫu không ổn định qua các đoạn thời gian.
