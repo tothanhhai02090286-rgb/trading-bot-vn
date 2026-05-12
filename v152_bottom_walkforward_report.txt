@@ -1,46 +1,31 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>52</b>
+Số mã kiểm tra: <b>5</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>CTG</b> | ỔN ĐỊNH VỪA
-Đoạn test: 26 | Đoạn dương: 18 | Tỷ lệ dương: 69.23%
-Win TB: 55.48% | Lợi TB: 0.79%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>DXG</b> | TRUNG TÍNH
+Đoạn test: 23 | Đoạn dương: 12 | Tỷ lệ dương: 52.17%
+Win TB: 48.83% | Lợi TB: -0.20%
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
-🔹 <b>LPB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 22 | Đoạn dương: 15 | Tỷ lệ dương: 68.18%
-Win TB: 62.71% | Lợi TB: 2.37%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>BSR</b> | TRUNG TÍNH
+Đoạn test: 21 | Đoạn dương: 10 | Tỷ lệ dương: 47.62%
+Win TB: 37.94% | Lợi TB: -1.15%
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
-🔹 <b>PHP</b> | ỔN ĐỊNH VỪA
-Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
-Win TB: 54.34% | Lợi TB: 1.01%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>IVS</b> | TRUNG TÍNH
+Đoạn test: 26 | Đoạn dương: 12 | Tỷ lệ dương: 46.15%
+Win TB: 38.94% | Lợi TB: 0.56%
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 
-🔹 <b>BID</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 16 | Tỷ lệ dương: 66.67%
-Win TB: 57.89% | Lợi TB: 0.31%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>QNS</b> | YẾU / DỄ HỌC VẸT
+Đoạn test: 23 | Đoạn dương: 9 | Tỷ lệ dương: 39.13%
+Win TB: 45.51% | Lợi TB: 0.04%
+Lý do: Mẫu không ổn định qua các đoạn thời gian.
 
-🔹 <b>VPB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 16 | Tỷ lệ dương: 66.67%
-Win TB: 61.07% | Lợi TB: 0.48%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>ABB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 20 | Đoạn dương: 13 | Tỷ lệ dương: 65.00%
-Win TB: 46.50% | Lợi TB: 1.02%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>HPG</b> | ỔN ĐỊNH VỪA
-Đoạn test: 22 | Đoạn dương: 14 | Tỷ lệ dương: 63.64%
-Win TB: 58.72% | Lợi TB: 1.17%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>HDB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 27 | Đoạn dương: 17 | Tỷ lệ dương: 62.96%
-Win TB: 53.91% | Lợi TB: 0.43%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>DIG</b> | YẾU / DỄ HỌC VẸT
+Đoạn test: 23 | Đoạn dương: 8 | Tỷ lệ dương: 34.78%
+Win TB: 38.39% | Lợi TB: -1.42%
+Lý do: Mẫu không ổn định qua các đoạn thời gian.

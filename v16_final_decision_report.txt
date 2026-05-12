@@ -1,56 +1,21 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>52</b>
+Số mã tổng hợp: <b>5</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>LPB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>BSR</b> | 🟢 ƯU TIÊN CAO | Điểm 85.00
 Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
+WF: Momentum YẾU / DỄ HỌC VẸT | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>DXG</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 59.00
 Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
+Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
 
-🔹 <b>CII</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+🔹 <b>IVS</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 52.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>PHP</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>CTG</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>KSB</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>VGC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>EIB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>VHC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
+Lý do: Cần thêm xác nhận hoặc chờ chỉnh.
