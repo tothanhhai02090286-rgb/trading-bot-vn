@@ -1,0 +1,40 @@
+name: TEST REALTIME MAC
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-realtime:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install vnstock pandas numpy yfinance requests python-dotenv
+
+      - name: Ensure watchlist exists
+        run: |
+          if [ ! -f intraday_watchlist.csv ] && [ -f intraday_watchlist_v17.csv ]; then
+            cp intraday_watchlist_v17.csv intraday_watchlist.csv
+          fi
+          ls -lh intraday_watchlist*.csv || true
+
+      - name: Test realtime shell syntax
+        run: |
+          bash -n run_realtime_mac.sh
+
+      - name: Test realtime python syntax
+        run: |
+          python3 -m py_compile realtime/intraday_alert_bot.py
+
+      - name: Test realtime shell
+        run: |
+          chmod +x run_realtime_mac.sh
+          timeout 30s ./run_realtime_mac.sh || true
