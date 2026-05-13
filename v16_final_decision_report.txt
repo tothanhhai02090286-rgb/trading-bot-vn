@@ -1,33 +1,38 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>33</b>
+Số mã tổng hợp: <b>46</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>HAH</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum TRUNG TÍNH | Bottom ỔN ĐỊNH VỪA
+🔹 <b>BID</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH VỪA | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>BAF</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
 🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>MSN</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>HPG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>MWG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+🔹 <b>VIC</b> | 🟢 ƯU TIÊN CAO | Điểm 94.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH MẠNH | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>OIL</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
+🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH VỪA | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
 🔹 <b>LPB</b> | 🟢 ƯU TIÊN CAO | Điểm 88.00
@@ -35,22 +40,17 @@ Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>DHC</b> | 🟢 ƯU TIÊN CAO | Điểm 87.00
+🔹 <b>OIL</b> | 🟢 ƯU TIÊN CAO | Điểm 88.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>CTG</b> | 🟢 ƯU TIÊN CAO | Điểm 88.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>TCB</b> | 🟢 ƯU TIÊN CAO | Điểm 87.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>BID</b> | 🟢 ƯU TIÊN CAO | Điểm 84.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 81.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum YẾU / DỄ HỌC VẸT | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>PVS</b> | 🟡 THEO DÕI | Điểm 70.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum ỔN ĐỊNH VỪA | Bottom TRUNG TÍNH
-Lý do: Có tín hiệu tốt nhưng chưa đủ ưu tiên cao.
