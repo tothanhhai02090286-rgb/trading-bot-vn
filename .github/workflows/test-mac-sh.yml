@@ -1,0 +1,43 @@
+name: TEST MAC SH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-sh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install vnstock pandas numpy python-dotenv yfinance requests
+
+      - name: Test shell syntax
+        run: |
+          bash -n run_daily_mac.sh
+
+      - name: Test python syntax
+        run: |
+          python3 -m py_compile run_daily_system.py
+          python3 -m py_compile system_health_check.py
+          python3 -m py_compile v141_ai_pattern_quality_strict_vi.py
+          python3 -m py_compile v142_ma20_heat_backtest_vi.py
+          python3 -m py_compile v143_heat_combo_vi.py
+          python3 -m py_compile v151_bottom_quality_engine_modular_vi.py
+          python3 -m py_compile v152_bottom_walkforward_vi.py
+          python3 -m py_compile v152_momentum_walkforward_vi.py
+          python3 -m py_compile v16_final_decision_engine_vi.py
+          python3 -m py_compile v17_regime_breadth_final_engine_vi.py
+          python3 -m py_compile v17_export_intraday_watchlist_vi.py
+
+      - name: Test run shell
+        run: |
+          chmod +x run_daily_mac.sh
+          ./run_daily_mac.sh || true
