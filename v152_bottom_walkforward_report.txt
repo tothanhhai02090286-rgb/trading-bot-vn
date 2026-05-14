@@ -6,41 +6,41 @@ Số mã kiểm tra: <b>29</b>
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
 🔹 <b>CTG</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 24 | Đoạn dương: 17 | Tỷ lệ dương: 70.83%
-Win TB: 53.77% | Lợi TB: 0.72%
+Đoạn test: 17 | Đoạn dương: 15 | Tỷ lệ dương: 88.24%
+Win TB: 60.50% | Lợi TB: 1.34%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>BSR</b> | ỔN ĐỊNH VỪA
-Đoạn test: 21 | Đoạn dương: 14 | Tỷ lệ dương: 66.67%
-Win TB: 48.75% | Lợi TB: 0.13%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 25 | Đoạn dương: 16 | Tỷ lệ dương: 64.00%
-Win TB: 57.12% | Lợi TB: 1.60%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>BID</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 15 | Tỷ lệ dương: 62.50%
-Win TB: 56.20% | Lợi TB: 0.28%
+🔹 <b>TCB</b> | ỔN ĐỊNH VỪA
+Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
+Win TB: 54.36% | Lợi TB: 0.37%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>ABB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 16 | Đoạn dương: 10 | Tỷ lệ dương: 62.50%
-Win TB: 46.52% | Lợi TB: 0.99%
+Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
+Win TB: 46.43% | Lợi TB: 0.81%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>MSB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 23 | Đoạn dương: 14 | Tỷ lệ dương: 60.87%
-Win TB: 50.65% | Lợi TB: 0.13%
+Đoạn test: 17 | Đoạn dương: 11 | Tỷ lệ dương: 64.71%
+Win TB: 48.92% | Lợi TB: 0.02%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>VHM</b> | ỔN ĐỊNH VỪA
-Đoạn test: 17 | Đoạn dương: 10 | Tỷ lệ dương: 58.82%
-Win TB: 53.62% | Lợi TB: 0.81%
+Đoạn test: 13 | Đoạn dương: 8 | Tỷ lệ dương: 61.54%
+Win TB: 55.05% | Lợi TB: 1.55%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>GAS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 24 | Đoạn dương: 14 | Tỷ lệ dương: 58.33%
-Win TB: 52.91% | Lợi TB: 0.38%
+🔹 <b>BMP</b> | ỔN ĐỊNH VỪA
+Đoạn test: 18 | Đoạn dương: 11 | Tỷ lệ dương: 61.11%
+Win TB: 57.43% | Lợi TB: 1.61%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 20 | Đoạn dương: 12 | Tỷ lệ dương: 60.00%
+Win TB: 54.31% | Lợi TB: 1.29%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>DHA</b> | ỔN ĐỊNH VỪA
+Đoạn test: 15 | Đoạn dương: 9 | Tỷ lệ dương: 60.00%
+Win TB: 54.53% | Lợi TB: 0.20%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
