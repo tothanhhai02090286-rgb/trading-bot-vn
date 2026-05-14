@@ -135,11 +135,11 @@ def analyze_symbol_walkforward(symbol: str) -> dict:
     current_row = feat.iloc[-1]
 
     cfg = WalkForwardConfig(
-        train_months=2,
+        train_months=3,
         test_months=1,
         step_months=1,
-        min_train_samples=10,
-        min_test_samples=3,
+        min_train_samples=15,
+        min_test_samples=5,
         return_col="ret_t5_pct",
     )
 
