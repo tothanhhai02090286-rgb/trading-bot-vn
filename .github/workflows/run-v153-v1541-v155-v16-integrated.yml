@@ -1,0 +1,249 @@
+name: Run V15.3 V15.4.1 V15.5 V16 Integrated
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # 15:30 giờ Việt Nam = 08:30 UTC
+    - cron: "30 8 * * 1-5"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  run-integrated-pipeline:
+    name: Run integrated research risk survival meta pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show workspace files
+        run: |
+          echo "===== Workspace ====="
+          pwd
+          ls -la
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+          if [ -f requirements_intraday.txt ]; then
+            pip install -r requirements_intraday.txt
+          fi
+
+          pip install pandas numpy
+
+      - name: Check required python files
+        run: |
+          echo "===== Kiểm tra file engine ====="
+
+          test -f v153_pro_research_upgrade_vi.py || {
+            echo "THIẾU FILE: v153_pro_research_upgrade_vi.py"
+            exit 1
+          }
+
+          test -f v1541_portfolio_risk_exit_engine_vi.py || {
+            echo "THIẾU FILE: v1541_portfolio_risk_exit_engine_vi.py"
+            exit 1
+          }
+
+          test -f v155_equity_survival_engine_vi.py || {
+            echo "THIẾU FILE: v155_equity_survival_engine_vi.py"
+            exit 1
+          }
+
+          test -f v16_meta_allocation_intelligence_vi.py || {
+            echo "THIẾU FILE: v16_meta_allocation_intelligence_vi.py"
+            exit 1
+          }
+
+          echo "Đủ file engine."
+
+      - name: Syntax check
+        run: |
+          echo "===== Kiểm tra syntax Python ====="
+
+          python -m py_compile v153_pro_research_upgrade_vi.py
+          python -m py_compile v1541_portfolio_risk_exit_engine_vi.py
+          python -m py_compile v155_equity_survival_engine_vi.py
+          python -m py_compile v16_meta_allocation_intelligence_vi.py
+
+          echo "Syntax OK."
+
+      - name: Run V15.3 PRO research layer
+        run: |
+          echo "===== RUN V15.3 PRO ====="
+          python3 v153_pro_research_upgrade_vi.py
+
+      - name: Check V15.3 outputs
+        run: |
+          echo "===== Kiểm tra output V15.3 ====="
+
+          test -f v153_pro_research.csv || {
+            echo "THIẾU OUTPUT: v153_pro_research.csv"
+            exit 1
+          }
+
+          test -f v153_pro_research_detail.csv || {
+            echo "THIẾU OUTPUT: v153_pro_research_detail.csv"
+            exit 1
+          }
+
+          test -f v153_pro_research_portfolio.csv || {
+            echo "THIẾU OUTPUT: v153_pro_research_portfolio.csv"
+            exit 1
+          }
+
+          echo "Output V15.3 OK."
+          ls -lh v153_pro_research*
+
+      - name: Run V15.4.1 portfolio risk exit layer
+        run: |
+          echo "===== RUN V15.4.1 ====="
+          python3 v1541_portfolio_risk_exit_engine_vi.py
+
+      - name: Check V15.4.1 outputs
+        run: |
+          echo "===== Kiểm tra output V15.4.1 ====="
+
+          test -f v1541_portfolio_risk_exit.csv || {
+            echo "THIẾU OUTPUT: v1541_portfolio_risk_exit.csv"
+            exit 1
+          }
+
+          test -f v1541_portfolio_equity.csv || {
+            echo "THIẾU OUTPUT: v1541_portfolio_equity.csv"
+            exit 1
+          }
+
+          echo "Output V15.4.1 OK."
+          ls -lh v1541_portfolio*
+
+      - name: Run V15.5 equity survival layer
+        run: |
+          echo "===== RUN V15.5 ====="
+          python3 v155_equity_survival_engine_vi.py
+
+      - name: Check V15.5 outputs
+        run: |
+          echo "===== Kiểm tra output V15.5 ====="
+
+          test -f v155_equity_survival_allocation.csv || {
+            echo "THIẾU OUTPUT: v155_equity_survival_allocation.csv"
+            exit 1
+          }
+
+          test -f v155_equity_survival_equity.csv || {
+            echo "THIẾU OUTPUT: v155_equity_survival_equity.csv"
+            exit 1
+          }
+
+          test -f v155_equity_survival_report.txt || {
+            echo "THIẾU OUTPUT: v155_equity_survival_report.txt"
+            exit 1
+          }
+
+          test -f v155_equity_survival.html || {
+            echo "THIẾU OUTPUT: v155_equity_survival.html"
+            exit 1
+          }
+
+          echo "Output V15.5 OK."
+          ls -lh v155_equity_survival*
+
+      - name: Run V16 meta allocation intelligence layer
+        run: |
+          echo "===== RUN V16 ====="
+          python3 v16_meta_allocation_intelligence_vi.py
+
+      - name: Check V16 outputs
+        run: |
+          echo "===== Kiểm tra output V16 ====="
+
+          test -f v16_meta_allocation.csv || {
+            echo "THIẾU OUTPUT: v16_meta_allocation.csv"
+            exit 1
+          }
+
+          test -f v16_meta_risk_state.csv || {
+            echo "THIẾU OUTPUT: v16_meta_risk_state.csv"
+            exit 1
+          }
+
+          test -f v16_capital_map.csv || {
+            echo "THIẾU OUTPUT: v16_capital_map.csv"
+            exit 1
+          }
+
+          test -f v16_rotation_plan.csv || {
+            echo "THIẾU OUTPUT: v16_rotation_plan.csv"
+            exit 1
+          }
+
+          test -f v16_meta_allocation_report.txt || {
+            echo "THIẾU OUTPUT: v16_meta_allocation_report.txt"
+            exit 1
+          }
+
+          test -f v16_meta_allocation.html || {
+            echo "THIẾU OUTPUT: v16_meta_allocation.html"
+            exit 1
+          }
+
+          echo "Output V16 OK."
+          ls -lh v16_*
+
+      - name: Print final V16 report
+        if: always()
+        run: |
+          echo "===== FINAL REPORT V16 ====="
+
+          if [ -f v16_meta_allocation_report.txt ]; then
+            cat v16_meta_allocation_report.txt
+          else
+            echo "Không có report V16."
+          fi
+
+      - name: Upload integrated artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v153-v1541-v155-v16-integrated-output
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            v153_pro_research.csv
+            v153_pro_research_detail.csv
+            v153_pro_research_portfolio.csv
+            v153_pro_research.html
+            v153_pro_research_report.txt
+
+            v1541_portfolio_risk_exit.csv
+            v1541_portfolio_risk_exit_detail.csv
+            v1541_portfolio_equity.csv
+            v1541_portfolio_risk_exit.html
+            v1541_portfolio_risk_exit_report.txt
+
+            v155_equity_survival_allocation.csv
+            v155_equity_survival_equity.csv
+            v155_equity_survival_report.txt
+            v155_equity_survival.html
+
+            v16_meta_allocation.csv
+            v16_meta_risk_state.csv
+            v16_capital_map.csv
+            v16_rotation_plan.csv
+            v16_meta_allocation_report.txt
+            v16_meta_allocation.html
