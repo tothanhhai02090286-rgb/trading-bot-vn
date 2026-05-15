@@ -1,0 +1,37 @@
+name: run-v153-pro-research
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v153:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install libs
+        run: |
+          pip install --upgrade pip
+          pip install pandas numpy vnstock yfinance lxml html5lib
+
+      - name: Run V15.3 PRO Research
+        run: |
+          python3 v153_pro_research_upgrade_vi.py
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: v153-pro-research-output
+          path: |
+            v153_pro_research.csv
+            v153_pro_research_detail.csv
+            v153_pro_research_portfolio.csv
+            v153_pro_research.html
+            v153_pro_research_report.txt
