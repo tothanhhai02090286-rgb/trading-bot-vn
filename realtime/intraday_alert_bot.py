@@ -330,6 +330,9 @@ def select_top_watchlist(df: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame()
 
     out = df.copy()
+    if "Meta Allocation %" not in out.columns:
+
+    out["Meta Allocation %"] = 0
     out["Meta Allocation %"] = pd.to_numeric(out.get("Meta Allocation %", 0), errors="coerce").fillna(0)
     out["priority_group"] = 0
 
