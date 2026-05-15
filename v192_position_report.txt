@@ -1,0 +1,17 @@
+================================================================================
+V19.2 — REALTIME POSITION TELEGRAM DESK
+V19.2 — Bàn quản lý vị thế realtime qua Telegram
+================================================================================
+Generated: 2026-05-16 06:53:21
+Positions: 5
+Alerts: 2
+
+=== TÓM TẮT HÀNH ĐỘNG ===
+- THEO DÕI VỊ THẾ: 3
+- THOÁT VỊ THẾ: 2
+
+=== GIẢI THÍCH ===
+V18.2 ENTRY: tín hiệu điểm mua / thị trường.
+V19.2 POSITION: quản lý mã đang giữ.
+T+2.5: chưa đủ ngày thì không báo bán thật.
+Smart Stop: stop thông minh gồm Hard Stop, ATR Stop, MA20 Stop, Swing Low Stop, Trailing Stop.

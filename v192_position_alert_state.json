@@ -1,0 +1,11 @@
+{
+  "date": "2026-05-16",
+  "last_alert_ts": {
+    "EIB:THOÁT VỊ THẾ": 1778889203,
+    "BFC:THOÁT VỊ THẾ": 1778889203
+  },
+  "sent": [
+    "BFC:THOÁT VỊ THẾ",
+    "EIB:THOÁT VỊ THẾ"
+  ]
+}
