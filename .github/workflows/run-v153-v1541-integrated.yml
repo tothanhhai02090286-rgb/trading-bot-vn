@@ -1,0 +1,46 @@
+name: Run V15.3 + V15.4.1 Integrated
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-research-risk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install libs
+        run: |
+          pip install --upgrade pip
+          pip install pandas numpy
+
+      - name: Run V15.3 PRO Research
+        run: |
+          python3 v153_pro_research_upgrade_vi.py
+
+      - name: Run V15.4.1 Portfolio Risk
+        run: |
+          python3 v1541_portfolio_risk_exit_engine_vi.py
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: v153-v1541-integrated-output
+          path: |
+            v153_pro_research.csv
+            v153_pro_research_detail.csv
+            v153_pro_research_portfolio.csv
+            v153_pro_research.html
+            v153_pro_research_report.txt
+            v1541_portfolio_risk_exit.csv
+            v1541_portfolio_risk_exit_detail.csv
+            v1541_portfolio_equity.csv
+            v1541_portfolio_risk_exit.html
+            v1541_portfolio_risk_exit_report.txt
