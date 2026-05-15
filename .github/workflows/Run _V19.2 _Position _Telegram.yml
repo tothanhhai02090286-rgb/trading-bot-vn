@@ -1,0 +1,40 @@
+name: Run V19.2 Position Telegram Desk
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v192:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install pandas numpy requests
+
+      - name: Run V19.2
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python v19.danh_muc_mua/v192_realtime_position_telegram_desk_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+
+          git add *.csv *.txt *.json || true
+
+          git commit -m "Update V19.2 outputs" || echo "No changes"
+
+          git push
