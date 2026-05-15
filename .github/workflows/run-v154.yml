@@ -1,0 +1,36 @@
+name: Run V15.4 Portfolio Risk
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v154:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install libs
+        run: |
+          pip install pandas numpy
+
+      - name: Run V15.4
+        run: |
+          python3 v154_portfolio_risk_exit_engine_vi.py
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: v154-output
+          path: |
+            v154_portfolio_risk_exit.csv
+            v154_portfolio_risk_exit_detail.csv
+            v154_portfolio_equity.csv
+            v154_portfolio_risk_exit.html
+            v154_portfolio_risk_exit_report.txt
