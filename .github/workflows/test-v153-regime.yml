@@ -1,0 +1,36 @@
+name: Test V153 Regime Aware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v153:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install libs
+        run: |
+          pip install -r requirements.txt
+          pip install yfinance
+
+      - name: Run V153 Regime Aware
+        run: python3 v153_regime_aware_walkforward_vi.py
+
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: v153-regime-output
+          path: |
+            v153_regime_aware_walkforward.csv
+            v153_regime_aware_walkforward_detail.csv
+            v153_regime_aware_walkforward.html
+            v153_regime_aware_report.txt
