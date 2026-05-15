@@ -41,6 +41,132 @@ jobs:
           python v17_regime_breadth_final_engine_vi.py
           python v17_export_intraday_watchlist_vi.py
 
+      - name: Normalize intraday watchlist schema for V18.2
+        run: |
+          python - <<'PY'
+          import os
+          import pandas as pd
+
+          path = "intraday_watchlist_v17.csv"
+
+          if not os.path.exists(path):
+              print("Không có intraday_watchlist_v17.csv để chuẩn hóa.")
+              raise SystemExit(0)
+
+          df = pd.read_csv(path)
+
+          # Chuẩn hóa cột Mã
+          if "Mã" not in df.columns:
+              for c in ["Ma", "Symbol", "Ticker", "ticker", "Mã CP"]:
+                  if c in df.columns:
+                      df["Mã"] = df[c]
+                      break
+
+          if "Mã" not in df.columns:
+              print("Không có cột Mã/Symbol/Ticker. Giữ nguyên file, không chuẩn hóa được.")
+              df.to_csv(path, index=False, encoding="utf-8-sig")
+              raise SystemExit(0)
+
+          df["Mã"] = df["Mã"].astype(str).str.upper().str.strip()
+          df = df[df["Mã"].notna() & (df["Mã"] != "") & (df["Mã"] != "NAN")].copy()
+
+          # Final Decision an toàn cho V18.2
+          if "Final Decision" not in df.columns:
+              if "Hành động" in df.columns:
+                  action_text = df["Hành động"].astype(str).str.upper()
+                  df["Final Decision"] = "WATCHLIST"
+                  df.loc[action_text.str.contains("BUY NOW|MUA|TOP MUA", na=False), "Final Decision"] = "WATCHLIST"
+                  df.loc[action_text.str.contains("AVOID|BỎ QUA|REDUCE|GIẢM", na=False), "Final Decision"] = "AVOID"
+              elif "Nhóm realtime" in df.columns:
+                  group_text = df["Nhóm realtime"].astype(str).str.upper()
+                  df["Final Decision"] = "WATCHLIST"
+                  df.loc[group_text.str.contains("BỎ QUA|AVOID", na=False), "Final Decision"] = "AVOID"
+              else:
+                  df["Final Decision"] = "WATCHLIST"
+
+          # Nhóm realtime an toàn
+          if "Nhóm realtime" not in df.columns:
+              df["Nhóm realtime"] = "THEO DÕI"
+
+          # Các cột risk/meta bắt buộc cho V18.2
+          if "Decision Mode" not in df.columns:
+              df["Decision Mode"] = "LEGACY WATCH MODE"
+
+          if "Meta Allocation %" not in df.columns:
+              df["Meta Allocation %"] = 1.0
+
+          if "Meta Exposure" not in df.columns:
+              df["Meta Exposure"] = 0.0
+
+          if "Regime Strength" not in df.columns:
+              df["Regime Strength"] = "UNKNOWN"
+
+          if "Equity State" not in df.columns:
+              df["Equity State"] = "UNKNOWN"
+
+          if "Ưu tiên" not in df.columns:
+              df["Ưu tiên"] = "THẤP"
+
+          if "Buy zone thấp %" not in df.columns:
+              df["Buy zone thấp %"] = -1.5
+
+          if "Buy zone cao %" not in df.columns:
+              df["Buy zone cao %"] = 1.5
+
+          if "Stoploss tham khảo %" not in df.columns:
+              df["Stoploss tham khảo %"] = -5.0
+
+          if "Ghi chú V18" not in df.columns:
+              df["Ghi chú V18"] = "Legacy watchlist được chuẩn hóa cho V18.2; chỉ WATCH/TEST nhỏ, không BUY lớn."
+
+          # Ép numeric an toàn
+          for col in [
+              "Meta Allocation %",
+              "Meta Exposure",
+              "Buy zone thấp %",
+              "Buy zone cao %",
+              "Stoploss tham khảo %",
+          ]:
+              df[col] = pd.to_numeric(df[col], errors="coerce")
+
+          df["Meta Allocation %"] = df["Meta Allocation %"].fillna(1.0)
+          df["Meta Exposure"] = df["Meta Exposure"].fillna(0.0)
+          df["Buy zone thấp %"] = df["Buy zone thấp %"].fillna(-1.5)
+          df["Buy zone cao %"] = df["Buy zone cao %"].fillna(1.5)
+          df["Stoploss tham khảo %"] = df["Stoploss tham khảo %"].fillna(-5.0)
+
+          # Không để workflow cache-only đẩy BUY mạnh sang V18.2.
+          # Cache-only chỉ là nguồn phụ trợ, nên nếu không có risk V16/V17.1 thật thì giữ ở WATCHLIST.
+          df.loc[df["Decision Mode"].astype(str).str.upper().eq("LEGACY WATCH MODE"), "Final Decision"] = (
+              df.loc[df["Decision Mode"].astype(str).str.upper().eq("LEGACY WATCH MODE"), "Final Decision"]
+              .replace({"BUY NOW": "WATCHLIST", "MUA": "WATCHLIST", "TOP MUA THẬT": "WATCHLIST"})
+          )
+
+          # Sắp xếp cột quan trọng lên đầu, giữ nguyên các cột cũ phía sau
+          front_cols = [
+              "Mã",
+              "Nhóm realtime",
+              "Final Decision",
+              "Decision Mode",
+              "Meta Allocation %",
+              "Meta Exposure",
+              "Regime Strength",
+              "Equity State",
+              "Ưu tiên",
+              "Buy zone thấp %",
+              "Buy zone cao %",
+              "Stoploss tham khảo %",
+              "Ghi chú V18",
+          ]
+
+          other_cols = [c for c in df.columns if c not in front_cols]
+          df = df[front_cols + other_cols]
+
+          df.to_csv(path, index=False, encoding="utf-8-sig")
+          print(f"Đã chuẩn hóa {path} cho V18.2. Rows={len(df)}, Columns={len(df.columns)}")
+          print("Các cột đầu:", list(df.columns[:13]))
+          PY
+
       - name: Commit outputs
         run: |
           git config --global user.name "github-actions"
