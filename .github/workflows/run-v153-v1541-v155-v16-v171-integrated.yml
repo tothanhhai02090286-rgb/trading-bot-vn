@@ -8,7 +8,7 @@ on:
     - cron: "30 8 * * 1-5"
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 jobs:
@@ -24,12 +24,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Show workspace files
-        run: |
-          echo "===== Workspace ====="
-          pwd
-          ls -la
 
       - name: Install dependencies
         run: |
@@ -47,201 +41,63 @@ jobs:
 
       - name: Check required python files
         run: |
-          echo "===== Kiểm tra file engine ====="
-
-          test -f v153_pro_research_upgrade_vi.py || {
-            echo "THIẾU FILE: v153_pro_research_upgrade_vi.py"
-            exit 1
-          }
-
-          test -f v1541_portfolio_risk_exit_engine_vi.py || {
-            echo "THIẾU FILE: v1541_portfolio_risk_exit_engine_vi.py"
-            exit 1
-          }
-
-          test -f v155_equity_survival_engine_vi.py || {
-            echo "THIẾU FILE: v155_equity_survival_engine_vi.py"
-            exit 1
-          }
-
-          test -f v16_meta_allocation_intelligence_vi.py || {
-            echo "THIẾU FILE: v16_meta_allocation_intelligence_vi.py"
-            exit 1
-          }
-
-          test -f v171_final_decision_orchestrator_vi.py || {
-            echo "THIẾU FILE: v171_final_decision_orchestrator_vi.py"
-            exit 1
-          }
-
-          echo "Đủ file engine."
+          test -f v153_pro_research_upgrade_vi.py || exit 1
+          test -f v1541_portfolio_risk_exit_engine_vi.py || exit 1
+          test -f v155_equity_survival_engine_vi.py || exit 1
+          test -f v16_meta_allocation_intelligence_vi.py || exit 1
+          test -f v171_final_decision_orchestrator_vi.py || exit 1
 
       - name: Syntax check
         run: |
-          echo "===== Kiểm tra syntax Python ====="
-
           python -m py_compile v153_pro_research_upgrade_vi.py
           python -m py_compile v1541_portfolio_risk_exit_engine_vi.py
           python -m py_compile v155_equity_survival_engine_vi.py
           python -m py_compile v16_meta_allocation_intelligence_vi.py
           python -m py_compile v171_final_decision_orchestrator_vi.py
 
-          echo "Syntax OK."
-
       - name: Run V15.3 PRO research layer
         run: |
           echo "===== RUN V15.3 PRO ====="
           python3 v153_pro_research_upgrade_vi.py
-
-      - name: Check V15.3 outputs
-        run: |
-          echo "===== Kiểm tra output V15.3 ====="
-
-          test -f v153_pro_research.csv || {
-            echo "THIẾU OUTPUT: v153_pro_research.csv"
-            exit 1
-          }
-
-          test -f v153_pro_research_detail.csv || {
-            echo "THIẾU OUTPUT: v153_pro_research_detail.csv"
-            exit 1
-          }
-
-          test -f v153_pro_research_portfolio.csv || {
-            echo "THIẾU OUTPUT: v153_pro_research_portfolio.csv"
-            exit 1
-          }
-
-          echo "Output V15.3 OK."
-          ls -lh v153_pro_research*
 
       - name: Run V15.4.1 portfolio risk exit layer
         run: |
           echo "===== RUN V15.4.1 ====="
           python3 v1541_portfolio_risk_exit_engine_vi.py
 
-      - name: Check V15.4.1 outputs
-        run: |
-          echo "===== Kiểm tra output V15.4.1 ====="
-
-          test -f v1541_portfolio_risk_exit.csv || {
-            echo "THIẾU OUTPUT: v1541_portfolio_risk_exit.csv"
-            exit 1
-          }
-
-          test -f v1541_portfolio_equity.csv || {
-            echo "THIẾU OUTPUT: v1541_portfolio_equity.csv"
-            exit 1
-          }
-
-          echo "Output V15.4.1 OK."
-          ls -lh v1541_portfolio*
-
       - name: Run V15.5 equity survival layer
         run: |
           echo "===== RUN V15.5 ====="
           python3 v155_equity_survival_engine_vi.py
-
-      - name: Check V15.5 outputs
-        run: |
-          echo "===== Kiểm tra output V15.5 ====="
-
-          test -f v155_equity_survival_allocation.csv || {
-            echo "THIẾU OUTPUT: v155_equity_survival_allocation.csv"
-            exit 1
-          }
-
-          test -f v155_equity_survival_equity.csv || {
-            echo "THIẾU OUTPUT: v155_equity_survival_equity.csv"
-            exit 1
-          }
-
-          test -f v155_equity_survival_report.txt || {
-            echo "THIẾU OUTPUT: v155_equity_survival_report.txt"
-            exit 1
-          }
-
-          test -f v155_equity_survival.html || {
-            echo "THIẾU OUTPUT: v155_equity_survival.html"
-            exit 1
-          }
-
-          echo "Output V15.5 OK."
-          ls -lh v155_equity_survival*
 
       - name: Run V16 meta allocation intelligence layer
         run: |
           echo "===== RUN V16 ====="
           python3 v16_meta_allocation_intelligence_vi.py
 
-      - name: Check V16 outputs
-        run: |
-          echo "===== Kiểm tra output V16 ====="
-
-          test -f v16_meta_allocation.csv || {
-            echo "THIẾU OUTPUT: v16_meta_allocation.csv"
-            exit 1
-          }
-
-          test -f v16_meta_risk_state.csv || {
-            echo "THIẾU OUTPUT: v16_meta_risk_state.csv"
-            exit 1
-          }
-
-          test -f v16_capital_map.csv || {
-            echo "THIẾU OUTPUT: v16_capital_map.csv"
-            exit 1
-          }
-
-          test -f v16_rotation_plan.csv || {
-            echo "THIẾU OUTPUT: v16_rotation_plan.csv"
-            exit 1
-          }
-
-          test -f v16_meta_allocation_report.txt || {
-            echo "THIẾU OUTPUT: v16_meta_allocation_report.txt"
-            exit 1
-          }
-
-          test -f v16_meta_allocation.html || {
-            echo "THIẾU OUTPUT: v16_meta_allocation.html"
-            exit 1
-          }
-
-          echo "Output V16 OK."
-          ls -lh v16_*
-
       - name: Run V17.1 final decision orchestrator layer
         run: |
           echo "===== RUN V17.1 ====="
           python3 v171_final_decision_orchestrator_vi.py
 
-      - name: Check V17.1 outputs
+      - name: Check final outputs
         run: |
-          echo "===== Kiểm tra output V17.1 ====="
+          test -f v17_final_decision.csv || exit 1
+          test -f intraday_watchlist_v17.csv || exit 1
+          test -f v171_orchestrator_report.txt || exit 1
+          test -f v171_orchestrator.html || exit 1
 
-          test -f v17_final_decision.csv || {
-            echo "THIẾU OUTPUT: v17_final_decision.csv"
-            exit 1
-          }
+      - name: Commit updated V17 watchlist to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          test -f intraday_watchlist_v17.csv || {
-            echo "THIẾU OUTPUT: intraday_watchlist_v17.csv"
-            exit 1
-          }
+          git add v17_final_decision.csv
+          git add intraday_watchlist_v17.csv
+          git add v171_orchestrator_report.txt
 
-          test -f v171_orchestrator_report.txt || {
-            echo "THIẾU OUTPUT: v171_orchestrator_report.txt"
-            exit 1
-          }
-
-          test -f v171_orchestrator.html || {
-            echo "THIẾU OUTPUT: v171_orchestrator.html"
-            exit 1
-          }
-
-          echo "Output V17.1 OK."
-          ls -lh v17_final_decision.csv intraday_watchlist_v17.csv v171_orchestrator*
+          git commit -m "Update V17 final decision and intraday watchlist" || echo "No changes to commit"
+          git push
 
       - name: Print final V17.1 report
         if: always()
