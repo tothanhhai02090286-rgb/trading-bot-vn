@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-15 10:42:12
+Generated: 2026-05-15 11:31:29
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -12,25 +12,27 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 
 === INPUT STATE ===
 Legacy V17 dùng: Không có
-Decision Mode: ĐÁNH RẤT NHỎ
-Meta Exposure: 0.2112
-V15.5 Survival Exposure: 0.33
+Decision Mode: CASH MODE
+Meta Exposure: 0.0154
+V15.5 Survival Exposure: 0.055
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: GIẢM TỐC
-Kill Switch: False
-Drawdown: 9.437%
+Equity State: PHÒNG THỦ MẠNH
+Kill Switch: True
+Drawdown: 22.302%
 
 === FINAL DECISION SUMMARY ===
-- WATCHLIST: 4 mã
+- AVOID: 6 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-- THEO DÕI: 4 mã
+Không có mã nào đưa sang V18.
 
 === TOP FINAL DECISION ===
-◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=7.044% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=VỪA | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ ABB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.771% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=VỪA | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ VHC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.603% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ MSB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=3.701% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ CTG | Final=AVOID | Realtime=BỎ QUA | Alloc=0.504% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ ABB | Final=AVOID | Realtime=BỎ QUA | Alloc=0.28% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ VOS | Final=AVOID | Realtime=BỎ QUA | Alloc=0.225% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ DXG | Final=AVOID | Realtime=BỎ QUA | Alloc=0.22% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ MSB | Final=AVOID | Realtime=BỎ QUA | Alloc=0.19% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ HBC | Final=AVOID | Realtime=BỎ QUA | Alloc=0.121% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
@@ -39,4 +41,4 @@ Meta Exposure, Regime Strength, Equity State, Ưu tiên, Buy zone thấp %,
 Buy zone cao %, Stoploss tham khảo %, Ghi chú V18.
 
 === KẾT LUẬN V17.1 ===
-Hệ thống chỉ được đánh nhỏ hoặc theo dõi. V18 không được vào mạnh.
+Kill switch bật. Không aggressive entry.
