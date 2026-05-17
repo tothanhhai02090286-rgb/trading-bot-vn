@@ -1,0 +1,46 @@
+name: Run V19.5 Weighted Signal Scoring
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v195:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+
+      - name: Run V19.5 Weighted Signal Scoring
+        env:
+          V195_CACHE_DIR: cache_stock
+          V195_OUTPUT_DIR: tracker_output
+          V195_BENCHMARK_SYMBOL: VNINDEX
+          V195_MIN_HISTORY_BARS: "80"
+          V195_MAIN_HORIZON: "5"
+          V195_VN_TPLUS_SELLABLE_DAYS: "2.5"
+          V195_BUY_SLIPPAGE_PCT: "0.15"
+          V195_SELL_SLIPPAGE_PCT: "0.15"
+          V195_FEE_PCT_PER_SIDE: "0.15"
+          V195_MIN_AVG_VOLUME_20: "100000"
+          V195_SIGNAL_COOLDOWN_DAYS: "5"
+          V195_MAX_SIGNALS_PER_DAY: "20"
+        run: |
+          python v195_weighted_signal_scoring_engine_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tracker_output/v195_*.csv tracker_output/v195_report.txt || true
+          git commit -m "Update V19.5 weighted signal scoring outputs" || echo "No changes to commit"
+          git push
