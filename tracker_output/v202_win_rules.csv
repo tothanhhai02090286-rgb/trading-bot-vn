@@ -1,0 +1,490 @@
+﻿pattern,conditions,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t2_pct,avg_ret_t5_pct,avg_drawdown_t5_pct,combo_size,rule_type,action,confidence
+COMBO_1,market_ret20 < -5%,563,288,169,106,51.15,30.02,1.099,2.233,-3.444,1,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + market_ret20 < -5%,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:score_bucket_60-69,42,19,18,5,45.24,42.86,0.165,0.736,-5.546,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret5 > 8% + market_context risk-off,120,57,51,12,47.5,42.5,0.369,1.186,-5.517,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret5 > 8% + label:market_context_MARKET_RISK-OFF,120,57,51,12,47.5,42.5,0.369,1.186,-5.517,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + market_ret20 < -5%,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:entry_context_ENTRY_XA_MA20___FOMO,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret20 > 15% + volatility_contraction20 > 1.3,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret20 > 15% + label:volatility_context_VOLATILITY_MỞ_RỘNG,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 > 1.3 + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:volume_context_VOLUME_CẠN,72,33,30,9,45.83,41.67,1.136,1.676,-5.265,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret20 > 15% + stock_dist_ma20 > 8%,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret20 > 15% + label:entry_context_ENTRY_XA_MA20___FOMO,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + market_ret5 > 4%,37,17,15,5,45.95,40.54,0.027,0.693,-5.494,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,37,17,15,5,45.95,40.54,0.027,0.693,-5.494,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + market_ret5 > 4%,46,21,18,7,45.65,39.13,0.246,1.551,-5.295,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + volume_ratio < 1x,77,36,30,11,46.75,38.96,0.914,0.843,-5.524,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio < 1x + label:entry_context_ENTRY_XA_MA20___FOMO,77,36,30,11,46.75,38.96,0.914,0.843,-5.524,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + market_context risk-off,244,112,94,38,45.9,38.52,0.503,0.839,-4.537,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + label:market_context_MARKET_RISK-OFF,244,112,94,38,45.9,38.52,0.503,0.839,-4.537,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret5 > 8% + label:score_bucket_70-79,34,17,13,4,50.0,38.24,-0.267,0.552,-5.826,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret5 > 8% + market_ret20 < -5%,50,27,19,4,54.0,38.0,0.916,3.328,-5.306,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:market_context_MARKET_ỦNG_HỘ,124,58,47,19,46.77,37.9,1.028,1.368,-5.067,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret5 > 8% + stock_ret20 > 15%,104,52,39,13,50.0,37.5,0.971,1.511,-5.806,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret5 > 8% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,104,52,39,13,50.0,37.5,0.971,1.511,-5.806,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:score_bucket_80+,148,74,54,20,50.0,36.49,0.956,2.605,-3.632,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x,55,27,20,8,49.09,36.36,0.147,1.346,-3.47,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,55,27,20,8,49.09,36.36,0.147,1.346,-3.47,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret5 > 8% + volume_ratio < 1x,59,30,21,8,50.85,35.59,0.574,0.394,-5.861,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + label:score_bucket_60-69,77,39,27,11,50.65,35.06,0.57,0.832,-4.734,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:market_regime_TÍCH_CỰC,43,20,15,8,46.51,34.88,1.051,1.943,-4.196,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_regime_YẾU,69,37,24,8,53.62,34.78,0.072,1.444,-3.891,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret5 > 8% + label:volume_context_VOLUME_CẠN,52,27,18,7,51.92,34.62,0.235,0.799,-5.391,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:market_regime_YẾU,147,71,49,27,48.3,33.33,1.186,1.607,-3.595,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_context risk-off + drawdown20 < -15%,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_context risk-off + label:risk_context_DRAWDOWN_SÂU,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_context_MARKET_RISK-OFF,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret20 > 15% + market_ret20 < -5%,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,166,90,54,22,54.22,32.53,1.183,2.51,-3.381,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:market_regime_RẤT_YẾU,105,50,34,21,47.62,32.38,1.158,1.202,-3.644,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,428,209,138,81,48.83,32.24,1.01,1.957,-3.392,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + drawdown20 -10% to 0%,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:volume_context_VOLUME_TĂNG_VỪA,132,61,42,29,46.21,31.82,1.382,2.623,-3.875,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_ret5 > 8% + label:market_regime_YẾU,57,32,18,7,56.14,31.58,0.732,2.548,-4.001,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 > 1.3 + label:market_regime_YẾU,262,131,82,49,50.0,31.3,0.812,1.605,-3.461,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_context risk-off + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,160,79,50,31,49.38,31.25,0.06,1.146,-3.776,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_regime_RẤT_YẾU,45,21,14,10,46.67,31.11,0.423,0.651,-4.325,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:risk_context_RISK_TRUNG_TÍNH,153,79,47,27,51.63,30.72,0.994,2.153,-3.575,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,464,241,140,83,51.94,30.17,1.171,2.428,-3.612,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + market_context risk-off,563,288,169,106,51.15,30.02,1.099,2.233,-3.444,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,563,288,169,106,51.15,30.02,1.099,2.233,-3.444,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,211,107,63,41,50.71,29.86,0.789,1.819,-3.606,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volume_ratio < 1x + market_ret20 < -5%,371,189,110,72,50.94,29.65,0.872,2.005,-3.159,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,sideway_score20 >= 2 + market_ret20 < -5%,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:structure_context_CÓ_NỀN___SIDEWAY,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + label:market_regime_YẾU,123,61,36,26,49.59,29.27,1.335,2.311,-3.414,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:volume_context_VOLUME_CẠN,219,119,64,36,54.34,29.22,1.253,2.402,-3.017,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + market_ret20 < -5%,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 > 1.3 + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,95,46,27,22,48.42,28.42,0.464,1.015,-3.951,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:score_bucket_60-69,230,118,65,47,51.3,28.26,1.396,2.176,-3.145,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 > 1.3 + market_ret5 > 4%,50,25,14,11,50.0,28.0,1.138,2.932,-5.386,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:volatility_context_VOLATILITY_MỞ_RỘNG,50,25,14,11,50.0,28.0,1.138,2.932,-5.386,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + market_ret20 < -5%,87,53,24,10,60.92,27.59,1.894,3.412,-3.787,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,drawdown20 < -15% + label:entry_context_ENTRY_GẦN_MA20,70,39,19,12,55.71,27.14,-0.098,1.284,-4.073,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:score_bucket_70-79,185,96,50,39,51.89,27.03,0.846,2.006,-3.664,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,324,167,84,73,51.54,25.93,0.801,2.126,-3.043,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 > 1.3 + market_ret20 < -5%,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,range20 <= 10% + market_ret20 < -5%,47,22,12,13,46.81,25.53,1.465,1.674,-2.328,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_ret20 > 15% + label:market_regime_YẾU,57,32,14,11,56.14,24.56,1.91,4.572,-4.597,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:market_regime_YẾU,50,28,12,10,56.0,24.0,1.311,3.745,-4.212,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,102,61,20,21,59.8,19.61,0.97,2.391,-2.93,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_2,market_ret20 < -5% + drawdown20 < -15%,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:risk_context_DRAWDOWN_SÂU,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,2,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_2,market_ret20 < -5% + label:market_regime_YẾU,196,136,31,29,69.39,15.82,2.055,4.317,-2.781,2,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:extension_context_KHÔNG_QUÁ_NÓNG,83,38,37,8,45.78,44.58,0.256,1.344,-5.226,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + market_context risk-off,45,21,20,4,46.67,44.44,0.748,1.109,-5.073,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + label:market_context_MARKET_RISK-OFF,45,21,20,4,46.67,44.44,0.748,1.109,-5.073,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,45,21,20,4,46.67,44.44,0.748,1.109,-5.073,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:volume_context_VOLUME_TRUNG_TÍNH,59,27,26,6,45.76,44.07,0.565,0.471,-6.111,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:volume_context_VOLUME_TĂNG_VỪA,57,26,25,6,45.61,43.86,0.924,2.276,-4.896,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volume_ratio 1.2-2.0x + label:volume_context_VOLUME_TRUNG_TÍNH,48,22,21,5,45.83,43.75,-0.568,0.169,-6.524,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:volume_context_VOLUME_CẠN,32,15,14,3,46.88,43.75,1.075,1.085,-6.35,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context risk-off + label:volatility_context_VOLATILITY_TRUNG_TÍNH,110,51,48,11,46.36,43.64,0.407,0.955,-4.755,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,39,18,17,4,46.15,43.59,0.899,1.015,-5.472,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:risk_context_RISK_TRUNG_TÍNH,46,23,20,3,50.0,43.48,0.193,1.064,-5.743,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + drawdown20 -10% to 0%,53,25,23,5,47.17,43.4,1.423,1.394,-5.915,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:risk_context_PULLBACK_LÀNH_MẠNH,53,25,23,5,47.17,43.4,1.423,1.394,-5.915,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + drawdown20 -10% to 0% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,53,25,23,5,47.17,43.4,1.423,1.394,-5.915,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_dist_ma20 > 5% + market_context fomo/hưng phấn + label:risk_context_RISK_TRUNG_TÍNH,30,14,13,3,46.67,43.33,0.038,0.297,-5.563,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:volume_context_VOLUME_TRUNG_TÍNH,37,17,16,4,45.95,43.24,0.238,0.048,-6.995,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret20 < -5% + market_context risk-off,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret20 < -5% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,81,37,35,9,45.68,43.21,0.923,1.792,-4.632,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:structure_context_KHÔNG_RÕ_NỀN,139,63,60,16,45.32,43.17,0.637,1.085,-5.869,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:volume_context_VOLUME_TRUNG_TÍNH,72,33,31,8,45.83,43.06,0.278,0.53,-6.745,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + drawdown20 -10% to 0%,121,58,52,11,47.93,42.98,1.26,1.594,-6.049,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:risk_context_PULLBACK_LÀNH_MẠNH,121,58,52,11,47.93,42.98,1.26,1.594,-6.049,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + drawdown20 -10% to 0% + label:entry_context_ENTRY_XA_MA20___FOMO,121,58,52,11,47.93,42.98,1.26,1.594,-6.049,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + drawdown20 -10% to 0% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,121,58,52,11,47.93,42.98,1.26,1.594,-6.049,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context risk-off + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,56,26,24,6,46.43,42.86,-1.47,-0.436,-4.7,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:market_context_MARKET_RISK-OFF,120,57,51,12,47.5,42.5,0.369,1.186,-5.517,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:volume_context_VOLUME_CẠN,40,18,17,5,45.0,42.5,1.046,0.464,-6.708,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:score_bucket_80+,113,51,48,14,45.13,42.48,0.441,0.899,-5.518,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_ret20 < -5% + market_context risk-off,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_ret20 < -5% + label:entry_context_ENTRY_XA_MA20___FOMO,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:entry_context_ENTRY_XA_MA20___FOMO,33,16,14,3,48.48,42.42,1.732,4.506,-5.636,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + label:market_regime_RẤT_YẾU,38,18,16,4,47.37,42.11,0.703,2.751,-5.812,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + volatility_contraction20 > 1.3,88,40,37,11,45.45,42.05,0.734,1.17,-6.116,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + label:volatility_context_VOLATILITY_MỞ_RỘNG,88,40,37,11,45.45,42.05,0.734,1.17,-6.116,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:entry_context_ENTRY_XA_MA20___FOMO,88,40,37,11,45.45,42.05,0.734,1.17,-6.116,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:structure_context_KHÔNG_RÕ_NỀN,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:volatility_context_VOLATILITY_MỞ_RỘNG,157,71,66,20,45.22,42.04,0.556,0.347,-6.767,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:risk_context_RISK_TRUNG_TÍNH,131,59,55,17,45.04,41.98,0.495,0.733,-4.753,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret5 > 4% + market_context fomo/hưng phấn,31,16,13,2,51.61,41.94,0.444,0.87,-5.375,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,31,16,13,2,51.61,41.94,0.444,0.87,-5.375,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,31,16,13,2,51.61,41.94,0.444,0.87,-5.375,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,55,25,23,7,45.45,41.82,-0.45,0.329,-5.271,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:market_regime_TĂNG_MẠNH,91,41,38,12,45.05,41.76,0.072,0.628,-6.623,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + market_context risk-off,60,28,25,7,46.67,41.67,1.624,1.267,-6.545,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:market_context_MARKET_RISK-OFF,60,28,25,7,46.67,41.67,1.624,1.267,-6.545,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:entry_context_ENTRY_XA_MA20___FOMO,60,28,25,7,46.67,41.67,1.624,1.267,-6.545,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_context risk-off + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,60,28,25,7,46.67,41.67,1.624,1.267,-6.545,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + drawdown20 -10% to 0% + label:volume_context_VOLUME_CẠN,60,29,25,6,48.33,41.67,1.457,2.245,-4.936,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:structure_context_KHÔNG_RÕ_NỀN,111,53,46,12,47.75,41.44,0.382,1.347,-5.668,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + drawdown20 -10% to 0%,70,33,29,8,47.14,41.43,1.853,1.729,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:risk_context_PULLBACK_LÀNH_MẠNH,70,33,29,8,47.14,41.43,1.853,1.729,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + drawdown20 -10% to 0% + label:market_context_MARKET_RISK-OFF,70,33,29,8,47.14,41.43,1.853,1.729,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 -10% to 0% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,70,33,29,8,47.14,41.43,1.853,1.729,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:volume_context_VOLUME_TĂNG_VỪA,46,22,19,5,47.83,41.3,1.138,1.713,-5.866,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + volume_ratio 1.2-2.0x,63,29,26,8,46.03,41.27,0.502,0.538,-6.493,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volume_ratio 1.2-2.0x + label:entry_context_ENTRY_XA_MA20___FOMO,63,29,26,8,46.03,41.27,0.502,0.538,-6.493,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio 1.2-2.0x + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,63,29,26,8,46.03,41.27,0.502,0.538,-6.493,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context risk-off + label:volume_context_VOLUME_CẠN,90,43,37,10,47.78,41.11,0.6,0.804,-4.075,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:risk_context_RISK_TRUNG_TÍNH,56,27,23,6,48.21,41.07,-0.062,0.955,-6.046,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret5 > 4% + market_context fomo/hưng phấn,44,20,18,6,45.45,40.91,-0.024,1.151,-5.381,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,44,20,18,6,45.45,40.91,-0.024,1.151,-5.381,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:entry_context_ENTRY_XA_MA20___FOMO,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:structure_context_KHÔNG_RÕ_NỀN,191,91,78,22,47.64,40.84,0.7,1.265,-6.147,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:market_regime_TĂNG_MẠNH,98,47,40,11,47.96,40.82,0.204,0.928,-6.417,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:volume_context_VOLUME_CẠN,54,25,22,7,46.3,40.74,0.924,1.153,-5.249,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:volume_context_VOLUME_TRUNG_TÍNH,86,42,35,9,48.84,40.7,0.166,-0.303,-4.92,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret5 > 4% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,37,17,15,5,45.95,40.54,0.027,0.693,-5.494,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,62,28,25,9,45.16,40.32,0.071,0.975,-6.369,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:score_bucket_80+,107,49,43,15,45.79,40.19,1.1,2.689,-3.534,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:volume_context_VOLUME_CẠN,55,28,22,5,50.91,40.0,1.468,2.291,-5.739,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:score_bucket_80+,50,25,20,5,50.0,40.0,0.828,1.642,-4.734,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 > 1.3 + label:market_regime_YẾU,40,21,16,3,52.5,40.0,0.468,1.645,-4.305,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + volume_ratio < 1x,58,28,23,7,48.28,39.66,0.835,0.887,-5.995,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volume_ratio < 1x + label:entry_context_ENTRY_XA_MA20___FOMO,58,28,23,7,48.28,39.66,0.835,0.887,-5.995,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,58,28,23,7,48.28,39.66,0.835,0.887,-5.995,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:market_context_MARKET_ỦNG_HỘ,86,44,34,8,51.16,39.53,0.987,1.935,-5.304,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + label:volume_context_VOLUME_TRUNG_TÍNH,43,20,17,6,46.51,39.53,0.353,0.855,-5.329,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:extension_context_KHÔNG_QUÁ_NÓNG,200,91,79,30,45.5,39.5,0.468,0.864,-4.249,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context risk-off + label:score_bucket_60-69,38,18,15,5,47.37,39.47,0.365,1.352,-5.193,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + market_context risk-off,38,18,15,5,47.37,39.47,1.117,1.013,-6.211,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:market_context_MARKET_RISK-OFF,38,18,15,5,47.37,39.47,1.117,1.013,-6.211,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:entry_context_ENTRY_XA_MA20___FOMO,38,18,15,5,47.37,39.47,1.117,1.013,-6.211,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + label:market_regime_TĂNG_MẠNH,71,32,28,11,45.07,39.44,0.707,0.73,-6.322,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:risk_context_RISK_TRUNG_TÍNH,246,112,97,37,45.53,39.43,-0.154,0.362,-4.733,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_context risk-off + label:volume_context_VOLUME_TĂNG_VỪA,33,15,13,5,45.45,39.39,1.226,2.607,-5.259,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:score_bucket_80+,122,59,48,15,48.36,39.34,0.196,0.826,-6.497,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + drawdown20 -10% to 0% + label:volume_context_VOLUME_CẠN,41,20,16,5,48.78,39.02,0.497,1.309,-5.123,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:entry_context_ENTRY_XA_MA20___FOMO,77,36,30,11,46.75,38.96,0.914,0.843,-5.524,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:structure_context_KHÔNG_RÕ_NỀN,77,36,30,11,46.75,38.96,0.914,0.843,-5.524,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + volatility_contraction20 > 1.3,111,56,43,12,50.45,38.74,1.126,1.391,-6.376,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:volatility_context_VOLATILITY_MỞ_RỘNG,111,56,43,12,50.45,38.74,1.126,1.391,-6.376,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:entry_context_ENTRY_XA_MA20___FOMO,111,56,43,12,50.45,38.74,1.126,1.391,-6.376,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,111,56,43,12,50.45,38.74,1.126,1.391,-6.376,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + market_context risk-off,31,15,12,4,48.39,38.71,0.886,1.951,-5.516,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + label:market_context_MARKET_RISK-OFF,31,15,12,4,48.39,38.71,0.886,1.951,-5.516,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + market_ret20 < -5%,31,18,12,1,58.06,38.71,2.304,4.857,-4.828,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,31,18,12,1,58.06,38.71,2.304,4.857,-4.828,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:volatility_context_VOLATILITY_TRUNG_TÍNH,31,17,12,2,54.84,38.71,0.257,1.257,-5.522,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:volume_context_VOLUME_TRUNG_TÍNH,44,20,17,7,45.45,38.64,-0.124,0.207,-4.242,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:market_regime_TĂNG_MẠNH,83,40,32,11,48.19,38.55,0.35,0.98,-6.434,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:market_context_MARKET_RISK-OFF,244,112,94,38,45.9,38.52,0.503,0.839,-4.537,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:score_bucket_80+,122,57,47,18,46.72,38.52,0.394,1.101,-6.049,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:score_bucket_80+,156,79,60,17,50.64,38.46,0.469,1.602,-5.96,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:market_context_MARKET_ỦNG_HỘ,65,31,25,9,47.69,38.46,1.026,1.491,-5.97,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:volume_context_VOLUME_TĂNG_VỪA,39,18,15,6,46.15,38.46,-0.676,1.245,-3.659,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,47,25,18,4,53.19,38.3,0.831,3.355,-5.55,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,34,18,13,3,52.94,38.24,1.17,3.554,-5.102,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret5 > 4% + label:extension_context_KHÔNG_QUÁ_NÓNG,34,16,13,5,47.06,38.24,0.165,0.827,-5.523,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:extension_context_KHÔNG_QUÁ_NÓNG,34,18,13,3,52.94,38.24,0.313,1.552,-3.426,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + market_context risk-off,50,27,19,4,54.0,38.0,0.916,3.328,-5.306,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,50,27,19,4,54.0,38.0,0.916,3.328,-5.306,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:structure_context_KHÔNG_RÕ_NỀN,53,25,20,8,47.17,37.74,0.185,1.253,-3.526,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:volume_context_VOLUME_TĂNG_VỪA,61,29,23,9,47.54,37.7,0.635,1.355,-5.779,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,104,52,39,13,50.0,37.5,0.971,1.511,-5.806,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:structure_context_KHÔNG_RÕ_NỀN,104,52,39,13,50.0,37.5,0.971,1.511,-5.806,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + stock_dist_ma20 > 8%,96,48,36,12,50.0,37.5,1.11,1.573,-5.726,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:entry_context_ENTRY_XA_MA20___FOMO,96,48,36,12,50.0,37.5,1.11,1.573,-5.726,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,96,48,36,12,50.0,37.5,1.11,1.573,-5.726,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 > 1.3 + market_ret20 < -5%,40,20,15,5,50.0,37.5,1.915,2.474,-4.162,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,40,20,15,5,50.0,37.5,1.915,2.474,-4.162,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,40,20,15,5,50.0,37.5,1.915,2.474,-4.162,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:volatility_context_VOLATILITY_TRUNG_TÍNH,32,16,12,4,50.0,37.5,0.726,2.557,-6.401,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + drawdown20 -10% to 0% + label:market_context_MARKET_ỦNG_HỘ,83,41,31,11,49.4,37.35,1.483,1.791,-5.227,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:risk_context_RISK_TRUNG_TÍNH,70,33,26,11,47.14,37.14,-0.269,0.698,-6.315,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:score_bucket_60-69,35,17,13,5,48.57,37.14,-0.109,0.784,-5.622,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + drawdown20 -10% to 0%,62,31,23,8,50.0,37.1,1.223,1.706,-5.105,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:risk_context_PULLBACK_LÀNH_MẠNH,62,31,23,8,50.0,37.1,1.223,1.706,-5.105,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 -10% to 0% + label:entry_context_ENTRY_XA_MA20___FOMO,62,31,23,8,50.0,37.1,1.223,1.706,-5.105,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:volatility_context_VOLATILITY_TRUNG_TÍNH,89,45,33,11,50.56,37.08,0.402,1.725,-3.919,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:structure_context_KHÔNG_RÕ_NỀN,781,358,289,134,45.84,37.0,0.1,0.688,-4.238,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:volume_context_VOLUME_TĂNG_VỪA,149,69,55,25,46.31,36.91,0.683,1.697,-4.302,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:volume_context_VOLUME_TRUNG_TÍNH,225,102,83,40,45.33,36.89,0.338,0.436,-4.46,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + volatility_contraction20 > 1.3,57,29,21,7,50.88,36.84,0.353,1.527,-5.978,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + label:volatility_context_VOLATILITY_MỞ_RỘNG,57,29,21,7,50.88,36.84,0.353,1.527,-5.978,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret5 > 4% + label:structure_context_KHÔNG_RÕ_NỀN,38,19,14,5,50.0,36.84,0.061,1.783,-5.818,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret5 > 4% + label:market_regime_TĂNG_MẠNH,41,20,15,6,48.78,36.59,0.168,1.502,-5.429,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:score_bucket_80+,148,74,54,20,50.0,36.49,0.956,2.605,-3.632,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:score_bucket_80+,85,44,31,10,51.76,36.47,0.632,2.305,-3.61,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + drawdown20 -10% to 0%,195,91,71,33,46.67,36.41,0.807,1.212,-4.368,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:risk_context_PULLBACK_LÀNH_MẠNH,195,91,71,33,46.67,36.41,0.807,1.212,-4.368,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + drawdown20 -10% to 0% + label:market_context_MARKET_RISK-OFF,195,91,71,33,46.67,36.41,0.807,1.212,-4.368,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,55,27,20,8,49.09,36.36,0.147,1.346,-3.47,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:risk_context_RISK_TRUNG_TÍNH,33,16,12,5,48.48,36.36,0.028,1.664,-3.297,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context risk-off + label:volume_context_VOLUME_CẠN,86,39,31,16,45.35,36.05,0.267,1.015,-3.945,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context risk-off + label:score_bucket_60-69,111,55,40,16,49.55,36.04,0.143,0.588,-4.578,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio < 1x + label:volume_context_VOLUME_CẠN,39,20,14,5,51.28,35.9,0.08,0.281,-5.784,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:market_regime_RẤT_YẾU,70,33,25,12,47.14,35.71,1.122,1.129,-3.629,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:structure_context_KHÔNG_RÕ_NỀN,401,190,143,68,47.38,35.66,0.737,1.006,-4.571,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + volatility_contraction20 > 1.3,62,32,22,8,51.61,35.48,0.959,1.579,-6.155,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:volatility_context_VOLATILITY_MỞ_RỘNG,62,32,22,8,51.61,35.48,0.959,1.579,-6.155,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,62,32,22,8,51.61,35.48,0.959,1.579,-6.155,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:market_context_MARKET_ỦNG_HỘ,31,16,11,4,51.61,35.48,1.248,1.431,-4.494,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + market_context risk-off,302,137,107,58,45.36,35.43,0.187,0.634,-3.816,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + label:market_context_MARKET_RISK-OFF,302,137,107,58,45.36,35.43,0.187,0.634,-3.816,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:volatility_context_VOLATILITY_MỞ_RỘNG,302,137,107,58,45.36,35.43,0.187,0.634,-3.816,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio < 1x + label:structure_context_KHÔNG_RÕ_NỀN,57,29,20,8,50.88,35.09,0.52,0.59,-5.753,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + label:market_context_MARKET_ỦNG_HỘ,63,30,22,11,47.62,34.92,1.596,1.894,-4.775,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_context risk-off + label:score_bucket_80+,43,21,15,7,48.84,34.88,0.732,1.997,-5.473,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 > 1.3 + label:score_bucket_60-69,43,21,15,7,48.84,34.88,1.688,1.514,-4.654,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:market_regime_YẾU,69,37,24,8,53.62,34.78,0.072,1.444,-3.891,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,46,25,16,5,54.35,34.78,1.683,1.792,-3.369,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + label:structure_context_KHÔNG_RÕ_NỀN,371,173,129,69,46.63,34.77,0.428,0.948,-4.405,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:market_regime_RẤT_YẾU,58,31,20,7,53.45,34.48,0.907,1.968,-4.353,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:extension_context_KHÔNG_QUÁ_NÓNG,35,16,12,7,45.71,34.29,1.738,2.813,-5.66,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + market_ret20 < -5%,79,43,27,9,54.43,34.18,1.471,1.924,-3.179,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,79,43,27,9,54.43,34.18,1.471,1.924,-3.179,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:volume_context_VOLUME_CẠN,208,95,71,42,45.67,34.13,0.374,0.702,-3.642,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:score_bucket_80+,88,47,30,11,53.41,34.09,1.019,1.977,-5.333,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:score_bucket_60-69,56,28,19,9,50.0,33.93,1.177,1.613,-4.314,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,68,40,23,5,58.82,33.82,1.695,2.846,-3.901,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 > 1.3 + market_context risk-off,95,45,32,18,47.37,33.68,0.874,1.435,-4.042,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 > 1.3 + label:market_context_MARKET_RISK-OFF,95,45,32,18,47.37,33.68,0.874,1.435,-4.042,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context risk-off + label:volatility_context_VOLATILITY_MỞ_RỘNG,95,45,32,18,47.37,33.68,0.874,1.435,-4.042,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,95,45,32,18,47.37,33.68,0.874,1.435,-4.042,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context risk-off + label:market_regime_YẾU,147,71,49,27,48.3,33.33,1.186,1.607,-3.595,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:structure_context_KHÔNG_RÕ_NỀN,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:risk_context_DRAWDOWN_SÂU,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:market_context_MARKET_RISK-OFF,114,58,38,18,50.88,33.33,0.211,1.131,-4.062,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:risk_context_RISK_TRUNG_TÍNH,63,35,21,7,55.56,33.33,1.534,1.881,-3.269,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:score_bucket_70-79,63,31,21,11,49.21,33.33,-0.002,0.243,-4.831,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 > 1.3 + label:market_regime_YẾU,54,26,18,10,48.15,33.33,1.185,1.521,-3.394,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + label:extension_context_KHÔNG_QUÁ_NÓNG,45,22,15,8,48.89,33.33,1.659,1.936,-3.588,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 > 1.3 + label:risk_context_RISK_TRUNG_TÍNH,42,21,14,7,50.0,33.33,-0.072,0.782,-5.084,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,39,18,13,8,46.15,33.33,0.36,0.944,-2.512,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context fomo/hưng phấn + label:volume_context_VOLUME_TRUNG_TÍNH,39,19,13,7,48.72,33.33,1.365,2.31,-5.145,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio < 1x + label:extension_context_KHÔNG_QUÁ_NÓNG,36,19,12,5,52.78,33.33,0.307,1.382,-5.691,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_ret20 < -5% + market_context risk-off,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_ret20 < -5% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,33,18,11,4,54.55,33.33,2.652,5.322,-5.705,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:score_bucket_70-79,189,88,62,39,46.56,32.8,0.729,0.527,-4.218,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,110,59,36,15,53.64,32.73,0.885,2.354,-3.392,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + drawdown20 -10% to 0% + label:score_bucket_60-69,49,26,16,7,53.06,32.65,1.008,1.222,-4.838,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:structure_context_KHÔNG_RÕ_NỀN,242,120,79,43,49.59,32.64,1.259,2.583,-3.762,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:volatility_context_VOLATILITY_TRUNG_TÍNH,166,90,54,22,54.22,32.53,1.183,2.51,-3.381,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:volatility_context_VOLATILITY_TRUNG_TÍNH,40,22,13,5,55.0,32.5,0.021,0.73,-5.335,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:volume_context_VOLUME_TĂNG_VỪA,71,32,23,16,45.07,32.39,2.228,3.363,-3.903,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context risk-off + label:market_regime_RẤT_YẾU,105,50,34,21,47.62,32.38,1.158,1.202,-3.644,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:entry_context_ENTRY_GẦN_MA20,312,145,101,66,46.47,32.37,0.375,0.939,-3.501,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:market_regime_YẾU,133,63,43,27,47.37,32.33,1.169,1.631,-3.599,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + volume_ratio < 1x + label:market_regime_YẾU,31,15,10,6,48.39,32.26,-0.051,2.448,-5.655,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:extension_context_KHÔNG_QUÁ_NÓNG,428,209,138,81,48.83,32.24,1.01,1.957,-3.392,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:market_regime_YẾU,59,34,19,6,57.63,32.2,0.408,2.079,-3.534,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:volume_context_VOLUME_TRUNG_TÍNH,140,66,45,29,47.14,32.14,0.491,1.613,-3.726,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:market_regime_RẤT_YẾU,84,40,27,17,47.62,32.14,1.61,1.581,-3.306,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:extension_context_KHÔNG_QUÁ_NÓNG,315,150,101,64,47.62,32.06,0.839,1.875,-3.414,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + drawdown20 -10% to 0%,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:risk_context_PULLBACK_LÀNH_MẠNH,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:risk_context_PULLBACK_LÀNH_MẠNH,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:market_context_MARKET_RISK-OFF,337,163,108,66,48.37,32.05,1.087,2.185,-3.463,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,47,22,15,10,46.81,31.91,0.174,0.946,-2.9,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio < 1x + label:market_regime_YẾU,69,35,22,12,50.72,31.88,1.092,1.517,-3.488,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:volume_context_VOLUME_TĂNG_VỪA,132,61,42,29,46.21,31.82,1.382,2.623,-3.875,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + drawdown20 < -15%,88,48,28,12,54.55,31.82,0.697,1.766,-3.59,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:risk_context_DRAWDOWN_SÂU,88,48,28,12,54.55,31.82,0.697,1.766,-3.59,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:market_context_MARKET_RISK-OFF,88,48,28,12,54.55,31.82,0.697,1.766,-3.59,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:score_bucket_80+,44,27,14,3,61.36,31.82,1.771,3.161,-5.891,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:risk_context_RISK_TRUNG_TÍNH,107,55,34,18,51.4,31.78,0.799,1.843,-3.595,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + volatility_contraction20 > 1.3 + label:market_regime_YẾU,85,40,27,18,47.06,31.76,0.469,1.119,-2.669,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:risk_context_RISK_TRUNG_TÍNH,41,22,13,6,53.66,31.71,0.228,1.22,-6.614,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,285,136,90,59,47.72,31.58,0.88,1.785,-3.107,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context risk-off + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,114,60,36,18,52.63,31.58,0.231,1.455,-3.561,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + market_context risk-off + label:market_regime_YẾU,57,32,18,7,56.14,31.58,0.732,2.548,-4.001,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,38,22,12,4,57.89,31.58,2.026,2.609,-2.592,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret20 < -5% + label:score_bucket_60-69,54,25,17,12,46.3,31.48,0.187,1.272,-3.159,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,86,39,27,20,45.35,31.4,0.666,1.134,-2.763,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:risk_context_RISK_TRUNG_TÍNH,51,27,16,8,52.94,31.37,0.501,1.632,-5.691,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:volume_context_VOLUME_TĂNG_VỪA,51,28,16,7,54.9,31.37,2.25,4.266,-3.81,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:market_regime_YẾU,262,131,82,49,50.0,31.3,0.812,1.605,-3.461,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + drawdown20 -10% to 0%,208,97,65,46,46.63,31.25,0.698,1.811,-3.037,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,208,97,65,46,46.63,31.25,0.698,1.811,-3.037,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:score_bucket_80+,64,34,20,10,53.12,31.25,1.396,3.065,-3.46,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:market_context_MARKET_ỦNG_HỘ,48,27,15,6,56.25,31.25,1.847,3.104,-4.525,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:market_regime_RẤT_YẾU,45,21,14,10,46.67,31.11,0.423,0.651,-4.325,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio < 1x + label:score_bucket_80+,58,31,18,9,53.45,31.03,1.367,1.935,-4.875,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + drawdown20 -10% to 0% + label:score_bucket_70-79,168,76,52,40,45.24,30.95,0.604,0.424,-4.04,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:market_regime_TĂNG_MẠNH,52,28,16,8,53.85,30.77,1.158,2.058,-5.631,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + market_context fomo/hưng phấn,52,26,16,10,50.0,30.77,1.271,1.553,-3.941,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,52,26,16,10,50.0,30.77,1.271,1.553,-3.941,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + label:market_regime_TĂNG_MẠNH,52,26,16,10,50.0,30.77,1.271,1.553,-3.941,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + volume_ratio 1.2-2.0x,39,20,12,7,51.28,30.77,1.032,1.716,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio 1.2-2.0x + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,39,20,12,7,51.28,30.77,1.032,1.716,-5.899,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:score_bucket_60-69,39,18,12,9,46.15,30.77,1.661,1.994,-2.245,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:risk_context_RISK_TRUNG_TÍNH,153,79,47,27,51.63,30.72,0.994,2.153,-3.575,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,127,63,39,25,49.61,30.71,0.56,1.726,-3.321,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + drawdown20 -10% to 0%,95,43,29,23,45.26,30.53,0.65,1.172,-2.7,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,95,43,29,23,45.26,30.53,0.65,1.172,-2.7,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:structure_context_CÓ_NỀN___SIDEWAY,95,43,29,23,45.26,30.53,0.65,1.172,-2.7,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:score_bucket_60-69,59,33,18,8,55.93,30.51,0.678,1.886,-3.792,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio 1.2-2.0x + label:market_regime_YẾU,46,22,14,10,47.83,30.43,1.43,2.287,-3.814,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 > 1.3 + market_ret20 < -5%,56,31,17,8,55.36,30.36,1.786,2.961,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,56,31,17,8,55.36,30.36,1.786,2.961,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:volume_context_VOLUME_CẠN,129,67,39,23,51.94,30.23,1.135,2.377,-2.91,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,86,47,26,13,54.65,30.23,2.031,2.263,-3.058,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + market_context risk-off,86,42,26,18,48.84,30.23,0.341,1.08,-3.352,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + label:market_context_MARKET_RISK-OFF,86,42,26,18,48.84,30.23,0.341,1.08,-3.352,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:structure_context_CÓ_NỀN___SIDEWAY,86,42,26,18,48.84,30.23,0.341,1.08,-3.352,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:structure_context_KHÔNG_RÕ_NỀN,464,241,140,83,51.94,30.17,1.171,2.428,-3.612,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,116,63,35,18,54.31,30.17,1.404,2.554,-3.076,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + drawdown20 -10% to 0% + label:market_regime_YẾU,183,88,55,40,48.09,30.05,0.863,1.416,-3.267,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:market_context_MARKET_RISK-OFF,563,288,169,106,51.15,30.02,1.099,2.233,-3.444,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio < 1x + market_context risk-off,40,24,12,4,60.0,30.0,0.361,1.283,-6.064,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volume_ratio < 1x + label:market_context_MARKET_RISK-OFF,40,24,12,4,60.0,30.0,0.361,1.283,-6.064,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:market_context_MARKET_ỦNG_HỘ,40,21,12,7,52.5,30.0,1.397,2.041,-4.28,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + label:market_regime_YẾU,137,72,41,24,52.55,29.93,0.244,1.242,-3.578,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:volume_context_VOLUME_TRUNG_TÍNH,211,107,63,41,50.71,29.86,0.789,1.819,-3.606,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,84,45,25,14,53.57,29.76,0.076,1.451,-3.724,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:score_bucket_70-79,37,20,11,6,54.05,29.73,1.54,2.108,-3.368,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:entry_context_ENTRY_GẦN_MA20,118,63,35,20,53.39,29.66,0.616,1.765,-3.91,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:score_bucket_60-69,118,56,35,27,47.46,29.66,1.267,1.934,-3.203,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + market_context risk-off,371,189,110,72,50.94,29.65,0.872,2.005,-3.159,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,371,189,110,72,50.94,29.65,0.872,2.005,-3.159,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:score_bucket_60-69,162,83,48,31,51.23,29.63,0.974,1.9,-2.964,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:market_context_MARKET_ỦNG_HỘ,54,29,16,9,53.7,29.63,1.759,2.422,-4.807,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + drawdown20 < -15%,44,22,13,9,50.0,29.55,0.895,0.944,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:risk_context_DRAWDOWN_SÂU,44,22,13,9,50.0,29.55,0.895,0.944,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + drawdown20 < -15% + label:market_context_MARKET_RISK-OFF,44,22,13,9,50.0,29.55,0.895,0.944,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:volatility_context_VOLATILITY_MỞ_RỘNG,44,22,13,9,50.0,29.55,0.895,0.944,-4.059,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:volume_context_VOLUME_CẠN,214,115,63,36,53.74,29.44,1.213,2.319,-3.021,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,68,41,20,7,60.29,29.41,1.941,3.571,-4.108,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 < -15% + label:entry_context_ENTRY_GẦN_MA20,34,20,10,4,58.82,29.41,-0.455,1.34,-3.83,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,116,63,34,19,54.31,29.31,1.838,2.146,-3.232,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + market_context risk-off,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:structure_context_CÓ_NỀN___SIDEWAY,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:structure_context_CÓ_NỀN___SIDEWAY,99,47,29,23,47.47,29.29,0.763,1.32,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context risk-off + label:market_regime_YẾU,123,61,36,26,49.59,29.27,1.335,2.311,-3.414,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + market_context fomo/hưng phấn,41,20,12,9,48.78,29.27,0.804,2.631,-5.382,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,41,20,12,9,48.78,29.27,0.804,2.631,-5.382,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:market_regime_TĂNG_MẠNH,41,20,12,9,48.78,29.27,0.804,2.631,-5.382,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_MỞ_RỘNG,41,20,12,9,48.78,29.27,0.804,2.631,-5.382,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:volume_context_VOLUME_CẠN,219,119,64,36,54.34,29.22,1.253,2.402,-3.017,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,313,165,91,57,52.72,29.07,0.926,2.244,-3.287,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + drawdown20 -10% to 0%,62,38,18,6,61.29,29.03,2.137,3.81,-3.982,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,62,38,18,6,61.29,29.03,2.137,3.81,-3.982,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:risk_context_RISK_TRUNG_TÍNH,76,42,22,12,55.26,28.95,1.389,2.541,-3.467,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_ret20 > 15% + label:volume_context_VOLUME_TĂNG_VỪA,45,25,13,7,55.56,28.89,1.479,3.144,-5.034,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:volume_context_VOLUME_CẠN,52,30,15,7,57.69,28.85,1.882,2.425,-3.004,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:market_regime_RẤT_YẾU,184,89,53,42,48.37,28.8,1.284,2.033,-3.768,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + market_context risk-off,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,125,68,36,21,54.4,28.8,1.82,2.197,-3.134,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,56,30,16,10,53.57,28.57,0.368,1.469,-3.629,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + drawdown20 < -15% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,49,23,14,12,46.94,28.57,0.289,0.577,-4.127,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:entry_context_ENTRY_GẦN_MA20,219,108,62,49,49.32,28.31,0.852,2.007,-3.042,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:score_bucket_60-69,230,118,65,47,51.3,28.26,1.396,2.176,-3.145,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:volatility_context_VOLATILITY_MỞ_RỘNG,50,25,14,11,50.0,28.0,1.138,2.932,-5.386,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + market_context risk-off,87,53,24,10,60.92,27.59,1.894,3.412,-3.787,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,87,53,24,10,60.92,27.59,1.894,3.412,-3.787,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,190,98,52,40,51.58,27.37,1.576,2.583,-3.418,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + label:score_bucket_80+,44,24,12,8,54.55,27.27,1.991,2.598,-3.107,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:volume_context_VOLUME_CẠN,44,27,12,5,61.36,27.27,1.45,2.325,-3.58,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:score_bucket_80+,33,18,9,6,54.55,27.27,1.272,3.325,-5.471,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:score_bucket_70-79,185,96,50,39,51.89,27.03,0.846,2.006,-3.664,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:score_bucket_60-69,111,54,30,27,48.65,27.03,1.931,2.358,-3.367,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:score_bucket_70-79,112,58,30,24,51.79,26.79,0.886,1.969,-3.668,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,49,24,13,12,48.98,26.53,0.248,1.664,-3.32,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,238,120,63,55,50.42,26.47,0.691,1.965,-2.832,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + drawdown20 -10% to 0%,159,81,42,36,50.94,26.42,1.787,2.818,-3.507,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,159,81,42,36,50.94,26.42,1.787,2.818,-3.507,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_MỞ_RỘNG,159,81,42,36,50.94,26.42,1.787,2.818,-3.507,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:entry_context_ENTRY_GẦN_MA20,324,167,84,73,51.54,25.93,0.801,2.126,-3.043,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:structure_context_KHÔNG_RÕ_NỀN,224,120,58,46,53.57,25.89,1.817,2.841,-3.536,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + market_context risk-off,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:volatility_context_VOLATILITY_MỞ_RỘNG,271,144,70,57,53.14,25.83,1.703,2.66,-3.445,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + drawdown20 -10% to 0%,31,15,8,8,48.39,25.81,1.863,2.33,-2.781,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,31,15,8,8,48.39,25.81,1.863,2.33,-2.781,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + label:score_bucket_70-79,31,14,8,9,45.16,25.81,0.393,0.646,-3.197,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,31,15,8,8,48.39,25.81,1.863,2.33,-2.781,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,39,21,10,8,53.85,25.64,1.356,2.051,-3.3,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + volatility_contraction20 > 1.3 + market_ret20 < -5%,47,24,12,11,51.06,25.53,1.162,1.801,-3.014,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,47,24,12,11,51.06,25.53,1.162,1.801,-3.014,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + market_context risk-off,47,22,12,13,46.81,25.53,1.465,1.674,-2.328,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + label:extension_context_KHÔNG_QUÁ_NÓNG,47,22,12,13,46.81,25.53,1.465,1.674,-2.328,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + label:market_context_MARKET_RISK-OFF,47,22,12,13,46.81,25.53,1.465,1.674,-2.328,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:structure_context_CÓ_NỀN___SIDEWAY,47,24,12,11,51.06,25.53,1.162,1.801,-3.014,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:score_bucket_70-79,124,62,31,31,50.0,25.0,0.903,1.937,-3.103,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + range20 <= 10% + market_ret20 < -5%,44,20,11,13,45.45,25.0,1.127,1.431,-2.345,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + drawdown20 -10% to 0%,44,20,11,13,45.45,25.0,1.432,1.65,-2.335,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + label:structure_context_CÓ_NỀN___SIDEWAY,44,20,11,13,45.45,25.0,1.127,1.431,-2.345,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + label:risk_context_PULLBACK_LÀNH_MẠNH,44,20,11,13,45.45,25.0,1.432,1.65,-2.335,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,40,18,10,12,45.0,25.0,1.08,1.275,-2.356,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:score_bucket_70-79,36,19,9,8,52.78,25.0,0.349,0.845,-2.748,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 > 1.3 + market_ret20 < -5%,73,39,18,16,53.42,24.66,1.871,2.32,-3.309,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,73,39,18,16,53.42,24.66,1.871,2.32,-3.309,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,73,39,18,16,53.42,24.66,1.871,2.32,-3.309,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:entry_context_ENTRY_GẦN_MA20,61,35,15,11,57.38,24.59,0.302,1.72,-3.699,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:market_regime_YẾU,57,32,14,11,56.14,24.56,1.91,4.572,-4.597,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + drawdown20 -10% to 0% + label:market_regime_YẾU,102,52,25,25,50.98,24.51,1.828,2.873,-3.279,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,102,57,25,20,55.88,24.51,1.522,2.237,-3.739,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,range20 <= 10% + volatility_contraction20 > 1.3 + label:market_regime_YẾU,45,23,11,11,51.11,24.44,0.97,1.708,-2.255,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_context risk-off + label:market_regime_YẾU,50,28,12,10,56.0,24.0,1.311,3.745,-4.212,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_context risk-off + drawdown20 < -15% + label:entry_context_ENTRY_GẦN_MA20,55,34,13,8,61.82,23.64,0.319,2.071,-3.461,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,72,44,17,11,61.11,23.61,0.8,2.406,-2.782,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 > 1.3 + market_ret20 < -5%,140,76,33,31,54.29,23.57,1.361,2.365,-2.945,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:volatility_context_VOLATILITY_MỞ_RỘNG,140,76,33,31,54.29,23.57,1.361,2.365,-2.945,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio 1.2-2.0x + label:score_bucket_60-69,30,18,7,5,60.0,23.33,0.515,1.807,-3.484,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:score_bucket_60-69,30,18,7,5,60.0,23.33,2.7,3.895,-3.661,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:volume_context_VOLUME_CẠN,97,54,22,21,55.67,22.68,1.571,2.607,-2.779,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + drawdown20 < -15%,31,18,7,6,58.06,22.58,2.36,2.707,-3.212,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:risk_context_DRAWDOWN_SÂU,31,18,7,6,58.06,22.58,2.36,2.707,-3.212,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,31,18,7,6,58.06,22.58,2.36,2.707,-3.212,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + drawdown20 -10% to 0% + label:market_regime_YẾU,40,24,9,7,60.0,22.5,2.931,5.326,-3.928,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:volume_context_VOLUME_TRUNG_TÍNH,36,25,8,3,69.44,22.22,1.39,2.202,-3.755,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret5 > 4% + label:structure_context_KHÔNG_RÕ_NỀN,36,20,8,8,55.56,22.22,1.23,3.938,-5.502,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + label:market_regime_YẾU,50,26,11,13,52.0,22.0,0.873,1.917,-2.883,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:market_regime_YẾU,41,28,9,4,68.29,21.95,2.251,3.46,-2.782,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + drawdown20 -10% to 0%,32,17,7,8,53.12,21.88,1.794,2.435,-3.128,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_dist_ma20 > 5% + label:risk_context_PULLBACK_LÀNH_MẠNH,32,17,7,8,53.12,21.88,1.794,2.435,-3.128,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret20 < -5% + label:score_bucket_60-69,69,42,15,12,60.87,21.74,2.253,2.796,-2.834,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:score_bucket_70-79,96,56,20,20,58.33,20.83,1.645,2.74,-3.526,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,44,30,9,5,68.18,20.45,2.097,3.974,-3.825,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_ret20 < -5% + label:score_bucket_70-79,30,20,6,4,66.67,20.0,0.359,2.259,-4.184,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:entry_context_ENTRY_GẦN_MA20,137,75,27,35,54.74,19.71,1.412,2.663,-3.093,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + drawdown20 < -15%,56,37,11,8,66.07,19.64,1.657,3.036,-2.777,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:risk_context_DRAWDOWN_SÂU,56,37,11,8,66.07,19.64,1.657,3.036,-2.777,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,102,61,20,21,59.8,19.61,0.97,2.391,-2.93,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:market_regime_YẾU,87,55,17,15,63.22,19.54,2.59,3.986,-2.763,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:score_bucket_60-69,41,27,8,6,65.85,19.51,1.69,3.151,-2.925,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + drawdown20 < -15%,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:risk_context_DRAWDOWN_SÂU,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:structure_context_KHÔNG_RÕ_NỀN,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:risk_context_DRAWDOWN_SÂU,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:market_context_MARKET_RISK-OFF,73,46,14,13,63.01,19.18,1.375,2.622,-3.08,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + stock_dist_ma20 > 8% + label:market_regime_YẾU,32,20,6,6,62.5,18.75,1.727,5.357,-4.388,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_context risk-off + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,66,37,12,17,56.06,18.18,1.268,2.119,-3.183,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret20 < -5% + label:market_regime_YẾU,52,35,9,8,67.31,17.31,0.291,2.93,-2.823,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,59,39,10,10,66.1,16.95,1.007,2.653,-2.917,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,60,34,10,16,56.67,16.67,1.463,2.27,-2.977,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:entry_context_ENTRY_GẦN_MA20,42,28,7,7,66.67,16.67,0.648,2.559,-2.983,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + drawdown20 < -15%,36,21,6,9,58.33,16.67,1.997,2.214,-3.127,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 > 1.3 + market_ret20 < -5% + label:risk_context_DRAWDOWN_SÂU,36,21,6,9,58.33,16.67,1.997,2.214,-3.127,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:volatility_context_VOLATILITY_MỞ_RỘNG,36,21,6,9,58.33,16.67,1.997,2.214,-3.127,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + market_context risk-off + label:market_regime_YẾU,196,136,31,29,69.39,15.82,2.055,4.317,-2.781,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 -10% to 0% + label:market_regime_YẾU,112,76,17,19,67.86,15.18,2.613,4.693,-2.653,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret20 < -5% + label:market_regime_YẾU,132,96,19,17,72.73,14.39,1.44,3.994,-2.752,3,WIN_RULE,ALLOW_KEEP_ONLY,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret20 < -5% + label:market_regime_YẾU,31,21,4,6,67.74,12.9,1.934,3.296,-2.366,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE
+COMBO_3,market_ret20 < -5% + drawdown20 < -15% + label:market_regime_YẾU,39,31,4,4,79.49,10.26,1.961,4.08,-2.277,3,WIN_RULE,ALLOW_KEEP_ONLY,MEDIUM_SAMPLE

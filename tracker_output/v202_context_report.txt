@@ -1,0 +1,75 @@
+================================================================================================
+V20.2 — CONTEXT DRILLDOWN + RULE GENERATOR
+================================================================================================
+Source: tracker_output/v201_context_replay.csv
+Total rows: 3941
+
+Mục tiêu:
+- Tách nhỏ nguyên nhân FAIL/WIN.
+- Sinh rule cụ thể cho V18.2 realtime.
+- Rule chỉ dùng để hạ rủi ro, không dùng để tự động nâng BUY.
+
+Top FAIL rules:
+- market_context fomo/hưng phấn | n=238, fail=56.3%, win=31.51%, T+5=-1.107%, action=DOWNGRADE_TO_WATCH
+- label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO | n=238, fail=56.3%, win=31.51%, T+5=-1.107%, action=DOWNGRADE_TO_WATCH
+- market_context fomo/hưng phấn + label:score_bucket_60-69 | n=31, fail=74.19%, win=22.58%, T+5=-2.684%, action=BLOCK_OR_WATCH
+- market_context fomo/hưng phấn + label:market_regime_BÌNH_THƯỜNG | n=40, fail=72.5%, win=22.5%, T+5=-1.893%, action=BLOCK_OR_WATCH
+- stock_dist_ma20 > 8% + label:market_regime_RẤT_YẾU | n=42, fail=71.43%, win=23.81%, T+5=-2.646%, action=BLOCK_OR_WATCH
+- stock_dist_ma20 < -3% + market_ret5 > 4% | n=34, fail=70.59%, win=23.53%, T+5=-3.037%, action=BLOCK_OR_WATCH
+- market_ret5 > 4% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU | n=34, fail=70.59%, win=23.53%, T+5=-3.037%, action=BLOCK_OR_WATCH
+- stock_ret20 > 15% + label:market_regime_RẤT_YẾU | n=41, fail=68.29%, win=29.27%, T+5=-3.811%, action=BLOCK_OR_WATCH
+- market_ret5 > 4% + label:score_bucket_60-69 | n=50, fail=68.0%, win=24.0%, T+5=-1.765%, action=BLOCK_OR_WATCH
+- stock_dist_ma20 < -3% + market_context fomo/hưng phấn | n=34, fail=67.65%, win=26.47%, T+5=-2.267%, action=BLOCK_OR_WATCH
+- stock_dist_ma20 < -3% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO | n=34, fail=67.65%, win=26.47%, T+5=-2.267%, action=BLOCK_OR_WATCH
+- market_context fomo/hưng phấn + label:entry_context_ENTRY_DƯỚI_MA20___YẾU | n=34, fail=67.65%, win=26.47%, T+5=-2.267%, action=BLOCK_OR_WATCH
+- volatility_contraction20 < 0.8 + market_context fomo/hưng phấn | n=66, fail=66.67%, win=28.79%, T+5=-2.028%, action=BLOCK_OR_WATCH
+- volatility_contraction20 < 0.8 + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO | n=66, fail=66.67%, win=28.79%, T+5=-2.028%, action=BLOCK_OR_WATCH
+- market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP | n=66, fail=66.67%, win=28.79%, T+5=-2.028%, action=BLOCK_OR_WATCH
+- stock_dist_ma20 < -3% + label:market_regime_TĂNG_MẠNH | n=165, fail=65.45%, win=20.0%, T+5=-2.512%, action=BLOCK_OR_WATCH
+- volume_ratio 1.2-2.0x + label:market_regime_BÌNH_THƯỜNG | n=40, fail=65.0%, win=20.0%, T+5=-3.167%, action=BLOCK_OR_WATCH
+- volatility_contraction20 < 0.8 + market_dist_ma20 > 5% | n=40, fail=65.0%, win=30.0%, T+5=-1.608%, action=BLOCK_OR_WATCH
+- market_dist_ma20 > 5% + label:volatility_context_VOLATILITY_CO_HẸP | n=40, fail=65.0%, win=30.0%, T+5=-1.608%, action=BLOCK_OR_WATCH
+- drawdown20 < -15% + label:market_regime_TĂNG_MẠNH | n=54, fail=62.96%, win=20.37%, T+5=-2.955%, action=BLOCK_OR_WATCH
+- volatility_contraction20 < 0.8 + market_ret5 > 4% | n=64, fail=62.5%, win=26.56%, T+5=-1.881%, action=BLOCK_OR_WATCH
+- market_ret5 > 4% + label:volatility_context_VOLATILITY_CO_HẸP | n=64, fail=62.5%, win=26.56%, T+5=-1.881%, action=BLOCK_OR_WATCH
+- market_dist_ma20 > 5% + label:volume_context_VOLUME_CẠN | n=32, fail=62.5%, win=21.88%, T+5=-1.726%, action=BLOCK_OR_WATCH
+- volume_ratio < 1x + market_context fomo/hưng phấn | n=101, fail=62.38%, win=24.75%, T+5=-1.925%, action=BLOCK_OR_WATCH
+- volume_ratio < 1x + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO | n=101, fail=62.38%, win=24.75%, T+5=-1.925%, action=BLOCK_OR_WATCH
+
+Top WIN rules:
+- market_ret20 < -5% | n=563, win=51.15%, fail=30.02%, T+5=2.233%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 3-8% + market_ret20 < -5% | n=81, win=45.68%, fail=43.21%, T+5=1.792%, action=ALLOW_KEEP_ONLY
+- market_ret20 < -5% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20 | n=81, win=45.68%, fail=43.21%, T+5=1.792%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 3-8% + label:score_bucket_60-69 | n=42, win=45.24%, fail=42.86%, T+5=0.736%, action=ALLOW_KEEP_ONLY
+- stock_ret5 > 8% + market_context risk-off | n=120, win=47.5%, fail=42.5%, T+5=1.186%, action=ALLOW_KEEP_ONLY
+- stock_ret5 > 8% + label:market_context_MARKET_RISK-OFF | n=120, win=47.5%, fail=42.5%, T+5=1.186%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 > 8% + market_ret20 < -5% | n=33, win=48.48%, fail=42.42%, T+5=4.506%, action=ALLOW_KEEP_ONLY
+- market_ret20 < -5% + label:entry_context_ENTRY_XA_MA20___FOMO | n=33, win=48.48%, fail=42.42%, T+5=4.506%, action=ALLOW_KEEP_ONLY
+- stock_ret20 > 15% + volatility_contraction20 > 1.3 | n=157, win=45.22%, fail=42.04%, T+5=0.347%, action=ALLOW_KEEP_ONLY
+- stock_ret20 > 15% + label:volatility_context_VOLATILITY_MỞ_RỘNG | n=157, win=45.22%, fail=42.04%, T+5=0.347%, action=ALLOW_KEEP_ONLY
+- volatility_contraction20 > 1.3 + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL | n=157, win=45.22%, fail=42.04%, T+5=0.347%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 > 8% + label:volume_context_VOLUME_CẠN | n=72, win=45.83%, fail=41.67%, T+5=1.676%, action=ALLOW_KEEP_ONLY
+- stock_ret20 > 15% + stock_dist_ma20 > 8% | n=191, win=47.64%, fail=40.84%, T+5=1.265%, action=ALLOW_KEEP_ONLY
+- stock_ret20 > 15% + label:entry_context_ENTRY_XA_MA20___FOMO | n=191, win=47.64%, fail=40.84%, T+5=1.265%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 > 8% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL | n=191, win=47.64%, fail=40.84%, T+5=1.265%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 3-8% + market_ret5 > 4% | n=37, win=45.95%, fail=40.54%, T+5=0.693%, action=ALLOW_KEEP_ONLY
+- market_ret5 > 4% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20 | n=37, win=45.95%, fail=40.54%, T+5=0.693%, action=ALLOW_KEEP_ONLY
+- volume_ratio 1.2-2.0x + market_ret5 > 4% | n=46, win=45.65%, fail=39.13%, T+5=1.551%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 > 8% + volume_ratio < 1x | n=77, win=46.75%, fail=38.96%, T+5=0.843%, action=ALLOW_KEEP_ONLY
+- volume_ratio < 1x + label:entry_context_ENTRY_XA_MA20___FOMO | n=77, win=46.75%, fail=38.96%, T+5=0.843%, action=ALLOW_KEEP_ONLY
+- volume_ratio 1.2-2.0x + market_context risk-off | n=244, win=45.9%, fail=38.52%, T+5=0.839%, action=ALLOW_KEEP_ONLY
+- volume_ratio 1.2-2.0x + label:market_context_MARKET_RISK-OFF | n=244, win=45.9%, fail=38.52%, T+5=0.839%, action=ALLOW_KEEP_ONLY
+- stock_ret5 > 8% + label:score_bucket_70-79 | n=34, win=50.0%, fail=38.24%, T+5=0.552%, action=ALLOW_KEEP_ONLY
+- stock_ret5 > 8% + market_ret20 < -5% | n=50, win=54.0%, fail=38.0%, T+5=3.328%, action=ALLOW_KEEP_ONLY
+- stock_dist_ma20 > 8% + label:market_context_MARKET_ỦNG_HỘ | n=124, win=46.77%, fail=37.9%, T+5=1.368%, action=ALLOW_KEEP_ONLY
+
+Cách dùng:
+- Mở v202_realtime_rules_for_v18.csv để xem rule gắn vào V18.2.
+- BLOCK_OR_WATCH: nếu V18.2 báo BUY thì hạ về WATCH hoặc KHÔNG VÀO.
+- DOWNGRADE_TO_WATCH: hạ recommendation về WATCH.
+- ALLOW_KEEP_ONLY: chỉ giữ nguyên, không nâng lên BUY lớn.
+
+Cảnh báo chống học vẹt:
+- Không dùng rule có n quá thấp.
+- Ưu tiên combo 2 điều kiện hơn combo 3 nếu hiệu quả gần nhau.
+- Phải chạy lại định kỳ sau khi có alert_journal live.

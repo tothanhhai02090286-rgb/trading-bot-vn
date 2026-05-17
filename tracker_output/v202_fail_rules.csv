@@ -1,0 +1,292 @@
+﻿pattern,conditions,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t2_pct,avg_ret_t5_pct,avg_drawdown_t5_pct,combo_size,rule_type,action,confidence
+COMBO_1,market_context fomo/hưng phấn,238,75,134,29,31.51,56.3,-0.779,-1.107,-6.027,1,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_1,label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,238,75,134,29,31.51,56.3,-0.779,-1.107,-6.027,1,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:score_bucket_60-69,31,7,23,1,22.58,74.19,-2.319,-2.684,-6.602,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:market_regime_BÌNH_THƯỜNG,40,9,29,2,22.5,72.5,-1.708,-1.893,-5.025,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 > 8% + label:market_regime_RẤT_YẾU,42,10,30,2,23.81,71.43,0.293,-2.646,-8.299,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + market_ret5 > 4%,34,8,24,2,23.53,70.59,-2.56,-3.037,-7.283,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,34,8,24,2,23.53,70.59,-2.56,-3.037,-7.283,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_ret20 > 15% + label:market_regime_RẤT_YẾU,41,12,28,1,29.27,68.29,-0.032,-3.811,-9.581,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:score_bucket_60-69,50,12,34,4,24.0,68.0,-2.157,-1.765,-6.51,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + market_context fomo/hưng phấn,34,9,23,2,26.47,67.65,-2.24,-2.267,-7.199,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,34,9,23,2,26.47,67.65,-2.24,-2.267,-7.199,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,34,9,23,2,26.47,67.65,-2.24,-2.267,-7.199,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn,66,19,44,3,28.79,66.67,-1.722,-2.028,-5.799,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,66,19,44,3,28.79,66.67,-1.722,-2.028,-5.799,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP,66,19,44,3,28.79,66.67,-1.722,-2.028,-5.799,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:market_regime_TĂNG_MẠNH,165,33,108,24,20.0,65.45,-1.759,-2.512,-6.064,2,FAIL_RULE,BLOCK_OR_WATCH,HIGH_SAMPLE
+COMBO_2,volume_ratio 1.2-2.0x + label:market_regime_BÌNH_THƯỜNG,40,8,26,6,20.0,65.0,-0.881,-3.167,-5.956,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + market_dist_ma20 > 5%,40,12,26,2,30.0,65.0,-1.571,-1.608,-5.485,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_dist_ma20 > 5% + label:volatility_context_VOLATILITY_CO_HẸP,40,12,26,2,30.0,65.0,-1.571,-1.608,-5.485,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_regime_TĂNG_MẠNH,54,11,34,9,20.37,62.96,-2.549,-2.955,-7.287,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + market_ret5 > 4%,64,17,40,7,26.56,62.5,-1.785,-1.881,-5.867,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:volatility_context_VOLATILITY_CO_HẸP,64,17,40,7,26.56,62.5,-1.785,-1.881,-5.867,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_dist_ma20 > 5% + label:volume_context_VOLUME_CẠN,32,7,20,5,21.88,62.5,-1.178,-1.726,-5.22,2,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_2,volume_ratio < 1x + market_context fomo/hưng phấn,101,25,63,13,24.75,62.38,-1.335,-1.925,-5.814,2,FAIL_RULE,BLOCK_OR_WATCH,HIGH_SAMPLE
+COMBO_2,volume_ratio < 1x + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,101,25,63,13,24.75,62.38,-1.335,-1.925,-5.814,2,FAIL_RULE,BLOCK_OR_WATCH,HIGH_SAMPLE
+COMBO_2,volume_ratio < 1x + market_dist_ma20 > 5%,57,17,35,5,29.82,61.4,-1.421,-1.72,-5.671,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_TRUNG_TÍNH,92,23,56,13,25.0,60.87,-0.827,-2.002,-6.152,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:market_context_MARKET_ỦNG_HỘ,243,58,144,41,23.87,59.26,-1.364,-1.995,-5.228,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_ret5 > 4% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,66,16,39,11,24.24,59.09,-0.646,-2.041,-5.963,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:volume_context_VOLUME_TĂNG_VỪA,75,23,44,8,30.67,58.67,-1.417,-1.891,-6.764,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_ret20 > 15% + market_dist_ma20 > 5%,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,volume_ratio > 3x + label:volatility_context_VOLATILITY_TRUNG_TÍNH,36,7,21,8,19.44,58.33,-1.053,-1.901,-5.584,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_dist_ma20 > 5% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + label:market_regime_BÌNH_THƯỜNG,175,37,102,36,21.14,58.29,-1.31,-2.601,-5.417,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_ret20 > 15% + label:entry_context_ENTRY_GẦN_MA20,31,9,18,4,29.03,58.06,-1.585,-1.157,-6.897,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,volume_ratio < 1x + market_ret5 > 4%,88,21,51,16,23.86,57.95,-1.155,-1.474,-5.704,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_context_MARKET_ỦNG_HỘ,76,18,44,14,23.68,57.89,-2.277,-2.057,-6.133,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:volume_context_VOLUME_CẠN,45,10,26,9,22.22,57.78,-0.888,-1.248,-4.952,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,sideway_score20 >= 2 + market_context fomo/hưng phấn,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,sideway_score20 >= 2 + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:structure_context_CÓ_NỀN___SIDEWAY,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,drawdown20 < -15% + label:market_regime_TÍCH_CỰC,40,10,23,7,25.0,57.5,-1.707,-1.862,-5.388,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:entry_context_ENTRY_GẦN_MA20,89,23,51,15,25.84,57.3,-0.476,-1.148,-4.804,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:volume_context_VOLUME_TĂNG_VỪA,58,18,33,7,31.03,56.9,-0.83,-1.217,-6.522,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + drawdown20 -10% to 0%,175,52,99,24,29.71,56.57,-0.625,-1.068,-5.807,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:risk_context_PULLBACK_LÀNH_MẠNH,175,52,99,24,29.71,56.57,-0.625,-1.068,-5.807,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,drawdown20 -10% to 0% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,175,52,99,24,29.71,56.57,-0.625,-1.068,-5.807,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:market_regime_RẤT_YẾU,124,43,70,11,34.68,56.45,-0.624,-1.063,-6.039,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:score_bucket_80+,133,38,75,20,28.57,56.39,-0.728,-1.011,-5.187,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,238,75,134,29,31.51,56.3,-0.779,-1.107,-6.027,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:extension_context_KHÔNG_QUÁ_NÓNG,178,55,100,23,30.9,56.18,-0.585,-1.014,-5.613,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 < -3% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,292,88,164,40,30.14,56.16,-1.235,-1.297,-5.383,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,179,61,100,18,34.08,55.87,-0.912,-0.995,-6.511,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + volume_ratio > 3x,43,9,24,10,20.93,55.81,-0.476,-2.059,-5.158,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,volume_ratio > 3x + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,43,9,24,10,20.93,55.81,-0.476,-2.059,-5.158,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8,165,43,92,30,26.06,55.76,-0.699,-0.985,-4.954,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:volatility_context_VOLATILITY_CO_HẸP,165,43,92,30,26.06,55.76,-0.699,-0.985,-4.954,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,165,43,92,30,26.06,55.76,-0.699,-0.985,-4.954,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,market_dist_ma20 > 5% + label:structure_context_KHÔNG_RÕ_NỀN,122,42,68,12,34.43,55.74,-0.885,-1.002,-6.326,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + sideway_score20 >= 2,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:structure_context_CÓ_NỀN___SIDEWAY,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,sideway_score20 >= 2 + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,sideway_score20 >= 2 + market_ret5 > 4%,47,12,26,9,25.53,55.32,-0.227,-1.307,-4.765,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,market_ret5 > 4% + label:structure_context_CÓ_NỀN___SIDEWAY,47,12,26,9,25.53,55.32,-0.227,-1.307,-4.765,2,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_2,stock_dist_ma20 3-8% + label:volume_context_VOLUME_TĂNG_VỪA,264,83,146,35,31.44,55.3,-0.46,-0.8,-5.098,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_2,volatility_contraction20 < 0.8 + label:market_regime_TĂNG_MẠNH,280,73,154,53,26.07,55.0,-0.974,-1.412,-5.106,2,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret5 > 4% + market_context fomo/hưng phấn,30,6,22,2,20.0,73.33,-2.216,-2.949,-7.15,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,30,6,22,2,20.0,73.33,-2.216,-2.949,-7.15,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,30,6,22,2,20.0,73.33,-2.216,-2.949,-7.15,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret5 > 4% + label:structure_context_KHÔNG_RÕ_NỀN,32,8,23,1,25.0,71.88,-2.562,-3.138,-7.377,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:market_regime_BÌNH_THƯỜNG,32,7,23,2,21.88,71.88,-1.716,-1.913,-4.665,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + market_context risk-off + label:market_regime_RẤT_YẾU,42,10,30,2,23.81,71.43,0.293,-2.646,-8.299,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + market_context fomo/hưng phấn,41,9,29,3,21.95,70.73,-1.765,-2.361,-5.544,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,41,9,29,3,21.95,70.73,-1.765,-2.361,-5.544,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP,41,9,29,3,21.95,70.73,-1.765,-2.361,-5.544,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:score_bucket_80+,41,11,29,1,26.83,70.73,-1.29,-2.292,-5.765,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_ret5 > 4% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,34,8,24,2,23.53,70.59,-2.56,-3.037,-7.283,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:score_bucket_70-79,61,11,43,7,18.03,70.49,-2.709,-3.78,-6.767,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + drawdown20 -10% to 0%,48,12,33,3,25.0,68.75,-1.552,-2.032,-5.441,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:risk_context_PULLBACK_LÀNH_MẠNH,48,12,33,3,25.0,68.75,-1.552,-2.032,-5.441,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 -10% to 0% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,48,12,33,3,25.0,68.75,-1.552,-2.032,-5.441,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_CO_HẸP,48,12,33,3,25.0,68.75,-1.552,-2.032,-5.441,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,32,9,22,1,28.12,68.75,-2.222,-2.32,-7.287,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:entry_context_ENTRY_GẦN_MA20,38,10,26,2,26.32,68.42,-1.02,-1.861,-4.676,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_context risk-off + label:market_regime_RẤT_YẾU,41,12,28,1,29.27,68.29,-0.032,-3.811,-9.581,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:market_regime_RẤT_YẾU,34,10,23,1,29.41,67.65,0.946,-2.376,-8.333,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context fomo/hưng phấn + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,34,9,23,2,26.47,67.65,-2.24,-2.267,-7.199,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context fomo/hưng phấn + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,34,9,23,2,26.47,67.65,-2.24,-2.267,-7.199,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:entry_context_ENTRY_GẦN_MA20,40,9,27,4,22.5,67.5,-1.45,-1.92,-5.396,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + drawdown20 < -15%,55,8,37,10,14.55,67.27,-2.158,-2.812,-5.801,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:risk_context_DRAWDOWN_SÂU,55,8,37,10,14.55,67.27,-2.158,-2.812,-5.801,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:volatility_context_VOLATILITY_CO_HẸP,55,8,37,10,14.55,67.27,-2.158,-2.812,-5.801,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 < -15% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,55,8,37,10,14.55,67.27,-2.158,-2.812,-5.801,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP,66,19,44,3,28.79,66.67,-1.722,-2.028,-5.799,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,66,19,44,3,28.79,66.67,-1.722,-2.028,-5.799,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:market_regime_TĂNG_MẠNH,45,8,30,7,17.78,66.67,-2.708,-3.132,-7.371,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,45,14,30,1,31.11,66.67,-2.251,-1.935,-6.619,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + drawdown20 -10% to 0% + label:market_regime_RẤT_YẾU,30,9,20,1,30.0,66.67,0.414,-3.066,-8.527,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:extension_context_KHÔNG_QUÁ_NÓNG,56,16,37,3,28.57,66.07,-1.321,-1.745,-5.218,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + market_ret5 > 4%,41,8,27,6,19.51,65.85,-2.104,-2.229,-5.744,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:volatility_context_VOLATILITY_CO_HẸP,41,8,27,6,19.51,65.85,-2.104,-2.229,-5.744,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:market_regime_TĂNG_MẠNH,152,30,100,22,19.74,65.79,-1.685,-2.577,-6.02,3,FAIL_RULE,BLOCK_OR_WATCH,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:volume_context_VOLUME_TRUNG_TÍNH,32,11,21,0,34.38,65.62,-1.75,-1.913,-6.557,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:volume_context_VOLUME_TĂNG_VỪA,46,10,30,6,21.74,65.22,-1.418,-2.1,-5.361,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_dist_ma20 > 5% + label:volatility_context_VOLATILITY_CO_HẸP,40,12,26,2,30.0,65.0,-1.571,-1.608,-5.485,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:score_bucket_60-69,39,10,25,4,25.64,64.1,-1.77,-1.517,-5.858,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + label:market_regime_TĂNG_MẠNH,36,6,23,7,16.67,63.89,-1.967,-2.134,-6.845,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + volatility_contraction20 > 1.3 + label:market_regime_RẤT_YẾU,30,10,19,1,33.33,63.33,0.629,-4.155,-10.166,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio > 3x + label:volume_context_VOLUME_TĂNG_VỪA,30,6,19,5,20.0,63.33,-0.497,-2.427,-5.645,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:volume_context_VOLUME_TRUNG_TÍNH,30,9,19,2,30.0,63.33,-1.943,-1.988,-6.65,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:entry_context_ENTRY_GẦN_MA20,49,9,31,9,18.37,63.27,-1.106,-1.878,-4.775,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:structure_context_KHÔNG_RÕ_NỀN,49,13,31,5,26.53,63.27,-2.118,-1.709,-6.287,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + market_context fomo/hưng phấn,46,14,29,3,30.43,63.04,-1.318,-1.818,-5.545,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,46,14,29,3,30.43,63.04,-1.318,-1.818,-5.545,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP,46,14,29,3,30.43,63.04,-1.318,-1.818,-5.545,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:market_regime_YẾU,51,11,32,8,21.57,62.75,-3.426,-3.878,-7.328,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:volatility_context_VOLATILITY_CO_HẸP,64,17,40,7,26.56,62.5,-1.785,-1.881,-5.867,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:market_regime_TĂNG_MẠNH,56,11,35,10,19.64,62.5,-1.229,-1.711,-5.765,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + label:volume_context_VOLUME_TĂNG_VỪA,48,13,30,5,27.08,62.5,-0.885,-1.062,-6.406,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,101,25,63,13,24.75,62.38,-1.335,-1.925,-5.814,3,FAIL_RULE,BLOCK_OR_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:extension_context_KHÔNG_QUÁ_NÓNG,77,18,48,11,23.38,62.34,-1.178,-1.661,-5.366,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:volume_context_VOLUME_TRUNG_TÍNH,69,18,43,8,26.09,62.32,-2.493,-2.554,-6.465,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio < 1x + label:market_regime_BÌNH_THƯỜNG,37,11,23,3,29.73,62.16,-0.596,-2.094,-6.047,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:volume_context_VOLUME_CẠN,37,6,23,8,16.22,62.16,-1.142,-1.789,-4.994,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:volume_context_VOLUME_TRUNG_TÍNH,58,18,36,4,31.03,62.07,-1.536,-1.847,-6.315,3,FAIL_RULE,BLOCK_OR_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + market_context fomo/hưng phấn,63,13,39,11,20.63,61.9,-1.112,-2.02,-5.775,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,63,13,39,11,20.63,61.9,-1.112,-2.02,-5.775,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + drawdown20 -10% to 0%,75,18,46,11,24.0,61.33,-0.989,-1.645,-5.218,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:risk_context_PULLBACK_LÀNH_MẠNH,75,18,46,11,24.0,61.33,-0.989,-1.645,-5.218,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 -10% to 0% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,75,18,46,11,24.0,61.33,-0.989,-1.645,-5.218,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,31,5,19,7,16.13,61.29,-1.229,-3.149,-6.438,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:extension_context_KHÔNG_QUÁ_NÓNG,54,14,33,7,25.93,61.11,-1.476,-1.453,-5.541,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context fomo/hưng phấn + label:market_regime_TĂNG_MẠNH,41,14,25,2,34.15,60.98,-1.525,-1.492,-5.943,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,64,13,39,12,20.31,60.94,-2.863,-2.905,-6.233,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:market_context_MARKET_ỦNG_HỘ,64,14,39,11,21.88,60.94,-2.126,-2.151,-6.034,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:market_regime_TĂNG_MẠNH,51,11,31,9,21.57,60.78,-0.711,-1.155,-4.426,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:score_bucket_80+,43,13,26,4,30.23,60.47,0.101,-1.258,-4.552,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 < 0.8 + label:market_context_MARKET_ỦNG_HỘ,48,12,29,7,25.0,60.42,-0.737,-1.479,-5.029,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:volume_context_VOLUME_TRUNG_TÍNH,48,14,29,5,29.17,60.42,-1.424,-1.74,-6.219,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:score_bucket_80+,98,24,59,15,24.49,60.2,-0.705,-1.553,-4.39,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:market_context_MARKET_ỦNG_HỘ,60,13,36,11,21.67,60.0,-0.607,-1.403,-4.08,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:entry_context_ENTRY_GẦN_MA20,50,11,30,9,22.0,60.0,-0.48,-2.001,-4.636,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + label:structure_context_KHÔNG_RÕ_NỀN,45,14,27,4,31.11,60.0,-1.756,-1.889,-6.337,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + label:score_bucket_80+,45,14,27,4,31.11,60.0,-1.118,-1.582,-5.184,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:market_regime_TÍCH_CỰC,35,8,21,6,22.86,60.0,-1.663,-1.958,-5.292,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:market_context_MARKET_ỦNG_HỘ,227,54,136,37,23.79,59.91,-1.318,-1.995,-5.201,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,77,22,46,9,28.57,59.74,-1.425,-1.864,-6.351,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:market_regime_TĂNG_MẠNH,47,11,28,8,23.4,59.57,-2.344,-2.754,-7.274,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:volume_context_VOLUME_TĂNG_VỪA,47,13,28,6,27.66,59.57,-1.665,-2.507,-6.812,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:market_regime_TÍCH_CỰC,32,7,19,6,21.88,59.38,-1.802,-1.861,-5.329,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_dist_ma20 > 5% + label:extension_context_KHÔNG_QUÁ_NÓNG,32,11,19,2,34.38,59.38,-0.429,-0.697,-4.222,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_TRUNG_TÍNH,61,15,36,10,24.59,59.02,-0.452,-2.091,-5.841,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:score_bucket_70-79,39,11,23,5,28.21,58.97,-1.523,-1.561,-5.913,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + label:market_context_MARKET_ỦNG_HỘ,34,6,20,8,17.65,58.82,-1.865,-1.606,-5.972,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:score_bucket_80+,63,19,37,7,30.16,58.73,-0.896,-1.582,-5.513,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:market_regime_TĂNG_MẠNH,75,20,44,11,26.67,58.67,-1.205,-1.807,-5.871,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_TRUNG_TÍNH,41,9,24,8,21.95,58.54,-1.237,-2.615,-6.346,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:volume_context_VOLUME_CẠN,41,9,24,8,21.95,58.54,-0.893,-1.491,-5.128,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:volume_context_VOLUME_TĂNG_VỪA,53,14,31,8,26.42,58.49,-0.475,-0.939,-4.294,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:structure_context_KHÔNG_RÕ_NỀN,202,47,118,37,23.27,58.42,-1.825,-2.511,-6.004,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + market_context fomo/hưng phấn,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + label:structure_context_KHÔNG_RÕ_NỀN,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + label:score_bucket_80+,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_dist_ma20 > 5% + market_context fomo/hưng phấn + label:extension_context_TĂNG_NÓNG_TRƯỚC_SIGNAL,36,12,21,3,33.33,58.33,-0.928,-1.462,-7.314,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:market_context_MARKET_ỦNG_HỘ,67,16,39,12,23.88,58.21,-2.221,-1.91,-6.074,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,67,18,39,10,26.87,58.21,-0.643,-1.761,-5.781,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + drawdown20 -10% to 0%,55,12,32,11,21.82,58.18,-0.496,-1.761,-4.563,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:risk_context_PULLBACK_LÀNH_MẠNH,55,12,32,11,21.82,58.18,-0.496,-1.761,-4.563,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + drawdown20 -10% to 0% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,55,12,32,11,21.82,58.18,-0.496,-1.761,-4.563,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:structure_context_CÓ_NỀN___SIDEWAY,55,12,32,11,21.82,58.18,-0.496,-1.761,-4.563,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret20 > 15% + market_dist_ma20 > 5% + label:market_regime_TĂNG_MẠNH,31,10,18,3,32.26,58.06,-1.021,-1.686,-7.529,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volume_ratio 1.2-2.0x + label:extension_context_KHÔNG_QUÁ_NÓNG,31,7,18,6,22.58,58.06,-0.819,-2.514,-6.947,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:risk_context_RISK_TRUNG_TÍNH,119,30,69,20,25.21,57.98,-2.051,-2.712,-6.422,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:volatility_context_VOLATILITY_TRUNG_TÍNH,233,67,135,31,28.76,57.94,-1.098,-1.531,-5.431,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:market_regime_RẤT_YẾU,38,15,22,1,39.47,57.89,1.19,0.526,-6.86,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:risk_context_RISK_TRUNG_TÍNH,38,11,22,5,28.95,57.89,-0.5,-0.729,-3.914,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:volume_context_VOLUME_TĂNG_VỪA,180,55,104,21,30.56,57.78,-0.437,-0.84,-5.359,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + drawdown20 -10% to 0%,45,14,26,5,31.11,57.78,-1.133,-1.444,-5.045,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + label:risk_context_PULLBACK_LÀNH_MẠNH,45,14,26,5,31.11,57.78,-1.133,-1.444,-5.045,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_ret20 < -5% + label:market_regime_RẤT_YẾU,52,17,30,5,32.69,57.69,-0.024,0.091,-5.551,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:volume_context_VOLUME_TĂNG_VỪA,52,17,30,5,32.69,57.69,-0.936,-1.569,-6.464,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:extension_context_KHÔNG_QUÁ_NÓNG,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:structure_context_CÓ_NỀN___SIDEWAY,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,59,14,34,11,23.73,57.63,-0.373,-1.449,-4.558,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_dist_ma20 > 5% + market_context fomo/hưng phấn,33,12,19,2,36.36,57.58,-1.209,-0.882,-5.114,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_dist_ma20 > 5% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,33,12,19,2,36.36,57.58,-1.209,-0.882,-5.114,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + drawdown20 -10% to 0% + label:volume_context_VOLUME_TĂNG_VỪA,33,9,19,5,27.27,57.58,-0.895,-2.106,-6.67,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_dist_ma20 > 5% + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_CO_HẸP,33,12,19,2,36.36,57.58,-1.209,-0.882,-5.114,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:extension_context_SUY_YẾU_TRƯỚC_SIGNAL,139,39,80,20,28.06,57.55,-1.895,-1.968,-5.97,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:entry_context_ENTRY_GẦN_MA20,40,9,23,8,22.5,57.5,-0.318,-1.962,-4.823,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 -10% to 0% + label:market_regime_BÌNH_THƯỜNG,127,32,73,22,25.2,57.48,-1.127,-2.35,-5.168,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:score_bucket_80+,47,10,27,10,21.28,57.45,-1.18,-2.247,-5.552,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:market_regime_BÌNH_THƯỜNG,61,19,35,7,31.15,57.38,-0.385,-2.04,-5.517,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:market_context_MARKET_ỦNG_HỘ,103,24,59,20,23.3,57.28,-1.304,-1.647,-4.79,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + label:market_regime_BÌNH_THƯỜNG,154,32,88,34,20.78,57.14,-1.25,-2.453,-5.333,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:score_bucket_80+,147,48,84,15,32.65,57.14,-0.456,-0.916,-5.912,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:volume_context_VOLUME_CẠN,91,17,52,22,18.68,57.14,-1.035,-1.996,-5.102,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:entry_context_ENTRY_GẦN_MA20,84,21,48,15,25.0,57.14,-0.62,-1.274,-4.822,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:extension_context_KHÔNG_QUÁ_NÓNG,70,16,40,14,22.86,57.14,-0.991,-1.14,-5.31,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 > 8% + label:extension_context_KHÔNG_QUÁ_NÓNG,56,16,32,8,28.57,57.14,-0.534,-0.855,-6.52,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:volume_context_VOLUME_TĂNG_VỪA,49,11,28,10,22.45,57.14,-0.529,-1.469,-4.097,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 < -15% + label:extension_context_KHÔNG_QUÁ_NÓNG,49,14,28,7,28.57,57.14,0.394,-0.512,-4.657,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:entry_context_ENTRY_GẦN_MA20,49,10,28,11,20.41,57.14,-0.699,-1.275,-4.81,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_context fomo/hưng phấn + label:market_regime_TĂNG_MẠNH,49,11,28,10,22.45,57.14,-0.261,-1.467,-4.904,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + label:extension_context_KHÔNG_QUÁ_NÓNG,42,13,24,5,30.95,57.14,-1.018,-1.0,-4.829,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 < -15% + label:volume_context_VOLUME_TRUNG_TÍNH,35,12,20,3,34.29,57.14,-2.565,-1.43,-5.274,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:market_regime_TĂNG_MẠNH,51,13,29,9,25.49,56.86,-0.912,-1.654,-5.68,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + market_context fomo/hưng phấn,51,17,29,5,33.33,56.86,-1.455,-1.553,-5.671,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + market_dist_ma20 > 5% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,51,17,29,5,33.33,56.86,-1.455,-1.553,-5.671,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 -10% to 0% + label:market_regime_TĂNG_MẠNH,44,12,25,7,27.27,56.82,-1.027,-1.693,-4.794,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + drawdown20 -10% to 0%,44,10,25,9,22.73,56.82,-0.389,-1.691,-4.786,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:risk_context_PULLBACK_LÀNH_MẠNH,44,10,25,9,22.73,56.82,-0.389,-1.691,-4.786,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + drawdown20 -10% to 0% + label:structure_context_CÓ_NỀN___SIDEWAY,44,10,25,9,22.73,56.82,-0.389,-1.691,-4.786,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + drawdown20 -10% to 0%,37,7,21,9,18.92,56.76,-0.026,-1.527,-3.878,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:risk_context_PULLBACK_LÀNH_MẠNH,37,7,21,9,18.92,56.76,-0.026,-1.527,-3.878,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + drawdown20 -10% to 0% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,37,7,21,9,18.92,56.76,-0.026,-1.527,-3.878,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_TRUNG_TÍNH,97,25,55,17,25.77,56.7,-1.907,-1.522,-5.548,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,range20 <= 10% + market_context fomo/hưng phấn + label:entry_context_ENTRY_GẦN_MA20,30,8,17,5,26.67,56.67,-0.084,-1.163,-3.558,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:risk_context_PULLBACK_LÀNH_MẠNH,175,52,99,24,29.71,56.57,-0.625,-1.068,-5.807,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,175,52,99,24,29.71,56.57,-0.625,-1.068,-5.807,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + volatility_contraction20 > 1.3,46,16,26,4,34.78,56.52,0.064,-0.38,-5.484,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + stock_dist_ma20 3-8% + label:volatility_context_VOLATILITY_MỞ_RỘNG,46,16,26,4,34.78,56.52,0.064,-0.38,-5.484,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_ret5 > 8% + volatility_contraction20 > 1.3 + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,46,16,26,4,34.78,56.52,0.064,-0.38,-5.484,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:market_regime_TÍCH_CỰC,85,20,48,17,23.53,56.47,-1.802,-1.91,-5.119,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + volatility_contraction20 < 0.8 + label:extension_context_KHÔNG_QUÁ_NÓNG,85,23,48,14,27.06,56.47,-0.717,-1.215,-4.808,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context risk-off + label:market_regime_RẤT_YẾU,124,43,70,11,34.68,56.45,-0.624,-1.063,-6.039,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + drawdown20 -10% to 0% + label:market_regime_RẤT_YẾU,39,14,22,3,35.9,56.41,0.184,-0.233,-6.986,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + drawdown20 -10% to 0%,39,11,22,6,28.21,56.41,-1.367,-1.132,-5.454,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_ret5 > 4% + label:risk_context_PULLBACK_LÀNH_MẠNH,39,11,22,6,28.21,56.41,-1.367,-1.132,-5.454,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_CO_HẸP,39,11,22,6,28.21,56.41,-1.367,-1.132,-5.454,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:risk_context_RISK_TRUNG_TÍNH,275,83,155,37,30.18,56.36,-1.063,-1.676,-5.663,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:score_bucket_80+,142,34,80,28,23.94,56.34,-0.808,-1.022,-4.905,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context fomo/hưng phấn + label:structure_context_KHÔNG_RÕ_NỀN,64,24,36,4,37.5,56.25,-0.894,-1.192,-6.385,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context fomo/hưng phấn + label:score_bucket_80+,64,24,36,4,37.5,56.25,-0.581,-0.879,-6.101,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:score_bucket_80+,32,11,18,3,34.38,56.25,0.264,-1.035,-4.931,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:market_regime_TĂNG_MẠNH,41,9,23,9,21.95,56.1,-0.07,-1.313,-4.095,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + market_context fomo/hưng phấn + label:volume_context_VOLUME_TĂNG_VỪA,41,13,23,5,31.71,56.1,-1.144,-1.142,-6.671,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + label:market_context_MARKET_ỦNG_HỘ,91,20,51,20,21.98,56.04,-0.63,-0.624,-3.365,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + drawdown20 < -15%,116,32,65,19,27.59,56.03,-1.132,-1.4,-5.559,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:risk_context_DRAWDOWN_SÂU,116,32,65,19,27.59,56.03,-1.132,-1.4,-5.559,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + drawdown20 < -15% + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,116,32,65,19,27.59,56.03,-1.132,-1.4,-5.559,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:score_bucket_80+,100,30,56,14,30.0,56.0,-0.66,-1.274,-5.42,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:score_bucket_80+,68,14,38,16,20.59,55.88,-0.323,-1.419,-3.898,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_context fomo/hưng phấn + label:volatility_context_VOLATILITY_TRUNG_TÍNH,34,13,19,2,38.24,55.88,-0.501,-1.08,-5.833,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:volume_context_VOLUME_TĂNG_VỪA,34,10,19,5,29.41,55.88,-1.241,-1.876,-5.884,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio 1.2-2.0x + sideway_score20 >= 2 + label:market_regime_TÍCH_CỰC,34,6,19,9,17.65,55.88,-0.502,-0.75,-3.043,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + drawdown20 -10% to 0%,145,38,81,26,26.21,55.86,-0.579,-0.842,-4.899,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:risk_context_PULLBACK_LÀNH_MẠNH,145,38,81,26,26.21,55.86,-0.579,-0.842,-4.899,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:volatility_context_VOLATILITY_CO_HẸP,145,38,81,26,26.21,55.86,-0.579,-0.842,-4.899,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 -10% to 0% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,145,38,81,26,26.21,55.86,-0.579,-0.842,-4.899,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:structure_context_KHÔNG_RÕ_NỀN,120,40,67,13,33.33,55.83,-0.684,-0.75,-6.377,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio > 3x + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,43,9,24,10,20.93,55.81,-0.476,-2.059,-5.158,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volume_ratio > 3x + label:extension_context_KHÔNG_QUÁ_NÓNG,43,9,24,10,20.93,55.81,-0.476,-2.059,-5.158,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_context fomo/hưng phấn + drawdown20 -10% to 0% + label:extension_context_KHÔNG_QUÁ_NÓNG,147,43,82,22,29.25,55.78,-0.479,-1.092,-5.431,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + market_dist_ma20 > 5% + label:structure_context_KHÔNG_RÕ_NỀN,52,19,29,4,36.54,55.77,-0.852,-1.076,-5.975,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,165,43,92,30,26.06,55.76,-0.699,-0.985,-4.954,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:volatility_context_VOLATILITY_CO_HẸP,165,43,92,30,26.06,55.76,-0.699,-0.985,-4.954,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + market_ret5 > 4% + label:structure_context_KHÔNG_RÕ_NỀN,70,19,39,12,27.14,55.71,-1.192,-1.39,-6.055,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + range20 <= 10%,63,16,35,12,25.4,55.56,-0.121,-0.95,-3.789,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:structure_context_CÓ_NỀN___SIDEWAY,63,16,35,12,25.4,55.56,-0.121,-0.95,-3.789,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + market_context risk-off,63,18,35,10,28.57,55.56,-2.277,-2.692,-6.486,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volatility_contraction20 < 0.8 + label:market_context_MARKET_RISK-OFF,63,18,35,10,28.57,55.56,-2.277,-2.692,-6.486,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + market_context risk-off + label:volatility_context_VOLATILITY_CO_HẸP,63,18,35,10,28.57,55.56,-2.277,-2.692,-6.486,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + range20 <= 10% + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,63,16,35,12,25.4,55.56,-0.121,-0.95,-3.789,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + market_context risk-off + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,63,18,35,10,28.57,55.56,-2.277,-2.692,-6.486,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + market_context fomo/hưng phấn,45,11,25,9,24.44,55.56,-0.405,-1.491,-4.936,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:market_context_MARKET_HƯNG_PHẤN___DỄ_FOMO,45,11,25,9,24.44,55.56,-0.405,-1.491,-4.936,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_ret5 > 4% + market_context fomo/hưng phấn + label:structure_context_CÓ_NỀN___SIDEWAY,45,11,25,9,24.44,55.56,-0.405,-1.491,-4.936,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volatility_contraction20 < 0.8 + drawdown20 < -15% + label:market_context_MARKET_ỦNG_HỘ,36,6,20,10,16.67,55.56,-2.294,-1.994,-5.525,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:entry_context_ENTRY_LƯNG_CHỪNG_TRÊN_MA20,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:extension_context_KHÔNG_QUÁ_NÓNG,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:structure_context_CÓ_NỀN___SIDEWAY,128,35,71,22,27.34,55.47,-0.383,-1.225,-4.21,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + drawdown20 -10% to 0% + label:market_regime_RẤT_YẾU,101,35,56,10,34.65,55.45,-0.795,-1.088,-6.097,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,market_dist_ma20 > 5% + drawdown20 -10% to 0% + label:score_bucket_80+,101,34,56,11,33.66,55.45,-0.475,-0.719,-5.662,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + volatility_contraction20 < 0.8 + label:market_context_MARKET_ỦNG_HỘ,83,19,46,18,22.89,55.42,-0.835,-1.214,-5.002,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + volatility_contraction20 < 0.8,231,56,128,47,24.24,55.41,-1.748,-2.277,-5.746,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:volatility_context_VOLATILITY_CO_HẸP,231,56,128,47,24.24,55.41,-1.748,-2.277,-5.746,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + label:entry_context_ENTRY_DƯỚI_MA20___YẾU,231,56,128,47,24.24,55.41,-1.748,-2.277,-5.746,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:structure_context_KHÔNG_RÕ_NỀN,470,139,260,71,29.57,55.32,-1.142,-1.549,-5.55,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 > 8% + volatility_contraction20 > 1.3 + label:extension_context_KHÔNG_QUÁ_NÓNG,47,12,26,9,25.53,55.32,-0.219,-1.069,-6.114,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:extension_context_KHÔNG_QUÁ_NÓNG,47,12,26,9,25.53,55.32,-0.227,-1.307,-4.765,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:structure_context_CÓ_NỀN___SIDEWAY,47,12,26,9,25.53,55.32,-0.227,-1.307,-4.765,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,market_dist_ma20 > 5% + drawdown20 -10% to 0% + label:structure_context_KHÔNG_RÕ_NỀN,85,29,47,9,34.12,55.29,-0.778,-0.827,-6.255,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,volume_ratio < 1x + volatility_contraction20 < 0.8 + label:market_regime_TĂNG_MẠNH,203,53,112,38,26.11,55.17,-1.131,-1.524,-5.108,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_ret5 > 8% + drawdown20 -10% to 0% + label:volume_context_VOLUME_TĂNG_VỪA,49,18,27,4,36.73,55.1,0.239,0.037,-6.32,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + range20 <= 10% + label:market_context_MARKET_ỦNG_HỘ,49,10,27,12,20.41,55.1,-0.504,-1.565,-3.957,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,stock_dist_ma20 < -3% + volume_ratio < 1x + label:score_bucket_70-79,149,42,82,25,28.19,55.03,-1.356,-2.088,-5.62,3,FAIL_RULE,DOWNGRADE_TO_WATCH,HIGH_SAMPLE
+COMBO_3,stock_dist_ma20 3-8% + sideway_score20 >= 2 + label:volatility_context_VOLATILITY_TRUNG_TÍNH,60,15,33,12,25.0,55.0,-0.823,-1.387,-4.252,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
+COMBO_3,sideway_score20 >= 2 + market_ret5 > 4% + label:market_regime_TĂNG_MẠNH,40,10,22,8,25.0,55.0,-0.164,-1.354,-5.089,3,FAIL_RULE,DOWNGRADE_TO_WATCH,MEDIUM_SAMPLE
