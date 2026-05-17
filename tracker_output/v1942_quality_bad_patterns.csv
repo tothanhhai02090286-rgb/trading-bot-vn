@@ -1,0 +1,4 @@
+﻿pattern,n,fail_rate_pct,avg_ret_t5_pct,warning
+PULLBACK_MA20_QUALITY / BÌNH THƯỜNG,23,43.48,-0.421,Cần giảm score hoặc chặn trong regime này
+PULLBACK_MA20_QUALITY / TÍCH CỰC,11,63.64,-1.275,Cần giảm score hoặc chặn trong regime này
+PULLBACK_MA20_QUALITY / TĂNG MẠNH,37,45.95,0.124,Cần giảm score hoặc chặn trong regime này
