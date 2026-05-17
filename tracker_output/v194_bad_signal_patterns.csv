@@ -1,0 +1,52 @@
+﻿pattern,n,fail_rate_pct,avg_ret_t5_pct,warning
+BREAKOUT_10D / BÌNH THƯỜNG,128,44.53,-0.624,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_10D / RẤT YẾU,142,55.63,-1.189,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_10D / TÍCH CỰC,80,51.25,-0.858,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_10D / TĂNG MẠNH,528,54.73,-1.006,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_10D / YẾU,53,58.49,-0.562,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_20D / BÌNH THƯỜNG,94,47.87,-0.929,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_20D / RẤT YẾU,91,56.04,-1.324,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_20D / TÍCH CỰC,50,56.0,-1.163,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_20D / TĂNG MẠNH,456,53.51,-0.725,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_20D / YẾU,28,64.29,-1.586,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_5D / BÌNH THƯỜNG,146,46.58,-0.642,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_5D / RẤT YẾU,208,54.33,-1.301,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_5D / TÍCH CỰC,92,48.91,-0.938,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_5D / TĂNG MẠNH,587,54.51,-0.94,Cần giảm score hoặc chặn trong điều kiện này
+BREAKOUT_5D / YẾU,59,49.15,0.787,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA10 / BÌNH THƯỜNG,72,51.39,-0.785,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA10 / RẤT YẾU,74,45.95,0.355,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA10 / TÍCH CỰC,34,55.88,-1.507,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA10 / TĂNG MẠNH,175,50.29,-0.349,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA20 / BÌNH THƯỜNG,28,46.43,0.372,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA20 / TÍCH CỰC,16,50.0,-1.374,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA20 / TĂNG MẠNH,44,50.0,-0.315,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA5 / BÌNH THƯỜNG,101,46.53,-0.474,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA5 / RẤT YẾU,100,48.0,-0.692,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA5 / TÍCH CỰC,57,66.67,-1.489,Cần giảm score hoặc chặn trong điều kiện này
+PULLBACK_MA5 / TĂNG MẠNH,425,50.35,-0.181,Cần giảm score hoặc chặn trong điều kiện này
+RS10_MOMENTUM / BÌNH THƯỜNG,158,45.57,-0.495,Cần giảm score hoặc chặn trong điều kiện này
+RS10_MOMENTUM / RẤT YẾU,175,48.57,-1.152,Cần giảm score hoặc chặn trong điều kiện này
+RS10_MOMENTUM / TÍCH CỰC,67,49.25,-0.697,Cần giảm score hoặc chặn trong điều kiện này
+RS10_MOMENTUM / TĂNG MẠNH,313,54.31,-0.743,Cần giảm score hoặc chặn trong điều kiện này
+RS20_MOMENTUM / BÌNH THƯỜNG,166,50.6,-0.425,Cần giảm score hoặc chặn trong điều kiện này
+RS20_MOMENTUM / RẤT YẾU,223,43.5,-0.609,Cần giảm score hoặc chặn trong điều kiện này
+RS20_MOMENTUM / TĂNG MẠNH,588,52.72,-0.865,Cần giảm score hoặc chặn trong điều kiện này
+RS5_MOMENTUM / RẤT YẾU,120,51.67,-1.117,Cần giảm score hoặc chặn trong điều kiện này
+RS5_MOMENTUM / TÍCH CỰC,43,58.14,-1.515,Cần giảm score hoặc chặn trong điều kiện này
+RS5_MOMENTUM / TĂNG MẠNH,248,62.9,-2.236,Cần giảm score hoặc chặn trong điều kiện này
+RS5_MOMENTUM / YẾU,43,48.84,0.452,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.2X / BÌNH THƯỜNG,152,46.71,-0.55,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.2X / RẤT YẾU,186,55.38,-1.717,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.2X / TÍCH CỰC,101,51.49,-0.589,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.2X / TĂNG MẠNH,765,52.68,-0.834,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.5X / BÌNH THƯỜNG,104,46.15,-0.611,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.5X / RẤT YẾU,140,52.14,-1.604,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.5X / TÍCH CỰC,80,50.0,-0.241,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.5X / TĂNG MẠNH,564,51.24,-0.655,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_1.5X / YẾU,58,53.45,1.052,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_2.0X / BÌNH THƯỜNG,65,49.23,-0.433,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_2.0X / RẤT YẾU,68,52.94,-1.274,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_2.0X / TÍCH CỰC,51,47.06,-1.121,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_2.0X / TĂNG MẠNH,332,51.2,-0.634,Cần giảm score hoặc chặn trong điều kiện này
+VOL_FILTER_2.0X / YẾU,27,62.96,-0.787,Cần giảm score hoặc chặn trong điều kiện này

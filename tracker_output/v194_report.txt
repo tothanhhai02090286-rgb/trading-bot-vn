@@ -1,0 +1,93 @@
+================================================================================================
+V19.4.1 — SIGNAL FAMILY COMPARISON ENGINE
+================================================================================================
+Bản này so sánh theo family để tránh dò tham số lộn xộn.
+
+Families:
+- BREAKOUT: 5D / 10D / 20D
+- PULLBACK: MA5 / MA10 / MA20
+- RELATIVE_STRENGTH: RS5 / RS10 / RS20
+- VOLUME_FILTER: 1.2x / 1.5x / 2.0x
+
+Total signals: 9365
+Symbols: 134
+Date range: 2024-03-26 → 2026-04-22
+
+Anti-overfit controls:
+- Signal T dùng dữ liệu đến ngày T
+- Entry T+1 open + slippage
+- Fee + slippage hai chiều
+- T+2.5 sell lock
+- Liquidity filter
+- Regime split
+- Cooldown + daily cap
+- Baseline comparison
+
+Family compare:
+- BREAKOUT / 10D: n=931, winrate=29.32%, avg T+5=-0.943%, DD=-4.544%, YẾU/CẦN LỌC
+- BREAKOUT / 20D: n=719, winrate=28.65%, avg T+5=-0.892%, DD=-4.448%, YẾU/CẦN LỌC
+- BREAKOUT / 5D: n=1092, winrate=30.4%, avg T+5=-0.875%, DD=-4.652%, YẾU/CẦN LỌC
+- PULLBACK / MA10: n=388, winrate=36.86%, avg T+5=-0.204%, DD=-4.784%, YẾU/CẦN LỌC
+- PULLBACK / MA20: n=175, winrate=42.86%, avg T+5=0.726%, DD=-4.259%, YẾU/CẦN LỌC
+- PULLBACK / MA5: n=738, winrate=34.55%, avg T+5=-0.246%, DD=-4.869%, YẾU/CẦN LỌC
+- RELATIVE_STRENGTH / RS10: n=788, winrate=35.28%, avg T+5=-0.523%, DD=-5.473%, YẾU/CẦN LỌC
+- RELATIVE_STRENGTH / RS20: n=1201, winrate=34.47%, avg T+5=-0.4%, DD=-5.209%, YẾU/CẦN LỌC
+- RELATIVE_STRENGTH / RS5: n=553, winrate=30.74%, avg T+5=-1.292%, DD=-5.995%, YẾU/CẦN LỌC
+- VOLUME_FILTER / 1.2X: n=1291, winrate=32.92%, avg T+5=-0.751%, DD=-5.121%, YẾU/CẦN LỌC
+- VOLUME_FILTER / 1.5X: n=946, winrate=32.66%, avg T+5=-0.651%, DD=-5.069%, YẾU/CẦN LỌC
+- VOLUME_FILTER / 2.0X: n=543, winrate=32.78%, avg T+5=-0.744%, DD=-5.04%, YẾU/CẦN LỌC
+
+Bad patterns:
+- BREAKOUT_10D / BÌNH THƯỜNG: n=128, fail=44.53%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_10D / RẤT YẾU: n=142, fail=55.63%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_10D / TÍCH CỰC: n=80, fail=51.25%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_10D / TĂNG MẠNH: n=528, fail=54.73%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_10D / YẾU: n=53, fail=58.49%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_20D / BÌNH THƯỜNG: n=94, fail=47.87%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_20D / RẤT YẾU: n=91, fail=56.04%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_20D / TÍCH CỰC: n=50, fail=56.0%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_20D / TĂNG MẠNH: n=456, fail=53.51%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_20D / YẾU: n=28, fail=64.29%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_5D / BÌNH THƯỜNG: n=146, fail=46.58%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_5D / RẤT YẾU: n=208, fail=54.33%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_5D / TÍCH CỰC: n=92, fail=48.91%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_5D / TĂNG MẠNH: n=587, fail=54.51%, Cần giảm score hoặc chặn trong điều kiện này
+- BREAKOUT_5D / YẾU: n=59, fail=49.15%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA10 / BÌNH THƯỜNG: n=72, fail=51.39%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA10 / RẤT YẾU: n=74, fail=45.95%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA10 / TÍCH CỰC: n=34, fail=55.88%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA10 / TĂNG MẠNH: n=175, fail=50.29%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA20 / BÌNH THƯỜNG: n=28, fail=46.43%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA20 / TÍCH CỰC: n=16, fail=50.0%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA20 / TĂNG MẠNH: n=44, fail=50.0%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA5 / BÌNH THƯỜNG: n=101, fail=46.53%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA5 / RẤT YẾU: n=100, fail=48.0%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA5 / TÍCH CỰC: n=57, fail=66.67%, Cần giảm score hoặc chặn trong điều kiện này
+- PULLBACK_MA5 / TĂNG MẠNH: n=425, fail=50.35%, Cần giảm score hoặc chặn trong điều kiện này
+- RS10_MOMENTUM / BÌNH THƯỜNG: n=158, fail=45.57%, Cần giảm score hoặc chặn trong điều kiện này
+- RS10_MOMENTUM / RẤT YẾU: n=175, fail=48.57%, Cần giảm score hoặc chặn trong điều kiện này
+- RS10_MOMENTUM / TÍCH CỰC: n=67, fail=49.25%, Cần giảm score hoặc chặn trong điều kiện này
+- RS10_MOMENTUM / TĂNG MẠNH: n=313, fail=54.31%, Cần giảm score hoặc chặn trong điều kiện này
+- RS20_MOMENTUM / BÌNH THƯỜNG: n=166, fail=50.6%, Cần giảm score hoặc chặn trong điều kiện này
+- RS20_MOMENTUM / RẤT YẾU: n=223, fail=43.5%, Cần giảm score hoặc chặn trong điều kiện này
+- RS20_MOMENTUM / TĂNG MẠNH: n=588, fail=52.72%, Cần giảm score hoặc chặn trong điều kiện này
+- RS5_MOMENTUM / RẤT YẾU: n=120, fail=51.67%, Cần giảm score hoặc chặn trong điều kiện này
+- RS5_MOMENTUM / TÍCH CỰC: n=43, fail=58.14%, Cần giảm score hoặc chặn trong điều kiện này
+- RS5_MOMENTUM / TĂNG MẠNH: n=248, fail=62.9%, Cần giảm score hoặc chặn trong điều kiện này
+- RS5_MOMENTUM / YẾU: n=43, fail=48.84%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.2X / BÌNH THƯỜNG: n=152, fail=46.71%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.2X / RẤT YẾU: n=186, fail=55.38%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.2X / TÍCH CỰC: n=101, fail=51.49%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.2X / TĂNG MẠNH: n=765, fail=52.68%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.5X / BÌNH THƯỜNG: n=104, fail=46.15%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.5X / RẤT YẾU: n=140, fail=52.14%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.5X / TÍCH CỰC: n=80, fail=50.0%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.5X / TĂNG MẠNH: n=564, fail=51.24%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_1.5X / YẾU: n=58, fail=53.45%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_2.0X / BÌNH THƯỜNG: n=65, fail=49.23%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_2.0X / RẤT YẾU: n=68, fail=52.94%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_2.0X / TÍCH CỰC: n=51, fail=47.06%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_2.0X / TĂNG MẠNH: n=332, fail=51.2%, Cần giảm score hoặc chặn trong điều kiện này
+- VOL_FILTER_2.0X / YẾU: n=27, fail=62.96%, Cần giảm score hoặc chặn trong điều kiện này
+
+Note: Nếu cache chỉ gồm mã còn sống/mạnh thì vẫn có survivorship bias.
