@@ -1,0 +1,46 @@
+name: Run V19.4 Signal Validation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v194:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+
+      - name: Run V19.4.1 Signal Family Comparison
+        env:
+          V194_CACHE_DIR: cache_stock
+          V194_OUTPUT_DIR: tracker_output
+          V194_BENCHMARK_SYMBOL: VNINDEX
+          V194_MIN_HISTORY_BARS: "80"
+          V194_MAIN_HORIZON: "5"
+          V194_VN_TPLUS_SELLABLE_DAYS: "2.5"
+          V194_BUY_SLIPPAGE_PCT: "0.15"
+          V194_SELL_SLIPPAGE_PCT: "0.15"
+          V194_FEE_PCT_PER_SIDE: "0.15"
+          V194_MIN_AVG_VOLUME_20: "100000"
+          V194_SIGNAL_COOLDOWN_DAYS: "5"
+          V194_MAX_SIGNALS_PER_DAY: "30"
+        run: |
+          python v194_signal_validation_engine_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tracker_output/v194_*.csv tracker_output/v194_report.txt || true
+          git commit -m "Update V19.4 signal family comparison outputs" || echo "No changes to commit"
+          git push
