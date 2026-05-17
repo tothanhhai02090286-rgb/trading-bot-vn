@@ -43,7 +43,10 @@ from typing import Optional, Dict, Any, List, Tuple, Set
 
 import pandas as pd
 import requests
+import sys
+sys.path.append("/opt/render/project/src/v19.3_alert_lichsu_canhbao")
 
+from v193_alert_journal_layer import log_entry_alert
 try:
     from zoneinfo import ZoneInfo
 except Exception:
