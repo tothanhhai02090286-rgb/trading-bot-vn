@@ -1,0 +1,46 @@
+================================================================================================
+V19.5 — WEIGHTED SIGNAL SCORING ENGINE
+================================================================================================
+Mục tiêu: dùng trọng số tổng hợp thay vì tín hiệu đơn lẻ.
+
+Weights:
+- Regime: 20
+- Trend: 20
+- RS: 20
+- Pullback / distance MA20: 15
+- Volume: 10
+- Momentum: 5
+- Drawdown: 5
+- Breakout context: 5
+
+Total weighted signals: 3941
+Symbols: 134
+Date range: 2024-03-26 → 2026-04-23
+
+Threshold stats:
+- >=60: n=3941, winrate=35.32%, avg T+2=-0.353%, avg T+5=-0.315%, DD=-4.562%, YẾU/CẦN LỌC
+- >=70: n=2997, winrate=34.93%, avg T+2=-0.284%, avg T+5=-0.35%, DD=-4.6%, YẾU/CẦN LỌC
+- >=80: n=2278, winrate=34.28%, avg T+2=-0.274%, avg T+5=-0.271%, DD=-4.542%, YẾU/CẦN LỌC
+
+Bad patterns:
+- score 60-69 / regime TÍCH CỰC: n=85, fail=36.47%, Cần giảm trọng số/chặn điều kiện này
+- score 60-69 / regime TĂNG MẠNH: n=186, fail=67.74%, Cần giảm trọng số/chặn điều kiện này
+- score 70-79 / regime BÌNH THƯỜNG: n=86, fail=46.51%, Cần giảm trọng số/chặn điều kiện này
+- score 70-79 / regime RẤT YẾU: n=329, fail=44.98%, Cần giảm trọng số/chặn điều kiện này
+- score 70-79 / regime TĂNG MẠNH: n=119, fail=56.3%, Cần giảm trọng số/chặn điều kiện này
+- score 80+ / regime BÌNH THƯỜNG: n=460, fail=40.43%, Cần giảm trọng số/chặn điều kiện này
+- score 80+ / regime RẤT YẾU: n=177, fail=48.02%, Cần giảm trọng số/chặn điều kiện này
+- score 80+ / regime TÍCH CỰC: n=285, fail=48.42%, Cần giảm trọng số/chặn điều kiện này
+- score 80+ / regime TĂNG MẠNH: n=1132, fail=51.59%, Cần giảm trọng số/chặn điều kiện này
+
+Anti-overfit controls:
+- Signal T dùng dữ liệu đến ngày T
+- Entry T+1 open + slippage
+- Fee + slippage hai chiều
+- T+2.5 sell lock
+- Liquidity filter
+- Regime split
+- Cooldown + daily cap
+- Baseline comparison
+
+Note: Nếu cache chỉ gồm mã còn sống/mạnh thì vẫn có survivorship bias.

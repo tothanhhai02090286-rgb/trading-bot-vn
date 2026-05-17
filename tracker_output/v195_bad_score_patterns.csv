@@ -1,0 +1,10 @@
+﻿pattern,n,fail_rate_pct,avg_ret_t5_pct,warning
+score 60-69 / regime TÍCH CỰC,85,36.47,-0.347,Cần giảm trọng số/chặn điều kiện này
+score 60-69 / regime TĂNG MẠNH,186,67.74,-2.785,Cần giảm trọng số/chặn điều kiện này
+score 70-79 / regime BÌNH THƯỜNG,86,46.51,-1.838,Cần giảm trọng số/chặn điều kiện này
+score 70-79 / regime RẤT YẾU,329,44.98,-0.905,Cần giảm trọng số/chặn điều kiện này
+score 70-79 / regime TĂNG MẠNH,119,56.3,-1.889,Cần giảm trọng số/chặn điều kiện này
+score 80+ / regime BÌNH THƯỜNG,460,40.43,-0.234,Cần giảm trọng số/chặn điều kiện này
+score 80+ / regime RẤT YẾU,177,48.02,-0.435,Cần giảm trọng số/chặn điều kiện này
+score 80+ / regime TÍCH CỰC,285,48.42,0.048,Cần giảm trọng số/chặn điều kiện này
+score 80+ / regime TĂNG MẠNH,1132,51.59,-0.67,Cần giảm trọng số/chặn điều kiện này
