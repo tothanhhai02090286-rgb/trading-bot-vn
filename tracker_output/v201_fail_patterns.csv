@@ -1,0 +1,6 @@
+﻿context_group,context_value,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t5_pct,avg_drawdown_t5_pct,pattern_type,note
+market_context,MARKET HƯNG PHẤN / DỄ FOMO,238,75,134,29,31.51,56.3,-1.107,-6.027,FAIL_PATTERN,Giảm điểm hoặc chặn trong V18.2/V19.5
+market_regime,BÌNH THƯỜNG,404,106,214,84,26.24,52.97,-2.087,-5.478,FAIL_PATTERN,Giảm điểm hoặc chặn trong V18.2/V19.5
+market_regime,TĂNG MẠNH,1150,346,599,205,30.09,52.09,-0.767,-5.146,FAIL_PATTERN,Giảm điểm hoặc chặn trong V18.2/V19.5
+entry_context,ENTRY DƯỚI MA20 / YẾU,711,221,364,126,31.08,51.2,-1.16,-5.258,FAIL_PATTERN,Giảm điểm hoặc chặn trong V18.2/V19.5
+market_context,MARKET ỦNG HỘ,1416,436,708,272,30.79,50.0,-0.55,-4.475,FAIL_PATTERN,Giảm điểm hoặc chặn trong V18.2/V19.5

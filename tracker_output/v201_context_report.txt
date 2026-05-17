@@ -1,0 +1,30 @@
+================================================================================================
+V20.1 — ENTRY + MARKET CONTEXT REPLAY ENGINE
+================================================================================================
+Source signals: tracker_output/v195_weighted_signals.csv
+Total replay rows: 3941
+Symbols: 134
+Date range: 2024-03-25 → 2026-04-22
+Result counts: {'FAIL': 1790, 'WIN': 1392, 'FLAT': 759}
+
+Top FAIL patterns:
+- market_context = MARKET HƯNG PHẤN / DỄ FOMO: n=238, fail=56.3%, win=31.51%
+- market_regime = BÌNH THƯỜNG: n=404, fail=52.97%, win=26.24%
+- market_regime = TĂNG MẠNH: n=1150, fail=52.09%, win=30.09%
+- entry_context = ENTRY DƯỚI MA20 / YẾU: n=711, fail=51.2%, win=31.08%
+- market_context = MARKET ỦNG HỘ: n=1416, fail=50.0%, win=30.79%
+
+Top WIN patterns:
+- Chưa có win pattern đủ mẫu.
+
+Rules for V18.2:
+- market_context=MARKET HƯNG PHẤN / DỄ FOMO -> BLOCK_OR_WATCH | fail=56.3%, n=238
+- market_regime=BÌNH THƯỜNG -> DOWNGRADE_TO_WATCH | fail=52.97%, n=404
+- market_regime=TĂNG MẠNH -> DOWNGRADE_TO_WATCH | fail=52.09%, n=1150
+- entry_context=ENTRY DƯỚI MA20 / YẾU -> BLOCK_OR_WATCH | fail=51.2%, n=711
+- market_context=MARKET ỦNG HỘ -> DOWNGRADE_TO_WATCH | fail=50.0%, n=1416
+
+Cách dùng:
+- Replay chạy cuối tuần.
+- v201_entry_context_filter.py dùng realtime trong V18.2.
+- Rule chỉ dùng để hạ rủi ro, không dùng để tự động BUY lớn.

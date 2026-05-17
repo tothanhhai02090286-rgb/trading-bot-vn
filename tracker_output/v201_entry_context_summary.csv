@@ -1,0 +1,20 @@
+﻿context_group,context_value,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t5_pct,avg_drawdown_t5_pct
+entry_context,ENTRY DƯỚI MA20 / YẾU,711,221,364,126,31.08,51.2,-1.16,-5.258
+entry_context,ENTRY LƯNG CHỪNG TRÊN MA20,860,289,422,149,33.6,49.07,-0.439,-4.91
+entry_context,ENTRY XA MA20 / FOMO,283,119,124,40,42.05,43.82,0.61,-6.024
+entry_context,ENTRY GẦN MA20,2087,763,880,444,36.56,42.17,-0.101,-3.984
+extension_context,TĂNG NÓNG TRƯỚC SIGNAL,358,143,165,50,39.94,46.09,0.141,-6.296
+extension_context,KHÔNG QUÁ NÓNG,3290,1136,1499,655,34.53,45.56,-0.36,-4.351
+extension_context,SUY YẾU TRƯỚC SIGNAL,293,113,126,54,38.57,43.0,-0.364,-4.818
+volume_context,VOLUME TĂNG VỪA,890,306,424,160,34.38,47.64,-0.327,-4.745
+volume_context,VOLUME CẠN,1462,503,679,280,34.4,46.44,-0.203,-4.276
+volume_context,VOLUME SPIKE FOMO,28,9,13,6,32.14,46.43,-0.945,-4.799
+volume_context,VOLUME TRUNG TÍNH,1561,574,674,313,36.77,43.18,-0.401,-4.721
+structure_context,KHÔNG RÕ NỀN,2637,960,1220,457,36.41,46.26,-0.225,-4.963
+structure_context,CÓ NỀN / SIDEWAY,1304,432,570,302,33.13,43.71,-0.497,-3.751
+volatility_context,VOLATILITY CO HẸP,1214,384,587,243,31.63,48.35,-0.881,-4.552
+volatility_context,VOLATILITY TRUNG TÍNH,1607,560,753,294,34.85,46.86,-0.373,-4.548
+volatility_context,VOLATILITY MỞ RỘNG,1120,448,450,222,40.0,40.18,0.381,-4.593
+risk_context,RISK TRUNG TÍNH,810,291,382,137,35.93,47.16,-0.405,-5.022
+risk_context,DRAWDOWN SÂU,221,80,102,39,36.2,46.15,-0.645,-5.144
+risk_context,PULLBACK LÀNH MẠNH,2910,1021,1306,583,35.09,44.88,-0.265,-4.39

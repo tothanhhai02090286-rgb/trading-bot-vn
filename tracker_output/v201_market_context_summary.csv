@@ -1,0 +1,10 @@
+﻿context_group,context_value,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t5_pct,avg_drawdown_t5_pct
+market_context,MARKET HƯNG PHẤN / DỄ FOMO,238,75,134,29,31.51,56.3,-1.107,-6.027
+market_context,MARKET ỦNG HỘ,1416,436,708,272,30.79,50.0,-0.55,-4.475
+market_context,MARKET TRUNG TÍNH,536,156,263,117,29.1,49.07,-1.64,-5.51
+market_context,MARKET RISK-OFF,1751,725,685,341,41.4,39.12,0.389,-4.143
+market_regime,BÌNH THƯỜNG,404,106,214,84,26.24,52.97,-2.087,-5.478
+market_regime,TĂNG MẠNH,1150,346,599,205,30.09,52.09,-0.767,-5.146
+market_regime,TÍCH CỰC,636,215,292,129,33.81,45.91,-0.31,-4.078
+market_regime,RẤT YẾU,750,283,331,136,37.73,44.13,-0.161,-4.433
+market_regime,YẾU,1001,442,354,205,44.16,35.36,0.802,-3.926

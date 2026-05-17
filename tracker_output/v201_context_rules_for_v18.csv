@@ -1,0 +1,6 @@
+﻿rule_name,context_group,context_value,action,failrate_pct,n,reason
+V201_market_context_MARKET HƯNG PHẤN / DỄ FOMO,market_context,MARKET HƯNG PHẤN / DỄ FOMO,BLOCK_OR_WATCH,56.3,238,"Rule sinh từ V20.1 replay, chỉ dùng như filter giảm rủi ro"
+V201_market_regime_BÌNH THƯỜNG,market_regime,BÌNH THƯỜNG,DOWNGRADE_TO_WATCH,52.97,404,"Rule sinh từ V20.1 replay, chỉ dùng như filter giảm rủi ro"
+V201_market_regime_TĂNG MẠNH,market_regime,TĂNG MẠNH,DOWNGRADE_TO_WATCH,52.09,1150,"Rule sinh từ V20.1 replay, chỉ dùng như filter giảm rủi ro"
+V201_entry_context_ENTRY DƯỚI MA20 / YẾU,entry_context,ENTRY DƯỚI MA20 / YẾU,BLOCK_OR_WATCH,51.2,711,"Rule sinh từ V20.1 replay, chỉ dùng như filter giảm rủi ro"
+V201_market_context_MARKET ỦNG HỘ,market_context,MARKET ỦNG HỘ,DOWNGRADE_TO_WATCH,50.0,1416,"Rule sinh từ V20.1 replay, chỉ dùng như filter giảm rủi ro"
