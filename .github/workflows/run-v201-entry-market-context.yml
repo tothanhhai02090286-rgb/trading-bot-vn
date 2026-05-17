@@ -1,0 +1,38 @@
+name: Run V20.1 Entry Market Context Replay
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v201:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+
+      - name: Run V20.1 Entry Market Context Replay
+        env:
+          V201_CACHE_DIR: cache_stock
+          V201_OUTPUT_DIR: tracker_output
+          V201_BENCHMARK_SYMBOL: VNINDEX
+          V201_MIN_ROWS_PER_PATTERN: "20"
+        run: |
+          python v201_entry_market_context_replay_engine_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tracker_output/v201_*.csv tracker_output/v201_context_report.txt || true
+          git commit -m "Update V20.1 entry market context outputs" || echo "No changes to commit"
+          git push
