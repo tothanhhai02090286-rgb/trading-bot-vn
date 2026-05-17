@@ -1,0 +1,39 @@
+name: Run V20.2 Context Drilldown
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v202:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+
+      - name: Run V20.2 Context Drilldown
+        env:
+          V202_OUTPUT_DIR: tracker_output
+          V202_MIN_ROWS: "30"
+          V202_FAILRATE_TH: "55"
+          V202_WINRATE_TH: "45"
+          V202_MAX_COMBO_SIZE: "3"
+        run: |
+          python v202_context_drilldown_engine_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tracker_output/v202_*.csv tracker_output/v202_context_report.txt || true
+          git commit -m "Update V20.2 context drilldown outputs" || echo "No changes to commit"
+          git push
