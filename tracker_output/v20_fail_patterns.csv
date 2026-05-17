@@ -1,0 +1,2 @@
+﻿context_group,context_value,n,win,fail,flat,winrate_pct,failrate_pct,avg_ret_t5_pct,avg_drawdown_t5_pct,pattern_type,note
+entry_context,ENTRY TRUNG TÍNH,1571,510,786,275,32.46,50.03,-0.765,-5.067,FAIL_PATTERN,"Context này fail cao, nên giảm điểm/chặn khi gặp lại"

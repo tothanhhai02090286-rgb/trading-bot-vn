@@ -1,0 +1,22 @@
+================================================================================================
+V20 — CONTEXT REPLAY & TRADE REVIEW ENGINE
+================================================================================================
+Source signals: tracker_output/v195_weighted_signals.csv
+Total replay rows: 3941
+Symbols: 134
+Date range: 2024-03-25 → 2026-04-22
+Result counts: {'FAIL': 1790, 'WIN': 1392, 'FLAT': 759}
+
+Mục tiêu:
+- Không tìm thêm indicator.
+- Tìm bối cảnh khiến signal WIN/FAIL khác nhau.
+
+Top FAIL patterns:
+- entry_context = ENTRY TRUNG TÍNH: n=1571, fail=50.03%, win=32.46%
+
+Top WIN patterns:
+- Chưa có win pattern đủ mẫu.
+
+Cách dùng:
+- FAIL pattern: đưa vào V17/V18/V19.5 để giảm score hoặc chặn.
+- WIN pattern: tăng nhẹ confidence, không tự động BUY lớn.
