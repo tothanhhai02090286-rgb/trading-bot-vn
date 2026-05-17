@@ -1,0 +1,55 @@
+name: Run V19.4.2 Quality Filter Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-v1942:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pandas numpy
+
+      - name: Run V19.4.2 Quality Filter Test
+        env:
+          V194_CACHE_DIR: cache_stock
+          V194_OUTPUT_DIR: tracker_output
+          V194_BENCHMARK_SYMBOL: VNINDEX
+          V1942_MIN_HISTORY_BARS: "80"
+          V1942_MAIN_HORIZON: "5"
+          V1942_VN_TPLUS_SELLABLE_DAYS: "2.5"
+          V1942_BUY_SLIPPAGE_PCT: "0.15"
+          V1942_SELL_SLIPPAGE_PCT: "0.15"
+          V1942_FEE_PCT_PER_SIDE: "0.15"
+          V1942_MIN_AVG_VOLUME_20: "100000"
+          V1942_SIGNAL_COOLDOWN_DAYS: "5"
+          V1942_MAX_SIGNALS_PER_DAY: "20"
+          V1942_ALLOWED_REGIMES: "TĂNG MẠNH,TÍCH CỰC,BÌNH THƯỜNG"
+          V1942_MAX_DIST_ABOVE_MA20_PCT: "3.0"
+          V1942_MIN_DIST_BELOW_MA20_PCT: "-2.0"
+          V1942_MIN_VOLUME_RATIO: "1.1"
+          V1942_MAX_VOLUME_RATIO: "2.8"
+          V1942_MIN_RS20: "3.0"
+          V1942_MAX_RET5_HOT_PCT: "8.0"
+          V1942_MAX_RET20_HOT_PCT: "25.0"
+          V1942_MAX_PRIOR_DRAWDOWN20_PCT: "-15.0"
+        run: |
+          python v1942_quality_filter_pullback_ma20_vi.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add tracker_output/v1942_*.csv tracker_output/v1942_quality_report.txt || true
+          git commit -m "Update V19.4.2 quality filter outputs" || echo "No changes to commit"
+          git push
