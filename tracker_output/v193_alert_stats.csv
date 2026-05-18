@@ -1,5 +1,6 @@
 ﻿symbol,total_alerts,v18_entry_alerts,v19_position_alerts,last_alert_time,last_alert_type
 EIB,5,0,5,2026-05-18 10:39:38,THOÁT VỊ THẾ
 BFC,2,0,2,2026-05-18 10:06:43,THOÁT VỊ THẾ
+GVR,1,1,0,2026-05-18 10:55:42,🟢 PULLBACK VÙNG MUA
 HNG,1,1,0,2026-05-18 10:46:19,🟢 PULLBACK VÙNG MUA
 PVT,1,1,0,2026-05-18 10:52:33,⚠️ VƯỢT BUY ZONE QUÁ XA + VWAP OK
