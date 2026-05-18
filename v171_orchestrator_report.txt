@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-18 01:46:28
+Generated: 2026-05-18 11:57:27
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -13,26 +13,21 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 === INPUT STATE ===
 Legacy V17 dùng: Không có
 Decision Mode: CASH MODE
-Meta Exposure: 0.0154
-V15.5 Survival Exposure: 0.055
+Meta Exposure: 0.0924
+V15.5 Survival Exposure: 0.1925
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: PHÒNG THỦ MẠNH
-Kill Switch: True
-Drawdown: 22.302%
+Equity State: THẬN TRỌNG
+Kill Switch: False
+Drawdown: 14.395%
 
 === FINAL DECISION SUMMARY ===
-- AVOID: 6 mã
+- WATCHLIST: 1 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-Không có mã nào đưa sang V18.
+- THEO DÕI: 1 mã
 
 === TOP FINAL DECISION ===
-◆ CTG | Final=AVOID | Realtime=BỎ QUA | Alloc=0.504% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ ABB | Final=AVOID | Realtime=BỎ QUA | Alloc=0.28% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ VOS | Final=AVOID | Realtime=BỎ QUA | Alloc=0.225% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ DXG | Final=AVOID | Realtime=BỎ QUA | Alloc=0.22% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ MSB | Final=AVOID | Realtime=BỎ QUA | Alloc=0.19% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ HBC | Final=AVOID | Realtime=BỎ QUA | Alloc=0.121% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ CTG | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=9.24% | Mode=CASH MODE | Ưu tiên=VỪA | RiskGate=V16 CASH MODE, chỉ được watch
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
@@ -41,4 +36,4 @@ Meta Exposure, Regime Strength, Equity State, Ưu tiên, Buy zone thấp %,
 Buy zone cao %, Stoploss tham khảo %, Ghi chú V18.
 
 === KẾT LUẬN V17.1 ===
-Kill switch bật. Không aggressive entry.
+Hệ thống chỉ được đánh nhỏ hoặc theo dõi. V18 không được vào mạnh.
