@@ -3,9 +3,9 @@ name: Run V15.3 V15.4.1 V15.5 V16 Integrated
 on:
   workflow_dispatch:
 
-  schedule:
+  # schedule:
     # 15:30 giờ Việt Nam = 08:30 UTC
-    - cron: "30 8 * * 1-5"
+  # - cron: "30 8 * * 1-5"
 
 permissions:
   contents: read
