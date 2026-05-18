@@ -5,50 +5,50 @@ Số mã kiểm tra: <b>15</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>TCB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 9 | Đoạn dương: 8 | Tỷ lệ dương: 88.89%
-Win TB: 62.33% | Lợi TB: 0.71%
-RSI: 70.00 | Dist MA20: 3.14% | Volume: 0.74
-Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>PVD</b> | ỔN ĐỊNH VỪA
+🔹 <b>BFC</b> | ỔN ĐỊNH VỪA
 Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
-Win TB: 62.03% | Lợi TB: 1.15%
-RSI: 37.11 | Dist MA20: -4.81% | Volume: 0.90
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>BSR</b> | ỔN ĐỊNH VỪA
-Đoạn test: 11 | Đoạn dương: 7 | Tỷ lệ dương: 63.64%
-Win TB: 47.45% | Lợi TB: 0.46%
-RSI: 48.96 | Dist MA20: 0.76% | Volume: 0.77
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>SAB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 19 | Đoạn dương: 12 | Tỷ lệ dương: 63.16%
-Win TB: 53.31% | Lợi TB: 0.90%
-RSI: 50.47 | Dist MA20: -0.14% | Volume: 1.03
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>ABB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 8 | Đoạn dương: 5 | Tỷ lệ dương: 62.50%
-Win TB: 49.91% | Lợi TB: 0.77%
-RSI: 70.59 | Dist MA20: 2.39% | Volume: 0.71
+Win TB: 59.69% | Lợi TB: 2.53%
+RSI: 51.72 | Dist MA20: -0.06% | Volume: 1.66
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>PVT</b> | ỔN ĐỊNH VỪA
-Đoạn test: 19 | Đoạn dương: 11 | Tỷ lệ dương: 57.89%
-Win TB: 49.99% | Lợi TB: 0.91%
-RSI: 54.10 | Dist MA20: -0.72% | Volume: 0.54
+Đoạn test: 15 | Đoạn dương: 10 | Tỷ lệ dương: 66.67%
+Win TB: 53.71% | Lợi TB: 1.24%
+RSI: 57.51 | Dist MA20: 1.82% | Volume: 0.60
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>BID</b> | ỔN ĐỊNH VỪA
+Đoạn test: 19 | Đoạn dương: 12 | Tỷ lệ dương: 63.16%
+Win TB: 60.60% | Lợi TB: 1.28%
+RSI: 58.78 | Dist MA20: 1.99% | Volume: 0.84
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>HNG</b> | ỔN ĐỊNH VỪA
-Đoạn test: 7 | Đoạn dương: 4 | Tỷ lệ dương: 57.14%
-Win TB: 48.01% | Lợi TB: 1.78%
-RSI: 72.73 | Dist MA20: 7.83% | Volume: 0.81
+Đoạn test: 5 | Đoạn dương: 3 | Tỷ lệ dương: 60.00%
+Win TB: 38.12% | Lợi TB: 0.98%
+RSI: 72.73 | Dist MA20: 8.50% | Volume: 0.97
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>CTS</b> | TRUNG TÍNH
-Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
-Win TB: 54.11% | Lợi TB: -0.05%
-RSI: 39.08 | Dist MA20: -1.10% | Volume: 0.80
+🔹 <b>HCM</b> | ỔN ĐỊNH VỪA
+Đoạn test: 14 | Đoạn dương: 8 | Tỷ lệ dương: 57.14%
+Win TB: 53.00% | Lợi TB: 0.53%
+RSI: 55.15 | Dist MA20: 2.58% | Volume: 0.55
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>PHP</b> | ỔN ĐỊNH VỪA
+Đoạn test: 9 | Đoạn dương: 5 | Tỷ lệ dương: 55.56%
+Win TB: 46.18% | Lợi TB: 0.12%
+RSI: 40.91 | Dist MA20: -1.21% | Volume: 0.91
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 9 | Đoạn dương: 5 | Tỷ lệ dương: 55.56%
+Win TB: 50.88% | Lợi TB: 0.54%
+RSI: 56.03 | Dist MA20: 2.80% | Volume: 1.11
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>DPM</b> | TRUNG TÍNH
+Đoạn test: 13 | Đoạn dương: 7 | Tỷ lệ dương: 53.85%
+Win TB: 46.81% | Lợi TB: -0.21%
+RSI: 32.82 | Dist MA20: -3.88% | Volume: 0.79
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.

@@ -4,43 +4,43 @@ Nguồn mã: <b>v141_top_quality_picks.csv</b>
 Số mã kiểm tra: <b>15</b>
 
 <b>KẾT QUẢ MA20</b>
-🔹 <b>GAS</b> | Dist MA20: <b>14.10%</b> | Phân vị nóng: <b>96.45%</b>
-   Max lịch sử: 37.32% (2026-01-14)
-   Win T+5 vùng tương tự: 66.67% | Lợi TB T+5: 8.33%
-   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
-   Mức này nằm trong top 5% nóng nhất lịch sử.
-🔹 <b>BSR</b> | Dist MA20: <b>19.13%</b> | Phân vị nóng: <b>96.23%</b>
-   Max lịch sử: 41.17% (2026-03-04)
-   Win T+5 vùng tương tự: 58.33% | Lợi TB T+5: 3.89%
-   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
-   Mức này nằm trong top 5% nóng nhất lịch sử.
-🔹 <b>PVT</b> | Dist MA20: <b>6.63%</b> | Phân vị nóng: <b>93.75%</b>
+🔹 <b>PVT</b> | Dist MA20: <b>11.20%</b> | Phân vị nóng: <b>97.46%</b>
    Max lịch sử: 32.57% (2026-03-06)
-   Win T+5 vùng tương tự: 40.43% | Lợi TB T+5: -0.18%
-   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
-   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>PLX</b> | Dist MA20: <b>8.34%</b> | Phân vị nóng: <b>92.40%</b>
-   Max lịch sử: 40.50% (2026-01-20)
-   Win T+5 vùng tương tự: 48.15% | Lợi TB T+5: -0.04%
-   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
-   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>SAB</b> | Dist MA20: <b>3.73%</b> | Phân vị nóng: <b>92.06%</b>
-   Max lịch sử: 13.60% (2024-06-07)
-   Win T+5 vùng tương tự: 40.57% | Lợi TB T+5: -0.14%
-   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
-   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>GVR</b> | Dist MA20: <b>9.40%</b> | Phân vị nóng: <b>90.20%</b>
-   Max lịch sử: 30.50% (2026-01-15)
-   Win T+5 vùng tương tự: 57.78% | Lợi TB T+5: -0.47%
-   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
-   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>HNG</b> | Dist MA20: <b>7.50%</b> | Phân vị nóng: <b>88.70%</b>
-   Max lịch sử: 30.08% (2025-01-08)
-   Win T+5 vùng tương tự: 35.56% | Lợi TB T+5: 0.32%
-   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
-   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>OIL</b> | Dist MA20: <b>7.56%</b> | Phân vị nóng: <b>88.51%</b>
+   Win T+5 vùng tương tự: 41.67% | Lợi TB T+5: -1.84%
+   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
+   Mức này nằm trong top 5% nóng nhất lịch sử.
+🔹 <b>BID</b> | Dist MA20: <b>9.46%</b> | Phân vị nóng: <b>97.12%</b>
+   Max lịch sử: 32.48% (2026-01-14)
+   Win T+5 vùng tương tự: 43.75% | Lợi TB T+5: -0.62%
+   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
+   Mức này nằm trong top 5% nóng nhất lịch sử.
+🔹 <b>OIL</b> | Dist MA20: <b>14.86%</b> | Phân vị nóng: <b>95.93%</b>
    Max lịch sử: 42.90% (2026-03-03)
-   Win T+5 vùng tương tự: 58.14% | Lợi TB T+5: 5.29%
+   Win T+5 vùng tương tự: 40.00% | Lợi TB T+5: -1.71%
+   ⛔ QUÁ NÓNG - KHÔNG MUA ĐUỔI
+   Mức này nằm trong top 5% nóng nhất lịch sử.
+🔹 <b>PVD</b> | Dist MA20: <b>10.58%</b> | Phân vị nóng: <b>94.75%</b>
+   Max lịch sử: 26.97% (2026-03-03)
+   Win T+5 vùng tương tự: 28.00% | Lợi TB T+5: -1.21%
    ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
    Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>PVS</b> | Dist MA20: <b>8.46%</b> | Phân vị nóng: <b>91.86%</b>
+   Max lịch sử: 21.62% (2025-06-16)
+   Win T+5 vùng tương tự: 53.33% | Lợi TB T+5: 0.35%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>HCM</b> | Dist MA20: <b>7.49%</b> | Phân vị nóng: <b>89.66%</b>
+   Max lịch sử: 15.71% (2026-04-15)
+   Win T+5 vùng tương tự: 52.94% | Lợi TB T+5: 0.84%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>HNG</b> | Dist MA20: <b>6.52%</b> | Phân vị nóng: <b>86.43%</b>
+   Max lịch sử: 30.08% (2025-01-08)
+   Win T+5 vùng tương tự: 37.10% | Lợi TB T+5: 0.55%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>DCM</b> | Dist MA20: <b>4.31%</b> | Phân vị nóng: <b>83.22%</b>
+   Max lịch sử: 23.05% (2026-03-03)
+   Win T+5 vùng tương tự: 51.82% | Lợi TB T+5: 1.16%
+   ✅ CHƯA NÓNG
+   Giá chưa cách MA20 quá xa.
