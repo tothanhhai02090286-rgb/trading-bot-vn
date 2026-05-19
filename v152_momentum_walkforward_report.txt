@@ -5,27 +5,21 @@ Số mã kiểm tra: <b>15</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>CTG</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 19 | Đoạn dương: 15 | Tỷ lệ dương: 78.95%
-Win TB: 61.44% | Lợi TB: 1.20%
-RSI: 54.65 | Dist MA20: 0.23% | Volume: 1.11
+🔹 <b>ABB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 10 | Đoạn dương: 8 | Tỷ lệ dương: 80.00%
+Win TB: 56.67% | Lợi TB: 2.10%
+RSI: 68.75 | Dist MA20: 2.08% | Volume: 0.89
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>PDR</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 8 | Đoạn dương: 6 | Tỷ lệ dương: 75.00%
-Win TB: 59.29% | Lợi TB: 2.36%
-RSI: 64.00 | Dist MA20: 0.93% | Volume: 1.06
+🔹 <b>SAB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
+Win TB: 56.63% | Lợi TB: 1.07%
+RSI: 56.25 | Dist MA20: 1.03% | Volume: 0.73
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>ORS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
-Win TB: 47.78% | Lợi TB: 0.90%
-RSI: 50.00 | Dist MA20: 0.07% | Volume: 0.65
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>OIL</b> | ỔN ĐỊNH VỪA
 Đoạn test: 10 | Đoạn dương: 6 | Tỷ lệ dương: 60.00%
-Win TB: 46.64% | Lợi TB: 0.59%
+Win TB: 46.64% | Lợi TB: 0.47%
 RSI: 41.94 | Dist MA20: -1.54% | Volume: 0.77
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
@@ -35,20 +29,26 @@ Win TB: 49.56% | Lợi TB: 0.21%
 RSI: 51.75 | Dist MA20: -0.29% | Volume: 0.82
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>BID</b> | ỔN ĐỊNH VỪA
-Đoạn test: 20 | Đoạn dương: 11 | Tỷ lệ dương: 55.00%
-Win TB: 56.47% | Lợi TB: 1.02%
-RSI: 59.60 | Dist MA20: 2.46% | Volume: 0.80
+🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 14 | Đoạn dương: 8 | Tỷ lệ dương: 57.14%
+Win TB: 49.94% | Lợi TB: 1.10%
+RSI: 55.65 | Dist MA20: 3.24% | Volume: 0.97
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>APH</b> | TRUNG TÍNH
-Đoạn test: 11 | Đoạn dương: 6 | Tỷ lệ dương: 54.55%
-Win TB: 40.26% | Lợi TB: -0.53%
-RSI: 58.25 | Dist MA20: 1.63% | Volume: 0.39
-Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+🔹 <b>BID</b> | ỔN ĐỊNH VỪA
+Đoạn test: 20 | Đoạn dương: 11 | Tỷ lệ dương: 55.00%
+Win TB: 56.47% | Lợi TB: 0.99%
+RSI: 59.60 | Dist MA20: 2.46% | Volume: 0.80
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>PHP</b> | TRUNG TÍNH
 Đoạn test: 13 | Đoạn dương: 7 | Tỷ lệ dương: 53.85%
 Win TB: 45.50% | Lợi TB: 1.27%
 RSI: 51.47 | Dist MA20: 0.65% | Volume: 0.50
+Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+
+🔹 <b>GAS</b> | TRUNG TÍNH
+Đoạn test: 14 | Đoạn dương: 7 | Tỷ lệ dương: 50.00%
+Win TB: 47.55% | Lợi TB: 1.19%
+RSI: 42.04 | Dist MA20: -1.48% | Volume: 1.01
 Lý do: Mẫu không quá xấu nhưng độ ổn định chưa rõ.
