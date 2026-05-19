@@ -26,6 +26,7 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          export PYTHONPATH="$PYTHONPATH:$GITHUB_WORKSPACE/v19.3_alert_lichsu_canhbao:$GITHUB_WORKSPACE/v19.danh_muc_mua"
           python v19.danh_muc_mua/v192_realtime_position_telegram_desk_vi.py
 
       - name: Commit outputs
