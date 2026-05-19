@@ -1,11 +1,11 @@
 {
-  "date": "2026-05-16",
+  "date": "2026-05-19",
   "last_alert_ts": {
-    "EIB:THOÁT VỊ THẾ": 1778889203,
-    "BFC:THOÁT VỊ THẾ": 1778889203
+    "EIB:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779170532,
+    "BFC:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779170533
   },
   "sent": [
-    "BFC:THOÁT VỊ THẾ",
-    "EIB:THOÁT VỊ THẾ"
+    "BFC:KIỂM TRA GIÁ TRƯỚC KHI BÁN",
+    "EIB:KIỂM TRA GIÁ TRƯỚC KHI BÁN"
   ]
 }
