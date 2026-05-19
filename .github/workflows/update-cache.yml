@@ -49,4 +49,5 @@ jobs:
           git add cache_update_state.csv || true
 
           git commit -m "Update cache batch" || echo "No changes to commit"
+          git pull --rebase --autostash origin main
           git push
