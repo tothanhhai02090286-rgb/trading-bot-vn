@@ -1,9 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
+CTG,OK,2026-05-12,54.65,0.23,1.11,-0.14,-0.7,19,15,78.95,61.44,1.2,8.74,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 PDR,OK,2026-05-12,64.0,0.93,1.06,0.61,2.8,8,6,75.0,59.29,2.36,7.25,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-ORS,OK,2026-05-12,50.0,0.07,0.65,2.28,2.28,14,9,64.29,47.78,0.91,7.36,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+ORS,OK,2026-05-12,50.0,0.07,0.65,2.28,2.28,14,9,64.29,47.78,0.9,7.36,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+OIL,OK,2026-05-12,41.94,-1.54,0.77,-2.7,-1.37,10,6,60.0,46.64,0.59,7.5,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 VCB,OK,2026-05-12,51.75,-0.29,0.82,0.0,-4.62,19,11,57.89,49.56,0.21,8.58,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+BID,OK,2026-05-12,59.6,2.46,0.8,2.96,0.36,20,11,55.0,56.47,1.02,7.3,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+APH,OK,2026-05-12,58.25,1.63,0.39,-1.54,3.79,11,6,54.55,40.26,-0.53,7.36,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
 PHP,OK,2026-05-12,51.47,0.65,0.5,-3.24,1.7,13,7,53.85,45.5,1.27,7.31,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VND,OK,2026-05-12,46.34,-0.44,0.8,2.5,0.92,16,7,43.75,43.21,-0.47,7.62,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-CTR,OK,2026-05-12,29.91,-3.49,0.59,-1.79,-4.07,9,3,33.33,40.69,-0.91,6.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+BCM,OK,2026-05-12,28.57,-4.06,0.41,-2.25,-4.05,8,4,50.0,49.38,0.02,6.88,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HAH,OK,2026-05-12,65.42,3.89,1.25,1.76,1.58,12,6,50.0,53.52,1.59,7.5,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+IVS,OK,2026-05-12,68.42,10.18,3.65,12.5,10.77,2,0,0.0,23.81,-1.83,6.5,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+VND,OK,2026-05-12,46.34,-0.44,0.8,2.5,0.92,16,7,43.75,43.21,-0.49,7.62,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
 SHS,OK,2026-05-12,45.71,1.69,0.45,6.59,4.71,15,5,33.33,39.16,-1.57,7.2,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+CTR,OK,2026-05-12,29.91,-3.49,0.59,-1.79,-4.07,9,3,33.33,40.69,-0.91,6.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
 KDC,OK,2026-05-12,49.65,1.8,0.68,5.27,2.35,17,5,29.41,32.71,0.21,8.12,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
