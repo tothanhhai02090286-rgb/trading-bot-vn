@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-18 12:43:22
+Generated: 2026-05-19 03:29:51
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -13,26 +13,21 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 === INPUT STATE ===
 Legacy V17 dùng: Không có
 Decision Mode: CASH MODE
-Meta Exposure: 0.0154
-V15.5 Survival Exposure: 0.055
+Meta Exposure: 0.014
+V15.5 Survival Exposure: 0.05
 Regime Strength: SIDEWAY TRUNG TÍNH
 Equity State: PHÒNG THỦ MẠNH
 Kill Switch: True
-Drawdown: 17.802%
+Drawdown: 34.562%
 
 === FINAL DECISION SUMMARY ===
-- AVOID: 6 mã
+- AVOID: 1 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
 Không có mã nào đưa sang V18.
 
 === TOP FINAL DECISION ===
-◆ CTG | Final=AVOID | Realtime=BỎ QUA | Alloc=0.603% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ VNM | Final=AVOID | Realtime=BỎ QUA | Alloc=0.423% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ DHC | Final=AVOID | Realtime=BỎ QUA | Alloc=0.204% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ PHP | Final=AVOID | Realtime=BỎ QUA | Alloc=0.107% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ CEO | Final=AVOID | Realtime=BỎ QUA | Alloc=0.103% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
-◆ DPM | Final=AVOID | Realtime=BỎ QUA | Alloc=0.101% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ VND | Final=AVOID | Realtime=BỎ QUA | Alloc=1.4% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
