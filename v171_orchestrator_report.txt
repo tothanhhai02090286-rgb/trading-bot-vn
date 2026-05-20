@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-19 12:39:50
+Generated: 2026-05-20 03:22:45
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -12,29 +12,22 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 
 === INPUT STATE ===
 Legacy V17 dùng: Không có
-Decision Mode: ĐÁNH NHỎ
-Meta Exposure: 0.44
-V15.5 Survival Exposure: 0.55
+Decision Mode: CASH MODE
+Meta Exposure: 0.014
+V15.5 Survival Exposure: 0.05
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: ỔN ĐỊNH TĂNG
-Kill Switch: False
-Drawdown: 4.789%
+Equity State: PHÒNG THỦ MẠNH
+Kill Switch: True
+Drawdown: 21.722%
 
 === FINAL DECISION SUMMARY ===
-- WATCHLIST: 6 mã
-- BUY NOW: 1 mã
+- AVOID: 1 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-- THEO DÕI: 7 mã
+Không có mã nào đưa sang V18.
 
 === TOP FINAL DECISION ===
-◆ DXG | Final=BUY NOW | Realtime=THEO DÕI | Alloc=8.355% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=7.934% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=7.176% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ DHC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.728% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ VOS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.322% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.925% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ HAH | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.56% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ TPB | Final=AVOID | Realtime=BỎ QUA | Alloc=1.4% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
@@ -43,4 +36,4 @@ Meta Exposure, Regime Strength, Equity State, Ưu tiên, Buy zone thấp %,
 Buy zone cao %, Stoploss tham khảo %, Ghi chú V18.
 
 === KẾT LUẬN V17.1 ===
-Hệ thống chỉ được đánh nhỏ hoặc theo dõi. V18 không được vào mạnh.
+Kill switch bật. Không aggressive entry.
