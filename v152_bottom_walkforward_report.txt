@@ -1,21 +1,46 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>3</b>
+Số mã kiểm tra: <b>68</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
+
+🔹 <b>OIL</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 10 | Đoạn dương: 8 | Tỷ lệ dương: 80.00%
+Win TB: 61.44% | Lợi TB: 3.52%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>SAB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 19 | Đoạn dương: 14 | Tỷ lệ dương: 73.68%
+Win TB: 55.94% | Lợi TB: 0.97%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>CTG</b> | ỔN ĐỊNH VỪA
+Đoạn test: 17 | Đoạn dương: 12 | Tỷ lệ dương: 70.59%
+Win TB: 48.04% | Lợi TB: 0.18%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>ORS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 17 | Đoạn dương: 11 | Tỷ lệ dương: 64.71%
+Win TB: 54.60% | Lợi TB: 1.08%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>PHP</b> | ỔN ĐỊNH VỪA
 Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
 Win TB: 58.56% | Lợi TB: 1.66%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>SBT</b> | MẪU ÍT
-Đoạn test: 1 | Đoạn dương: 1 | Tỷ lệ dương: 100.00%
-Win TB: 66.67% | Lợi TB: 2.06%
-Lý do: Số đoạn test quá ít, chỉ dùng tham khảo.
+🔹 <b>VIP</b> | ỔN ĐỊNH VỪA
+Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
+Win TB: 51.36% | Lợi TB: 0.42%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>TPB</b> | KHÔNG ĐỦ DỮ LIỆU
-Đoạn test: 0 | Đoạn dương: 0 | Tỷ lệ dương: %
-Win TB: % | Lợi TB: %
-Lý do: Không có đủ đoạn walk-forward để kiểm định.
+🔹 <b>VTO</b> | ỔN ĐỊNH VỪA
+Đoạn test: 11 | Đoạn dương: 7 | Tỷ lệ dương: 63.64%
+Win TB: 45.85% | Lợi TB: 0.13%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>VRE</b> | ỔN ĐỊNH VỪA
+Đoạn test: 16 | Đoạn dương: 10 | Tỷ lệ dương: 62.50%
+Win TB: 50.16% | Lợi TB: 0.91%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.

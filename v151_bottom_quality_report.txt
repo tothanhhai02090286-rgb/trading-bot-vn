@@ -1,24 +1,54 @@
 ✅ <b>V15.1 BOTTOM QUALITY HOÀN TẤT</b>
 
 Nguồn mã: <b>ai_risk_filtered.csv</b>
-Số mã kiểm tra: <b>3</b>
+Số mã kiểm tra: <b>68</b>
 
 <b>TOP BOTTOM QUALITY</b>
+
+🔹 <b>TCB</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 94.00
+RSI: 30.95 | DD20: -5.34% | Hồi đáy: 4.51%
+Win T+5: 60.00% | Lợi TB T+5: 1.53%
+Điểm mạnh: RSI vùng bắt đáy 31.0 | Hồi từ đáy 4.5% | Nến đóng gần cao nhất phiên | Volume hồi hợp lý 1.47 | Win T+5 tốt 60.0% | Lợi TB T+5 tốt 1.53%
+Điểm yếu: Chưa lấy lại MA5
+
+🔹 <b>BSR</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 82.00
+RSI: 77.10 | DD20: -6.33% | Hồi đáy: 37.37%
+Win T+5: 60.00% | Lợi TB T+5: 3.64%
+Điểm mạnh: Có chiết khấu -6.3% | Đã lấy lại MA5 | Nến đóng gần cao nhất phiên | Volume hồi hợp lý 1.53 | Win T+5 tốt 60.0% | Lợi TB T+5 tốt 3.64%
+Điểm yếu: RSI không còn vùng đáy 77.1 | Hồi quá xa, không còn điểm đáy đẹp
+
+🔹 <b>DHC</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 77.00
+RSI: 40.38 | DD20: -7.53% | Hồi đáy: 2.34%
+Win T+5: 48.46% | Lợi TB T+5: 0.40%
+Điểm mạnh: RSI vùng bắt đáy 40.4 | Có chiết khấu -7.5% | Hồi từ đáy 2.3% | Volume hồi hợp lý 0.98
+Điểm yếu: Chưa lấy lại MA5
+
+🔹 <b>EIB</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 77.00
+RSI: 42.86 | DD20: -8.55% | Hồi đáy: 3.38%
+Win T+5: 55.75% | Lợi TB T+5: 0.48%
+Điểm mạnh: RSI vùng bắt đáy 42.9 | Có chiết khấu -8.5% | Hồi từ đáy 3.4% | Volume hồi hợp lý 1.02
+Điểm yếu: Chưa lấy lại MA5
 
 🔹 <b>SBT</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 76.00
 RSI: 82.50 | DD20: -0.46% | Hồi đáy: 8.73%
 Win T+5: 79.03% | Lợi TB T+5: 1.45%
-Điểm mạnh: Đã lấy lại MA5 | Nến đóng gần cao nhất phiên | Volume hồi hợp lý 0.81 | Win T+5 tốt 79.0% | Lợi TB T+5 tốt 1.45%
+Điểm mạnh: Đã lấy lại MA5 | Nến đóng gần cao nhất phiên | Volume hồi hợp lý 1.52 | Win T+5 tốt 79.0% | Lợi TB T+5 tốt 1.45%
 Điểm yếu: RSI không còn vùng đáy 82.5 | Chưa giảm đủ sâu
 
-🔹 <b>TPB</b> | 🟡 HỒI KỸ THUẬT | Điểm 68.00
-RSI: 30.56 | DD20: -6.61% | Hồi đáy: 1.30%
-Win T+5: 54.69% | Lợi TB T+5: 0.05%
-Điểm mạnh: RSI vùng bắt đáy 30.6 | Có chiết khấu -6.6% | Nến đóng gần cao nhất phiên
+🔹 <b>PDR</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 76.00
+RSI: 54.76 | DD20: -4.09% | Hồi đáy: 4.46%
+Win T+5: 62.28% | Lợi TB T+5: 1.17%
+Điểm mạnh: Hồi từ đáy 4.5% | Volume hồi hợp lý 1.63 | Win T+5 tốt 62.3% | Lợi TB T+5 tốt 1.17%
 Điểm yếu: Chưa lấy lại MA5
 
-🔹 <b>PHP</b> | 🔴 BULL TRAP | Điểm 59.00
-RSI: 63.01 | DD20: -1.54% | Hồi đáy: 11.01%
-Win T+5: 49.46% | Lợi TB T+5: 0.97%
-Điểm mạnh: Đã lấy lại MA5 | Nến đóng gần cao nhất phiên | Volume hồi hợp lý 1.07
-Điểm yếu: RSI không còn vùng đáy 63.0 | Chưa giảm đủ sâu
+🔹 <b>VHM</b> | 🟢 ĐÁY CHẤT LƯỢNG | Điểm 76.00
+RSI: 57.63 | DD20: -7.73% | Hồi đáy: 21.60%
+Win T+5: 69.23% | Lợi TB T+5: 1.94%
+Điểm mạnh: Có chiết khấu -7.7% | Đã lấy lại MA5 | Volume hồi hợp lý 1.00 | Win T+5 tốt 69.2% | Lợi TB T+5 tốt 1.94%
+Điểm yếu: RSI không còn vùng đáy 57.6 | Hồi quá xa, không còn điểm đáy đẹp
+
+🔹 <b>REE</b> | 🟡 HỒI KỸ THUẬT | Điểm 74.00
+RSI: 63.93 | DD20: -6.71% | Hồi đáy: 2.61%
+Win T+5: 45.56% | Lợi TB T+5: 0.61%
+Điểm mạnh: Có chiết khấu -6.7% | Hồi từ đáy 2.6% | Đã lấy lại MA5 | Volume hồi hợp lý 1.11
+Điểm yếu: RSI không còn vùng đáy 63.9
