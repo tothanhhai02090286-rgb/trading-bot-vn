@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-20 11:24:28
+Generated: 2026-05-21 01:28:35
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -12,22 +12,31 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 
 === INPUT STATE ===
 Legacy V17 dùng: Không có
-Decision Mode: CASH MODE
-Meta Exposure: 0.014
-V15.5 Survival Exposure: 0.05
+Decision Mode: ĐÁNH NHỎ
+Meta Exposure: 0.44
+V15.5 Survival Exposure: 0.55
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: PHÒNG THỦ MẠNH
-Kill Switch: True
-Drawdown: 21.722%
+Equity State: ỔN ĐỊNH TĂNG
+Kill Switch: False
+Drawdown: 0.0%
 
 === FINAL DECISION SUMMARY ===
-- AVOID: 1 mã
+- WATCHLIST: 10 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-Không có mã nào đưa sang V18.
+- THEO DÕI: 10 mã
 
 === TOP FINAL DECISION ===
-◆ TPB | Final=AVOID | Realtime=BỎ QUA | Alloc=1.4% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=Kill switch từ upstream đang bật
+◆ TPB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.924% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ ABB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.707% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.904% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.328% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ GMD | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.238% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ DHC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.137% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=3.411% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ HBC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.846% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ PET | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.411% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ POW | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.094% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
@@ -36,4 +45,4 @@ Meta Exposure, Regime Strength, Equity State, Ưu tiên, Buy zone thấp %,
 Buy zone cao %, Stoploss tham khảo %, Ghi chú V18.
 
 === KẾT LUẬN V17.1 ===
-Kill switch bật. Không aggressive entry.
+Hệ thống chỉ được đánh nhỏ hoặc theo dõi. V18 không được vào mạnh.
