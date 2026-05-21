@@ -4,40 +4,40 @@ Nguồn mã: <b>v142_ma20_heat_backtest.csv</b>
 Số mã kiểm tra: <b>15</b>
 
 <b>KẾT QUẢ HEAT COMBO</b>
-🔹 <b>VHM</b> | Heat: <b>87.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
-   MA20: 4.59% | MA20 hot: 68.31% | RSI: 57.63
-   Win T+5: 58.82% | Lợi TB T+5: 1.99%
-   Mạnh: RSI vùng đẹp 57.6 | Volume ổn 1.00 | Win T+5 vùng tương tự tốt 58.8% | Lợi TB T+5 tốt 1.99%
-🔹 <b>PHP</b> | Heat: <b>72.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 3.22% | MA20 hot: 69.32% | RSI: 57.58
-   Win T+5: 53.06% | Lợi TB T+5: 0.96%
-   Mạnh: RSI vùng đẹp 57.6 | Volume xác nhận mạnh 2.76
-🔹 <b>GVR</b> | Heat: <b>72.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 6.68% | MA20 hot: 81.53% | RSI: 65.13
-   Win T+5: 52.33% | Lợi TB T+5: 0.82%
-   Mạnh: RSI vùng đẹp 65.1 | Volume xác nhận mạnh 1.89
-🔹 <b>CTS</b> | Heat: <b>70.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 0.73% | MA20 hot: 49.32% | RSI: 64.58
-   Win T+5: 51.19% | Lợi TB T+5: -0.53%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 64.6 | Volume xác nhận mạnh 2.21
-   Yếu: Lợi TB T+5 âm -0.53%
-🔹 <b>OIL</b> | Heat: <b>68.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 5.48% | MA20 hot: 83.05% | RSI: 63.79
-   Win T+5: 39.51% | Lợi TB T+5: 1.13%
-   Mạnh: RSI vùng đẹp 63.8 | Volume xác nhận mạnh 1.57 | Lợi TB T+5 tốt 1.13%
-   Yếu: Win T+5 vùng tương tự yếu 39.5%
-🔹 <b>PET</b> | Heat: <b>63.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 1.25% | MA20 hot: 59.76% | RSI: 54.43
-   Win T+5: 46.48% | Lợi TB T+5: 0.83%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 54.4 | Volume ổn 1.48
-   Yếu: Win T+5 vùng tương tự yếu 46.5%
-🔹 <b>HBC</b> | Heat: <b>63.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 0.10% | MA20 hot: 57.90% | RSI: 57.14
-   Win T+5: 38.24% | Lợi TB T+5: 0.66%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 57.1 | Volume ổn 1.25
-   Yếu: Win T+5 vùng tương tự yếu 38.2%
-🔹 <b>VND</b> | Heat: <b>63.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 0.15% | MA20 hot: 54.41% | RSI: 58.00
-   Win T+5: 46.74% | Lợi TB T+5: 0.07%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 58.0 | Volume ổn 1.31
-   Yếu: Win T+5 vùng tương tự yếu 46.7%
+🔹 <b>STB</b> | Heat: <b>90.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
+   MA20: 0.80% | MA20 hot: 39.09% | RSI: 57.67
+   Win T+5: 69.00% | Lợi TB T+5: 1.74%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 57.7 | Win T+5 vùng tương tự tốt 69.0% | Lợi TB T+5 tốt 1.74%
+🔹 <b>PET</b> | Heat: <b>80.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
+   MA20: 3.31% | MA20 hot: 70.00% | RSI: 61.14
+   Win T+5: 50.45% | Lợi TB T+5: 1.20%
+   Mạnh: RSI vùng đẹp 61.1 | Volume xác nhận mạnh 2.48 | Lợi TB T+5 tốt 1.20%
+🔹 <b>PVD</b> | Heat: <b>70.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: 1.10% | MA20 hot: 57.02% | RSI: 56.36
+   Win T+5: 56.35% | Lợi TB T+5: 0.92%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 56.4
+🔹 <b>VIC</b> | Heat: <b>63.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: -0.30% | MA20 hot: 36.38% | RSI: 55.30
+   Win T+5: 47.25% | Lợi TB T+5: 0.79%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 55.3 | Volume ổn 1.29
+   Yếu: Win T+5 vùng tương tự yếu 47.2%
+🔹 <b>VND</b> | Heat: <b>53.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: -0.35% | MA20 hot: 50.59% | RSI: 54.90
+   Win T+5: 43.78% | Lợi TB T+5: -0.09%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 54.9 | Volume ổn 1.04
+   Yếu: Win T+5 vùng tương tự yếu 43.8% | Lợi TB T+5 âm -0.09%
+🔹 <b>SSB</b> | Heat: <b>51.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: -0.70% | MA20 hot: 42.64% | RSI: 42.11
+   Win T+5: 41.67% | Lợi TB T+5: 0.05%
+   Mạnh: MA20 chưa quá nóng | Volume ổn 1.09
+   Yếu: Win T+5 vùng tương tự yếu 41.7%
+🔹 <b>OIL</b> | Heat: <b>50.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: 4.49% | MA20 hot: 79.70% | RSI: 62.71
+   Win T+5: 46.36% | Lợi TB T+5: 0.95%
+   Mạnh: RSI vùng đẹp 62.7
+   Yếu: Win T+5 vùng tương tự yếu 46.4%
+🔹 <b>SRC</b> | Heat: <b>50.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: 3.09% | MA20 hot: 69.53% | RSI: 60.23
+   Win T+5: 38.68% | Lợi TB T+5: -0.44%
+   Mạnh: RSI vùng đẹp 60.2 | Volume xác nhận mạnh 3.90
+   Yếu: Win T+5 vùng tương tự yếu 38.7% | Lợi TB T+5 âm -0.44%

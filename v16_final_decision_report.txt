@@ -1,38 +1,18 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>68</b>
+Số mã tổng hợp: <b>40</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>OIL</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH MẠNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>TCB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>MSH</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>REE</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>HPG</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>SAB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>ORS</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>FPT</b> | 🟢 ƯU TIÊN CAO | Điểm 95.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
 🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
@@ -40,17 +20,37 @@ Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>KSB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+🔹 <b>SCS</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>DHC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+🔹 <b>SSI</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>EIB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+🔹 <b>TPB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>OIL</b> | 🟢 ƯU TIÊN CAO | Điểm 85.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH MẠNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>PET</b> | 🟢 ƯU TIÊN CAO | Điểm 84.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum ỔN ĐỊNH MẠNH | Bottom YẾU / DỄ HỌC VẸT
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>DHA</b> | 🟢 ƯU TIÊN CAO | Điểm 84.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
+WF: Momentum  | Bottom TRUNG TÍNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>SBT</b> | 🟢 ƯU TIÊN CAO | Điểm 80.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
+WF: Momentum  | Bottom MẪU ÍT
 Lý do: Nhiều lớp xác nhận đồng thuận.
