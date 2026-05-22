@@ -1684,6 +1684,20 @@ def main():
 
     save_state(next_start)
 
+        # --- ĐOẠN CODE CẦN CHÈN ĐỂ KIỂM TRA AI ---
+    print("--- DEBUG: AI COUNCIL REASON ---")
+    if 'combined' in locals() and combined is not None:
+        # Kiểm tra xem cột AI nào tồn tại để in ra
+        ai_cols = [c for c in combined.columns if 'AI' in str(c)]
+        print(f"Các cột liên quan đến AI tìm thấy: {ai_cols}")
+        if ai_cols:
+            print(combined[['Ma'] + ai_cols[:2]].head(10))
+        else:
+            print("Không tìm thấy cột nào chứa từ khóa 'AI'.")
+    else:
+        print("Biến 'combined' không tồn tại hoặc rỗng.")
+    # ----------------------------------------
+
     print("CREATED OUTPUT FILES")
     print("Rows combined:", len(combined))
     print("Raw signals:", len(raw_signals))
