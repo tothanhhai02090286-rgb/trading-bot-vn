@@ -1684,7 +1684,7 @@ def main():
 
     save_state(next_start)
 
-        import re
+        
 
     # --- ĐOẠN CODE IN VĂN BẢN 'THUẦN' ASCII ---
     print("--- DEBUG: AI COUNCIL REASON (SAFE MODE) ---")
