@@ -1684,19 +1684,22 @@ def main():
 
     save_state(next_start)
 
-        # --- ĐOẠN CODE CẦN CHÈN ĐỂ KIỂM TRA AI ---
-    print("--- DEBUG: AI COUNCIL REASON ---")
+        # --- ĐOẠN CODE ĐÃ CẬP NHẬT ĐỂ XEM ĐƯỢC LÝ DO AI ---
+    print("--- DEBUG: AI COUNCIL REASON & WARNING ---")
     if 'combined' in locals() and combined is not None:
-        # Kiểm tra xem cột AI nào tồn tại để in ra
-        ai_cols = [c for c in combined.columns if 'AI' in str(c)]
-        print(f"Các cột liên quan đến AI tìm thấy: {ai_cols}")
-        if ai_cols:
-            print(combined[['Ma'] + ai_cols[:2]].head(10))
+        # In ra Mã, Lý do và Cảnh báo
+        cols_to_print = ['Ma', 'AI Reason', 'AI Warning']
+        # Kiểm tra xem các cột này có tồn tại không trước khi in
+        existing_cols = [c for c in cols_to_print if c in combined.columns]
+        
+        if existing_cols:
+            # Dùng .to_string() để in đầy đủ nội dung, không bị cắt bớt
+            print(combined[existing_cols].head(10).to_string())
         else:
-            print("Không tìm thấy cột nào chứa từ khóa 'AI'.")
-    else:
-        print("Biến 'combined' không tồn tại hoặc rỗng.")
-    # ----------------------------------------
+            print(f"Không tìm thấy cột AI Reason/Warning. Các cột có sẵn là: {combined.columns.tolist()}")
+    # ------------------------------------------------
+
+    
 
     print("CREATED OUTPUT FILES")
     print("Rows combined:", len(combined))
