@@ -1692,31 +1692,32 @@ def main():
     save_state(next_start)
 
     print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
+
     if 'combined' in locals() and combined is not None:
 
-    df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
+        df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
 
-    df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
-    df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+        df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+        df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
 
-    lines = []
+        lines = []
 
-    lines.append("=== AI COUNCIL REASON ===")
-    lines.append("")
-
-    for _, row in df_debug.head(10).iterrows():
-
-        lines.append(f"Mã: {row['Ma']}")
-        lines.append(f"AI Reason: {row['AI Reason']}")
-        lines.append(f"AI Warning: {row['AI Warning']}")
+        lines.append("=== AI COUNCIL REASON ===")
         lines.append("")
 
-    report = "\n".join(lines)
+        for _, row in df_debug.head(10).iterrows():
 
-    with open("ai_council_debug.txt", "w", encoding="utf-8") as f:
-        f.write(report)
+            lines.append(f"Mã: {row['Ma']}")
+            lines.append(f"AI Reason: {row['AI Reason']}")
+            lines.append(f"AI Warning: {row['AI Warning']}")
+            lines.append("")
 
-    print(report)
+        report = "\n".join(lines)
+
+        with open("ai_council_debug.txt", "w", encoding="utf-8") as f:
+            f.write(report)
+
+        print(report)
 
 
 
