@@ -57,7 +57,7 @@ jobs:
               print("Không có intraday_watchlist_v17.csv để chuẩn hóa.")
               raise SystemExit(0)
 
-          df = pd.read_csv(path)
+          df = pd.read_csv(path, encoding="utf-8-sig")
 
           # Chuẩn hóa cột Mã
           if "Mã" not in df.columns:
