@@ -1684,22 +1684,21 @@ def main():
 
     save_state(next_start)
 
-        # --- ĐOẠN CODE ĐÃ CẬP NHẬT ĐỂ XEM ĐƯỢC LÝ DO AI ---
+        # --- ĐOẠN CODE KHẮC PHỤC LỖI FONT TIẾNG VIỆT ---
     print("--- DEBUG: AI COUNCIL REASON & WARNING ---")
     if 'combined' in locals() and combined is not None:
-        # In ra Mã, Lý do và Cảnh báo
-        cols_to_print = ['Ma', 'AI Reason', 'AI Warning']
-        # Kiểm tra xem các cột này có tồn tại không trước khi in
-        existing_cols = [c for c in cols_to_print if c in combined.columns]
+        # Ép kiểu dữ liệu sang chuỗi và đảm bảo hiển thị đúng UTF-8
+        df_display = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
         
-        if existing_cols:
-            # Dùng .to_string() để in đầy đủ nội dung, không bị cắt bớt
-            print(combined[existing_cols].head(10).to_string())
-        else:
-            print(f"Không tìm thấy cột AI Reason/Warning. Các cột có sẵn là: {combined.columns.tolist()}")
-    # ------------------------------------------------
-
-    
+        # Hàm hỗ trợ hiển thị tiếng Việt sạch
+        def clean_text(val):
+            return str(val).encode('utf-8', 'ignore').decode('utf-8')
+        
+        for col in df_display.columns:
+            df_display[col] = df_display[col].apply(clean_text)
+            
+        print(df_display.head(10).to_string())
+    # ----------------------------------------------
 
     print("CREATED OUTPUT FILES")
     print("Rows combined:", len(combined))
