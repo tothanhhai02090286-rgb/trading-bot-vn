@@ -1691,28 +1691,20 @@ def main():
 
     save_state(next_start)
 
-        
+    print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
 
-    # --- ĐOẠN CODE IN VĂN BẢN 'THUẦN' ASCII ---
-    print("--- DEBUG: AI COUNCIL REASON (SAFE MODE) ---")
     if 'combined' in locals() and combined is not None:
-        def force_ascii(text):
-            # 1. Chuyển sang unicode chuẩn
-            import unicodedata
-            text = unicodedata.normalize('NFKD', str(text))
-            # 2. Chỉ giữ lại chữ cái A-Z, a-z, số 0-9, dấu cách và dấu chấm
-            text = re.sub(r'[^a-zA-Z0-9\s\.]', '', text)
-            return text
 
         df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
-        
-        # Áp dụng bộ lọc mạnh tay
-        df_debug['AI Reason'] = df_debug['AI Reason'].apply(force_ascii)
-        df_debug['AI Warning'] = df_debug['AI Warning'].apply(force_ascii)
-            
-        # In ra log
-        print(df_debug.head(10).to_string())
-    # ----------------------------------------
+
+        # chống NaN
+        df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+        df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+
+        print(df_debug.head(10).to_string())    
+
+    
+        # ----------------------------------------
 
    
 
