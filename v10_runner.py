@@ -1684,25 +1684,36 @@ def main():
 
     save_state(next_start)
 
-        # --- ĐOẠN CODE IN TIẾNG VIỆT KHÔNG DẤU ---
-    import unicodedata
-
-    def remove_accents(input_str):
-        if not isinstance(input_str, str):
-            input_str = str(input_str)
-        nfkd_form = unicodedata.normalize('NFKD', input_str)
-        return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
-
-    print("--- DEBUG: AI COUNCIL REASON (KHONG DAU) ---")
+        # --- ĐOẠN CODE IN TIẾNG VIỆT SIÊU SẠCH ---
+    print("--- DEBUG: AI COUNCIL REASON (CLEAN) ---")
     if 'combined' in locals() and combined is not None:
+        def simplify_text(text):
+            text = str(text)
+            # Thay thế cơ bản các ký tự dễ gây lỗi
+            replacements = {
+                'đ': 'd', 'Đ': 'D', 'á': 'a', 'à': 'a', 'ả': 'a', 'ã': 'a', 'ạ': 'a',
+                'â': 'a', 'ấ': 'a', 'ầ': 'a', 'ẩ': 'a', 'ẫ': 'a', 'ậ': 'a',
+                'ă': 'a', 'ắ': 'a', 'ằ': 'a', 'ẳ': 'a', 'ẵ': 'a', 'ặ': 'a',
+                'é': 'e', 'è': 'e', 'ẻ': 'e', 'ẽ': 'e', 'ẹ': 'e', 'ê': 'e', 'ế': 'e', 'ề': 'e', 'ể': 'e', 'ễ': 'e', 'ệ': 'e',
+                'í': 'i', 'ì': 'i', 'ỉ': 'i', 'ĩ': 'i', 'ị': 'i',
+                'ó': 'o', 'ò': 'o', 'ỏ': 'o', 'õ': 'o', 'ọ': 'o', 'ô': 'o', 'ố': 'o', 'ồ': 'o', 'ổ': 'o', 'ỗ': 'o', 'ộ': 'o',
+                'ơ': 'o', 'ớ': 'o', 'ờ': 'o', 'ở': 'o', 'ỡ': 'o', 'ợ': 'o',
+                'ú': 'u', 'ù': 'u', 'ủ': 'u', 'ũ': 'u', 'ụ': 'u', 'ư': 'u', 'ứ': 'u', 'ừ': 'u', 'ử': 'u', 'ữ': 'u', 'ự': 'u',
+                'ý': 'y', 'ỳ': 'y', 'ỷ': 'y', 'ỹ': 'y', 'ỵ': 'y'
+            }
+            for char, replacement in replacements.items():
+                text = text.replace(char, replacement).replace(char.upper(), replacement.upper())
+            return text
+
         df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
         
-        # Chuyển các cột sang không dấu
-        for col in ['AI Reason', 'AI Warning']:
-            df_debug[col] = df_debug[col].apply(remove_accents)
+        # Áp dụng hàm dọn dẹp
+        df_debug['AI Reason'] = df_debug['AI Reason'].apply(simplify_text)
+        df_debug['AI Warning'] = df_debug['AI Warning'].apply(simplify_text)
             
         print(df_debug.head(10).to_string())
-    # ------------------------------------------
+    # ----------------------------------------
+   
 
 
     print("CREATED OUTPUT FILES")
