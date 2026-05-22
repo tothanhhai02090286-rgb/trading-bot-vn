@@ -1693,33 +1693,33 @@ def main():
 
     print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
 
-if 'combined' not in locals():
-    print("DEBUG: combined chưa tồn tại")
+try:
 
-elif combined is None:
-    print("DEBUG: combined = None")
+    print("DEBUG: combined exists =", 'combined' in locals())
 
-elif combined.empty:
-    print("DEBUG: combined rỗng")
+    if 'combined' in locals() and combined is not None:
 
-else:
-    print("DEBUG: combined shape =", combined.shape)
-    print("DEBUG: columns =", list(combined.columns))
+        print("DEBUG: shape =", combined.shape)
+        print("DEBUG: columns =", list(combined.columns))
 
-    required_cols = ['Ma', 'AI Reason', 'AI Warning']
+        required_cols = ['Ma', 'AI Reason', 'AI Warning']
 
-    missing = [c for c in required_cols if c not in combined.columns]
+        missing = [c for c in required_cols if c not in combined.columns]
 
-    if missing:
-        print("DEBUG: thiếu cột =", missing)
+        if missing:
+            print("DEBUG: missing columns =", missing)
 
-    else:
-        df_debug = combined[required_cols].copy()
+        else:
 
-        df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
-        df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+            df_debug = combined[required_cols].copy()
 
-        print(df_debug.head(10).to_string(index=False))
+            df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+            df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+
+            print(df_debug.head(10).to_string(index=False))
+
+except Exception as e:
+    print("DEBUG ERROR:", repr(e))
 
 
     print("CREATED OUTPUT FILES")
