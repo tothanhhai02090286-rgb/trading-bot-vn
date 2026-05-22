@@ -1693,18 +1693,23 @@ def main():
 
     print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
 
-    if 'combined' in locals() and combined is not None:
+if 'combined' in locals() and combined is not None:
 
-        df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
+    df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
 
-        # chống NaN
-        df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
-        df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+    # chống NaN
+    df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+    df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
 
-        print(df_debug.head(10).to_string())    
+    # ép UTF-8 an toàn cho GitHub Actions log
+    for col in ['AI Reason', 'AI Warning']:
+        df_debug[col] = (
+            df_debug[col]
+            .str.encode('utf-8', errors='ignore')
+            .str.decode('utf-8', errors='ignore')
+        )
 
-    
-        # ----------------------------------------
+    print(df_debug.head(10).to_string(index=False))
 
    
 
