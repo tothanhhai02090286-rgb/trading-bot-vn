@@ -19,6 +19,13 @@ import v10_backfill_regime
 import html as _html
 import os
 import requests
+import sys
+
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+except Exception:
+    pass
 from v11_market_overlay import ap_dung_v11_market_overlay, tao_bang_v11_leader, tao_bang_v11_bi_ha_hang
 from v13_final_decision_vi import build_v13_final_decision_vi, build_v13_top_picks_vi
 from v132_feature_pattern_engine_vi import build_v132_feature_pattern_view_vi, build_v132_top_feature_picks_vi
