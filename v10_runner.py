@@ -1684,35 +1684,29 @@ def main():
 
     save_state(next_start)
 
-        # --- ĐOẠN CODE IN TIẾNG VIỆT SIÊU SẠCH ---
-    print("--- DEBUG: AI COUNCIL REASON (CLEAN) ---")
+        import re
+
+    # --- ĐOẠN CODE IN VĂN BẢN 'THUẦN' ASCII ---
+    print("--- DEBUG: AI COUNCIL REASON (SAFE MODE) ---")
     if 'combined' in locals() and combined is not None:
-        def simplify_text(text):
-            text = str(text)
-            # Thay thế cơ bản các ký tự dễ gây lỗi
-            replacements = {
-                'đ': 'd', 'Đ': 'D', 'á': 'a', 'à': 'a', 'ả': 'a', 'ã': 'a', 'ạ': 'a',
-                'â': 'a', 'ấ': 'a', 'ầ': 'a', 'ẩ': 'a', 'ẫ': 'a', 'ậ': 'a',
-                'ă': 'a', 'ắ': 'a', 'ằ': 'a', 'ẳ': 'a', 'ẵ': 'a', 'ặ': 'a',
-                'é': 'e', 'è': 'e', 'ẻ': 'e', 'ẽ': 'e', 'ẹ': 'e', 'ê': 'e', 'ế': 'e', 'ề': 'e', 'ể': 'e', 'ễ': 'e', 'ệ': 'e',
-                'í': 'i', 'ì': 'i', 'ỉ': 'i', 'ĩ': 'i', 'ị': 'i',
-                'ó': 'o', 'ò': 'o', 'ỏ': 'o', 'õ': 'o', 'ọ': 'o', 'ô': 'o', 'ố': 'o', 'ồ': 'o', 'ổ': 'o', 'ỗ': 'o', 'ộ': 'o',
-                'ơ': 'o', 'ớ': 'o', 'ờ': 'o', 'ở': 'o', 'ỡ': 'o', 'ợ': 'o',
-                'ú': 'u', 'ù': 'u', 'ủ': 'u', 'ũ': 'u', 'ụ': 'u', 'ư': 'u', 'ứ': 'u', 'ừ': 'u', 'ử': 'u', 'ữ': 'u', 'ự': 'u',
-                'ý': 'y', 'ỳ': 'y', 'ỷ': 'y', 'ỹ': 'y', 'ỵ': 'y'
-            }
-            for char, replacement in replacements.items():
-                text = text.replace(char, replacement).replace(char.upper(), replacement.upper())
+        def force_ascii(text):
+            # 1. Chuyển sang unicode chuẩn
+            import unicodedata
+            text = unicodedata.normalize('NFKD', str(text))
+            # 2. Chỉ giữ lại chữ cái A-Z, a-z, số 0-9, dấu cách và dấu chấm
+            text = re.sub(r'[^a-zA-Z0-9\s\.]', '', text)
             return text
 
         df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
         
-        # Áp dụng hàm dọn dẹp
-        df_debug['AI Reason'] = df_debug['AI Reason'].apply(simplify_text)
-        df_debug['AI Warning'] = df_debug['AI Warning'].apply(simplify_text)
+        # Áp dụng bộ lọc mạnh tay
+        df_debug['AI Reason'] = df_debug['AI Reason'].apply(force_ascii)
+        df_debug['AI Warning'] = df_debug['AI Warning'].apply(force_ascii)
             
+        # In ra log
         print(df_debug.head(10).to_string())
     # ----------------------------------------
+
    
 
 
