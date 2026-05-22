@@ -48,7 +48,7 @@ def now_str():
 
 def read_csv(path):
     try:
-        return pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
+        return pd.read_csv(path, encoding="utf-8-sig") if os.path.exists(path) else pd.DataFrame()
     except Exception as e:
         print(f"WARN: cannot read {path}: {e}", flush=True)
         return pd.DataFrame()
