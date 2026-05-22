@@ -1684,21 +1684,26 @@ def main():
 
     save_state(next_start)
 
-        # --- ĐOẠN CODE KHẮC PHỤC LỖI FONT TIẾNG VIỆT ---
-    print("--- DEBUG: AI COUNCIL REASON & WARNING ---")
+        # --- ĐOẠN CODE IN TIẾNG VIỆT KHÔNG DẤU ---
+    import unicodedata
+
+    def remove_accents(input_str):
+        if not isinstance(input_str, str):
+            input_str = str(input_str)
+        nfkd_form = unicodedata.normalize('NFKD', input_str)
+        return "".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
+    print("--- DEBUG: AI COUNCIL REASON (KHONG DAU) ---")
     if 'combined' in locals() and combined is not None:
-        # Ép kiểu dữ liệu sang chuỗi và đảm bảo hiển thị đúng UTF-8
-        df_display = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
+        df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
         
-        # Hàm hỗ trợ hiển thị tiếng Việt sạch
-        def clean_text(val):
-            return str(val).encode('utf-8', 'ignore').decode('utf-8')
-        
-        for col in df_display.columns:
-            df_display[col] = df_display[col].apply(clean_text)
+        # Chuyển các cột sang không dấu
+        for col in ['AI Reason', 'AI Warning']:
+            df_debug[col] = df_debug[col].apply(remove_accents)
             
-        print(df_display.head(10).to_string())
-    # ----------------------------------------------
+        print(df_debug.head(10).to_string())
+    # ------------------------------------------
+
 
     print("CREATED OUTPUT FILES")
     print("Rows combined:", len(combined))
