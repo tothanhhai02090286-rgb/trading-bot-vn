@@ -2,83 +2,116 @@
 
 <b>1. TỔNG QUAN V17</b>
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Tổng mã nền V17: <b>40</b>
-Market: <b>THỊ TRƯỜNG YẾU</b> | Score: <b>32.39</b>
-Above MA20: <b>26.81%</b> | MA5&gt;MA20: <b>39.86%</b>
+Tổng mã nền V17: <b>61</b>
+Market: <b>THỊ TRƯỜNG YẾU</b> | Score: <b>33.15</b>
+Above MA20: <b>30.43%</b> | MA5&gt;MA20: <b>34.06%</b>
 
 <b>2. TOÀN BỘ MÃ NỀN V17</b>
 Mã | Quyết định | Điểm | Strategy | Risk | Action
-• <b>MSH</b> | 🟡 THEO DÕI | 75.86 | BOTTOM | PASS | BUY NOW
-• <b>HPG</b> | 🟠 CHỜ ĐIỂM ĐẸP | 68.86 | BOTTOM | PASS | BUY NOW
-• <b>TPB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 68.86 | BOTTOM | PASS | BUY NOW
-• <b>HDB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.16 | BOTTOM | PASS | BUY NOW
-• <b>SCS</b> | 🟠 CHỜ ĐIỂM ĐẸP | 61.96 | BOTTOM | PASS | BUY NOW
-• <b>SSI</b> | 🟠 CHỜ ĐIỂM ĐẸP | 61.06 | BOTTOM | PASS | BUY NOW
-• <b>LPB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 55.60 | MOMENTUM | PASS | WATCHLIST
-• <b>ACB</b> | ❌ LOẠI | 50.91 | BOTTOM | PASS | BUY NOW
-• <b>DBC</b> | ❌ LOẠI | 49.11 | BOTTOM | PASS | WATCHLIST
-• <b>TVS</b> | ❌ LOẠI | 47.81 | BOTTOM | PASS | BUY NOW
-• <b>SGT</b> | ❌ LOẠI | 47.46 | BOTTOM | PASS | BUY NOW
-• <b>SSB</b> | ❌ LOẠI | 46.91 | BOTTOM | PASS | BUY NOW
-• <b>VIB</b> | ❌ LOẠI | 45.11 | BOTTOM | PASS | BUY NOW
+• <b>MWG</b> | 🟡 THEO DÕI | 84.72 | BOTTOM | PASS | BUY NOW
+• <b>CTG</b> | 🟡 THEO DÕI | 76.02 | BOTTOM | PASS | BUY NOW
+• <b>MBS</b> | 🟡 THEO DÕI | 70.27 | BOTTOM | PASS | WAIT
+• <b>NBB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 67.02 | BOTTOM | PASS | BUY NOW
+• <b>BAF</b> | 🟠 CHỜ ĐIỂM ĐẸP | 65.37 | BOTTOM | PASS | BUY NOW
+• <b>VIC</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.87 | BOTTOM | PASS | BUY NOW
+• <b>CSV</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.87 | BOTTOM | PASS | BUY NOW
+• <b>NKG</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.57 | BOTTOM | PASS | BUY NOW
+• <b>SSB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.42 | BOTTOM | PASS | BUY NOW
+• <b>HPG</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.27 | BOTTOM | PASS | BUY NOW
+• <b>CII</b> | 🟠 CHỜ ĐIỂM ĐẸP | 63.27 | BOTTOM | PASS | BUY NOW
+• <b>VCI</b> | 🟠 CHỜ ĐIỂM ĐẸP | 62.97 | BOTTOM | PASS | BUY NOW
+• <b>BVB</b> | 🟠 CHỜ ĐIỂM ĐẸP | 61.97 | BOTTOM | PASS | BUY NOW
+• <b>ELC</b> | 🟠 CHỜ ĐIỂM ĐẸP | 61.77 | BOTTOM | PASS | BUY NOW
+• <b>VOS</b> | 🟠 CHỜ ĐIỂM ĐẸP | 61.47 | BOTTOM | PASS | BUY NOW
+• <b>SSI</b> | 🟠 CHỜ ĐIỂM ĐẸP | 59.97 | BOTTOM | PASS | WAIT
+• <b>VRE</b> | 🟠 CHỜ ĐIỂM ĐẸP | 59.97 | BOTTOM | PASS | BUY NOW
+• <b>BVS</b> | 🟠 CHỜ ĐIỂM ĐẸP | 58.47 | BOTTOM | PASS | WAIT
+• <b>CTS</b> | 🟠 CHỜ ĐIỂM ĐẸP | 56.74 | MOMENTUM | PASS | BUY NOW
+• <b>VNM</b> | ❌ LOẠI | 52.82 | BOTTOM | PASS | BUY NOW
+• <b>CNG</b> | ❌ LOẠI | 52.07 | BOTTOM | PASS | BUY NOW
+• <b>FCN</b> | ❌ LOẠI | 51.92 | BOTTOM | PASS | BUY NOW
+• <b>DBC</b> | ❌ LOẠI | 50.72 | BOTTOM | PASS | WATCHLIST
+• <b>AGR</b> | ❌ LOẠI | 50.42 | BOTTOM | PASS | WAIT
+• <b>CEO</b> | ❌ LOẠI | 49.52 | BOTTOM | PASS | BUY NOW
+• <b>LAS</b> | ❌ LOẠI | 49.52 | BOTTOM | PASS | BUY NOW
+• <b>PDR</b> | ❌ LOẠI | 47.72 | BOTTOM | PASS | BUY NOW
+• <b>PAN</b> | ❌ LOẠI | 45.74 | MOMENTUM | PASS | WATCHLIST
+• <b>CRE</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
+• <b>CTR</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
+• <b>IJC</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
 • <b>PET</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
-• <b>STB</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
-• <b>CTG</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
-• <b>BVB</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
-• <b>MBS</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | WATCHLIST
-• <b>ORS</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | WATCHLIST
-• <b>SBT</b> | ❌ LOẠI | 44.85 | MOMENTUM | PASS | WAIT
-• <b>VIC</b> | ❌ LOẠI | 44.61 | BOTTOM | PASS | BUY NOW
-• <b>DHA</b> | ❌ LOẠI | 44.40 | MOMENTUM | PASS | WAIT
-• <b>PVD</b> | ❌ LOẠI | 43.36 | BOTTOM | PASS | BUY NOW
-• <b>VIP</b> | ❌ LOẠI | 42.21 | BOTTOM | PASS | BUY NOW
-• <b>DXG</b> | ❌ LOẠI | 42.16 | BOTTOM | PASS | BUY NOW
-• <b>FPT</b> | ❌ LOẠI | 42.00 | MOMENTUM | PASS | WATCHLIST
-• <b>SKG</b> | ❌ LOẠI | 41.26 | BOTTOM | PASS | WATCHLIST
-• <b>CTR</b> | ❌ LOẠI | 39.90 | MOMENTUM | PASS | BUY NOW
-• <b>VIX</b> | ❌ LOẠI | 39.65 | MOMENTUM | PASS | WAIT
+• <b>VHM</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
+• <b>ORS</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
+• <b>PHP</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
+• <b>PVD</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
+• <b>REE</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | WATCHLIST
+• <b>BCM</b> | ❌ LOẠI | 44.37 | BOTTOM | PASS | BUY NOW
+• <b>VGC</b> | ❌ LOẠI | 44.37 | BOTTOM | PASS | BUY NOW
+• <b>VND</b> | ❌ LOẠI | 42.24 | MOMENTUM | PASS | BUY NOW
+• <b>SGT</b> | ❌ LOẠI | 41.97 | BOTTOM | PASS | WATCHLIST
+• <b>FPT</b> | ❌ LOẠI | 41.94 | MOMENTUM | PASS | WATCHLIST
+• <b>DHA</b> | ❌ LOẠI | 41.74 | MOMENTUM | PASS | WATCHLIST
+• <b>SAB</b> | ❌ LOẠI | 41.69 | MOMENTUM | PASS | WATCHLIST
+• <b>SHS</b> | ❌ LOẠI | 40.39 | MOMENTUM | PASS | WATCHLIST
+• <b>STB</b> | ❌ LOẠI | 40.29 | MOMENTUM | PASS | WATCHLIST
+• <b>FTS</b> | ❌ LOẠI | 35.74 | MOMENTUM | PASS | BUY NOW
 • <b>SRC</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
-• <b>VCB</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
-• <b>OIL</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
-• <b>VNM</b> | ❌ LOẠI | 35.00 | BOTTOM | PASS | BUY NOW
-• <b>BID</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
-• <b>CMG</b> | ❌ LOẠI | 35.00 | BOTTOM | PASS | WATCHLIST
-• <b>HSG</b> | ❌ LOẠI | 33.21 | BOTTOM | PASS | BUY NOW
-• <b>APH</b> | ❌ LOẠI | 31.56 | BOTTOM | PASS | BUY NOW
-• <b>VND</b> | ❌ LOẠI | 29.21 | BOTTOM | PASS | BUY NOW
-• <b>MBB</b> | ❌ LOẠI | 25.11 | BOTTOM | PASS | WATCHLIST
-• <b>FTS</b> | ❌ LOẠI | 24.11 | BOTTOM | PASS | BUY NOW
+• <b>VIX</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
+• <b>SBT</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
+• <b>VCB</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
+• <b>PLX</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
+• <b>VIP</b> | ❌ LOẠI | 33.97 | BOTTOM | PASS | WAIT
+• <b>KSB</b> | ❌ LOẠI | 32.72 | BOTTOM | PASS | BUY NOW
+• <b>APH</b> | ❌ LOẠI | 31.52 | BOTTOM | PASS | WATCHLIST
+• <b>HCM</b> | ❌ LOẠI | 30.97 | BOTTOM | PASS | BUY NOW
+• <b>HSG</b> | ❌ LOẠI | 30.32 | BOTTOM | PASS | WAIT
+• <b>CMG</b> | ❌ LOẠI | 29.72 | BOTTOM | PASS | WATCHLIST
+• <b>SKG</b> | ❌ LOẠI | 26.72 | BOTTOM | PASS | BUY NOW
+• <b>DRC</b> | ❌ LOẠI | 25.22 | BOTTOM | PASS | WAIT
+• <b>MBB</b> | ❌ LOẠI | 25.22 | BOTTOM | PASS | WATCHLIST
 
 <b>3. TOP TỐT NHẤT TRONG DANH SÁCH NỀN V17</b>
 Ưu tiên: không LOẠI, Risk PASS, điểm cao, quyết định tốt.
 
-• <b>MSH</b> | 🟡 THEO DÕI | Điểm 75.86
+• <b>MWG</b> | 🟡 THEO DÕI | Điểm 84.72
   BOTTOM | Risk PASS | Action BUY NOW
-  Lý do: risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH VỪA
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH MẠNH
 
-• <b>HPG</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 68.86
+• <b>CTG</b> | 🟡 THEO DÕI | Điểm 76.02
   BOTTOM | Risk PASS | Action BUY NOW
-  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom ỔN ĐỊNH MẠNH
 
-• <b>TPB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 68.86
+• <b>MBS</b> | 🟡 THEO DÕI | Điểm 70.27
+  BOTTOM | Risk PASS | Action WAIT
+  Lý do: risk pass | watch/wait | đáy chất lượng | Action WATCH/WAIT
+
+• <b>NBB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 67.02
   BOTTOM | Risk PASS | Action BUY NOW
-  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
+  Lý do: risk pass | buy now | quá nóng | đáy chất lượng
 
-• <b>HDB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.16
-  BOTTOM | Risk PASS | Action BUY NOW
-  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
-
-• <b>SCS</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 61.96
-  BOTTOM | Risk PASS | Action BUY NOW
-  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
-
-• <b>SSI</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 61.06
+• <b>BAF</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 65.37
   BOTTOM | Risk PASS | Action BUY NOW
   Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
 
-• <b>LPB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 55.60
-  MOMENTUM | Risk PASS | Action WATCHLIST
-  Lý do: risk pass | watch/wait | quá nóng | đáy chất lượng
+• <b>VIC</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.87
+  BOTTOM | Risk PASS | Action BUY NOW
+  Lý do: risk pass | buy now | quá nóng | đáy chất lượng
+
+• <b>CSV</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.87
+  BOTTOM | Risk PASS | Action BUY NOW
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
+
+• <b>NKG</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.57
+  BOTTOM | Risk PASS | Action BUY NOW
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
+
+• <b>SSB</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.42
+  BOTTOM | Risk PASS | Action BUY NOW
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
+
+• <b>HPG</b> | 🟠 CHỜ ĐIỂM ĐẸP | Điểm 63.27
+  BOTTOM | Risk PASS | Action BUY NOW
+  Lý do: risk pass | buy now | đáy chất lượng | WF bottom trung tính
 
 <b>4. KẾT LUẬN CUỐI</b>
 Bản quyết định mua thật xem tại:

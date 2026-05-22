@@ -4,43 +4,43 @@ Nguồn mã: <b>v141_top_quality_picks.csv</b>
 Số mã kiểm tra: <b>15</b>
 
 <b>KẾT QUẢ MA20</b>
-🔹 <b>CTR</b> | Dist MA20: <b>9.66%</b> | Phân vị nóng: <b>94.25%</b>
+🔹 <b>CTR</b> | Dist MA20: <b>7.04%</b> | Phân vị nóng: <b>90.37%</b>
    Max lịch sử: 22.30% (2026-01-14)
-   Win T+5 vùng tương tự: 45.45% | Lợi TB T+5: 0.73%
+   Win T+5 vùng tương tự: 42.86% | Lợi TB T+5: 0.73%
    ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
    Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>LPB</b> | Dist MA20: <b>10.36%</b> | Phân vị nóng: <b>90.36%</b>
-   Max lịch sử: 28.12% (2025-08-21)
-   Win T+5 vùng tương tự: 61.82% | Lợi TB T+5: 2.45%
+🔹 <b>VCB</b> | Dist MA20: <b>3.50%</b> | Phân vị nóng: <b>87.67%</b>
+   Max lịch sử: 25.16% (2026-01-14)
+   Win T+5 vùng tương tự: 36.79% | Lợi TB T+5: 0.11%
    ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
    Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
-🔹 <b>OIL</b> | Dist MA20: <b>4.49%</b> | Phân vị nóng: <b>79.70%</b>
-   Max lịch sử: 42.90% (2026-03-03)
-   Win T+5 vùng tương tự: 46.36% | Lợi TB T+5: 0.95%
+🔹 <b>CRE</b> | Dist MA20: <b>4.12%</b> | Phân vị nóng: <b>85.98%</b>
+   Max lịch sử: 19.62% (2025-08-19)
+   Win T+5 vùng tương tự: 44.72% | Lợi TB T+5: 0.05%
+   ⚠️ HƠI NÓNG - GIẢM TỶ TRỌNG
+   Mức hiện tại nằm trong nhóm nóng cao của lịch sử.
+🔹 <b>FTS</b> | Dist MA20: <b>2.86%</b> | Phân vị nóng: <b>74.16%</b>
+   Max lịch sử: 19.67% (2024-03-05)
+   Win T+5 vùng tương tự: 40.00% | Lợi TB T+5: 0.08%
    ✅ CHƯA NÓNG
    Giá chưa cách MA20 quá xa.
-🔹 <b>PET</b> | Dist MA20: <b>3.31%</b> | Phân vị nóng: <b>69.88%</b>
+🔹 <b>CTS</b> | Dist MA20: <b>3.66%</b> | Phân vị nóng: <b>73.31%</b>
+   Max lịch sử: 34.46% (2025-07-28)
+   Win T+5 vùng tương tự: 55.13% | Lợi TB T+5: 0.67%
+   ✅ CHƯA NÓNG
+   Giá chưa cách MA20 quá xa.
+🔹 <b>SBT</b> | Dist MA20: <b>2.68%</b> | Phân vị nóng: <b>70.95%</b>
+   Max lịch sử: 19.17% (2025-07-28)
+   Win T+5 vùng tương tự: 62.94% | Lợi TB T+5: 0.93%
+   ✅ CHƯA NÓNG
+   Giá chưa cách MA20 quá xa.
+🔹 <b>PET</b> | Dist MA20: <b>2.21%</b> | Phân vị nóng: <b>63.68%</b>
    Max lịch sử: 36.05% (2025-07-31)
-   Win T+5 vùng tương tự: 50.45% | Lợi TB T+5: 1.20%
+   Win T+5 vùng tương tự: 49.61% | Lợi TB T+5: 1.45%
    ✅ CHƯA NÓNG
    Giá chưa cách MA20 quá xa.
-🔹 <b>SRC</b> | Dist MA20: <b>3.09%</b> | Phân vị nóng: <b>69.53%</b>
-   Max lịch sử: 38.06% (2025-09-15)
-   Win T+5 vùng tương tự: 38.68% | Lợi TB T+5: -0.44%
-   ✅ CHƯA NÓNG
-   Giá chưa cách MA20 quá xa.
-🔹 <b>PVD</b> | Dist MA20: <b>1.10%</b> | Phân vị nóng: <b>57.02%</b>
-   Max lịch sử: 26.97% (2026-03-03)
-   Win T+5 vùng tương tự: 56.35% | Lợi TB T+5: 0.92%
-   ✅ CHƯA NÓNG
-   Giá chưa cách MA20 quá xa.
-🔹 <b>TVS</b> | Dist MA20: <b>-0.06%</b> | Phân vị nóng: <b>56.01%</b>
-   Max lịch sử: 19.99% (2024-06-13)
-   Win T+5 vùng tương tự: 41.40% | Lợi TB T+5: -0.38%
-   ✅ CHƯA NÓNG
-   Giá chưa cách MA20 quá xa.
-🔹 <b>VND</b> | Dist MA20: <b>-0.35%</b> | Phân vị nóng: <b>50.59%</b>
-   Max lịch sử: 22.26% (2025-07-28)
-   Win T+5 vùng tương tự: 43.78% | Lợi TB T+5: -0.09%
+🔹 <b>SSB</b> | Dist MA20: <b>0.23%</b> | Phân vị nóng: <b>62.16%</b>
+   Max lịch sử: 13.21% (2025-08-21)
+   Win T+5 vùng tương tự: 39.83% | Lợi TB T+5: -0.06%
    ✅ CHƯA NÓNG
    Giá chưa cách MA20 quá xa.
