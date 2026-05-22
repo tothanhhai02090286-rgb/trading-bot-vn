@@ -1693,25 +1693,33 @@ def main():
 
     print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
 
-if 'combined' in locals() and combined is not None:
+if 'combined' not in locals():
+    print("DEBUG: combined chưa tồn tại")
 
-    df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
+elif combined is None:
+    print("DEBUG: combined = None")
 
-    # chống NaN
-    df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
-    df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+elif combined.empty:
+    print("DEBUG: combined rỗng")
 
-    # ép UTF-8 an toàn cho GitHub Actions log
-    for col in ['AI Reason', 'AI Warning']:
-        df_debug[col] = (
-            df_debug[col]
-            .str.encode('utf-8', errors='ignore')
-            .str.decode('utf-8', errors='ignore')
-        )
+else:
+    print("DEBUG: combined shape =", combined.shape)
+    print("DEBUG: columns =", list(combined.columns))
 
-    print(df_debug.head(10).to_string(index=False))
+    required_cols = ['Ma', 'AI Reason', 'AI Warning']
 
-   
+    missing = [c for c in required_cols if c not in combined.columns]
+
+    if missing:
+        print("DEBUG: thiếu cột =", missing)
+
+    else:
+        df_debug = combined[required_cols].copy()
+
+        df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+        df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+
+        print(df_debug.head(10).to_string(index=False))
 
 
     print("CREATED OUTPUT FILES")
