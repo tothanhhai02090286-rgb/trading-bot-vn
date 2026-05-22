@@ -1692,36 +1692,32 @@ def main():
     save_state(next_start)
 
     print("--- DEBUG: AI COUNCIL REASON (UTF8 SAFE) ---")
-
-try:
-
     if 'combined' in locals() and combined is not None:
 
-        print("DEBUG SHAPE:", combined.shape)
+    df_debug = combined[['Ma', 'AI Reason', 'AI Warning']].copy()
 
-        required_cols = ['Ma', 'AI Reason', 'AI Warning']
+    df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
+    df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
 
-        missing = [c for c in required_cols if c not in combined.columns]
+    lines = []
 
-        if missing:
-            print("DEBUG MISSING:", missing)
+    lines.append("=== AI COUNCIL REASON ===")
+    lines.append("")
 
-        else:
+    for _, row in df_debug.head(10).iterrows():
 
-            df_debug = combined[required_cols].copy()
+        lines.append(f"Mã: {row['Ma']}")
+        lines.append(f"AI Reason: {row['AI Reason']}")
+        lines.append(f"AI Warning: {row['AI Warning']}")
+        lines.append("")
 
-            df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
-            df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
+    report = "\n".join(lines)
 
-            for idx, row in df_debug.head(10).iterrows():
+    with open("ai_council_debug.txt", "w", encoding="utf-8") as f:
+        f.write(report)
 
-                print("----- ROW", idx, "-----")
-                print("Ma:", row['Ma'])
-                print("AI Reason:", row['AI Reason'])
-                print("AI Warning:", row['AI Warning'])
+    print(report)
 
-except Exception as e:
-    print("DEBUG ERROR:", repr(e))
 
 
     print("CREATED OUTPUT FILES")
