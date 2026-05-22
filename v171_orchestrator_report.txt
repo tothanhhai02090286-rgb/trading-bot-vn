@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-21 11:41:42
+Generated: 2026-05-22 11:22:09
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -12,31 +12,26 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 
 === INPUT STATE ===
 Legacy V17 dùng: Không có
-Decision Mode: ĐÁNH NHỎ
-Meta Exposure: 0.44
-V15.5 Survival Exposure: 0.55
+Decision Mode: ĐÁNH RẤT NHỎ
+Meta Exposure: 0.2112
+V15.5 Survival Exposure: 0.33
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: ỔN ĐỊNH TĂNG
+Equity State: GIẢM TỐC
 Kill Switch: False
-Drawdown: 0.0%
+Drawdown: 5.531%
 
 === FINAL DECISION SUMMARY ===
-- WATCHLIST: 10 mã
+- WATCHLIST: 5 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-- THEO DÕI: 10 mã
+- THEO DÕI: 5 mã
 
 === TOP FINAL DECISION ===
-◆ TPB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.924% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ ABB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.707% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.904% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=5.328% | Mode=ĐÁNH NHỎ | Ưu tiên=VỪA | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ GMD | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.238% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ DHC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.137% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=3.411% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ HBC | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.846% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ PET | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.411% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
-◆ POW | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.094% | Mode=ĐÁNH NHỎ | Ưu tiên=THẤP | RiskGate=ĐÁNH NHỎ có kiểm soát
+◆ TPB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.002% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=VỪA | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.607% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.592% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ TVS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=3.171% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.748% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
