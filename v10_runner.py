@@ -1695,19 +1695,16 @@ def main():
 
 try:
 
-    print("DEBUG: combined exists =", 'combined' in locals())
-
     if 'combined' in locals() and combined is not None:
 
-        print("DEBUG: shape =", combined.shape)
-        print("DEBUG: columns =", list(combined.columns))
+        print("DEBUG SHAPE:", combined.shape)
 
         required_cols = ['Ma', 'AI Reason', 'AI Warning']
 
         missing = [c for c in required_cols if c not in combined.columns]
 
         if missing:
-            print("DEBUG: missing columns =", missing)
+            print("DEBUG MISSING:", missing)
 
         else:
 
@@ -1716,7 +1713,12 @@ try:
             df_debug['AI Reason'] = df_debug['AI Reason'].fillna('').astype(str)
             df_debug['AI Warning'] = df_debug['AI Warning'].fillna('').astype(str)
 
-            print(df_debug.head(10).to_string(index=False))
+            for idx, row in df_debug.head(10).iterrows():
+
+                print("----- ROW", idx, "-----")
+                print("Ma:", row['Ma'])
+                print("AI Reason:", row['AI Reason'])
+                print("AI Warning:", row['AI Warning'])
 
 except Exception as e:
     print("DEBUG ERROR:", repr(e))
