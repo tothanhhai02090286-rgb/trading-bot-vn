@@ -27,6 +27,11 @@ from v10_learning import (
     build_walk_forward_stats, apply_history_learning, apply_walk_forward_filter,
     build_regime_stats, apply_regime_decay_filter
 )
+from v10_backfill_regime import (
+    build_backfill_history_from_cache, build_backfill_walk_forward_stats,
+    merge_walk_forward_sources, build_regime_stats, apply_regime_decay_filter,
+    get_market_regime_from_cache
+)
 from v10_output import (
     build_portfolio_and_action_plan, make_dashboard_view, html_style,
     get_report_data_date, load_ai_evidence_tables, build_ai_summary_table,
@@ -34,10 +39,7 @@ from v10_output import (
     build_pattern_to_codes_map_stable, build_fail_analysis_summary,
     build_fail_analysis_by_code, build_fail_analysis_by_strategy
 )
-from v10_backfill_regime import (
-    build_backfill_history_from_cache, build_backfill_walk_forward_stats,
-    merge_walk_forward_sources
-)
+
 
 # UI modules
 from v10_ui_dashboard import (
