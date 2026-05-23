@@ -39,7 +39,6 @@ from v10_output import (
     build_fail_analysis_by_code, build_fail_analysis_by_strategy
 )
 
-
 # UI modules
 from v10_ui_dashboard import (
     ui_split_buy_watch_red, ui_table_html, ui_full_v134_html, _ui_find_col,
@@ -330,7 +329,7 @@ def main():
         fail_summary_view = fail_by_code_view = fail_by_strategy_view = pd.DataFrame()
 
     # Convert to HTML
-    ai_summary_html = ai_summary_view.to_html(index=False, escape=True)
+    ai_summary_html = ai_summary_view.to_html(index=False, escape=True) if not ai_summary_view.empty else ""
     v11_market_summary_html = v11_market_summary_view.to_html(index=False, escape=True) if not v11_market_summary_view.empty else ""
     v11_leader_html = v11_leader_view.to_html(index=False, escape=True) if not v11_leader_view.empty else ""
     v11_downgrade_html = v11_downgrade_view.to_html(index=False, escape=True) if not v11_downgrade_view.empty else ""
