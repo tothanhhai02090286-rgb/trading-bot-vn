@@ -182,3 +182,6 @@ def classify_market_regime(market_ret20):
         return "WEAK"
 
     return "SIDEWAY"
+def get_market_regime_from_cache(market_ret20):
+    """Alias of classify_market_regime"""
+    return classify_market_regime(market_ret20)    
