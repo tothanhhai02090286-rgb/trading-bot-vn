@@ -1,6 +1,6 @@
 ⚠️ <b>BOT EOD WARNING</b>
 
-Time: <b>2026-05-23 13:42:16</b>
+Time: <b>2026-05-23 14:17:28</b>
 Cache latest: <b>2026-05-22</b>
 All result latest: <b>2026-05-22</b>
 AI risk latest: <b>2026-05-22</b>
@@ -9,7 +9,7 @@ Universe: <b>136</b>
 Cache symbols: <b>138</b>
 All result symbols: <b>136</b>
 AI risk rows: <b>61</b>
-Intraday watchlist rows: <b>2</b>
+Intraday watchlist rows: <b>15</b>
 
 Missing cache: <b>0</b>
 Missing output: <b>0</b>
