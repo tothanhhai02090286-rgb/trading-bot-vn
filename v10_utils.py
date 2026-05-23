@@ -1,4 +1,42 @@
 from v10_config import *
+def repair_mojibake(text):
+    """
+    Sửa text bị vỡ font do encoding sai.
+    """
+    if not isinstance(text, str):
+        return str(text) if text is not None else ""
+    
+    # Method 1: UTF-8 bytes bị đọc sai thành Latin-1
+    try:
+        text_bytes = text.encode('latin1')
+        fixed = text_bytes.decode('utf-8')
+        # Kiểm tra nếu fix thành công (có dấu tiếng Việt)
+        if any(c in fixed for c in 'àáảãạâầấẩẫậăằắẳẵặèéẻẽẹêềếểễệđìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ'):
+            return fixed
+    except:
+        pass
+    
+    # Method 2: Fix pattern phổ biến
+    fixes = {
+        'Ã¡': 'á', 'Ã ': 'à', 'Ã£': 'ã', 'áº¡': 'ạ',
+        'áº¯': 'ắ', 'áº±': 'ằ', 'áº³': 'ẳ', 'áºµ': 'ẵ', 'áº·': 'ặ',
+        'áº¥': 'ấ', 'áº§': 'ầ', 'áº©': 'ẩ', 'áº«': 'ẫ', 'áº­': 'ậ',
+        'á»‰': 'ỉ', 'á»': 'ỉ', 'á»': 'ị', 'á»': 'ọ',
+        'Æ°á»': 'ướ', 'Æ°á»': 'ườ', 'Æ°á»': 'ưở',
+        'Ä': 'đ', 'â': '-', 'â': '"', 'â': '"',
+        'xÃ¡c nháº­n': 'xác nhận', 'máº¡nh': 'mạnh',
+        'Biáº¿n Äá»ng': 'Biến động', 'tháº¥p': 'thấp',
+        'tÄng': 'tăng', 'chÆ°a': 'chưa', 'khá»e': 'khỏe',
+        'á»n': 'ổn', 'khÃ´ng': 'không', 'cÃ³': 'có',
+        'cáº£nh bÃ¡o': 'cảnh báo', 'lá»n': 'lớn', 'ráº¥t': 'rất',
+        'tá»t': 'tốt', 'chÆ°a xÃ¡c nháº­n': 'chưa xác nhận'
+    }
+    
+    result = text
+    for wrong, correct in fixes.items():
+        result = result.replace(wrong, correct)
+    
+    return result
 
 def fix_vietnamese_columns(df):
     """
