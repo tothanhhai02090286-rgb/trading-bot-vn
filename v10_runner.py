@@ -20,7 +20,8 @@ from v10_utils import (
 
 # Core modules
 from v10_market_data import get_market_ret20, get_market_regime_from_cache
-from v10_strategy import analyze_symbol, apply_advanced_ai_filter
+from v10_strategy import analyze_symbol
+from v10_learning import apply_advanced_ai_filter
 from v10_learning import (
     append_signal_history, update_history_outcomes, build_pattern_stats,
     build_walk_forward_stats, apply_history_learning, apply_walk_forward_filter,
