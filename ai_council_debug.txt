@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
 Mã: CNG
-AI Reason: Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: RS20 chÆ°a khá»e
+AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
 
 Mã: FCN
-AI Reason: Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: RS20 chÆ°a khá»e
+AI Reason: Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
 
 Mã: KSB
-AI Reason: Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: RS20 chÆ°a khá»e
+AI Reason: Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
 
 Mã: NKG
-AI Reason: Volume á»n; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: RS20 chÆ°a khá»e
+AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
 
 Mã: CTS
-AI Reason: Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n
+AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
 
 Mã: VND
-AI Reason: Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n
+AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
 
 Mã: CRE
-AI Reason: Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n
+AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
 
 Mã: DHA
-AI Reason: RS20 ráº¥t máº¡nh; Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
 
 Mã: SRC
-AI Reason: RS20 tá»t; Volume xÃ¡c nháº­n máº¡nh; Biáº¿n Äá»ng tháº¥p; MACD Hist tÄng
-AI Warning: KhÃ´ng cÃ³ cáº£nh bÃ¡o lá»n
+AI Reason: RS20 tốt; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
 
 Mã: CTR
-AI Reason: RS20 tá»t; Volume á»n; Biáº¿n Äá»ng tháº¥p
-AI Warning: MACD chÆ°a xÃ¡c nháº­n
+AI Reason: RS20 tốt; Volume ổn; Biến động thấp
+AI Warning: MACD chưa xác nhận
