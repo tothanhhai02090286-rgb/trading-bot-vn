@@ -18,22 +18,30 @@ from v10_utils import (
     repair_mojibake
 )
 
-# Core modules
+# Core modules - MARKET DATA
 from v10_market_data import get_market_ret20
+
+# Core modules - STRATEGY
 from v10_strategy import analyze_symbol
+
+# Core modules - LEARNING (chứa AI filter, pattern stats, walk forward, evidence tables)
 from v10_learning import (
     append_signal_history, update_history_outcomes, build_pattern_stats,
     build_walk_forward_stats, apply_history_learning, apply_walk_forward_filter,
-    apply_advanced_ai_filter
+    apply_advanced_ai_filter, load_ai_evidence_tables
 )
+
+# Core modules - BACKFILL REGIME (chứa regime stats, decay filter, market regime cache)
 from v10_backfill_regime import (
     build_backfill_history_from_cache, build_backfill_walk_forward_stats,
     merge_walk_forward_sources, build_regime_stats, apply_regime_decay_filter,
     get_market_regime_from_cache
 )
+
+# Core modules - OUTPUT
 from v10_output import (
     build_portfolio_and_action_plan, make_dashboard_view, html_style,
-    get_report_data_date, load_ai_evidence_tables, build_ai_summary_table,
+    get_report_data_date, build_ai_summary_table,
     build_top_proven_patterns, build_top_codes_by_proven_pattern_stable,
     build_pattern_to_codes_map_stable, build_fail_analysis_summary,
     build_fail_analysis_by_code, build_fail_analysis_by_strategy
