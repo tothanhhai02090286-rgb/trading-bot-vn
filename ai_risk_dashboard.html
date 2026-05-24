@@ -96,21 +96,20 @@ body { font-size: 13px; }
 .v134-symbol-green { background: linear-gradient(135deg, #22c55e, #047857); box-shadow: 0 0 10px rgba(34,197,94,0.55), inset 0 0 0 1px rgba(255,255,255,0.35); }
 .v134-symbol-red { background: linear-gradient(135deg, #ef4444, #7f1d1d); box-shadow: 0 0 10px rgba(239,68,68,0.55), inset 0 0 0 1px rgba(255,255,255,0.28); }
 .v134-symbol-neutral { background: linear-gradient(135deg, #64748b, #334155); box-shadow: 0 0 8px rgba(148,163,184,0.35), inset 0 0 0 1px rgba(255,255,255,0.22); }
-
 </style>
 
 </head>
 <body>
 
 <h2>TRADING BOT ACTION CENTER</h2>
-<p><b>Generated:</b> 2026-05-24 05:10:33.048075</p>
-<p><b>Data date:</b> 2026-05-24</p>
+<p><b>Generated:</b> 2026-05-25 05:26:33.730224</p>
+<p><b>Data date:</b> 2026-05-25</p>
 <p><b>Version:</b> PRO_V10_EXPLAINABLE_AI_2026_05_01</p>
 <p><b>Batch:</b> 0 -> 136 / 136</p>
 
-<div class="ui-note">Bản này tích hợp GLOBAL MACRO MODE ở đầu dashboard. Macro chỉ hạ cấp rủi ro khi Risk Off/Panic, không tự nâng WATCH lên BUY. Core logic lọc gốc, workflow và file output không đổi.</div>
+<div class="ui-note">Bản này tích hợp GLOBAL MACRO MODE ở đầu dashboard. Macro chỉ hạ cấp rủi ro khi Risk Off/Panic, không tự nâng WATCH lên BUY.</div>
 
-<div class="ui-note">Flow đọc dashboard: 0) Global Macro → 1) Market regime VN → 2) RS20 leaders → 3) TOP MUA THẬT → 4) TOP THEO DÕI → 5) V13.3 history → 6) V13.5 soft match → 7) kiểm tra bảng đầy đủ trước khi quyết định.</div>
+<div class="ui-note">Flow đọc dashboard: 0) Global Macro → 1) Market regime VN → 2) RS20 leaders → 3) TOP MUA THẬT → 4) TOP THEO DÕI → 5) V13.3 history → 6) V13.5 soft match → 7) kiểm tra bảng đầy đủ.</div>
 
 <h3>0. GLOBAL MACRO MODE - LIÊN THỊ TRƯỜNG</h3>
 
@@ -122,7 +121,7 @@ body { font-size: 13px; }
     .global-macro-table th,.global-macro-table td {border:1px solid rgba(255,255,255,0.14);padding:7px 8px;white-space:nowrap;}
     .global-macro-table th {background:#111827;color:#ffffff;}
     </style>
-    <div class="global-macro-card"><div class="global-macro-title">GLOBAL MACRO MODE</div><div><b>Generated:</b> 2026-05-23 22:10:26</div><div><b>Data status:</b> OK</div><div class="global-macro-score">RISK ON | SCORE: 32.0</div><div><b>Risk action:</b> CHO PHÉP GIỮ TOP MUA THẬT NẾU BOT VN ĐẠT CHUẨN</div><div><b>Note:</b> Macro chỉ hạ cấp rủi ro, không tự nâng WATCH lên BUY.</div><table class="global-macro-table"><thead><tr><th>Chỉ số</th><th>Ticker</th><th>Giá</th><th>Ret 1D %</th><th>Ret 5D %</th><th>Trên MA20</th><th>Điểm</th><th>Trạng thái</th><th>Lý do</th></tr></thead><tbody>
+    <div class="global-macro-card"><div class="global-macro-title">GLOBAL MACRO MODE</div><div><b>Generated:</b> 2026-05-24 22:26:26</div><div><b>Data status:</b> OK</div><div class="global-macro-score">RISK ON | SCORE: 32.0</div><div><b>Risk action:</b> CHO PHÉP GIỮ TOP MUA THẬT NẾU BOT VN ĐẠT CHUẨN</div><div><b>Note:</b> Macro chỉ hạ cấp rủi ro, không tự nâng WATCH lên BUY.</div><table class="global-macro-table"><thead><tr><th>Chỉ số</th><th>Ticker</th><th>Giá</th><th>Ret 1D %</th><th>Ret 5D %</th><th>Trên MA20</th><th>Điểm</th><th>Trạng thái</th><th>Lý do</th></tr></thead><tbody>
         <tr><td><b>SP500</b></td><td>^GSPC</td><td>7473.47</td><td>0.37</td><td>0.88</td><td>YES</td><td><b>8.00</b></td><td>TỐT</td><td>trên MA20</td></tr>
         
         <tr><td><b>NASDAQ</b></td><td>^IXIC</td><td>26343.97</td><td>0.19</td><td>0.45</td><td>YES</td><td><b>8.00</b></td><td>TỐT</td><td>trên MA20</td></tr>
@@ -131,7 +130,7 @@ body { font-size: 13px; }
         
         <tr><td><b>US10Y</b></td><td>^TNX</td><td>4.56</td><td>-0.61</td><td>-0.81</td><td>YES</td><td><b>-4.00</b></td><td>TRUNG TÍNH</td><td>10Y trên MA20</td></tr>
         
-        <tr><td><b>DXY</b></td><td>DX-Y.NYB</td><td>99.32</td><td>0.13</td><td>0.05</td><td>YES</td><td><b>-3.00</b></td><td>TRUNG TÍNH</td><td>DXY trên MA20</td></tr>
+        <tr><td><b>DXY</b></td><td>DX-Y.NYB</td><td>99.06</td><td>-0.26</td><td>0.09</td><td>YES</td><td><b>-3.00</b></td><td>TRUNG TÍNH</td><td>DXY trên MA20</td></tr>
         
         <tr><td><b>NIKKEI</b></td><td>^N225</td><td>63339.07</td><td>2.68</td><td>3.14</td><td>YES</td><td><b>17.00</b></td><td>TỐT</td><td>trên MA20; 5D tăng tốt; 1D xanh mạnh</td></tr>
         
@@ -139,12 +138,11 @@ body { font-size: 13px; }
         
         <tr><td><b>SHANGHAI</b></td><td>000001.SS</td><td>4112.90</td><td>0.87</td><td>-0.54</td><td>NO</td><td><b>-8.00</b></td><td>XẤU</td><td>dưới MA20</td></tr>
         
-        <tr><td><b>OIL</b></td><td>CL=F</td><td>96.60</td><td>0.26</td><td>-8.37</td><td>NO</td><td><b>-3.00</b></td><td>XẤU</td><td>oil giảm sốc</td></tr>
+        <tr><td><b>OIL</b></td><td>CL=F</td><td>96.60</td><td>0.00</td><td>-11.10</td><td>NO</td><td><b>-3.00</b></td><td>XẤU</td><td>oil giảm sốc</td></tr>
         </tbody></table></div>
     
 
 <h3>1. MARKET REGIME - BỐI CẢNH THỊ TRƯỜNG VN</h3>
-<p class="full-note">Đọc đầu tiên để quyết định mức rủi ro: nếu market còn CẨN THẬN thì chỉ mua thăm dò, không full vị thế.</p>
 <h3>DANH GIA THI TRUONG V11</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -226,7 +224,6 @@ body { font-size: 13px; }
 </table>
 
 <h3>2. RS20 LEADERS - MÃ KHỎE HƠN THỊ TRƯỜNG</h3>
-<p class="full-note">Ưu tiên mã còn RS20 đạt ngưỡng. Mã bị hạ hạng RS20 nên chuyển sang theo dõi thay vì mua vội.</p>
 <h3>V11 - TOP LEADER RS20</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -608,7 +605,6 @@ body { font-size: 13px; }
 
 <div class="top-card top-green">
 <h3>3. TOP MUA THẬT - ƯU TIÊN CAO</h3>
-<p class="full-note">Điều kiện hiển thị: BUY NOW + Risk PASS + T+2/T+5 không âm + lịch sử mạnh/dùng được.</p>
 <table border="1" class="dataframe top-table">
   <thead>
     <tr style="text-align: right;">
@@ -679,7 +675,6 @@ body { font-size: 13px; }
 
 <div class="top-card top-green">
 <h3>4. TOP THEO DÕI - CHƯA MUA VỘI</h3>
-<p class="full-note">Các mã xanh còn lại: WATCHLIST hoặc BUY NOW đã bị hạ do T+5 âm / lịch sử chưa đủ mạnh.</p>
 <table border="1" class="dataframe top-table">
   <thead>
     <tr style="text-align: right;">
@@ -884,7 +879,6 @@ body { font-size: 13px; }
 </div>
 
 <h3>5. V13.3 HISTORY - PATTERN CỨNG</h3>
-<p class="full-note">Scale mẫu cứng: &gt;=30 MẠNH; 10-29 DÙNG ĐƯỢC; &lt;10 YẾU.</p>
 <h3>V13.3 - TOP MA GAN MAU LICH SU NHAT</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -1045,8 +1039,7 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
-<h3>V13.3 - FEATURE PATTERN KHONG TRA VE RONG</h3>
+<h3>V13.3 - FEATURE PATTERN</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2885,10 +2878,8 @@ body { font-size: 13px; }
 </table>
 
 <h3>6. V13.5 SOFT MATCH - MẪU MỀM 1-3 NĂM</h3>
-<p class="full-note">Scale mẫu mềm: &gt;=5000 RẤT MẠNH; 1000-4999 MẠNH; 200-999 ỔN; &lt;200 YẾU.</p>
 <div class="top-card top-green">
 <h3>TOP MATCH MEM DANG THEO DOI</h3>
-<p class="full-note">Lọc từ V13.5: chỉ BUY NOW / WATCHLIST, ưu tiên Risk PASS nếu có, sắp xếp Action → Win T+2 → Số mẫu mềm 3Y.</p>
 <table border="1" class="dataframe top-table">
   <thead>
     <tr style="text-align: right;">
@@ -3184,9 +3175,7 @@ body { font-size: 13px; }
   </tbody>
 </table>
 </div>
-
 <h3>V13.5 - MATCH MEM DU LIEU QUA KHU 1-3 NAM</h3>
-<p class="full-note">Match mềm theo RSI zone, RS20 zone, Market regime, Volume zone và Strategy. Bảng đầy đủ vẫn giữ bên dưới để đối chiếu, không đổi lệnh gốc.</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3828,7 +3817,7 @@ body { font-size: 13px; }
       <td>RS20_OK_0_10</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>7246</td>
+      <td>7247</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3847,7 +3836,7 @@ body { font-size: 13px; }
       <td>RS20_OK_0_10</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>7246</td>
+      <td>7247</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3866,7 +3855,7 @@ body { font-size: 13px; }
       <td>RS20_OK_0_10</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>7246</td>
+      <td>7247</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3942,7 +3931,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3961,7 +3950,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3980,7 +3969,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -3999,7 +3988,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -4018,7 +4007,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -4037,7 +4026,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>6783</td>
+      <td>6784</td>
       <td>RẤT MẠNH</td>
       <td></td>
       <td></td>
@@ -4246,7 +4235,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>4631</td>
+      <td>4632</td>
       <td>MẠNH</td>
       <td></td>
       <td></td>
@@ -4303,7 +4292,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>3039</td>
+      <td>3040</td>
       <td>MẠNH</td>
       <td></td>
       <td></td>
@@ -4322,7 +4311,7 @@ body { font-size: 13px; }
       <td>RS20_WEAK_-10_0</td>
       <td>VOL_STRONG_GT_1.2</td>
       <td>POSITIVE</td>
-      <td>3039</td>
+      <td>3040</td>
       <td>MẠNH</td>
       <td></td>
       <td></td>
@@ -4355,7 +4344,6 @@ body { font-size: 13px; }
 
 <div class="top-card top-red">
 <h3>7. TOP ĐỎ - RỦI RO / KHÔNG ƯU TIÊN</h3>
-<p class="full-note">Lấy từ bảng V13.4, sắp xếp theo Action → Risk → AI → Score → lịch sử.</p>
 <table border="1" class="dataframe top-table">
   <thead>
     <tr style="text-align: right;">
@@ -4529,8 +4517,7 @@ body { font-size: 13px; }
 </table>
 </div>
 
-<h3>BẢNG ĐẦY ĐỦ ĐỂ ĐỐI CHIẾU TRƯỚC KHI QUYẾT ĐỊNH</h3>
-
+<h3>BẢNG ĐẦY ĐỦ ĐỂ ĐỐI CHIẾU</h3>
 <h3>V13.4 - BANG QUYET DINH TU DONG</h3>
 <div class="v134-scroll"><table class="v134-full-table"><thead><tr><th>Mã</th><th>Giá</th><th>QUYẾT ĐỊNH TỰ ĐỘNG</th><th>NGUỒN HÌNH THÀNH</th><th>Hành động hiện tại</th><th>Strategy</th><th>Risk</th><th>Độ tin cậy lịch sử</th><th>Mức khớp mẫu %</th><th>Số lần test</th><th>Tỷ lệ thắng %</th><th>Lợi TB T+2 %</th><th>Lợi TB T+5 %</th><th>Điểm lịch sử</th><th>AI</th><th>Score</th><th>LÝ DO CHI TIẾT</th><th>Tín hiệu gốc</th><th>Global Macro Mode</th><th>Global Macro Note</th></thead><tbody><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">CTS</span></td><td>28.15</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>75.0</td><td>170</td><td>65.88</td><td>0.86</td><td>1.83</td><td>70.4</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử DÙNG ĐƯỢC; khớp mẫu 75.0%; test 170 lần; win 65.9%; T+2 0.86%; T+5 1.83%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VND</span></td><td>17.45</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>75.0</td><td>170</td><td>65.88</td><td>0.86</td><td>1.83</td><td>70.4</td><td>100.0</td><td>90.0</td><td>Risk PASS; lịch sử DÙNG ĐƯỢC; khớp mẫu 75.0%; test 170 lần; win 65.9%; T+2 0.86%; T+5 1.83%; AI 100.0; Score 90.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">IJC</span></td><td>9.73</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>BOTTOM</td><td>PASS</td><td></td><td>90.91</td><td>11</td><td>63.64</td><td>0.63</td><td>0.34</td><td>56.4</td><td>97.0</td><td>85.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 11 lần; win 63.6%; T+2 0.63%; T+5 0.34%; AI 97.0; Score 85.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">CTR</span></td><td>93.0</td><td>MUA LƯỚT T+2</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>MOMENTUM</td><td>PASS</td><td></td><td>81.82</td><td>5</td><td>100.0</td><td>7.58</td><td>14.44</td><td>100.0</td><td>97.0</td><td>85.0</td><td>Risk PASS; lịch sử MẠNH; khớp mẫu 81.8%; test 5 lần; win 100.0%; T+2 7.58%; T+5 14.44%; AI 97.0; Score 85.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SSB</span></td><td>16.7</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>BOTTOM</td><td>PASS</td><td></td><td>84.09</td><td>84</td><td>59.52</td><td>-0.32</td><td>0.01</td><td>59.1</td><td>96.0</td><td>85.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 84.1%; test 84 lần; win 59.5%; T+2 -0.32%; T+5 0.01%; AI 96.0; Score 85.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">ORS</span></td><td>13.2</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>BOTTOM</td><td>PASS</td><td></td><td>88.18</td><td>66</td><td>78.79</td><td>0.06</td><td>0.33</td><td>77.6</td><td>77.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 88.2%; test 66 lần; win 78.8%; T+2 0.06%; T+5 0.33%; AI 77.0; Score 75.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">HCM</span></td><td>28.5</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>BOTTOM</td><td>PASS</td><td></td><td>85.45</td><td>84</td><td>59.52</td><td>-0.32</td><td>0.01</td><td>59.6</td><td>76.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 85.5%; test 84 lần; win 59.5%; T+2 -0.32%; T+5 0.01%; AI 76.0; Score 75.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">PHP</span></td><td>36.6</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>BUY NOW</td><td>BOTTOM</td><td>PASS</td><td></td><td>85.45</td><td>84</td><td>59.52</td><td>-0.32</td><td>0.01</td><td>59.6</td><td>76.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 85.5%; test 84 lần; win 59.5%; T+2 -0.32%; T+5 0.01%; AI 76.0; Score 75.0</td><td>BUY NOW</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">STB</span></td><td>71.2</td><td>MUA GIỮ T+5</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>75.0</td><td>5</td><td>80.0</td><td>-1.34</td><td>1.52</td><td>59.9</td><td>56.0</td><td>65.0</td><td>Risk PASS; lịch sử DÙNG ĐƯỢC; khớp mẫu 75.0%; test 5 lần; win 80.0%; T+2 -1.34%; T+5 1.52%; AI 56.0; Score 65.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SBT</span></td><td>21.15</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM</td><td>PASS</td><td></td><td>76.36</td><td>176</td><td>63.64</td><td>-0.69</td><td>-0.53</td><td>56.4</td><td>86.0</td><td>85.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 76.4%; test 176 lần; win 63.6%; T+2 -0.69%; T+5 -0.53%; AI 86.0; Score 85.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">PAN</span></td><td>32.65</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>81.82</td><td>4</td><td>75.0</td><td>0.73</td><td>3.02</td><td>65.7</td><td>85.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 81.8%; test 4 lần; win 75.0%; T+2 0.73%; T+5 3.02%; AI 85.0; Score 70.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">VGC</span></td><td>43.0</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + SCORE + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM</td><td>PASS</td><td></td><td>90.91</td><td>14</td><td>64.29</td><td>0.22</td><td>-0.51</td><td>58.3</td><td>69.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 14 lần; win 64.3%; T+2 0.22%; T+5 -0.51%; AI 69.0; Score 75.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">SAB</span></td><td>48.1</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>76.36</td><td>4</td><td>75.0</td><td>0.73</td><td>3.02</td><td>63.8</td><td>68.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 76.4%; test 4 lần; win 75.0%; T+2 0.73%; T+5 3.02%; AI 68.0; Score 60.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">FPT</span></td><td>75.1</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>MOMENTUM_WATCH</td><td>PASS</td><td></td><td>80.45</td><td>4</td><td>75.0</td><td>0.73</td><td>3.02</td><td>65.2</td><td>61.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 80.5%; test 4 lần; win 75.0%; T+2 0.73%; T+5 3.02%; AI 61.0; Score 60.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-green"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-green">CMG</span></td><td>28.15</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + RISK PASS</td><td>WATCHLIST</td><td>BOTTOM_WATCH</td><td>PASS</td><td></td><td>90.91</td><td>35</td><td>57.14</td><td>0.21</td><td>0.1</td><td>60.7</td><td>58.0</td><td>60.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 35 lần; win 57.1%; T+2 0.21%; T+5 0.1%; AI 58.0; Score 60.0</td><td>WATCHLIST</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">VIX</span></td><td>18.55</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + AI + SCORE + RISK PASS</td><td>WAIT</td><td>MOMENTUM</td><td>PASS</td><td></td><td>77.73</td><td>1</td><td>100.0</td><td>-1.19</td><td>7.38</td><td>85.4</td><td>91.0</td><td>75.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 77.7%; test 1 lần; win 100.0%; T+2 -1.19%; T+5 7.38%; AI 91.0; Score 75.0</td><td>WAIT</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">VIP</span></td><td>11.3</td><td>KHÔNG ƯU TIÊN</td><td>V13.3 PATTERN + SCORE + RISK PASS</td><td>WAIT</td><td>BOTTOM</td><td>PASS</td><td></td><td>90.91</td><td>25</td><td>68.0</td><td>0.97</td><td>-0.48</td><td>68.2</td><td>54.0</td><td>70.0</td><td>Risk PASS; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 25 lần; win 68.0%; T+2 0.97%; T+5 -0.48%; AI 54.0; Score 70.0</td><td>WAIT</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">MSB</span></td><td>14.4</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM_WATCH</td><td>FAIL</td><td></td><td>77.73</td><td>4</td><td>100.0</td><td>2.08</td><td>4.19</td><td>92.0</td><td>62.0</td><td>70.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 77.7%; test 4 lần; win 100.0%; T+2 2.08%; T+5 4.19%; AI 62.0; Score 70.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">IVS</span></td><td>7.2</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM</td><td>FAIL</td><td></td><td>81.82</td><td>9</td><td>88.89</td><td>1.71</td><td>6.93</td><td>95.1</td><td>58.0</td><td>85.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 81.8%; test 9 lần; win 88.9%; T+2 1.71%; T+5 6.93%; AI 58.0; Score 85.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BSR</span></td><td>29.7</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM</td><td>FAIL</td><td></td><td>77.73</td><td>9</td><td>88.89</td><td>1.71</td><td>6.93</td><td>93.7</td><td>49.0</td><td>75.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 77.7%; test 9 lần; win 88.9%; T+2 1.71%; T+5 6.93%; AI 49.0; Score 75.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">LPB</span></td><td>53.2</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM_WATCH</td><td>FAIL</td><td></td><td>76.36</td><td>33</td><td>81.82</td><td>1.08</td><td>1.84</td><td>84.3</td><td>48.0</td><td>70.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 76.4%; test 33 lần; win 81.8%; T+2 1.08%; T+5 1.84%; AI 48.0; Score 70.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">GAS</span></td><td>84.9</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM</td><td>FAIL</td><td></td><td>77.73</td><td>9</td><td>88.89</td><td>1.71</td><td>6.93</td><td>93.7</td><td>44.0</td><td>75.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 77.7%; test 9 lần; win 88.9%; T+2 1.71%; T+5 6.93%; AI 44.0; Score 75.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">BMP</span></td><td>138.0</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>7</td><td>100.0</td><td>2.12</td><td>3.22</td><td>99.1</td><td>39.0</td><td>80.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 7 lần; win 100.0%; T+2 2.12%; T+5 3.22%; AI 39.0; Score 80.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">OIL</span></td><td>15.6</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>MOMENTUM</td><td>FAIL</td><td></td><td>72.27</td><td>9</td><td>88.89</td><td>1.71</td><td>6.93</td><td>91.8</td><td>37.0</td><td>75.0</td><td>Risk FAIL; lịch sử DÙNG ĐƯỢC; khớp mẫu 72.3%; test 9 lần; win 88.9%; T+2 1.71%; T+5 6.93%; AI 37.0; Score 75.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">POW</span></td><td>13.6</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM_WATCH</td><td>FAIL</td><td></td><td>88.18</td><td>1</td><td>100.0</td><td>5.28</td><td>7.17</td><td>100.0</td><td>31.0</td><td>65.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 88.2%; test 1 lần; win 100.0%; T+2 5.28%; T+5 7.17%; AI 31.0; Score 65.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">DIG</span></td><td>13.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>61</td><td>83.6</td><td>-0.67</td><td>-0.61</td><td>78.2</td><td>29.0</td><td>70.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 61 lần; win 83.6%; T+2 -0.67%; T+5 -0.61%; AI 29.0; Score 70.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">DGC</span></td><td>48.5</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>7</td><td>100.0</td><td>2.12</td><td>3.22</td><td>99.1</td><td>21.0</td><td>70.0</td><td>Risk FAIL; lịch sử MẠNH; khớp mẫu 90.9%; test 7 lần; win 100.0%; T+2 2.12%; T+5 3.22%; AI 21.0; Score 70.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">HHS</span></td><td>11.95</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM</td><td>FAIL</td><td></td><td>90.91</td><td>61</td><td>83.6</td><td>-0.67</td><td>-0.61</td><td>78.2</td><td>21.0</td><td>70.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 61 lần; win 83.6%; T+2 -0.67%; T+5 -0.61%; AI 21.0; Score 70.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">VPG</span></td><td>3.35</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM_WATCH</td><td>FAIL</td><td></td><td>90.91</td><td>39</td><td>74.36</td><td>0.14</td><td>0.81</td><td>79.8</td><td>11.0</td><td>60.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 39 lần; win 74.4%; T+2 0.14%; T+5 0.81%; AI 11.0; Score 60.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr><tr class="v134-row-red"><td class="v134-symbol-cell"><span class="v134-symbol-badge v134-symbol-red">DCM</span></td><td>41.6</td><td>BỎ QUA</td><td>RISK FILTER</td><td>SKIP</td><td>BOTTOM_WATCH</td><td>FAIL</td><td></td><td>90.91</td><td>39</td><td>74.36</td><td>0.14</td><td>0.81</td><td>79.8</td><td>6.0</td><td>55.0</td><td>Risk FAIL; lịch sử MATCH YẾU - CHỈ THAM KHẢO; khớp mẫu 90.9%; test 39 lần; win 74.4%; T+2 0.14%; T+5 0.81%; AI 6.0; Score 55.0</td><td>SKIP</td><td>RISK ON</td><td></td></tr></tbody></table></div>
 
@@ -4577,16 +4564,15 @@ body { font-size: 13px; }
     </tr>
     <tr>
       <td>Regime stats</td>
-      <td>9</td>
-      <td>9</td>
-      <td>48.2</td>
-      <td>0</td>
-      <td>1</td>
+      <td>753</td>
+      <td>753</td>
+      <td>57.3</td>
+      <td>176</td>
+      <td>14</td>
       <td>OK</td>
     </tr>
   </tbody>
 </table>
-
 <h3>TOP PROVEN PATTERNS</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -4770,7 +4756,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>V13.2 - FEATURE BASED TOP MA</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -4784,7 +4769,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>V13.2 - FEATURE BASED PATTERN MATCH</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -6500,7 +6484,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>V13 - TOP QUYET DINH CUOI</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -6514,7 +6497,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>V13 - DO TIN CAY LICH SU CO TRONG SO</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -8413,7 +8395,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>TOP CODES T+2 - SHORT TRADE</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -9114,7 +9095,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>TOP CODES T+5 - SWING</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -9815,7 +9795,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>PATTERN TO CODES MAP</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -9850,7 +9829,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>RAW SIGNAL - ACTION VIEW</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -10320,7 +10298,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>AI FINAL - ACTION VIEW</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -10790,7 +10767,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>ENTRY PLAN</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -11040,7 +11016,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>PORTFOLIO</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -11174,7 +11149,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>PHAN TICH LY DO BI LOAI - TONG HOP</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -11282,7 +11256,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>PHAN TICH LY DO BI LOAI - THEO MA</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -11724,7 +11697,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>PHAN TICH LY DO BI LOAI - THEO CHIEN LUOC</h3>
 <table border="1" class="dataframe">
   <thead>
@@ -11997,7 +11969,6 @@ body { font-size: 13px; }
     </tr>
   </tbody>
 </table>
-
 <h3>ACTION PLAN</h3>
 <table border="1" class="dataframe">
   <thead>
