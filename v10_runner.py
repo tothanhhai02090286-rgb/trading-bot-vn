@@ -30,6 +30,11 @@ from v10_learning import (
     build_walk_forward_stats, apply_history_learning, apply_walk_forward_filter,
     apply_advanced_ai_filter, load_ai_evidence_tables
 )
+from v10_backfill_regime import (
+    build_backfill_history_from_cache, build_backfill_walk_forward_stats,
+    merge_walk_forward_sources, build_regime_stats, apply_regime_decay_filter,
+    get_market_regime_from_cache   # <--- phải có hàm này
+)
 
 # Core modules - OUTPUT (chỉ giữ các hàm thực sự có trong v10_output)
 from v10_output import (
