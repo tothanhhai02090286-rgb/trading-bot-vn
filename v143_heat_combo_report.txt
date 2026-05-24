@@ -8,10 +8,10 @@ Số mã kiểm tra: <b>15</b>
    MA20: 2.21% | MA20 hot: 63.79% | RSI: 61.49
    Win T+5: 49.61% | Lợi TB T+5: 1.45%
    Mạnh: RSI vùng đẹp 61.5 | Volume ổn 1.07 | Lợi TB T+5 tốt 1.45%
-🔹 <b>HCM</b> | Heat: <b>75.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
-   MA20: 2.03% | MA20 hot: 58.78% | RSI: 64.43
-   Win T+5: 56.19% | Lợi TB T+5: 0.87%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 64.4 | Volume ổn 1.01
+🔹 <b>BCM</b> | Heat: <b>75.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
+   MA20: 0.55% | MA20 hot: 55.91% | RSI: 53.10
+   Win T+5: 50.40% | Lợi TB T+5: 0.26%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 53.1 | Volume ổn 1.37
 🔹 <b>SBT</b> | Heat: <b>74.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
    MA20: 2.68% | MA20 hot: 71.67% | RSI: 65.31
    Win T+5: 62.50% | Lợi TB T+5: 0.93%

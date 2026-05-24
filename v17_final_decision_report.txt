@@ -37,16 +37,16 @@ Mã | Quyết định | Điểm | Strategy | Risk | Action
 • <b>PDR</b> | ❌ LOẠI | 47.72 | BOTTOM | PASS | BUY NOW
 • <b>PAN</b> | ❌ LOẠI | 45.74 | MOMENTUM | PASS | WATCHLIST
 • <b>CRE</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
+• <b>PET</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
 • <b>CTR</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
 • <b>IJC</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
-• <b>PET</b> | ❌ LOẠI | 45.00 | MOMENTUM | PASS | BUY NOW
 • <b>VHM</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
 • <b>ORS</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
 • <b>PHP</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
 • <b>PVD</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | BUY NOW
 • <b>REE</b> | ❌ LOẠI | 45.00 | BOTTOM | PASS | WATCHLIST
-• <b>BCM</b> | ❌ LOẠI | 44.37 | BOTTOM | PASS | BUY NOW
 • <b>VGC</b> | ❌ LOẠI | 44.37 | BOTTOM | PASS | BUY NOW
+• <b>BCM</b> | ❌ LOẠI | 44.12 | BOTTOM | PASS | BUY NOW
 • <b>VND</b> | ❌ LOẠI | 42.24 | MOMENTUM | PASS | BUY NOW
 • <b>SGT</b> | ❌ LOẠI | 41.97 | BOTTOM | PASS | WATCHLIST
 • <b>FPT</b> | ❌ LOẠI | 41.94 | MOMENTUM | PASS | WATCHLIST
@@ -56,14 +56,14 @@ Mã | Quyết định | Điểm | Strategy | Risk | Action
 • <b>STB</b> | ❌ LOẠI | 40.29 | MOMENTUM | PASS | WATCHLIST
 • <b>FTS</b> | ❌ LOẠI | 35.74 | MOMENTUM | PASS | BUY NOW
 • <b>SRC</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
+• <b>VCB</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
 • <b>VIX</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
 • <b>SBT</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
-• <b>VCB</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | BUY NOW
 • <b>PLX</b> | ❌ LOẠI | 35.00 | MOMENTUM | PASS | WAIT
 • <b>VIP</b> | ❌ LOẠI | 33.97 | BOTTOM | PASS | WAIT
 • <b>KSB</b> | ❌ LOẠI | 32.72 | BOTTOM | PASS | BUY NOW
 • <b>APH</b> | ❌ LOẠI | 31.52 | BOTTOM | PASS | WATCHLIST
-• <b>HCM</b> | ❌ LOẠI | 30.97 | BOTTOM | PASS | BUY NOW
+• <b>HCM</b> | ❌ LOẠI | 31.22 | BOTTOM | PASS | BUY NOW
 • <b>HSG</b> | ❌ LOẠI | 30.32 | BOTTOM | PASS | WAIT
 • <b>CMG</b> | ❌ LOẠI | 29.72 | BOTTOM | PASS | WATCHLIST
 • <b>SKG</b> | ❌ LOẠI | 26.72 | BOTTOM | PASS | BUY NOW

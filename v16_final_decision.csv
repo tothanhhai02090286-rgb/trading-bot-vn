@@ -1,18 +1,18 @@
 ﻿Mã,Giá,Strategy V16,Action gốc,Risk,Điểm V16,Quyết định V16,Lý do quyết định,Heat label,Heat score,Bottom label,Bottom score,WF Momentum,WF Momentum đoạn dương %,WF Bottom,WF Bottom đoạn dương %,Lý do tổng hợp
 CTS,28.15,MOMENTUM,BUY NOW,PASS,100.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,,🟡 HỒI KỸ THUẬT,69.0,ỔN ĐỊNH VỪA,66.67,ỔN ĐỊNH VỪA,64.29,Risk PASS | Action BUY NOW | Heat ổn nhưng không mua đuổi | Đáy chất lượng | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Hai WF cùng ổn định
-CTG,34.8,BOTTOM,BUY NOW,PASS,100.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,61.0,,,ỔN ĐỊNH MẠNH,70.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom ỔN ĐỊNH MẠNH
 MWG,79.4,BOTTOM,BUY NOW,PASS,100.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟢 ĐÁY CHẤT LƯỢNG,95.0,,,ỔN ĐỊNH MẠNH,70.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom ỔN ĐỊNH MẠNH
+CTG,34.8,BOTTOM,BUY NOW,PASS,100.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,61.0,,,ỔN ĐỊNH MẠNH,70.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom ỔN ĐỊNH MẠNH
 MBS,19.7,BOTTOM,WAIT,PASS,97.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟢 ĐÁY CHẤT LƯỢNG,76.0,,,ỔN ĐỊNH VỪA,57.14,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom ỔN ĐỊNH VỪA
 SSB,16.7,BOTTOM,BUY NOW,PASS,95.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,,🟡 HỒI KỸ THUẬT,69.0,TRUNG TÍNH,50.0,TRUNG TÍNH,53.33,Risk PASS | Action BUY NOW | Đáy chất lượng | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH
 NKG,13.9,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,72.0,,,TRUNG TÍNH,55.56,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
-VCI,25.0,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,70.0,,,TRUNG TÍNH,52.38,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 BAF,34.6,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟢 ĐÁY CHẤT LƯỢNG,78.0,,,TRUNG TÍNH,60.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
+VCI,25.0,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,70.0,,,TRUNG TÍNH,52.38,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 ELC,16.5,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,66.0,,,TRUNG TÍNH,53.85,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 HPG,26.35,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,71.0,,,TRUNG TÍNH,50.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 CII,18.0,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,71.0,,,TRUNG TÍNH,52.94,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
-VRE,31.7,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,60.0,,,TRUNG TÍNH,53.33,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 CSV,25.8,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,73.0,,,TRUNG TÍNH,53.85,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 VOS,12.45,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,65.0,,,TRUNG TÍNH,50.0,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
+VRE,31.7,BOTTOM,BUY NOW,PASS,93.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,60.0,,,TRUNG TÍNH,53.33,Risk PASS | Action BUY NOW | Đáy chất lượng | WF bottom TRUNG TÍNH
 BVS,26.0,BOTTOM,WAIT,PASS,87.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,60.0,,,TRUNG TÍNH,50.0,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom TRUNG TÍNH
 SSI,27.55,BOTTOM,WAIT,PASS,87.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟡 HỒI KỸ THUẬT,65.0,,,TRUNG TÍNH,50.0,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom TRUNG TÍNH
 PAN,32.65,MOMENTUM,WATCHLIST,PASS,84.0,🟢 ƯU TIÊN CAO,Nhiều lớp xác nhận đồng thuận.,,,🟢 ĐÁY CHẤT LƯỢNG,84.0,,,TRUNG TÍNH,47.06,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom TRUNG TÍNH
@@ -34,7 +34,7 @@ PVD,31.55,BOTTOM,BUY NOW,PASS,67.0,🟡 THEO DÕI,Có tín hiệu tốt nhưng c
 CTR,93.0,MOMENTUM,BUY NOW,PASS,63.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,,🔴 BULL TRAP,54.0,TRUNG TÍNH,52.94,ỔN ĐỊNH VỪA,62.5,Risk PASS | Action BUY NOW | Bull trap | WF momentum TRUNG TÍNH | WF bottom ỔN ĐỊNH VỪA
 AGR,14.6,BOTTOM,WAIT,PASS,62.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,,,🟡 HỒI KỸ THUẬT,74.0,,,YẾU / DỄ HỌC VẸT,38.89,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom YẾU / DỄ HỌC VẸT
 DBC,21.7,BOTTOM,WATCHLIST,PASS,62.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,,,🟢 ĐÁY CHẤT LƯỢNG,75.0,,,YẾU / DỄ HỌC VẸT,43.75,Risk PASS | Action WATCH/WAIT | Đáy chất lượng | WF bottom YẾU / DỄ HỌC VẸT
-BCM,54.1,BOTTOM,BUY NOW,PASS,57.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,,,🔴 BULL TRAP,53.0,,,TRUNG TÍNH,45.45,Risk PASS | Action BUY NOW | Bull trap | WF bottom TRUNG TÍNH
+BCM,54.1,BOTTOM,BUY NOW,PASS,59.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT,,🔴 BULL TRAP,53.0,TRUNG TÍNH,54.55,TRUNG TÍNH,45.45,Risk PASS | Action BUY NOW | Heat khỏe | Quá nóng | Bull trap | WF momentum TRUNG TÍNH | WF bottom TRUNG TÍNH
 VGC,43.0,BOTTOM,BUY NOW,PASS,57.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,,,🔴 BULL TRAP,53.0,,,TRUNG TÍNH,46.67,Risk PASS | Action BUY NOW | Bull trap | WF bottom TRUNG TÍNH
 SRC,54.0,MOMENTUM,BUY NOW,PASS,56.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,,⚫ DAO RƠI,15.0,ỔN ĐỊNH VỪA,58.33,ỔN ĐỊNH VỪA,62.5,Risk PASS | Action BUY NOW | Quá nóng | Dao rơi | WF momentum ỔN ĐỊNH VỪA | WF bottom ỔN ĐỊNH VỪA | Hai WF cùng ổn định
 CNG,23.0,BOTTOM,BUY NOW,PASS,55.0,🟠 CHỜ ĐIỂM ĐẸP,Cần thêm xác nhận hoặc chờ chỉnh.,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,,🟢 ĐÁY CHẤT LƯỢNG,77.0,TRUNG TÍNH,52.94,YẾU / DỄ HỌC VẸT,40.0,Risk PASS | Action BUY NOW | Quá nóng | Đáy chất lượng | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT
@@ -49,9 +49,9 @@ VND,17.45,MOMENTUM,BUY NOW,PASS,44.0,❌ LOẠI,Điểm tổng hợp thấp ho�
 PLX,41.95,MOMENTUM,WAIT,PASS,41.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,⚫ DAO RƠI,34.0,,,TRUNG TÍNH,53.33,Risk PASS | Action WATCH/WAIT | Dao rơi | WF bottom TRUNG TÍNH
 SHS,17.7,MOMENTUM,WATCHLIST,PASS,38.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,57.0,,,YẾU / DỄ HỌC VẸT,40.0,Risk PASS | Action WATCH/WAIT | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
 STB,71.2,MOMENTUM,WATCHLIST,PASS,38.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,55.0,,,YẾU / DỄ HỌC VẸT,44.44,Risk PASS | Action WATCH/WAIT | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
-HCM,28.5,BOTTOM,BUY NOW,PASS,34.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT,,🔴 BULL TRAP,50.0,TRUNG TÍNH,53.33,YẾU / DỄ HỌC VẸT,41.18,Risk PASS | Action BUY NOW | Heat khỏe | Quá nóng | Bull trap | WF momentum TRUNG TÍNH | WF bottom YẾU / DỄ HỌC VẸT
 VIP,11.3,BOTTOM,WAIT,PASS,34.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,⚫ DAO RƠI,41.0,,,MẪU ÍT,33.33,Risk PASS | Action WATCH/WAIT | Dao rơi | WF bottom MẪU ÍT
 KSB,15.45,BOTTOM,BUY NOW,PASS,32.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,55.0,,,YẾU / DỄ HỌC VẸT,30.77,Risk PASS | Action BUY NOW | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
+HCM,28.5,BOTTOM,BUY NOW,PASS,32.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,50.0,,,YẾU / DỄ HỌC VẸT,41.18,Risk PASS | Action BUY NOW | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
 VIX,18.55,MOMENTUM,WAIT,PASS,31.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,⚫ DAO RƠI,32.0,,,YẾU / DỄ HỌC VẸT,28.57,Risk PASS | Action WATCH/WAIT | Dao rơi | WF bottom YẾU / DỄ HỌC VẸT
 HSG,12.6,BOTTOM,WAIT,PASS,26.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,52.0,,,YẾU / DỄ HỌC VẸT,41.18,Risk PASS | Action WATCH/WAIT | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
 CMG,28.15,BOTTOM,WATCHLIST,PASS,26.0,❌ LOẠI,Điểm tổng hợp thấp hoặc mẫu không ổn định.,,,🔴 BULL TRAP,50.0,,,YẾU / DỄ HỌC VẸT,35.29,Risk PASS | Action WATCH/WAIT | Bull trap | WF bottom YẾU / DỄ HỌC VẸT
