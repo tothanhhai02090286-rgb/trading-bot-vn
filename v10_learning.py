@@ -1,6 +1,7 @@
 from v10_config import *
 from v10_utils import *
 from v10_strategy import *
+from v10_backfill_regime import classify_market_regime
 def make_pattern_key(row, market_regime="NORMAL"):
     try:
         strategy = str(row.get("Chien luoc", "UNKNOWN"))
