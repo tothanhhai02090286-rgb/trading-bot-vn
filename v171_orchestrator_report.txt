@@ -2,7 +2,7 @@
 V17.1 FINAL DECISION ORCHESTRATOR - FULL REBUILD
 ======================================================================
 Version: V17.1_FINAL_DECISION_ORCHESTRATOR_VI_FULL_REBUILD
-Generated: 2026-05-22 11:22:09
+Generated: 2026-05-25 03:48:30
 
 === DỊCH DỄ HIỂU ===
 V17.1 = Bộ điều phối quyết định cuối cùng.
@@ -12,26 +12,26 @@ intraday_watchlist_v17.csv đã xuất schema mới cho V18.
 
 === INPUT STATE ===
 Legacy V17 dùng: Không có
-Decision Mode: ĐÁNH RẤT NHỎ
-Meta Exposure: 0.2112
-V15.5 Survival Exposure: 0.33
+Decision Mode: CASH MODE
+Meta Exposure: 0.0462
+V15.5 Survival Exposure: 0.0963
 Regime Strength: SIDEWAY TRUNG TÍNH
-Equity State: GIẢM TỐC
+Equity State: THẬN TRỌNG
 Kill Switch: False
-Drawdown: 5.531%
+Drawdown: 10.649%
 
 === FINAL DECISION SUMMARY ===
-- WATCHLIST: 5 mã
+- WATCHLIST: 4 mã
 
 === INTRADAY WATCHLIST SUMMARY ===
-- THEO DÕI: 5 mã
+- THEO DÕI: 3 mã
+- WATCH: 1 mã
 
 === TOP FINAL DECISION ===
-◆ TPB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=6.002% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=VỪA | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ BID | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.607% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=4.592% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ TVS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=3.171% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
-◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=2.748% | Mode=ĐÁNH RẤT NHỎ | Ưu tiên=THẤP | RiskGate=Chỉ watch / phân bổ rất nhỏ
+◆ BVB | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=1.901% | Mode=CASH MODE | Ưu tiên=THẤP | RiskGate=V16 CASH MODE, chỉ được watch
+◆ ORS | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=1.106% | Mode=CASH MODE | Ưu tiên=THẤP | RiskGate=V16 CASH MODE, chỉ được watch
+◆ VCI | Final=WATCHLIST | Realtime=THEO DÕI | Alloc=1.006% | Mode=CASH MODE | Ưu tiên=THẤP | RiskGate=V16 CASH MODE, chỉ được watch
+◆ CEO | Final=WATCHLIST | Realtime=WATCH | Alloc=0.607% | Mode=CASH MODE | Ưu tiên=RẤT THẤP | RiskGate=V16 CASH MODE, chỉ được watch
 
 === SCHEMA WATCHLIST CHO V18 ===
 intraday_watchlist_v17.csv đã có các cột:
