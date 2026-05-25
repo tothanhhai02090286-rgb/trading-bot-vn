@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: CNG
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: RS20 chưa khỏe
+Mã: CRE
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn
 
-Mã: FCN
+Mã: IJC
 AI Reason: Biến động thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: NKG
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: RS20 chưa khỏe
-
-Mã: CTS
-AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
+Mã: CTR
+AI Reason: RS20 tốt; Volume ổn; Biến động thấp
+AI Warning: MACD chưa xác nhận
 
 Mã: VND
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
 AI Warning: Không có cảnh báo lớn
 
-Mã: CRE
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: DHA
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: SSB
+Mã: HDB
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
-Mã: FTS
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
+Mã: PAN
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
-Mã: SRC
-AI Reason: RS20 tốt; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+Mã: ACB
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
+
+Mã: HPG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
+
+Mã: NLG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: RS20 yếu
+
+Mã: DHA
+AI Reason: RS20 tốt; Biến động thấp
+AI Warning: MACD chưa xác nhận
