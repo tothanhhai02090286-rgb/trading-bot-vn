@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-PET,OK,2026-05-18,48.23,-1.38,0.91,-2.72,0.43,15,11,73.33,61.97,2.35,7.07,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-BVB,OK,2026-05-18,50.0,-0.71,0.58,-3.1,0.81,16,11,68.75,54.12,0.49,8.38,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CRE,OK,2026-05-18,51.7,-0.19,1.04,2.72,-1.18,13,8,61.54,48.62,0.65,7.62,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-DHA,OK,2026-05-18,72.94,3.37,1.13,4.64,5.33,7,4,57.14,42.76,1.11,6.86,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CTR,OK,2026-05-18,54.25,2.19,2.32,6.08,2.59,19,10,52.63,43.97,0.38,10.79,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-ACB,OK,2026-05-18,42.42,-0.9,0.8,1.1,-0.43,18,9,50.0,43.6,-0.31,8.89,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-SCS,OK,2026-05-18,39.47,-0.95,1.21,0.58,0.0,16,8,50.0,38.08,-0.26,7.06,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-IJC,OK,2026-05-18,36.59,-1.82,1.07,-1.19,-2.63,12,6,50.0,49.77,-0.17,7.92,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HPG,OK,2026-05-18,33.19,-2.85,0.9,-2.04,-2.44,13,6,46.15,45.52,-0.38,7.08,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HDB,OK,2026-05-18,61.33,2.0,0.83,2.04,3.58,13,6,46.15,51.49,0.12,8.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-PAN,OK,2026-05-18,60.61,2.29,1.0,0.3,3.3,17,7,41.18,51.72,-0.08,7.65,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SSB,OK,2026-05-18,41.18,-0.96,1.0,-0.9,-1.19,21,8,38.1,48.04,0.06,7.81,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VND,OK,2026-05-18,60.53,1.46,1.39,1.22,2.78,10,3,30.0,43.3,-0.59,7.6,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-BSR,OK,2026-05-18,79.86,23.81,1.32,20.54,32.48,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.
-GAS,OK,2026-05-18,71.43,17.65,1.84,26.36,21.57,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.
+CRE,OK,2026-05-19,48.92,-1.4,0.68,-1.97,0.0,15,11,73.33,51.27,1.39,7.47,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PAN,OK,2026-05-19,58.82,1.45,0.85,0.15,3.32,20,13,65.0,56.6,0.24,7.85,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PET,OK,2026-05-19,48.57,-1.33,0.51,-2.72,1.09,17,11,64.71,55.09,1.76,7.53,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+MBS,OK,2026-05-19,56.52,1.3,1.24,2.58,3.65,12,7,58.33,55.62,0.91,7.33,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+DHA,OK,2026-05-19,67.39,2.37,0.85,2.62,3.52,6,3,50.0,45.83,0.13,7.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+SSB,OK,2026-05-19,41.18,-1.21,1.02,-0.3,-1.49,20,10,50.0,47.28,0.2,8.25,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ACB,OK,2026-05-19,41.18,-1.59,1.09,0.44,0.88,18,9,50.0,49.87,0.04,7.67,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+VND,OK,2026-05-19,67.44,3.16,3.37,3.35,5.94,11,5,45.45,50.62,-0.02,11.36,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+NKG,OK,2026-05-19,29.73,-3.52,0.49,-1.08,-2.49,9,4,44.44,54.53,0.17,7.56,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+HSG,OK,2026-05-19,47.46,-1.84,0.59,-2.03,-3.21,15,6,40.0,44.11,-0.54,7.4,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+BVS,OK,2026-05-19,53.12,-1.19,1.2,-1.53,0.0,13,5,38.46,44.42,0.02,6.54,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+CTS,OK,2026-05-19,67.39,3.33,1.6,2.38,6.67,8,3,37.5,46.47,0.21,8.62,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+DXG,OK,2026-05-19,68.97,3.8,1.09,-1.23,4.23,11,4,36.36,53.3,0.09,7.64,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+TVS,OK,2026-05-19,37.5,-1.24,1.13,0.0,1.53,12,4,33.33,34.78,0.49,7.83,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SHS,OK,2026-05-19,65.52,2.15,1.97,0.0,6.59,11,3,27.27,32.68,-1.7,9.45,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
