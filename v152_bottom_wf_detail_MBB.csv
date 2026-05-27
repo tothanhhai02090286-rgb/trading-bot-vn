@@ -1,2 +1,2 @@
 ﻿train_start,train_end,test_start,test_end,train_samples,test_samples,test_win_rate,test_avg_return,test_positive
-2025-07-05,2025-10-04,2025-10-05,2025-11-04,1,8,0.0,-1.71,False
+2025-07-08,2025-10-07,2025-10-08,2025-11-07,1,6,0.0,-1.66,False

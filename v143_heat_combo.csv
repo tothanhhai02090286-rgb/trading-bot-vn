@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày,Giá,MA20,Dist MA20 %,Phân vị nóng MA20 %,RSI,Phân vị nóng RSI %,Volume Ratio,Số mẫu vùng MA20 tương tự,Win T+5 vùng tương tự %,Lợi TB T+5 vùng tương tự %,Drawdown TB T+5 vùng tương tự %,Điểm Heat Combo,Kết luận Heat Combo,Điểm mạnh,Điểm yếu,Số dòng lịch sử
-CTS,OK,2026-05-26,28.5,27.31,4.37,78.47,63.46,71.69,1.58,136,55.15,0.79,-3.4,72,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 63.5 | Volume xác nhận mạnh 1.58,,590
-MBS,OK,2026-05-26,20.4,19.57,4.24,74.75,61.29,67.29,2.09,128,52.34,0.4,-4.88,72,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 61.3 | Volume xác nhận mạnh 2.09,,590
-PAN,OK,2026-05-26,33.5,32.38,3.47,73.39,61.26,63.05,1.23,197,51.78,0.32,-2.81,67,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 61.3 | Volume ổn 1.23,,590
-HSG,OK,2026-05-26,12.8,12.31,3.95,83.56,56.82,66.61,2.56,130,48.46,-0.01,-2.99,62,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 56.8 | Volume xác nhận mạnh 2.56,Lợi TB T+5 âm -0.01%,590
-TVS,OK,2026-05-26,13.2,13.33,-0.98,49.15,45.0,48.81,1.86,219,34.7,-0.86,-3.61,46,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,MA20 chưa quá nóng | Volume xác nhận mạnh 1.86,Win T+5 vùng tương tự yếu 34.7% | Lợi TB T+5 âm -0.86%,590
-NKG,OK,2026-05-26,14.05,14.01,0.32,56.1,41.18,34.41,1.17,186,45.16,-0.49,-3.54,41,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,MA20 chưa quá nóng | Volume ổn 1.17,Win T+5 vùng tương tự yếu 45.2% | Lợi TB T+5 âm -0.49%,590
-DXG,OK,2026-05-26,15.15,15.43,-1.83,38.64,41.33,31.53,1.13,169,44.38,-0.55,-4.6,41,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,MA20 chưa quá nóng | Volume ổn 1.13,Win T+5 vùng tương tự yếu 44.4% | Lợi TB T+5 âm -0.55%,590
-BVS,OK,2026-05-26,26.6,26.02,2.21,66.78,44.44,35.42,1.99,159,46.54,-0.39,-4.25,38,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,Volume xác nhận mạnh 1.99,Win T+5 vùng tương tự yếu 46.5% | Lợi TB T+5 âm -0.39%,590
-CRE,OK,2026-05-26,7.98,7.6,5.07,89.49,57.61,70.85,1.82,90,40.0,-0.31,-4.05,35,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,RSI vùng đẹp 57.6 | Volume xác nhận mạnh 1.82,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 40.0% | Lợi TB T+5 âm -0.31%,590
-VND,OK,2026-05-26,18.1,16.59,9.09,95.76,71.64,91.02,2.14,25,52.0,0.08,-4.26,35,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,Volume xác nhận mạnh 2.14,MA20 thuộc top 5% nóng nhất lịch sử,590
-DHA,OK,2026-05-26,49.0,46.85,4.58,88.47,66.67,80.17,1.0,73,46.58,0.84,-2.08,35,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,RSI vùng đẹp 66.7,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 46.6%,590
-SHS,OK,2026-05-26,18.4,17.43,5.53,85.25,62.86,76.78,2.63,81,45.68,-0.87,-6.49,35,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,RSI vùng đẹp 62.9 | Volume xác nhận mạnh 2.63,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 45.7% | Lợi TB T+5 âm -0.87%,590
-PET,OK,2026-05-26,52.0,47.6,9.24,88.96,74.48,91.17,2.7,43,39.53,-1.1,-5.99,23,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,Volume xác nhận mạnh 2.70,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 39.5% | Lợi TB T+5 âm -1.10%,589
-SSB,OK,2026-05-26,17.45,16.72,4.37,92.54,68.57,83.9,1.11,83,46.99,-0.19,-3.56,18,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,Volume ổn 1.11,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 47.0% | Lợi TB T+5 âm -0.19%,590
-ACB,OK,2026-05-26,24.8,23.07,7.49,97.97,70.24,81.86,3.14,19,36.84,-0.43,-2.42,13,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,Volume xác nhận mạnh 3.14,MA20 thuộc top 5% nóng nhất lịch sử | Win T+5 vùng tương tự yếu 36.8% | Lợi TB T+5 âm -0.43%,590
+BCM,OK,2026-05-27,55.4,53.79,3.0,77.63,57.58,64.07,1.26,174,51.72,0.65,-2.85,67,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 57.6 | Volume ổn 1.26,,590
+CTS,OK,2026-05-27,28.4,27.41,3.62,72.88,64.08,72.88,0.89,157,54.78,0.64,-3.38,62,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 64.1,,590
+MBS,OK,2026-05-27,20.3,19.6,3.55,71.36,61.29,67.29,0.7,137,48.91,0.47,-4.81,62,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,RSI vùng đẹp 61.3,,590
+NT2,OK,2026-05-27,24.0,23.43,2.42,72.37,45.98,39.83,2.07,231,52.81,0.37,-2.22,60,🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI,Volume xác nhận mạnh 2.07,,590
+CTR,OK,2026-05-27,90.0,87.6,2.74,72.2,61.16,68.98,1.39,179,46.93,0.58,-2.89,55,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,RSI vùng đẹp 61.2 | Volume ổn 1.39,Win T+5 vùng tương tự yếu 46.9%,590
+SHS,OK,2026-05-27,18.3,17.51,4.54,81.86,66.67,81.86,0.77,101,51.49,-0.18,-6.25,52,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,RSI vùng đẹp 66.7,Lợi TB T+5 âm -0.18%,590
+SHB,OK,2026-05-27,14.0,13.97,0.18,54.07,46.43,43.39,1.29,279,42.65,0.22,-2.1,51,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,MA20 chưa quá nóng | Volume ổn 1.29,Win T+5 vùng tương tự yếu 42.7%,590
+EIB,OK,2026-05-27,21.95,21.84,0.49,50.85,48.33,43.39,1.14,216,46.3,0.11,-3.24,51,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,MA20 chưa quá nóng | Volume ổn 1.14,Win T+5 vùng tương tự yếu 46.3%,590
+POW,OK,2026-05-27,14.05,13.79,1.87,64.41,44.0,35.25,0.95,198,48.48,0.21,-2.7,50,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,,,590
+EVF,OK,2026-05-27,13.85,13.49,2.67,73.05,62.22,75.25,2.02,118,38.98,-0.22,-4.12,50,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,RSI vùng đẹp 62.2 | Volume xác nhận mạnh 2.02,Win T+5 vùng tương tự yếu 39.0% | Lợi TB T+5 âm -0.22%,590
+GMD,OK,2026-05-27,74.9,76.1,-1.57,27.8,40.31,25.93,0.91,262,53.05,-0.08,-2.81,48,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,MA20 chưa quá nóng,Lợi TB T+5 âm -0.08%,590
+VIB,OK,2026-05-27,16.7,16.07,3.95,85.42,63.64,71.69,4.59,113,35.4,0.28,-1.95,45,⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH,RSI vùng đẹp 63.6 | Volume xác nhận mạnh 4.59,MA20 thuộc vùng nóng cao | Win T+5 vùng tương tự yếu 35.4%,590
+CRE,OK,2026-05-27,7.9,7.62,3.74,84.07,61.63,77.29,0.96,123,45.53,-0.06,-3.72,40,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,RSI vùng đẹp 61.6,Win T+5 vùng tương tự yếu 45.5% | Lợi TB T+5 âm -0.06%,590
+OCB,OK,2026-05-27,12.0,11.27,6.48,95.08,67.44,82.71,5.22,66,45.45,0.35,-2.86,35,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,RSI vùng đẹp 67.4 | Volume xác nhận mạnh 5.22,MA20 thuộc top 5% nóng nhất lịch sử | Win T+5 vùng tương tự yếu 45.5%,590
+NKG,OK,2026-05-27,13.95,13.98,-0.21,52.88,40.0,32.03,1.28,186,46.24,-0.28,-3.36,33,⛔ NÓNG THẬT - TRÁNH MUA ĐUỔI,MA20 chưa quá nóng | Volume ổn 1.28,RSI yếu 40.0 | Win T+5 vùng tương tự yếu 46.2% | Lợi TB T+5 âm -0.28%,590
