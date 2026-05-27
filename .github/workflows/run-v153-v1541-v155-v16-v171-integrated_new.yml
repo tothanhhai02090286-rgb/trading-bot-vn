@@ -1,10 +1,13 @@
-name: Run V15.3 V15.4.1 V15.5 V16 V17.1 Integrated (read-only from trading bot, output to _integrated)
+name: Run Integrated Pipeline (Manual)
 
 on:
   workflow_dispatch:
-  schedule:
-    # 16:00 giờ Việt Nam = 09:00 UTC (chạy sau Run Trading Bot - khuyến nghị cron trước đó)
-    - cron: "0 9 * * 1-5"
+    inputs:
+      skip_input_check:
+        description: 'Bỏ qua kiểm tra file đầu vào từ Trading Bot? (không khuyến khích)'
+        required: false
+        default: 'false'
+        type: boolean
 
 permissions:
   contents: write
@@ -12,7 +15,7 @@ permissions:
 
 jobs:
   run-integrated-pipeline:
-    name: Run integrated research risk survival meta final pipeline
+    name: Run V15.3 → V17.1 Integrated (manual)
     runs-on: ubuntu-latest
 
     steps:
@@ -32,27 +35,28 @@ jobs:
           pip install pandas numpy
 
       # ============================================================
-      # KIỂM TRA ĐẦU VÀO TỪ TRADING BOT (bắt buộc)
+      # KIỂM TRA BẮT BUỘC ĐẦU VÀO TỪ TRADING BOT (trừ khi bỏ qua)
       # ============================================================
-      - name: Check required input files from Trading Bot
+      - name: Check mandatory input files from Trading Bot
+        if: github.event.inputs.skip_input_check != 'true'
         run: |
           echo "===== KIỂM TRA FILE ĐẦU VÀO ====="
           MISSING=0
           for f in v152_momentum_walkforward.csv v152_bottom_walkforward.csv v17_final_decision.csv intraday_watchlist_v17.csv; do
             if [ -f "$f" ]; then
-              echo "✅ $f exists"
+              echo "✅ $f tồn tại"
             else
-              echo "❌ $f not found - please run 'Run Trading Bot (Cache Only)' first"
+              echo "❌ $f không tìm thấy - cần chạy 'Run Trading Bot' trước"
               MISSING=1
             fi
           done
           if [ $MISSING -eq 1 ]; then
-            echo "ERROR: Missing required input files. Pipeline stopped."
+            echo "ERROR: Thiếu file đầu vào bắt buộc. Pipeline dừng."
             exit 1
           fi
 
       # ============================================================
-      # ĐẶT BIẾN MÔI TRƯỜNG CHO V15.3 (bắt buộc dùng đúng file)
+      # ĐẶT BIẾN MÔI TRƯỜNG CHO V15.3 (tắt fallback)
       # ============================================================
       - name: Set environment variables for V15.3
         run: |
@@ -109,23 +113,17 @@ jobs:
           python3 v171_final_decision_orchestrator_vi.py
 
       # ============================================================
-      # SAU KHI CHẠY XONG: ĐỔI TÊN CÁC FILE ĐẦU RA (ĐỂ KHÔNG GHI ĐÈ)
+      # ĐỔI TÊN FILE ĐẦU RA ĐỂ KHÔNG GHI ĐÈ KẾT QUẢ TRADING BOT
       # ============================================================
-      - name: Rename integrated outputs to avoid overwriting trading bot results
+      - name: Rename integrated outputs
         run: |
           if [ -f v17_final_decision.csv ]; then
             mv v17_final_decision.csv v17_final_decision_integrated.csv
-            echo "Renamed to v17_final_decision_integrated.csv"
           fi
           if [ -f intraday_watchlist_v17.csv ]; then
             mv intraday_watchlist_v17.csv intraday_watchlist_v17_integrated.csv
-            echo "Renamed to intraday_watchlist_v17_integrated.csv"
           fi
-          # Các file khác (v153_*, v1541_*, v155_*, v16_*) giữ nguyên tên (không xung đột)
 
-      # ============================================================
-      # KIỂM TRA KẾT QUẢ (PHẢI CÓ FILE integrated)
-      # ============================================================
       - name: Check final outputs
         run: |
           test -f v17_final_decision_integrated.csv || exit 1
@@ -134,7 +132,7 @@ jobs:
           test -f v171_orchestrator.html || exit 1
 
       # ============================================================
-      # COMMIT CHỈ CÁC FILE INTEGRATED (KHÔNG ẢNH HƯỞNG ĐẾN FILE GỐC)
+      # COMMIT CHỈ CÁC FILE INTEGRATED
       # ============================================================
       - name: Commit integrated outputs
         run: |
@@ -144,9 +142,8 @@ jobs:
           git add intraday_watchlist_v17_integrated.csv
           git add v171_orchestrator_report.txt
           git add v171_orchestrator.html
-          # Các file trung gian (v153_*, v1541_*, v155_*, v16_*) cũng có thể được commit nếu cần
           git add v153_*.csv v153_*.html v1541_*.csv v155_*.csv v16_*.csv || true
-          git commit -m "Update integrated V15.3-V17.1 results (separate from trading bot)" || echo "No changes"
+          git commit -m "Manual integrated run $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
           git push
 
       - name: Print final V17.1 report
@@ -163,7 +160,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v153-v1541-v155-v16-v171-integrated-output
+          name: integrated-manual-output
           if-no-files-found: warn
           retention-days: 14
           path: |
