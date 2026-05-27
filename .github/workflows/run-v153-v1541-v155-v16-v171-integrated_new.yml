@@ -1,0 +1,181 @@
+name: Run V15.3 V15.4.1 V15.5 V16 V17.1 Integrated (read-only from trading bot, output to _integrated)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 16:00 giờ Việt Nam = 09:00 UTC (chạy sau Run Trading Bot - khuyến nghị cron trước đó)
+    - cron: "0 9 * * 1-5"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  run-integrated-pipeline:
+    name: Run integrated research risk survival meta final pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements_intraday.txt ]; then pip install -r requirements_intraday.txt; fi
+          pip install pandas numpy
+
+      # ============================================================
+      # KIỂM TRA ĐẦU VÀO TỪ TRADING BOT (bắt buộc)
+      # ============================================================
+      - name: Check required input files from Trading Bot
+        run: |
+          echo "===== KIỂM TRA FILE ĐẦU VÀO ====="
+          MISSING=0
+          for f in v152_momentum_walkforward.csv v152_bottom_walkforward.csv v17_final_decision.csv intraday_watchlist_v17.csv; do
+            if [ -f "$f" ]; then
+              echo "✅ $f exists"
+            else
+              echo "❌ $f not found - please run 'Run Trading Bot (Cache Only)' first"
+              MISSING=1
+            fi
+          done
+          if [ $MISSING -eq 1 ]; then
+            echo "ERROR: Missing required input files. Pipeline stopped."
+            exit 1
+          fi
+
+      # ============================================================
+      # ĐẶT BIẾN MÔI TRƯỜNG CHO V15.3 (bắt buộc dùng đúng file)
+      # ============================================================
+      - name: Set environment variables for V15.3
+        run: |
+          echo "V152_MOM_WF_CSV=v152_momentum_walkforward.csv" >> $GITHUB_ENV
+          echo "V152_BOTTOM_WF_CSV=v152_bottom_walkforward.csv" >> $GITHUB_ENV
+          echo "V17_FINAL_DECISION_CSV=v17_final_decision.csv" >> $GITHUB_ENV
+          echo "INTRADAY_WATCHLIST_CSV=intraday_watchlist_v17.csv" >> $GITHUB_ENV
+
+      # ============================================================
+      # KIỂM TRA SỰ TỒN TẠI CỦA CÁC SCRIPT
+      # ============================================================
+      - name: Check required python files
+        run: |
+          test -f v153_pro_research_upgrade_vi.py || exit 1
+          test -f v1541_portfolio_risk_exit_engine_vi.py || exit 1
+          test -f v155_equity_survival_engine_vi.py || exit 1
+          test -f v16_meta_allocation_intelligence_vi.py || exit 1
+          test -f v171_final_decision_orchestrator_vi.py || exit 1
+
+      - name: Syntax check
+        run: |
+          python -m py_compile v153_pro_research_upgrade_vi.py
+          python -m py_compile v1541_portfolio_risk_exit_engine_vi.py
+          python -m py_compile v155_equity_survival_engine_vi.py
+          python -m py_compile v16_meta_allocation_intelligence_vi.py
+          python -m py_compile v171_final_decision_orchestrator_vi.py
+
+      # ============================================================
+      # CHẠY CÁC LAYER
+      # ============================================================
+      - name: Run V15.3 PRO research layer
+        run: |
+          echo "===== RUN V15.3 PRO ====="
+          python3 v153_pro_research_upgrade_vi.py
+
+      - name: Run V15.4.1 portfolio risk exit layer
+        run: |
+          echo "===== RUN V15.4.1 ====="
+          python3 v1541_portfolio_risk_exit_engine_vi.py
+
+      - name: Run V15.5 equity survival layer
+        run: |
+          echo "===== RUN V15.5 ====="
+          python3 v155_equity_survival_engine_vi.py
+
+      - name: Run V16 meta allocation intelligence layer
+        run: |
+          echo "===== RUN V16 ====="
+          python3 v16_meta_allocation_intelligence_vi.py
+
+      - name: Run V17.1 final decision orchestrator layer
+        run: |
+          echo "===== RUN V17.1 ====="
+          python3 v171_final_decision_orchestrator_vi.py
+
+      # ============================================================
+      # SAU KHI CHẠY XONG: ĐỔI TÊN CÁC FILE ĐẦU RA (ĐỂ KHÔNG GHI ĐÈ)
+      # ============================================================
+      - name: Rename integrated outputs to avoid overwriting trading bot results
+        run: |
+          if [ -f v17_final_decision.csv ]; then
+            mv v17_final_decision.csv v17_final_decision_integrated.csv
+            echo "Renamed to v17_final_decision_integrated.csv"
+          fi
+          if [ -f intraday_watchlist_v17.csv ]; then
+            mv intraday_watchlist_v17.csv intraday_watchlist_v17_integrated.csv
+            echo "Renamed to intraday_watchlist_v17_integrated.csv"
+          fi
+          # Các file khác (v153_*, v1541_*, v155_*, v16_*) giữ nguyên tên (không xung đột)
+
+      # ============================================================
+      # KIỂM TRA KẾT QUẢ (PHẢI CÓ FILE integrated)
+      # ============================================================
+      - name: Check final outputs
+        run: |
+          test -f v17_final_decision_integrated.csv || exit 1
+          test -f intraday_watchlist_v17_integrated.csv || exit 1
+          test -f v171_orchestrator_report.txt || exit 1
+          test -f v171_orchestrator.html || exit 1
+
+      # ============================================================
+      # COMMIT CHỈ CÁC FILE INTEGRATED (KHÔNG ẢNH HƯỞNG ĐẾN FILE GỐC)
+      # ============================================================
+      - name: Commit integrated outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add v17_final_decision_integrated.csv
+          git add intraday_watchlist_v17_integrated.csv
+          git add v171_orchestrator_report.txt
+          git add v171_orchestrator.html
+          # Các file trung gian (v153_*, v1541_*, v155_*, v16_*) cũng có thể được commit nếu cần
+          git add v153_*.csv v153_*.html v1541_*.csv v155_*.csv v16_*.csv || true
+          git commit -m "Update integrated V15.3-V17.1 results (separate from trading bot)" || echo "No changes"
+          git push
+
+      - name: Print final V17.1 report
+        if: always()
+        run: |
+          echo "===== FINAL REPORT V17.1 (INTEGRATED) ====="
+          if [ -f v171_orchestrator_report.txt ]; then
+            cat v171_orchestrator_report.txt
+          else
+            echo "Không có report V17.1."
+          fi
+
+      - name: Upload integrated artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v153-v1541-v155-v16-v171-integrated-output
+          if-no-files-found: warn
+          retention-days: 14
+          path: |
+            v153_pro_research*.csv
+            v153_pro_research*.html
+            v1541_portfolio_risk_exit*.csv
+            v155_equity_survival*.csv
+            v16_meta_allocation*.csv
+            v16_meta_risk_state.csv
+            v16_capital_map.csv
+            v16_rotation_plan.csv
+            v17_final_decision_integrated.csv
+            intraday_watchlist_v17_integrated.csv
+            v171_orchestrator_report.txt
+            v171_orchestrator.html
