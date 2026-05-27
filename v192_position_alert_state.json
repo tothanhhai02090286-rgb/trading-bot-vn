@@ -1,11 +1,9 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-27",
   "last_alert_ts": {
-    "EIB:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779170532,
-    "BFC:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779170533
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779851949
   },
   "sent": [
-    "BFC:KIỂM TRA GIÁ TRƯỚC KHI BÁN",
-    "EIB:KIỂM TRA GIÁ TRƯỚC KHI BÁN"
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN"
   ]
 }
