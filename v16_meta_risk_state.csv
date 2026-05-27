@@ -1,0 +1,2 @@
+﻿system_version,generated_at,market_regime,regime_strength,equity_state,volatility_cluster,correlation_heat_score,correlation_heat_level,v155_survival_exposure,meta_exposure_multiplier,meta_exposure,decision_mode,avg_score,avg_volatility,avg_atr,drawdown_pct,equity_slope,loss_streak,kill_switch
+V16_META_ALLOCATION_INTELLIGENCE_ENGINE_VI,2026-05-27 00:09:17,SIDEWAY,SIDEWAY TRUNG TÍNH,THẬN TRỌNG,BIẾN ĐỘNG THẤP,0.5,TRUNG BÌNH,0.1925,0.48,0.0924,CASH MODE,50.0,4.568,2.01,11.403,0.4321,0,False
