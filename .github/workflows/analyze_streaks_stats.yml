@@ -1,0 +1,32 @@
+name: Analyze price streaks & conditional returns
+
+on:
+  workflow_dispatch:                # Cho phép chạy thủ công từ GitHub
+  schedule:
+    - cron: "30 1 * * 5"            # Tự chạy lúc 8:30 sáng thứ 6 hàng tuần
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy mã nguồn từ repository
+        uses: actions/checkout@v4
+
+      - name: Cài đặt Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cài thư viện cần thiết
+        run: pip install pandas numpy
+
+      - name: Chạy script phân tích
+        run: python analyze_streaks.py
+
+      - name: Commit và push kết quả
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add streaks_report.csv time_to_profit_report.csv returns_summary.txt
+          git commit -m "Update streak & profit timing analysis" || echo "No changes"
+          git push
