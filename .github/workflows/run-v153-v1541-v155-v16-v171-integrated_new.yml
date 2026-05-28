@@ -34,15 +34,25 @@ jobs:
           if [ -f requirements_intraday.txt ]; then pip install -r requirements_intraday.txt; fi
           pip install pandas numpy
 
-      # ============================================================
-      # KIỂM TRA BẮT BUỘC ĐẦU VÀO TỪ TRADING BOT (trừ khi bỏ qua)
-      # ============================================================
+      # ===== BACKUP WATCHLIST GỐC TRƯỚC KHI CHẠY =====
+      - name: Backup original watchlist
+        run: |
+          if [ -f intraday_watchlist_v17.csv ]; then
+            cp intraday_watchlist_v17.csv intraday_watchlist_v17_backup.csv
+            echo "Đã backup watchlist gốc"
+          fi
+          if [ -f v17_final_decision.csv ]; then
+            cp v17_final_decision.csv v17_final_decision_backup.csv
+            echo "Đã backup v17_final_decision gốc"
+          fi
+
+      # ===== KIỂM TRA ĐẦU VÀO (tùy chọn) =====
       - name: Check mandatory input files from Trading Bot
         if: github.event.inputs.skip_input_check != 'true'
         run: |
           echo "===== KIỂM TRA FILE ĐẦU VÀO ====="
           MISSING=0
-          for f in v152_momentum_walkforward.csv v152_bottom_walkforward.csv v17_final_decision.csv intraday_watchlist_v17.csv; do
+          for f in v152_momentum_walkforward.csv v152_bottom_walkforward.csv v17_final_decision_backup.csv intraday_watchlist_v17_backup.csv; do
             if [ -f "$f" ]; then
               echo "✅ $f tồn tại"
             else
@@ -55,19 +65,15 @@ jobs:
             exit 1
           fi
 
-      # ============================================================
-      # ĐẶT BIẾN MÔI TRƯỜNG CHO V15.3 (tắt fallback)
-      # ============================================================
+      # ===== ĐẶT BIẾN MÔI TRƯỜNG (trỏ đến file backup để tránh ảnh hưởng) =====
       - name: Set environment variables for V15.3
         run: |
           echo "V152_MOM_WF_CSV=v152_momentum_walkforward.csv" >> $GITHUB_ENV
           echo "V152_BOTTOM_WF_CSV=v152_bottom_walkforward.csv" >> $GITHUB_ENV
-          echo "V17_FINAL_DECISION_CSV=v17_final_decision.csv" >> $GITHUB_ENV
-          echo "INTRADAY_WATCHLIST_CSV=intraday_watchlist_v17.csv" >> $GITHUB_ENV
+          echo "V17_FINAL_DECISION_CSV=v17_final_decision_backup.csv" >> $GITHUB_ENV
+          echo "INTRADAY_WATCHLIST_CSV=intraday_watchlist_v17_backup.csv" >> $GITHUB_ENV
 
-      # ============================================================
-      # KIỂM TRA SỰ TỒN TẠI CỦA CÁC SCRIPT
-      # ============================================================
+      # ===== KIỂM TRA CÁC SCRIPT =====
       - name: Check required python files
         run: |
           test -f v153_pro_research_upgrade_vi.py || exit 1
@@ -84,9 +90,7 @@ jobs:
           python -m py_compile v16_meta_allocation_intelligence_vi.py
           python -m py_compile v171_final_decision_orchestrator_vi.py
 
-      # ============================================================
-      # CHẠY CÁC LAYER
-      # ============================================================
+      # ===== CHẠY CÁC LAYER =====
       - name: Run V15.3 PRO research layer
         run: |
           echo "===== RUN V15.3 PRO ====="
@@ -112,18 +116,30 @@ jobs:
           echo "===== RUN V17.1 ====="
           python3 v171_final_decision_orchestrator_vi.py
 
-      # ============================================================
-      # ĐỔI TÊN FILE ĐẦU RA ĐỂ KHÔNG GHI ĐÈ KẾT QUẢ TRADING BOT
-      # ============================================================
-      - name: Rename integrated outputs
+      # ===== SAU KHI CHẠY XONG: LƯU KẾT QUẢ MỚI (ĐÃ QUA LỌC) =====
+      - name: Save integrated outputs (with _integrated suffix)
         run: |
           if [ -f v17_final_decision.csv ]; then
-            mv v17_final_decision.csv v17_final_decision_integrated.csv
+            cp v17_final_decision.csv v17_final_decision_integrated.csv
           fi
           if [ -f intraday_watchlist_v17.csv ]; then
-            mv intraday_watchlist_v17.csv intraday_watchlist_v17_integrated.csv
+            cp intraday_watchlist_v17.csv intraday_watchlist_v17_integrated.csv
+          fi
+          echo "Đã lưu kết quả integrated (có thể khác với gốc)"
+
+      # ===== KHÔI PHỤC FILE GỐC TỪ BACKUP =====
+      - name: Restore original watchlist and final decision
+        run: |
+          if [ -f intraday_watchlist_v17_backup.csv ]; then
+            mv intraday_watchlist_v17_backup.csv intraday_watchlist_v17.csv
+            echo "Đã khôi phục watchlist gốc"
+          fi
+          if [ -f v17_final_decision_backup.csv ]; then
+            mv v17_final_decision_backup.csv v17_final_decision.csv
+            echo "Đã khôi phục v17_final_decision gốc"
           fi
 
+      # ===== KIỂM TRA KẾT QUẢ =====
       - name: Check final outputs
         run: |
           test -f v17_final_decision_integrated.csv || exit 1
@@ -131,19 +147,19 @@ jobs:
           test -f v171_orchestrator_report.txt || exit 1
           test -f v171_orchestrator.html || exit 1
 
-      # ============================================================
-      # COMMIT CHỈ CÁC FILE INTEGRATED
-      # ============================================================
+      # ===== COMMIT CẢ FILE GỐC (đã khôi phục) VÀ FILE INTEGRATED =====
       - name: Commit integrated outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add v17_final_decision.csv
+          git add intraday_watchlist_v17.csv
           git add v17_final_decision_integrated.csv
           git add intraday_watchlist_v17_integrated.csv
           git add v171_orchestrator_report.txt
           git add v171_orchestrator.html
           git add v153_*.csv v153_*.html v1541_*.csv v155_*.csv v16_*.csv || true
-          git commit -m "Manual integrated run $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+          git commit -m "Manual integrated run $(date +'%Y-%m-%d %H:%M:%S') - original files restored, integrated results saved" || echo "No changes"
           git push
 
       - name: Print final V17.1 report
@@ -172,6 +188,8 @@ jobs:
             v16_meta_risk_state.csv
             v16_capital_map.csv
             v16_rotation_plan.csv
+            v17_final_decision.csv
+            intraday_watchlist_v17.csv
             v17_final_decision_integrated.csv
             intraday_watchlist_v17_integrated.csv
             v171_orchestrator_report.txt
