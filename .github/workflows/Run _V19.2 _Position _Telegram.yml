@@ -21,17 +21,45 @@ jobs:
           pip install -U pip
           pip install pandas numpy requests
 
-      # ===== THÊM BƯỚC DEBUG: IN NỘI DUNG FILE POSITIONS =====
-      - name: Debug positions file
+      # ===== DEBUG MỞ RỘNG: IN TẤT CẢ FILE V19 / POSITION =====
+      - name: Debug all V19 and position files
         run: |
-          echo "=== NỘI DUNG positions_v19.csv (thư mục gốc) ==="
-          cat positions_v19.csv || echo "Không tìm thấy file ở thư mục gốc"
+          echo "=== DANH SÁCH FILE TRONG THƯ MỤC GỐC ==="
+          ls -la
           echo ""
-          echo "=== NỘI DUNG positions_v19.csv (trong v19.danh_muc_mua) ==="
-          cat v19.danh_muc_mua/positions_v19.csv 2>/dev/null || echo "Không có file trong v19.danh_muc_mua"
-          echo ""
-          echo "=== DANH SÁCH FILE TRONG THƯ MỤC v19.danh_muc_mua ==="
-          ls -la v19.danh_muc_mua/ 2>/dev/null || echo "Thư mục không tồn tại"
+          echo "=== NỘI DUNG CÁC FILE V19* ==="
+          for f in v19*.csv v19*.json; do
+            if [ -f "$f" ]; then
+              echo "--- $f ---"
+              cat "$f"
+              echo ""
+            fi
+          done
+          echo "=== NỘI DUNG CÁC FILE *POSITION* ==="
+          for f in *position*.csv *position*.json; do
+            if [ -f "$f" ]; then
+              echo "--- $f ---"
+              cat "$f"
+              echo ""
+            fi
+          done
+          echo "=== NỘI DUNG CÁC FILE *STATE* ==="
+          for f in *state*.csv *state*.json; do
+            if [ -f "$f" ]; then
+              echo "--- $f ---"
+              cat "$f"
+              echo ""
+            fi
+          done
+          echo "=== KIỂM TRA THƯ MỤC v19.danh_muc_mua ==="
+          ls -la v19.danh_muc_mua/ || echo "Thư mục không tồn tại"
+          for f in v19.danh_muc_mua/*.csv v19.danh_muc_mua/*.json; do
+            if [ -f "$f" ]; then
+              echo "--- $f ---"
+              cat "$f"
+              echo ""
+            fi
+          done
 
       - name: Run V19.2
         env:
