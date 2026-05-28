@@ -1,0 +1,54 @@
+# ============================================================
+# Workflow: Phân tích chuỗi tăng, ghép dữ liệu, và thống kê theo regime
+# Mục đích:
+#   1. Chạy analyze_streaks.py -> streaks_report.csv, time_to_profit_report.csv
+#   2. Chạy merge_analysis_data.py -> merged_analysis.csv (kết hợp với quyết định V17)
+#   3. Chạy regime_performance.py -> regime_performance_stats.csv
+#   4. Commit toàn bộ file báo cáo về repo
+# ============================================================
+
+name: Phân tích toàn diện (streaks, merge, regime)
+
+on:
+  workflow_dispatch:                # Cho phép chạy thủ công
+  schedule:
+    - cron: "30 1 * * 6"           # Chạy lúc 8:30 sáng thứ 7 hàng tuần (giờ VN)
+
+jobs:
+  full-analysis:
+    name: Chạy phân tích streaks, merge và regime
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas numpy
+
+      # ===== BƯỚC 1: PHÂN TÍCH CHUỖI TĂNG (STREAKS) =====
+      - name: Phân tích chuỗi tăng và thời gian đạt lợi nhuận
+        run: python analyze_streaks.py
+
+      # ===== BƯỚC 2: GHÉP DỮ LIỆU VỚI QUYẾT ĐỊNH TỪ HỆ THỐNG =====
+      - name: Ghép dữ liệu streaks với các quyết định V17, V16, watchlist
+        run: python merge_analysis_data.py
+        continue-on-error: true   # Không dừng nếu thiếu file (có thể chưa chạy integrated)
+
+      # ===== BƯỚC 3: PHÂN TÍCH HIỆU SUẤT THEO REGIME (UPTREND/SIDEWAY/DOWNTREND) =====
+      - name: Phân tích hiệu suất T+2, T+5 theo 3 pha thị trường
+        run: python regime_performance.py
+
+      # ===== BƯỚC 4: COMMIT TOÀN BỘ FILE BÁO CÁO =====
+      - name: Commit kết quả phân tích
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add streaks_report.csv time_to_profit_report.csv returns_summary.txt merged_analysis.csv regime_performance_stats.csv
+          git commit -m "Cập nhật phân tích streaks, merge và regime (tự động)" || echo "Không có thay đổi"
+          git push
