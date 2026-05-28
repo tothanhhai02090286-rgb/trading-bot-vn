@@ -2,10 +2,14 @@
   "date": "2026-05-28",
   "last_alert_ts": {
     "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779937247,
-    "OIL:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779937248
+    "OIL:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1779937248,
+    "VRE:THOÁT VỊ THẾ": 1779945993,
+    "OIL:THOÁT VỊ THẾ": 1779945994
   },
   "sent": [
     "OIL:KIỂM TRA GIÁ TRƯỚC KHI BÁN",
-    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN"
+    "OIL:THOÁT VỊ THẾ",
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN",
+    "VRE:THOÁT VỊ THẾ"
   ]
 }
