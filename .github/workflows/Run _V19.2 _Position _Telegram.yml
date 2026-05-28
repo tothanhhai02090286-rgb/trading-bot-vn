@@ -21,6 +21,18 @@ jobs:
           pip install -U pip
           pip install pandas numpy requests
 
+      # ===== THÊM BƯỚC DEBUG: IN NỘI DUNG FILE POSITIONS =====
+      - name: Debug positions file
+        run: |
+          echo "=== NỘI DUNG positions_v19.csv (thư mục gốc) ==="
+          cat positions_v19.csv || echo "Không tìm thấy file ở thư mục gốc"
+          echo ""
+          echo "=== NỘI DUNG positions_v19.csv (trong v19.danh_muc_mua) ==="
+          cat v19.danh_muc_mua/positions_v19.csv 2>/dev/null || echo "Không có file trong v19.danh_muc_mua"
+          echo ""
+          echo "=== DANH SÁCH FILE TRONG THƯ MỤC v19.danh_muc_mua ==="
+          ls -la v19.danh_muc_mua/ 2>/dev/null || echo "Thư mục không tồn tại"
+
       - name: Run V19.2
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
