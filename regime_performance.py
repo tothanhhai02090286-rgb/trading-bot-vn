@@ -70,13 +70,23 @@ def load_stock_history(symbol):
     if not os.path.exists(path):
         return None
     df = pd.read_csv(path)
-    date_col = 'time' if 'time' in df.columns else 'date'
-    if date_col not in df.columns:
+    # Tìm cột ngày
+    date_col = None
+    for col in ['time', 'date', 'Date', 'TradingDate']:
+        if col in df.columns:
+            date_col = col
+            break
+    if date_col is None:
         return None
     df[date_col] = pd.to_datetime(df[date_col])
     df = df.sort_values(date_col).reset_index(drop=True)
-    close_col = 'close' if 'close' in df.columns else 'Close'
-    if close_col not in df.columns:
+    # Tìm cột giá đóng cửa
+    close_col = None
+    for col in ['close', 'Close', 'adj_close']:
+        if col in df.columns:
+            close_col = col
+            break
+    if close_col is None:
         return None
     df = df[[date_col, close_col]].copy()
     df.columns = ['date', 'close']
@@ -96,23 +106,57 @@ def main():
         return
     
     vnindex = pd.read_csv(VNINDEX_FILE)
-    date_col = 'time' if 'time' in vnindex.columns else 'date'
+    # Xác định cột ngày và giá
+    date_col = None
+    for col in ['time', 'date', 'Date', 'TradingDate']:
+        if col in vnindex.columns:
+            date_col = col
+            break
+    if date_col is None:
+        print("Không tìm thấy cột ngày trong VNINDEX.csv")
+        return
+    
     vnindex['date'] = pd.to_datetime(vnindex[date_col])
-    vnindex['close'] = pd.to_numeric(vnindex['close'] if 'close' in vnindex.columns else vnindex['Close'], errors='coerce')
-    vnindex['high'] = pd.to_numeric(vnindex['high'] if 'high' in vnindex.columns else vnindex['High'], errors='coerce')
-    vnindex['low'] = pd.to_numeric(vnindex['low'] if 'low' in vnindex.columns else vnindex['Low'], errors='coerce')
+    # Xác định cột giá đóng cửa
+    close_col = None
+    for col in ['close', 'Close', 'adj_close']:
+        if col in vnindex.columns:
+            close_col = col
+            break
+    if close_col is None:
+        print("Không tìm thấy cột giá trong VNINDEX.csv")
+        return
+    vnindex['close'] = pd.to_numeric(vnindex[close_col], errors='coerce')
+    
+    # Xác định cột high/low
+    high_col = 'high' if 'high' in vnindex.columns else 'High' if 'High' in vnindex.columns else None
+    low_col = 'low' if 'low' in vnindex.columns else 'Low' if 'Low' in vnindex.columns else None
+    if high_col is None or low_col is None:
+        print("Thiếu cột high/low trong VNINDEX.csv, không thể tính ADX")
+        return
+    vnindex['high'] = pd.to_numeric(vnindex[high_col], errors='coerce')
+    vnindex['low'] = pd.to_numeric(vnindex[low_col], errors='coerce')
     vnindex = vnindex.dropna().sort_values('date').reset_index(drop=True)
     
     # Xác định regime cho từng ngày (để dùng cho các mã)
     vnindex['regime'] = vnindex['date'].apply(lambda d: classify_regime(vnindex, d))
     
-    # Thống kê tổng hợp cho tất cả mã
+    # Lấy danh sách tất cả mã trong cache_stock (bỏ VNINDEX)
     stock_files = glob(f"{CACHE_DIR}/*.csv")
     symbols = [os.path.basename(f).replace('.csv','') for f in stock_files if 'VNINDEX' not in f.upper()]
     
+    # 👉 TUỲ CHỌN: Lọc theo watchlist hoặc v17_final_decision (comment nếu không dùng)
+    # try:
+    #     watch = pd.read_csv("intraday_watchlist_v17.csv")
+    #     if "Mã" in watch.columns:
+    #         priority = set(watch["Mã"].astype(str).str.upper().str.strip())
+    #         symbols = [s for s in symbols if s in priority]
+    # except:
+    #     pass
+    
     all_stats = []
     
-    for sym in symbols[:20]:  # giới hạn để test nhanh, bỏ limit khi chạy thật
+    for sym in symbols:
         df = load_stock_history(sym)
         if df is None or len(df) < 50:
             continue
@@ -133,6 +177,10 @@ def main():
             sub = merged[merged['regime'] == regime]
             if sub.empty:
                 continue
+            n_t2 = sub['ret_t2'].notna().sum()
+            n_t5 = sub['ret_t5'].notna().sum()
+            if n_t2 < 5:   # bỏ qua nếu quá ít mẫu
+                continue
             win_t2 = (sub['ret_t2'] > 0).mean() * 100
             win_t5 = (sub['ret_t5'] > 0).mean() * 100
             avg_t2 = sub['ret_t2'].mean() * 100
@@ -140,7 +188,7 @@ def main():
             all_stats.append({
                 'Mã': sym,
                 'Regime': regime,
-                'Số mẫu T+2': sub['ret_t2'].notna().sum(),
+                'Số mẫu T+2': n_t2,
                 'Winrate T+2 %': round(win_t2, 2),
                 'Lợi nhuận TB T+2 %': round(avg_t2, 2),
                 'Winrate T+5 %': round(win_t5, 2),
