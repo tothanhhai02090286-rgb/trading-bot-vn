@@ -1,12 +1,12 @@
 ================================================================================
 V19.2.1 — REALTIME POSITION TELEGRAM DESK + PRICE GUARD
 ================================================================================
-Generated: 2026-05-28 12:33:31
-Positions: 2
-Alerts: 2
+Generated: 2026-05-28 12:42:02
+Positions: 1
+Alerts: 1
 
 === TÓM TẮT HÀNH ĐỘNG ===
-- THOÁT VỊ THẾ: 2
+- THOÁT VỊ THẾ: 1
 
 === PRICE GUARD ===
 Trong giờ thị trường, nếu không lấy được giá intraday realtime, V19.2.1 không cho bán mạnh.
