@@ -5,42 +5,42 @@ Số mã kiểm tra: <b>60</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>NTP</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 17 | Đoạn dương: 13 | Tỷ lệ dương: 76.47%
-Win TB: 59.32% | Lợi TB: 1.66%
-Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>IDC</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 15 | Đoạn dương: 11 | Tỷ lệ dương: 73.33%
-Win TB: 62.41% | Lợi TB: 1.39%
-Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>GMD</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
-Win TB: 59.48% | Lợi TB: 1.59%
+🔹 <b>SBT</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 6 | Đoạn dương: 5 | Tỷ lệ dương: 83.33%
+Win TB: 76.72% | Lợi TB: 1.44%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
 🔹 <b>LPB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 7 | Đoạn dương: 5 | Tỷ lệ dương: 71.43%
-Win TB: 54.17% | Lợi TB: 1.02%
+Đoạn test: 9 | Đoạn dương: 7 | Tỷ lệ dương: 77.78%
+Win TB: 54.59% | Lợi TB: 1.35%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>PAN</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
+Win TB: 58.34% | Lợi TB: 0.37%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>STB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 20 | Đoạn dương: 14 | Tỷ lệ dương: 70.00%
+Win TB: 66.80% | Lợi TB: 1.66%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
 🔹 <b>NT2</b> | ỔN ĐỊNH VỪA
-Đoạn test: 15 | Đoạn dương: 11 | Tỷ lệ dương: 73.33%
-Win TB: 51.40% | Lợi TB: 0.77%
+Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
+Win TB: 49.30% | Lợi TB: 0.97%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>ACB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 16 | Đoạn dương: 11 | Tỷ lệ dương: 68.75%
-Win TB: 59.10% | Lợi TB: 0.30%
+Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
+Win TB: 57.71% | Lợi TB: 0.59%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>OCB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 19 | Đoạn dương: 13 | Tỷ lệ dương: 68.42%
-Win TB: 55.00% | Lợi TB: 0.54%
+🔹 <b>VIC</b> | ỔN ĐỊNH VỪA
+Đoạn test: 17 | Đoạn dương: 11 | Tỷ lệ dương: 64.71%
+Win TB: 60.53% | Lợi TB: 3.05%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>SBT</b> | ỔN ĐỊNH VỪA
-Đoạn test: 6 | Đoạn dương: 4 | Tỷ lệ dương: 66.67%
-Win TB: 72.42% | Lợi TB: 1.43%
+🔹 <b>PNJ</b> | ỔN ĐỊNH VỪA
+Đoạn test: 11 | Đoạn dương: 7 | Tỷ lệ dương: 63.64%
+Win TB: 60.29% | Lợi TB: 0.83%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
