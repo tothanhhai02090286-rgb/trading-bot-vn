@@ -1,0 +1,64 @@
+# ============================================================
+# Workflow: Phân tích chuỗi tăng & ghép dữ liệu quyết định
+# Mục đích:
+#   1. Chạy script analyze_streaks.py để tính chuỗi tăng dài nhất,
+#      thời gian đạt lợi nhuận mục tiêu (3%, 5%).
+#   2. Chạy script merge_analysis_data.py để ghép kết quả với các
+#      file quyết định từ hệ thống (V17.1, V16 meta, V15.3, watchlist).
+#   3. Commit các file báo cáo về repo để xem trên iPhone / máy tính.
+# ============================================================
+
+name: Phân tích và ghép dữ liệu chuỗi tăng
+
+on:
+  workflow_dispatch:               # Cho phép chạy thủ công từ GitHub
+  schedule:
+    - cron: "30 2 * * 5"           # Tự chạy lúc 9:30 sáng thứ 6 hàng tuần (giờ VN)
+
+jobs:
+  analyze-and-merge:
+    name: Chạy phân tích streaks và ghép dữ liệu
+    runs-on: ubuntu-latest
+
+    steps:
+      # Bước 1: Lấy mã nguồn từ repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Bước 2: Cài đặt Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Bước 3: Cài thư viện cần thiết (pandas, numpy)
+      - name: Install dependencies
+        run: pip install pandas numpy
+
+      # Bước 4: Chạy script phân tích chuỗi tăng (streaks) và time-to-profit
+      #         Script này đọc dữ liệu từ cache_stock/, xuất ra:
+      #         - streaks_report.csv
+      #         - time_to_profit_report.csv
+      #         - returns_summary.txt
+      - name: Phân tích chuỗi tăng và thời gian đạt lợi nhuận
+        run: python analyze_streaks.py
+
+      # Bước 5: Chạy script ghép dữ liệu (nếu các file quyết định từ hệ thống có sẵn)
+      #         Script này đọc streaks_report.csv và kết hợp với:
+      #         - v17_final_decision_integrated.csv
+      #         - v16_meta_allocation.csv
+      #         - intraday_watchlist_v17.csv
+      #         - v153_pro_research.csv (nếu có)
+      #         Xuất ra file merged_analysis.csv
+      - name: Ghép dữ liệu với các quyết định của hệ thống
+        run: python merge_analysis_data.py
+        continue-on-error: true   # Nếu thiếu file thì vẫn chạy tiếp, chỉ cảnh báo
+
+      # Bước 6: Commit tất cả các file báo cáo về repository
+      - name: Commit kết quả
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add streaks_report.csv time_to_profit_report.csv returns_summary.txt merged_analysis.csv
+          git commit -m "Cập nhật phân tích chuỗi tăng và dữ liệu ghép" || echo "Không có thay đổi"
+          git push
