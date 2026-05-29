@@ -34,6 +34,7 @@ python3 v153_pro_research_upgrade_vi.py
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, List, Tuple, Dict, Any
@@ -300,12 +301,11 @@ def load_candidate_symbols() -> List[str]:
     for p in [WATCHLIST_CSV, V17_CSV, MOM_WF_CSV, BOTTOM_WF_CSV]:
         symbols.extend(candidate_symbols_from_file(p))
     if not symbols:
-        for fp in Path(CACHE_DIR).glob("*.csv"):
-            name = fp.stem.upper().replace(".VN", "")
-            if name not in ["VNINDEX", "VN30", "^VNINDEX"]:
-                symbols.append(name)
+        print("ERROR: Không tìm thấy bất kỳ mã nào từ watchlist hoặc các file ưu tiên.", flush=True)
+        print("Vui lòng kiểm tra các file đầu vào: ", WATCHLIST_CSV, V17_CSV, MOM_WF_CSV, BOTTOM_WF_CSV, flush=True)
+        sys.exit(1)
     symbols = sorted(set(symbols))
-    print(f"OK: số mã ứng viên V15.3 PRO = {len(symbols)}", flush=True)
+    print(f"OK: số mã ứng viên V15.3 PRO = {len(symbols)} (từ watchlist)", flush=True)
     return symbols
 
 
