@@ -35,6 +35,14 @@ try:
 except Exception:
     ZoneInfo = None
 
+try:
+    from vn_trade_safety import evaluate_entry_safety, adjust_exit_action
+    VN_TRADE_SAFETY_ON = os.getenv("VN_TRADE_SAFETY_ON", "1").strip() == "1"
+except Exception as e:
+    print("WARN VN trade safety import failed:", repr(e), flush=True)
+    VN_TRADE_SAFETY_ON = False
+
+
 warnings.filterwarnings("ignore")
 
 SYSTEM_VERSION = "V19.2.1_REALTIME_POSITION_PRICE_GUARD_VI"
@@ -585,7 +593,7 @@ def apply_price_guard(action: str, raw_action: str, metrics: Dict[str, Any]) -> 
 
 
 def alert_priority(action: str) -> int:
-    return {"THOÁT VỊ THẾ": 5, "KIỂM TRA GIÁ TRƯỚC KHI BÁN": 4, "GIẢM VỊ THẾ": 4, "CHỐT MẠNH": 4, "CHỐT BỚT NHẸ": 3, "MUA THÊM NHỎ": 3, "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 4, "GIỮ": 1, "THEO DÕI VỊ THẾ": 1}.get(action, 1)
+    return {"THOÁT VỊ THẾ": 5, "KIỂM TRA GIÁ TRƯỚC KHI BÁN": 4, "GIẢM VỊ THẾ": 4, "CHỐT MẠNH": 4, "CHỐT BỚT NHẸ": 3, "MUA THÊM NHỎ": 3, "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 4, "THOÁT KHI CÓ THANH KHOẢN": 4, "GIỮ": 1, "THEO DÕI VỊ THẾ": 1}.get(action, 1)
 
 
 def explain_action(action: str) -> str:
@@ -599,6 +607,7 @@ def explain_action(action: str) -> str:
         "THEO DÕI VỊ THẾ": "Theo dõi vị thế, chưa hành động mạnh",
         "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": "Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro",
         "KIỂM TRA GIÁ TRƯỚC KHI BÁN": "Giá chưa được xác nhận realtime; kiểm tra app chứng khoán trước khi bán",
+        "THOÁT KHI CÓ THANH KHOẢN": "Có tín hiệu bán nhưng thanh khoản/giá sàn không thuận lợi; ưu tiên thoát khi có lực cầu",
     }.get(action, "Theo dõi")
 
 
@@ -624,6 +633,8 @@ def emoji_for_action(action: str) -> str:
     if action == "THOÁT VỊ THẾ":
         return "🔴"
     if action == "KIỂM TRA GIÁ TRƯỚC KHI BÁN":
+        return "🟠"
+    if action == "THOÁT KHI CÓ THANH KHOẢN":
         return "🟠"
     if action in ["GIẢM VỊ THẾ", "CHỐT MẠNH", "CHỐT BỚT NHẸ"]:
         return "⚠️"
@@ -676,7 +687,20 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
         sellable, tplus_note, holding_days, sellable_date = is_sellable_vn(buy_date)
         action = constrain_tplus(raw_action, sellable)
         action, price_guard_note = apply_price_guard(action, raw_action, metrics)
+
+        safety_dict: Dict[str, Any] = {}
+        safety_note = ""
+        if VN_TRADE_SAFETY_ON:
+            try:
+                safety = evaluate_entry_safety(symbol, current, None, CACHE_DIR)
+                safety_dict = safety.to_dict()
+                action, safety_note = adjust_exit_action(action, current, None, safety)
+            except Exception as e:
+                safety_note = f"Không chạy được VN Trade Safety: {repr(e)}"
+
         reason = reason_text(action, raw_action, p, metrics["trend"], stop_pack["Loại stop chính"], tplus_note, state, price_guard_note)
+        if safety_note:
+            reason = (reason + "; " if reason else "") + safety_note
 
         row = {
             "Mã": symbol, "Ngày mua": buy_date,
@@ -690,6 +714,12 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
             "Thời gian giá": metrics.get("price_time", ""),
             "Realtime OK": "CÓ" if metrics.get("realtime_ok") else "KHÔNG",
             "Ghi chú giá": metrics.get("price_note", ""),
+            "VN Safety Score": safety_dict.get("score", ""),
+            "Thanh khoản band": safety_dict.get("liquidity_band", ""),
+            "GTGD TB 20 phiên tỷ": round(safety_dict.get("avg_value_20d_bn", 0), 3) if isinstance(safety_dict.get("avg_value_20d_bn"), (int, float)) else "",
+            "Exit Risk": safety_dict.get("exit_risk", ""),
+            "Near Ceiling": "CÓ" if safety_dict.get("near_ceiling") else "KHÔNG",
+            "Near Floor": "CÓ" if safety_dict.get("near_floor") else "KHÔNG",
             "Lãi/lỗ %": round(p, 3),
             "Tỷ trọng hiện tại %": round(alloc, 3),
             "Quyết định cuối": info.get("final_decision", "UNKNOWN"),
@@ -744,6 +774,10 @@ def build_alert_message(row: Dict[str, Any]) -> str:
         f"Realtime OK: <b>{row.get('Realtime OK', '')}</b>\n"
         f"Thời gian giá: <b>{row.get('Thời gian giá', '')}</b>\n"
         f"Ghi chú giá: {row.get('Ghi chú giá', '')}\n\n"
+        f"<b>VN Trade Safety:</b>\n"
+        f"Thanh khoản: <b>{row.get('Thanh khoản band', '')}</b> | GTGD 20p: <b>{row.get('GTGD TB 20 phiên tỷ', '')} tỷ/ngày</b>\n"
+        f"Exit Risk: <b>{row.get('Exit Risk', '')}</b> | Safety Score: <b>{row.get('VN Safety Score', '')}</b>\n"
+        f"Gần trần: <b>{row.get('Near Ceiling', '')}</b> | Gần sàn: <b>{row.get('Near Floor', '')}</b>\n\n"
         f"<b>Stop thông minh:</b>\n"
         f"Stop đề xuất: <b>{row.get('Stop đề xuất', '')}</b>\n"
         f"Loại stop: <b>{row.get('Loại stop chính', '')}</b>\n"

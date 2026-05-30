@@ -60,8 +60,17 @@ try:
 except Exception:
     ZoneInfo = None
 
+try:
+    from vn_trade_safety import evaluate_entry_safety, adjust_entry_recommendation
+    VN_TRADE_SAFETY_ON = os.getenv("VN_TRADE_SAFETY_ON", "1").strip() == "1"
+except Exception as e:
+    print("WARN VN trade safety import failed:", repr(e), flush=True)
+    VN_TRADE_SAFETY_ON = False
+
+
 
 WATCHLIST_PATH = os.getenv("INTRADAY_WATCHLIST_PATH", "../intraday_watchlist_v17.csv")
+CACHE_DIR = os.getenv("CACHE_STOCK_DIR", "../cache_stock")
 RAW_URL = os.getenv("GITHUB_RAW_WATCHLIST_URL", "").strip() or os.getenv("RAW_URL", "").strip()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 
@@ -864,10 +873,24 @@ def suggested_size_from_recommendation(rec: str, row: pd.Series) -> str:
     return "không xác định"
 
 
-def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any]) -> Dict[str, Any]:
+def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any], snap: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     base_rec = base_recommendation_from_quality(raw_signal, quality)
     max_action = max_action_from_upstream(row)
     final_rec = cap_recommendation(base_rec, max_action)
+
+    safety_dict: Dict[str, Any] = {}
+    safety_note = ""
+    if VN_TRADE_SAFETY_ON:
+        try:
+            symbol = str(row.get("Mã", "")).strip().upper()
+            current_price = (snap or {}).get("current_price")
+            ref_price = get_reference_price(row, current_price)
+            safety = evaluate_entry_safety(symbol, current_price, ref_price, CACHE_DIR)
+            safety_dict = safety.to_dict()
+            final_rec, safety_note = adjust_entry_recommendation(final_rec, safety)
+        except Exception as e:
+            safety_note = f"Không chạy được VN Trade Safety: {repr(e)}"
+
     confidence = confidence_from_recommendation(final_rec, quality, row)
     suggested_size = suggested_size_from_recommendation(final_rec, row)
 
@@ -877,6 +900,8 @@ def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any
         "final_recommendation": final_rec,
         "confidence": confidence,
         "suggested_size": suggested_size,
+        "safety": safety_dict,
+        "safety_note": safety_note,
     }
 
 
@@ -892,7 +917,11 @@ def pick_top_reasons(row: pd.Series, raw_signal: str, quality: Dict[str, Any], r
 
     f = get_upstream_fields(row)
     if rec["final_recommendation"] != rec["base_recommendation"]:
-        reasons.append(f"⚠ Bị giới hạn bởi upstream: {f['decision_mode']}")
+        reasons.append(f"⚠ Bị giới hạn bởi upstream/safety: {f['decision_mode']}")
+
+    safety_note = rec.get("safety_note", "")
+    if safety_note:
+        reasons.append(f"🛡 {safety_note}")
 
     if not reasons:
         reasons.append("ℹ Tín hiệu trung tính, cần theo dõi thêm")
@@ -935,7 +964,7 @@ def detect_v182_signal_pack(row: pd.Series, snap: Dict[str, Any]) -> Optional[Di
         )
         return None
 
-    rec = build_recommendation(row, raw_signal, quality)
+    rec = build_recommendation(row, raw_signal, quality, snap)
     reasons = pick_top_reasons(row, raw_signal, quality, rec)
 
     return {
@@ -990,6 +1019,16 @@ def build_alert(row: pd.Series, snap: Dict[str, Any], signal_pack: Dict[str, Any
         msg += f"VWAP: <b>{vwap:.2f}</b>\n"
     if volume_ratio is not None:
         msg += f"Volume ratio: <b>{volume_ratio:.2f}</b>\n"
+
+    safety = rec.get("safety", {}) or {}
+    if safety:
+        avg_value = safety.get("avg_value_20d_bn")
+        avg_text = f"{avg_value:.1f} tỷ/ngày" if isinstance(avg_value, (int, float)) else "N/A"
+        msg += (
+            "\n<b>VN Trade Safety:</b>\n"
+            f"Thanh khoản: <b>{safety.get('liquidity_band', 'UNKNOWN')}</b> | GTGD 20p: <b>{avg_text}</b>\n"
+            f"Exit risk: <b>{safety.get('exit_risk', 'UNKNOWN')}</b> | Safety score: <b>{safety.get('score', '')}</b>\n"
+        )
 
     msg += (
         f"Biến động intraday: <b>{intraday_ret_text}</b>\n"
