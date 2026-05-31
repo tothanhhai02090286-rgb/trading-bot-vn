@@ -43,13 +43,6 @@ except Exception as e:
     VN_TRADE_SAFETY_ON = False
 
 try:
-    from sector_money_flow import evaluate_sector_money_flow, adjust_add_by_sector
-    VN_SECTOR_FLOW_ON = os.getenv("VN_SECTOR_FLOW_ON", "1").strip() == "1"
-except Exception as e:
-    print("WARN VN sector money flow import failed:", repr(e), flush=True)
-    VN_SECTOR_FLOW_ON = False
-
-try:
     from vn_position_state import (
         classify_position_state,
         adjust_action_by_position_state,
@@ -712,17 +705,6 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
             metrics["trend"], heat
         )
 
-        sector_dict: Dict[str, Any] = {}
-        sector_note = ""
-        if VN_SECTOR_FLOW_ON:
-            try:
-                sector_flow = evaluate_sector_money_flow(symbol, watchlist_df=watchlist, cache_dir=CACHE_DIR)
-                sector_dict = sector_flow.to_dict()
-                add_ok, add_reason = adjust_add_by_sector(add_ok, add_reason, sector_flow)
-                sector_note = sector_dict.get("note", "")
-            except Exception as e:
-                sector_note = f"Không chạy được Sector Money Flow: {repr(e)}"
-
         state, raw_action = decide_state_action(
             p, current, stop_pack["Stop đề xuất"], metrics["trend"],
             info.get("final_decision", "UNKNOWN"), info.get("decision_mode", "UNKNOWN"), add_ok
@@ -765,8 +747,6 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
         reason = reason_text(action, raw_action, p, metrics["trend"], stop_pack["Loại stop chính"], tplus_note, state, price_guard_note)
         if safety_note:
             reason = (reason + "; " if reason else "") + safety_note
-        if sector_note:
-            reason = (reason + "; " if reason else "") + f"Sector Flow: {sector_note}"
         if position_state_note:
             reason = (reason + "; " if reason else "") + position_state_note
 
@@ -788,12 +768,6 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
             "Exit Risk": safety_dict.get("exit_risk", ""),
             "Near Ceiling": "CÓ" if safety_dict.get("near_ceiling") else "KHÔNG",
             "Near Floor": "CÓ" if safety_dict.get("near_floor") else "KHÔNG",
-            "Sector": sector_dict.get("sector", info.get("sector", "UNKNOWN")),
-            "Sector Flow": sector_dict.get("status", ""),
-            "Sector Score": sector_dict.get("score", ""),
-            "Sector Rank": sector_dict.get("rank_in_sector", ""),
-            "Sector Leaders": sector_dict.get("leaders", ""),
-            "Sector Note": sector_dict.get("note", sector_note),
             "Lãi/lỗ %": round(p, 3),
             "Tỷ trọng hiện tại %": round(alloc, 3),
             "Quyết định cuối": info.get("final_decision", "UNKNOWN"),
@@ -859,10 +833,6 @@ def build_alert_message(row: Dict[str, Any]) -> str:
         f"Thanh khoản: <b>{row.get('Thanh khoản band', '')}</b> | GTGD 20p: <b>{row.get('GTGD TB 20 phiên tỷ', '')} tỷ/ngày</b>\n"
         f"Exit Risk: <b>{row.get('Exit Risk', '')}</b> | Safety Score: <b>{row.get('VN Safety Score', '')}</b>\n"
         f"Gần trần: <b>{row.get('Near Ceiling', '')}</b> | Gần sàn: <b>{row.get('Near Floor', '')}</b>\n\n"
-        f"<b>Sector Money Flow:</b>\n"
-        f"Ngành: <b>{row.get('Sector', '')}</b> | Flow: <b>{row.get('Sector Flow', '')}</b> | Score: <b>{row.get('Sector Score', '')}</b>\n"
-        f"Rank: <b>{row.get('Sector Rank', '')}</b> | Leader: <b>{row.get('Sector Leaders', '')}</b>\n"
-        f"Ghi chú: {row.get('Sector Note', '')}\n\n"
         f"<b>Stop thông minh:</b>\n"
         f"Stop đề xuất: <b>{row.get('Stop đề xuất', '')}</b>\n"
         f"Loại stop: <b>{row.get('Loại stop chính', '')}</b>\n"
@@ -894,7 +864,6 @@ def build_startup_message(snapshot: pd.DataFrame, alerts: pd.DataFrame) -> str:
         f"Price Guard: <b>{'ON' if PRICE_GUARD_ON else 'OFF'}</b>\n"
         f"VN Trade Safety: <b>{'ON' if VN_TRADE_SAFETY_ON else 'OFF'}</b>\n"
         f"Position State: <b>{'ON' if VN_POSITION_STATE_ON else 'OFF'}</b>\n"
-        f"Sector Money Flow: <b>{'ON' if VN_SECTOR_FLOW_ON else 'OFF'}</b>\n"
         f"Time: {now_str()}"
     )
 

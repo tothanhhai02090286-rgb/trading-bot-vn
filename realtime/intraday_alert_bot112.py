@@ -67,12 +67,6 @@ except Exception as e:
     print("WARN VN trade safety import failed:", repr(e), flush=True)
     VN_TRADE_SAFETY_ON = False
 
-try:
-    from sector_money_flow import evaluate_sector_money_flow, adjust_entry_by_sector
-    VN_SECTOR_FLOW_ON = os.getenv("VN_SECTOR_FLOW_ON", "1").strip() == "1"
-except Exception as e:
-    print("WARN VN sector money flow import failed:", repr(e), flush=True)
-    VN_SECTOR_FLOW_ON = False
 
 
 WATCHLIST_PATH = os.getenv("INTRADAY_WATCHLIST_PATH", "../intraday_watchlist_v17.csv")
@@ -268,7 +262,6 @@ def get_upstream_fields(row: pd.Series) -> Dict[str, Any]:
         "priority": normalize_text(row.get("Ưu tiên", "")),
         "meta_alloc": _num(row.get("Meta Allocation %", 0.0)) or 0.0,
         "meta_exposure": _num(row.get("Meta Exposure", 0.0)) or 0.0,
-        "sector": str(row.get("Ngành", row.get("Sector", ""))).strip(),
     }
 
 
@@ -880,17 +873,16 @@ def suggested_size_from_recommendation(rec: str, row: pd.Series) -> str:
     return "không xác định"
 
 
-def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any], snap: Optional[Dict[str, Any]] = None, watchlist_df: Optional[pd.DataFrame] = None) -> Dict[str, Any]:
+def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any], snap: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     base_rec = base_recommendation_from_quality(raw_signal, quality)
     max_action = max_action_from_upstream(row)
     final_rec = cap_recommendation(base_rec, max_action)
-
-    symbol = str(row.get("Mã", "")).strip().upper()
 
     safety_dict: Dict[str, Any] = {}
     safety_note = ""
     if VN_TRADE_SAFETY_ON:
         try:
+            symbol = str(row.get("Mã", "")).strip().upper()
             current_price = (snap or {}).get("current_price")
             ref_price = get_reference_price(row, current_price)
             safety = evaluate_entry_safety(symbol, current_price, ref_price, CACHE_DIR)
@@ -898,16 +890,6 @@ def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any
             final_rec, safety_note = adjust_entry_recommendation(final_rec, safety)
         except Exception as e:
             safety_note = f"Không chạy được VN Trade Safety: {repr(e)}"
-
-    sector_dict: Dict[str, Any] = {}
-    sector_note = ""
-    if VN_SECTOR_FLOW_ON:
-        try:
-            sector_flow = evaluate_sector_money_flow(symbol, watchlist_df=watchlist_df, cache_dir=CACHE_DIR)
-            sector_dict = sector_flow.to_dict()
-            final_rec, sector_note = adjust_entry_by_sector(final_rec, sector_flow)
-        except Exception as e:
-            sector_note = f"Không chạy được Sector Money Flow: {repr(e)}"
 
     confidence = confidence_from_recommendation(final_rec, quality, row)
     suggested_size = suggested_size_from_recommendation(final_rec, row)
@@ -920,8 +902,6 @@ def build_recommendation(row: pd.Series, raw_signal: str, quality: Dict[str, Any
         "suggested_size": suggested_size,
         "safety": safety_dict,
         "safety_note": safety_note,
-        "sector_flow": sector_dict,
-        "sector_note": sector_note,
     }
 
 
@@ -943,10 +923,6 @@ def pick_top_reasons(row: pd.Series, raw_signal: str, quality: Dict[str, Any], r
     if safety_note:
         reasons.append(f"🛡 {safety_note}")
 
-    sector_note = rec.get("sector_note", "")
-    if sector_note:
-        reasons.append(f"🏦 {sector_note}")
-
     if not reasons:
         reasons.append("ℹ Tín hiệu trung tính, cần theo dõi thêm")
 
@@ -967,7 +943,7 @@ def emoji_from_recommendation(rec: str) -> str:
     return "🟡"
 
 
-def detect_v182_signal_pack(row: pd.Series, snap: Dict[str, Any], watchlist_df: Optional[pd.DataFrame] = None) -> Optional[Dict[str, Any]]:
+def detect_v182_signal_pack(row: pd.Series, snap: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     allowed, reason = upstream_allows_alert(row)
     if not allowed:
         print(f"UPSTREAM BLOCK: {row.get('Mã', '')} | {reason}", flush=True)
@@ -988,7 +964,7 @@ def detect_v182_signal_pack(row: pd.Series, snap: Dict[str, Any], watchlist_df: 
         )
         return None
 
-    rec = build_recommendation(row, raw_signal, quality, snap, watchlist_df=watchlist_df)
+    rec = build_recommendation(row, raw_signal, quality, snap)
     reasons = pick_top_reasons(row, raw_signal, quality, rec)
 
     return {
@@ -1052,15 +1028,6 @@ def build_alert(row: pd.Series, snap: Dict[str, Any], signal_pack: Dict[str, Any
             "\n<b>VN Trade Safety:</b>\n"
             f"Thanh khoản: <b>{safety.get('liquidity_band', 'UNKNOWN')}</b> | GTGD 20p: <b>{avg_text}</b>\n"
             f"Exit risk: <b>{safety.get('exit_risk', 'UNKNOWN')}</b> | Safety score: <b>{safety.get('score', '')}</b>\n"
-        )
-
-    sector = rec.get("sector_flow", {}) or {}
-    if sector:
-        msg += (
-            "\n<b>Sector Money Flow:</b>\n"
-            f"Ngành: <b>{sector.get('sector', 'UNKNOWN')}</b> | Flow: <b>{sector.get('status', 'UNKNOWN')}</b> | Score: <b>{sector.get('score', '')}</b>\n"
-            f"Rank: <b>{sector.get('rank_in_sector', '')}</b> | Leader: <b>{sector.get('leaders', '')}</b>\n"
-            f"Ghi chú: {sector.get('note', '')}\n"
         )
 
     msg += (
@@ -1137,7 +1104,7 @@ def check_once(state: Dict[str, Any], df: pd.DataFrame) -> Dict[str, Any]:
             print(f"No current price: {symbol}", flush=True)
             continue
 
-        signal_pack = detect_v182_signal_pack(row, snap, watchlist_df=df)
+        signal_pack = detect_v182_signal_pack(row, snap)
 
         if signal_pack:
             signal = signal_pack["signal"]
@@ -1240,7 +1207,6 @@ def startup_message(df: pd.DataFrame) -> str:
         f"Final Counts: <b>{final_counts}</b>\n"
         f"QUALITY FILTER: <b>ON</b>\n"
         f"RECOMMENDATION ENGINE: <b>ON</b>\n"
-        f"SECTOR MONEY FLOW: <b>{'ON' if VN_SECTOR_FLOW_ON else 'OFF'}</b>\n"
         f"UPSTREAM GATE: <b>{'ON' if V18_OBEY_UPSTREAM_RISK else 'OFF'}</b>\n"
         f"COOLDOWN BASE: <b>{BASE_COOLDOWN_MIN} phút</b>\n"
         f"TIME: {_now().strftime('%Y-%m-%d %H:%M:%S')}"
