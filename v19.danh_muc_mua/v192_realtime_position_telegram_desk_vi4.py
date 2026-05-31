@@ -42,17 +42,6 @@ except Exception as e:
     print("WARN VN trade safety import failed:", repr(e), flush=True)
     VN_TRADE_SAFETY_ON = False
 
-try:
-    from vn_position_state import (
-        classify_position_state,
-        adjust_action_by_position_state,
-        position_state_summary,
-    )
-    VN_POSITION_STATE_ON = os.getenv("VN_POSITION_STATE_ON", "1").strip() == "1"
-except Exception as e:
-    print("WARN VN position state import failed:", repr(e), flush=True)
-    VN_POSITION_STATE_ON = False
-
 
 warnings.filterwarnings("ignore")
 
@@ -102,7 +91,7 @@ PRICE_GUARD_ON = os.getenv("V192_PRICE_GUARD_ON", "1").strip() == "1"
 BLOCK_SELL_IF_NOT_INTRADAY = os.getenv("V192_BLOCK_SELL_IF_NOT_INTRADAY", "1").strip() == "1"
 
 BLOCK_ADD_MODES = {"CASH MODE", "ĐÁNH RẤT NHỎ"}
-SELL_ACTIONS = {"THOÁT VỊ THẾ", "GIẢM VỊ THẾ", "CHỐT BỚT NHẸ", "CHỐT MẠNH", "CẮT LỖ", "GIẢM TỶ TRỌNG"}
+SELL_ACTIONS = {"THOÁT VỊ THẾ", "GIẢM VỊ THẾ", "CHỐT BỚT NHẸ", "CHỐT MẠNH"}
 
 
 def now_dt():
@@ -604,14 +593,7 @@ def apply_price_guard(action: str, raw_action: str, metrics: Dict[str, Any]) -> 
 
 
 def alert_priority(action: str) -> int:
-    return {
-        "THOÁT VỊ THẾ": 5, "CẮT LỖ": 5,
-        "KIỂM TRA GIÁ TRƯỚC KHI BÁN": 4, "GIẢM VỊ THẾ": 4, "GIẢM TỶ TRỌNG": 4,
-        "CHỐT MẠNH": 4, "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 4,
-        "THOÁT KHI CÓ THANH KHOẢN": 4, "NÂNG TRAILING": 3,
-        "CHỐT BỚT NHẸ": 3, "MUA THÊM NHỎ": 3,
-        "GIỮ CÓ KIỂM SOÁT": 2, "GIỮ": 1, "THEO DÕI VỊ THẾ": 1,
-    }.get(action, 1)
+    return {"THOÁT VỊ THẾ": 5, "KIỂM TRA GIÁ TRƯỚC KHI BÁN": 4, "GIẢM VỊ THẾ": 4, "CHỐT MẠNH": 4, "CHỐT BỚT NHẸ": 3, "MUA THÊM NHỎ": 3, "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 4, "THOÁT KHI CÓ THANH KHOẢN": 4, "GIỮ": 1, "THEO DÕI VỊ THẾ": 1}.get(action, 1)
 
 
 def explain_action(action: str) -> str:
@@ -626,10 +608,6 @@ def explain_action(action: str) -> str:
         "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": "Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro",
         "KIỂM TRA GIÁ TRƯỚC KHI BÁN": "Giá chưa được xác nhận realtime; kiểm tra app chứng khoán trước khi bán",
         "THOÁT KHI CÓ THANH KHOẢN": "Có tín hiệu bán nhưng thanh khoản/giá sàn không thuận lợi; ưu tiên thoát khi có lực cầu",
-        "NÂNG TRAILING": "Đang có lãi, ưu tiên nâng trailing stop/bảo vệ lợi nhuận",
-        "GIỮ CÓ KIỂM SOÁT": "Đang lãi, tiếp tục giữ nhưng quản trị stop chặt",
-        "GIẢM TỶ TRỌNG": "Giảm một phần để hạ rủi ro",
-        "CẮT LỖ": "Cắt lỗ nếu hàng đã về và thanh khoản cho phép",
     }.get(action, "Theo dõi")
 
 
@@ -658,17 +636,13 @@ def emoji_for_action(action: str) -> str:
         return "🟠"
     if action == "THOÁT KHI CÓ THANH KHOẢN":
         return "🟠"
-    if action in ["CẮT LỖ", "GIẢM TỶ TRỌNG"]:
-        return "🔴"
-    if action == "NÂNG TRAILING":
-        return "🟠"
     if action in ["GIẢM VỊ THẾ", "CHỐT MẠNH", "CHỐT BỚT NHẸ"]:
         return "⚠️"
     if action == "MUA THÊM NHỎ":
         return "🟢"
     if action == "CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO":
         return "⛔"
-    if action in ["GIỮ", "GIỮ CÓ KIỂM SOÁT"]:
+    if action == "GIỮ":
         return "🟡"
     return "⚪"
 
@@ -724,31 +698,9 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
             except Exception as e:
                 safety_note = f"Không chạy được VN Trade Safety: {repr(e)}"
 
-        position_state_dict: Dict[str, Any] = {}
-        position_state_note = ""
-        if VN_POSITION_STATE_ON:
-            try:
-                available_qty = pos.get("KL_T1", pos.get("available_qty", pos.get("Khối lượng bán được", None)))
-                ps = classify_position_state(
-                    qty=qty,
-                    pnl_pct=p,
-                    current_price=current,
-                    stop_price=stop_pack["Stop đề xuất"],
-                    sellable=sellable,
-                    holding_days=holding_days,
-                    available_qty=available_qty,
-                    safety=safety_dict,
-                )
-                position_state_dict = ps.to_dict()
-                action, position_state_note = adjust_action_by_position_state(action, raw_action, ps, pnl_pct=p, add_ok=add_ok)
-            except Exception as e:
-                position_state_note = f"Không chạy được Position State: {repr(e)}"
-
         reason = reason_text(action, raw_action, p, metrics["trend"], stop_pack["Loại stop chính"], tplus_note, state, price_guard_note)
         if safety_note:
             reason = (reason + "; " if reason else "") + safety_note
-        if position_state_note:
-            reason = (reason + "; " if reason else "") + position_state_note
 
         row = {
             "Mã": symbol, "Ngày mua": buy_date,
@@ -787,13 +739,6 @@ def build_position_rows(positions: pd.DataFrame, watchlist: pd.DataFrame) -> Tup
             "Stop đề xuất": stop_pack["Stop đề xuất"],
             "Loại stop chính": stop_pack["Loại stop chính"],
             "Trạng thái vị thế": state,
-            "Position State Code": position_state_dict.get("state_code", ""),
-            "Position State": position_state_dict.get("state_label", ""),
-            "Position Risk Level": position_state_dict.get("risk_level", ""),
-            "Position Action Hint": position_state_dict.get("action_hint", ""),
-            "Position State Reason": position_state_dict.get("reason", ""),
-            "Position Can Sell": "CÓ" if position_state_dict.get("can_sell") else "KHÔNG",
-            "Position Can Add": "CÓ" if position_state_dict.get("can_add") else "KHÔNG",
             "Có thể mua thêm?": "CÓ" if add_ok else "KHÔNG",
             "Lý do mua thêm": add_reason,
             "Hành động gốc": raw_action,
@@ -862,8 +807,6 @@ def build_startup_message(snapshot: pd.DataFrame, alerts: pd.DataFrame) -> str:
         f"T+2.5: <b>ON</b>\n"
         f"Smart Stop: <b>ON</b>\n"
         f"Price Guard: <b>{'ON' if PRICE_GUARD_ON else 'OFF'}</b>\n"
-        f"VN Trade Safety: <b>{'ON' if VN_TRADE_SAFETY_ON else 'OFF'}</b>\n"
-        f"Position State: <b>{'ON' if VN_POSITION_STATE_ON else 'OFF'}</b>\n"
         f"Time: {now_str()}"
     )
 
