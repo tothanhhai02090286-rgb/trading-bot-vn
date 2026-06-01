@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: APH
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+Mã: CEO
+AI Reason: Biến động thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
 Mã: IDC
 AI Reason: Biến động thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: SHB
+Mã: KSB
 AI Reason: Biến động thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: VHM
-AI Reason: RS20 tốt; Biến động thấp; MACD Hist tăng
+Mã: VND
+AI Reason: RS20 rất mạnh; Volume ổn; Biến động thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
-Mã: ACB
-AI Reason: RS20 tốt; Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: VTO
+Mã: APG
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
+AI Warning: RS20 chưa khỏe
 
-Mã: BSR
-AI Reason: RS20 rất mạnh; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: PLX
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: GAS
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume ổn; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: KDC
+Mã: SHS
 AI Reason: RS20 rất mạnh; Biến động thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
+
+Mã: VIP
+AI Reason: Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: APH
+AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
+
+Mã: SCR
+AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
+AI Warning: RS20 yếu
+
+Mã: SSB
+AI Reason: Volume ổn; Biến động thấp
+AI Warning: MACD chưa xác nhận
