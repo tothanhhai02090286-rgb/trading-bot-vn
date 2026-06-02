@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: CEO
+Mã: ASM
+AI Reason: Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
+
+Mã: ELC
 AI Reason: Biến động thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: IDC
-AI Reason: Biến động thấp; MACD Hist tăng
-AI Warning: RS20 chưa khỏe
-
-Mã: KSB
-AI Reason: Biến động thấp; MACD Hist tăng
-AI Warning: RS20 chưa khỏe
-
-Mã: VND
-AI Reason: RS20 rất mạnh; Volume ổn; Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: APG
+Mã: IDI
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: SHS
-AI Reason: RS20 rất mạnh; Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: VIP
-AI Reason: Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: APH
-AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
+Mã: KDH
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: SCR
-AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
-AI Warning: RS20 yếu
-
 Mã: SSB
-AI Reason: Volume ổn; Biến động thấp
+AI Reason: RS20 tốt; Volume ổn; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: CRE
+AI Reason: RS20 rất mạnh; Volume ổn; Biến động thấp
 AI Warning: MACD chưa xác nhận
+
+Mã: DBC
+AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: FPT
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume ổn; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn
+
+Mã: ABB
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn
+
+Mã: CMG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn

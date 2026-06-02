@@ -1,46 +1,46 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>37</b>
+Số mã kiểm tra: <b>72</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
 🔹 <b>STB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 18 | Đoạn dương: 16 | Tỷ lệ dương: 88.89%
-Win TB: 74.40% | Lợi TB: 2.09%
+Đoạn test: 16 | Đoạn dương: 13 | Tỷ lệ dương: 81.25%
+Win TB: 74.21% | Lợi TB: 2.31%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>SBT</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 9 | Đoạn dương: 7 | Tỷ lệ dương: 77.78%
-Win TB: 69.93% | Lợi TB: 2.18%
+🔹 <b>MBB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 15 | Đoạn dương: 12 | Tỷ lệ dương: 80.00%
+Win TB: 68.89% | Lợi TB: 1.21%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>DCM</b> | ỔN ĐỊNH VỪA
-Đoạn test: 16 | Đoạn dương: 11 | Tỷ lệ dương: 68.75%
-Win TB: 64.02% | Lợi TB: 0.88%
+🔹 <b>AAA</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 4 | Đoạn dương: 3 | Tỷ lệ dương: 75.00%
+Win TB: 54.06% | Lợi TB: 1.07%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>TCB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
+Win TB: 55.46% | Lợi TB: 0.60%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>TCL</b> | ỔN ĐỊNH VỪA
+Đoạn test: 6 | Đoạn dương: 5 | Tỷ lệ dương: 83.33%
+Win TB: 49.49% | Lợi TB: 0.16%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>SHB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
-Win TB: 48.16% | Lợi TB: 0.38%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>TPB</b> | ỔN ĐỊNH VỪA
+🔹 <b>CTR</b> | ỔN ĐỊNH VỪA
 Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
-Win TB: 64.51% | Lợi TB: 0.84%
+Win TB: 51.58% | Lợi TB: 1.77%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>MSB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 5 | Đoạn dương: 3 | Tỷ lệ dương: 60.00%
-Win TB: 64.83% | Lợi TB: 1.65%
+🔹 <b>HAH</b> | ỔN ĐỊNH VỪA
+Đoạn test: 6 | Đoạn dương: 4 | Tỷ lệ dương: 66.67%
+Win TB: 76.35% | Lợi TB: 1.54%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>CRE</b> | ỔN ĐỊNH VỪA
-Đoạn test: 12 | Đoạn dương: 7 | Tỷ lệ dương: 58.33%
-Win TB: 44.54% | Lợi TB: 0.07%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>BCM</b> | ỔN ĐỊNH VỪA
-Đoạn test: 16 | Đoạn dương: 9 | Tỷ lệ dương: 56.25%
-Win TB: 54.96% | Lợi TB: 0.20%
+🔹 <b>SBT</b> | ỔN ĐỊNH VỪA
+Đoạn test: 9 | Đoạn dương: 6 | Tỷ lệ dương: 66.67%
+Win TB: 58.63% | Lợi TB: 1.41%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
