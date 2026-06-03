@@ -1,46 +1,46 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>72</b>
+Số mã kiểm tra: <b>57</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>STB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 16 | Đoạn dương: 13 | Tỷ lệ dương: 81.25%
-Win TB: 74.21% | Lợi TB: 2.31%
+🔹 <b>ABB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 12 | Đoạn dương: 10 | Tỷ lệ dương: 83.33%
+Win TB: 58.28% | Lợi TB: 1.35%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
 🔹 <b>MBB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 15 | Đoạn dương: 12 | Tỷ lệ dương: 80.00%
-Win TB: 68.89% | Lợi TB: 1.21%
-Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-
-🔹 <b>AAA</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 4 | Đoạn dương: 3 | Tỷ lệ dương: 75.00%
-Win TB: 54.06% | Lợi TB: 1.07%
+Đoạn test: 14 | Đoạn dương: 11 | Tỷ lệ dương: 78.57%
+Win TB: 67.88% | Lợi TB: 1.00%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
 🔹 <b>TCB</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
-Win TB: 55.46% | Lợi TB: 0.60%
+Đoạn test: 14 | Đoạn dương: 11 | Tỷ lệ dương: 78.57%
+Win TB: 61.45% | Lợi TB: 1.15%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>TCL</b> | ỔN ĐỊNH VỪA
-Đoạn test: 6 | Đoạn dương: 5 | Tỷ lệ dương: 83.33%
-Win TB: 49.49% | Lợi TB: 0.16%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>VPG</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 9 | Đoạn dương: 7 | Tỷ lệ dương: 77.78%
+Win TB: 66.82% | Lợi TB: 2.14%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>CTR</b> | ỔN ĐỊNH VỪA
-Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
-Win TB: 51.58% | Lợi TB: 1.77%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>STB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 9 | Đoạn dương: 7 | Tỷ lệ dương: 77.78%
+Win TB: 61.90% | Lợi TB: 0.91%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>HAH</b> | ỔN ĐỊNH VỪA
-Đoạn test: 6 | Đoạn dương: 4 | Tỷ lệ dương: 66.67%
-Win TB: 76.35% | Lợi TB: 1.54%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>IDC</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 13 | Đoạn dương: 10 | Tỷ lệ dương: 76.92%
+Win TB: 68.14% | Lợi TB: 1.53%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>SBT</b> | ỔN ĐỊNH VỪA
-Đoạn test: 9 | Đoạn dương: 6 | Tỷ lệ dương: 66.67%
-Win TB: 58.63% | Lợi TB: 1.41%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>OCB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
+Win TB: 55.64% | Lợi TB: 0.74%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>TCL</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 7 | Đoạn dương: 5 | Tỷ lệ dương: 71.43%
+Win TB: 58.33% | Lợi TB: 0.23%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.

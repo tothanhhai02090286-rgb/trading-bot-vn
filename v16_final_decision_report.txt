@@ -1,16 +1,36 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>72</b>
+Số mã tổng hợp: <b>57</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>ELC</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>VCI</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>SHB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>HNG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>GMD</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>IDC</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VIB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
@@ -20,37 +40,17 @@ Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>NKG</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+🔹 <b>ORS</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VPB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
+🔹 <b>SAB</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>CTR</b> | 🟡 THEO DÕI | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
-Lý do: Setup ổn nhưng đang nóng, không mua đuổi.
-
-🔹 <b>ABB</b> | 🟡 THEO DÕI | Điểm 74.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom YẾU / DỄ HỌC VẸT
-Lý do: Có tín hiệu tốt nhưng chưa đủ ưu tiên cao.
-
-🔹 <b>KDH</b> | 🟡 THEO DÕI | Điểm 70.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum YẾU / DỄ HỌC VẸT | Bottom TRUNG TÍNH
-Lý do: Setup ổn nhưng đang nóng, không mua đuổi.
-
-🔹 <b>BVS</b> | 🟡 THEO DÕI | Điểm 68.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom YẾU / DỄ HỌC VẸT
-Lý do: Có tín hiệu tốt nhưng chưa đủ ưu tiên cao.
-
-🔹 <b>FPT</b> | 🟡 THEO DÕI | Điểm 67.00
+🔹 <b>FPT</b> | 🟢 ƯU TIÊN CAO | Điểm 95.00
 Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum YẾU / DỄ HỌC VẸT | Bottom YẾU / DỄ HỌC VẸT
-Lý do: Có tín hiệu tốt nhưng chưa đủ ưu tiên cao.
+WF: Momentum ỔN ĐỊNH VỪA | Bottom YẾU / DỄ HỌC VẸT
+Lý do: Nhiều lớp xác nhận đồng thuận.
