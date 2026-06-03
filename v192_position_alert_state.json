@@ -1,9 +1,11 @@
 {
   "date": "2026-06-03",
   "last_alert_ts": {
-    "VRE:THOÁT VỊ THẾ": 1780443334
+    "VRE:THOÁT VỊ THẾ": 1780446010,
+    "SHB:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780446010
   },
   "sent": [
+    "SHB:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "VRE:THOÁT VỊ THẾ"
   ]
 }
