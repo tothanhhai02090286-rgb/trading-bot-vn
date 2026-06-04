@@ -1,9 +1,11 @@
 {
   "date": "2026-06-04",
   "last_alert_ts": {
-    "VRE:THOÁT VỊ THẾ": 1780532744
+    "VRE:THOÁT VỊ THẾ": 1780532744,
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1780539380
   },
   "sent": [
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN",
     "VRE:THOÁT VỊ THẾ"
   ]
 }
