@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-OCB,OK,2026-05-27,67.44,6.48,5.22,9.09,7.14,9,7,77.78,56.1,1.0,12.0,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-MBB,OK,2026-05-27,38.33,-0.76,0.73,3.25,-1.55,14,10,71.43,60.01,0.52,7.36,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-FPT,OK,2026-05-27,51.53,-0.17,0.78,-5.27,4.1,18,10,55.56,49.4,0.66,7.44,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-ELC,OK,2026-05-27,36.51,-2.73,0.66,-2.4,-1.21,12,6,50.0,36.89,-0.96,7.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-CMG,OK,2026-05-27,51.14,0.77,0.51,-1.75,2.56,15,7,46.67,48.58,0.87,7.4,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-SHS,OK,2026-05-27,66.67,4.54,0.77,6.4,3.39,11,5,45.45,41.32,-0.72,6.36,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HPG,OK,2026-05-27,37.08,-0.91,0.86,1.43,-1.95,16,7,43.75,48.33,-0.34,7.75,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-ASM,OK,2026-05-27,37.8,-0.71,0.71,2.78,-2.63,14,6,42.86,43.48,-0.46,8.21,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VND,OK,2026-05-27,64.9,6.47,1.16,7.88,8.9,12,5,41.67,45.89,-0.77,7.33,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-CRE,OK,2026-05-27,61.63,3.74,0.96,6.76,4.36,13,5,38.46,45.19,0.5,6.38,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SHB,OK,2026-05-27,46.43,0.18,1.29,3.32,0.0,14,5,35.71,36.41,-0.45,7.93,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-KDC,OK,2026-05-27,57.41,1.95,0.27,0.0,1.05,16,5,31.25,32.55,-0.09,8.56,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SSB,OK,2026-05-27,75.14,6.66,1.95,8.79,7.53,7,2,28.57,47.41,0.17,6.57,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DBC,OK,2026-05-27,28.57,-1.77,0.74,0.69,-2.88,9,2,22.22,28.36,-2.27,6.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-C32,OK,2026-05-27,19.27,-12.41,0.02,-11.48,-11.48,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.
+PLX,OK,2026-05-28,54.59,-1.49,0.68,-8.15,-1.0,14,11,78.57,56.48,1.08,7.71,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+STB,OK,2026-05-28,32.92,-4.18,1.17,-3.95,-7.61,7,5,71.43,67.73,1.2,8.14,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+VTO,OK,2026-05-28,57.14,0.54,0.64,1.68,-1.22,14,8,57.14,53.75,1.56,7.71,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+MWG,OK,2026-05-28,28.57,-4.99,0.71,-2.26,-7.72,7,4,57.14,64.95,0.57,6.29,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+HAH,OK,2026-05-28,33.33,-3.54,0.54,-2.0,-5.76,8,4,50.0,59.07,-0.3,7.38,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+GAS,OK,2026-05-28,58.84,0.04,0.92,-6.41,-2.27,12,6,50.0,41.57,0.25,7.17,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+C32,OK,2026-05-28,29.91,-7.24,0.02,-6.3,-2.32,1,0,0.0,53.33,-0.14,15.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+CRE,OK,2026-05-28,62.29,3.9,1.05,7.16,2.32,9,4,44.44,52.6,1.8,6.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+FPT,OK,2026-05-28,50.71,-1.95,0.9,-5.65,-2.33,16,7,43.75,47.88,0.29,6.94,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+OCB,OK,2026-05-28,60.42,4.03,1.07,6.33,3.52,16,7,43.75,45.87,0.21,7.31,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+GMD,OK,2026-05-28,27.94,-4.7,0.82,-2.68,-8.23,5,2,40.0,60.0,-1.68,6.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SHB,OK,2026-05-28,34.48,-1.02,0.99,1.47,-1.43,13,5,38.46,45.69,0.15,8.15,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SSB,OK,2026-05-28,61.54,3.55,0.91,5.24,4.33,9,3,33.33,36.17,-0.49,7.44,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VND,OK,2026-05-28,68.99,6.22,1.94,8.87,8.53,9,2,22.22,33.88,-1.47,7.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+IDI,OK,2026-05-28,27.35,-5.05,0.62,-1.2,-5.75,11,2,18.18,32.25,-2.0,6.64,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.

@@ -1,30 +1,22 @@
 === AI COUNCIL REASON ===
 
-Mã: MBB
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+Mã: GMD
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: VND
-AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+Mã: HAH
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: KDC
-AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp
-AI Warning: Thị trường chung yếu; MACD chưa xác nhận
+Mã: IDI
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu; RS20 chưa khỏe
 
-Mã: FPT
-AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+Mã: KSB
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: SHS
-AI Reason: RS20 rất mạnh; Volume ổn; Biến động thấp; MACD Hist tăng
-AI Warning: Thị trường chung yếu
-
-Mã: ACB
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Thị trường chung yếu
-
-Mã: DBC
+Mã: STB
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
@@ -32,10 +24,18 @@ Mã: OCB
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
 AI Warning: Thị trường chung yếu
 
-Mã: ELC
-AI Reason: Biến động thấp; MACD Hist tăng
+Mã: ABB
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: SSI
-AI Reason: Biến động thấp; MACD Hist tăng
+Mã: ACB
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu
+
+Mã: C32
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu
+
+Mã: DBC
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
