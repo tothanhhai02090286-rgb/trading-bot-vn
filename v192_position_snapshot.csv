@@ -1,168 +1,165 @@
 ﻿Mã,Ngày mua,Số ngày giữ ước tính,Ngày dự kiến bán được,Bán được chưa?,Ghi chú T+2.5,Số lượng,Giá vốn,Giá hiện tại,Nguồn giá,Thời gian giá,Realtime OK,Ghi chú giá,KL_T0,KL_T1,KL_T2,KL_Bán_Được,Sellable Ratio %,VN Safety Score,Thanh khoản band,GTGD TB 20 phiên tỷ,Exit Risk,Near Ceiling,Near Floor,Sector,Sector Flow,Sector Score,Sector Rank,Sector Leaders,Sector Note,Lãi/lỗ %,Tỷ trọng hiện tại %,Quyết định cuối,Chế độ đánh,Meta Allocation %,Meta Exposure,Regime,Equity State,Nhóm realtime,Trạng thái xu hướng,MA5,MA20,ATR,ATR %,Swing Low,Swing High,Hard Stop,ATR Stop,MA20 Stop,Swing Low Stop,Trailing Stop,Stop đề xuất,Loại stop chính,Trạng thái vị thế,Position State Code,Position State,Position Risk Level,Position Action Hint,Position State Reason,Position Can Sell,Position Can Add,Có thể mua thêm?,Lý do mua thêm,Hành động gốc,Hành động V19.2,Kết luận dễ hiểu,Lý do chính,Độ ưu tiên cảnh báo,Cập nhật lúc,Position Health Score,Position Health Level,Position Health Icon,Position Health Verdict,Position Health Reasons,Position Health Reasons Bullets,Position Risk Score,Position Risk Icon,Position Health Action Icon,Position Health Recommendation,Mini Market Regime,Mini Market Icon,Mini Market Score,Mini Market Universe,Mini Market Valid Count,Mini Market Qualified,Mini Market Qualified Valid Count,Mini Market Qualified Regime,Mini Market Qualified Icon,Mini Market Qualified Score,Mini Market Qualified Pct Up,Mini Market Qualified Pct Above MA20,Mini Market Qualified Pct Above MA50,Mini Market Qualified Pct Healthy,Mini Market Qualified Pct Very Healthy,Mini Market Qualified Pct Weak,Mini Market Qualified Money Flow,Mini Market Qualified Money Flow Score,Mini Market Qualified Recommendation Lines,Mini Market Qualified Notes,Mini Market Pct Up,Mini Market Pct Above MA20,Mini Market Pct Above MA50,Mini Market Pct Healthy,Mini Market Pct Very Healthy,Mini Market Pct Weak,Mini Market Breadth Score,Mini Market Leadership Score,Mini Market Risk Pressure Score,Mini Market Money Flow Score,Mini Market Money Flow,Mini Market Recommendation,Mini Market Recommendation Lines,Mini Market Notes,Leader Rotation Status,Leader Rotation Score,Leader Rotation Icon,Leader Rotation Raw Score,Leader Rotation Market Factor,Leader Rotation Adjusted Score,Leader Rotation Universe Score,Leader Rotation Sector Map Source,Leader Rotation Mapped Universe,Leader Rotation Mapped Qualified,Leader Rotation Universe,Leader Rotation Qualified,Leading Sectors,Weak Sectors,Universe Leaders,Qualified Leaders,Rotation Flow Direction,Leader Rotation Notes,Leader Rotation Recommendation,Institutional Flow Status,Institutional Flow Icon,Institutional Flow Score,Institutional Flow Label,Institutional Flow Sector Count,Institutional Flow Symbol Count,Institutional Flow Data Count,Institutional Flow Last Updated,Institutional Flow Freshness Status,Institutional Flow Freshness Icon,Institutional Flow Freshness Label,Institutional Flow Data Age Hours,Institutional Flow Top Sectors,Institutional Flow Weak Sectors,Institutional Flow Accumulation,Institutional Flow Distribution,Institutional Flow Banking Score,Institutional Flow Securities Score,Institutional Flow Real Estate Score,Institutional Flow Position Notes,Institutional Flow Notes,Institutional Flow Recommendation,Market Internals Status,Market Internals Icon,Market Internals Score,Market Internals Label VI,Market Internals Last Updated,Market Internals Freshness Icon,Market Internals Freshness Label,Market Internals Age Hours,Market Internals Flow Score,Market Internals Flow Label,Market Internals Breadth Score,Market Internals Breadth Label,Market Internals Pct Up,Market Internals Above MA20,Market Internals Above MA50,Market Internals Participation Pct,Market Internals Participation Label,Market Internals Distribution Days 20,Market Internals Distribution Label,Market Internals Concentration Pct,Market Internals Concentration Symbol,Market Internals Concentration Label,Market Internals RS Notes,Market Internals Recommendation,Market Internals Notes,MA Proximity Status,MA Proximity Icon,MA Proximity Label VI,MA Proximity Tolerance %,MA Proximity Universe Count,MA Proximity Valid Count,MA20 Proximity Count,MA50 Proximity Count,MA Proximity Last Updated,MA Proximity Freshness Icon,MA Proximity Freshness Label,MA Proximity Age Hours,Near MA20 Lines,Near MA50 Lines,MA Proximity Notes,PIE Status,PIE Icon,Portfolio Health Score,Portfolio Health Level,Portfolio Health Icon,Portfolio Position Count,Portfolio Healthy Count,Portfolio Warning Count,Portfolio Danger Count,Portfolio Critical Count,Portfolio Near Stop Count,Portfolio Exit Risk Count,Portfolio Loss Count,Portfolio Profit Count,Current Stock Exposure %,Target Cash %,Target Stock %,Target Margin %,Max New Position %,Max Position %,Used Risk Budget %,Max Risk Budget %,Remaining Risk Budget %,Portfolio Drawdown %,Drawdown Protection Level,Drawdown Protection Icon,Portfolio Exposure Reason,Portfolio Risk Reason,Position Sizing Note,Portfolio Recommendation,Portfolio Intelligence Notes
-VRE,2026-06-04,1.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,1300.0,32.67,31.1,history_cache,2026-06-04 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,0.0,1300.0,100.0,100,ỔN,226.296,THẤP,KHÔNG,KHÔNG,Bất động sản bán lẻ,YẾU,1.2,1/1,VRE,"Ngành yếu, hạn chế mua mới hoặc mua thêm.",-4.806,69.4,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,31.12,32.765,1.411,4.536,29.4,33.1,31.037,28.278,32.437,29.253,,32.437,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-05 06:53:57,39,DANGER,🟠,Ưu tiên giảm rủi ro,"Lỗ trên 3%, gần vùng stop; Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn","❌ Lỗ trên 3%, gần vùng stop
+VRE,2026-06-04,2.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,1300.0,32.67,31.2,history_cache,2026-06-05 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,0.0,1300.0,100.0,100,ỔN,218.5,THẤP,KHÔNG,KHÔNG,Bất động sản bán lẻ,YẾU,3.0,1/1,VRE,"Ngành yếu, hạn chế mua mới hoặc mua thêm.",-4.5,69.4,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,30.91,32.53,1.346,4.315,29.4,33.1,31.037,28.508,32.205,29.253,,32.205,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-06 06:19:19,39,DANGER,🟠,Ưu tiên giảm rủi ro,"Lỗ trên 3%, gần vùng stop; Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn","❌ Lỗ trên 3%, gần vùng stop
 • Hàng T+0/T+1, chưa linh hoạt xử lý
 ❌ Giá hiện tại đã dưới/chạm Smart Stop
 ❌ Xu hướng dưới MA20
 ✅ Exit Risk thấp
-✅ Thanh khoản ổn",61,🟠,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,22,138,138,10,10,SIDEWAY,🟡,49,50.0,50.0,70.0,50.0,40.0,50.0,TRUNG TÍNH,45,"🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",Nhiều mã đang yếu/gãy MA20; Độ lan tỏa tích cực,43.5,20.3,34.8,13.8,13.0,79.7,32,14,19,21,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
+✅ Thanh khoản ổn",61,🟠,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,19,138,138,10,10,SIDEWAY_UP,🟡,62,40.0,80.0,70.0,70.0,40.0,20.0,TRUNG TÍNH,50,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Độ lan tỏa tích cực,21.7,21.7,31.9,15.9,10.9,78.3,24,14,19,20,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",KHÔNG CÓ ROTATION HỢP LỆ,21,🔴,53,0.4,21,22,sector_mapping.csv,109,5,138,10,"Ngân hàng(97), Thủy sản(35), Bất động sản(29)","Bất động sản(29), Thủy sản(35), Ngân hàng(97)","C32(100), ACB(100), OCB(100), PLX(94), ABB(90)","OCB(100), PLX(94), VND(84), CTR(80), VTO(77)",Dòng tiền nghiêng về Ngân hàng; yếu nhất: Bất động sản,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 22: factor 0.40,"🔴 Rotation sau điều chỉnh yếu, hạn chế mở vị thế mới",RISK_OFF,🔴,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-04 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.9,"- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x
-- Ngân hàng: 48.2/100 | 🟡 TRUNG TÍNH | 5D -0.61% | Vol 1.09x
-- Cảng biển - Logistics: 46.2/100 | 🟠 DÒNG TIỀN YẾU | 5D 1.15% | Vol 1.04x
-- Dầu khí: 44.4/100 | 🟠 DÒNG TIỀN YẾU | 5D 2.34% | Vol 0.65x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x","- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x",48.2,35.4,13.2,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- SAB: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- VNM: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- POW: Điện - Năng lượng | 15.1/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
-Top ngành nên theo dõi: Vận tải dầu khí, Công nghệ, Ngân hàng",PHONG_THU,🟠,40.8,Nội lực thị trường yếu,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22.0,🔴 Sức khỏe thị trường rất yếu,43.5,20.3,34.8,86.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.57% / VNINDEX -1.72% | 🟡 ngang thị trường
-- SAB: 1.27% / VNINDEX -1.72% | 🟢 mạnh hơn VNINDEX
-- VNM: -0.68% / VNINDEX -1.72% | 🟡 ngang thị trường
-- POW: -1.08% / VNINDEX -1.72% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,15,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,"- DRC: Giá 12.10 | MA20 12.11 | dưới 0.10%
-- SRC: Giá 53.50 | MA20 53.58 | dưới 0.14%
-- NLG: Giá 26.25 | MA20 26.29 | dưới 0.16%
-- ASM: Giá 5.95 | MA20 5.94 | trên 0.17%
-- SHB: Giá 13.80 | MA20 13.82 | dưới 0.18%
-- CNG: Giá 22.50 | MA20 22.55 | dưới 0.23%","- CMG: Giá 28.25 | MA50 28.25 | trên 0.02%
-- BMP: Giá 135.10 | MA50 135.27 | dưới 0.13%
-- DHC: Giá 35.90 | MA50 35.84 | trên 0.15%
-- PVT: Giá 22.25 | MA50 22.32 | dưới 0.31%
-- HSG: Giá 12.10 | MA50 12.06 | trên 0.34%
-- TPB: Giá 15.95 | MA50 16.01 | dưới 0.38%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,51.2,WARNING,🟡,4,1,2,1,0,0,0,1,3,100.0,90.0,10.0,0.0,0.0,10.0,2.68,10.0,7.32,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; rotation adjusted cũng yếu",Đã dùng khoảng 2.68%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
+🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",CÓ LEADER NHƯNG MARKET YẾU,37,🟠,92,0.4,37,19,sector_mapping.csv,109,6,138,10,"Xây dựng - Hạ tầng(100), Ngân hàng(92), Hàng tiêu dùng(84)","Cảng biển - Logistics(26), Bán lẻ(33), Hàng tiêu dùng(84)","C32(100), ACB(94), OCB(93), TPB(89), BVB(88)","C32(100), OCB(93), VND(87), KDC(86), PLX(85)",Dòng tiền nghiêng về Xây dựng - Hạ tầng; yếu nhất: Cảng biển - Logistics,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 19: factor 0.40,"🟠 Có leader riêng lẻ nhưng thị trường chung yếu; chỉ quan sát, không dùng để mua mới",RISK_OFF,🔴,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-05 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.3,"- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x
+- Xây dựng - Hạ tầng: 51.3/100 | 🟡 TRUNG TÍNH | 5D 3.94% | Vol 1.39x
+- Ngân hàng: 50.7/100 | 🟡 TRUNG TÍNH | 5D -0.1% | Vol 0.98x
+- Công nghệ: 50.3/100 | 🟡 TRUNG TÍNH | 5D 2.59% | Vol 0.92x
+- Hàng tiêu dùng: 47.7/100 | 🟠 DÒNG TIỀN YẾU | 5D 0.08% | Vol 0.91x","- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x,"- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",50.7,30.0,20.6,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- SAB: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- VNM: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- POW: Điện - Năng lượng | 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
+Top ngành nên theo dõi: Vận tải dầu khí, Xây dựng - Hạ tầng, Ngân hàng",PHONG_THU,🟠,38.5,Nội lực thị trường yếu,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,19.0,🔴 Sức khỏe thị trường rất yếu,21.7,21.7,31.9,74.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.26% / VNINDEX -1.32% | 🟡 ngang thị trường
+- SAB: 1.81% / VNINDEX -1.32% | 🟢 mạnh hơn VNINDEX
+- VNM: -1.35% / VNINDEX -1.32% | 🟡 ngang thị trường
+- POW: -1.82% / VNINDEX -1.32% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,13,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,"- BCM: Giá 54.10 | MA20 54.09 | trên 0.02%
+- SRC: Giá 53.50 | MA20 53.62 | dưới 0.23%
+- VIP: Giá 11.40 | MA20 11.37 | trên 0.24%
+- MBS: Giá 19.80 | MA20 19.75 | trên 0.25%
+- TNG: Giá 19.10 | MA20 19.15 | dưới 0.29%
+- FTS: Giá 23.80 | MA20 23.89 | dưới 0.36%","- BCM: Giá 54.10 | MA50 54.15 | dưới 0.08%
+- VIB: Giá 16.15 | MA50 16.16 | dưới 0.09%
+- MBS: Giá 19.80 | MA50 19.82 | dưới 0.10%
+- OIL: Giá 14.90 | MA50 14.94 | dưới 0.28%
+- TCB: Giá 31.70 | MA50 31.80 | dưới 0.32%
+- POW: Giá 13.45 | MA50 13.40 | trên 0.35%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,55.2,WARNING,🟡,4,1,2,1,0,0,0,3,1,100.0,90.0,10.0,0.0,0.0,10.0,3.15,10.0,6.85,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; có leader nhưng không đủ để mở risk khi panic",Đã dùng khoảng 3.15%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 22.0/100; Qualified 49.0/100; Adjusted Rotation 21.0/100; Drawdown trong ngưỡng bình thường
-SAB,2026-06-04,1.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,200.0,47.57,47.8,history_cache,2026-06-04 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,200.0,0.0,0.0,0.0,90,TRUNG BÌNH,33.628,TRUNG BÌNH,KHÔNG,KHÔNG,Đồ uống,KHÁ,65.3,1/1,SAB,"Ngành khá ổn, có thể ủng hộ tín hiệu nếu mã không quá đuổi giá.",0.483,16.4,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,TRÊN MA20,47.29,47.508,0.9,1.883,46.75,49.35,45.191,46.0,47.033,46.516,,47.033,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,MEDIUM,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Ngành khá ổn, có thể ủng hộ tín hiệu nếu mã không quá đuổi giá.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-05 06:53:57,68,GOOD,🟢,Giữ có kiểm soát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk trung bình; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
+🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 19.0/100; Qualified 62.0/100; Adjusted Rotation 37.0/100; Drawdown trong ngưỡng bình thường
+SAB,2026-06-04,2.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,200.0,47.57,47.8,history_cache,2026-06-05 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,200.0,0.0,0.0,0.0,90,TRUNG BÌNH,32.976,TRUNG BÌNH,KHÔNG,KHÔNG,Đồ uống,MẠNH,73.7,1/1,SAB,"Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",0.483,16.4,WATCHLIST,LEGACY WATCH MODE,1.0,0.0,UNKNOWN,UNKNOWN,TOP MUA THẬT,TRÊN MA20,47.46,47.585,0.929,1.943,46.75,48.95,45.191,45.942,47.109,46.516,,47.109,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Chưa đủ lãi để mua thêm an toàn,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-06 06:19:20,76,GOOD,🟢,Giữ có kiểm soát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk trung bình; Sector Flow mạnh; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
 ✅ Xu hướng trên MA20
 • Exit Risk trung bình
+❌ Sector Flow mạnh
 • Chưa bán được theo T+2.5
-✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",32,🟡,🟢,🟢 GIỮ,PANIC,🔴,22,138,138,10,10,SIDEWAY,🟡,49,50.0,50.0,70.0,50.0,40.0,50.0,TRUNG TÍNH,45,"🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",Nhiều mã đang yếu/gãy MA20; Độ lan tỏa tích cực,43.5,20.3,34.8,13.8,13.0,79.7,32,14,19,21,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
+✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",24,🟢,🟢,🟢 GIỮ,PANIC,🔴,19,138,138,10,10,SIDEWAY_UP,🟡,62,40.0,80.0,70.0,70.0,40.0,20.0,TRUNG TÍNH,50,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Độ lan tỏa tích cực,21.7,21.7,31.9,15.9,10.9,78.3,24,14,19,20,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",KHÔNG CÓ ROTATION HỢP LỆ,21,🔴,53,0.4,21,22,sector_mapping.csv,109,5,138,10,"Ngân hàng(97), Thủy sản(35), Bất động sản(29)","Bất động sản(29), Thủy sản(35), Ngân hàng(97)","C32(100), ACB(100), OCB(100), PLX(94), ABB(90)","OCB(100), PLX(94), VND(84), CTR(80), VTO(77)",Dòng tiền nghiêng về Ngân hàng; yếu nhất: Bất động sản,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 22: factor 0.40,"🔴 Rotation sau điều chỉnh yếu, hạn chế mở vị thế mới",RISK_OFF,🔴,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-04 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.9,"- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x
-- Ngân hàng: 48.2/100 | 🟡 TRUNG TÍNH | 5D -0.61% | Vol 1.09x
-- Cảng biển - Logistics: 46.2/100 | 🟠 DÒNG TIỀN YẾU | 5D 1.15% | Vol 1.04x
-- Dầu khí: 44.4/100 | 🟠 DÒNG TIỀN YẾU | 5D 2.34% | Vol 0.65x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x","- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x",48.2,35.4,13.2,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- SAB: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- VNM: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- POW: Điện - Năng lượng | 15.1/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
-Top ngành nên theo dõi: Vận tải dầu khí, Công nghệ, Ngân hàng",PHONG_THU,🟠,40.8,Nội lực thị trường yếu,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22.0,🔴 Sức khỏe thị trường rất yếu,43.5,20.3,34.8,86.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.57% / VNINDEX -1.72% | 🟡 ngang thị trường
-- SAB: 1.27% / VNINDEX -1.72% | 🟢 mạnh hơn VNINDEX
-- VNM: -0.68% / VNINDEX -1.72% | 🟡 ngang thị trường
-- POW: -1.08% / VNINDEX -1.72% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,15,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,"- DRC: Giá 12.10 | MA20 12.11 | dưới 0.10%
-- SRC: Giá 53.50 | MA20 53.58 | dưới 0.14%
-- NLG: Giá 26.25 | MA20 26.29 | dưới 0.16%
-- ASM: Giá 5.95 | MA20 5.94 | trên 0.17%
-- SHB: Giá 13.80 | MA20 13.82 | dưới 0.18%
-- CNG: Giá 22.50 | MA20 22.55 | dưới 0.23%","- CMG: Giá 28.25 | MA50 28.25 | trên 0.02%
-- BMP: Giá 135.10 | MA50 135.27 | dưới 0.13%
-- DHC: Giá 35.90 | MA50 35.84 | trên 0.15%
-- PVT: Giá 22.25 | MA50 22.32 | dưới 0.31%
-- HSG: Giá 12.10 | MA50 12.06 | trên 0.34%
-- TPB: Giá 15.95 | MA50 16.01 | dưới 0.38%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,51.2,WARNING,🟡,4,1,2,1,0,0,0,1,3,100.0,90.0,10.0,0.0,0.0,10.0,2.68,10.0,7.32,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; rotation adjusted cũng yếu",Đã dùng khoảng 2.68%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
+🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",CÓ LEADER NHƯNG MARKET YẾU,37,🟠,92,0.4,37,19,sector_mapping.csv,109,6,138,10,"Xây dựng - Hạ tầng(100), Ngân hàng(92), Hàng tiêu dùng(84)","Cảng biển - Logistics(26), Bán lẻ(33), Hàng tiêu dùng(84)","C32(100), ACB(94), OCB(93), TPB(89), BVB(88)","C32(100), OCB(93), VND(87), KDC(86), PLX(85)",Dòng tiền nghiêng về Xây dựng - Hạ tầng; yếu nhất: Cảng biển - Logistics,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 19: factor 0.40,"🟠 Có leader riêng lẻ nhưng thị trường chung yếu; chỉ quan sát, không dùng để mua mới",RISK_OFF,🔴,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-05 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.3,"- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x
+- Xây dựng - Hạ tầng: 51.3/100 | 🟡 TRUNG TÍNH | 5D 3.94% | Vol 1.39x
+- Ngân hàng: 50.7/100 | 🟡 TRUNG TÍNH | 5D -0.1% | Vol 0.98x
+- Công nghệ: 50.3/100 | 🟡 TRUNG TÍNH | 5D 2.59% | Vol 0.92x
+- Hàng tiêu dùng: 47.7/100 | 🟠 DÒNG TIỀN YẾU | 5D 0.08% | Vol 0.91x","- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x,"- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",50.7,30.0,20.6,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- SAB: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- VNM: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- POW: Điện - Năng lượng | 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
+Top ngành nên theo dõi: Vận tải dầu khí, Xây dựng - Hạ tầng, Ngân hàng",PHONG_THU,🟠,38.5,Nội lực thị trường yếu,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,19.0,🔴 Sức khỏe thị trường rất yếu,21.7,21.7,31.9,74.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.26% / VNINDEX -1.32% | 🟡 ngang thị trường
+- SAB: 1.81% / VNINDEX -1.32% | 🟢 mạnh hơn VNINDEX
+- VNM: -1.35% / VNINDEX -1.32% | 🟡 ngang thị trường
+- POW: -1.82% / VNINDEX -1.32% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,13,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,"- BCM: Giá 54.10 | MA20 54.09 | trên 0.02%
+- SRC: Giá 53.50 | MA20 53.62 | dưới 0.23%
+- VIP: Giá 11.40 | MA20 11.37 | trên 0.24%
+- MBS: Giá 19.80 | MA20 19.75 | trên 0.25%
+- TNG: Giá 19.10 | MA20 19.15 | dưới 0.29%
+- FTS: Giá 23.80 | MA20 23.89 | dưới 0.36%","- BCM: Giá 54.10 | MA50 54.15 | dưới 0.08%
+- VIB: Giá 16.15 | MA50 16.16 | dưới 0.09%
+- MBS: Giá 19.80 | MA50 19.82 | dưới 0.10%
+- OIL: Giá 14.90 | MA50 14.94 | dưới 0.28%
+- TCB: Giá 31.70 | MA50 31.80 | dưới 0.32%
+- POW: Giá 13.45 | MA50 13.40 | trên 0.35%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,55.2,WARNING,🟡,4,1,2,1,0,0,0,3,1,100.0,90.0,10.0,0.0,0.0,10.0,3.15,10.0,6.85,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; có leader nhưng không đủ để mở risk khi panic",Đã dùng khoảng 3.15%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 22.0/100; Qualified 49.0/100; Adjusted Rotation 21.0/100; Drawdown trong ngưỡng bình thường
-VNM,2026-06-04,1.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,100.0,58.59,58.6,history_cache,2026-06-04 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,100.0,0.0,0.0,0.0,100,ỔN,208.965,THẤP,KHÔNG,KHÔNG,Thực phẩm,YẾU,40.4,3/3,"KDC, QNS, VNM","Ngành yếu, hạn chế mua mới hoặc mua thêm.",0.017,10.1,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,58.76,59.425,0.764,1.304,58.1,59.8,55.66,57.072,58.831,57.809,,58.831,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-05 06:53:58,49,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn; Sector Flow yếu","• Hàng T+0/T+1, chưa linh hoạt xử lý
+🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 19.0/100; Qualified 62.0/100; Adjusted Rotation 37.0/100; Drawdown trong ngưỡng bình thường
+VNM,2026-06-04,2.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,100.0,58.59,58.4,history_cache,2026-06-05 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,100.0,0.0,0.0,0.0,100,ỔN,205.795,THẤP,KHÔNG,KHÔNG,Thực phẩm,TRUNG TÍNH,47.3,3/3,"KDC, QNS, VNM","Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.",-0.324,10.1,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,58.6,59.3,0.721,1.235,58.1,59.8,55.66,56.958,58.707,57.809,,58.707,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,MEDIUM,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-06 06:19:20,57,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn; Chưa bán được theo T+2.5","• Hàng T+0/T+1, chưa linh hoạt xử lý
 ❌ Giá hiện tại đã dưới/chạm Smart Stop
 ❌ Xu hướng dưới MA20
 ✅ Exit Risk thấp
 ✅ Thanh khoản ổn
-❌ Sector Flow yếu",51,🟠,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,22,138,138,10,10,SIDEWAY,🟡,49,50.0,50.0,70.0,50.0,40.0,50.0,TRUNG TÍNH,45,"🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",Nhiều mã đang yếu/gãy MA20; Độ lan tỏa tích cực,43.5,20.3,34.8,13.8,13.0,79.7,32,14,19,21,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
+• Chưa bán được theo T+2.5",43,🟡,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,19,138,138,10,10,SIDEWAY_UP,🟡,62,40.0,80.0,70.0,70.0,40.0,20.0,TRUNG TÍNH,50,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Độ lan tỏa tích cực,21.7,21.7,31.9,15.9,10.9,78.3,24,14,19,20,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",KHÔNG CÓ ROTATION HỢP LỆ,21,🔴,53,0.4,21,22,sector_mapping.csv,109,5,138,10,"Ngân hàng(97), Thủy sản(35), Bất động sản(29)","Bất động sản(29), Thủy sản(35), Ngân hàng(97)","C32(100), ACB(100), OCB(100), PLX(94), ABB(90)","OCB(100), PLX(94), VND(84), CTR(80), VTO(77)",Dòng tiền nghiêng về Ngân hàng; yếu nhất: Bất động sản,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 22: factor 0.40,"🔴 Rotation sau điều chỉnh yếu, hạn chế mở vị thế mới",RISK_OFF,🔴,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-04 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.9,"- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x
-- Ngân hàng: 48.2/100 | 🟡 TRUNG TÍNH | 5D -0.61% | Vol 1.09x
-- Cảng biển - Logistics: 46.2/100 | 🟠 DÒNG TIỀN YẾU | 5D 1.15% | Vol 1.04x
-- Dầu khí: 44.4/100 | 🟠 DÒNG TIỀN YẾU | 5D 2.34% | Vol 0.65x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x","- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x",48.2,35.4,13.2,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- SAB: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- VNM: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- POW: Điện - Năng lượng | 15.1/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
-Top ngành nên theo dõi: Vận tải dầu khí, Công nghệ, Ngân hàng",PHONG_THU,🟠,40.8,Nội lực thị trường yếu,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22.0,🔴 Sức khỏe thị trường rất yếu,43.5,20.3,34.8,86.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.57% / VNINDEX -1.72% | 🟡 ngang thị trường
-- SAB: 1.27% / VNINDEX -1.72% | 🟢 mạnh hơn VNINDEX
-- VNM: -0.68% / VNINDEX -1.72% | 🟡 ngang thị trường
-- POW: -1.08% / VNINDEX -1.72% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,15,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,"- DRC: Giá 12.10 | MA20 12.11 | dưới 0.10%
-- SRC: Giá 53.50 | MA20 53.58 | dưới 0.14%
-- NLG: Giá 26.25 | MA20 26.29 | dưới 0.16%
-- ASM: Giá 5.95 | MA20 5.94 | trên 0.17%
-- SHB: Giá 13.80 | MA20 13.82 | dưới 0.18%
-- CNG: Giá 22.50 | MA20 22.55 | dưới 0.23%","- CMG: Giá 28.25 | MA50 28.25 | trên 0.02%
-- BMP: Giá 135.10 | MA50 135.27 | dưới 0.13%
-- DHC: Giá 35.90 | MA50 35.84 | trên 0.15%
-- PVT: Giá 22.25 | MA50 22.32 | dưới 0.31%
-- HSG: Giá 12.10 | MA50 12.06 | trên 0.34%
-- TPB: Giá 15.95 | MA50 16.01 | dưới 0.38%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,51.2,WARNING,🟡,4,1,2,1,0,0,0,1,3,100.0,90.0,10.0,0.0,0.0,10.0,2.68,10.0,7.32,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; rotation adjusted cũng yếu",Đã dùng khoảng 2.68%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
+🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",CÓ LEADER NHƯNG MARKET YẾU,37,🟠,92,0.4,37,19,sector_mapping.csv,109,6,138,10,"Xây dựng - Hạ tầng(100), Ngân hàng(92), Hàng tiêu dùng(84)","Cảng biển - Logistics(26), Bán lẻ(33), Hàng tiêu dùng(84)","C32(100), ACB(94), OCB(93), TPB(89), BVB(88)","C32(100), OCB(93), VND(87), KDC(86), PLX(85)",Dòng tiền nghiêng về Xây dựng - Hạ tầng; yếu nhất: Cảng biển - Logistics,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 19: factor 0.40,"🟠 Có leader riêng lẻ nhưng thị trường chung yếu; chỉ quan sát, không dùng để mua mới",RISK_OFF,🔴,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-05 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.3,"- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x
+- Xây dựng - Hạ tầng: 51.3/100 | 🟡 TRUNG TÍNH | 5D 3.94% | Vol 1.39x
+- Ngân hàng: 50.7/100 | 🟡 TRUNG TÍNH | 5D -0.1% | Vol 0.98x
+- Công nghệ: 50.3/100 | 🟡 TRUNG TÍNH | 5D 2.59% | Vol 0.92x
+- Hàng tiêu dùng: 47.7/100 | 🟠 DÒNG TIỀN YẾU | 5D 0.08% | Vol 0.91x","- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x,"- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",50.7,30.0,20.6,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- SAB: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- VNM: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- POW: Điện - Năng lượng | 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
+Top ngành nên theo dõi: Vận tải dầu khí, Xây dựng - Hạ tầng, Ngân hàng",PHONG_THU,🟠,38.5,Nội lực thị trường yếu,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,19.0,🔴 Sức khỏe thị trường rất yếu,21.7,21.7,31.9,74.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.26% / VNINDEX -1.32% | 🟡 ngang thị trường
+- SAB: 1.81% / VNINDEX -1.32% | 🟢 mạnh hơn VNINDEX
+- VNM: -1.35% / VNINDEX -1.32% | 🟡 ngang thị trường
+- POW: -1.82% / VNINDEX -1.32% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,13,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,"- BCM: Giá 54.10 | MA20 54.09 | trên 0.02%
+- SRC: Giá 53.50 | MA20 53.62 | dưới 0.23%
+- VIP: Giá 11.40 | MA20 11.37 | trên 0.24%
+- MBS: Giá 19.80 | MA20 19.75 | trên 0.25%
+- TNG: Giá 19.10 | MA20 19.15 | dưới 0.29%
+- FTS: Giá 23.80 | MA20 23.89 | dưới 0.36%","- BCM: Giá 54.10 | MA50 54.15 | dưới 0.08%
+- VIB: Giá 16.15 | MA50 16.16 | dưới 0.09%
+- MBS: Giá 19.80 | MA50 19.82 | dưới 0.10%
+- OIL: Giá 14.90 | MA50 14.94 | dưới 0.28%
+- TCB: Giá 31.70 | MA50 31.80 | dưới 0.32%
+- POW: Giá 13.45 | MA50 13.40 | trên 0.35%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,55.2,WARNING,🟡,4,1,2,1,0,0,0,3,1,100.0,90.0,10.0,0.0,0.0,10.0,3.15,10.0,6.85,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; có leader nhưng không đủ để mở risk khi panic",Đã dùng khoảng 3.15%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 22.0/100; Qualified 49.0/100; Adjusted Rotation 21.0/100; Drawdown trong ngưỡng bình thường
-POW,2026-06-04,1.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,550.0,13.62,13.7,history_cache,2026-06-04 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,550.0,0.0,0.0,0.0,100,ỔN,147.819,THẤP,KHÔNG,KHÔNG,Điện,YẾU,15.8,1/2,"POW, NT2","Ngành yếu, hạn chế mua mới hoặc mua thêm.",0.587,4.1,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,13.66,13.853,0.393,2.868,13.3,14.3,12.939,12.914,13.714,13.234,,13.714,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-05 06:53:58,49,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn; Sector Flow yếu","• Hàng T+0/T+1, chưa linh hoạt xử lý
+🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 19.0/100; Qualified 62.0/100; Adjusted Rotation 37.0/100; Drawdown trong ngưỡng bình thường
+POW,2026-06-04,2.0,2026-06-06,CHƯA,CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2,550.0,13.62,13.45,history_cache,2026-06-05 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,550.0,0.0,0.0,0.0,100,ỔN,135.147,THẤP,KHÔNG,KHÔNG,Điện,YẾU,17.8,2/2,"NT2, POW","Ngành yếu, hạn chế mua mới hoặc mua thêm.",-1.248,4.1,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,13.61,13.825,0.364,2.708,13.4,14.3,12.939,12.722,13.687,13.333,,13.687,MA20 Stop,CHẠM STOP THÔNG MINH,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,Chưa đủ T+2.5 nên chưa bán được; chỉ theo dõi rủi ro,"CHƯA BÁN ĐƯỢC - chưa đủ T+2.5; cổ phiếu vẫn đang ở T0/T1/T2; tín hiệu gốc là THOÁT VỊ THẾ; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",4,2026-06-06 06:19:20,49,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn; Sector Flow yếu","• Hàng T+0/T+1, chưa linh hoạt xử lý
 ❌ Giá hiện tại đã dưới/chạm Smart Stop
 ❌ Xu hướng dưới MA20
 ✅ Exit Risk thấp
 ✅ Thanh khoản ổn
-❌ Sector Flow yếu",51,🟠,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,22,138,138,10,10,SIDEWAY,🟡,49,50.0,50.0,70.0,50.0,40.0,50.0,TRUNG TÍNH,45,"🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",Nhiều mã đang yếu/gãy MA20; Độ lan tỏa tích cực,43.5,20.3,34.8,13.8,13.0,79.7,32,14,19,21,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
+❌ Sector Flow yếu",51,🟠,🟡,🟡 CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO,PANIC,🔴,19,138,138,10,10,SIDEWAY_UP,🟡,62,40.0,80.0,70.0,70.0,40.0,20.0,TRUNG TÍNH,50,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Độ lan tỏa tích cực,21.7,21.7,31.9,15.9,10.9,78.3,24,14,19,20,RẤT YẾU,"Không mở vị thế mới, ưu tiên tiền mặt và thoát rủi ro khi có thanh khoản.","🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",KHÔNG CÓ ROTATION HỢP LỆ,21,🔴,53,0.4,21,22,sector_mapping.csv,109,5,138,10,"Ngân hàng(97), Thủy sản(35), Bất động sản(29)","Bất động sản(29), Thủy sản(35), Ngân hàng(97)","C32(100), ACB(100), OCB(100), PLX(94), ABB(90)","OCB(100), PLX(94), VND(84), CTR(80), VTO(77)",Dòng tiền nghiêng về Ngân hàng; yếu nhất: Bất động sản,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 22: factor 0.40,"🔴 Rotation sau điều chỉnh yếu, hạn chế mở vị thế mới",RISK_OFF,🔴,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-04 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.9,"- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x
-- Ngân hàng: 48.2/100 | 🟡 TRUNG TÍNH | 5D -0.61% | Vol 1.09x
-- Cảng biển - Logistics: 46.2/100 | 🟠 DÒNG TIỀN YẾU | 5D 1.15% | Vol 1.04x
-- Dầu khí: 44.4/100 | 🟠 DÒNG TIỀN YẾU | 5D 2.34% | Vol 0.65x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x","- Vận tải dầu khí: 71.9/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.44% | Vol 1.34x
-- Công nghệ: 63.4/100 | 🟢 DÒNG TIỀN MẠNH | 5D 3.81% | Vol 0.83x","- Khu công nghiệp: 0.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.5% | Vol 0.44x
-- Dệt may: 1.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.5% | Vol 0.52x
-- Thép: 4.9/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.73% | Vol 0.52x
-- Phân bón - Hóa chất: 8.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.37% | Vol 0.44x
-- Bất động sản: 13.2/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.93% | Vol 1.1x",48.2,35.4,13.2,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- SAB: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- VNM: Hàng tiêu dùng | 43.4/100 | 🟠 DÒNG TIỀN YẾU
-- POW: Điện - Năng lượng | 15.1/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
-Top ngành nên theo dõi: Vận tải dầu khí, Công nghệ, Ngân hàng",PHONG_THU,🟠,40.8,Nội lực thị trường yếu,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,29.6,Dòng tiền rất yếu / ưu tiên phòng thủ,22.0,🔴 Sức khỏe thị trường rất yếu,43.5,20.3,34.8,86.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.57% / VNINDEX -1.72% | 🟡 ngang thị trường
-- SAB: 1.27% / VNINDEX -1.72% | 🟢 mạnh hơn VNINDEX
-- VNM: -0.68% / VNINDEX -1.72% | 🟡 ngang thị trường
-- POW: -1.08% / VNINDEX -1.72% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,15,2026-06-04 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.9,"- DRC: Giá 12.10 | MA20 12.11 | dưới 0.10%
-- SRC: Giá 53.50 | MA20 53.58 | dưới 0.14%
-- NLG: Giá 26.25 | MA20 26.29 | dưới 0.16%
-- ASM: Giá 5.95 | MA20 5.94 | trên 0.17%
-- SHB: Giá 13.80 | MA20 13.82 | dưới 0.18%
-- CNG: Giá 22.50 | MA20 22.55 | dưới 0.23%","- CMG: Giá 28.25 | MA50 28.25 | trên 0.02%
-- BMP: Giá 135.10 | MA50 135.27 | dưới 0.13%
-- DHC: Giá 35.90 | MA50 35.84 | trên 0.15%
-- PVT: Giá 22.25 | MA50 22.32 | dưới 0.31%
-- HSG: Giá 12.10 | MA50 12.06 | trên 0.34%
-- TPB: Giá 15.95 | MA50 16.01 | dưới 0.38%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,51.2,WARNING,🟡,4,1,2,1,0,0,0,1,3,100.0,90.0,10.0,0.0,0.0,10.0,2.68,10.0,7.32,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; rotation adjusted cũng yếu",Đã dùng khoảng 2.68%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
+🔴 Thoát rủi ro khi có thanh khoản","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",CÓ LEADER NHƯNG MARKET YẾU,37,🟠,92,0.4,37,19,sector_mapping.csv,109,6,138,10,"Xây dựng - Hạ tầng(100), Ngân hàng(92), Hàng tiêu dùng(84)","Cảng biển - Logistics(26), Bán lẻ(33), Hàng tiêu dùng(84)","C32(100), ACB(94), OCB(93), TPB(89), BVB(88)","C32(100), OCB(93), VND(87), KDC(86), PLX(85)",Dòng tiền nghiêng về Xây dựng - Hạ tầng; yếu nhất: Cảng biển - Logistics,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 19: factor 0.40,"🟠 Có leader riêng lẻ nhưng thị trường chung yếu; chỉ quan sát, không dùng để mua mới",RISK_OFF,🔴,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,22,138,138,2026-06-05 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.3,"- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x
+- Xây dựng - Hạ tầng: 51.3/100 | 🟡 TRUNG TÍNH | 5D 3.94% | Vol 1.39x
+- Ngân hàng: 50.7/100 | 🟡 TRUNG TÍNH | 5D -0.1% | Vol 0.98x
+- Công nghệ: 50.3/100 | 🟡 TRUNG TÍNH | 5D 2.59% | Vol 0.92x
+- Hàng tiêu dùng: 47.7/100 | 🟠 DÒNG TIỀN YẾU | 5D 0.08% | Vol 0.91x","- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",- Vận tải dầu khí: 71.8/100 | 🟢 DÒNG TIỀN MẠNH | 5D 0.02% | Vol 1.37x,"- Thép: 5.6/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -3.36% | Vol 0.58x
+- Khu công nghiệp: 6.8/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -0.87% | Vol 0.44x
+- Phân bón - Hóa chất: 10.0/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -1.05% | Vol 0.37x
+- Dệt may: 10.3/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.25% | Vol 0.74x
+- Điện - Năng lượng: 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA | 5D -2.4% | Vol 0.33x",50.7,30.0,20.6,"- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- SAB: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- VNM: Hàng tiêu dùng | 47.7/100 | 🟠 DÒNG TIỀN YẾU
+- POW: Điện - Năng lượng | 14.7/100 | 🔴 RẤT YẾU / KÉM LAN TỎA","Score là dòng tiền tương đối theo giá + breadth + volume, không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.","🛑 Ưu tiên phòng thủ, không nâng tỷ trọng khi dòng tiền tương đối yếu.
+Top ngành nên theo dõi: Vận tải dầu khí, Xây dựng - Hạ tầng, Ngân hàng",PHONG_THU,🟠,38.5,Nội lực thị trường yếu,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,30.3,Dòng tiền rất yếu / ưu tiên phòng thủ,19.0,🔴 Sức khỏe thị trường rất yếu,21.7,21.7,31.9,74.7,🟠 Tham gia yếu,2,🟡 Có vài phiên phân phối,69.4,VRE,🟠 Rủi ro tập trung cao,"- VRE: -3.26% / VNINDEX -1.32% | 🟡 ngang thị trường
+- SAB: 1.81% / VNINDEX -1.32% | 🟢 mạnh hơn VNINDEX
+- VNM: -1.35% / VNINDEX -1.32% | 🟡 ngang thị trường
+- POW: -1.82% / VNINDEX -1.32% | 🟡 ngang thị trường","🛡️ Ưu tiên phòng thủ, hạn chế nâng tỷ trọng khi nội lực thị trường yếu.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,25,13,2026-06-05 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.3,"- BCM: Giá 54.10 | MA20 54.09 | trên 0.02%
+- SRC: Giá 53.50 | MA20 53.62 | dưới 0.23%
+- VIP: Giá 11.40 | MA20 11.37 | trên 0.24%
+- MBS: Giá 19.80 | MA20 19.75 | trên 0.25%
+- TNG: Giá 19.10 | MA20 19.15 | dưới 0.29%
+- FTS: Giá 23.80 | MA20 23.89 | dưới 0.36%","- BCM: Giá 54.10 | MA50 54.15 | dưới 0.08%
+- VIB: Giá 16.15 | MA50 16.16 | dưới 0.09%
+- MBS: Giá 19.80 | MA50 19.82 | dưới 0.10%
+- OIL: Giá 14.90 | MA50 14.94 | dưới 0.28%
+- TCB: Giá 31.70 | MA50 31.80 | dưới 0.32%
+- POW: Giá 13.45 | MA50 13.40 | trên 0.35%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",RISK OFF,🔴,55.2,WARNING,🟡,4,1,2,1,0,0,0,3,1,100.0,90.0,10.0,0.0,0.0,10.0,3.15,10.0,6.85,0.0,NORMAL,🟢,"Universe PANIC, ưu tiên bảo toàn vốn; có leader nhưng không đủ để mở risk khi panic",Đã dùng khoảng 3.15%/10.0% risk budget,Không mở vị thế mới trong trạng thái risk-off,"🔴 Không mở vị thế mới
 🔴 Ưu tiên tiền mặt
-🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 22.0/100; Qualified 49.0/100; Adjusted Rotation 21.0/100; Drawdown trong ngưỡng bình thường
+🔴 Chỉ giữ/thoát vị thế theo Position State",Universe 19.0/100; Qualified 62.0/100; Adjusted Rotation 37.0/100; Drawdown trong ngưỡng bình thường
