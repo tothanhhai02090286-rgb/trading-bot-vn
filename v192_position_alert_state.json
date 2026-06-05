@@ -3,9 +3,11 @@
   "last_alert_ts": {
     "VRE:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780701582,
     "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780701583,
-    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780701585
+    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780701585,
+    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780702387
   },
   "sent": [
+    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "VRE:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO"
