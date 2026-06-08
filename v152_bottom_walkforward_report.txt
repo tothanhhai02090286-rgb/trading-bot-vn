@@ -1,46 +1,46 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>46</b>
+Số mã kiểm tra: <b>97</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
-🔹 <b>HAH</b> | ỔN ĐỊNH MẠNH
-Đoạn test: 14 | Đoạn dương: 11 | Tỷ lệ dương: 78.57%
-Win TB: 75.03% | Lợi TB: 2.68%
+🔹 <b>MBB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 19 | Đoạn dương: 15 | Tỷ lệ dương: 78.95%
+Win TB: 66.34% | Lợi TB: 1.17%
 Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>LPB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
-Win TB: 57.82% | Lợi TB: 2.16%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>MSN</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 15 | Đoạn dương: 11 | Tỷ lệ dương: 73.33%
+Win TB: 60.15% | Lợi TB: 0.81%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>VIP</b> | ỔN ĐỊNH VỪA
-Đoạn test: 16 | Đoạn dương: 10 | Tỷ lệ dương: 62.50%
-Win TB: 48.44% | Lợi TB: 0.11%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>MWG</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 11 | Đoạn dương: 8 | Tỷ lệ dương: 72.73%
+Win TB: 64.31% | Lợi TB: 0.92%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>BMP</b> | ỔN ĐỊNH VỪA
-Đoạn test: 8 | Đoạn dương: 5 | Tỷ lệ dương: 62.50%
-Win TB: 52.24% | Lợi TB: 0.27%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+🔹 <b>ELC</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 10 | Tỷ lệ dương: 71.43%
+Win TB: 59.09% | Lợi TB: 1.10%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
 
-🔹 <b>VIC</b> | ỔN ĐỊNH VỪA
-Đoạn test: 13 | Đoạn dương: 8 | Tỷ lệ dương: 61.54%
-Win TB: 57.12% | Lợi TB: 0.70%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>QNS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 13 | Đoạn dương: 8 | Tỷ lệ dương: 61.54%
-Win TB: 49.55% | Lợi TB: 0.25%
+🔹 <b>VRE</b> | ỔN ĐỊNH VỪA
+Đoạn test: 13 | Đoạn dương: 9 | Tỷ lệ dương: 69.23%
+Win TB: 64.62% | Lợi TB: 1.08%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>ABB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 10 | Đoạn dương: 6 | Tỷ lệ dương: 60.00%
-Win TB: 48.03% | Lợi TB: 0.29%
+Đoạn test: 12 | Đoạn dương: 8 | Tỷ lệ dương: 66.67%
+Win TB: 48.11% | Lợi TB: 0.76%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
 🔹 <b>PHP</b> | ỔN ĐỊNH VỪA
-Đoạn test: 15 | Đoạn dương: 9 | Tỷ lệ dương: 60.00%
-Win TB: 58.85% | Lợi TB: 1.92%
+Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
+Win TB: 59.05% | Lợi TB: 1.52%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>VOS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 18 | Đoạn dương: 12 | Tỷ lệ dương: 66.67%
+Win TB: 56.38% | Lợi TB: 0.98%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
