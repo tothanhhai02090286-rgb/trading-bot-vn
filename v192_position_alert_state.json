@@ -1,10 +1,10 @@
 {
-  "date": "2026-06-07",
+  "date": "2026-06-08",
   "last_alert_ts": {
-    "VRE:THOÁT VỊ THẾ": 1780790176,
-    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780790177,
-    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780790177,
-    "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780790178
+    "VRE:THOÁT VỊ THẾ": 1780884105,
+    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884105,
+    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884106,
+    "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884107
   },
   "sent": [
     "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
