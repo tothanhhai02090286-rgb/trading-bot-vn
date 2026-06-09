@@ -1,15 +1,17 @@
 {
-  "date": "2026-06-08",
+  "date": "2026-06-09",
   "last_alert_ts": {
-    "VRE:THOÁT VỊ THẾ": 1780884105,
-    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884105,
-    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884106,
-    "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780884107
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN": 1780970538,
+    "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780970539,
+    "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780970539,
+    "SAB:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780970540,
+    "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO": 1780970540
   },
   "sent": [
     "BID:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "POW:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
+    "SAB:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
     "VNM:CHƯA BÁN ĐƯỢC - THEO DÕI RỦI RO",
-    "VRE:THOÁT VỊ THẾ"
+    "VRE:KIỂM TRA GIÁ TRƯỚC KHI BÁN"
   ]
 }

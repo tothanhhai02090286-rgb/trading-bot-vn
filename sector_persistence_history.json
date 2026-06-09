@@ -1,116 +1,4 @@
 {
-  "2026-05-25": {
-    "Chứng khoán": {
-      "score": 46.4,
-      "rank": 1,
-      "top": true
-    },
-    "Hàng tiêu dùng": {
-      "score": 43.2,
-      "rank": 2,
-      "top": true
-    },
-    "Ngân hàng": {
-      "score": 42.9,
-      "rank": 3,
-      "top": true
-    },
-    "Bất động sản KCN": {
-      "score": 38.6,
-      "rank": 4,
-      "top": true
-    },
-    "Công nghệ": {
-      "score": 35.1,
-      "rank": 5,
-      "top": true
-    },
-    "Vật liệu xây dựng": {
-      "score": 34.3,
-      "rank": 6,
-      "top": false
-    },
-    "Thép": {
-      "score": 32.3,
-      "rank": 7,
-      "top": false
-    },
-    "Dầu khí": {
-      "score": 32.1,
-      "rank": 8,
-      "top": false
-    },
-    "Nông nghiệp - Chăn nuôi": {
-      "score": 30.1,
-      "rank": 9,
-      "top": false
-    },
-    "Chỉ số": {
-      "score": 28.5,
-      "rank": 10,
-      "top": false
-    },
-    "Nhựa - Hóa chất": {
-      "score": 23.3,
-      "rank": 11,
-      "top": false
-    },
-    "Vận tải dầu khí": {
-      "score": 22.8,
-      "rank": 12,
-      "top": false
-    },
-    "Dệt may": {
-      "score": 22.5,
-      "rank": 13,
-      "top": false
-    },
-    "Bán lẻ": {
-      "score": 21.5,
-      "rank": 14,
-      "top": false
-    },
-    "Cảng biển - Logistics": {
-      "score": 19.1,
-      "rank": 15,
-      "top": false
-    },
-    "Xây dựng - Hạ tầng": {
-      "score": 18.8,
-      "rank": 16,
-      "top": false
-    },
-    "Bất động sản": {
-      "score": 17.9,
-      "rank": 17,
-      "top": false
-    },
-    "Điện - Năng lượng": {
-      "score": 16.6,
-      "rank": 18,
-      "top": false
-    },
-    "Cao su - Khu công nghiệp": {
-      "score": 12.3,
-      "rank": 19,
-      "top": false
-    },
-    "Khu công nghiệp": {
-      "score": 10.8,
-      "rank": 20,
-      "top": false
-    },
-    "Thủy sản": {
-      "score": 10.8,
-      "rank": 21,
-      "top": false
-    },
-    "Phân bón - Hóa chất": {
-      "score": 0.0,
-      "rank": 22,
-      "top": false
-    }
-  },
   "2026-05-26": {
     "Chứng khoán": {
       "score": 62.7,
@@ -280,7 +168,7 @@
       "top": false
     },
     "Bất động sản": {
-      "score": 31.0,
+      "score": 30.9,
       "rank": 12,
       "top": false
     },
@@ -387,7 +275,7 @@
       "top": false
     },
     "Bất động sản": {
-      "score": 29.3,
+      "score": 29.6,
       "rank": 11,
       "top": false
     },
@@ -508,18 +396,18 @@
       "rank": 12,
       "top": false
     },
-    "Bất động sản": {
-      "score": 23.1,
-      "rank": 13,
-      "top": false
-    },
     "Cảng biển - Logistics": {
       "score": 21.2,
-      "rank": 14,
+      "rank": 13,
       "top": false
     },
     "Bất động sản KCN": {
       "score": 21.0,
+      "rank": 14,
+      "top": false
+    },
+    "Bất động sản": {
+      "score": 19.5,
       "rank": 15,
       "top": false
     },
@@ -605,28 +493,28 @@
       "rank": 9,
       "top": false
     },
+    "Bất động sản": {
+      "score": 24.7,
+      "rank": 10,
+      "top": false
+    },
     "Nhựa - Hóa chất": {
       "score": 24.6,
-      "rank": 10,
+      "rank": 11,
       "top": false
     },
     "Thép": {
       "score": 22.9,
-      "rank": 11,
+      "rank": 12,
       "top": false
     },
     "Bất động sản KCN": {
       "score": 22.6,
-      "rank": 12,
+      "rank": 13,
       "top": false
     },
     "Nông nghiệp - Chăn nuôi": {
       "score": 20.0,
-      "rank": 13,
-      "top": false
-    },
-    "Bất động sản": {
-      "score": 19.6,
       "rank": 14,
       "top": false
     },
@@ -753,7 +641,7 @@
       "top": false
     },
     "Bất động sản": {
-      "score": 8.4,
+      "score": 9.4,
       "rank": 17,
       "top": false
     },
@@ -864,13 +752,13 @@
       "rank": 16,
       "top": false
     },
-    "Thép": {
-      "score": 13.4,
+    "Bất động sản": {
+      "score": 14.3,
       "rank": 17,
       "top": false
     },
-    "Bất động sản": {
-      "score": 12.0,
+    "Thép": {
+      "score": 13.4,
       "rank": 18,
       "top": false
     },
@@ -987,7 +875,7 @@
       "top": false
     },
     "Bất động sản": {
-      "score": 7.9,
+      "score": 7.1,
       "rank": 19,
       "top": false
     },
@@ -1063,13 +951,13 @@
       "rank": 11,
       "top": false
     },
-    "Chỉ số": {
-      "score": 24.9,
+    "Thủy sản": {
+      "score": 24.4,
       "rank": 12,
       "top": false
     },
-    "Thủy sản": {
-      "score": 24.4,
+    "Chỉ số": {
+      "score": 23.7,
       "rank": 13,
       "top": false
     },
@@ -1089,7 +977,7 @@
       "top": false
     },
     "Bất động sản": {
-      "score": 20.6,
+      "score": 15.3,
       "rank": 17,
       "top": false
     },
@@ -1115,6 +1003,118 @@
     },
     "Thép": {
       "score": 5.6,
+      "rank": 22,
+      "top": false
+    }
+  },
+  "2026-06-08": {
+    "Vận tải dầu khí": {
+      "score": 81.3,
+      "rank": 1,
+      "top": true
+    },
+    "Xây dựng - Hạ tầng": {
+      "score": 66.3,
+      "rank": 2,
+      "top": true
+    },
+    "Dầu khí": {
+      "score": 38.4,
+      "rank": 3,
+      "top": true
+    },
+    "Ngân hàng": {
+      "score": 35.8,
+      "rank": 4,
+      "top": true
+    },
+    "Hàng tiêu dùng": {
+      "score": 34.6,
+      "rank": 5,
+      "top": true
+    },
+    "Công nghệ": {
+      "score": 34.4,
+      "rank": 6,
+      "top": false
+    },
+    "Cảng biển - Logistics": {
+      "score": 33.6,
+      "rank": 7,
+      "top": false
+    },
+    "Bất động sản KCN": {
+      "score": 33.2,
+      "rank": 8,
+      "top": false
+    },
+    "Vật liệu xây dựng": {
+      "score": 27.4,
+      "rank": 9,
+      "top": false
+    },
+    "Nhựa - Hóa chất": {
+      "score": 24.6,
+      "rank": 10,
+      "top": false
+    },
+    "Bán lẻ": {
+      "score": 24.2,
+      "rank": 11,
+      "top": false
+    },
+    "Chứng khoán": {
+      "score": 22.8,
+      "rank": 12,
+      "top": false
+    },
+    "Điện - Năng lượng": {
+      "score": 20.3,
+      "rank": 13,
+      "top": false
+    },
+    "Cao su - Khu công nghiệp": {
+      "score": 19.5,
+      "rank": 14,
+      "top": false
+    },
+    "Chỉ số": {
+      "score": 16.8,
+      "rank": 15,
+      "top": false
+    },
+    "Nông nghiệp - Chăn nuôi": {
+      "score": 14.5,
+      "rank": 16,
+      "top": false
+    },
+    "Thủy sản": {
+      "score": 8.8,
+      "rank": 17,
+      "top": false
+    },
+    "Bất động sản": {
+      "score": 8.0,
+      "rank": 18,
+      "top": false
+    },
+    "Dệt may": {
+      "score": 6.3,
+      "rank": 19,
+      "top": false
+    },
+    "Phân bón - Hóa chất": {
+      "score": 5.1,
+      "rank": 20,
+      "top": false
+    },
+    "Thép": {
+      "score": 0.1,
+      "rank": 21,
+      "top": false
+    },
+    "Khu công nghiệp": {
+      "score": 0.0,
       "rank": 22,
       "top": false
     }
