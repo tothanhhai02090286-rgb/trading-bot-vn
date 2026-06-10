@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: BVB
+Mã: APG
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: EVF
-AI Reason: RS20 tốt; Volume ổn; Biến động thấp; MACD Hist tăng
+Mã: BMP
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu; RS20 chưa khỏe
+
+Mã: FCN
+AI Reason: Volume ổn; Biến động thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: GMD
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: Thị trường chung yếu
-
-Mã: STB
+Mã: HHV
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: C32
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+Mã: IJC
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu
+
+Mã: KSB
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Thị trường chung yếu
+
+Mã: LCG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
 Mã: OCB
-AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp
-AI Warning: Thị trường chung yếu; MACD chưa xác nhận
-
-Mã: SRC
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: FCN
-AI Reason: Biến động thấp; MACD Hist tăng
+Mã: PDR
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
 
-Mã: BAF
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: Thị trường chung yếu
-
-Mã: QNS
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Biáº¿n đá»ng thấp; MACD Hist tăng
+Mã: SCR
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Thị trường chung yếu
