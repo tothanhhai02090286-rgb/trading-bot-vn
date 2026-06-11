@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-OCB,OK,2026-06-03,63.04,4.99,1.88,-0.42,8.64,13,9,69.23,55.86,0.68,9.69,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-IJC,OK,2026-06-03,30.69,-2.45,0.34,-1.64,-1.94,9,6,66.67,52.01,0.44,6.0,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-GMD,OK,2026-06-03,25.22,-3.3,0.82,-2.14,-3.17,6,4,66.67,66.38,0.69,6.33,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-TCH,OK,2026-06-03,28.0,-5.65,0.41,-3.81,-2.57,8,4,50.0,39.1,-0.54,8.12,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VHC,OK,2026-06-03,30.49,-2.41,0.24,-0.51,-0.34,12,6,50.0,56.04,-0.46,5.83,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-CII,OK,2026-06-03,24.47,-7.95,0.38,-6.42,-5.63,8,4,50.0,47.22,-0.38,7.62,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-LCG,OK,2026-06-03,15.69,-2.35,0.66,-1.09,-1.51,2,1,50.0,50.0,0.73,6.5,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-SBT,OK,2026-06-03,50.0,-2.18,1.01,-3.58,-7.34,13,5,38.46,41.78,0.21,7.62,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-IDI,OK,2026-06-03,36.47,-0.9,0.31,1.21,1.91,13,5,38.46,44.04,-1.01,7.31,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-KDH,OK,2026-06-03,38.96,-1.04,0.4,-0.43,2.46,14,5,35.71,36.65,-0.86,6.14,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-PET,OK,2026-06-03,61.57,3.05,0.5,-0.1,4.72,15,5,33.33,42.63,-0.87,7.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DXG,OK,2026-06-03,34.27,-3.14,0.34,-2.61,-0.31,13,4,30.77,46.43,0.04,7.31,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SCR,OK,2026-06-03,34.65,-2.73,0.52,-1.47,-0.74,12,3,25.0,38.83,-1.05,8.08,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-APG,OK,2026-06-03,26.76,-4.49,0.38,-2.38,-5.65,13,3,23.08,26.27,-1.07,8.38,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-HHV,OK,2026-06-03,31.03,-2.65,0.43,-2.51,-1.27,10,2,20.0,34.32,-1.55,7.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+OCB,OK,2026-06-04,71.15,7.98,3.23,5.11,11.76,7,6,85.71,64.89,1.34,10.71,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+BVB,OK,2026-06-04,37.5,-1.56,0.7,-1.6,0.82,14,9,64.29,49.27,0.44,7.5,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+HAH,OK,2026-06-04,35.63,-0.77,1.69,1.85,-0.18,10,6,60.0,55.42,0.98,9.4,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PHP,OK,2026-06-04,65.22,1.97,1.02,1.36,0.0,14,8,57.14,58.26,0.97,6.71,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+DHC,OK,2026-06-04,46.51,-0.45,1.08,-1.37,2.43,11,6,54.55,42.52,-0.16,7.36,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+IDI,OK,2026-06-04,42.47,-1.39,1.1,1.05,-0.17,17,9,52.94,49.85,0.18,7.65,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+GVR,OK,2026-06-04,40.16,-1.2,0.76,2.91,-2.35,13,6,46.15,45.07,0.32,8.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+KBC,OK,2026-06-04,22.67,-4.63,0.48,-1.96,-5.06,3,0,0.0,7.5,-1.88,7.67,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+ASM,OK,2026-06-04,45.45,0.17,0.55,1.19,2.76,18,8,44.44,49.32,-0.09,6.39,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SBT,OK,2026-06-04,50.0,-2.13,0.75,-2.65,-6.48,15,6,40.0,40.52,0.18,7.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+KDC,OK,2026-06-04,74.53,4.46,0.91,1.59,5.57,6,2,33.33,16.8,-0.75,6.5,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+APG,OK,2026-06-04,26.03,-5.07,0.78,-3.04,-5.51,13,3,23.08,28.28,-1.41,8.15,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+CTS,OK,2026-06-04,46.67,-0.38,0.6,0.0,1.1,14,3,21.43,33.1,-2.79,7.07,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SZC,OK,2026-06-04,22.22,-7.76,0.39,-5.76,-8.4,6,1,16.67,31.87,-1.86,6.33,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+STK,OK,2026-06-04,4.55,-10.44,0.94,-7.44,-13.18,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.

@@ -1,0 +1,4 @@
+﻿train_start,train_end,test_start,test_end,train_samples,test_samples,test_win_rate,test_avg_return,test_positive
+2024-01-22,2024-05-21,2024-05-22,2024-06-21,11,5,0.0,-1.57,False
+2024-02-22,2024-06-21,2024-06-22,2024-07-21,12,8,12.5,-1.4,False
+2026-01-22,2026-05-21,2026-05-22,2026-06-21,7,10,10.0,-2.68,False

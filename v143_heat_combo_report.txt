@@ -4,38 +4,41 @@ Nguồn mã: <b>v142_ma20_heat_backtest.csv</b>
 Số mã kiểm tra: <b>15</b>
 
 <b>KẾT QUẢ HEAT COMBO</b>
-🔹 <b>PET</b> | Heat: <b>83.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
-   MA20: 1.21% | MA20 hot: 58.23% | RSI: 52.57
-   Win T+5: 51.70% | Lợi TB T+5: 1.13%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 52.6 | Volume ổn 1.21 | Lợi TB T+5 tốt 1.13%
-🔹 <b>SBT</b> | Heat: <b>67.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: 2.44% | MA20 hot: 70.89% | RSI: 42.59
-   Win T+5: 61.40% | Lợi TB T+5: 0.78%
-   Mạnh: Volume ổn 1.25 | Win T+5 vùng tương tự tốt 61.4%
-🔹 <b>TCH</b> | Heat: <b>63.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
-   MA20: -2.41% | MA20 hot: 30.51% | RSI: 43.75
-   Win T+5: 54.17% | Lợi TB T+5: 0.96%
-   Mạnh: MA20 chưa quá nóng | Volume ổn 1.49
-🔹 <b>VHC</b> | Heat: <b>58.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
-   MA20: -2.48% | MA20 hot: 24.58% | RSI: 40.00
-   Win T+5: 54.90% | Lợi TB T+5: 0.34%
+🔹 <b>PHP</b> | Heat: <b>80.00</b> | ✅ KHỎE - CÒN THEO DÕI/MUA CÓ KIỂM SOÁT
+   MA20: 1.60% | MA20 hot: 57.36% | RSI: 63.64
+   Win T+5: 51.31% | Lợi TB T+5: 0.84%
+   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 63.6 | Volume xác nhận mạnh 1.88
+🔹 <b>SBT</b> | Heat: <b>72.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: 5.39% | MA20 hot: 88.21% | RSI: 62.71
+   Win T+5: 61.86% | Lợi TB T+5: 1.06%
+   Mạnh: RSI vùng đẹp 62.7 | Volume ổn 1.46 | Win T+5 vùng tương tự tốt 61.9% | Lợi TB T+5 tốt 1.06%
+   Yếu: MA20 thuộc vùng nóng cao
+🔹 <b>GVR</b> | Heat: <b>71.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: 0.16% | MA20 hot: 46.70% | RSI: 50.59
+   Win T+5: 55.97% | Lợi TB T+5: 1.14%
+   Mạnh: MA20 chưa quá nóng | Volume ổn 1.43 | Lợi TB T+5 tốt 1.14%
+🔹 <b>BVB</b> | Heat: <b>60.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: 1.49% | MA20 hot: 67.68% | RSI: 61.11
+   Win T+5: 40.97% | Lợi TB T+5: 0.52%
+   Mạnh: RSI vùng đẹp 61.1 | Volume xác nhận mạnh 1.90
+   Yếu: Win T+5 vùng tương tự yếu 41.0%
+🔹 <b>DHC</b> | Heat: <b>60.00</b> | 🟡 ỔN NHƯNG KHÔNG MUA ĐUỔI
+   MA20: 2.11% | MA20 hot: 70.90% | RSI: 63.11
+   Win T+5: 42.55% | Lợi TB T+5: 0.23%
+   Mạnh: RSI vùng đẹp 63.1 | Volume xác nhận mạnh 3.17
+   Yếu: Win T+5 vùng tương tự yếu 42.6%
+🔹 <b>SZC</b> | Heat: <b>56.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: -1.25% | MA20 hot: 42.30% | RSI: 42.06
+   Win T+5: 46.97% | Lợi TB T+5: 0.03%
+   Mạnh: MA20 chưa quá nóng | Volume xác nhận mạnh 1.56
+   Yếu: Win T+5 vùng tương tự yếu 47.0%
+🔹 <b>HAH</b> | Heat: <b>48.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: -1.59% | MA20 hot: 29.95% | RSI: 44.59
+   Win T+5: 55.56% | Lợi TB T+5: 0.79%
    Mạnh: MA20 chưa quá nóng
-🔹 <b>IJC</b> | Heat: <b>58.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
-   MA20: -1.99% | MA20 hot: 28.98% | RSI: 44.66
-   Win T+5: 52.24% | Lợi TB T+5: 0.53%
-   Mạnh: MA20 chưa quá nóng
-🔹 <b>CII</b> | Heat: <b>58.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
-   MA20: -0.46% | MA20 hot: 45.59% | RSI: 49.06
-   Win T+5: 50.51% | Lợi TB T+5: -0.21%
-   Mạnh: MA20 chưa quá nóng | Volume xác nhận mạnh 2.27
-   Yếu: Lợi TB T+5 âm -0.21%
-🔹 <b>GMD</b> | Heat: <b>53.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
-   MA20: 0.52% | MA20 hot: 57.12% | RSI: 55.24
-   Win T+5: 46.33% | Lợi TB T+5: -0.00%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 55.2 | Volume ổn 1.00
-   Yếu: Win T+5 vùng tương tự yếu 46.3% | Lợi TB T+5 âm -0.00%
-🔹 <b>DXG</b> | Heat: <b>48.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
-   MA20: -0.75% | MA20 hot: 48.64% | RSI: 58.53
-   Win T+5: 42.58% | Lợi TB T+5: -0.64%
-   Mạnh: MA20 chưa quá nóng | RSI vùng đẹp 58.5
-   Yếu: Win T+5 vùng tương tự yếu 42.6% | Lợi TB T+5 âm -0.64%
+   Yếu: Volume yếu 0.70
+🔹 <b>CTS</b> | Heat: <b>46.00</b> | ⚠️ NÓNG - CHỈ THĂM DÒ / CHỜ CHỈNH
+   MA20: -1.14% | MA20 hot: 38.24% | RSI: 42.20
+   Win T+5: 41.73% | Lợi TB T+5: -1.52%
+   Mạnh: MA20 chưa quá nóng | Volume xác nhận mạnh 1.64
+   Yếu: Win T+5 vùng tương tự yếu 41.7% | Lợi TB T+5 âm -1.52%
