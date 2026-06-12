@@ -1,16 +1,16 @@
 ===== TONG HOP CHUOI TANG & THOI GIAN DAT LOI NHUAN =====
 
 Tong so ma phan tich: 136
-Ma co chuoi tang dai nhat: VIC (12 phien)
+Ma co chuoi tang dai nhat: SSI (12 phien)
 
 --- Time to profit 3% (top 10 trung vi thap nhat) ---
-SRC: 3 ngay (ti le dat 81.3%)
-CMG: 4 ngay (ti le dat 57.4%)
-VIC: 4 ngay (ti le dat 68.7%)
+SRC: 3 ngay (ti le dat 80.6%)
+CMG: 4 ngay (ti le dat 57.3%)
+DIG: 4 ngay (ti le dat 57.1%)
 VOS: 4 ngay (ti le dat 67.5%)
-PVS: 4 ngay (ti le dat 58.2%)
-CSV: 4 ngay (ti le dat 65.5%)
-PDR: 4 ngay (ti le dat 62.8%)
-VRE: 4 ngay (ti le dat 61.8%)
-SHS: 4 ngay (ti le dat 59.6%)
-VHM: 4 ngay (ti le dat 65.8%)
+CEO: 4 ngay (ti le dat 60.3%)
+VRE: 4 ngay (ti le dat 61.4%)
+HHS: 4 ngay (ti le dat 70.0%)
+CSV: 4 ngay (ti le dat 64.7%)
+HNG: 4 ngay (ti le dat 73.9%)
+VPG: 4 ngay (ti le dat 48.8%)
