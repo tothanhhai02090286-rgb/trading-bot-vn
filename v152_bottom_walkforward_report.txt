@@ -1,46 +1,46 @@
 ✅ <b>V15.2 BOTTOM WALK-FORWARD HOÀN TẤT</b>
 
 Nguồn mã: <b>v151_bottom_quality.csv</b>
-Số mã kiểm tra: <b>91</b>
+Số mã kiểm tra: <b>84</b>
 
 <b>KIỂM ĐỊNH 2 THÁNG HỌC → 1 THÁNG TEST</b>
 
+🔹 <b>STB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 18 | Đoạn dương: 15 | Tỷ lệ dương: 83.33%
+Win TB: 70.97% | Lợi TB: 1.64%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>PVT</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 14 | Đoạn dương: 11 | Tỷ lệ dương: 78.57%
+Win TB: 58.92% | Lợi TB: 0.82%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>VCI</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 9 | Đoạn dương: 7 | Tỷ lệ dương: 77.78%
+Win TB: 63.09% | Lợi TB: 0.47%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>TCL</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 4 | Đoạn dương: 3 | Tỷ lệ dương: 75.00%
+Win TB: 57.20% | Lợi TB: 0.19%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
+🔹 <b>ABB</b> | ỔN ĐỊNH MẠNH
+Đoạn test: 8 | Đoạn dương: 6 | Tỷ lệ dương: 75.00%
+Win TB: 63.80% | Lợi TB: 2.63%
+Lý do: Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+
 🔹 <b>POW</b> | ỔN ĐỊNH VỪA
+Đoạn test: 16 | Đoạn dương: 12 | Tỷ lệ dương: 75.00%
+Win TB: 51.85% | Lợi TB: 0.93%
+Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+
+🔹 <b>NT2</b> | ỔN ĐỊNH VỪA
 Đoạn test: 17 | Đoạn dương: 12 | Tỷ lệ dương: 70.59%
-Win TB: 48.49% | Lợi TB: 0.38%
+Win TB: 51.27% | Lợi TB: 0.64%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
 
-🔹 <b>VPB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 13 | Đoạn dương: 9 | Tỷ lệ dương: 69.23%
-Win TB: 60.02% | Lợi TB: 0.81%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>SAB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 19 | Đoạn dương: 13 | Tỷ lệ dương: 68.42%
-Win TB: 51.51% | Lợi TB: 0.32%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>GVR</b> | ỔN ĐỊNH VỪA
-Đoạn test: 15 | Đoạn dương: 10 | Tỷ lệ dương: 66.67%
-Win TB: 62.49% | Lợi TB: 1.29%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>VOS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 6 | Đoạn dương: 4 | Tỷ lệ dương: 66.67%
-Win TB: 54.05% | Lợi TB: 1.15%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>MBS</b> | ỔN ĐỊNH VỪA
-Đoạn test: 15 | Đoạn dương: 10 | Tỷ lệ dương: 66.67%
-Win TB: 60.14% | Lợi TB: 0.97%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>TCH</b> | ỔN ĐỊNH VỪA
-Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
-Win TB: 49.18% | Lợi TB: 0.15%
-Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-
-🔹 <b>HDB</b> | ỔN ĐỊNH VỪA
-Đoạn test: 14 | Đoạn dương: 9 | Tỷ lệ dương: 64.29%
-Win TB: 57.58% | Lợi TB: 1.03%
+🔹 <b>PVS</b> | ỔN ĐỊNH VỪA
+Đoạn test: 16 | Đoạn dương: 11 | Tỷ lệ dương: 68.75%
+Win TB: 57.52% | Lợi TB: 1.39%
 Lý do: Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
