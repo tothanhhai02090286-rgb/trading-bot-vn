@@ -1,559 +1,612 @@
 ﻿Mã,Ngày mua,Số ngày giữ ước tính,Ngày dự kiến bán được,Bán được chưa?,Ghi chú T+2.5,Số lượng,Giá vốn,Giá hiện tại,Nguồn giá,Thời gian giá,Realtime OK,Ghi chú giá,KL_T0,KL_T1,KL_T2,KL_Bán_Được,Sellable Ratio %,VN Safety Score,Thanh khoản band,GTGD TB 20 phiên tỷ,Exit Risk,Near Ceiling,Near Floor,Sector,Sector Flow,Sector Score,Sector Rank,Sector Leaders,Sector Note,Lãi/lỗ %,Tỷ trọng hiện tại %,Quyết định cuối,Chế độ đánh,Meta Allocation %,Meta Exposure,Regime,Equity State,Nhóm realtime,Trạng thái xu hướng,MA5,MA20,ATR,ATR %,Swing Low,Swing High,Hard Stop,ATR Stop,MA20 Stop,Swing Low Stop,Trailing Stop,Stop đề xuất,Loại stop chính,Trạng thái vị thế,Position State Code,Position State,Position Risk Level,Position Action Hint,Position State Reason,Position Can Sell,Position Can Add,Có thể mua thêm?,Lý do mua thêm,Hành động gốc,Hành động V19.2,Kết luận dễ hiểu,Lý do chính,Độ ưu tiên cảnh báo,Cập nhật lúc,Position Health Score,Position Health Level,Position Health Icon,Position Health Verdict,Position Health Reasons,Position Health Reasons Bullets,Position Risk Score,Position Risk Icon,Position Health Action Icon,Position Health Recommendation,Mini Market Regime,Mini Market Icon,Mini Market Score,Mini Market Universe,Mini Market Valid Count,Mini Market Qualified,Mini Market Qualified Valid Count,Mini Market Qualified Regime,Mini Market Qualified Icon,Mini Market Qualified Score,Mini Market Qualified Pct Up,Mini Market Qualified Pct Above MA20,Mini Market Qualified Pct Above MA50,Mini Market Qualified Pct Healthy,Mini Market Qualified Pct Very Healthy,Mini Market Qualified Pct Weak,Mini Market Qualified Money Flow,Mini Market Qualified Money Flow Score,Mini Market Qualified Recommendation Lines,Mini Market Qualified Notes,Mini Market Pct Up,Mini Market Pct Above MA20,Mini Market Pct Above MA50,Mini Market Pct Healthy,Mini Market Pct Very Healthy,Mini Market Pct Weak,Mini Market Breadth Score,Mini Market Leadership Score,Mini Market Risk Pressure Score,Mini Market Money Flow Score,Mini Market Money Flow,Mini Market Recommendation,Mini Market Recommendation Lines,Mini Market Notes,Leader Rotation Status,Leader Rotation Score,Leader Rotation Icon,Leader Rotation Raw Score,Leader Rotation Market Factor,Leader Rotation Adjusted Score,Leader Rotation Universe Score,Leader Rotation Sector Map Source,Leader Rotation Mapped Universe,Leader Rotation Mapped Qualified,Leader Rotation Universe,Leader Rotation Qualified,Leading Sectors,Weak Sectors,Universe Leaders,Qualified Leaders,Rotation Flow Direction,Leader Rotation Notes,Leader Rotation Recommendation,Institutional Flow Status,Institutional Flow Icon,Institutional Flow Score,Institutional Flow Label,Institutional Flow Sector Count,Institutional Flow Symbol Count,Institutional Flow Data Count,Institutional Flow Last Updated,Institutional Flow Freshness Status,Institutional Flow Freshness Icon,Institutional Flow Freshness Label,Institutional Flow Data Age Hours,Institutional Flow Top Sectors,Institutional Flow Weak Sectors,Institutional Flow Accumulation,Institutional Flow Distribution,Institutional Flow Banking Score,Institutional Flow Securities Score,Institutional Flow Real Estate Score,Institutional Flow Position Notes,Institutional Flow Notes,Institutional Flow Recommendation,Institutional Flow Conviction Ranking,Market Internals Status,Market Internals Icon,Market Internals Score,Market Internals Label VI,Market Internals Last Updated,Market Internals Freshness Icon,Market Internals Freshness Label,Market Internals Age Hours,Market Internals Flow Score,Market Internals Flow Label,Market Internals Breadth Score,Market Internals Breadth Label,Market Internals Pct Up,Market Internals Above MA20,Market Internals Above MA50,Market Internals Participation Pct,Market Internals Participation Label,Market Liquidity Value Bn,Market Liquidity Avg20 Bn,Market Liquidity Vs20 Pct,Market Internals Distribution Days 20,Market Internals Distribution Label,Market Internals Distribution Recent Dates,Market Internals Distribution Latest Date,Market Internals Distribution Latest Note,Market Internals Distribution Latest Value Bn,Market Internals Distribution Latest Avg20 Bn,Market Internals Distribution Latest Vs20 Pct,Distribution Pressure Score,Distribution Pressure Label,Correction Probability 5D,Sideway Probability 5D,Recovery Probability 5D,Correction Probability 10D,Sideway Probability 10D,Breakout Probability 10D,Market Probability Forecast Label,Market Probability Forecast Recommendation,Market Internals Concentration Pct,Market Internals Concentration Symbol,Market Internals Concentration Label,Market Internals RS Notes,Market Internals Recommendation,Market Internals Notes,MA Proximity Status,MA Proximity Icon,MA Proximity Label VI,MA Proximity Tolerance %,MA Proximity Universe Count,MA Proximity Valid Count,MA20 Proximity Count,MA50 Proximity Count,MA Proximity Last Updated,MA Proximity Freshness Icon,MA Proximity Freshness Label,MA Proximity Age Hours,Near MA20 Lines,Near MA50 Lines,MA Proximity Notes,PIE Status,PIE Icon,Portfolio Health Score,Portfolio Health Level,Portfolio Health Icon,Portfolio Position Count,Portfolio Healthy Count,Portfolio Warning Count,Portfolio Danger Count,Portfolio Critical Count,Portfolio Near Stop Count,Portfolio Exit Risk Count,Portfolio Loss Count,Portfolio Profit Count,Current Stock Exposure %,Target Cash %,Target Stock %,Target Margin %,Max New Position %,Max Position %,Used Risk Budget %,Max Risk Budget %,Remaining Risk Budget %,Portfolio Drawdown %,Drawdown Protection Level,Drawdown Protection Icon,Portfolio Exposure Reason,Portfolio Risk Reason,Position Sizing Note,Portfolio Recommendation,Portfolio Intelligence Notes
-TPB,2026-06-04,14.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,2000.0,16.22,16.45,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,2000.0,0.0,0.0,0.0,100,ỔN,197.694,THẤP,KHÔNG,KHÔNG,Ngân hàng,MẠNH,76.3,7/19,"OCB, ACB, ABB","Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",1.418,25.89,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,XU HƯỚNG TỐT,16.31,15.952,0.336,2.041,15.7,16.6,15.409,15.778,15.792,15.621,,15.792,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng XU HƯỚNG TỐT, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-18 07:32:47,87,EXCELLENT,🟢,Vị thế rất khỏe,"Hàng T+0/T+1, chưa linh hoạt xử lý; Exit Risk thấp; Thanh khoản ổn; Sector Flow mạnh; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
+TPB,2026-06-04,19.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,2000.0,16.22,16.25,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,2000.0,0.0,0.0,0.0,100,ỔN,216.06,THẤP,KHÔNG,KHÔNG,Ngân hàng,TRUNG TÍNH,50.6,7/19,"BVB, ABB, OCB","Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.",0.185,25.89,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,TRÊN MA20,16.31,16.047,0.329,2.022,15.75,16.6,15.409,15.592,15.887,15.671,,15.887,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-23 06:23:35,84,EXCELLENT,🟢,Vị thế rất khỏe,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk thấp; Thanh khoản ổn; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
+✅ Xu hướng trên MA20
 ✅ Exit Risk thấp
 ✅ Thanh khoản ổn
-❌ Sector Flow mạnh
 • Chưa bán được theo T+2.5
-✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",13,🟢,🟢,🟢 GIỮ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
+✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",16,🟢,🟢,🟢 GIỮ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
 - VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
-VRE,2026-06-04,14.0,2026-06-06,CÓ,Đã đủ điều kiện bán theo T+2.5,1300.0,32.67,28.15,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,0.0,1300.0,100.0,80,ỔN,141.686,THẤP,KHÔNG,KHÔNG,Bất động sản bán lẻ,YẾU,13.8,1/1,VRE,"Ngành yếu, hạn chế mua mới hoặc mua thêm.",-13.835,32.41,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,28.62,30.587,1.057,3.755,27.55,31.65,31.037,26.036,30.281,27.412,,31.037,Hard Stop,CHẠM STOP THÔNG MINH,NEAR_STOP,Chạm/vượt stop,CRITICAL,CẮT LỖ,Giá hiện tại đã chạm hoặc thấp hơn stop đề xuất,CÓ,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THOÁT VỊ THẾ,THOÁT VỊ THẾ,Bán thoát vị thế nếu đã đủ T+2.5 và giá realtime xác nhận,"CHẠM STOP THÔNG MINH; stop chính: Hard Stop; ưu tiên bảo vệ vốn; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Giá hiện tại đã chạm hoặc thấp hơn stop đề xuất",5,2026-06-18 07:32:47,4,CRITICAL,🔴,"Rất xấu, ưu tiên thoát/cắt lỗ nếu bán được","Lỗ trên 10%, rủi ro rất cao; Position State: gần/chạm stop; Risk Level từ Position State: HIGH; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng dưới MA20; Exit Risk thấp","❌ Lỗ trên 10%, rủi ro rất cao
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
+VRE,2026-06-04,19.0,2026-06-06,CÓ,Đã đủ điều kiện bán theo T+2.5,1300.0,32.67,30.7,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,0.0,1300.0,100.0,100,ỔN,154.332,THẤP,KHÔNG,KHÔNG,Bất động sản bán lẻ,MẠNH,85.4,1/1,VRE,"Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",-6.03,32.41,WATCHLIST,LEGACY WATCH MODE,1.0,0.0,UNKNOWN,UNKNOWN,TOP THEO DÕI,TRÊN MA20,29.39,30.23,1.25,4.072,27.55,31.4,31.037,28.2,29.928,27.412,,31.037,Hard Stop,CHẠM STOP THÔNG MINH,NEAR_STOP,Chạm/vượt stop,HIGH,CẮT LỖ,Giá hiện tại đã chạm hoặc thấp hơn stop đề xuất,CÓ,KHÔNG,KHÔNG,Chưa đủ lãi để mua thêm an toàn,THOÁT VỊ THẾ,THOÁT VỊ THẾ,Bán thoát vị thế nếu đã đủ T+2.5 và giá realtime xác nhận,"CHẠM STOP THÔNG MINH; stop chính: Hard Stop; ưu tiên bảo vệ vốn; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Giá hiện tại đã chạm hoặc thấp hơn stop đề xuất",5,2026-06-23 06:23:35,42,WARNING,🟡,Theo dõi sát,"Lỗ trên 5%, vùng cắt lỗ thực chiến; Position State: gần/chạm stop; Risk Level từ Position State: HIGH; Giá hiện tại đã dưới/chạm Smart Stop; Xu hướng trên MA20; Exit Risk thấp","❌ Lỗ trên 5%, vùng cắt lỗ thực chiến
 ❌ Position State: gần/chạm stop
 ❌ Risk Level từ Position State: HIGH
 ❌ Giá hiện tại đã dưới/chạm Smart Stop
+✅ Xu hướng trên MA20
+✅ Exit Risk thấp",58,🟠,🔴,🔴 THOÁT VỊ THẾ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
+BID,2026-06-04,19.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,700.0,42.78,42.45,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,700.0,0.0,0.0,0.0,100,ỔN,167.798,THẤP,KHÔNG,KHÔNG,Ngân hàng,TRUNG TÍNH,50.6,12/19,"BVB, ABB, OCB","Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.",-0.771,23.49,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,XU HƯỚNG TỐT,42.37,42.062,0.861,2.028,40.8,43.2,40.641,40.728,41.641,40.596,,41.641,MA20 Stop,GIỮ / THEO DÕI,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THEO DÕI VỊ THẾ,THEO DÕI VỊ THẾ,"Theo dõi vị thế, chưa hành động mạnh","Chưa có tín hiệu hành động mạnh; Sector Flow: Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-23 06:23:36,79,GOOD,🟢,Giữ có kiểm soát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Exit Risk thấp; Thanh khoản ổn; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
+✅ Exit Risk thấp
+✅ Thanh khoản ổn
+• Chưa bán được theo T+2.5
+✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",21,🟢,🟡,🟡 THEO DÕI VỊ THẾ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
+POW,2026-06-04,19.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,550.0,13.62,14.5,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,550.0,0.0,0.0,100,ỔN,107.235,THẤP,KHÔNG,KHÔNG,Điện,MẠNH,83.9,1/2,"POW, NT2","Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",6.461,5.91,WATCHLIST,LEGACY WATCH MODE,1.0,0.0,UNKNOWN,UNKNOWN,TOP THEO DÕI,XU HƯỚNG TỐT,14.18,13.797,0.336,2.315,13.3,14.55,12.939,13.828,13.659,13.234,13.828,13.828,ATR Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Tỷ trọng hiện tại đã >= tỷ trọng meta,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng XU HƯỚNG TỐT, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-23 06:23:36,95,EXCELLENT,🟢,Vị thế rất khỏe,"Lãi trên 5%, vị thế tích cực; Hàng T+0/T+1, chưa linh hoạt xử lý; Exit Risk thấp; Thanh khoản ổn; Sector Flow mạnh; Chưa bán được theo T+2.5","✅ Lãi trên 5%, vị thế tích cực
+• Hàng T+0/T+1, chưa linh hoạt xử lý
+✅ Exit Risk thấp
+✅ Thanh khoản ổn
+❌ Sector Flow mạnh
+• Chưa bán được theo T+2.5",5,🟢,🟢,🟢 GIỮ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
+SAB,2026-06-04,19.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,200.0,47.57,48.2,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,200.0,0.0,0.0,75,YẾU,28.232,CAO,KHÔNG,KHÔNG,Đồ uống,TRUNG TÍNH,58.4,1/1,SAB,"Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.",1.324,7.64,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,TRÊN MA20,48.49,47.813,0.907,1.882,47.0,49.85,45.191,46.386,47.335,46.765,,47.335,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,HIGH,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Dòng tiền ngành chưa quá rõ, không cộng điểm mạnh.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-23 06:23:36,46,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk cao, có thể khó thoát hàng; Thanh khoản yếu; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
+✅ Xu hướng trên MA20
+❌ Exit Risk cao, có thể khó thoát hàng
+❌ Thanh khoản yếu
+• Chưa bán được theo T+2.5
+✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",54,🟠,🟢,🟢 GIỮ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
+VNM,2026-06-04,19.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,100.0,58.59,58.6,history_cache,2026-06-22 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,100.0,0.0,0.0,100,ỔN,151.317,THẤP,KHÔNG,KHÔNG,Thực phẩm,YẾU,44.0,3/3,"KDC, QNS, VNM","Ngành yếu, hạn chế mua mới hoặc mua thêm.",0.017,4.67,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,DƯỚI MA20,58.98,58.855,0.743,1.268,58.0,59.8,55.66,57.114,58.266,57.71,,58.266,MA20 Stop,YẾU - THEO DÕI GIẢM,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,MEDIUM,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,THEO DÕI VỊ THẾ,THEO DÕI VỊ THẾ,"Theo dõi vị thế, chưa hành động mạnh","Chưa có tín hiệu hành động mạnh; Sector Flow: Ngành yếu, hạn chế mua mới hoặc mua thêm.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-23 06:23:37,59,WARNING,🟡,Theo dõi sát,"Hàng T+0/T+1, chưa linh hoạt xử lý; Giá sát Smart Stop dưới 1%; Xu hướng dưới MA20; Exit Risk thấp; Thanh khoản ổn; Sector Flow yếu","• Hàng T+0/T+1, chưa linh hoạt xử lý
+❌ Giá sát Smart Stop dưới 1%
 ❌ Xu hướng dưới MA20
-✅ Exit Risk thấp",96,🔴,🔴,🔴 THOÁT VỊ THẾ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
-BID,2026-06-04,14.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,700.0,42.78,42.95,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,700.0,0.0,0.0,0.0,100,ỔN,179.896,THẤP,KHÔNG,KHÔNG,Ngân hàng,MẠNH,76.3,15/19,"OCB, ACB, ABB","Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",0.397,23.49,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,TRÊN MA20,41.78,42.203,0.864,2.012,40.8,43.2,40.641,41.222,41.781,40.596,,41.781,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-18 07:32:48,92,EXCELLENT,🟢,Vị thế rất khỏe,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk thấp; Thanh khoản ổn; Sector Flow mạnh; Chưa bán được theo T+2.5","• Hàng T+0/T+1, chưa linh hoạt xử lý
-✅ Xu hướng trên MA20
 ✅ Exit Risk thấp
 ✅ Thanh khoản ổn
-❌ Sector Flow mạnh
-• Chưa bán được theo T+2.5",8,🟢,🟢,🟢 GIỮ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
+❌ Sector Flow yếu",41,🟡,🟡,🟡 THEO DÕI VỊ THẾ,WEAK,🟠,34,138,138,10,10,SIDEWAY_UP,🟡,70,80.0,90.0,60.0,40.0,50.0,10.0,TÍCH CỰC,67,"🟡 Mua chọn lọc/test vừa phải
+🟡 Không mua đuổi quá xa nền giá
+🟢 Giữ cổ phiếu Health tốt",Money Flow tích cực,42.0,47.1,34.1,17.4,19.6,52.9,42,18,43,30,YẾU,"Hạn chế mua mới, không bình quân giá xuống, ưu tiên quản trị vị thế.","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Ưu tiên giữ tiền mặt/quản trị rủi ro","Nhiều mã đang yếu/gãy MA20; Money Flow yếu, hạn chế mua mới",LEADER PHÂN HÓA,52,🟠,95,0.55,52,34,sector_mapping.csv,109,10,138,10,"Chứng khoán(99), Dầu khí(93), Điện - Năng lượng(92)","Phân bón - Hóa chất(31), Thủy sản(73), Dệt may(74)","VHM(100), VIC(100), PC1(100), CTS(100), FTS(100)","CTS(100), FTS(100), PVD(100), POW(94), LPB(90)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Phân bón - Hóa chất,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 34: factor 0.55,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",CAUTION,🟠,50.9,Dòng tiền yếu/khó lan tỏa,22,138,138,2026-06-22 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,23.4,"- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Ngân hàng: Flow 56.3/100 | 🟢 TIỀN ĐANG VÀO | Strength 62.9/100 🟢 LEADER MỚI NỔI
+  5D 0.0% | Vol 0.98x | Bền vững: 4/10 phiên Top 5 | Leader thật: 5 (LPB +6.49%, BVB +5.34%, BID +2.04%, ABB +1.18%)
+  Mã mạnh: LPB +6.49%, BVB +5.34%, BID +2.04% | Mã yếu: ACB -3.30%, OCB -2.78%, TCB -2.52%
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bất động sản KCN: Flow 44.0/100 | 🟠 TIỀN SUY YẾU | Strength 13.2/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.33% | Vol 0.54x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VGC +0.35%, SGT -1.01% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu","- Chứng khoán: Flow 82.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 78.9/100 🟢 LEADER BỀN VỮNG
+  5D 2.72% | Vol 1.01x | Bền vững: 6/10 phiên Top 5 | Leader thật: 5 (CTS +12.85%, FTS +11.79%, MBS +3.50%, AGR +2.78%)
+  Mã mạnh: CTS +12.85%, FTS +11.79%, MBS +3.50% | Mã yếu: APG -1.15%, VIX -1.14%, TVS -0.77%
+- Nhựa - Hóa chất: Flow 71.3/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.4/100 🟢 LEADER MỚI NỔI
+  5D 0.49% | Vol 0.58x | Bền vững: 9/10 phiên Top 5 | Leader thật: 1 (AAA +1.51%)
+  Mã mạnh: AAA +1.51%, APH -0.53% | Mã yếu: không đủ mã để tách nhóm yếu
+- Vật liệu xây dựng: Flow 88.9/100 | 🟢 TIỀN VÀO MẠNH | Strength 57.7/100 🟡 TRUNG TÍNH
+  5D 3.35% | Vol 1.88x | Bền vững: 4/10 phiên Top 5 | Leader thật: 2 (BMP +9.86%, NTP +2.40%)
+  Mã mạnh: BMP +9.86%, NTP +2.40%, DHA +1.46% | Mã yếu: không đủ mã để tách nhóm yếu
+- Điện - Năng lượng: Flow 81.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 46.4/100 🟡 TRUNG TÍNH
+  5D 2.16% | Vol 1.2x | Bền vững: 3/10 phiên Top 5 | Leader thật: 1 (POW +4.32%)
+  Mã mạnh: POW +4.32%, NT2 +1.76%, REE +0.39% | Mã yếu: không đủ mã để tách nhóm yếu
+- Bán lẻ: Flow 76.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 42.8/100 🟠 NHỊP HỒI KỸ THUẬT
+  5D 3.21% | Vol 0.87x | Bền vững: 5/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: PET +10.89%, FRT +5.41%, PNJ +1.54% | Mã yếu: MWG -2.77%, DGW +1.00%","- Thép: Flow 21.8/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 6.5/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.77% | Vol 0.56x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: VPG -0.69%, HSG -0.83%, NKG -2.49% | Mã yếu: không đủ mã để tách nhóm yếu
+- Công nghệ: Flow 26.8/100 | 🟠 TIỀN SUY YẾU | Strength 12.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.06% | Vol 0.66x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: ELC +1.26%, CMG -0.36%, FPT -4.08% | Mã yếu: không đủ mã để tách nhóm yếu
+- Dệt may: Flow 40.9/100 | 🟠 TIỀN SUY YẾU | Strength 12.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.13% | Vol 1.15x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: TNG +2.09%, STK -0.45%, MSH -0.87% | Mã yếu: không đủ mã để tách nhóm yếu
+- Cao su - Khu công nghiệp: Flow 36.8/100 | 🟠 TIỀN SUY YẾU | Strength 15.0/100 🔴 SUY YẾU KÉO DÀI
+  5D -1.35% | Vol 1.21x | Bền vững: 1/10 phiên Top 5 | Leader thật: 0 (-)
+  Mã mạnh: DRC -0.43%, GVR -2.27% | Mã yếu: không đủ mã để tách nhóm yếu
+- Nông nghiệp - Chăn nuôi: Flow 37.6/100 | 🟠 TIỀN SUY YẾU | Strength 17.3/100 🔴 SUY YẾU KÉO DÀI
+  5D -0.04% | Vol 0.76x | Bền vững: 0/10 phiên Top 5 | Leader thật: 1 (BAF +2.29%)
+  Mã mạnh: BAF +2.29%, HNG +0.00%, DBC -0.53% | Mã yếu: PAN -1.30%, HAG -0.66%",56.3,82.9,54.0,"- TPB: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
 - VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
-POW,2026-06-04,14.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,550.0,13.62,14.15,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,550.0,0.0,0.0,100,ỔN,96.503,THẤP,KHÔNG,KHÔNG,Điện,MẠNH,75.4,1/2,"POW, NT2","Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",3.891,5.91,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,XU HƯỚNG TỐT,13.86,13.705,0.289,2.044,13.3,14.35,12.939,13.572,13.568,13.234,,13.62,Stop hòa vốn,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng XU HƯỚNG TỐT, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-18 07:32:48,90,EXCELLENT,🟢,Vị thế rất khỏe,"Có lãi nhẹ; Hàng T+0/T+1, chưa linh hoạt xử lý; Exit Risk thấp; Thanh khoản ổn; Sector Flow mạnh; Chưa bán được theo T+2.5","✅ Có lãi nhẹ
-• Hàng T+0/T+1, chưa linh hoạt xử lý
-✅ Exit Risk thấp
-✅ Thanh khoản ổn
-❌ Sector Flow mạnh
-• Chưa bán được theo T+2.5",10,🟢,🟢,🟢 GIỮ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
-SAB,2026-06-04,14.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,200.0,47.57,48.8,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,200.0,0.0,0.0,90,TRUNG BÌNH,30.197,TRUNG BÌNH,KHÔNG,KHÔNG,Đồ uống,MẠNH,72.4,1/1,SAB,"Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.",2.586,7.64,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,XU HƯỚNG TỐT,48.72,47.785,0.911,1.866,46.6,49.85,45.191,46.978,47.307,46.367,,47.57,Stop hòa vốn,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,MEDIUM,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng XU HƯỚNG TỐT, tiếp tục giữ; Sector Flow: Ngành đang hút tiền, tín hiệu cùng ngành đáng tin hơn.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-18 07:32:49,74,GOOD,🟢,Giữ có kiểm soát,"Có lãi nhẹ; Hàng T+0/T+1, chưa linh hoạt xử lý; Exit Risk trung bình; Sector Flow mạnh; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","✅ Có lãi nhẹ
-• Hàng T+0/T+1, chưa linh hoạt xử lý
-• Exit Risk trung bình
-❌ Sector Flow mạnh
-• Chưa bán được theo T+2.5
-✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",26,🟡,🟢,🟢 GIỮ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
-VNM,2026-06-04,14.0,2026-06-06,CHƯA,Đã đủ điều kiện bán theo T+2.5; KL_Bán_Được = 0 nên chưa có khối lượng bán thực tế,100.0,58.59,59.0,history_cache,2026-06-17 07:00:00,KHÔNG,"Giá từ cache/history, có thể trễ so với app chứng khoán",0.0,0.0,100.0,0.0,0.0,100,ỔN,157.407,THẤP,KHÔNG,KHÔNG,Thực phẩm,KHÁ,63.5,2/3,"KDC, VNM, QNS","Ngành khá ổn, có thể ủng hộ tín hiệu nếu mã không quá đuổi giá.",0.7,4.67,UNKNOWN,UNKNOWN,0.0,0.0,UNKNOWN,UNKNOWN,UNKNOWN,TRÊN MA20,59.2,58.895,0.693,1.174,57.8,59.8,55.66,57.614,58.306,57.511,,58.306,MA20 Stop,GIỮ THEO TREND,T0_T1_HOLDING,Hàng T+0/T+1 chưa bán được,LOW,THEO DÕI RỦI RO,"Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",KHÔNG,KHÔNG,KHÔNG,Không mua thêm vì Quyết định cuối không ủng hộ,GIỮ,GIỮ,Tiếp tục giữ,"Xu hướng TRÊN MA20, tiếp tục giữ; Sector Flow: Ngành khá ổn, có thể ủng hộ tín hiệu nếu mã không quá đuổi giá.; Hàng chưa đủ T+/chưa có khối lượng bán được; chỉ cảnh báo rủi ro, không báo bán thật",1,2026-06-18 07:32:49,84,EXCELLENT,🟢,Vị thế rất khỏe,"Hàng T+0/T+1, chưa linh hoạt xử lý; Xu hướng trên MA20; Exit Risk thấp; Thanh khoản ổn; Chưa bán được theo T+2.5; Giá không realtime, cần xác nhận lại trên app chứng khoán","• Hàng T+0/T+1, chưa linh hoạt xử lý
-✅ Xu hướng trên MA20
-✅ Exit Risk thấp
-✅ Thanh khoản ổn
-• Chưa bán được theo T+2.5
-✅ Giá không realtime, cần xác nhận lại trên app chứng khoán",16,🟢,🟢,🟢 GIỮ,SIDEWAY,🟡,46,138,138,7,7,BULL,🟢,76,71.4,85.7,85.7,85.7,71.4,14.3,TÍCH CỰC,60,"🟢 Có thể mua mới có kiểm soát
-🟢 Ưu tiên giữ cổ phiếu khỏe
-🟢 Có thể nâng tỷ trọng khi tín hiệu đồng thuận",Độ lan tỏa tích cực; Money Flow tích cực,54.3,68.1,35.5,18.8,25.4,31.9,55,21,61,43,TRUNG TÍNH,"Thị trường phân hóa, ưu tiên cổ phiếu khỏe, hạn chế mua đuổi.","🟡 Test nhỏ, chọn lọc cổ phiếu
-🟡 Ưu tiên quản trị vị thế
-🟠 Tránh full tỷ trọng",,LEADER PHÂN HÓA,59,🟠,85,0.7,59,46,sector_mapping.csv,109,6,138,7,"Chứng khoán(92), Ngân hàng(85), Hàng tiêu dùng(79)","Vật liệu xây dựng(77), Hàng tiêu dùng(79), Ngân hàng(85)","APG(100), CTS(100), FTS(100), PET(100), BMP(100)","SHS(93), OCB(88), SSB(84), STB(78), KDC(75)",Dòng tiền nghiêng về Chứng khoán; yếu nhất: Vật liệu xây dựng,Sector map source: sector_mapping.csv; Adjusted theo Mini Market Universe Score 46: factor 0.70,"🟠 Có leader nhưng độ lan tỏa chưa đủ mạnh, không mua lan man",SELECTIVE,🟡,64.6,Dòng tiền chọn lọc,22,138,138,2026-06-17 07:00,STALE_LAST_AVAILABLE,🟠,CŨ (CHÚ Ý) — đang dùng dữ liệu gần nhất có sẵn,24.6,"- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vận tải dầu khí: Flow 54.2/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 51.3/100 🟡 TRUNG TÍNH
-  5D 0.87% | Vol 1.09x | Bền vững: 5/10 phiên Top 5 | Leader thật: 1 (VIP +2.20%)
-  Mã mạnh: VIP +2.20%, VTO -0.47% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%
-- Thép: Flow 45.6/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 13.7/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.63% | Vol 0.91x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: NKG +3.38%, HPG +1.69%, HSG +1.69% | Mã yếu: không đủ mã để tách nhóm yếu
-- Phân bón - Hóa chất: Flow 48.8/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 14.6/100 🔴 SUY YẾU KÉO DÀI
-  5D 1.37% | Vol 1.33x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: DGC +6.69%, CSV +4.41%, BFC +2.29% | Mã yếu: DCM -3.33%, DPM -1.87%, LAS +0.00%
-- Dệt may: Flow 53.7/100 | 🟡 TIỀN THĂM DÒ / TRUNG TÍNH | Strength 16.1/100 🔴 SUY YẾU KÉO DÀI
-  5D 0.77% | Vol 1.42x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: TNG +2.08%, MSH +1.93%, GIL +0.42% | Mã yếu: không đủ mã để tách nhóm yếu","- Nhựa - Hóa chất: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 84.0/100 🟢 LEADER BỀN VỮNG
-  5D 4.1% | Vol 2.03x | Bền vững: 6/10 phiên Top 5 | Leader thật: 2 (AAA +5.11%, APH +3.08%)
-  Mã mạnh: AAA +5.11%, APH +3.08% | Mã yếu: không đủ mã để tách nhóm yếu
-- Ngân hàng: Flow 72.4/100 | 🟢 TIỀN VÀO MẠNH | Strength 79.7/100 🟢 LEADER BỀN VỮNG
-  5D 1.91% | Vol 1.26x | Bền vững: 7/10 phiên Top 5 | Leader thật: 6 (MSB +6.51%, BVB +5.65%, VIB +3.14%, TPB +3.13%)
-  Mã mạnh: MSB +6.51%, BVB +5.65%, SSB +3.47% | Mã yếu: ACB -3.72%, OCB -0.80%, HDB -0.20%
-- Chứng khoán: Flow 100.0/100 | 🟢 TIỀN VÀO MẠNH | Strength 72.0/100 🟢 LEADER MỚI NỔI
-  5D 8.01% | Vol 2.05x | Bền vững: 3/10 phiên Top 5 | Leader thật: 9 (APG +27.37%, CTS +19.66%, FTS +16.81%, BVS +8.73%)
-  Mã mạnh: APG +27.37%, CTS +19.66%, FTS +16.81% | Mã yếu: HCM -1.08%, TVS +1.54%, IVS +3.03%
-- Cảng biển - Logistics: Flow 89.8/100 | 🟢 TIỀN VÀO MẠNH | Strength 58.9/100 🟡 TRUNG TÍNH
-  5D 4.57% | Vol 1.84x | Bền vững: 5/10 phiên Top 5 | Leader thật: 2 (HAH +4.13%, PHP +4.03%)
-  Mã mạnh: VSC +9.46%, GMD +4.23%, HAH +4.13% | Mã yếu: TCL +1.00%, PHP +4.03%
-- Vật liệu xây dựng: Flow 86.6/100 | 🟢 TIỀN VÀO MẠNH | Strength 45.0/100 🟡 TRUNG TÍNH
-  5D 3.41% | Vol 1.43x | Bền vững: 1/10 phiên Top 5 | Leader thật: 2 (BMP +9.02%, DHA +2.19%)
-  Mã mạnh: BMP +9.02%, DHA +2.19%, KSB +2.01% | Mã yếu: không đủ mã để tách nhóm yếu","- Chỉ số: Flow 36.4/100 | 🟠 TIỀN SUY YẾU | Strength 10.9/100 🔴 SUY YẾU KÉO DÀI
-  5D -0.03% | Vol 1.38x | Bền vững: 0/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: VNINDEX +0.14%, VN30 -0.19% | Mã yếu: không đủ mã để tách nhóm yếu
-- Dầu khí: Flow 12.2/100 | 🔴 TIỀN ĐANG RÚT RA / KÉM LAN TỎA | Strength 11.7/100 🔴 SUY YẾU KÉO DÀI
-  5D -2.13% | Vol 0.7x | Bền vững: 2/10 phiên Top 5 | Leader thật: 0 (-)
-  Mã mạnh: PVD +0.50%, PVS -0.52%, PVT -0.75% | Mã yếu: BSR -5.72%, OIL -4.17%, PLX -3.50%",72.4,100.0,53.1,"- TPB: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- VRE: BĐS bán lẻ | ⚪ chưa đủ dữ liệu ngành
-- BID: Ngân hàng | Flow 72.4/100 | Strength 79.7/100 🟢 LEADER BỀN VỮNG | 🟢 TIỀN VÀO MẠNH
-- POW: Điện - Năng lượng | Flow 61.1/100 | Strength 32.3/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- SAB: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO
-- VNM: Hàng tiêu dùng | Flow 56.6/100 | Strength 37.0/100 🟠 NHỊP HỒI KỸ THUẬT | 🟢 TIỀN ĐANG VÀO",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"🟡 Chỉ ưu tiên leader trong top ngành, hạn chế mua lan man.
-Top ngành nên theo dõi: Nhựa - Hóa chất, Ngân hàng, Chứng khoán","1. Nhựa - Hóa chất: Conviction 80.1/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 84.0/100 | Bền vững 6/10 | Leader thật 2
-2. Ngân hàng: Conviction 77.6/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 72.4/100 | Strength 79.7/100 | Bền vững 7/10 | Leader thật 6
-3. Chứng khoán: Conviction 74.8/100 | 🟢 WATCHLIST ƯU TIÊN
-   Flow 100.0/100 | Strength 72.0/100 | Bền vững 3/10 | Leader thật 9
-4. Cảng biển - Logistics: Conviction 65.0/100 | 🟡 THEO DÕI
-   Flow 89.8/100 | Strength 58.9/100 | Bền vững 5/10 | Leader thật 2
-5. Bán lẻ: Conviction 54.1/100 | 🟠 THĂM DÒ
-   Flow 100.0/100 | Strength 44.0/100 | Bền vững 2/10 | Leader thật 1
-6. Vật liệu xây dựng: Conviction 50.5/100 | 🟠 THĂM DÒ
-   Flow 86.6/100 | Strength 45.0/100 | Bền vững 1/10 | Leader thật 2
-7. Vận tải dầu khí: Conviction 49.3/100 | 🟠 THĂM DÒ
-   Flow 54.2/100 | Strength 51.3/100 | Bền vững 5/10 | Leader thật 1",THUAN_LOI,🟢,72.4,Nội lực thị trường khỏe,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,64.6,Dòng tiền chọn lọc,46.0,🟠 Sức khỏe thị trường yếu,54.3,68.1,35.5,143.7,🟢 Dòng tiền tham gia mạnh,15376.5,13835.4,111.1,0,🟢 Chưa thấy phân phối rõ,,,,,,,1.8,🟢 THẤP — chưa có áp lực phân phối lớn,36.3,21.9,41.7,31.1,29.3,39.7,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: 3.13% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VRE: -5.06% / VNINDEX 0.14% | 🟠 yếu hơn VNINDEX
-- BID: 3.12% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- POW: 3.66% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- SAB: 2.63% / VNINDEX 0.14% | 🟢 mạnh hơn VNINDEX
-- VNM: 0.17% / VNINDEX 0.14% | 🟡 ngang thị trường","✅ Có thể giao dịch chọn lọc theo ngành mạnh, vẫn tuân thủ Position State và VN Trade Safety.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,38,19,2026-06-17 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,24.6,"- HAG: Giá 15.35 | MA20 15.34 | trên 0.07%
-- VNM: Giá 59.00 | MA20 58.89 | trên 0.18%
-- DIG: Giá 13.15 | MA20 13.12 | trên 0.19%
-- QNS: Giá 48.30 | MA20 48.20 | trên 0.21%
-- HCM: Giá 27.50 | MA20 27.56 | dưới 0.21%
-- PVD: Giá 30.25 | MA20 30.32 | dưới 0.24%","- DGW: Giá 42.00 | MA50 42.00 | dưới 0.01%
-- BAF: Giá 35.30 | MA50 35.29 | trên 0.02%
-- ORS: Giá 13.25 | MA50 13.26 | dưới 0.11%
-- SSI: Giá 27.70 | MA50 27.75 | dưới 0.17%
-- PNJ: Giá 68.00 | MA50 68.13 | dưới 0.19%
-- SRC: Giá 40.90 | MA50 40.99 | dưới 0.22%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",BALANCED,🟡,62.8,GOOD,🟢,6,5,0,0,1,1,0,1,5,100.01,60.0,40.0,0.0,0.0,15.0,4.87,10.0,5.13,0.0,NORMAL,🟢,"Universe SIDEWAY, giải ngân chọn lọc",Đã dùng khoảng 4.87%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟡 Giải ngân chọn lọc
-🟡 Ưu tiên setup có Health cao
-🟡 Giữ risk/lệnh nhỏ",Universe 46.0/100; Qualified 76.0/100; Adjusted Rotation 59.0/100; Drawdown trong ngưỡng bình thường
+- BID: Ngân hàng | Flow 56.3/100 | Strength 62.9/100 🟢 LEADER MỚI NỔI | 🟢 TIỀN ĐANG VÀO
+- POW: Điện - Năng lượng | Flow 81.4/100 | Strength 46.4/100 🟡 TRUNG TÍNH | 🟢 TIỀN VÀO MẠNH
+- SAB: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU
+- VNM: Hàng tiêu dùng | Flow 37.5/100 | Strength 23.2/100 🔴 SUY YẾU KÉO DÀI | 🟠 TIỀN SUY YẾU",Score Flow là dòng tiền tương đối theo giá + breadth + volume; Strength kết hợp Flow hôm nay + độ bền Top ngành + số leader thật. Không phải kết luận tiền lớn mua/bán thật. Luôn dùng dữ liệu gần nhất có sẵn; xem Last Updated và trạng thái dữ liệu. Tính từ 138 mã hợp lệ / 138 mã cache; 22 ngành đủ dữ liệu.,"⚠️ Giảm mua mới nếu mã không thuộc nhóm có dòng tiền rõ.
+Top ngành nên theo dõi: Chứng khoán, Nhựa - Hóa chất, Ngân hàng","1. Chứng khoán: Conviction 78.4/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 82.9/100 | Strength 78.9/100 | Bền vững 6/10 | Leader thật 5
+2. Nhựa - Hóa chất: Conviction 70.8/100 | 🟢 WATCHLIST ƯU TIÊN
+   Flow 71.3/100 | Strength 72.4/100 | Bền vững 9/10 | Leader thật 1
+3. Vật liệu xây dựng: Conviction 62.2/100 | 🟡 THEO DÕI
+   Flow 88.9/100 | Strength 57.7/100 | Bền vững 4/10 | Leader thật 2
+4. Ngân hàng: Conviction 60.0/100 | 🟡 THEO DÕI
+   Flow 56.3/100 | Strength 62.9/100 | Bền vững 4/10 | Leader thật 5
+5. Điện - Năng lượng: Conviction 51.5/100 | 🟠 THĂM DÒ
+   Flow 81.4/100 | Strength 46.4/100 | Bền vững 3/10 | Leader thật 1
+6. Bán lẻ: Conviction 49.9/100 | 🟠 THĂM DÒ
+   Flow 76.0/100 | Strength 42.8/100 | Bền vững 5/10 | Leader thật 0
+7. Chỉ số: Conviction 38.1/100 | 🔴 TRÁNH / KHÔNG ƯU TIÊN
+   Flow 70.5/100 | Strength 36.1/100 | Bền vững 0/10 | Leader thật 1",TRUNG_TINH,🟡,59.7,Nội lực thị trường trung tính,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,50.9,Dòng tiền yếu/khó lan tỏa,34.0,🔴 Sức khỏe thị trường rất yếu,42.0,47.1,34.1,95.9,🟡 Tham gia bình thường,11216.3,12968.6,86.5,0,🟢 Chưa thấy phân phối rõ,,,,,,,8.0,🟢 THẤP — chưa có áp lực phân phối lớn,40.8,28.6,30.6,35.6,37.7,26.6,🟡 XÁC SUẤT ĐI NGANG CAO,"🟡 Ưu tiên quan sát, tránh mua đuổi; chỉ xử lý theo Position State.",32.41,VRE,🟡 Tập trung vừa phải,"- TPB: -1.22% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VRE: 7.53% / VNINDEX 3.26% | 🟢 mạnh hơn VNINDEX
+- BID: 2.04% / VNINDEX 3.26% | 🟡 ngang thị trường
+- POW: 4.32% / VNINDEX 3.26% | 🟡 ngang thị trường
+- SAB: -0.62% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX
+- VNM: -1.84% / VNINDEX 3.26% | 🟠 yếu hơn VNINDEX","🟡 Ưu tiên quan sát, chỉ xử lý mã thật sự mạnh hơn thị trường.","Nội lực thị trường là điểm tổng hợp từ dòng tiền ngành, sức khỏe thị trường, mức độ tham gia dòng tiền, phiên phân phối, sức mạnh tương đối và rủi ro tập trung. Đây là bối cảnh hỗ trợ quyết định, không phải lệnh mua/bán tự động.",ACTIVE,🟢,Có nhiều mã đang gần MA20/MA50 để theo dõi,1.0,136,136,46,14,2026-06-22 07:00,🟠,CŨ (CHÚ Ý) — dùng dữ liệu gần nhất,23.4,"- SKG: Giá 8.64 | MA20 8.64 | dưới 0.02%
+- REE: Giá 51.20 | MA20 51.17 | trên 0.06%
+- HBC: Giá 5.00 | MA20 5.00 | trên 0.10%
+- EVF: Giá 13.60 | MA20 13.62 | dưới 0.13%
+- GMD: Giá 75.60 | MA20 75.74 | dưới 0.18%
+- IJC: Giá 9.60 | MA20 9.58 | trên 0.21%","- SRC: Giá 41.00 | MA50 40.99 | trên 0.02%
+- NLG: Giá 26.60 | MA50 26.62 | dưới 0.06%
+- VCB: Giá 61.30 | MA50 61.36 | dưới 0.09%
+- EVF: Giá 13.60 | MA50 13.57 | trên 0.21%
+- GAS: Giá 81.70 | MA50 81.40 | trên 0.36%
+- APH: Giá 5.58 | MA50 5.60 | dưới 0.40%","Quét các mã có giá gần MA20/MA50 trong biên độ +/- tolerance. Đây là danh sách quan sát vùng hỗ trợ/kháng cự động, không phải lệnh mua/bán tự động.",DEFENSIVE,🟠,60.5,GOOD,🟢,6,3,3,0,0,1,1,2,4,100.01,75.0,25.0,0.0,0.0,15.0,3.84,10.0,6.16,0.0,NORMAL,🟢,"Universe WEAK, chỉ giữ tỷ trọng thấp",Đã dùng khoảng 3.84%/10.0% risk budget,"Size lệnh mới chỉ là trần tham khảo, cần khớp với entry/stop thực tế","🟠 Hạn chế mua mới
+🟠 Không bình quân giá xuống
+🟠 Chỉ quan sát leader khỏe",Universe 34.0/100; Qualified 70.0/100; Adjusted Rotation 52.0/100; Drawdown trong ngưỡng bình thường
