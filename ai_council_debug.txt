@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: AAA
-AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
+Mã: BSR
+AI Reason: Biến động thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
 
-Mã: AGR
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: CSV
+Mã: DCM
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: DIG
-AI Reason: Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
-
-Mã: FTS
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: HDB
-AI Reason: Biến động thấp; MACD Hist tăng
-AI Warning: Không có cảnh báo lớn
+AI Warning: RS20 chưa khỏe
 
 Mã: LPB
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
-Mã: MBS
-AI Reason: RS20 tốt; Volume ổn; Biến động thấp; MACD Hist tăng
+Mã: PVD
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
 AI Warning: Không có cảnh báo lớn
 
-Mã: VHM
+Mã: PVS
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn
+
+Mã: VCI
 AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
-Mã: VRE
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
-AI Warning: RS20 chưa khỏe
+Mã: FTS
+AI Reason: RS20 rất mạnh; Volume ổn; Biến động thấp
+AI Warning: MACD chưa xác nhận
+
+Mã: FRT
+AI Reason: Biến động thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: HDG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: POW
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn

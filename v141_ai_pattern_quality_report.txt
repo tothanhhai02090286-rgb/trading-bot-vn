@@ -1,23 +1,23 @@
 ✅ <b>V14.1 QUALITY RANKING HOÀN TẤT</b>
 
 Nguồn: <b>ai_risk_filtered.csv</b>
-Data date: <b>2026-06-19</b>
+Data date: <b>2026-06-22</b>
 Số mã top: <b>15</b>
 
 <b>TOP QUALITY PICKS V14.1</b>
-🔹 <b>PHP</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+🔹 <b>VCI</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>AGR</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+🔹 <b>HDG</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+   Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
+🔹 <b>PVT</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+   Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
+🔹 <b>PVS</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
 🔹 <b>MBS</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>NLG</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+🔹 <b>FRT</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>CII</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+🔹 <b>TNG</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>BVS</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
-   Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>AAA</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
-   Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
-🔹 <b>APG</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
+🔹 <b>VND</b> | A MẠNH | Điểm 82.00 | BUY NOW | Risk PASS
    Trừ điểm: -8 Mẫu lịch sử ít | -7 Mẫu OOS ít | -6 Mẫu regime ít...
