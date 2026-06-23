@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-MBS,OK,2026-06-15,44.74,1.63,2.02,4.17,-0.5,17,11,64.71,63.47,0.48,9.12,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-HDG,OK,2026-06-15,47.25,-0.27,0.61,1.92,-0.38,14,9,64.29,55.09,0.94,7.64,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-PVD,OK,2026-06-15,41.0,-4.53,0.91,-3.78,-2.5,8,5,62.5,54.95,0.75,7.38,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VCI,OK,2026-06-15,40.3,0.09,1.31,4.49,-1.01,12,7,58.33,60.75,1.05,7.17,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-PVT,OK,2026-06-15,33.46,-4.03,0.77,-3.0,-3.53,13,8,61.54,54.04,-0.25,7.38,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-FRT,OK,2026-06-15,33.67,-2.68,0.57,-0.56,-2.6,10,5,50.0,52.68,0.83,6.5,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-POW,OK,2026-06-15,55.56,1.59,1.35,3.35,0.72,16,8,50.0,53.69,0.32,7.56,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-LPB,OK,2026-06-15,14.73,-7.35,0.43,-0.22,-10.81,1,1,100.0,83.33,3.82,6.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-VRE,OK,2026-06-15,28.27,-8.19,1.06,-3.55,-8.49,3,3,100.0,71.67,1.98,6.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-VIC,OK,2026-06-15,27.73,-6.84,1.49,-1.23,-6.0,3,1,33.33,43.33,-1.36,5.67,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-PVS,OK,2026-06-15,40.35,-3.55,1.36,-1.58,-3.11,15,6,40.0,37.38,-0.86,9.27,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-TNG,OK,2026-06-15,44.44,0.61,0.62,2.14,1.06,11,4,36.36,43.08,-0.52,6.36,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-NBB,OK,2026-06-15,33.33,-1.04,0.42,0.29,-1.7,12,4,33.33,43.06,-0.69,8.75,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VND,OK,2026-06-15,51.06,3.22,1.29,5.04,0.85,9,2,22.22,23.52,-2.23,6.44,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-APG,OK,2026-06-15,68.35,12.78,6.74,23.06,14.69,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.
+DHA,OK,2026-06-16,44.62,-0.34,0.4,0.83,-0.72,15,11,73.33,57.52,0.56,7.67,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+VIC,OK,2026-06-16,31.33,-5.45,0.94,0.41,-5.32,7,4,57.14,36.1,-0.73,8.43,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+BMP,OK,2026-06-16,58.52,3.86,2.34,7.17,4.8,17,9,52.94,52.47,0.96,10.06,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HDB,OK,2026-06-16,28.99,-1.35,1.0,0.6,1.41,4,2,50.0,58.33,0.23,8.25,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+TNG,OK,2026-06-16,48.0,0.66,1.12,2.14,2.69,15,7,46.67,56.19,1.0,6.47,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+DGC,OK,2026-06-16,53.01,3.52,0.57,7.57,5.69,13,6,46.15,46.07,-0.45,8.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+VPB,OK,2026-06-16,25.0,-1.03,1.05,1.74,-0.38,3,3,100.0,72.98,1.64,6.67,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+VHM,OK,2026-06-16,36.74,-8.87,0.58,-6.51,-9.48,3,2,66.67,45.83,1.89,6.33,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+LPB,OK,2026-06-16,16.74,-6.36,0.44,0.11,-8.74,1,0,0.0,12.5,-0.74,8.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+PC1,OK,2026-06-16,51.28,1.38,0.41,2.87,3.68,16,7,43.75,47.12,-0.07,7.12,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+ORS,OK,2026-06-16,53.57,2.04,1.63,4.33,2.71,16,6,37.5,43.98,0.21,10.69,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+MBS,OK,2026-06-16,56.52,5.93,3.21,9.42,6.63,14,5,35.71,39.72,-0.43,7.5,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+TVS,OK,2026-06-16,52.0,0.77,1.64,1.15,2.73,15,5,33.33,34.68,-0.82,8.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+PVD,OK,2026-06-16,50.0,-1.08,0.83,-0.66,3.08,12,3,25.0,46.61,0.02,7.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+FTS,OK,2026-06-16,61.74,6.87,3.68,9.96,7.17,10,2,20.0,42.37,-0.38,9.1,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.

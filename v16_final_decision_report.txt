@@ -1,38 +1,43 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>70</b>
+Số mã tổng hợp: <b>104</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>FRT</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>TNG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>IJC</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
+🔹 <b>VIC</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum TRUNG TÍNH | Bottom YẾU / DỄ HỌC VẸT
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>TCL</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VHM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum MẪU ÍT | Bottom ỔN ĐỊNH MẠNH
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>MWG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>MWG</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WATCHLIST
+🔹 <b>GVR</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>TCL</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+🔹 <b>VSC</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>IDC</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>HDB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum  | Bottom TRUNG TÍNH
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
 🔹 <b>KSB</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
@@ -40,17 +45,12 @@ Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VIP</b> | 🟢 ƯU TIÊN CAO | Điểm 92.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
+🔹 <b>HAH</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VIC</b> | 🟢 ƯU TIÊN CAO | Điểm 90.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum MẪU ÍT | Bottom YẾU / DỄ HỌC VẸT
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>BID</b> | 🟢 ƯU TIÊN CAO | Điểm 90.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
+🔹 <b>CTD</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
