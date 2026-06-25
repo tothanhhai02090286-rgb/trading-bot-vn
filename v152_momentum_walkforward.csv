@@ -1,16 +1,16 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Dist MA20 %,Volume Ratio,Ret 5 phiên %,Ret 10 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-CII,OK,2026-06-17,53.7,3.21,0.97,2.0,6.57,13,9,69.23,52.95,1.67,6.62,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VIC,OK,2026-06-17,30.0,-5.62,1.27,-2.04,-2.83,6,4,66.67,43.03,1.29,8.33,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VRE,OK,2026-06-17,23.38,-7.97,2.05,-5.06,-6.32,6,4,66.67,60.45,0.76,7.5,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CTG,OK,2026-06-17,42.03,0.33,1.66,2.39,1.03,16,9,56.25,53.53,0.11,10.06,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VPB,OK,2026-06-17,35.71,-0.43,1.3,1.73,0.19,9,5,55.56,47.78,0.15,6.22,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-TCL,OK,2026-06-17,36.84,-0.66,1.05,1.0,0.16,13,10,76.92,52.27,-0.33,7.15,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-PHP,OK,2026-06-17,67.92,3.75,1.45,4.03,5.16,6,3,50.0,59.66,2.21,8.67,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-ORS,OK,2026-06-17,55.56,2.06,0.61,4.74,2.32,17,8,47.06,44.58,0.88,7.06,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HNG,OK,2026-06-17,42.86,0.5,1.03,1.43,0.0,13,6,46.15,32.18,-0.05,7.62,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VHM,OK,2026-06-17,14.86,-9.11,1.55,-8.04,-9.03,2,1,50.0,66.66,-0.11,6.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-FTS,OK,2026-06-17,72.92,13.18,5.99,16.81,12.68,2,1,50.0,33.34,-0.16,6.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-NBB,OK,2026-06-17,33.33,-0.8,0.92,0.0,-0.57,13,5,38.46,40.08,-0.74,6.77,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-PVD,OK,2026-06-17,52.14,-0.24,0.79,0.5,0.83,11,4,36.36,50.37,0.1,7.36,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-AGR,OK,2026-06-17,57.45,4.18,1.97,6.38,4.9,18,6,33.33,37.41,-0.78,9.72,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DGW,OK,2026-06-17,52.3,3.86,1.55,6.73,3.83,12,3,25.0,34.6,-1.13,8.75,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+BMP,OK,2026-06-18,73.02,6.82,1.52,8.73,8.81,8,7,87.5,62.88,1.94,9.12,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+TCB,OK,2026-06-18,30.86,-1.96,1.03,1.13,-0.79,6,5,83.33,49.42,0.61,8.5,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+TNG,OK,2026-06-18,58.62,1.94,1.35,2.11,2.65,12,8,66.67,53.33,1.43,7.58,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+POW,OK,2026-06-18,63.89,3.35,1.15,4.41,3.65,14,9,64.29,53.17,0.36,7.64,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+VHC,OK,2026-06-18,44.74,-0.22,0.52,1.58,0.17,16,10,62.5,60.56,0.65,7.06,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PHP,OK,2026-06-18,58.06,0.76,1.38,0.27,0.8,15,9,60.0,54.26,1.31,8.07,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+QNS,OK,2026-06-18,68.42,1.63,1.6,1.24,3.38,12,7,58.33,48.93,0.32,8.0,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+OCB,OK,2026-06-18,68.52,4.52,0.7,0.0,1.62,7,4,57.14,49.18,0.62,7.43,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+VIC,OK,2026-06-18,45.08,1.29,2.05,4.8,2.6,13,7,53.85,47.49,-0.08,11.77,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ANV,OK,2026-06-18,51.25,2.29,1.34,5.83,2.83,15,8,53.33,46.94,0.11,7.33,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ELC,OK,2026-06-18,67.65,2.82,1.05,4.73,1.84,10,5,50.0,42.33,-0.23,6.2,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ORS,OK,2026-06-18,53.57,0.91,1.54,3.15,0.77,16,7,43.75,42.44,0.42,9.81,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+DGC,OK,2026-06-18,57.74,2.58,0.54,5.87,5.29,17,7,41.18,48.16,-0.57,7.24,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+AGR,OK,2026-06-18,56.25,2.31,1.29,5.73,3.15,14,5,35.71,35.7,-1.45,7.36,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+PAN,OK,2026-06-18,28.79,-2.57,0.29,1.1,0.22,7,1,14.29,48.89,-0.62,6.29,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.

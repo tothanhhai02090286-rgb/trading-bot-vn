@@ -1,91 +1,58 @@
 ﻿Mã,Trạng thái dữ liệu,Ngày hiện tại,RSI hiện tại,Drawdown 20 phiên %,Hồi từ đáy 20 phiên %,Số đoạn test,Số đoạn dương,Tỷ lệ đoạn dương %,Win T+5 TB các đoạn %,Lợi TB T+5 các đoạn %,Số mẫu test TB,Độ ổn định mẫu,Lý do ổn định
-VRE,OK,2026-06-17,23.38,-17.21,2.18,5,5,100.0,86.67,4.77,5.4,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-POW,OK,2026-06-17,57.89,-1.39,6.39,18,14,77.78,62.0,1.39,7.22,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-PHP,OK,2026-06-17,67.92,-9.15,6.91,10,7,70.0,58.18,1.51,12.1,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
-ANV,OK,2026-06-17,48.24,-2.88,8.68,13,9,69.23,59.63,1.55,8.31,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-QNS,OK,2026-06-17,47.5,-2.23,2.55,16,11,68.75,59.32,0.37,8.38,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-TCH,OK,2026-06-17,47.46,-5.26,5.15,19,13,68.42,49.55,1.01,8.32,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-HAG,OK,2026-06-17,45.45,-2.85,2.33,19,13,68.42,48.88,0.8,8.58,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-FTS,OK,2026-06-17,72.92,-0.18,20.18,6,4,66.67,47.64,1.0,8.17,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-NTP,OK,2026-06-17,51.37,-3.33,9.13,24,16,66.67,55.16,1.18,9.21,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-MBB,OK,2026-06-17,54.0,-1.75,2.86,17,11,64.71,70.55,1.54,8.59,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CTG,OK,2026-06-17,42.03,-3.38,3.16,17,11,64.71,55.16,0.5,8.76,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-PAN,OK,2026-06-17,26.39,-9.73,3.8,8,5,62.5,55.76,0.23,8.12,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-TCB,OK,2026-06-17,35.44,-6.68,2.11,13,8,61.54,49.65,0.11,9.0,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CTS,OK,2026-06-17,78.24,-1.54,22.83,5,3,60.0,55.2,1.3,8.8,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-BVB,OK,2026-06-17,66.67,-2.24,22.43,15,9,60.0,44.71,1.14,10.93,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-GAS,OK,2026-06-17,48.31,-9.61,1.76,15,9,60.0,52.63,1.08,8.47,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-BID,OK,2026-06-17,53.44,-3.91,5.27,20,12,60.0,57.52,0.23,8.55,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-MWG,OK,2026-06-17,54.67,-2.35,4.35,17,10,58.82,45.95,0.44,7.24,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CTD,OK,2026-06-17,55.65,-1.6,5.29,17,10,58.82,53.19,0.48,9.88,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CSV,OK,2026-06-17,42.03,-4.42,11.19,19,11,57.89,48.59,1.38,9.89,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-STB,OK,2026-06-17,64.96,-1.9,9.08,19,11,57.89,52.5,0.27,8.16,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VHC,OK,2026-06-17,47.89,-3.31,5.6,19,11,57.89,52.25,0.2,7.63,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-HPG,OK,2026-06-17,50.0,-2.04,3.45,21,12,57.14,53.54,0.6,8.33,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-NBB,OK,2026-06-17,33.33,-2.26,3.59,14,8,57.14,50.64,0.15,7.71,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-CII,OK,2026-06-17,53.7,-3.77,11.56,14,8,57.14,54.41,0.71,10.71,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-ABB,OK,2026-06-17,81.82,-1.74,11.18,7,4,57.14,58.87,2.37,7.0,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-HAH,OK,2026-06-17,59.04,-1.42,7.14,18,10,55.56,50.73,0.76,9.44,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-VCG,OK,2026-06-17,43.28,-4.73,6.05,20,11,55.0,48.69,0.34,7.8,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
-BSR,OK,2026-06-17,36.81,-16.48,0.57,11,7,63.64,43.05,-0.71,7.36,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-TCL,OK,2026-06-17,36.84,-4.25,3.75,13,8,61.54,53.64,-0.16,8.31,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HDB,OK,2026-06-17,38.46,-6.48,1.81,14,8,57.14,50.6,-0.09,8.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-PVS,OK,2026-06-17,44.26,-7.77,2.7,16,9,56.25,46.45,-0.09,8.44,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-SHS,OK,2026-06-17,69.7,-1.53,14.2,9,5,55.56,47.98,-0.04,9.33,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-BMP,OK,2026-06-17,70.4,0.0,12.01,11,6,54.55,53.82,0.85,9.73,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HHS,OK,2026-06-17,60.98,-4.05,9.22,13,7,53.85,47.55,1.1,9.54,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VSC,OK,2026-06-17,50.48,-3.34,10.35,13,7,53.85,57.54,1.25,9.08,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-TNG,OK,2026-06-17,58.62,-1.01,5.95,15,8,53.33,42.47,0.38,10.53,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VIX,OK,2026-06-17,54.32,-7.24,7.49,15,8,53.33,50.34,0.55,10.07,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-GVR,OK,2026-06-17,58.82,-6.32,7.73,17,9,52.94,53.81,0.3,9.35,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-MSN,OK,2026-06-17,39.29,-6.45,2.4,17,9,52.94,52.82,0.38,8.35,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-SSI,OK,2026-06-17,51.9,-1.77,5.93,17,9,52.94,51.3,0.63,7.24,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-ASM,OK,2026-06-17,54.1,-2.15,3.67,17,9,52.94,49.51,0.55,8.29,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-NT2,OK,2026-06-17,48.65,-4.38,3.61,21,11,52.38,47.93,-0.02,7.71,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VPB,OK,2026-06-17,35.71,-6.19,3.52,12,6,50.0,55.98,0.35,8.5,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-DHC,OK,2026-06-17,61.9,-0.27,7.71,16,8,50.0,48.63,0.08,7.88,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-PVD,OK,2026-06-17,52.14,-9.16,5.03,14,7,50.0,50.0,0.3,7.93,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VOS,OK,2026-06-17,58.33,-1.91,9.83,14,7,50.0,42.15,0.18,8.5,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-NKG,OK,2026-06-17,53.72,-3.46,4.58,16,8,50.0,42.91,-0.19,8.12,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-SBT,OK,2026-06-17,66.67,-1.14,10.41,10,5,50.0,44.52,0.02,7.4,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-APG,OK,2026-06-17,78.26,-3.03,40.39,4,2,50.0,38.06,-1.19,9.75,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-EIB,OK,2026-06-17,52.17,-2.94,4.38,19,9,47.37,51.86,0.49,8.42,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-KSB,OK,2026-06-17,54.17,-1.61,4.45,19,9,47.37,40.92,-0.31,10.11,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HCM,OK,2026-06-17,49.47,-7.25,3.77,13,6,46.15,48.71,0.18,9.23,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-HNG,OK,2026-06-17,42.86,-4.05,4.41,11,5,45.45,35.63,-0.04,11.18,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
-VHM,OK,2026-06-17,14.86,-17.23,4.65,2,1,50.0,66.66,-0.05,5.5,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-LPB,OK,2026-06-17,21.76,-14.73,3.99,2,1,50.0,67.85,2.17,6.5,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
-ORS,OK,2026-06-17,55.56,-1.85,6.0,18,8,44.44,42.14,0.7,7.72,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VCI,OK,2026-06-17,45.45,-4.46,6.48,18,8,44.44,45.54,-0.33,8.17,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DXG,OK,2026-06-17,50.0,-2.91,6.8,16,7,43.75,47.96,-0.01,8.12,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-KBC,OK,2026-06-17,53.98,-2.36,10.11,14,6,42.86,43.57,-0.91,6.21,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-PET,OK,2026-06-17,77.95,0.0,22.17,7,3,42.86,41.43,0.31,6.43,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-KDH,OK,2026-06-17,54.29,-3.52,6.15,14,6,42.86,50.75,-0.42,9.36,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DIG,OK,2026-06-17,44.07,-7.07,5.2,21,9,42.86,44.77,-0.78,8.29,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DGW,OK,2026-06-17,52.3,-0.59,8.53,12,5,41.67,44.44,0.72,8.17,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-HSG,OK,2026-06-17,38.64,-7.31,4.78,17,7,41.18,42.64,-0.61,8.24,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-MSH,OK,2026-06-17,50.0,-3.64,2.84,17,7,41.18,43.98,0.1,8.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VGC,OK,2026-06-17,59.68,-0.79,7.59,15,6,40.0,40.35,-0.48,8.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-GMD,OK,2026-06-17,83.16,-1.5,9.6,5,2,40.0,37.24,-0.15,6.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-ELC,OK,2026-06-17,70.59,-0.6,8.82,10,4,40.0,45.54,-0.26,8.1,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SHB,OK,2026-06-17,56.67,-1.06,4.87,15,6,40.0,47.82,0.12,9.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-CNG,OK,2026-06-17,36.84,-6.78,1.85,20,8,40.0,36.9,-0.05,8.35,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-AGR,OK,2026-06-17,57.45,-1.64,7.91,18,7,38.89,29.67,-1.61,9.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-HHV,OK,2026-06-17,46.67,-3.31,4.0,18,7,38.89,43.46,0.12,9.67,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-PC1,OK,2026-06-17,61.97,-6.13,10.25,13,5,38.46,43.85,-0.2,8.54,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-NLG,OK,2026-06-17,60.93,-1.95,12.49,13,5,38.46,38.59,-0.56,6.46,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-MBS,OK,2026-06-17,60.47,-2.8,12.43,16,6,37.5,41.4,-0.43,7.06,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-IDC,OK,2026-06-17,56.1,-1.57,5.02,16,6,37.5,44.4,0.52,10.25,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VIC,OK,2026-06-17,30.0,-15.97,3.95,8,3,37.5,39.26,0.03,9.25,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-GIL,OK,2026-06-17,22.22,-7.78,3.49,8,3,37.5,45.82,-0.56,7.12,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-CMG,OK,2026-06-17,52.88,-3.79,3.72,17,6,35.29,35.74,0.54,8.82,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-EVF,OK,2026-06-17,58.93,-2.41,8.02,12,4,33.33,39.87,-0.71,9.92,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-CEO,OK,2026-06-17,51.89,-4.33,10.56,15,5,33.33,33.59,-1.07,6.93,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-DRC,OK,2026-06-17,38.94,-6.55,1.72,18,6,33.33,34.32,-0.89,8.78,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VND,OK,2026-06-17,57.8,-2.16,14.95,19,6,31.58,43.53,-0.72,8.74,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-AAA,OK,2026-06-17,69.77,-0.54,8.5,10,3,30.0,47.01,-0.08,8.4,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-VIP,OK,2026-06-17,77.78,-1.28,3.57,4,1,25.0,57.29,-0.63,9.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-SCR,OK,2026-06-17,46.3,-4.35,5.18,14,2,14.29,37.44,-1.92,7.07,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-TVS,OK,2026-06-17,58.33,-1.49,4.76,8,1,12.5,29.55,-1.25,8.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-LAS,OK,2026-06-17,21.43,-6.45,2.84,6,0,0.0,25.87,-1.83,8.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
-HBC,OK,2026-06-17,0.0,-3.92,2.08,0,0,,,,,KHÔNG ĐỦ DỮ LIỆU,Không có đủ đoạn walk-forward để kiểm định.
+POW,OK,2026-06-18,63.89,-1.05,6.77,13,10,76.92,61.16,1.8,8.23,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+STB,OK,2026-06-18,59.73,-3.54,7.26,19,14,73.68,66.56,1.44,8.89,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+GMD,OK,2026-06-18,75.24,-3.0,7.93,7,5,71.43,57.51,0.63,9.0,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+ABB,OK,2026-06-18,83.33,0.0,13.16,7,5,71.43,59.86,1.11,6.29,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+QNS,OK,2026-06-18,68.42,-0.81,4.03,14,10,71.43,55.98,0.31,9.07,ỔN ĐỊNH MẠNH,Mẫu thắng ở đa số đoạn và lợi nhuận trung bình dương.
+ANV,OK,2026-06-18,51.25,-3.11,8.19,13,9,69.23,55.99,1.39,7.85,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+ELC,OK,2026-06-18,67.65,-0.6,8.5,12,8,66.67,56.7,0.9,7.58,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+BAF,OK,2026-06-18,76.14,-0.84,3.81,14,9,64.29,66.47,0.99,12.0,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+CTG,OK,2026-06-18,38.67,-4.37,2.11,11,7,63.64,51.99,0.38,9.27,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+BFC,OK,2026-06-18,64.21,-4.44,7.0,16,10,62.5,56.5,1.03,9.06,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+MBB,OK,2026-06-18,54.9,-1.56,3.06,16,10,62.5,64.43,1.06,8.94,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+FTS,OK,2026-06-18,72.34,-2.34,20.4,8,5,62.5,50.35,1.02,8.25,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PVD,OK,2026-06-18,54.47,-4.9,7.81,13,8,61.54,55.18,1.1,8.31,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+SSI,OK,2026-06-18,50.0,-2.48,5.16,13,8,61.54,59.26,0.75,8.38,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+VHC,OK,2026-06-18,44.74,-4.3,4.51,18,11,61.11,63.49,1.03,8.11,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+PHP,OK,2026-06-18,58.06,-11.74,3.87,19,11,57.89,52.64,0.69,9.68,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+CSV,OK,2026-06-18,49.15,-5.19,10.29,14,8,57.14,47.98,0.81,7.86,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+CTS,OK,2026-06-18,75.31,-3.47,20.42,9,5,55.56,57.41,2.28,7.22,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+HNG,OK,2026-06-18,50.0,-5.41,2.94,20,11,55.0,45.83,0.98,10.1,ỔN ĐỊNH VỪA,Mẫu tương đối ổn định nhưng chưa thật sự mạnh.
+TCB,OK,2026-06-18,30.86,-7.42,1.3,9,6,66.67,43.58,-0.09,9.11,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+OCB,OK,2026-06-18,68.52,-3.09,14.09,11,6,54.55,50.02,0.92,8.91,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+VIC,OK,2026-06-18,45.08,-7.14,11.21,13,7,53.85,45.27,-0.17,11.31,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HDB,OK,2026-06-18,35.85,-6.85,1.41,13,7,53.85,51.31,-0.06,8.46,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+VCB,OK,2026-06-18,45.0,-5.08,1.15,19,10,52.63,44.43,-0.24,9.42,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+SGT,OK,2026-06-18,46.43,-5.13,2.07,18,9,50.0,42.38,0.43,7.56,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+MWG,OK,2026-06-18,58.57,-2.84,3.83,14,7,50.0,43.03,0.3,8.07,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ASM,OK,2026-06-18,54.1,-2.64,3.15,18,9,50.0,50.09,0.66,8.61,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+BMP,OK,2026-06-18,73.02,-0.68,11.7,12,6,50.0,48.73,0.18,7.25,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+REE,OK,2026-06-18,30.36,-5.96,1.0,12,6,50.0,58.76,0.49,9.25,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+FPT,OK,2026-06-18,50.0,-7.85,1.13,23,11,47.83,49.23,0.48,8.0,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+HAH,OK,2026-06-18,49.45,-3.55,4.83,19,9,47.37,55.9,1.01,8.21,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+KSB,OK,2026-06-18,56.52,-2.26,3.77,17,8,47.06,41.54,-0.48,10.24,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+ORS,OK,2026-06-18,53.57,-2.96,4.8,15,7,46.67,43.31,0.53,7.93,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+PC1,OK,2026-06-18,70.65,0.0,17.73,13,6,46.15,40.07,-0.97,9.23,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+VHM,OK,2026-06-18,35.5,-10.64,11.94,11,5,45.45,47.29,1.85,11.18,TRUNG TÍNH,Mẫu không quá xấu nhưng độ ổn định chưa rõ.
+DRC,OK,2026-06-18,11.24,-7.33,0.86,3,1,33.33,46.43,0.07,7.0,MẪU ÍT,"Số đoạn test quá ít, chỉ dùng tham khảo."
+AAA,OK,2026-06-18,71.43,-1.07,8.21,9,4,44.44,51.17,0.27,8.22,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+NLG,OK,2026-06-18,57.4,-4.08,10.05,18,8,44.44,35.91,-1.19,8.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+TNG,OK,2026-06-18,58.62,-2.02,4.86,16,7,43.75,40.62,-0.18,10.88,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+MSH,OK,2026-06-18,52.54,-3.22,3.29,16,7,43.75,46.23,0.2,9.12,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+DGW,OK,2026-06-18,50.84,-2.96,5.94,14,6,42.86,47.38,0.78,7.57,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SAB,OK,2026-06-18,61.9,-3.31,3.43,14,6,42.86,48.14,0.35,9.07,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SHB,OK,2026-06-18,53.12,-1.77,4.12,17,7,41.18,47.61,-0.2,10.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+PNJ,OK,2026-06-18,58.87,-0.73,10.21,15,6,40.0,35.85,-0.57,8.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+APG,OK,2026-06-18,69.83,-9.24,31.39,5,2,40.0,43.26,0.72,11.8,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+PAN,OK,2026-06-18,28.79,-10.31,3.13,9,3,33.33,46.38,-0.64,8.78,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+DHA,OK,2026-06-18,57.5,-5.87,3.71,15,5,33.33,43.02,-0.07,7.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+IDI,OK,2026-06-18,54.43,-3.34,4.52,19,6,31.58,36.43,-0.12,8.26,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+AGR,OK,2026-06-18,56.25,-3.28,6.12,16,5,31.25,33.72,-1.31,8.44,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+SCR,OK,2026-06-18,46.3,-5.8,3.59,15,4,26.67,41.96,-1.25,7.27,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VRE,OK,2026-06-18,38.86,-9.06,9.26,15,4,26.67,38.8,-0.73,11.6,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+DGC,OK,2026-06-18,57.74,-3.43,6.58,15,4,26.67,40.69,-0.66,8.47,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+HHV,OK,2026-06-18,45.16,-4.96,2.22,15,4,26.67,40.24,-0.42,10.13,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+VIP,OK,2026-06-18,81.82,-0.43,4.0,4,1,25.0,56.88,-0.88,8.25,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+TVS,OK,2026-06-18,58.33,-4.32,5.56,12,3,25.0,33.75,-1.53,7.0,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+BVB,OK,2026-06-18,76.47,-1.49,23.36,9,2,22.22,23.25,-1.31,7.56,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
+GIL,OK,2026-06-18,25.0,-8.17,3.06,6,1,16.67,40.23,-0.53,10.33,YẾU / DỄ HỌC VẸT,Mẫu không ổn định qua các đoạn thời gian.
