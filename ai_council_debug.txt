@@ -1,41 +1,41 @@
 === AI COUNCIL REASON ===
 
-Mã: HAH
-AI Reason: Biến động thấp; MACD Hist tăng
+Mã: CNG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
 AI Warning: RS20 chưa khỏe
 
+Mã: DRC
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
+
+Mã: ELC
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
+AI Warning: Không có cảnh báo lớn
+
 Mã: POW
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: VHM
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: LPB
-AI Reason: Volume xác nhận mạnh; Biến động thấp
-AI Warning: MACD chưa xác nhận
-
-Mã: ORS
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume ổn; Biáº¿n đá»ng thấp
-AI Warning: MACD chưa xác nhận
-
-Mã: NBB
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Reason: RS20 tốt; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
 Mã: STB
-AI Reason: RS20 tốt; Volume ổn; Biến động thấp; MACD Hist tăng
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp; MACD Hist tăng
 AI Warning: Không có cảnh báo lớn
 
-Mã: BMP
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 rất mạnh; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
-AI Warning: Không có cảnh báo lớn
-
-Mã: NLG
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
+Mã: VCG
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume xác nhận mạnh; Biáº¿n đá»ng thấp
 AI Warning: Không có cảnh báo lớn
 
 Mã: TNG
-AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Biáº¿n đá»ng thấp
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; RS20 tốt; Volume ổn; Biáº¿n đá»ng thấp
 AI Warning: MACD chưa xác nhận
+
+Mã: TVS
+AI Reason: RS20 rất mạnh; Volume xác nhận mạnh; Biến động thấp
+AI Warning: RSI suy yếu so với MA5, có thể phân kỳ giảm sơ khởi; MACD chưa xác nhận
+
+Mã: ASM
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume xác nhận mạnh; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: Không có cảnh báo lớn
+
+Mã: GIL
+AI Reason: RSI mạnh hơn MA5, có thể phân kỳ tăng sơ khởi; Volume ổn; Biáº¿n đá»ng thấp; MACD Hist tăng
+AI Warning: RS20 chưa khỏe
