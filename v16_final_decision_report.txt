@@ -1,56 +1,56 @@
 ✅ <b>V16 FINAL DECISION HOÀN TẤT</b>
 
 Nguồn nền: <b>ai_risk_filtered.csv</b>
-Số mã tổng hợp: <b>77</b>
+Số mã tổng hợp: <b>106</b>
 
 <b>TOP QUYẾT ĐỊNH V16</b>
 
-🔹 <b>HCM</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>GAS</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>VIX</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>NLG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>HNG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>PVT</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>VHC</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>GMD</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+Lý do: Nhiều lớp xác nhận đồng thuận.
+
+🔹 <b>ABB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
+WF: Momentum ỔN ĐỊNH MẠNH | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>PHP</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: MOMENTUM | Risk: PASS | Action gốc: BUY NOW
-WF: Momentum TRUNG TÍNH | Bottom TRUNG TÍNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>MBB</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH MẠNH
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>HDG</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>DHA</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>HHS</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>CII</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>PNJ</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
+🔹 <b>ANV</b> | 🟢 ƯU TIÊN CAO | Điểm 100.00
 Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
 WF: Momentum  | Bottom ỔN ĐỊNH VỪA
 Lý do: Nhiều lớp xác nhận đồng thuận.
 
-🔹 <b>CTD</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
-Lý do: Nhiều lớp xác nhận đồng thuận.
-
-🔹 <b>MSN</b> | 🟢 ƯU TIÊN CAO | Điểm 97.00
-Strategy: BOTTOM | Risk: PASS | Action gốc: WAIT
-WF: Momentum  | Bottom ỔN ĐỊNH VỪA
+🔹 <b>HAH</b> | 🟢 ƯU TIÊN CAO | Điểm 93.00
+Strategy: BOTTOM | Risk: PASS | Action gốc: BUY NOW
+WF: Momentum  | Bottom TRUNG TÍNH
 Lý do: Nhiều lớp xác nhận đồng thuận.
